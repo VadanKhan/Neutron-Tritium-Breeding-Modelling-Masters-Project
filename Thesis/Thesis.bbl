@@ -1,4 +1,4 @@
-\begin{thebibliography}{43}
+\begin{thebibliography}{45}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -46,6 +46,38 @@ Rémi Boullon, Jean-Charles Jaboulay, and Julien Aubert.
 \newblock \doi{10.1016/j.fusengdes.2021.112707}.
 \newblock URL
   \url{https://www.sciencedirect.com/science/article/pii/S092037962100483X}.
+
+\bibitem[Brown et~al.(2018)Brown, Chadwick, Capote, Kahler, Trkov, Herman,
+  Sonzogni, Danon, Carlson, Dunn, Smith, Hale, Arbanas, Arcilla, Bates, Beck,
+  Becker, Brown, Casperson, Conlin, Cullen, Descalle, Firestone, Gaines, Guber,
+  Hawari, Holmes, Johnson, Kawano, Kiedrowski, Koning, Kopecky, Leal, Lestone,
+  Lubitz, Márquez~Damián, Mattoon, McCutchan, Mughabghab, Navratil,
+  Neudecker, Nobre, Noguere, Paris, Pigni, Plompen, Pritychenko, Pronyaev,
+  Roubtsov, Rochman, Romano, Schillebeeckx, Simakov, Sin, Sirakov, Sleaford,
+  Sobes, Soukhovitskii, Stetcu, Talou, Thompson, Van Der~Marck,
+  Welser-Sherrill, Wiarda, White, Wormald, Wright, Zerkle, Žerovnik, and
+  Zhu]{brown_endfb-viii0_2018}
+D.A. Brown, M.B. Chadwick, R.~Capote, A.C. Kahler, A.~Trkov, M.W. Herman, A.A.
+  Sonzogni, Y.~Danon, A.D. Carlson, M.~Dunn, D.L. Smith, G.M. Hale, G.~Arbanas,
+  R.~Arcilla, C.R. Bates, B.~Beck, B.~Becker, F.~Brown, R.J. Casperson,
+  J.~Conlin, D.E. Cullen, M.-A. Descalle, R.~Firestone, T.~Gaines, K.H. Guber,
+  A.I. Hawari, J.~Holmes, T.D. Johnson, T.~Kawano, B.C. Kiedrowski, A.J.
+  Koning, S.~Kopecky, L.~Leal, J.P. Lestone, C.~Lubitz, J.I. Márquez~Damián,
+  C.M. Mattoon, E.A. McCutchan, S.~Mughabghab, P.~Navratil, D.~Neudecker,
+  G.P.A. Nobre, G.~Noguere, M.~Paris, M.T. Pigni, A.J. Plompen, B.~Pritychenko,
+  V.G. Pronyaev, D.~Roubtsov, D.~Rochman, P.~Romano, P.~Schillebeeckx,
+  S.~Simakov, M.~Sin, I.~Sirakov, B.~Sleaford, V.~Sobes, E.S. Soukhovitskii,
+  I.~Stetcu, P.~Talou, I.~Thompson, S.~Van Der~Marck, L.~Welser-Sherrill,
+  D.~Wiarda, M.~White, J.L. Wormald, R.Q. Wright, M.~Zerkle, G.~Žerovnik, and
+  Y.~Zhu.
+\newblock {ENDF}/{B}-{VIII}.0: {The} 8 th {Major} {Release} of the {Nuclear}
+  {Reaction} {Data} {Library} with {CIELO}-project {Cross} {Sections}, {New}
+  {Standards} and {Thermal} {Scattering} {Data}.
+\newblock \emph{Nuclear Data Sheets}, 148:\penalty0 1--142, February 2018.
+\newblock ISSN 00903752.
+\newblock \doi{10.1016/j.nds.2018.02.001}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0090375218300206}.
 
 \bibitem[Delaporte-Mathurin et~al.(2025)Delaporte-Mathurin, Goles, Ball, Dunn,
   Edwards, Ferry, Lamere, Lanzrath, Leccacorvi, Meschini, Peterson, Segantin,
@@ -490,6 +522,11 @@ X.Y. Wang, K.M. Feng, Y.J. Chen, L.~Zhang, Y.J. Feng, X.H. Wu, H.B. Liao, X.F.
 \newblock \doi{10.1088/1741-4326/ab0c32}.
 \newblock URL
   \url{https://iopscience.iop.org/article/10.1088/1741-4326/ab0c32}.
+
+\bibitem[Wesson(2011)]{wesson}
+John Wesson.
+\newblock \emph{Tokamaks}.
+\newblock Oxford University Press, 4th edition, 2011.
 
 \bibitem[Wu(2011)]{wu_overview_2011}
 Yican Wu.

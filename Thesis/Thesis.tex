@@ -129,59 +129,111 @@ plants.
 
 \subsection{Fundamentals of Nuclear Fusion}
 
-Fusion is the process by which two light atomic nuclei combine to form a heavier nucleus, releasing
-energy in accordance with the mass–energy relation. The most widely studied reaction for terrestrial
-energy generation is the deuterium–tritium (D–T) reaction, in which the two isotopes of hydrogen
-combine to produce a helium nucleus and a high-energy neutron. The neutron, carrying most of the
-reaction energy, plays a central role in the broader fusion system.
+Nuclear fusion is the process by which two light atomic nuclei combine, or "fuse," to form a single
+heavier nucleus. This process releases a tremendous amount of energy if the mass of the final
+nucleus is less than the combined mass of the reactants, with the "lost" mass converted to energy
+according to $E=mc^2$.
 
-Achieving fusion requires overcoming the Coulomb barrier between the positively charged nuclei. In
-magnetic confinement fusion (MCF) devices such as tokamaks and stellarators, this is accomplished by
-heating the plasma to temperatures exceeding 100 million kelvin, ensuring a sufficient number of
-particle collisions occur with energies above the barrier. The resulting fusion power depends on the
-plasma density, temperature, and confinement time, as described by the Lawson criterion.
+For terrestrial power generation, the most promising reaction is that between the two heavy isotopes
+of hydrogen, deuterium (d) and tritium (t) \cite{paris_lost_2023, heckrotte_factors_1971}:
+$$
+d+t\rightarrow n+\alpha+17.6MeV
+$$
+This D-T reaction is the primary focus of mainstream fusion research, as it has a fusion
+cross-section ($\sigma_f$) significantly higher than other candidate reactions (like D-D or
+D-${}^{3}$He) at the "low" plasma temperatures achievable with current magnetic confinement
+technology \cite{heckrotte_factors_1971}.
 
-\subsection{Neutron Production and Transport}
+To initiate fusion, the positively charged nuclei must be given enough kinetic energy to overcome
+their mutual electrostatic repulsion, known as the Coulomb barrier. In Magnetic Confinement Fusion
+(MCF) devices, such as the **tokamak** \cite{wesson}, this is achieved by heating the
+D-T gas into a plasma state at temperatures exceeding 100 million Kelvin. The hot plasma is then
+confined by powerful magnetic fields, preventing it from touching the reactor walls. The 17.6 MeV of
+energy released is partitioned between the two products: the alpha particle ($\alpha$, a helium
+nucleus) carries 3.5 MeV, while the neutron (n) carries 14.1 MeV \cite{heckrotte_factors_1971}.
 
-Each DT fusion reaction produces a 14.1~MeV neutron that escapes the plasma almost unimpeded. These
-high-energy neutrons interact with surrounding materials via scattering and absorption processes,
-depositing energy and inducing nuclear reactions. Because neutrons are uncharged, they cannot be
-confined electromagnetically, making the understanding of their transport through matter a key
-aspect of reactor design.
+This energy split is fundamental to the reactor's operation. The charged alpha particle remains
+trapped by the magnetic fields, depositing its energy into the plasma and helping to sustain its
+high temperature (a process known as "plasma burning"). The neutron, being electrically neutral, is
+un-bothered by the magnetic fields and escapes the plasma immediately, carrying 80% of the fusion
+energy with it \cite{heckrotte_factors_1971}.
 
-The neutron energy spectrum, moderation behaviour, and spatial flux distribution determine how
-effectively a blanket converts neutron energy into heat and produces tritium. Cross-section data for
-neutron interactions are typically energy-dependent and are tabulated in nuclear data libraries used
-by simulation codes.
+\subsection{Neutron Transport and Interactions}
+
+The 14.1 MeV neutron is the primary vehicle for both energy extraction and fuel production. Once it
+leaves the plasma, it travels into the surrounding structures, chiefly the **breeder blanket**. The
+study of its journey and interactions with the blanket materials is the domain of **neutron
+transport** \cite{kuridan_neutron_2023}.
+
+As the neutron moves through matter, it interacts with atomic nuclei via two main processes:
+scattering and absorption. The probability of any specific interaction occurring is defined by the
+material's **microscopic cross-section ($\sigma$)**, a value that is highly dependent on the energy
+of the incident neutron \cite{kuridan_neutron_2023}. These cross-sections are meticulously measured
+and compiled in comprehensive libraries such as the Evaluated Nuclear Data File (ENDF)
+\cite{brown_endfb-viii0_2018}.
+
+Key interactions within the blanket include:
+\begin{itemize}
+    \item \textbf{Scattering:} The neutron collides with a nucleus and "bounces" off, transferring a
+    portion of its kinetic energy to the nucleus. In **elastic scattering (n,n)**, kinetic energy is
+    conserved. In **inelastic scattering (n,n')**, the neutron excites the nucleus, which then
+    de-excites by emitting a gamma ray, resulting in a larger energy loss for the neutron. Both
+    processes are crucial for **moderation**—slowing the fast 14.1 MeV neutrons down. This thermal
+    energy, deposited in the blanket material, is what is ultimately extracted by a coolant to
+    generate electricity.
+
+    \item \textbf{Absorption:} The neutron is captured by a nucleus. This can be a **radiative
+    capture (n,$\gamma$)** event, where the nucleus emits a gamma ray. This is often a parasitic
+    reaction, as it removes a neutron from the system that could have been used for breeding.
+    Alternatively, the absorption can induce **charged particle emission**, such as (n,p) or
+    (n,$\alpha$) reactions. This is the fundamental mechanism used for tritium breeding
+    \cite{kuridan_neutron_2023}.
+\end{itemize}
 
 \subsection{Tritium Breeding and Neutron Multiplication}
 
-The breeder blanket's principal nuclear function is to generate tritium through neutron–lithium
-interactions. Two primary reactions contribute to tritium production:
-the $^{6}\mathrm{Li}(n,\alpha)^{3}\mathrm{H}$ and $^{7}\mathrm{Li}(n,n\alpha)^{3}\mathrm{H}$ channels.
-The first reaction has a high cross-section for thermal neutrons,
-while the second requires higher-energy neutrons but allows the use of natural lithium without
-isotope enrichment. Efficient tritium breeding requires a careful balance between neutron moderation
- and multiplication.
+The primary nuclear function of the blanket is to use the fusion neutrons to "breed" new tritium
+fuel. This is accomplished by bombarding lithium isotopes with the neutrons. There are two reactions
+that produce tritium:
+$$
+{}^{6}Li+n\rightarrow\alpha+t+4.8MeV
+$$
+$$
+{}^{7}Li+n\rightarrow\alpha+t+n'-2.5MeV
+$$
+The ${}^{6}$Li reaction is exothermic and has a very large cross-section for low-energy (thermal)
+neutrons, making it the primary breeding reaction of interest \cite{hernandez_first_2018}. The
+${}^{7}$Li reaction is endothermic, requiring high-energy neutrons (a "threshold" reaction), and is
+generally less effective.
 
-To maintain a self-sufficient fuel cycle, the system must achieve a tritium breeding ratio (TBR)
-greater than unity — typically around 1.1–1.2 to account for losses and inefficiencies. Achieving
-such values often necessitates incorporating neutron-multiplying materials such as beryllium or
-lead, which release additional neutrons through $(n,2n)$ reactions, thereby improving the overall
-neutron economy.
+The critical metric for the blanket's success is the **Tritium Breeding Ratio (TBR)**, defined as
+the ratio of tritium atoms produced in the blanket to the tritium atoms consumed in the plasma
+\cite{federici_overview_2019}. Due to inevitable fuel cycle losses (e.g., incomplete plasma burn-up,
+decay during extraction), the blanket must breed more tritium than is consumed. To achieve a
+self-sufficient fuel cycle, a TBR > 1.0 is mandatory, with most reactor designs targeting a value of
+1.1 or higher \cite{sawan_physics_2006, meschini_modeling_2023}.
 
-\subsection{Neutronics Modelling}
+This presents a "neutron economy" challenge. The D-T reaction produces one neutron, and the primary
+${}^{6}$Li breeding reaction consumes one neutron \cite{shatalov_breeder_1991}. This leaves no
+margin for neutrons that are inevitably lost, either by leaking out of the blanket or through
+parasitic absorption in structural materials (like steel) \cite{shatalov_breeder_1991}.
 
-Because direct experimentation on full-scale fusion reactors remains infeasible, numerical modelling
-is essential for assessing blanket performance. Monte Carlo transport methods simulate individual
-neutron histories, statistically sampling reaction probabilities to estimate flux, absorption, and
-secondary particle production. Codes such as MCNP, TRIPOLI, and OpenMC implement these methods using
-detailed geometry and material data.
+To overcome this deficit, the blanket must include a **neutron multiplier**
+\cite{malang_self-cooled_1991, hernandez_first_2018}. These are materials that undergo an **(n,2n)**
+reaction, where one high-energy incident neutron strikes a nucleus and causes two neutrons to be
+emitted. The two most viable multiplier materials are Beryllium (Be) and Lead (Pb)
+\cite{hernandez_first_2018}.
 
-OpenMC, an open-source Monte Carlo code, provides a flexible environment for studying fusion systems
-with complex geometries imported from computer-aided design (CAD) models. Its ability to model
-spatially resolved neutron flux and isotope generation makes it particularly well suited to the
-analysis of breeder blanket designs — forming the computational foundation of this project.
+$$
+{}^{9}Be+n\rightarrow{}^{8}Be+2n \rightarrow 2\alpha + 2n
+$$
+$$
+{}^{208}Pb+n\rightarrow{}^{207m}Pb+2n
+$$
+By incorporating these materials, the single 14.1 MeV fusion neutron can be multiplied into two or
+more lower-energy neutrons. These neutrons are then moderated (slowed down) within the blanket until
+they are at the optimal thermal energy to be captured by ${}^{6}$Li, thus enabling a TBR
+significantly greater than one \cite{hernandez_first_2018}.
 
 \section{Literature Review}
 
