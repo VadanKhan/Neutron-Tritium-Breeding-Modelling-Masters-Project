@@ -1,0 +1,93 @@
+\begin{thebibliography}{13}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Abdou et~al.(2001)]{abdou2001}
+M.A. Abdou et~al.
+\newblock On the exploration of innovative concepts for fusion chamber
+  technology.
+\newblock \emph{Fusion Engineering and Design}, 54\penalty0 (2):\penalty0
+  181--247, 2001.
+
+\bibitem[Brockman et~al.(2016)Brockman, Cheung, Pettersson, Schneider,
+  Schulman, Tang, and Zaremba]{gym}
+Greg Brockman, Vicki Cheung, Ludvig Pettersson, Jonas Schneider, John Schulman,
+  Jie Tang, and Wojciech Zaremba.
+\newblock Gym: A toolkit for developing and comparing reinforcement learning
+  algorithms.
+\newblock \url{https://arxiv.org/abs/1606.01540}, 2016.
+\newblock arXiv:1606.01540.
+
+\bibitem[Federici et~al.(2001)]{federici2001}
+G.~Federici et~al.
+\newblock Key issues and innovations in the pathways to fusion power.
+\newblock \emph{Fusion Engineering and Design}, 54\penalty0 (2):\penalty0
+  409--418, 2001.
+
+\bibitem[Kingham and Gryaznevich(2024)]{st40}
+David Kingham and Mikhail Gryaznevich.
+\newblock {The spherical tokamak path to fusion power: Opportunities and
+  challenges for development via public–private partnerships}.
+\newblock \emph{Physics of Plasmas}, 31\penalty0 (4):\penalty0 042507, 04 2024.
+\newblock ISSN 1070-664X.
+\newblock \doi{10.1063/5.0170088}.
+\newblock URL \url{https://doi.org/10.1063/5.0170088}.
+
+\bibitem[Koning and Rochman(2021)]{koning2021}
+A.J. Koning and D.~Rochman.
+\newblock Modern methods for uncertainty propagation in nuclear data.
+\newblock \emph{EPJ Web of Conferences}, 239:\penalty0 15001, 2021.
+
+\bibitem[Liu et~al.(2022)]{liu2022}
+X.~Liu et~al.
+\newblock Machine learning for surrogate modeling of neutronics in nuclear
+  systems.
+\newblock \emph{Nuclear Engineering and Design}, 388:\penalty0 111658, 2022.
+
+\bibitem[NNDC()]{endf}
+NNDC.
+\newblock Evaluated nuclear data file (endf).
+\newblock \url{https://www.nndc.bnl.gov/endf-b8.0/}.
+\newblock accessed \date{\today}.
+
+\bibitem[Raffray et~al.(2009)]{raffray2009}
+A.R. Raffray et~al.
+\newblock Breeding blanket concepts for fusion and materials requirements.
+\newblock \emph{Journal of Nuclear Materials}, 386--388:\penalty0 79--88, 2009.
+
+\bibitem[Rinderknecht et~al.(2021)]{rinderknecht2021}
+H.G. Rinderknecht et~al.
+\newblock Thermal-hydraulic and neutronic coupling in fusion reactor blankets.
+\newblock \emph{Fusion Science and Technology}, 77\penalty0 (5):\penalty0
+  414--430, 2021.
+
+\bibitem[Romano and Forget(2015)]{romano2015}
+Paul~K. Romano and Benoit Forget.
+\newblock Openmc: A state-of-the-art monte carlo code for research and
+  development.
+\newblock \emph{Annals of Nuclear Energy}, 82:\penalty0 90--97, 2015.
+
+\bibitem[Romano et~al.(2013)Romano, Horelik, Herman, Nelson, Forget, and
+  Smith]{openmc}
+Paul~K. Romano, Nicholas Horelik, Bryan Herman, Adam Nelson, Benoit Forget, and
+  Kord Smith.
+\newblock Openmc: A monte carlo neutron transport code.
+\newblock \url{https://github.com/openmc-dev/openmc}, 2013.
+\newblock Version 0.12.0, doi:10.5281/zenodo.5685985.
+
+\bibitem[Shields et~al.(2021)Shields, Bluteau, Koning, and Smith]{paramak}
+H.~Shields, M.~Bluteau, J.~Koning, and D.~Smith.
+\newblock Paramak: A parametric cad-based open-source automated fusion reactor
+  design tool.
+\newblock \emph{Fusion Engineering and Design}, 169:\penalty0 112683, 2021.
+\newblock \doi{10.1016/j.fusengdes.2021.112683}.
+
+\bibitem[Wesson(2011)]{wesson}
+John Wesson.
+\newblock \emph{Tokamaks}.
+\newblock Oxford University Press, 4th edition, 2011.
+
+\end{thebibliography}

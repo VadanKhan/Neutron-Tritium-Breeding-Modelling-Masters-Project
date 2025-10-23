@@ -1,0 +1,338 @@
+% DOC SETUP
+
+\documentclass[%
+ onecolumn,
+ nofootinbib,
+ amsmath,amssymb,
+ aps,
+ 10pt,
+ nolongbibliography,
+]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{hyperref}% add hypertext capabilities
+\usepackage[title]{appendix}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{titlesec}
+%\usepackage[showframe,%Uncomment any one of the following lines to test
+%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
+%%text={7in,10in},centering,
+%%margin=1.5in,
+%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
+%%height=10in,a5paper,hmargin={3cm,0.8in},
+%]{geometry}
+
+
+%%%  Some modifications to reduce the space used by RevTex for sections, and use traditional numbering
+% Usual (decimal) numbering
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+
+% Fix references
+\makeatletter
+\renewcommand{\p@subsection}{}
+\renewcommand{\p@subsubsection}{}
+\makeatother
+
+%% Use this if you want times new roman which is slightly more compact.
+%\usepackage{times}
+\setlength{\parindent}{10pt}
+\linespread{0.94}
+
+\usepackage{titlesec}
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{5pt plus 4pt minus 2pt}{5pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{4pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
+
+\titleformat*{\section}{\raggedright\bf\MakeUppercase}
+\titleformat*{\subsection}{\itshape}
+
+
+%% READ BEFORE USE IF HAVING CITATION TROUBLES The natlib package (used for citaitons here) uses
+% \citep{} to change the citations to have square brackets over the author and year. Just using
+% \cite{} will only bracket the year. For more harvard citation options visit this url:
+% https://library-guides.imperial.ac.uk/c.php?g=719784&p=5224027
+
+
+
+
+% DOC BEGIN
+
+\begin{document}
+
+\title{\Large Neutron Transport and Tritium Breeding Modelling in Nuclear Fusion Reactor Breeder
+Blankets \\
+\normalsize MPhys Project Report}
+
+\author{Vadan Khan}
+\affiliation{4th Year MPhys, Department of Physics and Astronomy, University of Manchester}
+\date{\today}
+
+\begin{abstract}
+The pursuit of practical nuclear fusion demands not only plasma confinement and heating but also the
+establishment of a sustainable fuel cycle. The deuterium-tritium (D-T) fusion reaction produces most
+of its energy as 14.1~MeV neutrons, which can in turn be used to regenerate tritium through
+neutron-lithium interactions. The reactor subsystem that performs this function—the breeder
+blanket—must simultaneously extract heat, shield reactor components, and maintain tritium
+self-sufficiency. This project applies Monte Carlo neutron transport simulations using
+\texttt{OpenMC} to investigate the neutronic performance of advanced breeder blanket designs,
+including heterogeneous and functionally graded geometries. The study aims to quantify how
+variations in material composition and spatial structure influence the tritium breeding ratio (TBR)
+and neutron flux profiles, and explores the potential for automated optimisation of blanket
+parameters through computational frameworks. The outcomes will inform the feasibility and efficiency
+of next-generation blanket concepts relevant to future magnetic confinement fusion reactors such a
+DEMO and STEP.
+\end{abstract}
+
+\maketitle
+
+\clearpage
+
+\section{Introduction}
+
+The pursuit of practical nuclear fusion represents one of the most ambitious and potentially
+transformative scientific endeavours of the twenty-first century. As global energy demand continues
+to rise and the environmental impacts of fossil fuel use become ever clearer, fusion offers the
+prospect of a near-limitless, low-carbon energy source. Fusion energy aims to replicate, on Earth,
+the processes that power the Sun — combining light nuclei to release energy through mass-energy
+conversion. Unlike conventional nuclear fission, fusion promises inherent safety, reduced long-lived
+radioactive waste, and abundant fuel sources.
+
+Among the various fusion reactions studied, the deuterium-tritium (D-T) reaction has emerged as the
+most viable for near-term applications due to its relatively high cross-section at achievable plasma
+temperatures and its favourable energy yield. However, the practical realisation of a D-T reactor
+introduces challenges that extend far beyond plasma confinement and heating. Chief among these is
+the supply of tritium, a radioactive isotope that does not occur naturally in significant quantities
+and must be produced artificially.
+
+This challenge has led to the development of the breeder blanket concept — an integrated structure
+surrounding the plasma that captures energetic neutrons produced in fusion reactions and uses them
+to generate tritium through interactions with lithium. In addition to tritium production, breeder
+blankets also serve several critical roles: moderating neutron flux, capturing energy for conversion
+to electricity, and protecting reactor components from radiation damage.
+
+Understanding the behaviour of neutrons within the blanket region is therefore central to the
+success of any D-T fusion system. Computational modelling of neutron transport, energy deposition,
+and tritium breeding provides vital insights into how different blanket materials and geometries
+perform under fusion-like conditions. These neutronics studies inform the design and optimisation of
+test blanket modules and full-scale reactor concepts.
+
+This project contributes to that effort by using advanced Monte Carlo simulations to model neutron
+interactions within candidate breeder blanket materials. Through this, it aims to identify promising
+compositions and geometries capable of sustaining tritium self-sufficiency in future fusion power
+plants.
+
+\section{Theory}
+
+\subsection{Fundamentals of Nuclear Fusion}
+
+Fusion is the process by which two light atomic nuclei combine to form a heavier nucleus, releasing
+energy in accordance with the mass–energy relation. The most widely studied reaction for terrestrial
+energy generation is the deuterium–tritium (D–T) reaction, in which the two isotopes of hydrogen
+combine to produce a helium nucleus and a high-energy neutron. The neutron, carrying most of the
+reaction energy, plays a central role in the broader fusion system.
+
+Achieving fusion requires overcoming the Coulomb barrier between the positively charged nuclei. In
+magnetic confinement fusion (MCF) devices such as tokamaks and stellarators, this is accomplished by
+heating the plasma to temperatures exceeding 100 million kelvin, ensuring a sufficient number of
+particle collisions occur with energies above the barrier. The resulting fusion power depends on the
+plasma density, temperature, and confinement time, as described by the Lawson criterion.
+
+\subsection{Neutron Production and Transport}
+
+Each DT fusion reaction produces a 14.1~MeV neutron that escapes the plasma almost unimpeded. These
+high-energy neutrons interact with surrounding materials via scattering and absorption processes,
+depositing energy and inducing nuclear reactions. Because neutrons are uncharged, they cannot be
+confined electromagnetically, making the understanding of their transport through matter a key
+aspect of reactor design.
+
+The neutron energy spectrum, moderation behaviour, and spatial flux distribution determine how
+effectively a blanket converts neutron energy into heat and produces tritium. Cross-section data for
+neutron interactions are typically energy-dependent and are tabulated in nuclear data libraries used
+by simulation codes.
+
+\subsection{Tritium Breeding and Neutron Multiplication}
+
+The breeder blanket's principal nuclear function is to generate tritium through neutron–lithium
+interactions. Two primary reactions contribute to tritium production:
+the $^{6}\mathrm{Li}(n,\alpha)^{3}\mathrm{H}$ and $^{7}\mathrm{Li}(n,n\alpha)^{3}\mathrm{H}$ channels.
+The first reaction has a high cross-section for thermal neutrons,
+while the second requires higher-energy neutrons but allows the use of natural lithium without
+isotope enrichment. Efficient tritium breeding requires a careful balance between neutron moderation
+ and multiplication.
+
+To maintain a self-sufficient fuel cycle, the system must achieve a tritium breeding ratio (TBR)
+greater than unity — typically around 1.1–1.2 to account for losses and inefficiencies. Achieving
+such values often necessitates incorporating neutron-multiplying materials such as beryllium or
+lead, which release additional neutrons through $(n,2n)$ reactions, thereby improving the overall
+neutron economy.
+
+\subsection{Neutronics Modelling}
+
+Because direct experimentation on full-scale fusion reactors remains infeasible, numerical modelling
+is essential for assessing blanket performance. Monte Carlo transport methods simulate individual
+neutron histories, statistically sampling reaction probabilities to estimate flux, absorption, and
+secondary particle production. Codes such as MCNP, TRIPOLI, and OpenMC implement these methods using
+detailed geometry and material data.
+
+OpenMC, an open-source Monte Carlo code, provides a flexible environment for studying fusion systems
+with complex geometries imported from computer-aided design (CAD) models. Its ability to model
+spatially resolved neutron flux and isotope generation makes it particularly well suited to the
+analysis of breeder blanket designs — forming the computational foundation of this project.
+
+\section{Literature Review}
+
+\subsection{The D-T Reaction and the Tritium Fuel Imperative}
+
+The deuterium-tritium (D-T) fusion reaction, $d+t\rightarrow n+\alpha+17.6MeV$, has been the leading
+candidate for first-generation fusion power plants since its potential was identified in the 1940s .
+Its primary advantage lies in its high fusion cross-section ($\sigma_f$) at plasma temperatures
+achievable with current technology, significantly higher than other candidates like D-D or
+D-${}^{3}$He reactions. Furthermore, the reaction is highly aneutronic, with 80\% of the energy (14.1
+MeV) carried by the emitted neutron, which allows for energy to be efficiently extracted from the
+plasma core.
+
+This reliance on the D-T reaction, however, creates a fundamental logistical challenge: the fuel
+cycle is not self-contained. While deuterium is abundant in seawater, tritium is a radioactive
+isotope with a short half-life of 12.32 years and is not found in nature in any significant
+quantity. The world's current tritium supply is a by-product of heavy-water-moderated fission
+reactors, such as CANDU reactors. Multiple analyses of this supply chain have concluded that global
+stockpiles are extremely limited and face serious shortages, \textit{even without} the projected
+demand from a future fleet of fusion power plants.
+
+Therefore, for fusion energy to be a sustainable and viable long-term power source, any commercial
+D-T reactor must breed its own tritium. This has led to the development of in-situ fuel production
+systems, known as \textbf{Tritium Breeder Blankets}.
+
+\subsection{Breeder Blanket: Concept, Function, and Evolution}
+
+A breeder blanket is a complex component surrounding the plasma-containing vacuum vessel. Its
+primary function is to intercept the 14.1 MeV fusion neutrons and use them to induce
+tritium-producing reactions in lithium. The two key breeding reactions are:
+
+\begin{itemize}
+    \item ${}^{6}Li+n\rightarrow\alpha+t+4.8MeV$
+    \item ${}^{7}Li+n\rightarrow\alpha+t+n-2.5MeV$
+\end{itemize}
+
+While ${}^{7}$Li can breed, the ${}^{6}$Li reaction is exothermic and possesses a much larger
+reaction cross-section for the thermalised neutrons dominant in a blanket, making it the primary
+breeding isotope.
+
+The concept of a "breeder" blanket predates its application in fusion; it was first developed as a
+method to use fusion neutrons to produce fissile materials, such as ${}^{233}$U and ${}^{239}$Pu,
+for fission reactors. Today, the design must also perform several other critical functions,
+including shielding the superconducting magnets from intense neutron radiation and extracting the
+fusion energy (via neutron thermalisation) for power conversion.
+
+The key metric for a blanket's performance is the \textbf{Tritium Breeding Ratio (TBR)}, defined as
+the ratio of tritium atoms produced in the blanket to the tritium atoms consumed in the plasma. Due
+to inevitable losses from neutron capture in structural materials, decay, and incomplete fuel
+burn-up, a TBR significantly greater than 1.0 is required to achieve tritium self-sufficiency.
+
+However, the D-T reaction produces only one neutron, and the ${}^{6}$Li reaction consumes one
+neutron. This leaves no margin for losses. To achieve a TBR > 1, most blanket designs must include a
+\textbf{neutron multiplier} material. The most effective materials for this are beryllium
+(${}^{9}Be$) and lead (${}^{208}Pb$), which undergo (n, 2n) reactions (spallation) when struck by
+high-energy fusion neutrons, effectively turning one incident neutron into two.
+
+\subsection{Major Breeder Blanket Architectures}
+
+Blanket designs are broadly divided into two categories—liquid and solid—based on the phase of the
+lithium-bearing breeder material.
+
+\subsubsection{Liquid Breeder Concepts}
+
+Liquid breeders (LBs) are attractive because the breeding medium can simultaneously function as the
+coolant, simplifying the design and allowing for continuous tritium extraction outside the reactor.
+
+\begin{itemize}
+    \item \textbf{Lithium-Lead (Li-Pb):} This is one of the most mature concepts, typically using
+    the eutectic alloy $Li_{17}Pb_{83}$. The lead acts as both a neutron multiplier and the primary
+    component of the alloy, while the eutectic composition provides a low melting point, which is
+    crucial for circulation. This concept is the basis for the \textbf{Dual-Cooled Lithium-Lead
+    (DCLL)} blanket, a primary candidate for the European DEMO reactor, which uses helium to cool
+    the first wall and the liquid Li-Pb alloy as a self-cooling breeder. A key challenge for all
+    liquid metal blankets is magnetohydrodynamics (MHD), where the strong magnetic fields of the
+    tokamak induce currents in the flowing metal, creating a drag force that inhibits circulation.
+
+    \item \textbf{Molten Salts:} An alternative LB concept uses molten fluorine or chlorine salts.
+    The most prominent example is \textbf{FLiBe (2LiF - BeF$_2$)}, which advantageously combines the
+    breeder (LiF) and multiplier (BeF$_2$) into a single, low-conductivity fluid. This is the
+    reference design for the \textbf{Affordable Robust Compact (ARC)} reactor concept from MIT. A
+    wide variety of other salt compositions, including LiF-PbF$_2$ and novel chlorine-based salts,
+    are also under investigation to optimise breeding, temperature, and material compatibility.
+\end{itemize}
+
+\subsubsection{Solid Breeder Concepts}
+
+Solid breeders (SBs) use lithium-based ceramics, typically in the form of packed pebble beds, which
+eliminates MHD issues and offers high chemical stability.
+
+\begin{itemize}
+    \item \textbf{Materials and Design:} The leading candidate materials are lithium metatitanate
+    ($Li_2TiO_3$) and lithium orthosilicate ($Li_4SiO_4$), often mixed with separate beryllium-based
+    pebbles (e.g., $Be_{12}Ti$) as a multiplier. A review by Hernández and Pereslavtsev provides a
+    comprehensive survey of these and other solid-phase options.
+
+    \item \textbf{Implementations:} These materials form the basis of several major international
+    designs. The \textbf{Chinese Fusion Engineering Test Reactor (CFETR)} is developing a
+    \textbf{Water-Cooled Pebble Bed (WCPB)} blanket using $Li_2TiO_3/Be_{12}Ti$ pellets. European
+    and Japanese DEMO concepts have focused on \textbf{Helium-Cooled Pebble Bed (HCPB)} designs,
+    which are also being developed for ITER Test Blanket Modules.
+\end{itemize}
+
+The primary challenges for SB concepts are the complex engineering required for cooling (either with
+high-pressure helium or water) and the difficulty of extracting tritium, which must diffuse out of
+the solid ceramic and can be trapped in radiation-induced vacancies.
+
+\subsection{Neutronics Modelling and the Research Gap}
+
+Evaluating the TBR and other neutronic parameters of these complex designs is extremely difficult to
+do experimentally. While small-scale mockups provide crucial data on material properties and tritium
+release, they cannot replicate the full neutron spectrum and geometry of a power plant.
+
+Consequently, the field relies heavily on computational modelling, particularly \textbf{Monte Carlo
+(MC) simulations}. The probabilistic nature of neutron transport—defined by scattering, absorption,
+and multiplication cross-sections—is ideally suited to the statistical sampling methods of MC codes.
+
+\begin{itemize}
+    \item \textbf{OpenMC and Paramak:} This project uses \textbf{OpenMC}, a state-of-the-art,
+    open-source MC code that has been validated against other established codes (like MCNP) and
+    shown to accurately reproduce TBR and neutron flux calculations for fusion systems. It is
+    increasingly used in fusion research for its robust capabilities. To manage the complex reactor
+    geometry, we use \textbf{Paramak}, a Python-based CAD framework that automates the construction
+    of parametric tokamak models compatible with OpenMC.
+
+    \item \textbf{The Research Gap and Project Motivation:} A review of the literature reveals that
+    decades of research have narrowed the focus to a small selection of "safe" materials (e.g.,
+    Li-Pb, $Li_4SiO_4$, $Li_2TiO_3$) chosen not only for breeding but for their structural,
+    chemical, and cost properties. This necessary pragmatism has left many other material
+    combinations, particularly those in complex molten salt systems, comparatively unexplored.
+
+    While systematic neutronic studies have been performed, they often use simplified 1D models or
+    focus on a limited set of parameters. Recent work using OpenMC and Paramak has demonstrated the
+    power of this new toolchain, but provides an opportunity for expansion.
+
+    This project fills this gap. By leveraging the automated workflow of OpenMC and Paramak, we will
+    conduct a broad, systematic investigation of TBR performance. This work builds upon previous
+    studies by exploring a wider range of breeder materials (including less-common salts) and,
+    crucially, by systematically varying key parameters such as \textbf{${}^{6}$Li enrichment},
+    \textbf{blanket thickness}, and \textbf{material composition ratios} in a realistic 3D geometry.
+    This systematic parameter sweep will provide a comprehensive dataset to identify optimal design
+    points that previous, more narrowly-focused studies may have overlooked.
+\end{itemize}
+
+
+\noindent\rule{\linewidth}{0.4pt}
+
+\bibliographystyle{plainnat}
+\bibliography{thesis}
+
+
+\end{document}
+%
+% ****** End of file apssamp.tex ******

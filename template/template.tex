@@ -1,0 +1,370 @@
+% DOC SETUP
+
+\documentclass[%
+ reprint,
+ nofootinbib,
+ amsmath,amssymb,
+ aps,
+ 10pt,
+ nolongbibliography,
+]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{hyperref}% add hypertext capabilities
+\usepackage[title]{appendix}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{titlesec}
+%\usepackage[showframe,%Uncomment any one of the following lines to test
+%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
+%%text={7in,10in},centering,
+%%margin=1.5in,
+%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
+%%height=10in,a5paper,hmargin={3cm,0.8in},
+%]{geometry}
+
+
+%%%  Some modifications to reduce the space used by RevTex for sections, and use traditional numbering
+% Usual (decimal) numbering
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+
+% Fix references
+\makeatletter
+\renewcommand{\p@subsection}{}
+\renewcommand{\p@subsubsection}{}
+\makeatother
+
+%% Use this if you want times new roman which is slightly more compact.
+%\usepackage{times}
+\setlength{\parindent}{10pt}
+\linespread{0.94}
+
+\usepackage{titlesec}
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{5pt plus 4pt minus 2pt}{5pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{4pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
+
+\titleformat*{\section}{\raggedright\bf\MakeUppercase}
+\titleformat*{\subsection}{\itshape}
+
+
+%% READ BEFORE USE IF HAVING CITATION TROUBLES
+% The natlib package (used for citaitons here) uses \citep{} to change the citations to have square brackets over the author and year. Just using \cite{} will only bracket the year.
+% For more harvard citation options visit this url: https://library-guides.imperial.ac.uk/c.php?g=719784&p=5224027
+
+
+
+
+% DOC BEGIN
+
+\begin{document}
+
+%\preprint{APS/123-QED}
+
+\title{\Large Neutron Transport and Tritium Breeding Modelling + Potential Development Avenues \\\normalsize Masters MPhys Project Proposal}% Force line breaks with
+\author{Vadan Khan}
+\affiliation{4th Year MPhys, Department of Physics and Astronomy, University of Manchester}
+\date{\today}% It is always \today, today,
+             %  but any date may be explicitly specified
+
+\begin{abstract}
+\title{\small Context and Foreword}
+\normalsize % to prevent the abstract being smaller than 10pt
+Following personal interest, a few modules around nuclear physics and a summer placement at a Tokamak Energy working on ST40 \cite{st40} as part of the FIP fusion scheme, I have become interested in a Masters Project centred around Nuclear Fusion. I have discussed some of my ideas with Diagnostic and Plasma physicists during my placement, and investigated avenues and tools in my own time. None of the work I present here is from a summer / year placement, nor is this project a continuation of any past project, I just aim to demonstrate tools and capacities we have for our future MPhys project. After conversations with my masters partner, I have expanded on some of my ideas here to pursue as a custom Masters Project. These ideas are centred around Nuclear Fusion Breeder Blankets for Magnetic Confinement Fusion (Tokamaks). I put more focus here on the practical tools I will be using for the project,  the potential phases of the project and the main outcomes. The specifc design features I am investigating will have some level of flexibility, in case there is supervised advice for higher interest areas. Alternatively, if there are alternative appropriate projects (for example centred around breeder blankets) on offer, I would be happy to use this as a launchpad to open these discussions.
+\end{abstract}
+
+%\keywords{Suggested keywords}%Use showkeys class option if keyword
+                              %display desired
+\maketitle
+
+%\tableofcontents
+
+
+\section{Primary Project Proposal: Neutron Transport and Tritium Breeding in Advanced Blanket Geometries}
+\label{sec:proposal}
+
+Magnetic confinement fusion (MCF) reactors such as tokamaks rely on the deuterium–tritium (DT) fuel cycle, with the principal reaction:
+\begin{equation}
+\mathrm{D} + \mathrm{T} \rightarrow \alpha (3.5 \, \mathrm{MeV}) + n (14.1 \, \mathrm{MeV}) + Q.
+\end{equation}
+Here, 80\% of the fusion energy is carried away by high-energy neutrons ($14.1 \, \mathrm{MeV}$). While this neutronicity poses significant shielding and material challenges, it also presents the opportunity to breed tritium fuel through neutron-lithium interactions (see \autoref{sec:cross_sections}):
+\begin{align}
+n + {}^{6}\mathrm{Li} &\rightarrow \alpha + \mathrm{T} + 4.8 \, \mathrm{MeV}, \label{eq:li6}\\
+n + {}^{7}\mathrm{Li} &\rightarrow \alpha + \mathrm{T} + n - 2.5 \, \mathrm{MeV}. \label{eq:li7}
+\end{align}
+The blanket region of a tokamak thus has dual functions: (i) extracting the kinetic energy of neutrons to convert into heat for electricity generation, and (ii) breeding tritium to ensure fuel self-sufficiency. The metric used to quantify this is the \emph{tritium breeding ratio} (TBR), defined as:
+\begin{equation}
+\mathrm{TBR} = \frac{\text{Tritium produced in blanket}}{\text{Tritium consumed in plasma}}.
+\end{equation}
+For reactor viability, $\mathrm{TBR} > 1.05$ is typically required, accounting for tritium processing inefficiencies and reserve margins \cite{wesson, federici2001}.
+
+\subsection{Advanced Blanket Materials and Geometries}
+Conventional breeder blankets often assume homogeneous material compositions (e.g., lithium-lead eutectic or lithium ceramics). However, advanced concepts suggest the use of:
+\begin{itemize}
+    \item \textbf{Functionally graded materials (FGMs)}: spatially varying lithium or neutron multiplier concentration, tuned to optimise neutron economy.
+    \item \textbf{High-entropy alloys}: candidate structural materials with improved radiation tolerance.
+    \item \textbf{Liquid lithium or lithium-lead breeders}: improved heat transfer and tritium recovery characteristics.
+\end{itemize}
+These configurations may allow higher TBR and reduced structural damage compared to traditional homogeneous blankets \cite{abdou2001, raffray2009}. However, the neutronic impact of such heterogeneity is not yet fully quantified.
+
+\subsection{Proposed Methodology}
+This project proposes to investigate the neutronic performance of such advanced breeder blanket geometries using \textbf{OpenMC}, a Monte Carlo neutron transport code \cite{romano2015, openmc} and a suite of relevant packages accessible via python (e.g. \texttt{Paramak} \cite{paramak}). OpenMC allows:
+\begin{itemize}
+    \item Flexible 3D geometry and material definition (Figure \ref{fig:geometry}, \ref{fig:geometry3d}).
+    \item High-fidelity neutron transport with modern nuclear data libraries (e.g. ENDF/B-VIII) (Figure \ref{fig:cross_section_lithium}, \ref{fig:cross_section_coolant}, \ref{fig:cross_section_reflector}).
+    \item Python-based scripting interface for automating parameter scans and geometry generation (Figure \ref{fig:source}, \ref{fig:results}).
+\end{itemize}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth,]{figures/tokamakgeometry.png}
+    % Trim setting removes excess white space round figure.
+    \caption{\normalsize Example simple tokamak defintion directly in openMC (personal build).}
+    \label{fig:geometry}
+    \end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth,]{figures/paramak.png}
+    % Trim setting removes excess white space round figure.
+    \caption{\normalsize Example Parameterised Tokamak Model defined from the Paramak Package \cite{paramak}, integrated for use into openMC.}
+    \label{fig:geometry3d}
+    \end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth,]{figures/lithiumcrosssections.png}
+    % Trim setting removes excess white space round figure.
+    \caption{\normalsize Example of different compositions of Breeder Blankets, in which material cross sections can easily be investigated, enriched and concentrations adjusted via openMC.}
+    \label{fig:cross_section_lithium}
+    \end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth,]{figures/coolantfirstwallcrossections.png}
+    % Trim setting removes excess white space round figure.
+    \caption{\normalsize Example of different compositions of First Wall and Coolant Materials, in which material cross sections can easily be investigated, enriched and concentrations adjusted via openMC.}
+    \label{fig:cross_section_coolant}
+    \end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth,]{figures/reflectorcrosssections.png}
+    % Trim setting removes excess white space round figure.
+    \caption{\normalsize Example of different compositions of reflector Materials, in which material cross sections can easily be investigated, enriched and concentrations adjusted via openMC.}
+    \label{fig:cross_section_reflector}
+    \end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth,]{figures/neutronsource.png}
+    % Trim setting removes excess white space round figure.
+    \caption{\normalsize A uniform flux of neutrons are incident from a ring at the centre of the tokamak toroid, defined here and investigateable here.}
+    \label{fig:source}
+    \end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth,]{figures/openMCresults.png}
+    % Trim setting removes excess white space round figure.
+    \caption{\normalsize Example results for a particular geometry and material configuration, including TBR with an uncertainty.}
+    \label{fig:results}
+    \end{figure}
+
+
+The workflow will involve:
+\begin{enumerate}
+    \item Modelling baseline homogeneous blankets (e.g., LiPb, Li$_2$TiO$_3$) for reference TBR.
+    \item Building new geometries / models, introducing non-uniform distributions of breeder and multiplier materials (e.g., graded layers).
+    \item Quantifying neutron flux, TBR, and energy deposition in a sweep of parameters (eg. from a simpler personal scratch built MC solver project I demonstrate how I track results against a parameter sweep (see \autoref{sec:bespoke_neutronics}).
+    \item Comparison of performance against baseline homogeneous designs and production of optimal parameters for these blankets.
+\end{enumerate}
+
+
+
+The outcome will be a systematic assessment of the potential advantages of graded and novel breeder blanket concepts in terms of neutron economy and tritium production.
+
+The implementation of advanced MC modeling in a Python interface also allows for accessibility and much more feasible integration with other codes / features.
+
+\noindent\rule{\linewidth}{0.4pt}
+
+\section{Potential Development Avenue I: Multi-Objective Optimisation with Genetic Algorithms}
+\label{sec:avenue2}
+
+% \cite{deap}
+% \cite{optuna}
+% \cite{rllib}
+
+Blanket design is inherently a multi-objective optimisation problem: maximising TBR, ensuring adequate cooling, minimising structural damage, and maintaining manufacturability. A possible extension would be to implement a Python-based optimisation framework, for example the evolutionary computation library \texttt{DEAP}, or more advanced ML-driven optimisation toolkits such as \texttt{Optuna}  or reinforcement-learning based optimisers such as \texttt{Ray RLlib} . These frameworks could be coupled with OpenMC to explore parameter space systematically:
+\begin{equation}
+\min_{\vec{x}} \; \mathcal{F}(\vec{x}) = w_1 \cdot \frac{1}{\mathrm{TBR}(\vec{x})} + w_2 \cdot D(\vec{x}) + w_3 \cdot C(\vec{x}),
+\end{equation}
+where $\vec{x}$ are the parameters of the blanket design, $D$ represents structural damage, and $C$ a cooling cost function. The framework would enable identifying Pareto-optimal blanket configurations balancing competing objectives.
+
+An avenue of interest would be to integrate reeforcement learning (RL) mechanisms integrated with our simulation model, to automatically optimize a set of parameters for a set cost function as models are run. There is a very large community of Python packages for ML, including RL mechanisms of various levels of complexity (e.g. a simpler Q-learning algorithm demonstration for optimizing a cartpole physical setup (Figure \ref{fig:cartpole}) using \texttt{OpenAI Gym} \cite{gym}). Ideally this results in a code that can be left to run for a set of input parameters / ranges and output the optimal setup. Expansion of the generality of this RL modeller could result in powerful result for this project, as it could be extended to any other fusion or beyond design problems.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth,]{figures/qlearning.png}
+    % Trim setting removes excess white space round figure.
+    \caption{\normalsize Example graph of increasing reward as the RL mechanism tunes it parameters to optimise the physical setup. It does this live against each iteration. Uses \texttt{OpenAI Gym} \cite{gym}.}
+    \label{fig:cartpole}
+    \end{figure}
+
+\noindent\rule{\linewidth}{0.4pt}
+
+\section{Potential Development Avenue II: Machine Learning Surrogate Models}
+\label{sec:avenue3}
+
+Monte Carlo simulations are computationally expensive, limiting rapid exploration of design space. A further extension would be to develop machine learning (ML) surrogate models trained on OpenMC-generated data. Neural networks, Gaussian processes, or other regression models could be used to predict:
+\begin{itemize}
+    \item TBR as a function of blanket geometry and material composition.
+    \item Spatial power deposition maps.
+    \item Sensitivity of performance to design parameters.
+\end{itemize}
+This would enable faster optimisation loops and potentially real-time design feedback. A surrogate model could also aid uncertainty quantification, e.g., propagating nuclear data uncertainties more efficiently \cite{liu2022,koning2021}.
+
+\noindent\rule{\linewidth}{0.4pt}
+
+\section{Potential Development Avenue III: Coupled Neutronics and Thermal-Hydraulics}
+\label{sec:avenue1}
+
+Neutronic performance is intimately linked with thermal management. High neutron fluxes deposit significant heat, requiring efficient coolant removal. As a development path, OpenMC neutronic simulations could be coupled with a thermal-hydraulic solver (e.g. \texttt{OpenFOAM} or \texttt{ANSYS Fluent}). This would allow study of:
+\begin{itemize}
+    \item How coolant flow patterns influence neutron absorption and tritium breeding.
+    \item Trade-offs between heat extraction efficiency and neutronic performance.
+    \item Optimisation of coolant channel designs.
+\end{itemize}
+
+Such a coupling would provide a more holistic evaluation of blanket feasibility beyond neutronics alone \cite{rinderknecht2021}.
+
+A significant concern with this path is the divergence of modelling task to be out of scope for the MPhys Project allocation, and additionally increasing computational load significantly. Steps must be taken to take approximations and get first-order estimations for thermal coupling in our modelling, to reduce complexity and computational load and ensure feasibility.
+
+\noindent\rule{\linewidth}{0.4pt}
+
+\section{Summary}
+The primary project will focus on neutron transport and tritium breeding in advanced breeder blanket geometries, using OpenMC as the central computational tool. The outcomes will provide insight into the viability of functionally graded and novel blanket materials compared to conventional homogeneous designs.
+
+Depending on progress and interest, the project can be extended in one of three directions:
+\begin{enumerate}
+    \item Coupling neutronics with thermal-hydraulics.
+    \item Multi-objective optimisation via genetic algorithms.
+    \item Development of ML-based surrogate models.
+\end{enumerate}
+
+Each extension builds naturally on the core neutronics modelling, and would provide valuable interdisciplinary insights for future fusion blanket design.
+
+\noindent\rule{\linewidth}{0.4pt}
+
+
+
+
+\bibliographystyle{plainnat}
+\bibliography{thesis}
+
+
+
+
+\clearpage
+\onecolumngrid
+\begin{appendices}
+\renewcommand{\thefigure}{A.\arabic{figure}} % Set figure numbering to A.1, A.2, etc.
+\setcounter{figure}{0} % Reset figure counter
+
+\section{Cross Section Figures}
+\label{sec:cross_sections}
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.8\linewidth]{figures/2H-reactions.png}
+%     \caption{Relevant Deuterium Cross Sections \cite{endf}}
+%     \label{fig:d}
+% \end{figure}
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.8\linewidth]{figures/3H-reactions.png}
+%     \caption{Relevant Tritium Cross Sections \cite{endf}}
+%     \label{fig:t}
+% \end{figure}
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.8\linewidth]{figures/4He-Reactions.png}
+%     \caption{Relevant Helium Cross Sections \cite{endf}}
+%     \label{fig:he}
+% \end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\linewidth]{figures/6Li-reactions.png}
+    \caption{Relevant Lithium-6 Cross Sections \cite{endf}}
+    \label{fig:Li6}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\linewidth]{figures/7Li-reactions.png}
+    \caption{Relevant Lithium-7 Cross Sections \cite{endf}}
+    \label{fig:Li7}
+\end{figure}
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.8\linewidth]{figures/11B-reactions.png}
+%     \caption{Relevant Boron-11 Cross Sections \cite{endf}}
+%     \label{fig:B}
+% \end{figure}
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.8\linewidth]{figures/113Cd-reactions.png}
+%     \caption{Relevant Cadmium-113 Cross Sections \cite{endf}}
+%     \label{fig:Cd}
+% \end{figure}
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.6\linewidth]{figures/Tri-alpha-crossection.png}
+%     \caption{The cross section of the tri-alpha reaction \cite{tae}}
+%     \label{fig:tri}
+% \end{figure}
+
+\section{Bespoke Neutronic Code Demonstration}
+\label{sec:bespoke_neutronics}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\linewidth]{figures/Real_values_paths_70cm.png}
+    % Trim setting removes excess white space round figure.
+    \caption{\normalsize A Personal scratch built MC solver project, in which I built a simple block of breeder blanket. Uniform neutron flux incident on the left and each neutron is tracked according to basic transport equations}
+    \label{fig:paths}
+    \end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\linewidth]{figures/simulation_results.png}
+    % Trim setting removes excess white space round figure.
+    \caption{\normalsize Example results for a particular thickness of breeder blanket.}
+    \label{fig:oldresults}
+    \end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\linewidth]{figures/Blanket_Thickness_Sweep.jpg}
+    % Trim setting removes excess white space round figure.
+    \caption{\normalsize Exemplary parameter sweep, here demonstrating the proportion of neutrons that are reflected, absorbed, absorbed etc. against blanket thickness}
+    \label{fig:sweep}
+    \end{figure}
+
+
+
+\end{appendices}
+
+% Repeat similar blocks for Figures A.2 to A.10
+\end{document}
+%
+% ****** End of file apssamp.tex ******
