@@ -188,20 +188,21 @@ analysis of breeder blanket designs — forming the computational foundation of 
 \subsection{The D-T Reaction and the Tritium Fuel Imperative}
 
 The deuterium-tritium (D-T) fusion reaction, $d+t\rightarrow n+\alpha+17.6MeV$, has been the leading
-candidate for first-generation fusion power plants since its potential was identified in the 1940s .
-Its primary advantage lies in its high fusion cross-section ($\sigma_f$) at plasma temperatures
-achievable with current technology, significantly higher than other candidates like D-D or
-D-${}^{3}$He reactions. Furthermore, the reaction is highly aneutronic, with 80\% of the energy (14.1
-MeV) carried by the emitted neutron, which allows for energy to be efficiently extracted from the
-plasma core.
+candidate for first-generation fusion power plants since its potential was identified in the 1940s
+\cite{paris_lost_2023}. Its primary advantage lies in its high fusion cross-section ($\sigma_f$) at
+plasma temperatures achievable with current technology, significantly higher than other candidates
+like D-D or D-${}^{3}$He reactions. Furthermore, 80% of the energy (14.1 MeV) is carried by the
+emitted neutron, which allows for energy to be efficiently extracted from the plasma core
+\cite{heckrotte_factors_1971}.
 
 This reliance on the D-T reaction, however, creates a fundamental logistical challenge: the fuel
 cycle is not self-contained. While deuterium is abundant in seawater, tritium is a radioactive
 isotope with a short half-life of 12.32 years and is not found in nature in any significant
 quantity. The world's current tritium supply is a by-product of heavy-water-moderated fission
 reactors, such as CANDU reactors. Multiple analyses of this supply chain have concluded that global
-stockpiles are extremely limited and face serious shortages, \textit{even without} the projected
-demand from a future fleet of fusion power plants.
+stockpiles are extremely limited and face serious shortages \cite{kovari_tritium_2018,
+pearson_tritium_2018}, \textit{even without} the projected demand from a future fleet of fusion
+power plants.
 
 Therefore, for fusion energy to be a sustainable and viable long-term power source, any commercial
 D-T reactor must breed its own tritium. This has led to the development of in-situ fuel production
@@ -213,10 +214,8 @@ A breeder blanket is a complex component surrounding the plasma-containing vacuu
 primary function is to intercept the 14.1 MeV fusion neutrons and use them to induce
 tritium-producing reactions in lithium. The two key breeding reactions are:
 
-\begin{itemize}
-    \item ${}^{6}Li+n\rightarrow\alpha+t+4.8MeV$
-    \item ${}^{7}Li+n\rightarrow\alpha+t+n-2.5MeV$
-\end{itemize}
+$${}^{6}Li+n\rightarrow\alpha+t+4.8MeV$$
+$${}^{7}Li+n\rightarrow\alpha+t+n-2.5MeV$$
 
 While ${}^{7}$Li can breed, the ${}^{6}$Li reaction is exothermic and possesses a much larger
 reaction cross-section for the thermalised neutrons dominant in a blanket, making it the primary
@@ -224,20 +223,67 @@ breeding isotope.
 
 The concept of a "breeder" blanket predates its application in fusion; it was first developed as a
 method to use fusion neutrons to produce fissile materials, such as ${}^{233}$U and ${}^{239}$Pu,
-for fission reactors. Today, the design must also perform several other critical functions,
-including shielding the superconducting magnets from intense neutron radiation and extracting the
-fusion energy (via neutron thermalisation) for power conversion.
+for fission reactors \cite{moir_fusion_1982, lee_us-doe_1983, maniscalco_fusion_1984}. Today, the
+design must also perform several other critical functions, including shielding the superconducting
+magnets from intense neutron radiation and extracting the fusion energy (via neutron thermalisation)
+for power conversion.
 
 The key metric for a blanket's performance is the \textbf{Tritium Breeding Ratio (TBR)}, defined as
 the ratio of tritium atoms produced in the blanket to the tritium atoms consumed in the plasma. Due
 to inevitable losses from neutron capture in structural materials, decay, and incomplete fuel
-burn-up, a TBR significantly greater than 1.0 is required to achieve tritium self-sufficiency.
+burn-up, a TBR significantly greater than 1.0 is required to achieve tritium self-sufficiency
+\cite{sawan_physics_2006, meschini_modeling_2023}.
 
 However, the D-T reaction produces only one neutron, and the ${}^{6}$Li reaction consumes one
-neutron. This leaves no margin for losses. To achieve a TBR > 1, most blanket designs must include a
+neutron. This leaves no margin for losses. To achieve a TBR $>$ 1, most blanket designs must include a
 \textbf{neutron multiplier} material. The most effective materials for this are beryllium
 (${}^{9}Be$) and lead (${}^{208}Pb$), which undergo (n, 2n) reactions (spallation) when struck by
-high-energy fusion neutrons, effectively turning one incident neutron into two.
+high-energy fusion neutrons, effectively turning one incident neutron into two
+\cite{hernandez_first_2018}.
+
+\subsection{The Role of Neutron Multipliers}
+
+The D-T fusion reaction produces a single 14.1 MeV neutron, while the primary breeding reaction,
+${}^{6}Li(n,\alpha)t$, consumes one neutron. This 1-to-1 neutron economy leaves no margin for
+inevitable losses due to parasitic absorption in structural materials or neutrons escaping the
+blanket. To achieve the required Tritium Breeding Ratio (TBR) greater than unity, a blanket must
+therefore incorporate a \textbf{neutron multiplier} \cite{malang_self-cooled_1991}.
+
+While natural lithium itself has a minor neutron-multiplying reaction via the high-energy (n,n't)
+reaction with ${}^{7}$Li:
+$$ {}^{7}Li+n\rightarrow\alpha+t+n' - 2.5MeV $$ This reaction is endothermic, consuming 2.5 MeV of
+energy, and its cross-section is insufficient on its own to guarantee tritium self-sufficiency
+\cite{hernandez_first_2018}. Therefore, dedicated multiplier materials are required, with the two
+primary candidates being Beryllium (Be) and Lead (Pb).
+
+\begin{itemize}
+    \item \textbf{Beryllium (Be):} Beryllium, specifically the isotope ${}^{9}Be$, is an extremely
+    effective neutron multiplier with a low energy threshold for its (n,2n) reaction:
+    $$ {}^{9}Be+n\rightarrow{}^{8}Be+2n \rightarrow 2\alpha + 2n $$ It is widely used in conceptual
+    solid breeder designs, such as the Helium-Cooled Pebble Bed (HCPB) and Water-Cooled Pebble Bed
+    (WCPB), often in the form of beryllium pebbles or beryllide ceramics ($Be_{12}Ti$)
+    \cite{wang_current_2019, liu_design_2022}. It is also a key component in the molten salt FLiBe
+    (2LiF - BeF$_2$) \cite{tas_liquid_1988, sorbom_arc_2015}. However, beryllium has two major
+    drawbacks: it is a scarce resource, and its dust is "ridiculously toxic"
+    \cite{shimwell_reducing_2016}, posing significant safety, handling, and manufacturing
+    challenges.
+
+    \item \textbf{Lead (Pb):} Lead, typically natural lead or lead enriched in ${}^{208}Pb$, is the
+    other main multiplier candidate. It undergoes a high-energy (n,2n) reaction:
+    $$ {}^{208}Pb+n\rightarrow{}^{207m}Pb+2n $$ Lead's primary advantage is that it can be
+    seamlessly integrated into a liquid breeder, forming the $Li_{17}Pb_{83}$ eutectic alloy. This
+    allows the material to serve as breeder, multiplier, and coolant simultaneously
+    \cite{wu_overview_2011, malang_self-cooled_1991}. While it avoids the toxicity issues of
+    beryllium, lead is a high-Z (high atomic number) material. This means it can also be a source of
+    parasitic neutron absorption, particularly for the low-energy thermal neutrons that are most
+    effective for breeding with ${}^{6}Li$. Furthermore, its activation by high-energy neutrons can
+    lead to the production of long-lived radioisotopes, complicating waste disposal
+    \cite{bocci_arc_2020}.
+\end{itemize}
+
+The choice of multiplier, therefore, represents a critical trade-off between neutronic efficiency,
+material toxicity, resource availability, and long-term waste management \cite{hernandez_first_2018,
+shimwell_reducing_2016}.
 
 \subsection{Major Breeder Blanket Architectures}
 
@@ -247,75 +293,88 @@ lithium-bearing breeder material.
 \subsubsection{Liquid Breeder Concepts}
 
 Liquid breeders (LBs) are attractive because the breeding medium can simultaneously function as the
-coolant, simplifying the design and allowing for continuous tritium extraction outside the reactor.
+coolant, simplifying the design and allowing for continuous tritium extraction outside the reactor
+\cite{tas_liquid_1988}.
 
 \begin{itemize}
     \item \textbf{Lithium-Lead (Li-Pb):} This is one of the most mature concepts, typically using
-    the eutectic alloy $Li_{17}Pb_{83}$. The lead acts as both a neutron multiplier and the primary
-    component of the alloy, while the eutectic composition provides a low melting point, which is
-    crucial for circulation. This concept is the basis for the \textbf{Dual-Cooled Lithium-Lead
-    (DCLL)} blanket, a primary candidate for the European DEMO reactor, which uses helium to cool
-    the first wall and the liquid Li-Pb alloy as a self-cooling breeder. A key challenge for all
+    the eutectic alloy $Li_{17}Pb_{83}$ \cite{mas_de_les_valls_leadlithium_2008, wu_overview_2011}.
+    The lead acts as both a neutron multiplier and the primary component of the alloy, while the
+    eutectic composition provides a low melting point, which is crucial for circulation
+    \cite{mas_de_les_valls_leadlithium_2008}. This concept is the basis for the \textbf{Dual-Cooled
+    Lithium-Lead (DCLL)} blanket, a primary candidate for the European DEMO reactor
+    \cite{fernandez-berceruelo_progress_2024, malang_self-cooled_1991}. A key challenge for all
     liquid metal blankets is magnetohydrodynamics (MHD), where the strong magnetic fields of the
-    tokamak induce currents in the flowing metal, creating a drag force that inhibits circulation.
+    tokamak induce currents in the flowing metal, creating a drag force that inhibits circulation
+    \cite{malang_self-cooled_1991}.
 
     \item \textbf{Molten Salts:} An alternative LB concept uses molten fluorine or chlorine salts.
     The most prominent example is \textbf{FLiBe (2LiF - BeF$_2$)}, which advantageously combines the
-    breeder (LiF) and multiplier (BeF$_2$) into a single, low-conductivity fluid. This is the
-    reference design for the \textbf{Affordable Robust Compact (ARC)} reactor concept from MIT. A
-    wide variety of other salt compositions, including LiF-PbF$_2$ and novel chlorine-based salts,
-    are also under investigation to optimise breeding, temperature, and material compatibility.
+    breeder (LiF) and multiplier (BeF$_2$) into a single, low-conductivity fluid
+    \cite{tas_liquid_1988}. This is the reference design for the \textbf{Affordable Robust Compact
+    (ARC)} reactor concept from MIT \cite{sorbom_arc_2015, bocci_arc_2020,
+    segantin_optimization_2020}. A wide variety of other salt compositions, including LiF-PbF$_2$
+    and novel chlorine-based salts, are also under investigation to optimise breeding, temperature,
+    and material compatibility \cite{segantin_neutronic_2020, bohm_initial_2023}.
 \end{itemize}
 
 \subsubsection{Solid Breeder Concepts}
 
 Solid breeders (SBs) use lithium-based ceramics, typically in the form of packed pebble beds, which
-eliminates MHD issues and offers high chemical stability.
+eliminates MHD issues and offers high chemical stability \cite{proust_solid_1991,
+knitter_recent_2013}.
 
 \begin{itemize}
     \item \textbf{Materials and Design:} The leading candidate materials are lithium metatitanate
     ($Li_2TiO_3$) and lithium orthosilicate ($Li_4SiO_4$), often mixed with separate beryllium-based
-    pebbles (e.g., $Be_{12}Ti$) as a multiplier. A review by Hernández and Pereslavtsev provides a
-    comprehensive survey of these and other solid-phase options.
+    pebbles (e.g., $Be_{12}Ti$) as a multiplier \cite{hernandez_first_2018, hernandez_chapter_2025}.
+    A review by \cite{hernandez_first_2018} provides a comprehensive survey of these and other
+    solid-phase options.
 
     \item \textbf{Implementations:} These materials form the basis of several major international
     designs. The \textbf{Chinese Fusion Engineering Test Reactor (CFETR)} is developing a
-    \textbf{Water-Cooled Pebble Bed (WCPB)} blanket using $Li_2TiO_3/Be_{12}Ti$ pellets. European
-    and Japanese DEMO concepts have focused on \textbf{Helium-Cooled Pebble Bed (HCPB)} designs,
-    which are also being developed for ITER Test Blanket Modules.
+    \textbf{Water-Cooled Pebble Bed (WCPB)} blanket using $Li_2TiO_3/Be_{12}Ti$ pellets
+    \cite{liu_design_2022, lei_design_2020}. European and Japanese DEMO concepts have focused on
+    \textbf{Helium-Cooled Pebble Bed (HCPB)} designs, which are also being developed for ITER Test
+    Blanket Modules \cite{federici_european_2017, wang_current_2019, kawamura_overview_2024}.
 \end{itemize}
 
 The primary challenges for SB concepts are the complex engineering required for cooling (either with
 high-pressure helium or water) and the difficulty of extracting tritium, which must diffuse out of
-the solid ceramic and can be trapped in radiation-induced vacancies.
+the solid ceramic and can be trapped in radiation-induced vacancies \cite{shi_density_2015}.
 
 \subsection{Neutronics Modelling and the Research Gap}
 
 Evaluating the TBR and other neutronic parameters of these complex designs is extremely difficult to
 do experimentally. While small-scale mockups provide crucial data on material properties and tritium
-release, they cannot replicate the full neutron spectrum and geometry of a power plant.
+release \cite{delaporte-mathurin_advancing_2025, hirose_functional_2024}, they cannot replicate the
+full neutron spectrum and geometry of a power plant \cite{delaporte-mathurin_advancing_2025}.
 
 Consequently, the field relies heavily on computational modelling, particularly \textbf{Monte Carlo
 (MC) simulations}. The probabilistic nature of neutron transport—defined by scattering, absorption,
-and multiplication cross-sections—is ideally suited to the statistical sampling methods of MC codes.
+and multiplication cross-sections—is ideally suited to the statistical sampling methods of MC codes
+\cite{kalos_monte_2008, kuridan_neutron_2023}.
 
 \begin{itemize}
     \item \textbf{OpenMC and Paramak:} This project uses \textbf{OpenMC}, a state-of-the-art,
     open-source MC code that has been validated against other established codes (like MCNP) and
-    shown to accurately reproduce TBR and neutron flux calculations for fusion systems. It is
-    increasingly used in fusion research for its robust capabilities. To manage the complex reactor
+    shown to accurately reproduce TBR and neutron flux calculations for fusion systems
+    \cite{romano2015, bae_arc_2022}. It is increasingly used in fusion research for its robust
+    capabilities \cite{fradera_pre-conceptual_2021, king_high_2022}. To manage the complex reactor
     geometry, we use \textbf{Paramak}, a Python-based CAD framework that automates the construction
-    of parametric tokamak models compatible with OpenMC.
+    of parametric tokamak models compatible with OpenMC \cite{shimwell_paramak_2021}.
 
     \item \textbf{The Research Gap and Project Motivation:} A review of the literature reveals that
     decades of research have narrowed the focus to a small selection of "safe" materials (e.g.,
     Li-Pb, $Li_4SiO_4$, $Li_2TiO_3$) chosen not only for breeding but for their structural,
-    chemical, and cost properties. This necessary pragmatism has left many other material
-    combinations, particularly those in complex molten salt systems, comparatively unexplored.
+    chemical, and cost properties \cite{shatalov_breeder_1991, federici_overview_2019}. This
+    necessary pragmatism has left many other material combinations, particularly those in complex
+    molten salt systems, comparatively unexplored.
 
-    While systematic neutronic studies have been performed, they often use simplified 1D models or
-    focus on a limited set of parameters. Recent work using OpenMC and Paramak has demonstrated the
-    power of this new toolchain, but provides an opportunity for expansion.
+    While systematic neutronic studies have been performed \cite{hernandez_first_2018,
+    segantin_neutronic_2020, boullon_molten_2021}, they often use simplified 1D models or focus on a
+    limited set of parameters. Recent work using OpenMC and Paramak \cite{goel_optimization_2023}
+    has demonstrated the power of this new toolchain, but provides an opportunity for expansion.
 
     This project fills this gap. By leveraging the automated workflow of OpenMC and Paramak, we will
     conduct a broad, systematic investigation of TBR performance. This work builds upon previous
@@ -325,7 +384,6 @@ and multiplication cross-sections—is ideally suited to the statistical samplin
     This systematic parameter sweep will provide a comprehensive dataset to identify optimal design
     points that previous, more narrowly-focused studies may have overlooked.
 \end{itemize}
-
 
 \noindent\rule{\linewidth}{0.4pt}
 

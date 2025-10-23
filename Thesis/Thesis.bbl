@@ -1,8 +1,504 @@
-\begin{thebibliography}{0}
+\begin{thebibliography}{43}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bae et~al.(2022)Bae, Peterson, and Shimwell]{bae_arc_2022}
+Jin~Whan Bae, Ethan Peterson, and Jonathan Shimwell.
+\newblock {ARC} reactor neutronics multi-code validation*.
+\newblock \emph{Nuclear Fusion}, 62\penalty0 (6):\penalty0 066016, June 2022.
+\newblock ISSN 0029-5515, 1741-4326.
+\newblock \doi{10.1088/1741-4326/ac5450}.
+\newblock URL
+  \url{https://iopscience.iop.org/article/10.1088/1741-4326/ac5450}.
+
+\bibitem[Bocci et~al.(2020)Bocci, Hartwig, Segantin, Testoni, Whyte, and
+  Zucchetti]{bocci_arc_2020}
+B.~Bocci, Z.~Hartwig, S.~Segantin, R.~Testoni, D.~Whyte, and M.~Zucchetti.
+\newblock {ARC} reactor materials: {Activation} analysis and optimization.
+\newblock \emph{Fusion Engineering and Design}, 154:\penalty0 111539, May 2020.
+\newblock ISSN 0920-3796.
+\newblock \doi{10.1016/j.fusengdes.2020.111539}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0920379620300879}.
+
+\bibitem[Bohm and Lindley(2023)]{bohm_initial_2023}
+Tim~D. Bohm and Ben~A. Lindley.
+\newblock Initial {Neutronics} {Investigation} of a {Chlorine} {Salt}–{Based}
+  {Breeder} {Blanket}.
+\newblock \emph{Fusion Science and Technology}, 79\penalty0 (8):\penalty0
+  995--1007, November 2023.
+\newblock ISSN 1536-1055, 1943-7641.
+\newblock \doi{10.1080/15361055.2022.2136923}.
+\newblock URL
+  \url{https://www.tandfonline.com/doi/full/10.1080/15361055.2022.2136923}.
+
+\bibitem[Boullon et~al.(2021)Boullon, Jaboulay, and
+  Aubert]{boullon_molten_2021}
+Rémi Boullon, Jean-Charles Jaboulay, and Julien Aubert.
+\newblock Molten salt breeding blanket: {Investigations} and proposals of
+  pre-conceptual design options for testing in {DEMO}.
+\newblock \emph{Fusion Engineering and Design}, 171:\penalty0 112707, October
+  2021.
+\newblock ISSN 0920-3796.
+\newblock \doi{10.1016/j.fusengdes.2021.112707}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S092037962100483X}.
+
+\bibitem[Delaporte-Mathurin et~al.(2025)Delaporte-Mathurin, Goles, Ball, Dunn,
+  Edwards, Ferry, Lamere, Lanzrath, Leccacorvi, Meschini, Peterson, Segantin,
+  Vieira, Whyte, Zhou, and Woller]{delaporte-mathurin_advancing_2025}
+Rémi Delaporte-Mathurin, Nikola Goles, John Ball, Collin Dunn, Emily Edwards,
+  Sara Ferry, Edward Lamere, Andrew Lanzrath, Rick Leccacorvi, Samuele
+  Meschini, Ethan Peterson, Stefano Segantin, Rui Vieira, Dennis Whyte, Weiyue
+  Zhou, and Kevin Woller.
+\newblock Advancing tritium self-sufficiency in fusion power plants: insights
+  from the {BABY} experiment.
+\newblock \emph{Nuclear Fusion}, 65\penalty0 (2):\penalty0 026037, February
+  2025.
+\newblock ISSN 0029-5515, 1741-4326.
+\newblock \doi{10.1088/1741-4326/ada2ab}.
+\newblock URL
+  \url{https://iopscience.iop.org/article/10.1088/1741-4326/ada2ab}.
+
+\bibitem[Federici et~al.(2017)Federici, Biel, Gilbert, Kemp, Taylor, and
+  Wenninger]{federici_european_2017}
+G.~Federici, W.~Biel, M.R. Gilbert, R.~Kemp, N.~Taylor, and R.~Wenninger.
+\newblock European {DEMO} design strategy and consequences for materials.
+\newblock \emph{Nuclear Fusion}, 57\penalty0 (9):\penalty0 092002, September
+  2017.
+\newblock ISSN 0029-5515, 1741-4326.
+\newblock \doi{10.1088/1741-4326/57/9/092002}.
+\newblock URL
+  \url{https://iopscience.iop.org/article/10.1088/1741-4326/57/9/092002}.
+
+\bibitem[Federici et~al.(2019)Federici, Boccaccini, Cismondi, Gasparotto,
+  Poitevin, and Ricapito]{federici_overview_2019}
+G.~Federici, L.~Boccaccini, F.~Cismondi, M.~Gasparotto, Y.~Poitevin, and
+  I.~Ricapito.
+\newblock An overview of the {EU} breeding blanket design strategy as an
+  integral part of the {DEMO} design effort.
+\newblock \emph{Fusion Engineering and Design}, 141:\penalty0 30--42, April
+  2019.
+\newblock ISSN 09203796.
+\newblock \doi{10.1016/j.fusengdes.2019.01.141}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0920379619301590}.
+
+\bibitem[Fernández-Berceruelo et~al.(2024)Fernández-Berceruelo, Palermo,
+  Urgorri, Rapisarda, González, Alguacil, Catalán, García, Kekrt, Kordač,
+  Krastiņš, Melichar, Noguerón, Platacis, Petráš, Roldán, Rueda, Serna,
+  Sosa, and Suàrez]{fernandez-berceruelo_progress_2024}
+I.~Fernández-Berceruelo, I.~Palermo, F.R. Urgorri, D.~Rapisarda, M.~González,
+  J.~Alguacil, J.P. Catalán, J.M. García, J.~Kekrt, M.~Kordač,
+  I.~Krastiņš, T.~Melichar, J.Á. Noguerón, E.~Platacis, R.~Petráš,
+  M.~Roldán, A.~Rueda, J.~Serna, D.~Sosa, and D.~Suàrez.
+\newblock Progress in design and experimental activities for the development of
+  an advanced breeding blanket.
+\newblock \emph{Nuclear Fusion}, 64\penalty0 (5):\penalty0 056029, May 2024.
+\newblock ISSN 0029-5515, 1741-4326.
+\newblock \doi{10.1088/1741-4326/ad37ca}.
+\newblock URL
+  \url{https://iopscience.iop.org/article/10.1088/1741-4326/ad37ca}.
+
+\bibitem[Fradera et~al.(2021)Fradera, Sádaba, Calvo, Ha, Merriman, Gordillo,
+  Connell, Elfaraskoury, and Echeveste]{fradera_pre-conceptual_2021}
+J.~Fradera, S.~Sádaba, F.~Calvo, S.~Ha, S.~Merriman, P.~Gordillo, J.~Connell,
+  A.~Elfaraskoury, and B.~Echeveste.
+\newblock Pre-conceptual design of an encapsulated breeder commercial blanket
+  for the {STEP} fusion reactor.
+\newblock \emph{Fusion Engineering and Design}, 172:\penalty0 1--15, November
+  2021.
+\newblock ISSN 09203796.
+\newblock \doi{10.1016/j.fusengdes.2021.112909}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0920379621006852}.
+
+\bibitem[Goel et~al.(2023)Goel, Aslam, and Dua]{goel_optimization_2023}
+Vikram Goel, Soha Aslam, and Sejal Dua.
+\newblock Optimization of {Tritium} {Breeding} {Ratio} in a {DT} and {DD}
+  {Submersion} {Tokamak} {Fusion} {Reactor}, September 2023.
+\newblock URL \url{http://arxiv.org/abs/2310.00220}.
+\newblock arXiv:2310.00220 [physics].
+
+\bibitem[Heckrotte and Hiskes(1971)]{heckrotte_factors_1971}
+W.~Heckrotte and J.R. Hiskes.
+\newblock Some factors in the choice of {D}-{D}, {D}-{T} or {D}-{3He} mirror
+  fusion power systems.
+\newblock \emph{Nuclear Fusion}, 11\penalty0 (5):\penalty0 471, October 1971.
+\newblock ISSN 0029-5515.
+\newblock \doi{10.1088/0029-5515/11/5/009}.
+\newblock URL \url{https://doi.org/10.1088/0029-5515/11/5/009}.
+
+\bibitem[Hernández et~al.(2025)Hernández, Gaisin, Ghidersa, Knitter,
+  Neuberger, Spagnuolo, Vladimirov, and Zhou]{hernandez_chapter_2025}
+F.~A. Hernández, R.~Gaisin, B.~E. Ghidersa, R.~Knitter, H.~Neuberger, G.~A.
+  Spagnuolo, P.~Vladimirov, and Guangming Zhou.
+\newblock Chapter 7.5 - {Ceramic} breeder blankets.
+\newblock In Laila~A. El-Guebaly, editor, \emph{Fusion {Energy} {Technology}
+  {R}\&{D} {Priorities}}, pages 225--234. Elsevier, January 2025.
+\newblock ISBN 978-0-443-13629-0.
+\newblock \doi{10.1016/B978-0-443-13629-0.00029-0}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/B9780443136290000290}.
+
+\bibitem[Hernández and Pereslavtsev(2018)]{hernandez_first_2018}
+F.A. Hernández and P.~Pereslavtsev.
+\newblock First principles review of options for tritium breeder and neutron
+  multiplier materials for breeding blankets in fusion reactors.
+\newblock \emph{Fusion Engineering and Design}, 137:\penalty0 243--256,
+  December 2018.
+\newblock ISSN 09203796.
+\newblock \doi{10.1016/j.fusengdes.2018.09.014}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0920379618306392}.
+
+\bibitem[Hirose et~al.(2024)Hirose, Guan, Katagiri, Wakasa, Someya, Nakajima,
+  Koga, Miyoshi, Nozawa, Kawamura, and Tanigawa]{hirose_functional_2024}
+Takanori Hirose, Wenhai Guan, Takuya Katagiri, Atsushi Wakasa, Yoji Someya,
+  Motoki Nakajima, Yuki Koga, Yuya Miyoshi, Takashi Nozawa, Yoshinori Kawamura,
+  and Hiroyasu Tanigawa.
+\newblock Functional tests for water cooled ceramic breeder blanket system
+  using full-scale mockups.
+\newblock \emph{Fusion Engineering and Design}, 200:\penalty0 114227, March
+  2024.
+\newblock ISSN 09203796.
+\newblock \doi{10.1016/j.fusengdes.2024.114227}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0920379624000802}.
+
+\bibitem[Kalos and Whitlock(2008)]{kalos_monte_2008}
+Malvin~H. Kalos and Paula~A. Whitlock.
+\newblock \emph{Monte {Carlo} {Methods}}.
+\newblock Wiley, 1 edition, September 2008.
+\newblock ISBN 978-3-527-40760-6 978-3-527-62621-2.
+\newblock \doi{10.1002/9783527626212}.
+\newblock URL
+  \url{https://onlinelibrary.wiley.com/doi/book/10.1002/9783527626212}.
+
+\bibitem[Kawamura et~al.(2024)Kawamura, Hirose, Guan, Miyoshi, Katagiri,
+  Wakasa, Someya, Ochiai, Uto, Kim, Koga, Nakajima, Nozawa, Sakamoto, Tanigawa,
+  and Hayashi]{kawamura_overview_2024}
+Yoshinori Kawamura, Takanori Hirose, Wenhai Guan, Yuya Miyoshi, Takuya
+  Katagiri, Atsushi Wakasa, Yoji Someya, Kentaro Ochiai, Hiroyasu Uto, Jae-hwan
+  Kim, Yuki Koga, Motoki Nakajima, Takashi Nozawa, Yoshiteru Sakamoto, Hiroyasu
+  Tanigawa, and Takumi Hayashi.
+\newblock Overview of progress on water cooled ceramic breeder blanket in
+  {Japan}.
+\newblock \emph{Fusion Engineering and Design}, 201:\penalty0 114260, April
+  2024.
+\newblock ISSN 09203796.
+\newblock \doi{10.1016/j.fusengdes.2024.114260}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0920379624001133}.
+
+\bibitem[King et~al.(2022)King, Knowles, Bowden, Wenman, Capp, Gorley,
+  Shimwell, Packer, Gilbert, and Harte]{king_high_2022}
+D.J.M. King, A.J. Knowles, D.~Bowden, M.R. Wenman, S.~Capp, M.~Gorley,
+  J.~Shimwell, L.~Packer, M.R. Gilbert, and A.~Harte.
+\newblock High temperature zirconium alloys for fusion energy.
+\newblock \emph{Journal of Nuclear Materials}, 559:\penalty0 153431, February
+  2022.
+\newblock ISSN 00223115.
+\newblock \doi{10.1016/j.jnucmat.2021.153431}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0022311521006516}.
+
+\bibitem[Knitter et~al.(2013)Knitter, Chaudhuri, Feng, Hoshino, and
+  Yu]{knitter_recent_2013}
+R.~Knitter, P.~Chaudhuri, Y.J. Feng, T.~Hoshino, and I.-K. Yu.
+\newblock Recent developments of solid breeder fabrication.
+\newblock \emph{Journal of Nuclear Materials}, 442\penalty0 (1-3):\penalty0
+  S420--S424, November 2013.
+\newblock ISSN 00223115.
+\newblock \doi{10.1016/j.jnucmat.2013.02.060}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0022311513004662}.
+
+\bibitem[Kovari et~al.(2018)Kovari, Coleman, Cristescu, and
+  Smith]{kovari_tritium_2018}
+M.~Kovari, M.~Coleman, I.~Cristescu, and R.~Smith.
+\newblock Tritium resources available for fusion reactors.
+\newblock \emph{Nuclear Fusion}, 58\penalty0 (2):\penalty0 026010, February
+  2018.
+\newblock ISSN 0029-5515, 1741-4326.
+\newblock \doi{10.1088/1741-4326/aa9d25}.
+\newblock URL
+  \url{https://iopscience.iop.org/article/10.1088/1741-4326/aa9d25}.
+
+\bibitem[Kuridan(2023)]{kuridan_neutron_2023}
+Ramadan~M. Kuridan.
+\newblock \emph{Neutron {Transport}: {Theory}, {Modeling}, and {Computations}}.
+\newblock Graduate {Texts} in {Physics}. Springer Nature Switzerland, Cham,
+  2023.
+\newblock ISBN 978-3-031-26931-8 978-3-031-26932-5.
+\newblock \doi{10.1007/978-3-031-26932-5}.
+\newblock URL \url{https://link.springer.com/10.1007/978-3-031-26932-5}.
+
+\bibitem[Lee(1983)]{lee_us-doe_1983}
+Joseph~D Lee.
+\newblock U.{S}.-{DOE} {FUSION}-{BREEDER} {PROGRAM}: {BLANKET} {DESIGN} {AND}
+  {SYSTEM} {PERFORMANCE}.
+\newblock \emph{Proceedings of the Third International Conference on Emerging
+  Nuclear Energy Systems}, pages 1--37, 1983.
+\newblock URL \url{https://www.osti.gov/servlets/purl/6012859}.
+
+\bibitem[Lei et~al.(2020)Lei, Wu, Xu, Xu, Ma, and Liu]{lei_design_2020}
+Mingzhun Lei, Qigang Wu, Shuling Xu, Kun Xu, Xuebin Ma, and Songlin Liu.
+\newblock Design and analysis of the equatorial inboard {WCCB} blanket module
+  for {CFETR}.
+\newblock \emph{Fusion Engineering and Design}, 161:\penalty0 111889, December
+  2020.
+\newblock ISSN 09203796.
+\newblock \doi{10.1016/j.fusengdes.2020.111889}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0920379620304373}.
+
+\bibitem[Liu et~al.(2022)Liu, Chen, Ma, Cheng, Lu, Lei, Jiang, Zhao, Wang,
+  Huang, Wu, Wang, Yu, and Ling]{liu_design_2022}
+Songlin Liu, Lei Chen, Xuebin Ma, Xiaoman Cheng, Peng Lu, Mingzhun Lei, Kecheng
+  Jiang, Xueli Zhao, Xujia Wang, Kai Huang, Qiuran Wu, Wenjia Wang, Yi~Yu, and
+  Qixin Ling.
+\newblock Design of the {Water}-{Cooled} {Ceramic} {Breeder} blanket for
+  {CFETR}.
+\newblock \emph{Fusion Engineering and Design}, 177:\penalty0 113059, April
+  2022.
+\newblock ISSN 09203796.
+\newblock \doi{10.1016/j.fusengdes.2022.113059}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S092037962200059X}.
+
+\bibitem[Malang et~al.(1991)Malang, Deckers, Fischer, John, Meyder, Norajitra,
+  Reimann, Reiser, and Rust]{malang_self-cooled_1991}
+S.~Malang, H.~Deckers, U.~Fischer, H.~John, R.~Meyder, P.~Norajitra,
+  J.~Reimann, H.~Reiser, and K.~Rust.
+\newblock Self-cooled blanket concepts using {Pb}{7Li} as liquid breeder and
+  coolant.
+\newblock \emph{Fusion Engineering and Design}, 14\penalty0 (3):\penalty0
+  373--399, April 1991.
+\newblock ISSN 0920-3796.
+\newblock \doi{10.1016/0920-3796(91)90020-Q}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/092037969190020Q}.
+
+\bibitem[Maniscalco et~al.(1984)Maniscalco, Berwald, Moir, Lee, and
+  Teller]{maniscalco_fusion_1984}
+James~A. Maniscalco, David~H. Berwald, Ralph~W. Moir, Joseph D. (J.~D.) Lee,
+  and Edward Teller.
+\newblock The {Fusion} {Breeder} — an {Early} {Application} of {Nuclear}
+  {Fusion}.
+\newblock \emph{Fusion Technology}, 6\penalty0 (3):\penalty0 584--596, November
+  1984.
+\newblock ISSN 0748-1896.
+\newblock \doi{10.13182/FST84-A23140}.
+\newblock URL \url{https://www.tandfonline.com/doi/full/10.13182/FST84-A23140}.
+
+\bibitem[Mas de~les Valls et~al.(2008)Mas de~les Valls, Sedano, Batet,
+  Ricapito, Aiello, Gastaldi, and Gabriel]{mas_de_les_valls_leadlithium_2008}
+E.~Mas de~les Valls, L.~A. Sedano, L.~Batet, I.~Ricapito, A.~Aiello,
+  O.~Gastaldi, and F.~Gabriel.
+\newblock Lead–lithium eutectic material database for nuclear fusion
+  technology.
+\newblock \emph{Journal of Nuclear Materials}, 376\penalty0 (3):\penalty0
+  353--357, June 2008.
+\newblock ISSN 0022-3115.
+\newblock \doi{10.1016/j.jnucmat.2008.02.016}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0022311508000809}.
+
+\bibitem[Meschini et~al.(2023)Meschini, Ferry, Delaporte-Mathurin, and
+  Whyte]{meschini_modeling_2023}
+Samuele Meschini, Sara~E. Ferry, Rémi Delaporte-Mathurin, and Dennis~G. Whyte.
+\newblock Modeling and analysis of the tritium fuel cycle for {ARC}- and
+  {STEP}-class {D}-{T} fusion power plants.
+\newblock \emph{Nuclear Fusion}, 63\penalty0 (12):\penalty0 1--34, December
+  2023.
+\newblock ISSN 0029-5515, 1741-4326.
+\newblock \doi{10.1088/1741-4326/acf3fc}.
+\newblock URL
+  \url{https://iopscience.iop.org/article/10.1088/1741-4326/acf3fc}.
+
+\bibitem[Moir(1982)]{moir_fusion_1982}
+Ralph~W. Moir.
+\newblock The fusion breeder.
+\newblock \emph{Journal of Fusion Energy}, 2\penalty0 (4-5):\penalty0 351--367,
+  October 1982.
+\newblock ISSN 0164-0313, 1572-9591.
+\newblock \doi{10.1007/BF01063686}.
+\newblock URL \url{http://link.springer.com/10.1007/BF01063686}.
+
+\bibitem[Paris and Chadwick(2023)]{paris_lost_2023}
+Mark~W. Paris and Mark~B. Chadwick.
+\newblock A lost detail in {D}–{T} fusion history.
+\newblock \emph{Physics Today}, 76\penalty0 (10):\penalty0 10--11, October
+  2023.
+\newblock ISSN 0031-9228, 1945-0699.
+\newblock \doi{10.1063/PT.3.5317}.
+\newblock URL
+  \url{https://pubs.aip.org/physicstoday/article/76/10/10/2912725/A-lost-detail-in-D-T-fusion-history}.
+
+\bibitem[Pearson et~al.(2018)Pearson, Antoniazzi, and
+  Nuttall]{pearson_tritium_2018}
+Richard~J. Pearson, Armando~B. Antoniazzi, and William~J. Nuttall.
+\newblock Tritium supply and use: a key issue for the development of nuclear
+  fusion energy.
+\newblock \emph{Fusion Engineering and Design}, 136:\penalty0 1140--1148,
+  November 2018.
+\newblock ISSN 09203796.
+\newblock \doi{10.1016/j.fusengdes.2018.04.090}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S092037961830379X}.
+
+\bibitem[Proust et~al.(1991)Proust, Anzidei, Dalle~Donne, Fischer, and
+  Kuroda]{proust_solid_1991}
+E.~Proust, L.~Anzidei, M.~Dalle~Donne, U.~Fischer, and T.~Kuroda.
+\newblock Solid breeder blanket design and tritium breeding.
+\newblock \emph{Fusion Engineering and Design}, 16:\penalty0 73--84, December
+  1991.
+\newblock ISSN 09203796.
+\newblock \doi{10.1016/0920-3796(91)90184-R}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/092037969190184R}.
+
+\bibitem[Romano and Forget(2015)]{romano2015}
+Paul~K. Romano and Benoit Forget.
+\newblock Openmc: A state-of-the-art monte carlo code for research and
+  development.
+\newblock \emph{Annals of Nuclear Energy}, 82:\penalty0 90--97, 2015.
+
+\bibitem[Sawan and Abdou(2006)]{sawan_physics_2006}
+M.E. Sawan and M.A. Abdou.
+\newblock Physics and technology conditions for attaining tritium
+  self-sufficiency for the {DT} fuel cycle.
+\newblock \emph{Fusion Engineering and Design}, 81\penalty0 (8-14):\penalty0
+  1131--1144, February 2006.
+\newblock ISSN 09203796.
+\newblock \doi{10.1016/j.fusengdes.2005.07.035}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0920379605006393}.
+
+\bibitem[Segantin et~al.(2020{\natexlab{a}})Segantin, Testoni, Hartwig, Whyte,
+  and Zucchetti]{segantin_optimization_2020}
+Stefano Segantin, Raffaella Testoni, Zachary Hartwig, Dennis Whyte, and Massimo
+  Zucchetti.
+\newblock Optimization of tritium breeding ratio in {ARC} reactor.
+\newblock \emph{Fusion Engineering and Design}, 154:\penalty0 111531, May
+  2020{\natexlab{a}}.
+\newblock ISSN 09203796.
+\newblock \doi{10.1016/j.fusengdes.2020.111531}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S092037962030079X}.
+
+\bibitem[Segantin et~al.(2020{\natexlab{b}})Segantin, Testoni, and
+  Zucchetti]{segantin_neutronic_2020}
+Stefano Segantin, Raffaella Testoni, and Massimo Zucchetti.
+\newblock Neutronic comparison of liquid breeders for {ARC}-like reactor
+  blankets.
+\newblock \emph{Fusion Engineering and Design}, 160:\penalty0 112013, November
+  2020{\natexlab{b}}.
+\newblock ISSN 09203796.
+\newblock \doi{10.1016/j.fusengdes.2020.112013}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0920379620305615}.
+
+\bibitem[Shatalov et~al.(1991)Shatalov, Abdou, Antipenkov, Daenner, Gohar,
+  Kuroda, Simbolotti, Smith, and Yoshida]{shatalov_breeder_1991}
+G.E. Shatalov, M.A. Abdou, A.~Antipenkov, W.~Daenner, Y.~Gohar, T.~Kuroda,
+  G.~Simbolotti, D.L. Smith, and N.~Yoshida.
+\newblock Breeder and test blankets in {ITER}.
+\newblock \emph{Fusion Engineering and Design}, 16:\penalty0 85--93, December
+  1991.
+\newblock ISSN 09203796.
+\newblock \doi{10.1016/0920-3796(91)90185-S}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/092037969190185S}.
+
+\bibitem[Shi et~al.(2015)Shi, Lu, Gao, Xiang, Zhang, Yu, Gong, and
+  Yang]{shi_density_2015}
+Yanli Shi, Tiecheng Lu, Tao Gao, Xiaogang Xiang, Qinghua Zhang, Xiaohe Yu,
+  Yichao Gong, and Mao Yang.
+\newblock Density functional study of lithium vacancy in {Li4SiO4}: {Trapping}
+  of tritium and helium.
+\newblock \emph{Journal of Nuclear Materials}, 467:\penalty0 519--526, December
+  2015.
+\newblock ISSN 00223115.
+\newblock \doi{10.1016/j.jnucmat.2015.09.017}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0022311515302063}.
+
+\bibitem[Shimwell et~al.(2016)Shimwell, Lilley, Morgan, Packer, Kovari, Zheng,
+  and McMillan]{shimwell_reducing_2016}
+J.~Shimwell, S.~Lilley, L.~Morgan, L.~Packer, M.~Kovari, S.~Zheng, and
+  J.~McMillan.
+\newblock Reducing beryllium content in mixed bed solid-type breeder blankets.
+\newblock \emph{Fusion Engineering and Design}, 109-111:\penalty0 1564--1568,
+  November 2016.
+\newblock ISSN 09203796.
+\newblock \doi{10.1016/j.fusengdes.2015.11.021}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0920379615303458}.
+
+\bibitem[Shimwell et~al.(2021)Shimwell, Billingsley, Delaporte-Mathurin,
+  Morbey, Bluteau, Shriwise, and Davis]{shimwell_paramak_2021}
+Jonathan Shimwell, John Billingsley, Rémi Delaporte-Mathurin, Declan Morbey,
+  Matthew Bluteau, Patrick Shriwise, and Andrew Davis.
+\newblock The {Paramak}: automated parametric geometry construction for fusion
+  reactor designs.
+\newblock \emph{F1000Research}, 10:\penalty0 27, January 2021.
+\newblock ISSN 2046-1402.
+\newblock \doi{10.12688/f1000research.28224.1}.
+\newblock URL \url{https://f1000research.com/articles/10-27/v1}.
+
+\bibitem[Sorbom et~al.(2015)Sorbom, Ball, Palmer, Mangiarotti, Sierchio,
+  Bonoli, Kasten, Sutherland, Barnard, Haakonsen, Goh, Sung, and
+  Whyte]{sorbom_arc_2015}
+B.N. Sorbom, J.~Ball, T.R. Palmer, F.J. Mangiarotti, J.M. Sierchio, P.~Bonoli,
+  C.~Kasten, D.A. Sutherland, H.S. Barnard, C.B. Haakonsen, J.~Goh, C.~Sung,
+  and D.G. Whyte.
+\newblock {ARC}: {A} compact, high-field, fusion nuclear science facility and
+  demonstration power plant with demountable magnets.
+\newblock \emph{Fusion Engineering and Design}, 100:\penalty0 378--405,
+  November 2015.
+\newblock ISSN 09203796.
+\newblock \doi{10.1016/j.fusengdes.2015.07.008}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0920379615302337}.
+
+\bibitem[Tas et~al.(1988)Tas, Malang, Reiter, and Sannier]{tas_liquid_1988}
+H.~Tas, S.~Malang, F.~Reiter, and J.~Sannier.
+\newblock Liquid breeder materials.
+\newblock \emph{Journal of Nuclear Materials}, 155-157:\penalty0 178--187, July
+  1988.
+\newblock ISSN 00223115.
+\newblock \doi{10.1016/0022-3115(88)90239-5}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/0022311588902395}.
+
+\bibitem[Wang et~al.(2019)Wang, Feng, Chen, Zhang, Feng, Wu, Liao, Ye, Zhao,
+  Cao, Wang, Gong, Wang, Zhou, Zhang, Pan, Xu, Duan, Wang, Sheng, He, Luo, Yao,
+  and {the Chinese HCCB TBM Team}]{wang_current_2019}
+X.Y. Wang, K.M. Feng, Y.J. Chen, L.~Zhang, Y.J. Feng, X.H. Wu, H.B. Liao, X.F.
+  Ye, F.C. Zhao, Q.X. Cao, F.~Wang, B.P. Gong, Q.J. Wang, B.~Zhou, H.X. Zhang,
+  C.H. Pan, M.~Xu, X.R. Duan, M.~Wang, Q.~Sheng, K.H. He, D.L. Luo, Y.~Yao, and
+  {the Chinese HCCB TBM Team}.
+\newblock Current design and {R}\&{D} progress of the {Chinese} helium cooled
+  ceramic breeder test blanket system.
+\newblock \emph{Nuclear Fusion}, 59\penalty0 (7):\penalty0 076019, July 2019.
+\newblock ISSN 0029-5515, 1741-4326.
+\newblock \doi{10.1088/1741-4326/ab0c32}.
+\newblock URL
+  \url{https://iopscience.iop.org/article/10.1088/1741-4326/ab0c32}.
+
+\bibitem[Wu(2011)]{wu_overview_2011}
+Yican Wu.
+\newblock Overview of liquid lithium lead breeder blanket program in {China}.
+\newblock \emph{Fusion Engineering and Design}, 86\penalty0 (9-11):\penalty0
+  2343--2346, October 2011.
+\newblock ISSN 09203796.
+\newblock \doi{10.1016/j.fusengdes.2010.12.046}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0920379610005818}.
 
 \end{thebibliography}
