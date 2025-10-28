@@ -77,7 +77,7 @@
 %% Use this if you want times new roman which is slightly more compact.
 %\usepackage{times}
 \setlength{\parindent}{10pt}
-\linespread{1.1}
+\linespread{1.2}
 
 \usepackage{titlesec}
 \titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
@@ -100,41 +100,58 @@
 
 \begin{document}
 
-\title{\Large Neutron Transport and Tritium Breeding Modelling in Nuclear Fusion Reactor Breeder
-Blankets \\
-\normalsize MPhys Project Report}
+% --- title page ---
+\begin{titlepage}
+    \centering % Center all content on the title page
 
-% base article class:
-\author{Vadan Khan \\
-4th Year MPhys, Department of Physics and Astronomy, University of Manchester}
+    \vspace*{2cm} % Add some space from the top
 
-% revtex class:
-% \affiliation{4th Year MPhys, Department of Physics and Astronomy, University of Manchester}
+    % --- Manually formatted title ---
+    {\Large \bfseries Neutron Transport and Tritium Breeding Modelling in Nuclear Fusion Reactor Breeder Blankets \par}
+    \vspace{0.5em}
+    {\normalsize MPhys Project Report \par}
 
-\date{\today}
+    \vspace{3em} % Add space after the title
 
-\begin{abstract}
-The pursuit of practical nuclear fusion is focused on the deuterium-tritium (D-T) fuel cycle,
-widely considered the most feasible pathway for near-term power generation.
-A critical challenge, however, is the reliance on tritium, a radioactive
-isotope with an extremely limited external supply, necessitating a self-sufficient fuel cycle.
-The D-T fusion reaction produces most of its energy as 14.1~MeV neutrons, which can in turn be
-used to regenerate tritium through neutron-lithium interactions. The reactor subsystem that
-performs this function—the breeder blanket—is therefore essential for the viability of the
-D-T fuel cycle. It must simultaneously extract heat, shield reactor components, and maintain
-tritium self-sufficiency. This project applies Monte Carlo neutron transport simulations
-using \texttt{OpenMC} to investigate the neutronic performance of advanced breeder
-blanket designs, including heterogeneous and functionally graded geometries. The study
-aims to quantify how variations in material composition and spatial structure influence
-the tritium breeding ratio (TBR) and neutron flux profiles, and explores the potential
-for automated optimisation of blanket parameters through computational frameworks.
-The outcomes will inform the feasibility and efficiency of next-generation blanket
-concepts relevant to future magnetic confinement fusion reactors such a DEMO and STEP.
-\end{abstract}
+    % --- Manually formatted author ---
+    {\large Vadan Khan \par}
+    \vspace{0.5em}
+    {4th Year MPhys, Department of Physics and Astronomy, University of Manchester \par}
 
-\maketitle
+    \vspace{2em} % Add space after the author
 
-\clearpage
+    % --- Manually formatted date ---
+    {\large \today \par}
+
+    \vfill % Pushes the abstract to the lower half of the page
+
+    % --- Abstract ---
+    % Use a minipage to constrain the width of the abstract
+    \begin{minipage}{0.8\textwidth}
+    \begin{abstract}
+    The pursuit of practical nuclear fusion is focused on the deuterium-tritium (D-T) fuel cycle,
+    widely considered the most feasible pathway for near-term power generation.
+    A critical challenge, however, is the reliance on tritium, a radioactive
+    isotope with an extremely limited external supply, necessitating a self-sufficient fuel cycle.
+    The D-T fusion reaction produces most of its energy as 14.1~MeV neutrons, which can in turn be
+    used to regenerate tritium through neutron-lithium interactions. The reactor subsystem that
+    performs this function—the breeder blanket—is therefore essential for the viability of the
+    D-T fuel cycle. It must simultaneously extract heat, shield reactor components, and maintain
+    tritium self-sufficiency. This project applies Monte Carlo neutron transport simulations
+    using \texttt{OpenMC} to investigate the neutronic performance of advanced breeder
+    blanket designs, including heterogeneous and functionally graded geometries. The study
+    aims to quantify how variations in material composition and spatial structure influence
+    the tritium breeding ratio (TBR) and neutron flux profiles, and explores the potential
+    for automated optimisation of blanket parameters through computational frameworks.
+    The outcomes will inform the feasibility and efficiency of next-generation blanket
+    concepts relevant to future magnetic confinement fusion reactors such a DEMO and STEP.
+    \end{abstract}
+    \end{minipage}
+
+    \vfill % Fills the remaining space at the bottom
+
+\end{titlepage}
+% --- title page ---
 
 \section{Introduction}
 
@@ -185,20 +202,18 @@ $$
 d+t\rightarrow n+\alpha+17.6MeV
 $$
 This D-T reaction is the primary focus of mainstream fusion research, as it has a fusion
-cross-section ($<\sigma v>$, an averaged measure of reaction chance given temperature effects
-\cite{nuclearphysics}) significantly higher than other candidate reactions (like D-D or
+cross-section significantly higher than other candidate reactions (like D-D or
 D-${}^{3}$He) at the ``low'' plasma temperatures achievable with current magnetic confinement
 technology (Fig.~\ref{fig:fusion_cross_sections}) \cite{heckrotte_factors_1971}.
 
 \begin{figure}[htbp]
     \centering
     % You can adjust the width as needed for your document layout
-    \includegraphics[width=0.6\textwidth]{figures/DTbetter.png}
-    \caption{A comparison of fusion reaction reactivities ($<\sigma v>$) as a function of ion
-    temperature (keV) for the D-T, D-D, and D-${}^{3}$He fuel cycles. The D-T reaction's
-    reactivity peaks at a lower temperature and is significantly larger than the alternatives,
-    making it the most accessible reaction for current and near-term fusion devices. Adapted from
-    \cite{jakobs_fusion_2016}.}
+    \includegraphics[width=0.7\textwidth]{figures/breeding_cs.png}
+    \caption{A comparison of fusion reaction reactivities total cross section $\sigma$ as a function
+    of ion temperature (keV) for the D-T, D-D, and D-${}^{3}$He fuel cycles. The D-T reaction's
+    cross section peaks at a lower temperature and is significantly larger than the alternatives,
+    making it the most accessible reaction for current and near-term fusion devices.}
     \label{fig:fusion_cross_sections}
 \end{figure}
 
@@ -219,8 +234,9 @@ energy with it \cite{heckrotte_factors_1971}.
 \subsection{Neutron Transport and Interactions}
 
 The 14.1 MeV neutron is the primary vehicle for both energy extraction and fuel production. Once it
-leaves the plasma, it travels into the surrounding structures, chiefly the 	extbf{breeder blanket}. The
-study of its journey and interactions with the blanket materials is the domain of \textbf{neutron transport} \cite{kuridan_neutron_2023}.
+leaves the plasma, it travels into the surrounding structures, chiefly the 	extbf{breeder blanket}.
+The study of its journey and interactions with the blanket materials is the domain of
+\textbf{neutron transport} \cite{kuridan_neutron_2023}.
 
 As the neutron moves through matter, it interacts with atomic nuclei via two main processes:
 scattering and absorption. The probability of any specific interaction occurring is defined by the
@@ -263,6 +279,17 @@ neutrons, making it the primary breeding reaction of interest \cite{hernandez_fi
 ${}^{7}$Li reaction is endothermic, requiring high-energy neutrons (a ``threshold'' reaction), and is
 generally less effective.
 
+\begin{figure}[htbp]
+    \centering
+    % Placeholder for the image as external files are not supported
+    \includegraphics[width=0.7\textwidth]{figures/lithium_cs.png}
+    \caption{Neutron cross-sections for the primary tritium breeding reactions,
+    ${}^{6}$Li(n,$\alpha$)t and ${}^{7}$Li(n,$\alpha$t)n', as a function of incident neutron energy.
+    The ${}^{6}$Li cross-section is dominant at low (thermal) energies, while the ${}^{7}$Li
+    reaction is a threshold reaction requiring high-energy neutrons.}
+    \label{fig:lithium_cross_sections}
+\end{figure}
+
 The critical metric for the blanket's success is the \textbf{Tritium Breeding Ratio (TBR)}, defined as
 the ratio of tritium atoms produced in the blanket to the tritium atoms consumed in the plasma
 \cite{federici_overview_2019}. Due to inevitable fuel cycle losses (e.g., incomplete plasma burn-up,
@@ -280,7 +307,6 @@ To overcome this deficit, the blanket must include a \textbf{neutron multiplier}
 \textbf{(n,2n)} reaction, where one high-energy incident neutron strikes a nucleus and causes two
 neutrons to be emitted. The two most viable multiplier materials are Beryllium (Be) and Lead (Pb)
 \cite{hernandez_first_2018}.
-
 $$
 {}^{9}Be+n\rightarrow{}^{8}Be+2n \rightarrow 2\alpha + 2n
 $$
@@ -292,6 +318,14 @@ more lower-energy neutrons. These neutrons are then moderated (slowed down) with
 they are at the optimal thermal energy to be captured by ${}^{6}$Li, thus enabling a TBR
 significantly greater than one \cite{hernandez_first_2018}.
 
+\begin{figure}[htbp]
+    \centering
+    % Placeholder for the image as external files are not supported
+    \includegraphics[width=0.7\textwidth]{figures/multipliers_cs.png}
+    \caption{Neutron cross-sections for the (n,2n) neutron multiplication reactions in Beryllium (${}^{9}$Be) and Lead (${}^{208}$Pb). Both are threshold reactions that require high-energy neutrons, such as those from the D-T fusion reaction (14.1 MeV), to effectively multiply the neutron population.}
+    \label{fig:multiplier_cross_sections}
+\end{figure}
+
 \section{Literature Review}
 
 \subsection{The D-T Reaction and the Tritium Fuel Imperative}
@@ -300,7 +334,7 @@ The deuterium-tritium (D-T) fusion reaction, $d+t\rightarrow n+\alpha+17.6MeV$, 
 candidate for first-generation fusion power plants since its potential was identified in the 1940s
 \cite{paris_lost_2023}. Its primary advantage lies in its high fusion cross-section ($\sigma_f$) at
 plasma temperatures achievable with current technology, significantly higher than other candidates
-like D-D or D-${}^{3}$He reactions. Furthermore, 80% of the energy (14.1 MeV) is carried by the
+like D-D or D-${}^{3}$He reactions. Furthermore, 80\% of the energy (14.1 MeV) is carried by the
 emitted neutron, which allows for energy to be efficiently extracted from the plasma core
 \cite{heckrotte_factors_1971}.
 
@@ -321,10 +355,9 @@ systems, known as \textbf{Tritium Breeder Blankets}.
 
 A breeder blanket is a complex component surrounding the plasma-containing vacuum vessel. Its
 primary function is to intercept the 14.1 MeV fusion neutrons and use them to induce
-tritium-producing reactions in lithium. The two key breeding reactions are:
+tritium-producing reactions in lithium. The two key breeding reactions are mentioned in
 
-$${}^{6}Li+n\rightarrow\alpha+t+4.8MeV$$
-$${}^{7}Li+n\rightarrow\alpha+t+n-2.5MeV$$
+[MISSING REFERENCE TO EQUATIONS]
 
 While ${}^{7}$Li can breed, the ${}^{6}$Li reaction is exothermic and possesses a much larger
 reaction cross-section for the thermalised neutrons dominant in a blanket, making it the primary

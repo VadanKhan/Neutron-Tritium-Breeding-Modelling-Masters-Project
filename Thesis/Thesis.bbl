@@ -132,73 +132,6 @@
       \endverb
       \keyw{Lit Review,Useful}
     \endentry
-    \entry{nuclearphysics}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=bc6ded4bf5dc429763dcb2fac676a31f}{%
-           family={Lilley},
-           familyi={L\bibinitperiod},
-           given={John},
-           giveni={J\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {John Wiley \& Sons}%
-      }
-      \strng{namehash}{bc6ded4bf5dc429763dcb2fac676a31f}
-      \strng{fullhash}{bc6ded4bf5dc429763dcb2fac676a31f}
-      \strng{fullhashraw}{bc6ded4bf5dc429763dcb2fac676a31f}
-      \strng{bibnamehash}{bc6ded4bf5dc429763dcb2fac676a31f}
-      \strng{authorbibnamehash}{bc6ded4bf5dc429763dcb2fac676a31f}
-      \strng{authornamehash}{bc6ded4bf5dc429763dcb2fac676a31f}
-      \strng{authorfullhash}{bc6ded4bf5dc429763dcb2fac676a31f}
-      \strng{authorfullhashraw}{bc6ded4bf5dc429763dcb2fac676a31f}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{9780471922957}
-      \field{series}{Manchester Physics Series}
-      \field{title}{Nuclear Physics: Principles and Applications}
-      \field{year}{2008}
-    \endentry
-    \entry{jakobs_fusion_2016}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=80712320209b1a4eeb790ab3cb1f8911}{%
-           family={Jakobs},
-           familyi={J\bibinitperiod},
-           given={Merlijn},
-           giveni={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{80712320209b1a4eeb790ab3cb1f8911}
-      \strng{fullhash}{80712320209b1a4eeb790ab3cb1f8911}
-      \strng{fullhashraw}{80712320209b1a4eeb790ab3cb1f8911}
-      \strng{bibnamehash}{80712320209b1a4eeb790ab3cb1f8911}
-      \strng{authorbibnamehash}{80712320209b1a4eeb790ab3cb1f8911}
-      \strng{authornamehash}{80712320209b1a4eeb790ab3cb1f8911}
-      \strng{authorfullhash}{80712320209b1a4eeb790ab3cb1f8911}
-      \strng{authorfullhashraw}{80712320209b1a4eeb790ab3cb1f8911}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{annotation}{General Fusion Overview Paper used for some figures: {DD} vs {DT} graph.}
-      \field{note}{Publisher: Unpublished}
-      \field{title}{Fusion Energy - Burning Questions}
-      \field{urlday}{27}
-      \field{urlmonth}{10}
-      \field{urlyear}{2025}
-      \field{year}{2016}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.13140/RG.2.2.20211.04646
-      \endverb
-      \verb{urlraw}
-      \verb https://www.researchgate.net/doi/10.13140/RG.2.2.20211.04646
-      \endverb
-      \verb{url}
-      \verb https://www.researchgate.net/doi/10.13140/RG.2.2.20211.04646
-      \endverb
-    \endentry
     \entry{wesson}{book}{}{}
       \name{author}{1}{}{%
         {{hash=ca56977a5fb6ee223b9392c8f9a68e35}{%
@@ -218,8 +151,8 @@
       \strng{authornamehash}{ca56977a5fb6ee223b9392c8f9a68e35}
       \strng{authorfullhash}{ca56977a5fb6ee223b9392c8f9a68e35}
       \strng{authorfullhashraw}{ca56977a5fb6ee223b9392c8f9a68e35}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{4th}
@@ -248,8 +181,8 @@
       \strng{authornamehash}{762c3295442c1b2803ab6cad1175cdc8}
       \strng{authorfullhash}{762c3295442c1b2803ab6cad1175cdc8}
       \strng{authorfullhashraw}{762c3295442c1b2803ab6cad1175cdc8}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{annotation}{Book on neutron transport and modelling methods. Looks very comprehensive, likely to be a very reliable source for a good chunk of our theory. Depends on how deep into the transport physics we actually go.}
@@ -639,8 +572,8 @@
       \strng{authornamehash}{d9b404f7ee4a4cc672dd3f05d9d13c8c}
       \strng{authorfullhash}{6eea3c6b6150994abf18eac82bc8d7c2}
       \strng{authorfullhashraw}{6eea3c6b6150994abf18eac82bc8d7c2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{annotation}{Paper discusses the {ENDF} {VIII}.1 library and includes data and figures for a wide variety of reactions. Outlines the changes to previous iterations of the library. Has more than 475 references that could prove useful. Likely only to be cited in reference to the website, if at all.}
@@ -1706,8 +1639,8 @@
       \strng{authornamehash}{74a516c2d55158b0b383f474d07ddea1}
       \strng{authorfullhash}{9175a06c999e6ff649dc7e7a3bcf7545}
       \strng{authorfullhashraw}{9175a06c999e6ff649dc7e7a3bcf7545}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Explores a variety of liquid blanket materials, either being liquid metals (lithium or Pb-Li alloys) and molten salts ({FLIBE}, a combination of {LiF} breeder and {BeF}2 neutron multiplier). It discusses issues such as cooling and tritium recovery in different designs. Pretty good paper on the basics of liquid blankets.}
@@ -1816,8 +1749,8 @@
       \strng{authornamehash}{99a3b69e3dc33810b0301b57e85cdb5d}
       \strng{authorfullhash}{1b7759933ce4f94ac1f2f809d8deab14}
       \strng{authorfullhashraw}{1b7759933ce4f94ac1f2f809d8deab14}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{annotation}{Compact reactor designed to be cheaper and more efficient than larger tokomaks. Designed by {MIT}. This paper lays out the basic design elements. Uses an all liquid molten salt blanket ({FLiBe}). Very detailed, good reference for talking about {US} projects. Also provides an interesting ‘alternative’ to the very standard reactor designs explored elsewhere.}
@@ -1898,8 +1831,8 @@
       \strng{authorfullhash}{99552de5e292713617056617087f0570}
       \strng{authorfullhashraw}{99552de5e292713617056617087f0570}
       \field{extraname}{1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Beryllium has a low threshold (n,2n) reaction that is very useful in fusion breeder blankets. Unfortunately, it’s ridiculously toxic and not as abundant as we’d like. This paper looks at methods of reducing beryllium content without affecting the neutron production capability of the blanket. It does this by linearly varying the fraction of the multiplier within the blanket. This paper isn’t likely to be important unless we look into functionally graded materials in the second half of the project. It is also authored by Jonathan Shimwell, the creator of the neutronics workshop.}
@@ -1947,8 +1880,8 @@
       \strng{authornamehash}{e53ed1332db1519e50606c3ed1626d8e}
       \strng{authorfullhash}{e53ed1332db1519e50606c3ed1626d8e}
       \strng{authorfullhashraw}{e53ed1332db1519e50606c3ed1626d8e}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Design document for a series of liquid lithium-lead ({LiPb}) blankets for {EAST} and {ITER}. Explores single cooled blankets (cooled only by helium) and dual cooled design (cooled by helium and by the liquid {LiPb}) among others. Focusses more on structure and design. Potentially very useful for talking about liquid}
@@ -2324,8 +2257,8 @@
       \strng{authornamehash}{3e665585c4c62752caa349c792117d54}
       \strng{authorfullhash}{f4819bbf7d47d500302713496c94af80}
       \strng{authorfullhashraw}{f4819bbf7d47d500302713496c94af80}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Modelling of {ARC} reactor {FLiBe} blanket using Monte Carlo simulation (not {OpenMC}). Plots {TBR} for different blanket variables, mainly focussed on wall thickness and enrichment. Somewhat limited since it only focusses on one blanket type. Still very useful as a comparison to our project.}
@@ -2384,8 +2317,8 @@
       \strng{authornamehash}{ef1bee4cc68f10979a93f9a3bbd921e2}
       \strng{authorfullhash}{ef1bee4cc68f10979a93f9a3bbd921e2}
       \strng{authorfullhashraw}{ef1bee4cc68f10979a93f9a3bbd921e2}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Exploration of liquid based breeder blankets for an Affordable Robust Compact ({ARC}) reactor. Simple modelling of a variety of liquid breeder blankets. Potentially very useful as an example of tritium modelling and of liquid breeders. {ARC} reactor developed by Commonwealth Fusion. Uses {OpenMC} as well. Lots of very nice graphs of {TBR}.}
@@ -2439,8 +2372,8 @@
       \strng{authornamehash}{8f5f0ec1ba643758e82243a8320661ad}
       \strng{authorfullhash}{8f5f0ec1ba643758e82243a8320661ad}
       \strng{authorfullhashraw}{8f5f0ec1ba643758e82243a8320661ad}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Paper on Chlorine salt blankets comparing their neutronics to standard fluorine salt systems. Useful as another example of blanket materials.}
@@ -3325,8 +3258,8 @@
       \strng{authornamehash}{728a226f938c4e2ee1e0dc3e80b4cff2}
       \strng{authorfullhash}{728a226f938c4e2ee1e0dc3e80b4cff2}
       \strng{authorfullhashraw}{728a226f938c4e2ee1e0dc3e80b4cff2}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Book on Monte Carlo simulations and how they are performed. May be useful in the literature review if we decide to talk a bit about the code. However, it may be better to talk about {OpenMC} specifically rather than Monte Carlo in general. Probably better for the theory section.}
@@ -3397,8 +3330,8 @@
       \strng{authornamehash}{2a99d886e1f79f2f680a71e96675ba87}
       \strng{authorfullhash}{6591362d857af73922f1ac027fc97ab8}
       \strng{authorfullhashraw}{6591362d857af73922f1ac027fc97ab8}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{annotation}{Examples of how {OpenMC} is used in research. Not specific to neutronics but likely useful when describing why we use {OpenMC}.}
@@ -3458,8 +3391,8 @@
       \strng{authornamehash}{366f97799b7e7a908cc53206447c99c3}
       \strng{authorfullhash}{366f97799b7e7a908cc53206447c99c3}
       \strng{authorfullhashraw}{366f97799b7e7a908cc53206447c99c3}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Abstract The affordable, robust, compact ({ARC}) reactor is a tokamak fusion reactor concept currently under development by Commonwealth Fusion Systems and Massachusetts Institute of Technology. There are three important neutronics considerations for the operation of the {ARC} reactor: (1) breeding of enough tritium in the blanket to sustain the D–T reaction in the plasma; (2) ensuring low fluence on the superconducting toroidal field coils; and (3) assessing neutron volumetric heating in structural components. This work aims to perform a validation of the neutronics analysis approach by code-to-code comparison. State-of-the-art software stacks are employed for the neutronics analysis of the {ARC} reactor, and a computer-aided design ({CAD}) model is used directly for Monte Carlo ({MC}) neutron transport calculations. Three software stacks, Attila-{MCNP}, {OpenMC}-{DAGMC}, and Shift-{DAGMC}, are used to perform neutronic analyses of a 90° sector {CAD} model of the {ARC} reactor. Results show that the flux tallies calculated by the three software stacks are very close. Also, the volumetric heating and tritium breeding values have less than 0.6\% relative difference between codes.}
