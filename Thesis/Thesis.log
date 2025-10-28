@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.16)  27 OCT 2025 20:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.16)  28 OCT 2025 14:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -70,9 +70,9 @@ Class revtex4-2 Info: RevTeX society APS selected on input line 40.
 Class revtex4-2 Warning: No journal specified, using default pra.
 
 Class revtex4-2 Info: APS journal PRA selected on input line 7672.
-(C:\Users\vadan\AppData\Local\Programs\MiKTeX\tex/latex/revtex\aps10pt4-2.rtx
-File: aps10pt4-2 2022/06/05 4.2f (https://journals.aps.org/revtex/ for documentation)
-Class revtex4-2 Info: RevTeX pointsize 10pt selected on input line 39.
+(C:\Users\vadan\AppData\Local\Programs\MiKTeX\tex/latex/revtex\aps12pt4-2.rtx
+File: aps12pt4-2 2022/06/05 4.2f (https://journals.aps.org/revtex/ for documentation)
+Class revtex4-2 Info: RevTeX pointsize 12pt selected on input line 39.
 ) (C:\Users\vadan\AppData\Local\Programs\MiKTeX\tex/latex/textcase\textcase.sty
 Package: textcase 2025/02/16 v1.05 Text only upper/lower case changing (DPC)
 Package textcase Info: Defining Legacy names on input line 20.
@@ -342,47 +342,96 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \titlewidth=\dimen175
 \titlewidthlast=\dimen176
 \titlewidthfirst=\dimen177
-)
-Class revtex4-2 Info: Unrecognized array package. Please update this document class! (Proceeding with fingers crossed.) on input line 70.
-Class revtex4-2 Info: cite was not loaded (OK!) on input line 70.
-Class revtex4-2 Info: mcite was not loaded (OK!) on input line 70.
-Class revtex4-2 Info: multicol was not loaded (OK!) on input line 70.
+) (C:\Users\vadan\AppData\Local\Programs\MiKTeX\tex/latex/mhchem\mhchem.sty
+Package: mhchem 2024/01/29 v4.10 for typesetting chemical formulae
+ (C:\Users\vadan\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2025-09-02 L3 programming layer (loader) 
  (C:\Users\vadan\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count321
-) (Thesis.aux)
+)) (C:\Users\vadan\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty
+Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
+) (C:\Users\vadan\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count322
+\calc@Bcount=\count323
+\calc@Adimen=\dimen178
+\calc@Bdimen=\dimen179
+\calc@Askip=\skip61
+\calc@Bskip=\skip62
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count324
+\calc@Cskip=\skip63
+) (C:\Users\vadan\AppData\Local\Programs\MiKTeX\tex/latex/chemgreek\chemgreek.sty (C:\Users\vadan\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
+Package: xparse 2024-08-16 L3 Experimental document command parser
+)
+Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use in chemistry (CN)
+\l__chemgreek_tmpa_int=\count325
+\g__chemgreek_tmpa_int=\count326
+)
+\l__mhchem_ce_distanceFromLastComma_int=\count327
+\__mhchem_arrow_extPgfLength_skip=\skip64
+\mhchem@minispace@tmp=\skip65
+\mhchem@minibackspace@tmp=\skip66
+\mhchem@bondwidth=\skip67
+\mhchem@bondheight=\skip68
+\mhchem@smallbondwidth@tmpA=\skip69
+\mhchem@smallbondwidth@tmpB=\skip70
+\mhchem@smallbondwidth=\skip71
+\mhchem@bondtmp@minussidebearingleft=\skip72
+\mhchem@bondtmp@minussidebearingright=\skip73
+\l__mhchem_option_version_int=\count328
+\mhchem@option@minusmathsidebearingleft=\dimen180
+\mhchem@option@minusmathsidebearingright=\dimen181
+\mhchem@option@minustextsidebearingleft=\dimen182
+\mhchem@option@minustextsidebearingright=\dimen183
+
+
+Package mhchem Warning: You did not specify a 'version' option for the mhchem
+(mhchem)                package. Please write \usepackage[version=4]{mhchem}
+(mhchem)                in your preamble (or any lower number for
+(mhchem)                compatibility mode), because you might get slightly
+(mhchem)                different output with the same input in future versions.
+
+)
+Class revtex4-2 Info: Unrecognized array package. Please update this document class! (Proceeding with fingers crossed.) on input line 84.
+Class revtex4-2 Info: cite was not loaded (OK!) on input line 84.
+Class revtex4-2 Info: mcite was not loaded (OK!) on input line 84.
+Class revtex4-2 Info: multicol was not loaded (OK!) on input line 84.
+ (Thesis.aux)
 \openout1 = `Thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
  (C:\Users\vadan\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count322
-\scratchdimen=\dimen178
+\scratchcounter=\count329
+\scratchdimen=\dimen184
 \scratchbox=\box73
-\nofMPsegments=\count323
-\nofMParguments=\count324
+\nofMPsegments=\count330
+\nofMParguments=\count331
 \everyMPshowfont=\toks29
-\MPscratchCnt=\count325
-\MPscratchDim=\dimen179
-\MPnumerator=\count326
-\makeMPintoPDFobject=\count327
+\MPscratchCnt=\count332
+\MPscratchDim=\dimen185
+\MPnumerator=\count333
+\makeMPintoPDFobject=\count334
 \everyMPtoPDFconversion=\toks30
 ) (C:\Users\vadan\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -390,7 +439,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\vadan\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 70.
+Package hyperref Info: Link coloring OFF on input line 84.
  (Thesis.out) (Thesis.out)
 \@outlinefile=\write4
 \openout4 = `Thesis.out'.
@@ -412,15 +461,15 @@ Package hyperref Info: Link coloring OFF on input line 70.
 * \textheight=731.23584pt
 * \oddsidemargin=-15.36449pt
 * \evensidemargin=-15.36449pt
-* \topmargin=-56.36449pt
-* \headheight=25.0pt
-* \headsep=16.0pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
 * \topskip=10.0pt
 * \footskip=30.0pt
-* \marginparwidth=30.0pt
-* \marginparsep=6.0pt
-* \columnsep=18.0pt
-* \skip\footins=39.0pt plus 4.0pt minus 12.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=25.25pt plus 4.0pt minus 12.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -430,53 +479,61 @@ Package hyperref Info: Link coloring OFF on input line 70.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Class revtex4-2 Info: Taking \maketitle back from hyperref on input line 70.
+
+Package chemgreek Info: Activating mapping `default' on line 84.
+
+Class revtex4-2 Info: Taking \maketitle back from hyperref on input line 84.
 \openout3 = `ThesisNotes.bib'.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 98.
+(hyperref)                removing `\\' on input line 112.
 
 [1{C:/Users/vadan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 143.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 157.
  (C:\Users\vadan\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 143.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 157.
  (C:\Users\vadan\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<figures/DTbetter.png, id=83, 747.79375pt x 686.565pt>
+<figures/DTbetter.png, id=82, 747.79375pt x 686.565pt>
 File: figures/DTbetter.png Graphic file (type png)
 <use figures/DTbetter.png>
-Package pdftex.def Info: figures/DTbetter.png  used on input line 159.
+Package pdftex.def Info: figures/DTbetter.png  used on input line 173.
 (pdftex.def)             Requested size: 290.22107pt x 266.46024pt.
- [2] [3 <./figures/DTbetter.png>] [4] [5] (Thesis.bbl
-Underfull \hbox (badness 1616) in paragraph at lines 25--32
-[]\OT1/cmr/m/n/9 B. Bocci, Z. Hartwig, S. Segantin, R. Testoni, D. Whyte, and M. Zuc-chetti.  ARC re-ac-tor ma-te-ri-
+ [2] [3 <./figures/DTbetter.png>] [4] [5] [6] [7] (Thesis.bbl [8] [9]
+Underfull \hbox (badness 1755) in paragraph at lines 242--251
+\OT1/cmr/m/n/10.95 L. Packer, M.R. Gilbert, and A. Harte.  High tem-per-a-ture zir-co-nium al-loys for fu-
+ []
+
+[10]
+Underfull \hbox (badness 7540) in paragraph at lines 376--384
+[]\OT1/cmr/m/n/10.95 Mark W. Paris and Mark B. Chad-wick.  A lost de-tail in D{T fu-sion his-
  []
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 34--43
-[]\OT1/cmr/m/n/9 Tim D. Bohm and Ben A. Lind-ley.  Ini-tial Neu-tron-ics In-ves-ti-ga-tion of a Chlo-rine Salt{Based Breeder
+Underfull \hbox (badness 5331) in paragraph at lines 376--384
+\OT1/cmr/m/n/10.95 tory.  \OT1/cmr/m/it/10.95 Physics To-day\OT1/cmr/m/n/10.95 , 76(10):10--11, Oc-to-ber 2023.  ISSN 0031-9228, 1945-0699.
  []
 
 
-Underfull \hbox (badness 1092) in paragraph at lines 34--43
-\OT1/cmr/m/n/9 Blan-ket.  \OT1/cmr/m/it/9 Fu-sion Sci-ence and Tech-nol-ogy\OT1/cmr/m/n/9 , 79(8):995--1007, Novem-ber 2023.  ISSN 1536-1055, 1943-7641.
+Underfull \hbox (badness 4072) in paragraph at lines 376--384
+[]\OT1/cmr/m/n/10.95 doi:10.1063/PT.3.5317[].  URL []$\OT1/cmtt/m/n/10.95 https : / / pubs . aip . org / physicstoday / article / 76 / 10 / 10 /
+ []
+
+[11]
+Underfull \hbox (badness 1102) in paragraph at lines 543--551
+[]\OT1/cmr/m/n/10.95 Yican Wu.  Overview of liq-uid lithium lead breeder blan-ket pro-gram in China.  \OT1/cmr/m/it/10.95 Fu-
  []
 
 
-Underfull \hbox (badness 1292) in paragraph at lines 34--43
-[]\OT1/cmr/m/n/9 doi:10.1080/15361055.2022.2136923[].  URL []$\OT1/cmtt/m/n/9 https : / / www . tandfonline . com / doi / full / 10 . 1080 / 15361055 . 2022 .
+Underfull \hbox (badness 1009) in paragraph at lines 543--551
+\OT1/cmr/m/n/10.95 10.1016/j.fusengdes.2010.12.046[].  URL []$\OT1/cmtt/m/n/10.95 https : / / linkinghub . elsevier . com / retrieve / pii /
  []
 
-[6]
-Underfull \hbox (badness 1205) in paragraph at lines 254--262
-\OT1/cmr/m/n/9 fab-ri-ca-tion.  \OT1/cmr/m/it/9 Jour-nal of Nu-clear Ma-te-ri-als\OT1/cmr/m/n/9 , 442(1-3):S420--S424, Novem-ber 2013.  ISSN 00223115.  []doi:
- []
-
-[7]) [8] (Thesis.aux)
+) [12] (Thesis.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
@@ -485,17 +542,17 @@ Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: B7292705AFDA5AAAD6BE1A9E9A41D4A0;3680.
  ) 
 Here is how much of TeX's memory you used:
- 12877 strings out of 468081
- 195230 string characters out of 5425788
- 661624 words of memory out of 5000000
- 41316 multiletter control sequences out of 15000+600000
- 639230 words of font info for 82 fonts, out of 8000000 for 9000
+ 13934 strings out of 468081
+ 220306 string characters out of 5425788
+ 680540 words of memory out of 5000000
+ 42355 multiletter control sequences out of 15000+600000
+ 639714 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,6n,79p,854b,690s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\vadan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on Thesis.pdf (8 pages, 318740 bytes).
+ 75i,6n,86p,854b,744s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\vadan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Thesis.pdf (12 pages, 300481 bytes).
 PDF statistics:
- 450 PDF objects out of 1000 (max. 8388607)
- 73 named destinations out of 1000 (max. 500000)
+ 455 PDF objects out of 1000 (max. 8388607)
+ 77 named destinations out of 1000 (max. 500000)
  134 words of extra memory for PDF output out of 10000 (max. 10000000)
 

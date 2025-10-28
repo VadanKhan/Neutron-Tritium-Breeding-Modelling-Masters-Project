@@ -14,12 +14,6 @@ Jin~Whan Bae, Ethan Peterson, and Jonathan Shimwell.
 \newblock URL
   \url{https://iopscience.iop.org/article/10.1088/1741-4326/ac5450}.
 
-\bibitem[Barlow(2008)]{nuclearphysics}
-R.~J. Barlow.
-\newblock \emph{Nuclear Physics: Principles and Applications}.
-\newblock Manchester Physics Series. John Wiley \& Sons, 2008.
-\newblock ISBN 9780471922957.
-
 \bibitem[Bocci et~al.(2020)Bocci, Hartwig, Segantin, Testoni, Whyte, and
   Zucchetti]{bocci_arc_2020}
 B.~Bocci, Z.~Hartwig, S.~Segantin, R.~Testoni, D.~Whyte, and M.~Zucchetti.
@@ -211,6 +205,12 @@ Takanori Hirose, Wenhai Guan, Takuya Katagiri, Atsushi Wakasa, Yoji Someya,
 Merlijn Jakobs.
 \newblock \emph{Fusion Energy - Burning Questions}.
 \newblock PhD thesis, 11 2016.
+
+\bibitem[John(2008)]{nuclearphysics}
+Lilley John.
+\newblock \emph{Nuclear Physics: Principles and Applications}.
+\newblock Manchester Physics Series. John Wiley \& Sons, 2008.
+\newblock ISBN 9780471922957.
 
 \bibitem[Kalos and Whitlock(2008)]{kalos_monte_2008}
 Malvin~H. Kalos and Paula~A. Whitlock.

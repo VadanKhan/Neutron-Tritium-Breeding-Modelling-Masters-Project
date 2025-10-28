@@ -5,7 +5,7 @@
  nofootinbib,
  amsmath,amssymb,
  aps,
- 10pt,
+ 12pt,
  nolongbibliography,
 ]{revtex4-2}
 
@@ -16,6 +16,20 @@
 \usepackage[title]{appendix}
 \usepackage[a4paper, margin=2cm]{geometry}
 \usepackage{titlesec}
+\usepackage{mhchem}
+\usepackage{etoolbox} % Make sure this is in your preamble
+% Add commands before the environment starts
+\BeforeBeginEnvironment{thebibliography}{%
+  \begingroup                 % Start a group to keep changes local
+  \linespread{1.0}\selectfont % Set line spacing to single
+  \small                      % Set font size to \small
+}
+
+% Add commands after the environment ends
+\AfterEndEnvironment{thebibliography}{%
+  \endgroup % End the local changes
+}
+
 % % % Add the biblatex package
 % \usepackage[backend=biber, style=numeric, natbib=true]{biblatex}
 % % % Tell biblatex where to find your references
@@ -46,7 +60,7 @@
 %% Use this if you want times new roman which is slightly more compact.
 %\usepackage{times}
 \setlength{\parindent}{10pt}
-\linespread{0.94}
+\linespread{1.1}
 
 \usepackage{titlesec}
 \titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
