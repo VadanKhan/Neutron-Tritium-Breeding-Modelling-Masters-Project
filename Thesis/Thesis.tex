@@ -199,7 +199,7 @@ according to $E=mc^2$.
 For terrestrial power generation, the most promising reaction is that between the two heavy isotopes
 of hydrogen, deuterium (d) and tritium (t) \cite{paris_lost_2023, heckrotte_factors_1971}:
 $$
-d+t\rightarrow n+\alpha+17.6MeV
+\ce{d + t -> n + \alpha} + 17.6 MeV
 $$
 This D-T reaction is the primary focus of mainstream fusion research, as it has a fusion
 cross-section significantly higher than other candidate reactions (like D-D or
@@ -211,7 +211,7 @@ technology (Fig.~\ref{fig:fusion_cross_sections}) \cite{heckrotte_factors_1971}.
     % You can adjust the width as needed for your document layout
     \includegraphics[width=0.7\textwidth]{figures/breeding_cs.png}
     \caption{A comparison of fusion reaction reactivities total cross section $\sigma$ as a function
-    of ion temperature (keV) for the D-T, D-D, and D-${}^{3}$He fuel cycles. The D-T reaction's
+    of ion temperature (keV) for the D-T, D-D, and \ce{D}-\ce{^3He} fuel cycles. The D-T reaction's
     cross section peaks at a lower temperature and is significantly larger than the alternatives,
     making it the most accessible reaction for current and near-term fusion devices.}
     \label{fig:fusion_cross_sections}
@@ -234,13 +234,13 @@ energy with it \cite{heckrotte_factors_1971}.
 \subsection{Neutron Transport and Interactions}
 
 The 14.1 MeV neutron is the primary vehicle for both energy extraction and fuel production. Once it
-leaves the plasma, it travels into the surrounding structures, chiefly the 	extbf{breeder blanket}.
+leaves the plasma, it travels into the surrounding structures, chiefly the \textbf{breeder blanket}.
 The study of its journey and interactions with the blanket materials is the domain of
 \textbf{neutron transport} \cite{kuridan_neutron_2023}.
 
 As the neutron moves through matter, it interacts with atomic nuclei via two main processes:
 scattering and absorption. The probability of any specific interaction occurring is defined by the
-material's 	extbf{microscopic cross-section ($\sigma$)}, a value that is highly dependent on the energy
+material's \textbf{microscopic cross-section ($\sigma$)}, a value that is highly dependent on the energy
 of the incident neutron \cite{kuridan_neutron_2023}. These cross-sections are meticulously measured
 and compiled in comprehensive libraries such as the Evaluated Nuclear Data File (ENDF)
 \cite{brown_endfb-viii0_2018}.
@@ -248,18 +248,18 @@ and compiled in comprehensive libraries such as the Evaluated Nuclear Data File 
 Key interactions within the blanket include:
 \begin{itemize}
     \item \textbf{Scattering:} The neutron collides with a nucleus and ``bounces'' off, transferring
-    a portion of its kinetic energy to the nucleus. In \textbf{elastic scattering (n,n)}, kinetic
-    energy is conserved. In \textbf{inelastic scattering (n,n')}, the neutron excites the nucleus,
+    a portion of its kinetic energy to the nucleus. In \textbf{elastic scattering $\ce{(n,n^{\prime})}$}, kinetic
+    energy is conserved. In \textbf{inelastic scattering $\ce{(n,n^{\prime})}$}, the neutron excites the nucleus,
     which then de-excites by emitting a gamma ray, resulting in a larger energy loss for the
     neutron. Both processes are crucial for \textbf{moderation}—slowing the fast 14.1 MeV neutrons
     down. This thermal energy, deposited in the blanket material, is what is ultimately extracted by
     a coolant to generate electricity.
 
     \item \textbf{Absorption:} The neutron is captured by a nucleus. This can be a \textbf{radiative
-    capture (n,$\gamma$)} event, where the nucleus emits a gamma ray. This is often a parasitic
+    capture \ce{(n, \gamma)}} event, where the nucleus emits a gamma ray. This is often a parasitic
     reaction, as it removes a neutron from the system that could have been used for breeding.
-    Alternatively, the absorption can induce \textbf{charged particle emission}, such as (n,p) or
-    (n,$\alpha$) reactions. This is the fundamental mechanism used for tritium breeding
+    Alternatively, the absorption can induce \textbf{charged particle emission}, such as \ce{(n,p)} or
+    \ce{(n, \alpha)} reactions. This is the fundamental mechanism used for tritium breeding
     \cite{kuridan_neutron_2023}.
 \end{itemize}
 
@@ -269,14 +269,14 @@ The primary nuclear function of the blanket is to use the fusion neutrons to ``b
 fuel. This is accomplished by bombarding lithium isotopes with the neutrons. There are two reactions
 that produce tritium:
 $$
-{}^{6}Li+n\rightarrow\alpha+t+4.8MeV
+\ce{^{6}Li + n -> \alpha + t} + 4.8 MeV
 $$
 $$
-{}^{7}Li+n\rightarrow\alpha+t+n'-2.5MeV
+\ce{^{7}Li + n -> \alpha + t + n^{\prime}} - 2.5 MeV
 $$
-The ${}^{6}$Li reaction is exothermic and has a very large cross-section for low-energy (thermal)
+The \ce{^{6}Li} reaction is exothermic and has a very large cross-section for low-energy (thermal)
 neutrons, making it the primary breeding reaction of interest \cite{hernandez_first_2018}. The
-${}^{7}$Li reaction is endothermic, requiring high-energy neutrons (a ``threshold'' reaction), and is
+\ce{^{7}Li} reaction is endothermic, requiring high-energy neutrons (a ``threshold'' reaction), and is
 generally less effective.
 
 \begin{figure}[htbp]
@@ -284,8 +284,8 @@ generally less effective.
     % Placeholder for the image as external files are not supported
     \includegraphics[width=0.7\textwidth]{figures/lithium_cs.png}
     \caption{Neutron cross-sections for the primary tritium breeding reactions,
-    ${}^{6}$Li(n,$\alpha$)t and ${}^{7}$Li(n,$\alpha$t)n', as a function of incident neutron energy.
-    The ${}^{6}$Li cross-section is dominant at low (thermal) energies, while the ${}^{7}$Li
+    \ce{^{6}Li(n, \alpha)t} and $\ce{^{7}Li(n, \alpha t)n^{\prime}}$, as a function of incident neutron energy.
+    The \ce{^{6}Li} cross-section is dominant at low (thermal) energies, while the \ce{^{7}Li}
     reaction is a threshold reaction requiring high-energy neutrons.}
     \label{fig:lithium_cross_sections}
 \end{figure}
@@ -298,31 +298,34 @@ self-sufficient fuel cycle, a TBR $>$ 1.0 is mandatory, with most reactor design
 1.1 or higher \cite{sawan_physics_2006, meschini_modeling_2023}.
 
 This presents a ``neutron economy'' challenge. The D-T reaction produces one neutron, and the primary
-${}^{6}$Li breeding reaction consumes one neutron \cite{shatalov_breeder_1991}. This leaves no
+\ce{^{6}Li} breeding reaction consumes one neutron \cite{shatalov_breeder_1991}. This leaves no
 margin for neutrons that are inevitably lost, either by leaking out of the blanket or through
 parasitic absorption in structural materials (like steel) \cite{shatalov_breeder_1991}.
 
 To overcome this deficit, the blanket must include a \textbf{neutron multiplier}
 \cite{malang_self-cooled_1991, hernandez_first_2018}. These are materials that undergo an
-\textbf{(n,2n)} reaction, where one high-energy incident neutron strikes a nucleus and causes two
+\textbf{\ce{(n, 2n)}} reaction, where one high-energy incident neutron strikes a nucleus and causes two
 neutrons to be emitted. The two most viable multiplier materials are Beryllium (Be) and Lead (Pb)
 \cite{hernandez_first_2018}.
 $$
-{}^{9}Be+n\rightarrow{}^{8}Be+2n \rightarrow 2\alpha + 2n
+\ce{^{9}Be + n -> ^{8}Be + 2n -> 2\alpha + 2n}
 $$
 $$
-{}^{208}Pb+n\rightarrow{}^{207m}Pb+2n
+\ce{^{208}Pb + n -> ^{207m}Pb + 2n}
 $$
 By incorporating these materials, the single 14.1 MeV fusion neutron can be multiplied into two or
 more lower-energy neutrons. These neutrons are then moderated (slowed down) within the blanket until
-they are at the optimal thermal energy to be captured by ${}^{6}$Li, thus enabling a TBR
+they are at the optimal thermal energy to be captured by \ce{^{6}Li}, thus enabling a TBR
 significantly greater than one \cite{hernandez_first_2018}.
 
 \begin{figure}[htbp]
     \centering
     % Placeholder for the image as external files are not supported
     \includegraphics[width=0.7\textwidth]{figures/multipliers_cs.png}
-    \caption{Neutron cross-sections for the (n,2n) neutron multiplication reactions in Beryllium (${}^{9}$Be) and Lead (${}^{208}$Pb). Both are threshold reactions that require high-energy neutrons, such as those from the D-T fusion reaction (14.1 MeV), to effectively multiply the neutron population.}
+    \caption{Neutron cross-sections for the \ce{(n, 2n)} neutron multiplication reactions in
+    Beryllium (\ce{^{9}Be}) and Lead (\ce{^{208}Pb}). Both are threshold reactions that require
+    high-energy neutrons, such as those from the D-T fusion reaction (14.1 MeV), to effectively
+    multiply the neutron population.}
     \label{fig:multiplier_cross_sections}
 \end{figure}
 
@@ -330,11 +333,11 @@ significantly greater than one \cite{hernandez_first_2018}.
 
 \subsection{The D-T Reaction and the Tritium Fuel Imperative}
 
-The deuterium-tritium (D-T) fusion reaction, $d+t\rightarrow n+\alpha+17.6MeV$, has been the leading
+The deuterium-tritium (D-T) fusion reaction, \ce{d + t -> n + \alpha + 17.6 MeV}, has been the leading
 candidate for first-generation fusion power plants since its potential was identified in the 1940s
 \cite{paris_lost_2023}. Its primary advantage lies in its high fusion cross-section ($\sigma_f$) at
 plasma temperatures achievable with current technology, significantly higher than other candidates
-like D-D or D-${}^{3}$He reactions. Furthermore, 80\% of the energy (14.1 MeV) is carried by the
+like D-D or \ce{D}-\ce{^3He} reactions. Furthermore, 80\% of the energy (14.1 MeV) is carried by the
 emitted neutron, which allows for energy to be efficiently extracted from the plasma core
 \cite{heckrotte_factors_1971}.
 
@@ -359,12 +362,12 @@ tritium-producing reactions in lithium. The two key breeding reactions are menti
 
 [MISSING REFERENCE TO EQUATIONS]
 
-While ${}^{7}$Li can breed, the ${}^{6}$Li reaction is exothermic and possesses a much larger
+While \ce{^{7}Li} can breed, the \ce{^{6}Li} reaction is exothermic and possesses a much larger
 reaction cross-section for the thermalised neutrons dominant in a blanket, making it the primary
 breeding isotope.
 
 The concept of a ``breeder'' blanket predates its application in fusion; it was first developed as a
-method to use fusion neutrons to produce fissile materials, such as ${}^{233}$U and ${}^{239}$Pu,
+method to use fusion neutrons to produce fissile materials, such as \ce{^{233}U} and \ce{^{239}Pu},
 for fission reactors \cite{moir_fusion_1982, lee_us-doe_1983, maniscalco_fusion_1984}. Today, the
 design must also perform several other critical functions, including shielding the superconducting
 magnets from intense neutron radiation and extracting the fusion energy (via neutron thermalisation)
@@ -376,49 +379,49 @@ to inevitable losses from neutron capture in structural materials, decay, and in
 burn-up, a TBR significantly greater than 1.0 is required to achieve tritium self-sufficiency
 \cite{sawan_physics_2006, meschini_modeling_2023}.
 
-However, the D-T reaction produces only one neutron, and the ${}^{6}$Li reaction consumes one
+However, the D-T reaction produces only one neutron, and the \ce{^{6}Li} reaction consumes one
 neutron. This leaves no margin for losses. To achieve a TBR $>$ 1, most blanket designs must include
 a \textbf{neutron multiplier} material. The most effective materials for this are beryllium
-(${}^{9}Be$) and lead (${}^{208}Pb$), which undergo (n, 2n) reactions (spallation) when struck by
+(\ce{^{9}Be}) and lead (\ce{^{208}Pb}), which undergo \ce{(n, 2n)} reactions (spallation) when struck by
 high-energy fusion neutrons, effectively turning one incident neutron into two
 \cite{hernandez_first_2018}.
 
 \subsection{The Role of Neutron Multipliers}
 
 The D-T fusion reaction produces a single 14.1 MeV neutron, while the primary breeding reaction,
-${}^{6}Li(n,\alpha)t$, consumes one neutron. This 1-to-1 neutron economy leaves no margin for
+\ce{^{6}Li(n, \alpha)t}, consumes one neutron. This 1-to-1 neutron economy leaves no margin for
 inevitable losses due to parasitic absorption in structural materials or neutrons escaping the
 blanket. To achieve the required Tritium Breeding Ratio (TBR) greater than unity, a blanket must
 therefore incorporate a \textbf{neutron multiplier} \cite{malang_self-cooled_1991}.
 
-While natural lithium itself has a minor neutron-multiplying reaction via the high-energy (n,n't)
-reaction with ${}^{7}$Li:
-$$ {}^{7}Li+n\rightarrow\alpha+t+n' - 2.5MeV $$ This reaction is endothermic, consuming 2.5 MeV of
-energy, and its cross-section is insufficient on its own to guarantee tritium self-sufficiency
-\cite{hernandez_first_2018}. Therefore, dedicated multiplier materials are required, with the two
-primary candidates being Beryllium (Be) and Lead (Pb).
+While natural lithium itself has a minor neutron-multiplying reaction via the high-energy
+$\ce{(n,n^{\prime}t)}$ reaction with \ce{^{7}Li}:
+$$\ce{^{7}Li + n -> \alpha + t + n^{\prime}} - 2.5 MeV$$ This reaction is endothermic, consuming 2.5
+MeV of energy, and its cross-section is insufficient on its own to guarantee tritium
+self-sufficiency \cite{hernandez_first_2018}. Therefore, dedicated multiplier materials are
+required, with the two primary candidates being Beryllium (Be) and Lead (Pb).
 
 \begin{itemize}
-    \item \textbf{Beryllium (Be):} Beryllium, specifically the isotope ${}^{9}Be$, is an extremely
-    effective neutron multiplier with a low energy threshold for its (n,2n) reaction:
-    $$ {}^{9}Be+n\rightarrow{}^{8}Be+2n \rightarrow 2\alpha + 2n $$ It is widely used in conceptual
+    \item \textbf{Beryllium (Be):} Beryllium, specifically the isotope \ce{^{9}Be}, is an extremely
+    effective neutron multiplier with a low energy threshold for its \ce{(n, 2n)} reaction:
+    $$\ce{^{9}Be + n -> ^{8}Be + 2n -> 2\alpha + 2n}$$ It is widely used in conceptual
     solid breeder designs, such as the Helium-Cooled Pebble Bed (HCPB) and Water-Cooled Pebble Bed
-    (WCPB), often in the form of beryllium pebbles or beryllide ceramics ($Be_{12}Ti$)
+    (WCPB), often in the form of beryllium pebbles or beryllide ceramics (\ce{Be12Ti})
     \cite{wang_current_2019, liu_design_2022}. It is also a key component in the molten salt FLiBe
-    (2LiF - BeF$_2$) \cite{tas_liquid_1988, sorbom_arc_2015}. However, beryllium has two major
+    \ce{(2LiF . BeF2)} \cite{tas_liquid_1988, sorbom_arc_2015}. However, beryllium has two major
     drawbacks: it is a scarce resource, and its dust is ``ridiculously toxic''
     \cite{shimwell_reducing_2016}, posing significant safety, handling, and manufacturing
     challenges.
 
-    \item \textbf{Lead (Pb):} Lead, typically natural lead or lead enriched in ${}^{208}Pb$, is the
-    other main multiplier candidate. It undergoes a high-energy (n,2n) reaction:
-    $$ {}^{208}Pb+n\rightarrow{}^{207m}Pb+2n $$ Lead's primary advantage is that it can be
-    seamlessly integrated into a liquid breeder, forming the $Li_{17}Pb_{83}$ eutectic alloy. This
+    \item \textbf{Lead (Pb):} Lead, typically natural lead or lead enriched in \ce{^{208}Pb}, is the
+    other main multiplier candidate. It undergoes a high-energy \ce{(n, 2n)} reaction:
+    $$\ce{^{208}Pb + n -> ^{207m}Pb + 2n}$$ Lead's primary advantage is that it can be
+    seamlessly integrated into a liquid breeder, forming the \ce{Li17Pb83} eutectic alloy. This
     allows the material to serve as breeder, multiplier, and coolant simultaneously
     \cite{wu_overview_2011, malang_self-cooled_1991}. While it avoids the toxicity issues of
     beryllium, lead is a high-Z (high atomic number) material. This means it can also be a source of
     parasitic neutron absorption, particularly for the low-energy thermal neutrons that are most
-    effective for breeding with ${}^{6}Li$. Furthermore, its activation by high-energy neutrons can
+    effective for breeding with \ce{^{6}Li}. Furthermore, its activation by high-energy neutrons can
     lead to the production of long-lived radioisotopes, complicating waste disposal
     \cite{bocci_arc_2020}.
 \end{itemize}
@@ -440,7 +443,7 @@ coolant, simplifying the design and allowing for continuous tritium extraction o
 
 \begin{itemize}
     \item \textbf{Lithium-Lead (Li-Pb):} This is one of the most mature concepts, typically using
-    the eutectic alloy $Li_{17}Pb_{83}$ \cite{mas_de_les_valls_leadlithium_2008, wu_overview_2011}.
+    the eutectic alloy \ce{Li17Pb83} \cite{mas_de_les_valls_leadlithium_2008, wu_overview_2011}.
     The lead acts as both a neutron multiplier and the primary component of the alloy, while the
     eutectic composition provides a low melting point, which is crucial for circulation
     \cite{mas_de_les_valls_leadlithium_2008}. This concept is the basis for the \textbf{Dual-Cooled
@@ -451,11 +454,11 @@ coolant, simplifying the design and allowing for continuous tritium extraction o
     \cite{malang_self-cooled_1991}.
 
     \item \textbf{Molten Salts:} An alternative LB concept uses molten fluorine or chlorine salts.
-    The most prominent example is \textbf{FLiBe (2LiF - BeF$_2$)}, which advantageously combines the
-    breeder (LiF) and multiplier (BeF$_2$) into a single, low-conductivity fluid
+    The most prominent example is \textbf{FLiBe \ce{(2LiF . BeF2)}}, which advantageously combines the
+    breeder (LiF) and multiplier (\ce{BeF2}) into a single, low-conductivity fluid
     \cite{tas_liquid_1988}. This is the reference design for the \textbf{Affordable Robust Compact
     (ARC)} reactor concept from MIT \cite{sorbom_arc_2015, bocci_arc_2020,
-    segantin_optimization_2020}. A wide variety of other salt compositions, including LiF-PbF$_2$
+    segantin_optimization_2020}. A wide variety of other salt compositions, including \ce{LiF.PbF2}
     and novel chlorine-based salts, are also under investigation to optimise breeding, temperature,
     and material compatibility \cite{segantin_neutronic_2020, bohm_initial_2023}.
 \end{itemize}
@@ -468,14 +471,14 @@ knitter_recent_2013}.
 
 \begin{itemize}
     \item \textbf{Materials and Design:} The leading candidate materials are lithium metatitanate
-    ($Li_2TiO_3$) and lithium orthosilicate ($Li_4SiO_4$), often mixed with separate beryllium-based
-    pebbles (e.g., $Be_{12}Ti$) as a multiplier \cite{hernandez_first_2018, hernandez_chapter_2025}.
+    (\ce{Li2TiO3}) and lithium orthosilicate (\ce{Li4SiO4}), often mixed with separate beryllium-based
+    pebbles (e.g., \ce{Be12Ti}) as a multiplier \cite{hernandez_first_2018, hernandez_chapter_2025}.
     A review by \cite{hernandez_first_2018} provides a comprehensive survey of these and other
     solid-phase options.
 
     \item \textbf{Implementations:} These materials form the basis of several major international
     designs. The \textbf{Chinese Fusion Engineering Test Reactor (CFETR)} is developing a
-    \textbf{Water-Cooled Pebble Bed (WCPB)} blanket using $Li_2TiO_3/Be_{12}Ti$ pellets
+    \textbf{Water-Cooled Pebble Bed (WCPB)} blanket using \ce{Li2TiO3}/\ce{Be12Ti} pellets
     \cite{liu_design_2022, lei_design_2020}. European and Japanese DEMO concepts have focused on
     \textbf{Helium-Cooled Pebble Bed (HCPB)} designs, which are also being developed for ITER Test
     Blanket Modules \cite{federici_european_2017, wang_current_2019, kawamura_overview_2024}.
@@ -508,7 +511,7 @@ and multiplication cross-sections—is ideally suited to the statistical samplin
 
     \item \textbf{The Research Gap and Project Motivation:} A review of the literature reveals that
     decades of research have narrowed the focus to a small selection of ``safe'' materials (e.g.,
-    Li-Pb, $Li_4SiO_4$, $Li_2TiO_3$) chosen not only for breeding but for their structural,
+    Li-Pb, \ce{Li4SiO4}, \ce{Li2TiO3}) chosen not only for breeding but for their structural,
     chemical, and cost properties \cite{shatalov_breeder_1991, federici_overview_2019}. This
     necessary pragmatism has left many other material combinations, particularly those in complex
     molten salt systems, comparatively unexplored.
@@ -521,7 +524,7 @@ and multiplication cross-sections—is ideally suited to the statistical samplin
     This project fills this gap. By leveraging the automated workflow of OpenMC and Paramak, we will
     conduct a broad, systematic investigation of TBR performance. This work builds upon previous
     studies by exploring a wider range of breeder materials (including less-common salts) and,
-    crucially, by systematically varying key parameters such as \textbf{${}^{6}$Li enrichment},
+    crucially, by systematically varying key parameters such as \textbf{\ce{^{6}Li} enrichment},
     \textbf{blanket thickness}, and \textbf{material composition ratios} in a realistic 3D geometry.
     This systematic parameter sweep will provide a comprehensive dataset to identify optimal design
     points that previous, more narrowly-focused studies may have overlooked.
