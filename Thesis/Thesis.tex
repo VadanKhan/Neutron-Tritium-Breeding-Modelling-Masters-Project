@@ -1,14 +1,32 @@
 % DOC SETUP
 
-\documentclass[%
- onecolumn,
- nofootinbib,
- amsmath,amssymb,
- aps,
- 12pt,
- nolongbibliography,
-]{revtex4-2}
+% revtex class:
+% \documentclass[%
+%  onecolumn,
+%  nofootinbib,
+%  amsmath,amssymb,
+%  aps,
+%  12pt,
+%  nolongbibliography,
+% ]{revtex4-2}
 
+% base article class:
+\documentclass[12pt]{article}
+% revtex loaded these for you, so now we add them explicitly
+\usepackage{amsmath,amssymb}
+
+% base article class:
+% % Add the biblatex package
+\usepackage[
+  backend=biber,
+  style=vancouver,  % Use the Vancouver style
+  natbib=true,
+  maxbibnames=6,    % Truncate if > 6 authors
+  minbibnames=6     % <-- THE FIX: When truncating, print 6
+]{biblatex}
+% % Tell biblatex where to find your references
+\addbibresource{thesis.bib} % <-- Make sure to include the .bib extension
+\renewcommand*{\bibfont}{\small\linespread{1.0}\selectfont}
 \usepackage{graphicx}% Include figure files
 \usepackage{dcolumn}% Align table columns on decimal point
 \usepackage{bm}% bold math
@@ -17,23 +35,22 @@
 \usepackage[a4paper, margin=2cm]{geometry}
 \usepackage{titlesec}
 \usepackage{mhchem}
-\usepackage{etoolbox} % Make sure this is in your preamble
-% Add commands before the environment starts
-\BeforeBeginEnvironment{thebibliography}{%
-  \begingroup                 % Start a group to keep changes local
-  \linespread{1.0}\selectfont % Set line spacing to single
-  \small                      % Set font size to \small
-}
 
-% Add commands after the environment ends
-\AfterEndEnvironment{thebibliography}{%
-  \endgroup % End the local changes
-}
+% revtex class:
+% \usepackage{etoolbox} % Make sure this is in your preamble
+% % Add commands before the environment starts
+% \BeforeBeginEnvironment{thebibliography}{%
+%%   \begingroup                 % Start a group to keep changes local
+%   \linespread{1.0}\selectfont % Set line spacing to single
+%   \small                      % Set font size to \small
+% }
 
-% % % Add the biblatex package
-% \usepackage[backend=biber, style=numeric, natbib=true]{biblatex}
-% % % Tell biblatex where to find your references
-% \addbibresource{thesis_biblatex.bib} % <-- Make sure to include the .bib extension
+% % Add commands after the environment ends
+% \AfterEndEnvironment{thebibliography}{%
+%   \endgroup % End the local changes
+% }
+
+
 
 
 %\usepackage[showframe,%Uncomment any one of the following lines to test
@@ -46,16 +63,16 @@
 
 
 %%%  Some modifications to reduce the space used by RevTex for sections, and use traditional numbering
-% Usual (decimal) numbering
-\renewcommand{\thesection}{\arabic{section}}
-\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
-\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+% % Usual (decimal) numbering
+% \renewcommand{\thesection}{\arabic{section}}
+% \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+% \renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
 
-% Fix references
-\makeatletter
-\renewcommand{\p@subsection}{}
-\renewcommand{\p@subsubsection}{}
-\makeatother
+% % Fix references
+% \makeatletter
+% \renewcommand{\p@subsection}{}
+% \renewcommand{\p@subsubsection}{}
+% \makeatother
 
 %% Use this if you want times new roman which is slightly more compact.
 %\usepackage{times}
@@ -87,8 +104,13 @@
 Blankets \\
 \normalsize MPhys Project Report}
 
-\author{Vadan Khan}
-\affiliation{4th Year MPhys, Department of Physics and Astronomy, University of Manchester}
+% base article class:
+\author{Vadan Khan \\
+4th Year MPhys, Department of Physics and Astronomy, University of Manchester}
+
+% revtex class:
+% \affiliation{4th Year MPhys, Department of Physics and Astronomy, University of Manchester}
+
 \date{\today}
 
 \begin{abstract}
@@ -109,6 +131,7 @@ for automated optimisation of blanket parameters through computational framework
 The outcomes will inform the feasibility and efficiency of next-generation blanket
 concepts relevant to future magnetic confinement fusion reactors such a DEMO and STEP.
 \end{abstract}
+
 \maketitle
 
 \clearpage
@@ -445,7 +468,7 @@ and multiplication cross-sections—is ideally suited to the statistical samplin
     \item \textbf{OpenMC and Paramak:} This project uses \textbf{OpenMC}, a state-of-the-art,
     open-source MC code that has been validated against other established codes (like MCNP) and
     shown to accurately reproduce TBR and neutron flux calculations for fusion systems
-    \cite{romano2015, bae_arc_2022}. It is increasingly used in fusion research for its robust
+    \cite{romano_openmc_2015, bae_arc_2022}. It is increasingly used in fusion research for its robust
     capabilities \cite{fradera_pre-conceptual_2021, king_high_2022}. To manage the complex reactor
     geometry, we use \textbf{Paramak}, a Python-based CAD framework that automates the construction
     of parametric tokamak models compatible with OpenMC \cite{shimwell_paramak_2021}.
@@ -473,9 +496,13 @@ and multiplication cross-sections—is ideally suited to the statistical samplin
 
 \noindent\rule{\linewidth}{0.4pt}
 
-\bibliographystyle{plainnat}
-\bibliography{thesis}
-% \printbibliography  % for biblatex.
+
+% revtex class:
+% \bibliographystyle{plainnat}
+% \bibliography{thesis}
+
+% base article class:
+\printbibliography  % for biblatex.
 
 \end{document}
 %
