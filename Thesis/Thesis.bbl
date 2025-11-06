@@ -3483,8 +3483,8 @@
       \strng{authornamehash}{3268d1996a38beac112b8f31fe4f121d}
       \strng{authorfullhash}{81d8b97685ed1f2cc65e3134caad5810}
       \strng{authorfullhashraw}{81d8b97685ed1f2cc65e3134caad5810}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{This paper discusses a novel breeding blanket design for {STEP}. Essentially a gas cooled pebble bed variant, using nitrogen as a coolant. This would allow for a much simpler and cheaper design. It outlines some of the issues with previous blanket designs (primarily the material/structural ones). Also uses {OpenMC} for its neutronics simulations.}
@@ -3578,8 +3578,8 @@
       \strng{authornamehash}{7612cac863904025ef4681bf868ebfa5}
       \strng{authorfullhash}{412b77b5c90b6d35eaf79b1e78dc95ca}
       \strng{authorfullhashraw}{412b77b5c90b6d35eaf79b1e78dc95ca}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{The use of zirconium in breeder blanket structures is desirable due to its relatively low thermal neutron absorption cross section. This paper models several zirconium alloys at a variety of concentrations and thicknesses. {TBR} was calculated via {OpenMC}. This is another Jonathan Shimwell paper. This may be useful when considering structural materials. Compare to {EUROFER}97.}
@@ -3820,6 +3820,49 @@
       \verb http://arxiv.org/abs/2310.00220
       \endverb
       \keyw{Lit Review,{TBR},Useful,{OpenMC},Paramak}
+    \endentry
+    \entry{summerscales_hitting_2023}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=5478a8ab892af7f3f57fba5713358a80}{%
+           family={Summerscales},
+           familyi={S\bibinitperiod},
+           given={Owen},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{5478a8ab892af7f3f57fba5713358a80}
+      \strng{fullhash}{5478a8ab892af7f3f57fba5713358a80}
+      \strng{fullhashraw}{5478a8ab892af7f3f57fba5713358a80}
+      \strng{bibnamehash}{5478a8ab892af7f3f57fba5713358a80}
+      \strng{authorbibnamehash}{5478a8ab892af7f3f57fba5713358a80}
+      \strng{authornamehash}{5478a8ab892af7f3f57fba5713358a80}
+      \strng{authorfullhash}{5478a8ab892af7f3f57fba5713358a80}
+      \strng{authorfullhashraw}{5478a8ab892af7f3f57fba5713358a80}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Learn the origin of the Monte Carlo Method, a risk calculation method that was first used to calculate neutron diffusion paths for the hydrogen bomb.}
+      \field{day}{1}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{shorttitle}{Hitting the Jackpot}
+      \field{title}{Hitting the Jackpot: The Birth of the Monte Carlo Method {|} {LANL}}
+      \field{titleaddon}{Owen Summerscales}
+      \field{urlday}{19}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\vadan\\Zotero\\storage\\XHJBJMVS\\1123-hitting-the-jackpot-the-birth-of-the-monte-carlo-method.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.lanl.gov/media/publications/actinide-research-quarterly/1123-hitting-the-jackpot-the-birth-of-the-monte-carlo-method
+      \endverb
+      \verb{url}
+      \verb https://www.lanl.gov/media/publications/actinide-research-quarterly/1123-hitting-the-jackpot-the-birth-of-the-monte-carlo-method
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

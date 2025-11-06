@@ -35,6 +35,8 @@
 \usepackage[a4paper, margin=2cm]{geometry}
 \usepackage{titlesec}
 \usepackage{mhchem}
+\usepackage{booktabs} % <-- Add this to your preamble if not already there
+
 
 % revtex class:
 % \usepackage{etoolbox} % Make sure this is in your preamble
@@ -79,7 +81,7 @@
 \setlength{\parindent}{10pt}
 \linespread{1.2}
 
-\usepackage{titlesec}
+
 \titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
 \titlespacing\subsection{0pt}{5pt plus 4pt minus 2pt}{5pt plus 2pt minus 2pt}
 \titlespacing\subsubsection{0pt}{4pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
@@ -268,12 +270,15 @@ Key interactions within the blanket include:
 The primary nuclear function of the blanket is to use the fusion neutrons to ``breed'' new tritium
 fuel. This is accomplished by bombarding lithium isotopes with the neutrons. There are two reactions
 that produce tritium:
-$$
-\ce{^{6}Li + n -> \alpha + t} + 4.8 MeV
-$$
-$$
-\ce{^{7}Li + n -> \alpha + t + n^{\prime}} - 2.5 MeV
-$$
+\begin{equation}
+    \ce{^{6}Li + n -> \alpha + t} + 4.8 MeV
+    \label{eq:li6_reaction}
+\end{equation}
+
+\begin{equation}
+    \ce{^{7}Li + n -> \alpha + t + n^{\prime}} - 2.5 MeV
+    \label{eq:li7_reaction}
+\end{equation}
 The \ce{^{6}Li} reaction is exothermic and has a very large cross-section for low-energy (thermal)
 neutrons, making it the primary breeding reaction of interest \cite{hernandez_first_2018}. The
 \ce{^{7}Li} reaction is endothermic, requiring high-energy neutrons (a ``threshold'' reaction), and is
@@ -330,6 +335,7 @@ significantly greater than one \cite{hernandez_first_2018}.
 \end{figure}
 
 \section{Literature Review}
+\label{sec:lit_review}
 
 \subsection{The D-T Reaction and the Tritium Fuel Imperative}
 
@@ -358,9 +364,8 @@ systems, known as \textbf{Tritium Breeder Blankets}.
 
 A breeder blanket is a complex component surrounding the plasma-containing vacuum vessel. Its
 primary function is to intercept the 14.1 MeV fusion neutrons and use them to induce
-tritium-producing reactions in lithium. The two key breeding reactions are mentioned in
-
-[MISSING REFERENCE TO EQUATIONS]
+tritium-producing reactions in lithium. These are in reference to the two key breeding equations
+Eq.~\eqref{eq:li6_reaction} and Eq.~\eqref{eq:li7_reaction}.
 
 While \ce{^{7}Li} can breed, the \ce{^{6}Li} reaction is exothermic and possesses a much larger
 reaction cross-section for the thermalised neutrons dominant in a blanket, making it the primary
@@ -394,12 +399,12 @@ inevitable losses due to parasitic absorption in structural materials or neutron
 blanket. To achieve the required Tritium Breeding Ratio (TBR) greater than unity, a blanket must
 therefore incorporate a \textbf{neutron multiplier} \cite{malang_self-cooled_1991}.
 
-While natural lithium itself has a minor neutron-multiplying reaction via the high-energy
-$\ce{(n,n^{\prime}t)}$ reaction with \ce{^{7}Li}:
-$$\ce{^{7}Li + n -> \alpha + t + n^{\prime}} - 2.5 MeV$$ This reaction is endothermic, consuming 2.5
-MeV of energy, and its cross-section is insufficient on its own to guarantee tritium
-self-sufficiency \cite{hernandez_first_2018}. Therefore, dedicated multiplier materials are
-required, with the two primary candidates being Beryllium (Be) and Lead (Pb).
+Natural lithium itself has a minor neutron-multiplying reaction via the high-energy
+$\ce{(n,n^{\prime}t)}$ reaction with \ce{^{7}Li}, shown in Eq.~\eqref{eq:li7_reaction}. However this
+reaction is endothermic, consuming 2.5 MeV of energy, and its cross-section is insufficient on its
+own to guarantee tritium self-sufficiency \cite{hernandez_first_2018}. This leads to a common
+consensus that dedicated neutron multipliers are required with the two primary candidates being
+Beryllium (Be) and Lead (Pb).
 
 \begin{itemize}
     \item \textbf{Beryllium (Be):} Beryllium, specifically the isotope \ce{^{9}Be}, is an extremely
@@ -489,48 +494,241 @@ high-pressure helium or water) and the difficulty of extracting tritium, which m
 the solid ceramic and can be trapped in radiation-induced vacancies \cite{shi_density_2015}.
 
 \subsection{Neutronics Modelling and the Research Gap}
+\label{sec:research_gap}
 
 Evaluating the TBR and other neutronic parameters of these complex designs is extremely difficult to
-do experimentally. While small-scale mockups provide crucial data on material properties and tritium
-release \cite{delaporte-mathurin_advancing_2025, hirose_functional_2024}, they cannot replicate the
-full neutron spectrum and geometry of a power plant \cite{delaporte-mathurin_advancing_2025}.
+do experimentally \cite{delaporte-mathurin_advancing_2025, hirose_functional_2024}. While
+small-scale mockups provide crucial data on material properties and tritium release, they cannot
+replicate the full neutron spectrum and geometry of a power plant
+\cite{delaporte-mathurin_advancing_2025}. Consequently, the field relies heavily on computational
+modelling, particularly \textbf{Monte Carlo (MC) simulations}. The probabilistic nature of neutron
+transport—defined by scattering, absorption, and multiplication cross-sections—is ideally suited to
+the statistical sampling methods of MC codes \cite{kalos_monte_2008, kuridan_neutron_2023}.
 
-Consequently, the field relies heavily on computational modelling, particularly \textbf{Monte Carlo
-(MC) simulations}. The probabilistic nature of neutron transport—defined by scattering, absorption,
-and multiplication cross-sections—is ideally suited to the statistical sampling methods of MC codes
-\cite{kalos_monte_2008, kuridan_neutron_2023}.
+Modern neutronic toolchains are central to this research effort. The field increasingly utilizes
+state-of-the-art, open-source Monte Carlo codes, which have been validated against other established
+codes and shown to accurately reproduce TBR and neutron flux calculations for fusion systems
+\cite{romano_openmc_2015, bae_arc_2022, fradera_pre-conceptual_2021, king_high_2022}. A significant
+hurdle in this process is the management of complex reactor geometries. Accurately translating
+detailed Computer-Aided Design (CAD) models into a format usable by the neutronics code is a
+well-known challenge, often requiring significant manual effort \cite{shimwell_paramak_2021} and
+geometric simplification \cite{segantin_neutronic_2020}.
 
-\begin{itemize}
-    \item \textbf{OpenMC and Paramak:} This project uses \textbf{OpenMC}, a state-of-the-art,
-    open-source MC code that has been validated against other established codes (like MCNP) and
-    shown to accurately reproduce TBR and neutron flux calculations for fusion systems
-    \cite{romano_openmc_2015, bae_arc_2022}. It is increasingly used in fusion research for its robust
-    capabilities \cite{fradera_pre-conceptual_2021, king_high_2022}. To manage the complex reactor
-    geometry, we use \textbf{Paramak}, a Python-based CAD framework that automates the construction
-    of parametric tokamak models compatible with OpenMC \cite{shimwell_paramak_2021}.
+A review of the literature reveals that decades of research have narrowed the focus to a small
+selection of ``safe'' materials (e.g., Li-Pb, \ce{Li4SiO4}, \ce{Li2TiO3}) chosen not only for
+breeding but for their structural, chemical, and cost properties \cite{shatalov_breeder_1991,
+federici_overview_2019}. This necessary pragmatism has left many other material combinations,
+particularly those in complex molten salt systems, comparatively unexplored
+\cite{hernandez_first_2018}.
 
-    \item \textbf{The Research Gap and Project Motivation:} A review of the literature reveals that
-    decades of research have narrowed the focus to a small selection of ``safe'' materials (e.g.,
-    Li-Pb, \ce{Li4SiO4}, \ce{Li2TiO3}) chosen not only for breeding but for their structural,
-    chemical, and cost properties \cite{shatalov_breeder_1991, federici_overview_2019}. This
-    necessary pragmatism has left many other material combinations, particularly those in complex
-    molten salt systems, comparatively unexplored.
+However, this material-focused pragmatism is not the only factor limiting the current design space.
+A significant methodological gap exists. Past neutronic studies have typically been forced to choose
+between breadth and depth. On one hand, broad surveys like \cite{hernandez_first_2018} provide an
+excellent ``first principles'' review of a wide range of breeder and multiplier materials. But to
+compare so many options, these studies must rely on simplified, often one-dimensional, models, which
+cannot capture the complex three-dimensional neutron transport effects within a realistic tokamak
+geometry.
 
-    While systematic neutronic studies have been performed \cite{hernandez_first_2018,
-    segantin_neutronic_2020, boullon_molten_2021}, they often use simplified 1D models or focus on a
-    limited set of parameters. Recent work using OpenMC and Paramak \cite{goel_optimization_2023}
-    has demonstrated the power of this new toolchain, but provides an opportunity for expansion.
+On the other hand, studies focused on specific reactor concepts, such as the molten salt analysis
+for DEMO by \cite{boullon_molten_2021} or the liquid breeder comparison for ARC by
+\cite{segantin_neutronic_2020}, provide vital, high-fidelity 3D analysis. However, their conclusions
+are inherently tied to the \textit{fixed geometry} of that specific reactor design. These studies
+typically compare a handful of materials within a single ``dedicated model,'' fixing crucial
+parameters like blanket thickness and structural fractions. Consequently, they can answer ``What is
+the best material for \textit{this} design?'' but not ``What is the best \textit{combination} of
+material and geometry?'' For example, such studies often present TBR as a function of \ce{^{6}Li}
+enrichment, but do not explore how varying the blanket thickness or material composition ratios
+would fundamentally change those results.
 
-    This project fills this gap. By leveraging the automated workflow of OpenMC and Paramak, we will
-    conduct a broad, systematic investigation of TBR performance. This work builds upon previous
-    studies by exploring a wider range of breeder materials (including less-common salts) and,
-    crucially, by systematically varying key parameters such as \textbf{\ce{^{6}Li} enrichment},
-    \textbf{blanket thickness}, and \textbf{material composition ratios} in a realistic 3D geometry.
-    This systematic parameter sweep will provide a comprehensive dataset to identify optimal design
-    points that previous, more narrowly-focused studies may have overlooked.
-\end{itemize}
+This limited scope was, until recently, a computational necessity. Manually creating and simulating
+thousands of unique, complex 3D CAD models for a full parametric sweep was computationally
+intractable. Recent advances in scriptable, parametric modelling workflows have fundamentally
+lowered this barrier, making it feasible to automatically generate and distribute simulations for
+vast libraries of reactor designs. Work by \cite{goel_optimization_2023} has demonstrated the power
+of this new toolchain by modelling \textit{several} distinct geometries. While this provides an
+excellent proof-of-concept, but as an unpublished paper this foundational work represents an initial
+step and leaves a significant opportunity for a more comprehensive and systematic exploration,
+particularly regarding material composition.
+
+This project aims to fill this gap. By leveraging an integrated modelling workflow, we will conduct
+a broad, systematic investigation of TBR performance. This work builds upon previous studies by
+moving beyond the 1D-vs-3D or material-vs-geometry trade-off. We will explore the \textit{coupled
+design space} by systematically and simultaneously varying key parameters that are often fixed:
+\ce{^{6}Li} enrichment, blanket thickness, and material composition ratios in a realistic 3D
+geometry. This systematic parameter sweep will provide a comprehensive dataset to identify optimal
+\textit{combinations} of parameters, identifying design points that previous, more narrowly-focused
+studies may have overlooked.
+
 
 \noindent\rule{\linewidth}{0.4pt}
+
+\section{Methodology}
+
+\subsection{Modelling Neutron Transport: From Boltzmann to Monte Carlo}
+
+The physics of neutron interactions described in Section~\ref{sec:research_gap}---including
+scattering, absorption, and multiplication---must be accurately modelled to determine the neutronic
+performance of a breeder blanket. The behaviour of the entire neutron population (or \textbf{neutron
+flux}) within the reactor geometry is formally governed by the \textbf{Boltzmann Transport Equation
+(BTE)}.
+
+The BTE is fundamentally a particle balance equation. In conceptual terms, it states that the rate
+of change of neutrons in a specific volume of space, travelling in a specific direction with a
+specific energy, is equal to the sum of all neutron gains and losses. Gains come from neutrons
+scattering \textit{into} that state from other states and from external sources (like the D-T
+plasma). Losses come from neutrons scattering \textit{out} of that state, being absorbed (either
+parasitically or in a breeding reaction), or simply leaking out of the volume.
+
+While comprehensive, the BTE is an complex integro-differential equation that is impossible to solve
+analytically for a three-dimensional, heterogeneous geometry like a fusion reactor. Therefore, a
+numerical approach is required. This project employs the \textbf{Monte Carlo (MC) method}, a
+stochastic technique that has become a cornerstone of neutron transport modelling since its
+development for neutronic simulations \cite{summerscales_hitting_2023}.
+
+Instead of solving the BTE for the entire population at once, the MC method simulates the individual
+life histories of millions, or billions, of discrete particles \cite{kalos_monte_2008}. In this
+work, each ``particle'' is a neutron. A simulation proceeds as follows:
+\begin{enumerate}
+    \item A source neutron is ``born'' at the plasma, with an energy of 14.1~MeV and a random
+    direction.
+    \item The code uses the material cross-section data \cite{brown_endfb-viii0_2018} as a set of
+    probability distributions to determine how far the neutron travels before its next interaction.
+    \item At the interaction site, the code again uses the probabilistic data to decide
+    \textit{what} happens: it may scatter (elastically or inelastically), be absorbed (e.g., by
+    \ce{^{6}Li}), or cause a multiplication event (e.g., an \ce{(n,2n)} reaction in Beryllium or
+    Lead).
+    \item The neutron's energy and direction are updated, and if it still exists (i.e., was not
+    absorbed), the process repeats. If it was a multiplication event, a new, secondary neutron is
+    added to the simulation to be tracked.
+    \item This "life history" continues until the neutron (and all its children) are
+    "killed"---either by being absorbed or by escaping the model geometry.
+\end{enumerate}
+
+By simulating a sufficiently large number of these individual histories, the averaged behaviour of
+all particles converges to a statistically robust solution of the BTE. This statistical approach
+allows for the estimation of key neutronic parameters, such as the spatial distribution of the
+neutron flux and, most critically for this project, the \textbf{Tritium Breeding Ratio (TBR)}.
+
+\subsection{Computational Workflow and Toolchain}
+
+As established in the \nameref{sec:lit_review} (Section~\ref{sec:lit_review}), modern neutronics
+research relies on a toolchain of simulation and geometry codes. This project leverages this
+approach by using two key open-source tools: \textbf{\texttt{OpenMC}} and \textbf{Paramak}.
+
+\begin{itemize}
+    \item \textbf{\texttt{OpenMC}:} All simulations in this project are performed using
+    \textbf{\texttt{OpenMC}}, a state-of-the-art, open-source Monte Carlo transport code
+    \cite{romano_openmc_2015}. \texttt{OpenMC} is widely used in the fusion research community and
+    has been extensively validated against other codes for complex fusion neutronics applications,
+    demonstrating high accuracy in calculating parameters like TBR and volumetric heating
+    \cite{bae_arc_2022}.
+
+    \item \textbf{Paramak:} To manage the complex reactor geometry, this project also uses
+    \textbf{Paramak}. It is a Python-based CAD framework that automates the construction of
+    parametric tokamak models compatible with \texttt{OpenMC} \cite{shimwell_paramak_2021}, and is a
+    key contributer to this project in providing a fast paramaterised easy to access API to generate
+    sweep of geometry features and a variety of fusion reactor designs.
+\end{itemize}
+
+\subsection{Simulation Strategy and Parametric Study}
+
+To systematically explore the vast design space, this project implements a custom, automated
+simulation pipeline. This pipeline leverages the modular, scriptable nature of \texttt{Paramak} and
+\texttt{OpenMC}, enabling key geometry and material parameters to be varied programmatically. By
+structuring the simulation inputs as single functional arguments, the pipeline is explicitly
+designed for iterative loops, allowing for large-scale parametric sweeps.
+
+The core workflow for each individual simulation follows a precise sequence:
+\begin{enumerate}
+    \item \textbf{Geometry Generation:} \texttt{Paramak} generates a 3D reactor model (which uses a
+    \texttt{CadQuery} backend \cite{shimwell_paramak_2021}) based on a given set of input parameters
+    (e.g., blanket thickness, component radii).
+    \item \textbf{Geometry Conversion:} This CAD model is converted into a DAGMC (Direct Accelerated
+    Geometry Monte Carlo) unstructured mesh geometry, a format optimized for particle transport
+    codes.
+    \item \textbf{Model Setup:} The DAGMC geometry is imported into \texttt{OpenMC}, where it is
+    populated with the specified material definitions and assigned the D-T fusion neutron source
+    distribution (14.1 MeV).
+\end{enumerate}
+
+The overall research strategy is executed in two main phases. First, the pipeline's validity is
+established by modelling a basic, reference tokamak geometry. This initial step serves to benchmark
+the workflow, confirm physically sensible results, and establish initial neutronic trends.
+
+Following this validation, a more comprehensive, multi-parameter study is performed. This second
+phase executes coupled simulations to explore how changes in one parameter (e.g., \ce{^{6}Li}
+enrichment) affect the optimal value of another (e.g., blanket thickness). The pipeline's
+architecture is designed for distributability, allowing these computationally intensive simulations
+to be run in parallel. This systematic sweep will be applied to three key reactor design archetypes,
+enabling an ``agnostic" rating of certain features and the identification of robust design principles
+that hold true across different blanket concepts.
+
+\section{Results}
+\begin{table}[htbp]
+    \centering
+    \caption{A summary of solid breeder materials, their properties, and calculated
+    TBR. (Note: TBR values are placeholders to be populated.)}
+    \label{tab:solid_breeders}
+    \begin{tabular}{l D{.}{.}{2} D{.}{.}{2} c c}
+        \toprule
+        \textbf{Material} & \multicolumn{1}{c}{\textbf{Li (molar \%)}} & \multicolumn{1}{c}{\textbf{$\rho$ (g/cm$^3$)}} & \textbf{TBR} & \textbf{Reference} \\
+        \midrule
+        \ce{Li2O} & 66.66 & 2.10 & x & [34] \\
+        \ce{Li4SiO4} & 44.44 & 2.40 & x & [25] \\
+        \ce{Li2TiO3} & 33.33 & 3.43 & x & [25] \\
+        \midrule % --- This was the dashed line in your image ---
+        \ce{Li8PbO6} & 53.33 & 4.28 & x & [25] \\
+        \ce{Li8SiO6} & 53.33 & 2.20 & x & [25] \\
+        \ce{Li8CoO6} & 53.33 & 2.47 & x & [25] \\
+        \ce{Li8GeO6} & 53.33 & 2.64 & x & [25] \\
+        \ce{Li8ZrO6} & 53.33 & 2.98 & x & [25] \\
+        \ce{Li8SnO6} & 53.33 & 3.41 & x & [25] \\
+        \ce{Li8CeO6} & 53.33 & 3.25 & x & [25] \\
+        \ce{Li6MnO4} & 54.55 & 2.50 & x & [25] \\
+        \ce{Li6CoO4} & 54.55 & 2.77 & x & [25] \\
+        \ce{Li6ZnO4} & 54.55 & 2.86 & x & [25] \\
+        \ce{Li6Zr2O7} & 40.00 & 3.56 & x & [25] \\
+        \ce{Li5AlO4} & 50.00 & 2.25 & x & [25] \\
+        \ce{Li5FeO4} & 50.00 & 2.64 & x & [25] \\
+        \ce{Li4TiO4} & 44.44 & 2.57 & x & [25] \\
+        \ce{Li4GeO4} & 44.44 & 3.16 & x & [25] \\
+        \ce{Li2SiO3} & 33.3 & 2.53 & x & [34] \\
+        \ce{Li2MnO2} & 40.00 & 3.90 & x & [25] \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \caption{A summary of liquid breeder materials, their properties, and calculated
+    TBR. (Note: TBR values are placeholders to be populated.)}
+    \label{tab:liquid_breeders}
+    \begin{tabular}{l l D{.}{.}{2} D{.}{.}{2} c c}
+        \toprule
+        \textbf{Material} & \textbf{Ratio (molar \%)} & \multicolumn{1}{c}{\textbf{Li (molar \%)}} & \multicolumn{1}{c}{\textbf{$\rho$ (g/cm$^3$)}} & \textbf{TBR} & \textbf{Reference} \\
+        \midrule
+        Li & - & 100 & 0.47 & x & [28] \\
+        Li-Pb & 17:83 & 17.00 & 11.00 & x & [9] \\
+        \ce{LiF-BeF2} & 2:1 & 28.57 & 2.04 & x & [29] \\
+        \ce{LiF-BeF2}* & 1:1 & 20.00 & 2.06 & x & [29] \\
+        \midrule % --- This was the dashed line in your image ---
+        LiF & - & 50.00 & 2.64 & x & [25] \\
+        \ce{Li3N} & - & 75.00 & 1.30 & x & [25] \\
+        \ce{LiF-PbF2} & 2:3 & 15.38 & 3.55 & x & [29] \\
+        \ce{LiF-BeF2-NaF} & 1:1:1 & 14.29 & 2.15 & x & [29] \\
+        \ce{LiF-NaF-KF} & 46.5:11.5:42 & 20.17 & 2.02 & x & [28] \\
+        \ce{LiF-LiBr-NaBr} & 20:73:7 & 46.50 & 3.16 & x & [28] \\
+        \ce{LiF-LiBr-NaF} & 14:79:7 & 45.69 & 3.20 & x & [28] \\
+        \ce{LiF-LiI2} & 83.5:16.5 & 50.00 & 3.68 & x & [28] \\
+        \ce{LiF-NaF-ZrF4} & 55:22:23 & 20.45 & 2.72 & x & [28] \\
+        \ce{LiCl-BeCl2} & 1:1 & 20.00 & - & x & [29] \\
+        \ce{LiCl-PbCl2} & 1:2 & 12.50 & 4.50 & x & [29] \\
+        \ce{LiCl-KCl} & 7:3 & 35.00 & 1.60 & x & [29] \\
+        \ce{LiCl-KCl}* & 52:48 & 26.00 & 1.60 & x & [29] \\
+        \ce{LiCl-NaCl} & 72:28 & 36.00 & 1.60 & x & [29] \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 
 
 % revtex class:
@@ -539,6 +737,11 @@ and multiplication cross-sections—is ideally suited to the statistical samplin
 
 % base article class:
 \printbibliography  % for biblatex.
+
+
+% --- END OF SECTION ---
+
+
 
 \end{document}
 %

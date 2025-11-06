@@ -2452,15 +2452,24 @@
     <bcf:citekey order="48" intorder="2">kuridan_neutron_2023</bcf:citekey>
     <bcf:citekey order="49" intorder="1">romano_openmc_2015</bcf:citekey>
     <bcf:citekey order="49" intorder="2">bae_arc_2022</bcf:citekey>
-    <bcf:citekey order="50" intorder="1">fradera_pre-conceptual_2021</bcf:citekey>
-    <bcf:citekey order="50" intorder="2">king_high_2022</bcf:citekey>
-    <bcf:citekey order="51" intorder="1">shimwell_paramak_2021</bcf:citekey>
+    <bcf:citekey order="49" intorder="3">fradera_pre-conceptual_2021</bcf:citekey>
+    <bcf:citekey order="49" intorder="4">king_high_2022</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">shimwell_paramak_2021</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">segantin_neutronic_2020</bcf:citekey>
     <bcf:citekey order="52" intorder="1">shatalov_breeder_1991</bcf:citekey>
     <bcf:citekey order="52" intorder="2">federici_overview_2019</bcf:citekey>
     <bcf:citekey order="53" intorder="1">hernandez_first_2018</bcf:citekey>
-    <bcf:citekey order="53" intorder="2">segantin_neutronic_2020</bcf:citekey>
-    <bcf:citekey order="53" intorder="3">boullon_molten_2021</bcf:citekey>
-    <bcf:citekey order="54" intorder="1">goel_optimization_2023</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">hernandez_first_2018</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">boullon_molten_2021</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">segantin_neutronic_2020</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">goel_optimization_2023</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">summerscales_hitting_2023</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">kalos_monte_2008</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">brown_endfb-viii0_2018</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">romano_openmc_2015</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">bae_arc_2022</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">shimwell_paramak_2021</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">shimwell_paramak_2021</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
