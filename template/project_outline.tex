@@ -1,0 +1,216 @@
+% DOC SETUP
+
+% revtex class:
+% \documentclass[%
+%  onecolumn,
+%  nofootinbib,
+%  amsmath,amssymb,
+%  aps,
+%  12pt,
+%  nolongbibliography,
+% ]{revtex4-2}
+
+% base article class:
+\documentclass[12pt]{article}
+% revtex loaded these for you, so now we add them explicitly
+\usepackage{amsmath,amssymb}
+
+% base article class:
+% % Add the biblatex package
+\usepackage[
+  backend=biber,
+  style=vancouver,  % Use the Vancouver style
+  natbib=true,
+  maxbibnames=6,    % Truncate if > 6 authors
+  minbibnames=6     % <-- THE FIX: When truncating, print 6
+]{biblatex}
+% % Tell biblatex where to find your references
+\addbibresource{thesis.bib} % <-- Make sure to include the .bib extension
+\renewcommand*{\bibfont}{\small\linespread{1.0}\selectfont}
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{hyperref}% add hypertext capabilities
+\usepackage[title]{appendix}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{titlesec}
+% --- Custom Title Formatting and Spacing ---
+
+% 1. Set numbering depth to include \paragraph (level 4)
+\setcounter{secnumdepth}{4}
+
+% 2. Define \section (Large, BOLD, UPPERCASE, Ragged-Right)
+% We MUST use the un-starred version to use \MakeUppercase
+\titleformat{\section}
+  {\normalfont\large\bfseries\raggedright} % Format: Large, bold, no right-justification
+  {\thesection.}                          % Label
+  {1em}                                   % Space between label and title
+  {\MakeUppercase}                        % Command to apply to the title text
+\titlespacing*{\section}
+  {0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
+% 3. Define \subsection (Normal size, BOLD)
+% This is now \normalsize and \bfseries (bold) as you requested
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries} % <-- CHANGED: normalsize, bold
+  {\thesubsection.}
+  {1em}
+  {}
+\titlespacing*{\subsection}
+  {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% 4. Define \subsubsection (Normal size, bold-italic)
+% This is now \bfseries\itshape (bold-italic) to distinguish it.
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries\itshape} % <-- CHANGED TO BOLD-ITALIC
+  {\thesubsubsection.}
+  {1em}
+  {}
+\titlespacing*{\subsubsection}
+  {0pt}{2.5ex plus 0.5ex minus .2ex}{1.2ex plus .2ex}
+
+% 5. Define \paragraph (Normal size, italic)
+% This is now \itshape (italic) as requested.
+\titleformat{\paragraph}
+  {\normalfont\normalsize\itshape} % <-- CHANGED TO ITALIC
+  {\theparagraph.}
+  {1em}
+  {}
+\titlespacing*{\paragraph}
+  {0pt}{1.5ex plus 0.2ex}{1ex}
+% --- End of Custom Title Formatting ---
+\usepackage{mhchem}
+\usepackage{booktabs} % <-- Add this to your preamble if not already there
+
+
+% revtex class:
+% \usepackage{etoolbox} % Make sure this is in your preamble
+% % Add commands before the environment starts
+% \BeforeBeginEnvironment{thebibliography}{%
+%%   \begingroup                 % Start a group to keep changes local
+%   \linespread{1.0}\selectfont % Set line spacing to single
+%   \small                      % Set font size to \small
+% }
+
+% % Add commands after the environment ends
+% \AfterEndEnvironment{thebibliography}{%
+%   \endgroup % End the local changes
+% }
+
+
+
+
+%\usepackage[showframe,%Uncomment any one of the following lines to test
+%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
+%%text={7in,10in},centering,
+%%margin=1.5in,
+%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
+%%height=10in,a5paper,hmargin={3cm,0.8in},
+%]{geometry}
+
+
+%%%  Some modifications to reduce the space used by RevTex for sections, and use traditional numbering
+% % Usual (decimal) numbering
+% \renewcommand{\thesection}{\arabic{section}}
+% \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+% \renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+
+% % Fix references
+% \makeatletter
+% \renewcommand{\p@subsection}{}
+% \renewcommand{\p@subsubsection}{}
+% \makeatother
+
+%% Use this if you want times new roman which is slightly more compact.
+%\usepackage{times}
+\setlength{\parindent}{10pt}
+\linespread{1.2}
+
+
+% \titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
+% \titlespacing\subsection{0pt}{5pt plus 4pt minus 2pt}{5pt plus 2pt minus 2pt}
+% \titlespacing\subsubsection{0pt}{4pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
+
+% \titleformat*{\section}{\raggedright\bf\MakeUppercase}
+% \titleformat*{\subsection}{\itshape}
+
+
+%% READ BEFORE USE IF HAVING CITATION TROUBLES The natlib package (used for citaitons here) uses
+% \citep{} to change the citations to have square brackets over the author and year. Just using
+% \cite{} will only bracket the year. For more harvard citation options visit this url:
+% https://library-guides.imperial.ac.uk/c.php?g=719784&p=5224027
+
+
+
+
+% DOC BEGIN
+
+\begin{document}
+
+\section{Introduction}
+
+\section{Theory}
+\subsection{Fundamentals of Nuclear Fusion}
+\subsection{Neutron Transport and Interactions}
+\subsection{Tritium Breeding and Neutron Multiplication}
+
+\section{Literature Review}
+\subsection{The D-T Reaction and the Tritium Fuel Imperative}
+\subsection{Breeder Blanket: Concept, Function, and Evolution}
+\subsection{The Role of Neutron Multipliers}
+\subsection{Major Breeder Blanket Architectures (Bullet Point to Subsection Demo)}
+
+Blanket designs are broadly divided into two categories—liquid and solid—based on the phase of the
+lithium-bearing breeder material.
+
+\subsubsection{Liquid Breeder Concepts}
+
+Liquid breeders (LBs) are attractive because the breeding medium can simultaneously function as the
+coolant, simplifying the design and allowing for continuous tritium extraction outside the reactor
+\cite{tas_liquid_1988}.
+
+\paragraph{Lithium-Lead (\ce{Li-Pb}):}
+    This is one of the most mature concepts, typically using the eutectic alloy \ce{Li17Pb83}
+    \cite{mas_de_les_valls_leadlithium_2008, wu_overview_2011}. The lead acts as both a neutron
+    multiplier and the primary component of the alloy, while the eutectic composition provides a low
+    melting point, which is crucial for circulation \cite{mas_de_les_valls_leadlithium_2008}. This
+    concept is the basis for the \textbf{Dual-Cooled Lithium-Lead (DCLL)} blanket, a primary
+    candidate for the European DEMO reactor \cite{fernandez-berceruelo_progress_2024,
+    malang_self-cooled_1991}. A key challenge for all liquid metal blankets is magnetohydrodynamics
+    (MHD), where the strong magnetic fields of the tokamak induce currents in the flowing metal,
+    creating a drag force that inhibits circulation \cite{malang_self-cooled_1991}.
+
+\paragraph{Molten Salts:}
+    An alternative LB concept uses molten fluorine or chlorine salts. The most prominent example is
+    \textbf{FLiBe \ce{(2LiF . BeF2)}}, which advantageously combines the breeder (LiF) and
+    multiplier (\ce{BeF2}) into a single, low-conductivity fluid \cite{tas_liquid_1988}. This is the
+    reference design for the \textbf{Affordable Robust Compact (ARC)} reactor concept from MIT
+    \cite{sorbom_arc_2015, bocci_arc_2020, segantin_optimization_2020}. A wide variety of other salt
+    compositions, including \ce{LiF.PbF2} and novel chlorine-based salts, are also under
+    investigation to optimise breeding, temperature, and material compatibility
+    \cite{segantin_neutronic_2020, bohm_initial_2023}.
+
+\subsubsection{Solid Breeder Concepts}
+
+
+\section{Methodology}
+
+
+
+\section{Results}
+
+
+% revtex class:
+% \bibliographystyle{plainnat}
+% \bibliography{thesis}
+
+% base article class:
+\printbibliography  % for biblatex.
+
+
+% --- END OF SECTION ---
+
+
+
+\end{document}
+%
+% ****** End of file apssamp.tex ******

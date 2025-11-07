@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.16)  6 NOV 2025 16:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.16)  7 NOV 2025 17:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -579,24 +579,24 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
  (Thesis.aux)
 \openout1 = `Thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
  (C:\Users\vadan\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\english.lbx
@@ -610,8 +610,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Thesis.bbl' found.
  (Thesis.bbl)
-Package biblatex Info: Reference section=0 on input line 103.
-Package biblatex Info: Reference segment=0 on input line 103.
+Package biblatex Info: Reference section=0 on input line 147.
+Package biblatex Info: Reference segment=0 on input line 147.
  (C:\Users\vadan\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count453
@@ -631,7 +631,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\vadan\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 103.
+Package hyperref Info: Link coloring OFF on input line 147.
  (Thesis.out) (Thesis.out)
 \@outlinefile=\write4
 \openout4 = `Thesis.out'.
@@ -672,18 +672,18 @@ Package hyperref Info: Link coloring OFF on input line 103.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Package chemgreek Info: Activating mapping `default' on line 103.
+Package chemgreek Info: Activating mapping `default' on line 147.
 
 
-Underfull \hbox (badness 1852) in paragraph at lines 134--150
+Underfull \hbox (badness 1852) in paragraph at lines 178--194
 []\OT1/cmr/m/n/10.95 The pur-suit of prac-ti-cal nu-clear fu-sion is fo-cused on the
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 151.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 195.
 (C:\Users\vadan\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 151.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 195.
  (C:\Users\vadan\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -691,37 +691,38 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {C:/Users/vadan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Overfull \hbox (1.6108pt too wide) in paragraph at lines 168--174
+Overfull \hbox (1.6108pt too wide) in paragraph at lines 212--218
 []\OT1/cmr/m/n/12 Among the var-i-ous fu-sion re-ac-tions stud-ied, the deuterium-tritium (D-T) re-ac-tion has emerged
  []
 
-<figures/breeding_cs.png, id=89, 462.528pt x 346.896pt>
-File: figures/breeding_cs.png Graphic file (type png)
-<use figures/breeding_cs.png>
-Package pdftex.def Info: figures/breeding_cs.png  used on input line 214.
-(pdftex.def)             Requested size: 338.58632pt x 253.95184pt.
 
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.229 
+l.254 
        [1]
+<figures/breeding_cs.png, id=113, 462.528pt x 346.896pt>
+File: figures/breeding_cs.png Graphic file (type png)
+<use figures/breeding_cs.png>
+Package pdftex.def Info: figures/breeding_cs.png  used on input line 258.
+(pdftex.def)             Requested size: 338.58632pt x 253.95184pt.
+
 
 [2 <./figures/breeding_cs.png>]
-<figures/lithium_cs.png, id=116, 462.528pt x 346.896pt>
+<figures/lithium_cs.png, id=131, 462.528pt x 346.896pt>
 File: figures/lithium_cs.png Graphic file (type png)
 <use figures/lithium_cs.png>
-Package pdftex.def Info: figures/lithium_cs.png  used on input line 290.
+Package pdftex.def Info: figures/lithium_cs.png  used on input line 333.
 (pdftex.def)             Requested size: 338.58632pt x 253.95184pt.
 
 
 [3]
-<figures/multipliers_cs.png, id=141, 462.528pt x 346.896pt>
+<figures/multipliers_cs.png, id=155, 462.528pt x 346.896pt>
 File: figures/multipliers_cs.png Graphic file (type png)
 <use figures/multipliers_cs.png>
-Package pdftex.def Info: figures/multipliers_cs.png  used on input line 329.
+Package pdftex.def Info: figures/multipliers_cs.png  used on input line 372.
 (pdftex.def)             Requested size: 338.58632pt x 253.95184pt.
 
 
@@ -737,7 +738,7 @@ Package pdftex.def Info: figures/multipliers_cs.png  used on input line 329.
 
 [9]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 616.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 656.
 
 
 [10]
@@ -749,42 +750,44 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 [13]
 
 [14]
-Overfull \hbox (41.73859pt too wide) in paragraph at lines 740--740
+
+[15]
+Overfull \hbox (41.73859pt too wide) in paragraph at lines 780--780
 \OT1/cmtt/m/n/10.95 2013 . 02 . 060$[]\OT1/cmr/m/n/10.95 . Avail-able from: []$\OT1/cmtt/m/n/10.95 https : / / linkinghub . elsevier . com / retrieve / pii / S0022311513004662$[]
  []
 
 
 
-[15]
-Overfull \hbox (2.68861pt too wide) in paragraph at lines 740--740
+[16]
+Overfull \hbox (2.68861pt too wide) in paragraph at lines 780--780
 \OT1/cmr/m/n/10.95 Para-mak: au-to-mated para-met-ric ge-om-e-try con-struc-tion for fu-sion re-ac-tor de-signs. F1000Research.
  []
 
 
 
-[16] (Thesis.aux)
+[17] (Thesis.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
  ***********
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 775509F3461B7310FAF1A37458DA930E;3859.
+(rerunfilecheck)             Checksum: 51CEECE202131E11D323694AFCA4D698;4644.
 Package logreq Info: Writing requests to 'Thesis.run.xml'.
 \openout1 = `Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19478 strings out of 468081
- 348481 string characters out of 5425788
- 1220180 words of memory out of 5000000
- 47828 multiletter control sequences out of 15000+600000
- 641737 words of font info for 91 fonts, out of 8000000 for 9000
+ 19501 strings out of 468081
+ 348845 string characters out of 5425788
+ 1216078 words of memory out of 5000000
+ 47839 multiletter control sequences out of 15000+600000
+ 643104 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,18n,86p,2417b,1519s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\vadan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Thesis.pdf (17 pages, 812240 bytes).
+ 64i,18n,74p,2417b,1519s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\vadan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Thesis.pdf (18 pages, 1048835 bytes).
 PDF statistics:
- 549 PDF objects out of 1000 (max. 8388607)
- 96 named destinations out of 1000 (max. 500000)
- 160 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 586 PDF objects out of 1000 (max. 8388607)
+ 105 named destinations out of 1000 (max. 500000)
+ 192 words of extra memory for PDF output out of 10000 (max. 10000000)
 
