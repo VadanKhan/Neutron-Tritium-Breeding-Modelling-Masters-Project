@@ -237,10 +237,34 @@ plants.
 
 \subsection{Fundamentals of Nuclear Fusion}
 
-Nuclear fusion is the process by which two light atomic nuclei combine, or ``fuse,'' to form a single
-heavier nucleus. This process releases a tremendous amount of energy if the mass of the final
-nucleus is less than the combined mass of the reactants, with the ``lost'' mass converted to energy
-according to $E=mc^2$.
+Nuclear fusion is the process by which two light atomic nuclei combine, or ``fuse,'' to form a
+single, heavier nucleus \cite{nuclearphysics}. This reaction is the primary process powering stars,
+and it is a candidate for future terrestrial energy generation.
+
+The release of energy in fusion is a direct consequence of \textbf{nuclear binding energy}. The nucleons
+(protons and neutrons) in a nucleus are held together by the strong nuclear force. The binding
+energy is the energy required to disassemble the nucleus into its separate components. Conversely,
+when a nucleus is formed, this amount of energy is released.
+
+Crucially, the binding energy \textit{per nucleon} is not constant across all elements. Lighter nuclei,
+such as hydrogen isotopes, are relatively loosely bound. Nuclei in the ``medium-mass" range, like
+helium-4 or iron, are much more tightly bound.
+
+Therefore, when two light nuclei fuse to form a heavier, more tightly bound nucleus, the total
+binding energy of the system \textit{increases}. This surplus energy is released during the reaction. This
+gain in binding energy corresponds to a reduction in the total rest mass of the system. This
+difference, known as the \textbf{mass defect} ($\Delta m$), is not truly "lost" but is converted into
+energy ($E$) according to Einstein's principle of mass-energy equivalence \cite{nuclearphysics}.
+
+This relationship is famously expressed by the equation $E = mc^2$, or more specifically for a
+reaction, as a release of energy $Q$ (the ``Q-value"):
+\begin{equation}
+    Q = \left( \sum m_{\text{reactants}} - \sum m_{\text{products}} \right) c^2 = (\Delta m)c^2
+    \label{eq:q_value}
+\end{equation}
+Because the speed of light squared ($c^2$) is an enormous constant, even a minuscule decrease in
+mass releases a tremendous amount of energy, typically in the form of kinetic energy of the products
+(e.g., neutrons, alpha particles) and/or high-energy photons (gamma rays).
 
 For terrestrial power generation, the most promising reaction is that between the two heavy isotopes
 of hydrogen, deuterium (d) and tritium (t) \cite{paris_lost_2023, heckrotte_factors_1971}:
@@ -248,9 +272,9 @@ $$
 \ce{d + t -> n + \alpha} + 17.6 MeV
 $$
 This D-T reaction is the primary focus of mainstream fusion research, as it has a fusion
-cross-section significantly higher than other candidate reactions (like D-D or
-D-${}^{3}$He) at the ``low'' plasma temperatures achievable with current magnetic confinement
-technology (Fig.~\ref{fig:fusion_cross_sections}) \cite{heckrotte_factors_1971}.
+cross-section significantly higher than other candidate reactions (such as D-D or \ce{D-${}^{3}$He})
+(Fig.~\ref{fig:fusion_cross_sections}) \cite{heckrotte_factors_1971}. This is mainly due to the
+stability of the final products linking to a higher Q value output \cite{nuclearphysics}.
 
 \begin{figure}[htbp]
     \centering
@@ -263,13 +287,17 @@ technology (Fig.~\ref{fig:fusion_cross_sections}) \cite{heckrotte_factors_1971}.
     \label{fig:fusion_cross_sections}
 \end{figure}
 
-To initiate fusion, the positively charged nuclei must be given enough kinetic energy to overcome
-their mutual electrostatic repulsion, known as the Coulomb barrier. In Magnetic Confinement Fusion
-(MCF) devices, such as the \textbf{tokamak} \cite{wesson}, this is achieved by heating the
-D-T gas into a plasma state at temperatures exceeding 100 million Kelvin. The hot plasma is then
-confined by powerful magnetic fields, preventing it from touching the reactor walls. The 17.6 MeV of
-energy released is partitioned between the two products: the alpha particle ($\alpha$, a helium
-nucleus) carries 3.5 MeV, while the neutron (n) carries 14.1 MeV \cite{heckrotte_factors_1971}.
+Another important reason for D-T is the is the comparatively lower required input energy /
+temperature. To initiate fusion, the positively charged nuclei must be given enough kinetic energy
+to overcome their mutual electrostatic repulsion, known as the Coulomb barrier. This barrier will
+increase if the reactants have a more positive charge and so more electrostatic repulsion. This can
+exclude cycles like \ce{D}-\ce{^3He} as the required temperatures/energies are already high enough
+(hotter than the core of the sun). In Magnetic Confinement Fusion (MCF) devices, such as the
+\textbf{tokamak} \cite{wesson}, this is achieved by heating the D-T gas into a plasma state at
+temperatures exceeding 100 million Kelvin. The hot plasma is then confined by powerful magnetic
+fields, preventing it from touching the reactor walls. The 17.6 MeV of energy released is
+partitioned between the two products: the alpha particle ($\alpha$, a helium nucleus) carries 3.5
+MeV, while the neutron (n) carries 14.1 MeV \cite{heckrotte_factors_1971}.
 
 This energy split is fundamental to the reactor's operation. The charged alpha particle remains
 trapped by the magnetic fields, depositing its energy into the plasma and helping to sustain its
@@ -623,7 +651,7 @@ While comprehensive, the BTE is an complex integro-differential equation that is
 analytically for a three-dimensional, heterogeneous geometry like a fusion reactor. Therefore, a
 numerical approach is required. This project employs the \textbf{Monte Carlo (MC) method}, a
 stochastic technique that has become a cornerstone of neutron transport modelling since its
-development for neutronic simulations \cite{summerscales_hitting_2023}.
+development for neutronic simulations \cite{kalos_monte_2008}.
 
 Instead of solving the BTE for the entire population at once, the MC method simulates the individual
 life histories of millions, or billions, of discrete particles \cite{kalos_monte_2008}. In this

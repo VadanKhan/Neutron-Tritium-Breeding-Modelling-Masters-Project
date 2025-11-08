@@ -1,0 +1,38 @@
+\contentsline {section}{\numberline {1}Placeholder: Snippets from Report}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Theory}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Major Breeder Blanket Architectures}{2}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Liquid Breeder Concepts}{2}{subsubsection.1.2.1}%
+\contentsline {paragraph}{\numberline {1.2.1.1}Lithium-Lead (\ce {Li-Pb}):}{2}{paragraph.1.2.1.1}%
+\contentsline {paragraph}{\numberline {1.2.1.2}Molten Salts:}{2}{paragraph.1.2.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.2}Solid Breeder Concepts}{2}{subsubsection.1.2.2}%
+\contentsline {section}{\numberline {2}Introduction}{5}{section.2}%
+\contentsline {section}{\numberline {3}Theory}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Fundamentals of Nuclear Fusion}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Neutron Transport and Interactions}{5}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Scattering Interactions}{5}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Absorption Interactions}{5}{subsubsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.3}Tritium Breeding and Neutron Multiplication}{5}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Literature Review}{5}{section.4}%
+\contentsline {subsection}{\numberline {4.1}The D-T Reaction and the Tritium Fuel Imperative}{5}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Breeder Blanket: Concept, Function, and Evolution}{5}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}The Role of Neutron Multipliers}{5}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Beryllium Neutron Multipliers}{5}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Lead Neutron Multipliers}{5}{subsubsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.4}Major Breeder Blanket Architectures}{5}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Solid Breeder Concepts}{5}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Liquid Breeder Concepts}{5}{subsubsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.5}Neutronics Modelling and the Research Gap}{5}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Methodology}{5}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Modelling Neutron Transport: From Boltzmann to Monte Carlo}{5}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Computational Workflow and Toolchain}{5}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Simulation Strategy: Model Choices and Parameter Sweep Strategies}{5}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Results}{5}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Material Composition / Enrichment Results}{5}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Geometry Sweep Results}{5}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Design Agnosticity (Is this portable to all tokamaks?)}{5}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Discussion}{5}{section.7}%
+\contentsline {subsection}{\numberline {7.1}TBR Optimisation Strategies}{5}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Consequences to Other Critical Criteria}{5}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Model Limitations}{5}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Next Steps}{5}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Conclusion}{5}{section.8}%

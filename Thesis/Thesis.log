@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.16)  7 NOV 2025 17:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.16)  8 NOV 2025 17:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -701,32 +701,32 @@ Overfull \hbox (1.6108pt too wide) in paragraph at lines 212--218
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.254 
+l.252 
        [1]
 <figures/breeding_cs.png, id=113, 462.528pt x 346.896pt>
 File: figures/breeding_cs.png Graphic file (type png)
 <use figures/breeding_cs.png>
-Package pdftex.def Info: figures/breeding_cs.png  used on input line 258.
+Package pdftex.def Info: figures/breeding_cs.png  used on input line 282.
 (pdftex.def)             Requested size: 338.58632pt x 253.95184pt.
 
 
 [2 <./figures/breeding_cs.png>]
-<figures/lithium_cs.png, id=131, 462.528pt x 346.896pt>
-File: figures/lithium_cs.png Graphic file (type png)
-<use figures/lithium_cs.png>
-Package pdftex.def Info: figures/lithium_cs.png  used on input line 333.
-(pdftex.def)             Requested size: 338.58632pt x 253.95184pt.
-
 
 [3]
-<figures/multipliers_cs.png, id=155, 462.528pt x 346.896pt>
-File: figures/multipliers_cs.png Graphic file (type png)
-<use figures/multipliers_cs.png>
-Package pdftex.def Info: figures/multipliers_cs.png  used on input line 372.
+<figures/lithium_cs.png, id=145, 462.528pt x 346.896pt>
+File: figures/lithium_cs.png Graphic file (type png)
+<use figures/lithium_cs.png>
+Package pdftex.def Info: figures/lithium_cs.png  used on input line 361.
 (pdftex.def)             Requested size: 338.58632pt x 253.95184pt.
 
 
 [4 <./figures/lithium_cs.png>]
+<figures/multipliers_cs.png, id=168, 462.528pt x 346.896pt>
+File: figures/multipliers_cs.png Graphic file (type png)
+<use figures/multipliers_cs.png>
+Package pdftex.def Info: figures/multipliers_cs.png  used on input line 400.
+(pdftex.def)             Requested size: 338.58632pt x 253.95184pt.
+
 
 [5 <./figures/multipliers_cs.png>]
 
@@ -737,11 +737,11 @@ Package pdftex.def Info: figures/multipliers_cs.png  used on input line 372.
 [8]
 
 [9]
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 656.
-
 
 [10]
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 684.
+
 
 [11]
 
@@ -752,20 +752,22 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 [14]
 
 [15]
-Overfull \hbox (41.73859pt too wide) in paragraph at lines 780--780
+Overfull \hbox (41.73859pt too wide) in paragraph at lines 808--808
 \OT1/cmtt/m/n/10.95 2013 . 02 . 060$[]\OT1/cmr/m/n/10.95 . Avail-able from: []$\OT1/cmtt/m/n/10.95 https : / / linkinghub . elsevier . com / retrieve / pii / S0022311513004662$[]
  []
 
 
 
 [16]
-Overfull \hbox (2.68861pt too wide) in paragraph at lines 780--780
+
+[17]
+Overfull \hbox (2.68861pt too wide) in paragraph at lines 808--808
 \OT1/cmr/m/n/10.95 Para-mak: au-to-mated para-met-ric ge-om-e-try con-struc-tion for fu-sion re-ac-tor de-signs. F1000Research.
  []
 
 
 
-[17] (Thesis.aux)
+[18] (Thesis.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
@@ -777,17 +779,17 @@ Package logreq Info: Writing requests to 'Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19501 strings out of 468081
- 348845 string characters out of 5425788
- 1216078 words of memory out of 5000000
+ 19503 strings out of 468081
+ 348813 string characters out of 5425788
+ 1217110 words of memory out of 5000000
  47839 multiletter control sequences out of 15000+600000
  643104 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,18n,74p,2417b,1519s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\vadan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Thesis.pdf (18 pages, 1048835 bytes).
+ 64i,18n,74p,2417b,1522s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\vadan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Thesis.pdf (19 pages, 1060708 bytes).
 PDF statistics:
- 586 PDF objects out of 1000 (max. 8388607)
- 105 named destinations out of 1000 (max. 500000)
+ 591 PDF objects out of 1000 (max. 8388607)
+ 107 named destinations out of 1000 (max. 500000)
  192 words of extra memory for PDF output out of 10000 (max. 10000000)
 

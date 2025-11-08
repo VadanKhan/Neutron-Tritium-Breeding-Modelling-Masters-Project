@@ -2376,22 +2376,28 @@
   <!-- CITATION DATA -->
   <!-- SECTION 0 -->
   <bcf:bibdata section="0">
-    <bcf:datasource type="file" datatype="bibtex" glob="false">thesis.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">project_outline.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">tas_liquid_1988</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">mas_de_les_valls_leadlithium_2008</bcf:citekey>
-    <bcf:citekey order="2" intorder="2">wu_overview_2011</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">mas_de_les_valls_leadlithium_2008</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">fernandez-berceruelo_progress_2024</bcf:citekey>
-    <bcf:citekey order="4" intorder="2">malang_self-cooled_1991</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">malang_self-cooled_1991</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">paris_lost_2023</bcf:citekey>
+    <bcf:citekey order="1" intorder="2">heckrotte_factors_1971</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">heckrotte_factors_1971</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">nuclearphysics</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">wesson</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">heckrotte_factors_1971</bcf:citekey>
     <bcf:citekey order="6" intorder="1">tas_liquid_1988</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">sorbom_arc_2015</bcf:citekey>
-    <bcf:citekey order="7" intorder="2">bocci_arc_2020</bcf:citekey>
-    <bcf:citekey order="7" intorder="3">segantin_optimization_2020</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">segantin_neutronic_2020</bcf:citekey>
-    <bcf:citekey order="8" intorder="2">bohm_initial_2023</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">mas_de_les_valls_leadlithium_2008</bcf:citekey>
+    <bcf:citekey order="7" intorder="2">wu_overview_2011</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">mas_de_les_valls_leadlithium_2008</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">fernandez-berceruelo_progress_2024</bcf:citekey>
+    <bcf:citekey order="9" intorder="2">malang_self-cooled_1991</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">malang_self-cooled_1991</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">tas_liquid_1988</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">sorbom_arc_2015</bcf:citekey>
+    <bcf:citekey order="12" intorder="2">bocci_arc_2020</bcf:citekey>
+    <bcf:citekey order="12" intorder="3">segantin_optimization_2020</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">segantin_neutronic_2020</bcf:citekey>
+    <bcf:citekey order="13" intorder="2">bohm_initial_2023</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

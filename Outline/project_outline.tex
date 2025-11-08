@@ -11,7 +11,7 @@
 % ]{revtex4-2}
 
 % base article class:
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 % revtex loaded these for you, so now we add them explicitly
 \usepackage{amsmath,amssymb}
 
@@ -25,7 +25,7 @@
   minbibnames=6     % <-- THE FIX: When truncating, print 6
 ]{biblatex}
 % % Tell biblatex where to find your references
-\addbibresource{thesis.bib} % <-- Make sure to include the .bib extension
+\addbibresource{project_outline.bib} % <-- Make sure to include the .bib extension
 \renewcommand*{\bibfont}{\small\linespread{1.0}\selectfont}
 \usepackage{graphicx}% Include figure files
 \usepackage{dcolumn}% Align table columns on decimal point
@@ -42,7 +42,7 @@
 % 2. Define \section (Large, BOLD, UPPERCASE, Ragged-Right)
 % We MUST use the un-starred version to use \MakeUppercase
 \titleformat{\section}
-  {\normalfont\large\bfseries\raggedright} % Format: Large, bold, no right-justification
+  {\normalfont\normalsize\bfseries\raggedright} % Format: Large, bold, no right-justification
   {\thesection.}                          % Label
   {1em}                                   % Space between label and title
   {\MakeUppercase}                        % Command to apply to the title text
@@ -123,7 +123,7 @@
 %% Use this if you want times new roman which is slightly more compact.
 %\usepackage{times}
 \setlength{\parindent}{10pt}
-\linespread{1.2}
+\linespread{1.}
 
 
 % \titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
@@ -144,24 +144,46 @@
 
 % DOC BEGIN
 
+% \begin{document}
+% Add a simple title for the outline
+\author{Vadan Khan}
+
+
 \begin{document}
 
-\section{Introduction}
+% This command generates the table of contents
+% It will automatically list all your sections, subsections,
+% and subsubsections.
+\tableofcontents
 
-\section{Theory}
-\subsection{Fundamentals of Nuclear Fusion}
-\subsection{Neutron Transport and Interactions}
-\subsection{Tritium Breeding and Neutron Multiplication}
 
-\section{Literature Review}
-\subsection{The D-T Reaction and the Tritium Fuel Imperative}
-\subsection{Breeder Blanket: Concept, Function, and Evolution}
-\subsection{The Role of Neutron Multipliers}
-\subsection{Major Breeder Blanket Architectures (Bullet Point to Subsection Demo)}
+\section{Placeholder: Snippets from Report}
+\subsection{Theory}
+For terrestrial power generation, the most promising reaction is that between the two heavy isotopes
+of hydrogen, deuterium (d) and tritium (t) \cite{paris_lost_2023, heckrotte_factors_1971}:
+$$
+\ce{d + t -> n + \alpha} + 17.6 MeV
+$$
+This D-T reaction is the primary focus of mainstream fusion research, as it has a fusion
+cross-section significantly higher than other candidate reactions (such as D-D or \ce{D-${}^{3}$He})
+(Fig.~\ref{fig:fusion_cross_sections}) \cite{heckrotte_factors_1971}. This is mainly due to the
+stability of the final products linking to a higher Q value output \cite{nuclearphysics}.
 
+Another important reason for D-T is the is the comparatively lower required input energy /
+temperature. To initiate fusion, the positively charged nuclei must be given enough kinetic energy
+to overcome their mutual electrostatic repulsion, known as the Coulomb barrier. This barrier will
+increase if the reactants have a more positive charge and so more electrostatic repulsion. This can
+exclude cycles like \ce{D}-\ce{^3He} as the required temperatures/energies are already high enough
+(hotter than the core of the sun). In Magnetic Confinement Fusion (MCF) devices, such as the
+\textbf{tokamak} \cite{wesson}, this is achieved by heating the D-T gas into a plasma state at
+temperatures exceeding 100 million Kelvin. The hot plasma is then confined by powerful magnetic
+fields, preventing it from touching the reactor walls. The 17.6 MeV of energy released is
+partitioned between the two products: the alpha particle ($\alpha$, a helium nucleus) carries 3.5
+MeV, while the neutron (n) carries 14.1 MeV \cite{heckrotte_factors_1971}.
+
+\subsection{Major Breeder Blanket Architectures}
 Blanket designs are broadly divided into two categories—liquid and solid—based on the phase of the
 lithium-bearing breeder material.
-
 \subsubsection{Liquid Breeder Concepts}
 
 Liquid breeders (LBs) are attractive because the breeding medium can simultaneously function as the
@@ -190,14 +212,59 @@ coolant, simplifying the design and allowing for continuous tritium extraction o
     \cite{segantin_neutronic_2020, bohm_initial_2023}.
 
 \subsubsection{Solid Breeder Concepts}
+\printbibliography
 
+\begin{figure}[htbp]
+    \centering
+    % You can adjust the width as needed for your document layout
+    \includegraphics[width=0.7\textwidth]{figures/breeding_cs.png}
+    \caption{A comparison of fusion reaction reactivities total cross section $\sigma$ as a function
+    of ion temperature (keV) for the D-T, D-D, and \ce{D}-\ce{^3He} fuel cycles. The D-T reaction's
+    cross section peaks at a lower temperature and is significantly larger than the alternatives,
+    making it the most accessible reaction for current and near-term fusion devices.}
+    \label{fig:fusion_cross_sections}
+\end{figure}
+
+
+\clearpage
+
+\section{Introduction}
+
+\section{Theory}
+\subsection{Fundamentals of Nuclear Fusion}
+\subsection{Neutron Transport and Interactions}
+\subsubsection{Scattering Interactions}
+\subsubsection{Absorption Interactions}
+\subsection{Tritium Breeding and Neutron Multiplication}
+
+\section{Literature Review}
+\subsection{The D-T Reaction and the Tritium Fuel Imperative}
+\subsection{Breeder Blanket: Concept, Function, and Evolution}
+\subsection{The Role of Neutron Multipliers}
+\subsubsection{Beryllium Neutron Multipliers}
+\subsubsection{Lead Neutron Multipliers}
+\subsection{Major Breeder Blanket Architectures}
+\subsubsection{Solid Breeder Concepts}
+\subsubsection{Liquid Breeder Concepts}
+\subsection{Neutronics Modelling and the Research Gap}
 
 \section{Methodology}
-
-
+\subsection{Modelling Neutron Transport: From Boltzmann to Monte Carlo}
+\subsection{Computational Workflow and Toolchain}
+\subsection{Simulation Strategy: Model Choices and Parameter Sweep Strategies}
 
 \section{Results}
+\subsection{Material Composition / Enrichment Results}
+\subsection{Geometry Sweep Results}
+\subsection{Design Agnosticity (Is this portable to all tokamaks?)}
 
+\section{Discussion}
+\subsection{TBR Optimisation Strategies}
+\subsection{Consequences to Other Critical Criteria}
+\subsection{Model Limitations}
+\subsection{Next Steps}
+
+\section{Conclusion}
 
 % revtex class:
 % \bibliographystyle{plainnat}

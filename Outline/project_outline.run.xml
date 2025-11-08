@@ -41,7 +41,7 @@
   >
 ]>
 <requests version="1.0">
-  <internal package="biblatex" priority="9" active="0">
+  <internal package="biblatex" priority="9" active="1">
     <generic>latex</generic>
     <provides type="dynamic">
       <file>project_outline.bcf</file>
@@ -82,7 +82,7 @@
       <file>project_outline.bcf</file>
     </requires>
     <requires type="editable">
-      <file>thesis.bib</file>
+      <file>project_outline.bib</file>
     </requires>
   </external>
 </requests>

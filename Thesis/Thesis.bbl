@@ -19,6 +19,35 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
+    \entry{nuclearphysics}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=bc6ded4bf5dc429763dcb2fac676a31f}{%
+           family={Lilley},
+           familyi={L\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {John Wiley}%
+        {Sons}%
+      }
+      \strng{namehash}{bc6ded4bf5dc429763dcb2fac676a31f}
+      \strng{fullhash}{bc6ded4bf5dc429763dcb2fac676a31f}
+      \strng{fullhashraw}{bc6ded4bf5dc429763dcb2fac676a31f}
+      \strng{bibnamehash}{bc6ded4bf5dc429763dcb2fac676a31f}
+      \strng{authorbibnamehash}{bc6ded4bf5dc429763dcb2fac676a31f}
+      \strng{authornamehash}{bc6ded4bf5dc429763dcb2fac676a31f}
+      \strng{authorfullhash}{bc6ded4bf5dc429763dcb2fac676a31f}
+      \strng{authorfullhashraw}{bc6ded4bf5dc429763dcb2fac676a31f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780471922957}
+      \field{series}{Manchester Physics Series}
+      \field{title}{Nuclear Physics: Principles and Applications}
+      \field{year}{2008}
+    \endentry
     \entry{paris_lost_2023}{article}{}{}
       \name{author}{2}{}{%
         {{hash=64b84a882d26db6362b4d45787323cfa}{%
@@ -40,8 +69,8 @@
       \strng{authornamehash}{6a6d072b91a3e7c53ef7dff0b4897a01}
       \strng{authorfullhash}{6a6d072b91a3e7c53ef7dff0b4897a01}
       \strng{authorfullhashraw}{6a6d072b91a3e7c53ef7dff0b4897a01}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Short article on the history of tritium use in fusion and the first proposal for D-T fusion. First planned for nuclear weapons. Useful justification of why we use D-T reaction.}
@@ -96,8 +125,8 @@
       \strng{authornamehash}{3bb4d2dd9fe126a39cf57b135285ddd3}
       \strng{authorfullhash}{3bb4d2dd9fe126a39cf57b135285ddd3}
       \strng{authorfullhashraw}{3bb4d2dd9fe126a39cf57b135285ddd3}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A discussion is given of the relative merits of the D-D, D-T,or D-3He mirror fusion power systems. As a basis for discussion we have used a simple approach for estimating the ratio of Q(D, He) to Q(D, T). When needed, the value of Q(D, T) is considered to be of the order of that calculated by Marx and by Kuo-Petravic, Petravic and Watson. The systems are compared at different assumed plasma temperatures in the range 200 to 1000 {keV} on the basis of several criteria: the investment costs in dollars per kilowatt, the ratio of waste power to power output, and the tritium and neutron production. We have concluded, based on the estimates of the ratio of Q-values, that subject to these criteria the D-T system appears the more favoured system. On the other hand, should a means be found to enhance the Q-values the D-3He system would be preferred on all but the first criteria. We consider the three-component D-T-3He system and its optimization. Finally, the possibility of further enhancing the D-T system by utilization of tritium breeding in the plasma is discussed.}
@@ -151,8 +180,8 @@
       \strng{authornamehash}{ca56977a5fb6ee223b9392c8f9a68e35}
       \strng{authorfullhash}{ca56977a5fb6ee223b9392c8f9a68e35}
       \strng{authorfullhashraw}{ca56977a5fb6ee223b9392c8f9a68e35}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{4th}
@@ -181,8 +210,8 @@
       \strng{authornamehash}{762c3295442c1b2803ab6cad1175cdc8}
       \strng{authorfullhash}{762c3295442c1b2803ab6cad1175cdc8}
       \strng{authorfullhashraw}{762c3295442c1b2803ab6cad1175cdc8}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{annotation}{Book on neutron transport and modelling methods. Looks very comprehensive, likely to be a very reliable source for a good chunk of our theory. Depends on how deep into the transport physics we actually go.}
@@ -572,8 +601,8 @@
       \strng{authornamehash}{d9b404f7ee4a4cc672dd3f05d9d13c8c}
       \strng{authorfullhash}{6eea3c6b6150994abf18eac82bc8d7c2}
       \strng{authorfullhashraw}{6eea3c6b6150994abf18eac82bc8d7c2}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{annotation}{Paper discusses the {ENDF} {VIII}.1 library and includes data and figures for a wide variety of reactions. Outlines the changes to previous iterations of the library. Has more than 475 references that could prove useful. Likely only to be cited in reference to the website, if at all.}
@@ -1483,7 +1512,7 @@
       \verb 10.1088/1741-4326/ab0c32
       \endverb
       \verb{file}
-      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\USTFRDMV\\Wang et al. - 2019 - Current design and R&D progress of the Chinese helium cooled ceramic breeder test blanket system.pdf:application/pdf
+      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\USTFRDMV\\Wang et al. - 2019 - Current design and R\&D progress of the Chinese helium cooled ceramic breeder test blanket system.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://iopscience.iop.org/article/10.1088/1741-4326/ab0c32
@@ -1639,8 +1668,8 @@
       \strng{authornamehash}{74a516c2d55158b0b383f474d07ddea1}
       \strng{authorfullhash}{9175a06c999e6ff649dc7e7a3bcf7545}
       \strng{authorfullhashraw}{9175a06c999e6ff649dc7e7a3bcf7545}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Explores a variety of liquid blanket materials, either being liquid metals (lithium or Pb-Li alloys) and molten salts ({FLIBE}, a combination of {LiF} breeder and {BeF}2 neutron multiplier). It discusses issues such as cooling and tritium recovery in different designs. Pretty good paper on the basics of liquid blankets.}
@@ -1749,8 +1778,8 @@
       \strng{authornamehash}{99a3b69e3dc33810b0301b57e85cdb5d}
       \strng{authorfullhash}{1b7759933ce4f94ac1f2f809d8deab14}
       \strng{authorfullhashraw}{1b7759933ce4f94ac1f2f809d8deab14}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{annotation}{Compact reactor designed to be cheaper and more efficient than larger tokomaks. Designed by {MIT}. This paper lays out the basic design elements. Uses an all liquid molten salt blanket ({FLiBe}). Very detailed, good reference for talking about {US} projects. Also provides an interesting ‘alternative’ to the very standard reactor designs explored elsewhere.}
@@ -1831,8 +1860,8 @@
       \strng{authorfullhash}{99552de5e292713617056617087f0570}
       \strng{authorfullhashraw}{99552de5e292713617056617087f0570}
       \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Beryllium has a low threshold (n,2n) reaction that is very useful in fusion breeder blankets. Unfortunately, it’s ridiculously toxic and not as abundant as we’d like. This paper looks at methods of reducing beryllium content without affecting the neutron production capability of the blanket. It does this by linearly varying the fraction of the multiplier within the blanket. This paper isn’t likely to be important unless we look into functionally graded materials in the second half of the project. It is also authored by Jonathan Shimwell, the creator of the neutronics workshop.}
@@ -1880,8 +1909,8 @@
       \strng{authornamehash}{e53ed1332db1519e50606c3ed1626d8e}
       \strng{authorfullhash}{e53ed1332db1519e50606c3ed1626d8e}
       \strng{authorfullhashraw}{e53ed1332db1519e50606c3ed1626d8e}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Design document for a series of liquid lithium-lead ({LiPb}) blankets for {EAST} and {ITER}. Explores single cooled blankets (cooled only by helium) and dual cooled design (cooled by helium and by the liquid {LiPb}) among others. Focusses more on structure and design. Potentially very useful for talking about liquid}
@@ -2257,8 +2286,8 @@
       \strng{authornamehash}{3e665585c4c62752caa349c792117d54}
       \strng{authorfullhash}{f4819bbf7d47d500302713496c94af80}
       \strng{authorfullhashraw}{f4819bbf7d47d500302713496c94af80}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Modelling of {ARC} reactor {FLiBe} blanket using Monte Carlo simulation (not {OpenMC}). Plots {TBR} for different blanket variables, mainly focussed on wall thickness and enrichment. Somewhat limited since it only focusses on one blanket type. Still very useful as a comparison to our project.}
@@ -2317,8 +2346,8 @@
       \strng{authornamehash}{ef1bee4cc68f10979a93f9a3bbd921e2}
       \strng{authorfullhash}{ef1bee4cc68f10979a93f9a3bbd921e2}
       \strng{authorfullhashraw}{ef1bee4cc68f10979a93f9a3bbd921e2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Exploration of liquid based breeder blankets for an Affordable Robust Compact ({ARC}) reactor. Simple modelling of a variety of liquid breeder blankets. Potentially very useful as an example of tritium modelling and of liquid breeders. {ARC} reactor developed by Commonwealth Fusion. Uses {OpenMC} as well. Lots of very nice graphs of {TBR}.}
@@ -2372,8 +2401,8 @@
       \strng{authornamehash}{8f5f0ec1ba643758e82243a8320661ad}
       \strng{authorfullhash}{8f5f0ec1ba643758e82243a8320661ad}
       \strng{authorfullhashraw}{8f5f0ec1ba643758e82243a8320661ad}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Paper on Chlorine salt blankets comparing their neutronics to standard fluorine salt systems. Useful as another example of blanket materials.}
@@ -3258,8 +3287,8 @@
       \strng{authornamehash}{728a226f938c4e2ee1e0dc3e80b4cff2}
       \strng{authorfullhash}{728a226f938c4e2ee1e0dc3e80b4cff2}
       \strng{authorfullhashraw}{728a226f938c4e2ee1e0dc3e80b4cff2}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Book on Monte Carlo simulations and how they are performed. May be useful in the literature review if we decide to talk a bit about the code. However, it may be better to talk about {OpenMC} specifically rather than Monte Carlo in general. Probably better for the theory section.}
@@ -3330,8 +3359,8 @@
       \strng{authornamehash}{2a99d886e1f79f2f680a71e96675ba87}
       \strng{authorfullhash}{6591362d857af73922f1ac027fc97ab8}
       \strng{authorfullhashraw}{6591362d857af73922f1ac027fc97ab8}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{annotation}{Examples of how {OpenMC} is used in research. Not specific to neutronics but likely useful when describing why we use {OpenMC}.}
@@ -3391,8 +3420,8 @@
       \strng{authornamehash}{366f97799b7e7a908cc53206447c99c3}
       \strng{authorfullhash}{366f97799b7e7a908cc53206447c99c3}
       \strng{authorfullhashraw}{366f97799b7e7a908cc53206447c99c3}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Abstract The affordable, robust, compact ({ARC}) reactor is a tokamak fusion reactor concept currently under development by Commonwealth Fusion Systems and Massachusetts Institute of Technology. There are three important neutronics considerations for the operation of the {ARC} reactor: (1) breeding of enough tritium in the blanket to sustain the D–T reaction in the plasma; (2) ensuring low fluence on the superconducting toroidal field coils; and (3) assessing neutron volumetric heating in structural components. This work aims to perform a validation of the neutronics analysis approach by code-to-code comparison. State-of-the-art software stacks are employed for the neutronics analysis of the {ARC} reactor, and a computer-aided design ({CAD}) model is used directly for Monte Carlo ({MC}) neutron transport calculations. Three software stacks, Attila-{MCNP}, {OpenMC}-{DAGMC}, and Shift-{DAGMC}, are used to perform neutronic analyses of a 90° sector {CAD} model of the {ARC} reactor. Results show that the flux tallies calculated by the three software stacks are very close. Also, the volumetric heating and tritium breeding values have less than 0.6\% relative difference between codes.}
@@ -3483,8 +3512,8 @@
       \strng{authornamehash}{3268d1996a38beac112b8f31fe4f121d}
       \strng{authorfullhash}{81d8b97685ed1f2cc65e3134caad5810}
       \strng{authorfullhashraw}{81d8b97685ed1f2cc65e3134caad5810}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{This paper discusses a novel breeding blanket design for {STEP}. Essentially a gas cooled pebble bed variant, using nitrogen as a coolant. This would allow for a much simpler and cheaper design. It outlines some of the issues with previous blanket designs (primarily the material/structural ones). Also uses {OpenMC} for its neutronics simulations.}
@@ -3578,8 +3607,8 @@
       \strng{authornamehash}{7612cac863904025ef4681bf868ebfa5}
       \strng{authorfullhash}{412b77b5c90b6d35eaf79b1e78dc95ca}
       \strng{authorfullhashraw}{412b77b5c90b6d35eaf79b1e78dc95ca}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{The use of zirconium in breeder blanket structures is desirable due to its relatively low thermal neutron absorption cross section. This paper models several zirconium alloys at a variety of concentrations and thicknesses. {TBR} was calculated via {OpenMC}. This is another Jonathan Shimwell paper. This may be useful when considering structural materials. Compare to {EUROFER}97.}
@@ -3787,8 +3816,8 @@
       \strng{authornamehash}{c481c4bde8d5f682ff525039a3354430}
       \strng{authorfullhash}{c481c4bde8d5f682ff525039a3354430}
       \strng{authorfullhashraw}{c481c4bde8d5f682ff525039a3354430}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The mass of stars is enough to confine a plasma to fuse light atoms, but this is not possible to engineer on Earth. Fortunately, nuclear engineering can rely on the magnetic confinement of a plasma using superconducting coils so long as the Tritium Breeding Ratio ({TBR}) is optimized. This paper will investigate some of the materials which can increase the rate at which Tritium is produced within the breeding blanket layer of Submersion Tokamak reactors, a design that uses magnetic confinement of a plasma in the shape of a torus to execute nuclear fusion. Using the Paramak Python module to model several geometries and {OpenMC} to run a simulation, it can be observed how neutron multipliers, enrichment, and the neutron energy spectrum affect {TBR}. This experiment will mainly observe different material choices that have been considered and their {TBR} based on their cross sections, dose rate, thermal properties and safety. By altering the neutron energy spectrum to account for {DD} and {DT} plasma, the difference in these compounds' Tritium breeding efficacy is noted. Neutron energy spectra are an important factor in optimising the {TBR} levels as the neutrons generated by the fusion reactions in the plasma interact with the breeder material in the blanket and produce tritium through the reaction with Lithium. Since Tritium is a rare isotope of hydrogen that is used as fuel in fusion reactions and has a short half-life, it is essential to produce tritium within the fusion reactor itself. Without the tritium breeding capability, it would not be feasible to generate energy via fusion. A {TBR} greater than unity indicates that the reactor can generate more tritium than it consumes, ensuring self-sufficiency in the tritium inventory. Since Tritium is the most reliable and efficient fuel for these reactors, optimising the {TBR} is of paramount importance in the long road to commercialization of nuclear fusion.}
@@ -3820,49 +3849,6 @@
       \verb http://arxiv.org/abs/2310.00220
       \endverb
       \keyw{Lit Review,{TBR},Useful,{OpenMC},Paramak}
-    \endentry
-    \entry{summerscales_hitting_2023}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=5478a8ab892af7f3f57fba5713358a80}{%
-           family={Summerscales},
-           familyi={S\bibinitperiod},
-           given={Owen},
-           giveni={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{5478a8ab892af7f3f57fba5713358a80}
-      \strng{fullhash}{5478a8ab892af7f3f57fba5713358a80}
-      \strng{fullhashraw}{5478a8ab892af7f3f57fba5713358a80}
-      \strng{bibnamehash}{5478a8ab892af7f3f57fba5713358a80}
-      \strng{authorbibnamehash}{5478a8ab892af7f3f57fba5713358a80}
-      \strng{authornamehash}{5478a8ab892af7f3f57fba5713358a80}
-      \strng{authorfullhash}{5478a8ab892af7f3f57fba5713358a80}
-      \strng{authorfullhashraw}{5478a8ab892af7f3f57fba5713358a80}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Learn the origin of the Monte Carlo Method, a risk calculation method that was first used to calculate neutron diffusion paths for the hydrogen bomb.}
-      \field{day}{1}
-      \field{langid}{english}
-      \field{month}{11}
-      \field{shorttitle}{Hitting the Jackpot}
-      \field{title}{Hitting the Jackpot: The Birth of the Monte Carlo Method {|} {LANL}}
-      \field{titleaddon}{Owen Summerscales}
-      \field{urlday}{19}
-      \field{urlmonth}{10}
-      \field{urlyear}{2025}
-      \field{year}{2023}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\vadan\\Zotero\\storage\\XHJBJMVS\\1123-hitting-the-jackpot-the-birth-of-the-monte-carlo-method.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.lanl.gov/media/publications/actinide-research-quarterly/1123-hitting-the-jackpot-the-birth-of-the-monte-carlo-method
-      \endverb
-      \verb{url}
-      \verb https://www.lanl.gov/media/publications/actinide-research-quarterly/1123-hitting-the-jackpot-the-birth-of-the-monte-carlo-method
-      \endverb
     \endentry
   \enddatalist
 \endrefsection
