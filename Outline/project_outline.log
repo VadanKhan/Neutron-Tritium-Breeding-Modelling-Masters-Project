@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.16)  8 NOV 2025 18:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.16)  11 NOV 2025 12:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -713,15 +713,8 @@ Package pdftex.def Info: figures/breeding_cs.png  used on input line 220.
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `project_outline.out' has not changed.
 (rerunfilecheck)             Checksum: 1A4C59D4FAD0840FE818A2EDF5759897;7412.
-
-Package biblatex Warning: Please rerun LaTeX.
-
 Package logreq Info: Writing requests to 'project_outline.run.xml'.
 \openout1 = `project_outline.run.xml'.
 
@@ -729,7 +722,7 @@ Package logreq Info: Writing requests to 'project_outline.run.xml'.
 Here is how much of TeX's memory you used:
  19312 strings out of 468081
  341778 string characters out of 5425788
- 1202467 words of memory out of 5000000
+ 1202502 words of memory out of 5000000
  47696 multiletter control sequences out of 15000+600000
  641470 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191

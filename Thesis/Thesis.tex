@@ -34,6 +34,7 @@
 \usepackage[title]{appendix}
 \usepackage[a4paper, margin=2cm]{geometry}
 \usepackage{titlesec}
+\usepackage{subcaption}
 % --- Custom Title Formatting and Spacing ---
 
 % 1. Set numbering depth to include \paragraph (level 4)
@@ -233,6 +234,7 @@ interactions within candidate breeder blanket materials. Through this, it aims t
 compositions and geometries capable of sustaining tritium self-sufficiency in future fusion power
 plants.
 
+
 \section{Theory}
 
 \subsection{Fundamentals of Nuclear Fusion}
@@ -404,6 +406,7 @@ significantly greater than one \cite{hernandez_first_2018}.
     multiply the neutron population.}
     \label{fig:multiplier_cross_sections}
 \end{figure}
+
 
 \section{Literature Review}
 \label{sec:lit_review}
@@ -630,6 +633,7 @@ studies may have overlooked.
 
 \noindent\rule{\linewidth}{0.4pt}
 
+
 \section{Methodology}
 
 \subsection{Modelling Neutron Transport: From Boltzmann to Monte Carlo}
@@ -683,20 +687,28 @@ As established in the \nameref{sec:lit_review} (Section~\ref{sec:lit_review}), m
 research relies on a toolchain of simulation and geometry codes. This project leverages this
 approach by using two key open-source tools: \textbf{\texttt{OpenMC}} and \textbf{Paramak}.
 
-\begin{itemize}
-    \item \textbf{\texttt{OpenMC}:} All simulations in this project are performed using
-    \textbf{\texttt{OpenMC}}, a state-of-the-art, open-source Monte Carlo transport code
-    \cite{romano_openmc_2015}. \texttt{OpenMC} is widely used in the fusion research community and
-    has been extensively validated against other codes for complex fusion neutronics applications,
-    demonstrating high accuracy in calculating parameters like TBR and volumetric heating
-    \cite{bae_arc_2022}.
+\subsubsection{OpenMC:}
+    All simulations in this project are performed using \textbf{\texttt{OpenMC}}, a
+    state-of-the-art, open-source Monte Carlo transport code \cite{romano_openmc_2015}.
+    \texttt{OpenMC} is widely used in the fusion research community and has been extensively
+    validated against other codes for complex fusion neutronics applications, demonstrating high
+    accuracy in calculating parameters like TBR and volumetric heating \cite{bae_arc_2022}.
 
-    \item \textbf{Paramak:} To manage the complex reactor geometry, this project also uses
+\subsubsection{Paramak:} To manage the complex reactor geometry, this project also uses
     \textbf{Paramak}. It is a Python-based CAD framework that automates the construction of
     parametric tokamak models compatible with \texttt{OpenMC} \cite{shimwell_paramak_2021}, and is a
     key contributer to this project in providing a fast paramaterised easy to access API to generate
     sweep of geometry features and a variety of fusion reactor designs.
-\end{itemize}
+
+\begin{figure}[htbp]
+    \centering
+    % You can adjust the width as needed for your document layout
+    \includegraphics[width=0.7\textwidth]{figures/Labelled Tokamak Photo.png}
+    \caption{Figure indicating our simplified Tokamak Geometry built with paramak. In the
+    computation we insetad use a 90° revolution for computational efficiency, with periodic boundary
+    conditions on each radial slice to ensure physical accuracy.}
+    \label{fig:tokamak_labels}
+\end{figure}
 
 \subsection{Simulation Strategy and Parametric Study}
 
@@ -731,7 +743,9 @@ to be run in parallel. This systematic sweep will be applied to three key reacto
 enabling an ``agnostic" rating of certain features and the identification of robust design principles
 that hold true across different blanket concepts.
 
+
 \section{Results}
+\subsection{Material Composition / Enrichment Results}
 \begin{table}[htbp]
     \centering
     \caption{A summary of solid breeder materials, their properties, and calculated
@@ -741,27 +755,27 @@ that hold true across different blanket concepts.
         \toprule
         \textbf{Material} & \multicolumn{1}{c}{\textbf{Li (molar \%)}} & \multicolumn{1}{c}{\textbf{$\rho$ (g/cm$^3$)}} & \textbf{TBR} & \textbf{Reference} \\
         \midrule
-        \ce{Li2O} & 66.66 & 2.10 & x & [34] \\
-        \ce{Li4SiO4} & 44.44 & 2.40 & x & [25] \\
-        \ce{Li2TiO3} & 33.33 & 3.43 & x & [25] \\
-        \midrule % --- This was the dashed line in your image ---
-        \ce{Li8PbO6} & 53.33 & 4.28 & x & [25] \\
-        \ce{Li8SiO6} & 53.33 & 2.20 & x & [25] \\
-        \ce{Li8CoO6} & 53.33 & 2.47 & x & [25] \\
-        \ce{Li8GeO6} & 53.33 & 2.64 & x & [25] \\
-        \ce{Li8ZrO6} & 53.33 & 2.98 & x & [25] \\
-        \ce{Li8SnO6} & 53.33 & 3.41 & x & [25] \\
-        \ce{Li8CeO6} & 53.33 & 3.25 & x & [25] \\
-        \ce{Li6MnO4} & 54.55 & 2.50 & x & [25] \\
-        \ce{Li6CoO4} & 54.55 & 2.77 & x & [25] \\
-        \ce{Li6ZnO4} & 54.55 & 2.86 & x & [25] \\
-        \ce{Li6Zr2O7} & 40.00 & 3.56 & x & [25] \\
-        \ce{Li5AlO4} & 50.00 & 2.25 & x & [25] \\
-        \ce{Li5FeO4} & 50.00 & 2.64 & x & [25] \\
-        \ce{Li4TiO4} & 44.44 & 2.57 & x & [25] \\
-        \ce{Li4GeO4} & 44.44 & 3.16 & x & [25] \\
-        \ce{Li2SiO3} & 33.3 & 2.53 & x & [34] \\
-        \ce{Li2MnO2} & 40.00 & 3.90 & x & [25] \\
+        \ce{Li2O} & 66.66 & 2.10 & 1.43 \\
+        \ce{Li4SiO4} & 44.44 & 2.40 & 1.42 \\
+        \ce{Li2TiO3} & 33.33 & 3.43 & 1.40 \\
+        \midrule % --- This is the dashed line ---
+        \ce{Li8PbO6} & 53.33 & 4.28 & 1.44 \\
+        \ce{Li8SiO6} & 53.33 & 2.20 & 1.44 \\
+        \ce{Li8CoO6} & 53.33 & 2.47 & 1.43 \\
+        \ce{Li8GeO6} & 53.33 & 2.64 & 1.43 \\
+        \ce{Li8ZrO6} & 53.33 & 2.98 & 1.43 \\
+        \ce{Li8SnO6} & 53.33 & 3.41 & 1.42 \\
+        \ce{Li8CeO6} & 53.33 & 3.25 & 1.42 \\
+        \ce{Li6MnO4} & 54.55 & 2.50 & 1.42 \\
+        \ce{Li6CoO4} & 54.55 & 2.77 & 1.42 \\
+        \ce{Li6ZnO4} & 54.55 & 2.86 & 1.41 \\
+        \ce{Li6Zr2O7} & 40.00 & 3.56 & 1.41 \\
+        \ce{Li5AlO4} & 50.00 & 2.25 & 1.41 \\
+        \ce{Li5FeO4} & 50.00 & 2.64 & 1.41 \\
+        \ce{Li4TiO4} & 44.44 & 2.57 & 1.40 \\
+        \ce{Li4GeO4} & 44.44 & 3.16 & 1.38 \\
+        \ce{Li2SiO3} & 33.3 & 2.53 & 1.37 \\
+        \ce{Li2MnO2} & 40.00 & 3.90 & 1.35 \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -775,29 +789,141 @@ that hold true across different blanket concepts.
         \toprule
         \textbf{Material} & \textbf{Ratio (molar \%)} & \multicolumn{1}{c}{\textbf{Li (molar \%)}} & \multicolumn{1}{c}{\textbf{$\rho$ (g/cm$^3$)}} & \textbf{TBR} & \textbf{Reference} \\
         \midrule
-        Li & - & 100 & 0.47 & x & [28] \\
-        Li-Pb & 17:83 & 17.00 & 11.00 & x & [9] \\
-        \ce{LiF-BeF2} & 2:1 & 28.57 & 2.04 & x & [29] \\
-        \ce{LiF-BeF2}* & 1:1 & 20.00 & 2.06 & x & [29] \\
+        Li & - & 100 & 0.51 & 1.37 \\
+        Li-Pb & 17:83 & 17.00 & 11.00 & 1.43 \\
+        \ce{LiF-BeF2} & 2:1 & 28.57 & 2.04 & 1.33 \\
+        \ce{LiF-BeF2}* & 1:1 & 20.00 & 2.06 & 1.33 \\
         \midrule % --- This was the dashed line in your image ---
-        LiF & - & 50.00 & 2.64 & x & [25] \\
-        \ce{Li3N} & - & 75.00 & 1.30 & x & [25] \\
-        \ce{LiF-PbF2} & 2:3 & 15.38 & 3.55 & x & [29] \\
-        \ce{LiF-BeF2-NaF} & 1:1:1 & 14.29 & 2.15 & x & [29] \\
-        \ce{LiF-NaF-KF} & 46.5:11.5:42 & 20.17 & 2.02 & x & [28] \\
-        \ce{LiF-LiBr-NaBr} & 20:73:7 & 46.50 & 3.16 & x & [28] \\
-        \ce{LiF-LiBr-NaF} & 14:79:7 & 45.69 & 3.20 & x & [28] \\
-        \ce{LiF-LiI2} & 83.5:16.5 & 50.00 & 3.68 & x & [28] \\
-        \ce{LiF-NaF-ZrF4} & 55:22:23 & 20.45 & 2.72 & x & [28] \\
-        \ce{LiCl-BeCl2} & 1:1 & 20.00 & - & x & [29] \\
-        \ce{LiCl-PbCl2} & 1:2 & 12.50 & 4.50 & x & [29] \\
-        \ce{LiCl-KCl} & 7:3 & 35.00 & 1.60 & x & [29] \\
-        \ce{LiCl-KCl}* & 52:48 & 26.00 & 1.60 & x & [29] \\
-        \ce{LiCl-NaCl} & 72:28 & 36.00 & 1.60 & x & [29] \\
+        LiF & - & 50.00 & 2.64 & 1.36 \\
+        \ce{Li3N} & - & 75.00 & 1.30 & 1.34 \\
+        \ce{LiF-PbF2} & 2:3 & 15.38 & 3.55 & 1.34 \\
+        \ce{LiF-BeF2-NaF} & 1:1:1 & 14.29 & 2.15 & 1.29 \\
+        \ce{LiF-NaF-KF} & 46.5:11.5:42 & 20.17 & 2.02 & 1.29 \\
+        \ce{LiF-LiBr-NaBr} & 20:73:7 & 46.50 & 3.16 & 1.25 \\
+        \ce{LiF-LiBr-NaF} & 14:79:7 & 45.69 & 3.20 & 1.22 \\
+        \ce{LiF-LiI2} & 83.5:16.5 & 50.00 & 3.68 & 1.20 \\
+        \ce{LiF-NaF-ZrF4} & 55:22:23 & 20.45 & 2.72 & 1.15 \\
+        \ce{LiCl-BeCl2} & 1:1 & 20.00 & - & 1.14 \\
+        \ce{LiCl-PbCl2} & 1:2 & 12.50 & 4.50 & 1.10 \\
+        \ce{LiCl-KCl} & 7:3 & 35.00 & 1.60 & 1.07 \\
+        \ce{LiCl-KCl}* & 52:48 & 26.00 & 1.60 & 1.02 \\
+        \ce{LiCl-NaCl} & 72:28 & 36.00 & 1.60 & 1.02 \\
         \bottomrule
     \end{tabular}
 \end{table}
 
+\begin{figure}[htbp]
+    \centering
+    % You can adjust the width as needed for your document layout
+    \includegraphics[width=0.7\textwidth]{figures/Enrichment Updated.png}
+    \caption{Graph Showing Increasing TBR trend against \ce{^6Li} Enrichment. This shows a
+    "diminishing return" profile, but saturates much later. The curve is still perceptibly rising
+    even at higher percentages.}
+    \label{fig:enrichment}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    % You can adjust the width as needed for your document layout
+    \includegraphics[width=0.7\textwidth]{figures/LL Lead Fraction.png}
+    \caption{Graph Showing TBR trend against Lead Multiplier Concentration. This graph peaks at
+    ~50\%, and then TBR drops quickly after ~75\%.}
+    \label{fig:multiplier}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    % FIRST SUBFIGURE
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/Coolant Fraction Updated.png}
+        \caption{Graph of TBR trends againt Coolant fraction for \ce{He(g)}, \ce{N(g)} and
+        \ce{H_2O(l)}. This is a fraction of coolant per volume in the fusion breeder blanket,
+        homogenously spread throughout the blanket as an approximation of real coolant structures.
+        \ce{He(g)} and \ce{N(g)} have very similar trends, as act similar to replacing breeding
+        material with a vacuum. \ce{H_2O(l)} has an interesting trend, in which TBR seems to
+        decrease at a much slower rate against coolant fraction. This indicates that having large
+        volumes of water is not much of a concern (as it acts as a moderators for neutron flux).}
+        \label{fig:coolant_fraction}
+    \end{subfigure}
+    \hfill % This pushes the figures to opposite sides
+    % SECOND SUBFIGURE
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/Coolant Energy (with void).png}
+        \caption{Graph of no. of neutrons against energy just before a TBR reaction. This graph
+        confirms that water is indeed acting as a moderator and "trapping" the neutrons with its
+        high scattering cross section. Water therefore can act favourably towards tritium breeding
+        as it can reduce the mean free path the neutrons significantly, and once moderatored TBR
+        reactions have much higher cross section. \ce{He(g)} and \ce{N(g)} still act as vacuums.}
+        \label{fig:coolant_moderation}
+    \end{subfigure}
+
+    \caption{(a) Demonstrates the effect of having an increasing volume of coolant distributed
+    throughout the breeder blankets. (b) confirms the moderating effect of the water coolant.}
+    \label{fig:coolants}
+\end{figure}
+
+\subsection{Geometry Sweep Results}
+
+\begin{figure}[htbp]
+    \centering
+    % You can adjust the width as needed for your document layout
+    \includegraphics[width=0.7\textwidth]{figures/Triangularity TBR.png}
+    \caption{Graph showing the how TBR is largely unaffected by the triangularity of the reactor.
+    This is expected for a neutronics study, particularly given that we are assuming a constant
+    neutron ring source, whereas triangularity is a parameter that is significant for plasma physics
+    and density. }
+    \label{fig:triangularity}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    % You can adjust the width as needed for your document layout
+    \includegraphics[width=0.7\textwidth]{figures/FW Thickness.png}
+    \caption{Graph showing the decreasing trend of TBR against first wall thickness. There are
+    significant neutronic benefits of picking a first wall with lower cross section, with Zirconium
+    leading to the highest TBRs.}
+    \label{fig:first_wall}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    % FIRST SUBFIGURE
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        % You can adjust the width as needed for your document layout
+        \includegraphics[width=\textwidth]{figures/Blanket Thickness Updated.png}
+        \caption{Graph Showing Increasing TBR trend against Breeder Blanket Thickness. The benefits
+        of adding thickness diminish almost completely after ~500mm. This indicates that the neutron
+        flux is fully attenuated after the saturation thickness.}
+        \label{fig:blanket_thickness}
+    \end{subfigure}
+    \hfill % This pushes the figures to opposite sides
+    % SECOND SUBFIGURE
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/BreederBlanketHeatmapSlice.png}
+        \caption{This heatmap confirms the attenuation of the neutron flux after the saturation
+        thickness, by indicating almost no TBR reactions after 600mm through the breeder blanket.
+        The Low level of TBR reactions in the first wall is due to its Zirconium Composition, which
+        has a highly endothermic TBR reaction with a very low cross section.}
+        \label{fig:heatmap_slice}
+    \end{subfigure}
+
+    \caption{(a) Demonstrates the asymptotic trend of TBR against blanket thickness. (b) confirms
+    neutron attentuation as the physical cause.}
+    \label{fig:blanket_thicknesses}
+\end{figure}
+
+
+\section{Discussion}
+\subsection{TBR Optimisation Strategies}
+\subsection{Consequences to Other Critical Criteria}
+\subsection{Model Limitations}
+\subsection{Next Steps}
+
+\section{Conclusion}
 
 % revtex class:
 % \bibliographystyle{plainnat}
