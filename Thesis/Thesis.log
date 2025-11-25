@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.16)  23 NOV 2025 17:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.16)  25 NOV 2025 09:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -775,11 +775,11 @@ Package pdftex.def Info: figures/Labelled Tokamak Photo.png  used on input line 
 
 
 [11]
-<figures/Enrichment Updated.png, id=366, 462.528pt x 346.896pt>
-File: figures/Enrichment Updated.png Graphic file (type png)
-<use figures/Enrichment Updated.png>
-Package pdftex.def Info: figures/Enrichment Updated.png  used on input line 818.
-(pdftex.def)             Requested size: 338.58632pt x 253.95184pt.
+<figures/lithium_enrichment_sweep.png, id=366, 507.3354pt x 381.5856pt>
+File: figures/lithium_enrichment_sweep.png Graphic file (type png)
+<use figures/lithium_enrichment_sweep.png>
+Package pdftex.def Info: figures/lithium_enrichment_sweep.png  used on input line 818.
+(pdftex.def)             Requested size: 338.58632pt x 254.67119pt.
 <figures/LL Lead Fraction.png, id=367, 462.528pt x 346.896pt>
 File: figures/LL Lead Fraction.png Graphic file (type png)
 <use figures/LL Lead Fraction.png>
@@ -826,7 +826,7 @@ Package pdftex.def Info: figures/BreederBlanketHeatmapSlice.png  used on input l
 
 [13]
 
-[14 <./figures/Enrichment Updated.png>]
+[14 <./figures/lithium_enrichment_sweep.png>]
 
 [15 <./figures/LL Lead Fraction.png>]
 
@@ -865,14 +865,14 @@ Package logreq Info: Writing requests to 'Thesis.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  21036 strings out of 468081
- 379770 string characters out of 5425788
+ 379812 string characters out of 5425788
  1252977 words of memory out of 5000000
  49342 multiletter control sequences out of 15000+600000
  643104 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,20n,78p,2417b,1519s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\vadan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Thesis.pdf (23 pages, 1456346 bytes).
+Output written on Thesis.pdf (23 pages, 1548211 bytes).
 PDF statistics:
  676 PDF objects out of 1000 (max. 8388607)
  128 named destinations out of 1000 (max. 500000)
