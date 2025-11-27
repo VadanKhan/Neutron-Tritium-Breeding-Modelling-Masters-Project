@@ -200,6 +200,8 @@
 \end{titlepage}
 % --- title page ---
 
+\tableofcontents
+
 \section{Introduction}
 
 The pursuit of practical nuclear fusion represents one of the most ambitious and potentially
@@ -534,7 +536,7 @@ coolant, simplifying the design and allowing for continuous tritium extraction o
     \textbf{FLiBe \ce{(2LiF . BeF2)}}, which advantageously combines the breeder (LiF) and
     multiplier (\ce{BeF2}) into a single, low-conductivity fluid \cite{tas_liquid_1988}. This is the
     reference design for the \textbf{Affordable Robust Compact (ARC)} reactor concept from MIT
-    \cite{sorbom_arc_2015, bocci_arc_2020, segantin_optimization_2020}. A wide variety of other salt
+    \cite{sorbom_arc_2015, bocci_arc_2020, segantin_optimisation_2020}. A wide variety of other salt
     compositions, including \ce{LiF.PbF2} and novel chlorine-based salts, are also under
     investigation to optimise breeding, temperature, and material compatibility
     \cite{segantin_neutronic_2020, bohm_initial_2023}.
@@ -615,7 +617,7 @@ This limited scope was, until recently, a computational necessity. Manually crea
 thousands of unique, complex 3D CAD models for a full parametric sweep was computationally
 intractable. Recent advances in scriptable, parametric modelling workflows have fundamentally
 lowered this barrier, making it feasible to automatically generate and distribute simulations for
-vast libraries of reactor designs. Work by \cite{goel_optimization_2023} has demonstrated the power
+vast libraries of reactor designs. Work by \cite{goel_optimisation_2023} has demonstrated the power
 of this new toolchain by modelling \textit{several} distinct geometries. While this provides an
 excellent proof-of-concept, but as an unpublished paper this foundational work represents an initial
 step and leaves a significant opportunity for a more comprehensive and systematic exploration,
@@ -638,48 +640,51 @@ studies may have overlooked.
 
 \subsection{Modelling Neutron Transport: From Boltzmann to Monte Carlo}
 
-The physics of neutron interactions described in Section~\ref{sec:research_gap}---including
-scattering, absorption, and multiplication---must be accurately modelled to determine the neutronic
-performance of a breeder blanket. The behaviour of the entire neutron population (or \textbf{neutron
-flux}) within the reactor geometry is formally governed by the \textbf{Boltzmann Transport Equation
-(BTE)}.
+The neutronic performance of the breeder blanket is determined by the transport behaviour of the
+entire neutron population within the reactor geometry. This behaviour is formally governed by the
+\textbf{Boltzmann Transport Equation (BTE)}, a linear integro-differential equation representing
+particle balance in phase space.
 
-The BTE is fundamentally a particle balance equation. In conceptual terms, it states that the rate
-of change of neutrons in a specific volume of space, travelling in a specific direction with a
-specific energy, is equal to the sum of all neutron gains and losses. Gains come from neutrons
-scattering \textit{into} that state from other states and from external sources (like the D-T
-plasma). Losses come from neutrons scattering \textit{out} of that state, being absorbed (either
-parasitically or in a breeding reaction), or simply leaking out of the volume.
+The BTE stipulates that the time rate of change of the neutron density is equal to the net production
+(via sources and fission/multiplication) minus the net loss (via absorption and leakage) and the net
+scattering transfer into or out of the phase space volume. While the BTE provides a comprehensive
+deterministic description, it is computationally intractable to solve analytically for the complex,
+heterogeneous 3D geometries inherent to fusion reactors. Consequently, this project employs the
+\textbf{Monte Carlo (MC) method}.
 
-While comprehensive, the BTE is an complex integro-differential equation that is impossible to solve
-analytically for a three-dimensional, heterogeneous geometry like a fusion reactor. Therefore, a
-numerical approach is required. This project employs the \textbf{Monte Carlo (MC) method}, a
-stochastic technique that has become a cornerstone of neutron transport modelling since its
-development for neutronic simulations \cite{kalos_monte_2008}.
+The MC method is a stochastic technique that simulates the transport of neutrons by tracking the
+individual life histories of discrete particles \cite{kalos_monte_2008}. Rather than solving for
+global flux directly, the simulation proceeds through a random walk process:
 
-Instead of solving the BTE for the entire population at once, the MC method simulates the individual
-life histories of millions, or billions, of discrete particles \cite{kalos_monte_2008}. In this
-work, each ``particle'' is a neutron. A simulation proceeds as follows:
 \begin{enumerate}
-    \item A source neutron is ``born'' at the plasma, with an energy of 14.1~MeV and a random
-    direction.
-    \item The code uses the material cross-section data \cite{brown_endfb-viii0_2018} as a set of
-    probability distributions to determine how far the neutron travels before its next interaction.
-    \item At the interaction site, the code again uses the probabilistic data to decide
-    \textit{what} happens: it may scatter (elastically or inelastically), be absorbed (e.g., by
-    \ce{^{6}Li}), or cause a multiplication event (e.g., an \ce{(n,2n)} reaction in Beryllium or
-    Lead).
-    \item The neutron's energy and direction are updated, and if it still exists (i.e., was not
-    absorbed), the process repeats. If it was a multiplication event, a new, secondary neutron is
-    added to the simulation to be tracked.
-    \item This "life history" continues until the neutron (and all its children) are
-    "killed"---either by being absorbed or by escaping the model geometry.
+    \item \textbf{Source Sampling:} A neutron is initialized at the plasma source with sampled
+    parameters (e.g., 14.1~MeV energy and isotropic direction).
+    \item \textbf{Ray Tracing:} The distance to the next interaction is sampled from a probability
+    distribution derived from the total macroscopic cross-section of the local material
+    \cite{brown_endfb-viii0_2018}.
+    \item \textbf{Interaction Physics:} At the collision site, the specific reaction type (elastic
+    scatter, absorption, \ce{(n,2n)} multiplication, etc.) is selected probabilistically based on
+    the nuclide-specific cross-section data.
+    \item \textbf{History Termination:} The particle's energy and direction are updated after
+    scattering. The process repeats until the neutron is absorbed or leaks from the system geometry.
+    Multiplication events generate secondary neutrons which are subsequently tracked.
 \end{enumerate}
 
-By simulating a sufficiently large number of these individual histories, the averaged behaviour of
-all particles converges to a statistically robust solution of the BTE. This statistical approach
-allows for the estimation of key neutronic parameters, such as the spatial distribution of the
-neutron flux and, most critically for this project, the \textbf{Tritium Breeding Ratio (TBR)}.
+\subsubsection{Statistical Uncertainty and Error Analysis}
+Unlike deterministic solvers, Monte Carlo results represent statistical estimates rather than exact
+solutions. The physical quantities of interest, such as the Tritium Breeding Ratio (TBR), are tallied
+by averaging contributions across many independent particle histories. The uncertainty in these
+results is quantified using the standard deviation of the mean across simulation batches.
+
+The relative error ($R$) in an MC calculation is governed by the Central Limit Theorem and scales
+inversely with the square root of the number of simulated particles ($N$):
+\begin{equation}
+    R \propto \frac{1}{\sqrt{N}}
+\end{equation}
+To ensure statistical robustness, the simulations in this work utilized high particle counts
+(typically $N \sim 10^5 - 10^7$) to drive convergence. This resulted in relative errors significantly
+below 1\%, rendering the associated error bars smaller than the data markers in the presented graphical
+results.
 
 \subsection{Computational Workflow and Toolchain}
 
@@ -724,7 +729,7 @@ The core workflow for each individual simulation follows a precise sequence:
     \texttt{CadQuery} backend \cite{shimwell_paramak_2021}) based on a given set of input parameters
     (e.g., blanket thickness, component radii).
     \item \textbf{Geometry Conversion:} This CAD model is converted into a DAGMC (Direct Accelerated
-    Geometry Monte Carlo) unstructured mesh geometry, a format optimized for particle transport
+    Geometry Monte Carlo) unstructured mesh geometry, a format optimised for particle transport
     codes.
     \item \textbf{Model Setup:} The DAGMC geometry is imported into \texttt{OpenMC}, where it is
     populated with the specified material definitions and assigned the D-T fusion neutron source
@@ -735,157 +740,215 @@ The overall research strategy is executed in two main phases. First, the pipelin
 established by modelling a basic, reference tokamak geometry. This initial step serves to benchmark
 the workflow, confirm physically sensible results, and establish initial neutronic trends.
 
-Following this validation, a more comprehensive, multi-parameter study is performed. This second
-phase executes coupled simulations to explore how changes in one parameter (e.g., \ce{^{6}Li}
-enrichment) affect the optimal value of another (e.g., blanket thickness). The pipeline's
-architecture is designed for distributability, allowing these computationally intensive simulations
-to be run in parallel. This systematic sweep will be applied to three key reactor design archetypes,
-enabling an ``agnostic" rating of certain features and the identification of robust design principles
-that hold true across different blanket concepts.
+
 
 
 \section{Results}
-\subsection{Material Composition / Enrichment Results}
+
+\subsection{Material Composition and Performance}
+
+The neutronic performance of candidate liquid and solid breeder materials is summarized in
+Table~\ref{tab:liquid_breeders} and Table~\ref{tab:solid_breeders}, respectively.
+
 \begin{table}[htbp]
     \centering
-    \caption{A summary of solid breeder materials, their properties, and calculated
-    TBR. (Note: TBR values are placeholders to be populated.)}
-    \label{tab:solid_breeders}
-    \begin{tabular}{l D{.}{.}{2} D{.}{.}{2} c c}
+    \caption{A summary of liquid breeder materials, their properties, and simulated TBR (error on
+    each $\leq 0.005$) and simulated Average Heating per Neutron (error on each $\leq 0.05$).}
+    \label{tab:liquid_breeders}
+    \begin{tabular}{l l D{.}{.}{2} D{.}{.}{2} c c}
         \toprule
-        \textbf{Material} & \multicolumn{1}{c}{\textbf{Li (molar \%)}} & \multicolumn{1}{c}{\textbf{$\rho$ (g/cm$^3$)}} & \textbf{TBR} & \textbf{Reference} \\
+        \textbf{Material} & \textbf{Ratio (molar \%)} & \multicolumn{1}{c}{\textbf{Li (molar \%)}} &
+        \multicolumn{1}{c}{\textbf{$\rho$ (g/cm$^3$)}} & \textbf{TBR} & \textbf{Heating (MeV)} \\
         \midrule
-        \ce{Li2O} & 66.66 & 2.10 & 1.43 \\
-        \ce{Li4SiO4} & 44.44 & 2.40 & 1.42 \\
-        \ce{Li2TiO3} & 33.33 & 3.43 & 1.40 \\
-        \midrule % --- This is the dashed line ---
-        \ce{Li8PbO6} & 53.33 & 4.28 & 1.44 \\
-        \ce{Li8SiO6} & 53.33 & 2.20 & 1.44 \\
-        \ce{Li8CoO6} & 53.33 & 2.47 & 1.43 \\
-        \ce{Li8GeO6} & 53.33 & 2.64 & 1.43 \\
-        \ce{Li8ZrO6} & 53.33 & 2.98 & 1.43 \\
-        \ce{Li8SnO6} & 53.33 & 3.41 & 1.42 \\
-        \ce{Li8CeO6} & 53.33 & 3.25 & 1.42 \\
-        \ce{Li6MnO4} & 54.55 & 2.50 & 1.42 \\
-        \ce{Li6CoO4} & 54.55 & 2.77 & 1.42 \\
-        \ce{Li6ZnO4} & 54.55 & 2.86 & 1.41 \\
-        \ce{Li6Zr2O7} & 40.00 & 3.56 & 1.41 \\
-        \ce{Li5AlO4} & 50.00 & 2.25 & 1.41 \\
-        \ce{Li5FeO4} & 50.00 & 2.64 & 1.41 \\
-        \ce{Li4TiO4} & 44.44 & 2.57 & 1.40 \\
-        \ce{Li4GeO4} & 44.44 & 3.16 & 1.38 \\
-        \ce{Li2SiO3} & 33.3 & 2.53 & 1.37 \\
-        \ce{Li2MnO2} & 40.00 & 3.90 & 1.35 \\
+        \ce{Li17Pb83} & - & 17.00 & 11.00 & 1.61 & 11.54 \\
+        \ce{LiF-BeF2} & 2:1 & 28.57 & 2.04 & 1.15 & 12.92 \\
+        \ce{LiF-BeF2}* & 1:1 & 20.00 & 2.06 & 1.16 & 12.97 \\
+        \midrule % --- Dashed line representation ---
+        \ce{LiF-PbF2} & 2:3 & 15.38 & 3.55 & 1.23 & 11.63 \\
+        \ce{LiF} & - & 50.00 & 2.64 & 1.21 & 13.49 \\
+        \ce{Li} & - & 100 & 0.51 & 1.17 & 13.60 \\
+        \ce{Li3N} & - & 75.00 & 1.30 & 1.13 & 13.33 \\
+        \ce{LiF-BeF2-NaF} & 1:1:1 & 14.29 & 2.15 & 1.09 & 12.42 \\
+        \ce{LiF-NaF-ZrF4} & 55:22:23 & 20.45 & 2.72 & 1.07 & 11.59 \\
+        \ce{LiF-LiI2} & 83.5:16.5 & 50.00 & 3.68 & 1.02 & 10.96 \\
+        \ce{LiF-LiBr-NaF} & 14:79:7 & 45.69 & 3.20 & 0.98 & 15.57 \\
+        \ce{LiF-LiBr-NaBr} & 20:73:7 & 46.50 & 3.16 & 0.97 & 15.55 \\
+        \ce{LiCl-PbCl2} & 1:2 & 12.50 & 4.50 & 0.96 & 9.87 \\
+        \ce{LiCl-NaCl} & 72:28 & 36.00 & 1.52 & 0.91 & 11.04 \\
+        \ce{LiF-NaF-KF} & 46.5:11.5:42 & 20.17 & 2.02 & 0.90 & 11.33 \\
+        \ce{LiCl-BeCl2} & 1:1 & 20.00 & 1.52 & 0.88 & 10.90 \\
+        \ce{LiCl-KCl} & 7:3 & 35.00 & 1.51 & 0.85 & 10.72 \\
+        \ce{LiCl-KCl}* & 52:48 & 26.00 & 1.51 & 0.80 & 10.37 \\
         \bottomrule
     \end{tabular}
 \end{table}
 
+Among the liquid breeders, the eutectic Lithium-Lead (\ce{Li17Pb83}) alloy demonstrates the highest
+TBR of 1.61. The distinctive factors to this superior performance are attributed to higher density
+and high lead multiplier fraction. The density arises as it is an eutectic alloy that can utilise
+higher packing efficiency \cite{goel_optimization_2023,segantin_optimization_2020}. While high TBR
+typically correlates with increased nuclear heating due to the exothermic $^6$Li reaction,
+\ce{Li17Pb83} is a notable outlier. It exhibits lower-than-expected heating relative to its TBR
+because the neutron multiplication reactions in lead are endothermic.
+
+Molten salts generally result in lower TBRs compared to liquid metals but are investigated due to
+their reduced Magnetohydrodynamic (MHD) effects. Of the halide salts, Fluorine-based compounds
+(e.g., FLiBe) perform best due to their low neutron absorption cross-sections. While Chlorine and
+Bromine salts were analyzed, Bromine salts exhibit high parasitic absorption, leading to
+significantly higher heating values (approx. 15.5 MeV) despite lower tritium production. However, it
+is noted that with realistic First Wall thicknesses, Bromine outperforms Chlorine due to its
+moderating properties.
+
+Pure lithium, LiF and LiN3 (and to a lesser extent LiF-LiI2) have significant Li-7 TBR contributions
+due to the lack of a dedicated breeder element within the compound.
+
+Table~\ref{tab:solid_breeders} indicates that solid ceramics display less performance variation than
+liquids, as they share similar lithium-oxide bases. Compounds containing Beryllium multipliers
+generally yield higher TBRs , while Cerium ceramics achieved the highest solid TBR due to low
+interaction cross-sections.
+
 \begin{table}[htbp]
     \centering
-    \caption{A summary of liquid breeder materials, their properties, and calculated
-    TBR. (Note: TBR values are placeholders to be populated.)}
-    \label{tab:liquid_breeders}
-    \begin{tabular}{l l D{.}{.}{2} D{.}{.}{2} c c}
+    \caption{A summary of solid breeder materials, their properties, and simulated TBR (error on
+    each $\leq 0.005$) and simulated Average Heating per Neutron (error on each $\leq 0.05$).}
+    \label{tab:solid_breeders}
+    \begin{tabular}{l D{.}{.}{2} D{.}{.}{2} c c}
         \toprule
-        \textbf{Material} & \textbf{Ratio (molar \%)} & \multicolumn{1}{c}{\textbf{Li (molar \%)}} & \multicolumn{1}{c}{\textbf{$\rho$ (g/cm$^3$)}} & \textbf{TBR} & \textbf{Reference} \\
+        \textbf{Material} & \multicolumn{1}{c}{\textbf{Li (molar \%)}} &
+        \multicolumn{1}{c}{\textbf{$\rho$ (g/cm$^3$)}} & \textbf{TBR} & \textbf{Heating (MeV)} \\
         \midrule
-        Li & - & 100 & 0.51 & 1.37 \\
-        Li-Pb & 17:83 & 17.00 & 11.00 & 1.43 \\
-        \ce{LiF-BeF2} & 2:1 & 28.57 & 2.04 & 1.33 \\
-        \ce{LiF-BeF2}* & 1:1 & 20.00 & 2.06 & 1.33 \\
-        \midrule % --- This was the dashed line in your image ---
-        LiF & - & 50.00 & 2.64 & 1.36 \\
-        \ce{Li3N} & - & 75.00 & 1.30 & 1.34 \\
-        \ce{LiF-PbF2} & 2:3 & 15.38 & 3.55 & 1.34 \\
-        \ce{LiF-BeF2-NaF} & 1:1:1 & 14.29 & 2.15 & 1.29 \\
-        \ce{LiF-NaF-KF} & 46.5:11.5:42 & 20.17 & 2.02 & 1.29 \\
-        \ce{LiF-LiBr-NaBr} & 20:73:7 & 46.50 & 3.16 & 1.25 \\
-        \ce{LiF-LiBr-NaF} & 14:79:7 & 45.69 & 3.20 & 1.22 \\
-        \ce{LiF-LiI2} & 83.5:16.5 & 50.00 & 3.68 & 1.20 \\
-        \ce{LiF-NaF-ZrF4} & 55:22:23 & 20.45 & 2.72 & 1.15 \\
-        \ce{LiCl-BeCl2} & 1:1 & 20.00 & - & 1.14 \\
-        \ce{LiCl-PbCl2} & 1:2 & 12.50 & 4.50 & 1.10 \\
-        \ce{LiCl-KCl} & 7:3 & 35.00 & 1.60 & 1.07 \\
-        \ce{LiCl-KCl}* & 52:48 & 26.00 & 1.60 & 1.02 \\
-        \ce{LiCl-NaCl} & 72:28 & 36.00 & 1.60 & 1.02 \\
+        \ce{Li4SiO4} & 44.44 & 2.40 & 1.47 & 14.88 \\
+        \ce{Li2TiO3} & 33.33 & 3.43 & 1.46 & 14.63 \\
+        \midrule % --- This is the dashed line representation ---
+        \ce{Li8PbO6} & 53.33 & 4.28 & 1.51 & 15.01 \\
+        \ce{Li8CeO6} & 53.33 & 3.25 & 1.51 & 15.29 \\
+        \ce{Li8ZrO6} & 53.33 & 2.98 & 1.50 & 14.99 \\
+        \ce{Li8SnO6} & 53.33 & 3.41 & 1.49 & 15.18 \\
+        \ce{Li6Zr2O7} & 40.00 & 3.56 & 1.49 & 14.79 \\
+        \ce{Li8GeO6} & 53.33 & 2.64 & 1.49 & 14.97 \\
+        \ce{Li5FeO4} & 50.00 & 2.64 & 1.48 & 14.91 \\
+        \ce{Li5AlO4} & 50.00 & 2.25 & 1.48 & 15.00 \\
+        \ce{Li8SiO6} & 53.33 & 2.20 & 1.48 & 15.03 \\
+        \ce{Li6ZnO4} & 54.55 & 2.86 & 1.48 & 14.95 \\
+        \ce{Li4TiO4} & 44.44 & 2.57 & 1.48 & 14.89 \\
+        \ce{Li6MnO4} & 54.55 & 2.50 & 1.48 & 14.91 \\
+        \ce{Li4GeO4} & 44.44 & 3.16 & 1.48 & 14.79 \\
+        \ce{Li2O}    & 66.66 & 2.10 & 1.47 & 14.92 \\
+        \ce{Li2SiO3} & 33.3  & 2.53 & 1.45 & 14.75 \\
+        \ce{Li2MnO2} & 40.00 & 3.90 & 1.43 & 14.42 \\
+        \ce{Li8CoO6} & 53.33 & 2.47 & 1.43 & 14.69 \\
+        \ce{Li6CoO4} & 54.55 & 2.77 & 1.41 & 14.58 \\
         \bottomrule
     \end{tabular}
 \end{table}
+
+\subsection{Isotopic and Compositional Optimisation}
+
+Figure~\ref{fig:enrichment} illustrates the sensitivity of TBR to $^6$Li enrichment. As expected,
+increasing enrichment yields a higher TBR, although the rate of increase diminishes at higher
+percentages. Based on these results, an enrichment of 60\% was selected for subsequent simulations,
+balancing performance with the diminishing returns observed in the plateau region.
 
 \begin{figure}[htbp]
     \centering
     % You can adjust the width as needed for your document layout
     \includegraphics[width=0.7\textwidth]{figures/lithium_enrichment_sweep.png}
-    \caption{Graph Showing Increasing TBR trend against \ce{^6Li} Enrichment. This shows a
-    "diminishing return" profile, but saturates much later. The curve is still perceptibly rising
-    even at higher percentages.}
+    \caption{Tritium Breeding Ratio (TBR) as a function of \ce{^6Li} enrichment percentage. The
+    curve exhibits diminishing returns but maintains a positive gradient even at high enrichment
+    levels, indicating no hard saturation point within the tested range.}
     \label{fig:enrichment}
 \end{figure}
+
+The optimisation of the lead multiplier fraction in \ce{LiPb} breeders is shown in
+Figure~\ref{fig:multiplier}. The TBR contribution peaks at a lead concentration of approximately
+50\%, before dropping sharply at concentrations exceeding 75\%.
 
 \begin{figure}[htbp]
     \centering
     % You can adjust the width as needed for your document layout
-    \includegraphics[width=0.7\textwidth]{figures/LL Lead Fraction.png}
-    \caption{Graph Showing TBR trend against Lead Multiplier Concentration. This graph peaks at
-    ~50\%, and then TBR drops quickly after ~75\%.}
+    \includegraphics[width=0.7\textwidth]{figures/LL New Chi.png}
+    \caption{TBR dependence on Lead fraction in the $\text{Li}_{(100-x)}\text{Pb}_x$ breeder.
+    Breeding performance peaks at approximately 50\% lead concentration, with a rapid decline
+    observed beyond 75\%. The eutectic point is marked for reference. Error bars are included but
+    are too small to be visible at this scale.}
     \label{fig:multiplier}
 \end{figure}
+
+\subsection{Impact of Coolant Selection}
+
+The influence of coolant fraction and type on breeding efficiency is detailed in
+Figure~\ref{fig:coolants}. For Helium and Nitrogen, TBR decreases monotonically as the coolant
+fraction increases. This behavior indicates that these gases effectively act as voids within the
+breeder blanket, displacing active breeding material.
+
+Conversely, Water (\ce{H_2O}) exhibits a non-monotonic trend where TBR initially increases before
+declining. This is attributed to the moderating properties of water, which thermalizes the neutron
+spectrum. As shown in Figure~\ref{fig:coolants}b, the water coolant shifts the incident neutron
+population toward lower energies. Since the tritium production cross-section of $^6$Li is
+significantly higher at thermal energies, this moderation compensates for the displacement of
+breeder volume at lower coolant fractions.
 
 \begin{figure}[htbp]
     \centering
     % FIRST SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
-        \includegraphics[width=\linewidth]{figures/Coolant Fraction Updated.png}
-        \caption{Graph of TBR trends againt Coolant fraction for \ce{He(g)}, \ce{N(g)} and
-        \ce{H_2O(l)}. This is a fraction of coolant per volume in the fusion breeder blanket,
-        homogenously spread throughout the blanket as an approximation of real coolant structures.
-        \ce{He(g)} and \ce{N(g)} have very similar trends, as act similar to replacing breeding
-        material with a vacuum. \ce{H_2O(l)} has an interesting trend, in which TBR seems to
-        decrease at a much slower rate against coolant fraction. This indicates that having large
-        volumes of water is not much of a concern (as it acts as a moderators for neutron flux).}
+        \includegraphics[width=\linewidth]{figures/Coolant Frac New.png}
         \label{fig:coolant_fraction}
     \end{subfigure}
     \hfill % This pushes the figures to opposite sides
     % SECOND SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
-        \includegraphics[width=\linewidth]{figures/Coolant Energy (with void).png}
-        \caption{Graph of no. of neutrons against energy just before a TBR reaction. This graph
-        confirms that water is indeed acting as a moderator and "trapping" the neutrons with its
-        high scattering cross section. Water therefore can act favourably towards tritium breeding
-        as it can reduce the mean free path the neutrons significantly, and once moderatored TBR
-        reactions have much higher cross section. \ce{He(g)} and \ce{N(g)} still act as vacuums.}
+        \includegraphics[width=\linewidth]{figures/Coolant Energy New.png}
         \label{fig:coolant_moderation}
     \end{subfigure}
-
-    \caption{(a) Demonstrates the effect of having an increasing volume of coolant distributed
-    throughout the breeder blankets. (b) confirms the moderating effect of the water coolant.}
+    \caption{Impact of coolant choice on breeding performance. (a) TBR vs. Coolant Volume Fraction.
+    While gaseous coolants (\ce{He}, \ce{N}) act as voids, \ce{H_2O} acts as a moderator, mitigating
+    the TBR drop-off at high coolant fractions. Error bars are included but are too small to be
+    visible at this scale.(b) Incident Neutron Energy spectrum. The \ce{H_2O} spectrum shows
+    significant thermalization compared to the gaseous coolants, increasing the interaction
+    cross-section. }
     \label{fig:coolants}
 \end{figure}
 
-\subsection{Geometry Sweep Results}
+\subsection{Geometric Parameter Sweeps}
+
+Results from the geometric optimisation studies indicate that reactor triangularity has a negligible
+impact on global neutronics (Figure~\ref{fig:triangularity}), which is expected given the uniform
+ring source approximation.
+
+However, the First Wall (FW) thickness acts as a significant driver of performance.
+Figure~\ref{fig:first_wall} shows a linear decrease in TBR as FW thickness increases, caused by
+parasitic absorption in the structural material. An average thickness of 25 mm was chosen for
+simulations based on literature standards. Material comparison reveals that while EUROFER is the
+standard structural choice, Zirconium-4 alloy provides superior neutronic performance.
 
 \begin{figure}[htbp]
     \centering
     % You can adjust the width as needed for your document layout
-    \includegraphics[width=0.7\textwidth]{figures/Triangularity TBR.png}
-    \caption{Graph showing the how TBR is largely unaffected by the triangularity of the reactor.
-    This is expected for a neutronics study, particularly given that we are assuming a constant
-    neutron ring source, whereas triangularity is a parameter that is significant for plasma physics
-    and density. }
+    \includegraphics[width=0.7\textwidth]{figures/triangularity_tbr_sweep.png}
+    \caption{Sensitivity of TBR to reactor triangularity ($\delta$). The gradient of $0.015 \pm
+    0.001$ indicates that triangularity has a negligible impact on global neutronics, consistent
+    with the use of a uniform ring source model.}
     \label{fig:triangularity}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     % You can adjust the width as needed for your document layout
-    \includegraphics[width=0.7\textwidth]{figures/FW Thickness.png}
-    \caption{Graph showing the decreasing trend of TBR against first wall thickness. There are
-    significant neutronic benefits of picking a first wall with lower cross section, with Zirconium
-    leading to the highest TBRs.}
+    \includegraphics[width=0.7\textwidth]{figures/FW Thickness New.png}
+    \caption{TBR degradation as a function of First Wall (FW) thickness for various candidate
+    materials. Zirconium-based alloys demonstrate the lowest parasitic absorption, maintaining the
+    highest TBR profile. Error bars are included but are too small to be visible at this scale.}
     \label{fig:first_wall}
 \end{figure}
+
+Finally, Figure~\ref{fig:blanket_thicknesses} determines the optimal radial depth of the breeder
+blanket. TBR increases rapidly with thickness before saturating in the 400--600 mm range. This
+saturation suggests that the neutron flux is fully attenuated beyond this depth, a conclusion
+supported by the reaction density heatmap (Figure~\ref{fig:blanket_thicknesses}b). Increasing the
+breeder depth beyond 600 mm yields negligible gains in tritium production.
 
 \begin{figure}[htbp]
     \centering
@@ -893,10 +956,7 @@ that hold true across different blanket concepts.
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         % You can adjust the width as needed for your document layout
-        \includegraphics[width=\textwidth]{figures/Blanket Thickness Updated.png}
-        \caption{Graph Showing Increasing TBR trend against Breeder Blanket Thickness. The benefits
-        of adding thickness diminish almost completely after ~500mm. This indicates that the neutron
-        flux is fully attenuated after the saturation thickness.}
+        \includegraphics[width=\textwidth]{figures/Blanket Thickness New.png}
         \label{fig:blanket_thickness}
     \end{subfigure}
     \hfill % This pushes the figures to opposite sides
@@ -904,15 +964,13 @@ that hold true across different blanket concepts.
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/BreederBlanketHeatmapSlice.png}
-        \caption{This heatmap confirms the attenuation of the neutron flux after the saturation
-        thickness, by indicating almost no TBR reactions after 600mm through the breeder blanket.
-        The Low level of TBR reactions in the first wall is due to its Zirconium Composition, which
-        has a highly endothermic TBR reaction with a very low cross section.}
         \label{fig:heatmap_slice}
     \end{subfigure}
-
-    \caption{(a) Demonstrates the asymptotic trend of TBR against blanket thickness. (b) confirms
-    neutron attentuation as the physical cause.}
+    \caption{Analysis of Breeder Blanket radial thickness. (a) TBR saturates at approximately 500
+    mm, suggesting full neutron attenuation. (b) Cross-sectional heatmap of reaction density. The
+    reaction rate drops to negligible levels beyond the 600 mm mark, confirming the saturation
+    thickness observed in (a). Error bars are included but are too small to be visible at this
+    scale.}
     \label{fig:blanket_thicknesses}
 \end{figure}
 

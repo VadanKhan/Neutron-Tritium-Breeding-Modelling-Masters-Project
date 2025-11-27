@@ -2250,76 +2250,6 @@
       \endverb
       \keyw{{DCLL},Liquid Breeder,Lit Review,Useful}
     \endentry
-    \entry{segantin_optimization_2020}{article}{}{}
-      \name{author}{5}{}{%
-        {{hash=258ba466cb598d470b38e0f8e659725f}{%
-           family={Segantin},
-           familyi={S\bibinitperiod},
-           given={Stefano},
-           giveni={S\bibinitperiod}}}%
-        {{hash=7efa5ce4db84b5d8cb9702b62e1da7c0}{%
-           family={Testoni},
-           familyi={T\bibinitperiod},
-           given={Raffaella},
-           giveni={R\bibinitperiod}}}%
-        {{hash=f9fa4ae70347efbb650f0b8f0a80a99b}{%
-           family={Hartwig},
-           familyi={H\bibinitperiod},
-           given={Zachary},
-           giveni={Z\bibinitperiod}}}%
-        {{hash=11d452fd3432998ea952ec408842d7d0}{%
-           family={Whyte},
-           familyi={W\bibinitperiod},
-           given={Dennis},
-           giveni={D\bibinitperiod}}}%
-        {{hash=4f1fa13218f6a714f24dfbc037614a1b}{%
-           family={Zucchetti},
-           familyi={Z\bibinitperiod},
-           given={Massimo},
-           giveni={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{3e665585c4c62752caa349c792117d54}
-      \strng{fullhash}{f4819bbf7d47d500302713496c94af80}
-      \strng{fullhashraw}{f4819bbf7d47d500302713496c94af80}
-      \strng{bibnamehash}{f4819bbf7d47d500302713496c94af80}
-      \strng{authorbibnamehash}{f4819bbf7d47d500302713496c94af80}
-      \strng{authornamehash}{3e665585c4c62752caa349c792117d54}
-      \strng{authorfullhash}{f4819bbf7d47d500302713496c94af80}
-      \strng{authorfullhashraw}{f4819bbf7d47d500302713496c94af80}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{annotation}{Modelling of {ARC} reactor {FLiBe} blanket using Monte Carlo simulation (not {OpenMC}). Plots {TBR} for different blanket variables, mainly focussed on wall thickness and enrichment. Somewhat limited since it only focusses on one blanket type. Still very useful as a comparison to our project.}
-      \field{issn}{09203796}
-      \field{journaltitle}{Fusion Engineering and Design.}
-      \field{langid}{english}
-      \field{month}{5}
-      \field{shortjournal}{Fusion Engineering and Design}
-      \field{title}{Optimization of tritium breeding ratio in {ARC} reactor}
-      \field{urlday}{8}
-      \field{urlmonth}{10}
-      \field{urlyear}{2025}
-      \field{volume}{154}
-      \field{year}{2020}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{1\bibrangedash 5}
-      \range{pages}{5}
-      \verb{doi}
-      \verb 10.1016/j.fusengdes.2020.111531
-      \endverb
-      \verb{file}
-      \verb Full Text:C\:\\Users\\vadan\\Zotero\\storage\\DYJLISCW\\Segantin et al. - 2020 - Optimization of tritium breeding ratio in ARC reactor.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S092037962030079X
-      \endverb
-      \verb{url}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S092037962030079X
-      \endverb
-      \keyw{{FLiBe} Salt,Liquid Breeder,Lit Review,{TBR},Useful}
-    \endentry
     \entry{segantin_neutronic_2020}{article}{}{}
       \name{author}{3}{}{%
         {{hash=258ba466cb598d470b38e0f8e659725f}{%
@@ -3850,7 +3780,79 @@
       \endverb
       \keyw{Lit Review,{TBR},Useful,{OpenMC},Paramak}
     \endentry
+    \entry{segantin_optimization_2020}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=258ba466cb598d470b38e0f8e659725f}{%
+           family={Segantin},
+           familyi={S\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7efa5ce4db84b5d8cb9702b62e1da7c0}{%
+           family={Testoni},
+           familyi={T\bibinitperiod},
+           given={Raffaella},
+           giveni={R\bibinitperiod}}}%
+        {{hash=f9fa4ae70347efbb650f0b8f0a80a99b}{%
+           family={Hartwig},
+           familyi={H\bibinitperiod},
+           given={Zachary},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=11d452fd3432998ea952ec408842d7d0}{%
+           family={Whyte},
+           familyi={W\bibinitperiod},
+           given={Dennis},
+           giveni={D\bibinitperiod}}}%
+        {{hash=4f1fa13218f6a714f24dfbc037614a1b}{%
+           family={Zucchetti},
+           familyi={Z\bibinitperiod},
+           given={Massimo},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{3e665585c4c62752caa349c792117d54}
+      \strng{fullhash}{f4819bbf7d47d500302713496c94af80}
+      \strng{fullhashraw}{f4819bbf7d47d500302713496c94af80}
+      \strng{bibnamehash}{f4819bbf7d47d500302713496c94af80}
+      \strng{authorbibnamehash}{f4819bbf7d47d500302713496c94af80}
+      \strng{authornamehash}{3e665585c4c62752caa349c792117d54}
+      \strng{authorfullhash}{f4819bbf7d47d500302713496c94af80}
+      \strng{authorfullhashraw}{f4819bbf7d47d500302713496c94af80}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Modelling of {ARC} reactor {FLiBe} blanket using Monte Carlo simulation (not {OpenMC}). Plots {TBR} for different blanket variables, mainly focussed on wall thickness and enrichment. Somewhat limited since it only focusses on one blanket type. Still very useful as a comparison to our project.}
+      \field{issn}{09203796}
+      \field{journaltitle}{Fusion Engineering and Design.}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{shortjournal}{Fusion Engineering and Design}
+      \field{title}{Optimization of tritium breeding ratio in {ARC} reactor}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{154}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 5}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1016/j.fusengdes.2020.111531
+      \endverb
+      \verb{file}
+      \verb Full Text:C\:\\Users\\vadan\\Zotero\\storage\\DYJLISCW\\Segantin et al. - 2020 - Optimization of tritium breeding ratio in ARC reactor.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S092037962030079X
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S092037962030079X
+      \endverb
+      \keyw{{FLiBe} Salt,Liquid Breeder,Lit Review,{TBR},Useful}
+    \endentry
   \enddatalist
+  \missing{goel_optimisation_2023}
+  \missing{segantin_optimisation_2020}
 \endrefsection
 \endinput
 
