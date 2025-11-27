@@ -2466,14 +2466,37 @@
     <bcf:citekey order="58" intorder="1">boullon_molten_2021</bcf:citekey>
     <bcf:citekey order="59" intorder="1">segantin_neutronic_2020</bcf:citekey>
     <bcf:citekey order="60" intorder="1">goel_optimisation_2023</bcf:citekey>
-    <bcf:citekey order="61" intorder="1">kalos_monte_2008</bcf:citekey>
-    <bcf:citekey order="62" intorder="1">brown_endfb-viii0_2018</bcf:citekey>
-    <bcf:citekey order="63" intorder="1">romano_openmc_2015</bcf:citekey>
-    <bcf:citekey order="64" intorder="1">bae_arc_2022</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">kuridan_neutron_2023</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">kalos_monte_2008</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">brown_endfb-viii0_2018</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">kuridan_neutron_2023</bcf:citekey>
+    <bcf:citekey order="64" intorder="2">romano_openmc_2015</bcf:citekey>
     <bcf:citekey order="65" intorder="1">shimwell_paramak_2021</bcf:citekey>
-    <bcf:citekey order="66" intorder="1">shimwell_paramak_2021</bcf:citekey>
-    <bcf:citekey order="67" intorder="1">goel_optimization_2023</bcf:citekey>
-    <bcf:citekey order="67" intorder="2">segantin_optimization_2020</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">romano_openmc_2015</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">bae_arc_2022</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">muir_sensitivity_1974</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">wandelt_encyclopedia_2018</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">mas_de_les_valls_leadlithium_2008</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">hernandez_first_2018</bcf:citekey>
+    <bcf:citekey order="71" intorder="2">boullon_molten_2021</bcf:citekey>
+    <bcf:citekey order="71" intorder="3">segantin_optimisation_2020</bcf:citekey>
+    <bcf:citekey order="71" intorder="4">segantin_neutronic_2020</bcf:citekey>
+    <bcf:citekey order="71" intorder="5">kurasawa_ceramic_1995</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">hirose_functional_2024</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">wang_current_2019</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">shatalov_breeder_1991</bcf:citekey>
+    <bcf:citekey order="74" intorder="2">wang_current_2019</bcf:citekey>
+    <bcf:citekey order="74" intorder="3">knitter_recent_2013</bcf:citekey>
+    <bcf:citekey order="75" intorder="1">king_high_2022</bcf:citekey>
+    <bcf:citekey order="76" intorder="1">boullon_molten_2021</bcf:citekey>
+    <bcf:citekey order="76" intorder="2">lei_design_2020</bcf:citekey>
+    <bcf:citekey order="77" intorder="1">lei_design_2020</bcf:citekey>
+    <bcf:citekey order="77" intorder="2">liu_design_2022</bcf:citekey>
+    <bcf:citekey order="78" intorder="1">goel_optimisation_2023</bcf:citekey>
+    <bcf:citekey order="78" intorder="2">segantin_optimisation_2020</bcf:citekey>
+    <bcf:citekey order="79" intorder="1">stornelli_ultra-fine_2024</bcf:citekey>
+    <bcf:citekey order="80" intorder="1">stornelli_ultra-fine_2024</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">stornelli_ultra-fine_2024</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

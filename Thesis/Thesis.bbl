@@ -2250,6 +2250,76 @@
       \endverb
       \keyw{{DCLL},Liquid Breeder,Lit Review,Useful}
     \endentry
+    \entry{segantin_optimisation_2020}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=258ba466cb598d470b38e0f8e659725f}{%
+           family={Segantin},
+           familyi={S\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7efa5ce4db84b5d8cb9702b62e1da7c0}{%
+           family={Testoni},
+           familyi={T\bibinitperiod},
+           given={Raffaella},
+           giveni={R\bibinitperiod}}}%
+        {{hash=f9fa4ae70347efbb650f0b8f0a80a99b}{%
+           family={Hartwig},
+           familyi={H\bibinitperiod},
+           given={Zachary},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=11d452fd3432998ea952ec408842d7d0}{%
+           family={Whyte},
+           familyi={W\bibinitperiod},
+           given={Dennis},
+           giveni={D\bibinitperiod}}}%
+        {{hash=4f1fa13218f6a714f24dfbc037614a1b}{%
+           family={Zucchetti},
+           familyi={Z\bibinitperiod},
+           given={Massimo},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{3e665585c4c62752caa349c792117d54}
+      \strng{fullhash}{f4819bbf7d47d500302713496c94af80}
+      \strng{fullhashraw}{f4819bbf7d47d500302713496c94af80}
+      \strng{bibnamehash}{f4819bbf7d47d500302713496c94af80}
+      \strng{authorbibnamehash}{f4819bbf7d47d500302713496c94af80}
+      \strng{authornamehash}{3e665585c4c62752caa349c792117d54}
+      \strng{authorfullhash}{f4819bbf7d47d500302713496c94af80}
+      \strng{authorfullhashraw}{f4819bbf7d47d500302713496c94af80}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Modelling of {ARC} reactor {FLiBe} blanket using Monte Carlo simulation (not {OpenMC}). Plots {TBR} for different blanket variables, mainly focussed on wall thickness and enrichment. Somewhat limited since it only focusses on one blanket type. Still very useful as a comparison to our project.}
+      \field{issn}{09203796}
+      \field{journaltitle}{Fusion Engineering and Design.}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{shortjournal}{Fusion Engineering and Design}
+      \field{title}{Optimization of tritium breeding ratio in {ARC} reactor}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{154}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 5}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1016/j.fusengdes.2020.111531
+      \endverb
+      \verb{file}
+      \verb Full Text:C\:\\Users\\vadan\\Zotero\\storage\\DYJLISCW\\Segantin et al. - 2020 - Optimization of tritium breeding ratio in ARC reactor.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S092037962030079X
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S092037962030079X
+      \endverb
+      \keyw{{FLiBe} Salt,Liquid Breeder,Lit Review,{TBR},Useful}
+    \endentry
     \entry{segantin_neutronic_2020}{article}{}{}
       \name{author}{3}{}{%
         {{hash=258ba466cb598d470b38e0f8e659725f}{%
@@ -3717,7 +3787,7 @@
       \endverb
       \keyw{{FLiBe},Liquid Breeder,Lit Review,{TBR},Useful}
     \endentry
-    \entry{goel_optimization_2023}{misc}{}{}
+    \entry{goel_optimisation_2023}{misc}{}{}
       \name{author}{3}{}{%
         {{hash=b745363efdfed37a2770b4c5b1564edf}{%
            family={Goel},
@@ -3780,79 +3850,254 @@
       \endverb
       \keyw{Lit Review,{TBR},Useful,{OpenMC},Paramak}
     \endentry
-    \entry{segantin_optimization_2020}{article}{}{}
-      \name{author}{5}{}{%
-        {{hash=258ba466cb598d470b38e0f8e659725f}{%
-           family={Segantin},
-           familyi={S\bibinitperiod},
-           given={Stefano},
-           giveni={S\bibinitperiod}}}%
-        {{hash=7efa5ce4db84b5d8cb9702b62e1da7c0}{%
-           family={Testoni},
-           familyi={T\bibinitperiod},
-           given={Raffaella},
-           giveni={R\bibinitperiod}}}%
-        {{hash=f9fa4ae70347efbb650f0b8f0a80a99b}{%
-           family={Hartwig},
-           familyi={H\bibinitperiod},
-           given={Zachary},
-           giveni={Z\bibinitperiod}}}%
-        {{hash=11d452fd3432998ea952ec408842d7d0}{%
-           family={Whyte},
-           familyi={W\bibinitperiod},
-           given={Dennis},
-           giveni={D\bibinitperiod}}}%
-        {{hash=4f1fa13218f6a714f24dfbc037614a1b}{%
-           family={Zucchetti},
-           familyi={Z\bibinitperiod},
-           given={Massimo},
-           giveni={M\bibinitperiod}}}%
+    \entry{muir_sensitivity_1974}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=1ced3c024f52be64c1f8a80a26e2ab10}{%
+           family={Muir},
+           familyi={M\bibinitperiod},
+           given={D.\bibnamedelimi W.},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
       }
-      \strng{namehash}{3e665585c4c62752caa349c792117d54}
-      \strng{fullhash}{f4819bbf7d47d500302713496c94af80}
-      \strng{fullhashraw}{f4819bbf7d47d500302713496c94af80}
-      \strng{bibnamehash}{f4819bbf7d47d500302713496c94af80}
-      \strng{authorbibnamehash}{f4819bbf7d47d500302713496c94af80}
-      \strng{authornamehash}{3e665585c4c62752caa349c792117d54}
-      \strng{authorfullhash}{f4819bbf7d47d500302713496c94af80}
-      \strng{authorfullhashraw}{f4819bbf7d47d500302713496c94af80}
+      \list{institution}{1}{%
+        {Los Alamos Scientific Lab}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \strng{namehash}{1ced3c024f52be64c1f8a80a26e2ab10}
+      \strng{fullhash}{1ced3c024f52be64c1f8a80a26e2ab10}
+      \strng{fullhashraw}{1ced3c024f52be64c1f8a80a26e2ab10}
+      \strng{bibnamehash}{1ced3c024f52be64c1f8a80a26e2ab10}
+      \strng{authorbibnamehash}{1ced3c024f52be64c1f8a80a26e2ab10}
+      \strng{authornamehash}{1ced3c024f52be64c1f8a80a26e2ab10}
+      \strng{authorfullhash}{1ced3c024f52be64c1f8a80a26e2ab10}
+      \strng{authorfullhashraw}{1ced3c024f52be64c1f8a80a26e2ab10}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{annotation}{Modelling of {ARC} reactor {FLiBe} blanket using Monte Carlo simulation (not {OpenMC}). Plots {TBR} for different blanket variables, mainly focussed on wall thickness and enrichment. Somewhat limited since it only focusses on one blanket type. Still very useful as a comparison to our project.}
+      \field{number}{{LA}-{UR}-74-613}
+      \field{title}{Sensitivity of neutron multigroup cross sections to thermal broadening of the fusion peak}
+      \field{type}{{CONF}-740402-33}
+      \field{year}{1974}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.osti.gov/servlets/purl/4305375
+      \endverb
+      \verb{url}
+      \verb https://www.osti.gov/servlets/purl/4305375
+      \endverb
+    \endentry
+    \entry{wandelt_encyclopedia_2018}{collection}{}{}
+      \name{editor}{1}{}{%
+        {{hash=831edc02fd4db4eec74b418265be23cb}{%
+           family={Wandelt},
+           familyi={W\bibinitperiod},
+           given={Klaus},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Amsterdam, Netherlands Oxford, {UK} Cambidge, {USA}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{831edc02fd4db4eec74b418265be23cb}
+      \strng{fullhash}{831edc02fd4db4eec74b418265be23cb}
+      \strng{fullhashraw}{831edc02fd4db4eec74b418265be23cb}
+      \strng{bibnamehash}{831edc02fd4db4eec74b418265be23cb}
+      \strng{editorbibnamehash}{831edc02fd4db4eec74b418265be23cb}
+      \strng{editornamehash}{831edc02fd4db4eec74b418265be23cb}
+      \strng{editorfullhash}{831edc02fd4db4eec74b418265be23cb}
+      \strng{editorfullhashraw}{831edc02fd4db4eec74b418265be23cb}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{shorttitle}
+      \field{annotation}{Includes index}
+      \field{isbn}{978-0-12-809894-3}
+      \field{pagetotal}{1}
+      \field{shorttitle}{Encyclopedia of interfacial chemistry}
+      \field{title}{Encyclopedia of interfacial chemistry: surface science and electrochemistry}
+      \field{year}{2018}
+      \field{dateera}{ce}
+    \endentry
+    \entry{kurasawa_ceramic_1995}{article}{}{}
+      \name{author}{11}{}{%
+        {{hash=78a8857094c5b5270092df233d2fae16}{%
+           family={Kurasawa},
+           familyi={K\bibinitperiod},
+           given={T},
+           giveni={T\bibinitperiod}}}%
+        {{hash=b19d3a837f36931ba029d4e117c96e9d}{%
+           family={Takatsu},
+           familyi={T\bibinitperiod},
+           given={H},
+           giveni={H\bibinitperiod}}}%
+        {{hash=5548c9f420c4e97704e65eb2177bef28}{%
+           family={Sato},
+           familyi={S\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+        {{hash=795003cc8918f3dfadd6bcef48f35379}{%
+           family={Mori},
+           familyi={M\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c0f7e4a1a25c77a832994e959c467413}{%
+           family={Hashimoto},
+           familyi={H\bibinitperiod},
+           given={T},
+           giveni={T\bibinitperiod}}}%
+        {{hash=810a37d84a8a81f5116b792472c06666}{%
+           family={Nakahira},
+           familyi={N\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1a6d20fd450d69ffb6c0d50fe53e978e}{%
+           family={Furuya},
+           familyi={F\bibinitperiod},
+           given={K},
+           giveni={K\bibinitperiod}}}%
+        {{hash=dc8c18c6ab7720be41aa9079d60e6e22}{%
+           family={Tsunematsu},
+           familyi={T\bibinitperiod},
+           given={T},
+           giveni={T\bibinitperiod}}}%
+        {{hash=eeb16a7b7254a0b7ff9287feb16bb936}{%
+           family={Seki},
+           familyi={S\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7b8272fa51b8623f1b5e7fa7720b677b}{%
+           family={Kawamura},
+           familyi={K\bibinitperiod},
+           given={H},
+           giveni={H\bibinitperiod}}}%
+        {{hash=9b37a37f4f3f016c7d914ab4cb8f020a}{%
+           family={Kuroda},
+           familyi={K\bibinitperiod},
+           given={T},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{d2025f2c83796f4362da5b2ecfe86043}
+      \strng{fullhash}{b531323a45519879fe3ddb5cd92c9eac}
+      \strng{fullhashraw}{b531323a45519879fe3ddb5cd92c9eac}
+      \strng{bibnamehash}{b90350f50bdbdfa110f9e9c64da07af1}
+      \strng{authorbibnamehash}{b90350f50bdbdfa110f9e9c64da07af1}
+      \strng{authornamehash}{d2025f2c83796f4362da5b2ecfe86043}
+      \strng{authorfullhash}{b531323a45519879fe3ddb5cd92c9eac}
+      \strng{authorfullhashraw}{b531323a45519879fe3ddb5cd92c9eac}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Outline of water cooled ceramic blanket designed by the Japanese Atomic Energy Research Institute for {ITER}. Earliest example of {WCPB} concept. A bunch of research, mostly on thermal/mechanical properties. Probably useful when talking about blanket variants.}
       \field{issn}{09203796}
       \field{journaltitle}{Fusion Engineering and Design.}
       \field{langid}{english}
-      \field{month}{5}
+      \field{month}{3}
       \field{shortjournal}{Fusion Engineering and Design}
-      \field{title}{Optimization of tritium breeding ratio in {ARC} reactor}
-      \field{urlday}{8}
+      \field{title}{Ceramic breeding blanket development for experimental fusion reactor in {JAERI}}
+      \field{urlday}{7}
       \field{urlmonth}{10}
       \field{urlyear}{2025}
-      \field{volume}{154}
-      \field{year}{2020}
+      \field{volume}{27}
+      \field{year}{1995}
       \field{dateera}{ce}
       \field{urldateera}{ce}
-      \field{pages}{1\bibrangedash 5}
-      \range{pages}{5}
+      \field{pages}{449\bibrangedash 456}
+      \range{pages}{8}
       \verb{doi}
-      \verb 10.1016/j.fusengdes.2020.111531
+      \verb 10.1016/0920-3796(95)90158-2
       \endverb
       \verb{file}
-      \verb Full Text:C\:\\Users\\vadan\\Zotero\\storage\\DYJLISCW\\Segantin et al. - 2020 - Optimization of tritium breeding ratio in ARC reactor.pdf:application/pdf
+      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\Y4MRBGI3\\Kurasawa et al. - 1995 - Ceramic breeding blanket development for experimental fusion reactor in JAERI.pdf:application/pdf
       \endverb
       \verb{urlraw}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S092037962030079X
+      \verb https://linkinghub.elsevier.com/retrieve/pii/0920379695901582
       \endverb
       \verb{url}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S092037962030079X
+      \verb https://linkinghub.elsevier.com/retrieve/pii/0920379695901582
       \endverb
-      \keyw{{FLiBe} Salt,Liquid Breeder,Lit Review,{TBR},Useful}
+      \keyw{Lit Review,Useful,Solid Breeder,{WCPB}}
+    \endentry
+    \entry{stornelli_ultra-fine_2024}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=37dcf790b4696c917baf25aec09c1e65}{%
+           family={Stornelli},
+           familyi={S\bibinitperiod},
+           given={Giulia},
+           giveni={G\bibinitperiod}}}%
+        {{hash=ebde6a86fc532be40452df0f05d761a4}{%
+           family={Di\bibnamedelima Schino},
+           familyi={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4cf753976c545ce077f56ec7f34538a0}{%
+           family={Montanari},
+           familyi={M\bibinitperiod},
+           given={Roberto},
+           giveni={R\bibinitperiod}}}%
+        {{hash=16291afd0a7d86032e11e31c0859156f}{%
+           family={Sgambetterra},
+           familyi={S\bibinitperiod},
+           given={Mirko},
+           giveni={M\bibinitperiod}}}%
+        {{hash=138cceb0c1c486318568750157e8896d}{%
+           family={Testani},
+           familyi={T\bibinitperiod},
+           given={Claudio},
+           giveni={C\bibinitperiod}}}%
+        {{hash=3dde12846fa8ddc3454a1d6d070f10f4}{%
+           family={Varone},
+           familyi={V\bibinitperiod},
+           given={Alessandra},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{712834eec8f94ec3c559f0b4cb72f4ed}
+      \strng{fullhash}{04e38a5196b1de6dc0568b57e07e1dab}
+      \strng{fullhashraw}{04e38a5196b1de6dc0568b57e07e1dab}
+      \strng{bibnamehash}{04e38a5196b1de6dc0568b57e07e1dab}
+      \strng{authorbibnamehash}{04e38a5196b1de6dc0568b57e07e1dab}
+      \strng{authornamehash}{712834eec8f94ec3c559f0b4cb72f4ed}
+      \strng{authorfullhash}{04e38a5196b1de6dc0568b57e07e1dab}
+      \strng{authorfullhashraw}{04e38a5196b1de6dc0568b57e07e1dab}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Description of {EUROFER}97 and its properties with regards to fusion reactors. Its combination of strong material properties and thermodynamic properties mean it’s the go to material for fusion reactor structures. It is also a Reduced Activation Ferritic-Martenistic ({RAFM}) steel, which makes it desirable for use in radioactive enviroments. Not a reference that is likely to be used a lot but, especially not in the lit review but useful to have.}
+      \field{issn}{22387854}
+      \field{journaltitle}{Journal of Materials Research and Technology.}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{shortjournal}{Journal of Materials Research and Technology}
+      \field{title}{Ultra-fine grained {EUROFER}97 steel for nuclear fusion applications}
+      \field{urlday}{7}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{33}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{5075\bibrangedash 5087}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1016/j.jmrt.2024.10.069
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\L9CXNQI7\\Stornelli et al. - 2024 - Ultra-fine grained EUROFER97 steel for nuclear fusion applications.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S2238785424023391
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S2238785424023391
+      \endverb
+      \keyw{Lit Review,Useful}
     \endentry
   \enddatalist
-  \missing{goel_optimisation_2023}
-  \missing{segantin_optimisation_2020}
 \endrefsection
 \endinput
 
