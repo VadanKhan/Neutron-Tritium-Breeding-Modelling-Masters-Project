@@ -155,7 +155,8 @@
     \vspace*{2cm} % Add some space from the top
 
     % --- Manually formatted title ---
-    {\Large \bfseries Neutron Transport and Tritium Breeding Modelling in Nuclear Fusion Reactor Breeder Blankets \par}
+    {\Large \bfseries Neutron Transport and Tritium Breeding Modelling in Nuclear Fusion Reactor
+    Breeder Blankets \par}
     \vspace{0.5em}
     {\normalsize MPhys Project Report \par}
 
@@ -202,6 +203,7 @@
 % --- title page ---
 
 \tableofcontents
+\clearpage
 
 \section{Introduction}
 
@@ -236,6 +238,7 @@ This project contributes to that effort by using advanced Monte Carlo simulation
 interactions within candidate breeder blanket materials. Through this, it aims to identify promising
 compositions and geometries capable of sustaining tritium self-sufficiency in future fusion power
 plants.
+
 
 
 \section{Theory}
@@ -320,9 +323,26 @@ The study of its journey and interactions with the blanket materials is the doma
 As the neutron moves through matter, it interacts with atomic nuclei via two main processes:
 scattering and absorption. The probability of any specific interaction occurring is defined by the
 material's \textbf{microscopic cross-section ($\sigma$)}, a value that is highly dependent on the energy
-of the incident neutron \cite{kuridan_neutron_2023}. These cross-sections are meticulously measured
-and compiled in comprehensive libraries such as the Evaluated Nuclear Data File (ENDF)
-\cite{brown_endfb-viii0_2018}.
+of the incident neutron \cite{kuridan_neutron_2023}.
+
+While $\sigma$ represents the effective target area of a single nucleus, reactor engineering
+requires understanding interactions within bulk matter. The probability of interaction per unit path
+length is defined as the \textbf{macroscopic cross-section ($\Sigma$)}:
+\begin{equation}
+\Sigma = N \sigma
+\end{equation}
+where $N$ is the atomic number density of the material \cite{nuclearphysics}. Consequently, the
+average distance a neutron travels through a medium before undergoing an interaction, known as the
+\textbf{mean free path ($\lambda$)}, is inversely proportional to the total macroscopic
+cross-section:
+\begin{equation}
+\lambda = \frac{1}{\Sigma_{total}}
+\end{equation}
+This parameter is fundamental to blanket design, as it dictates the physical thickness required to
+effectively attenuate the neutron flux and capture energy \cite{nuclearphysics}.
+
+These cross-sections are meticulously measured and compiled in comprehensive libraries such as the
+Evaluated Nuclear Data File (ENDF) \cite{brown_endfb-viii0_2018}.
 
 Key interactions within the blanket include:
 \subsubsection{Scattering Interactions}
@@ -409,6 +429,7 @@ significantly greater than one \cite{hernandez_first_2018}.
     multiply the neutron population.}
     \label{fig:multiplier_cross_sections}
 \end{figure}
+
 
 
 \section{Literature Review}
@@ -865,17 +886,6 @@ moderating properties.
 Pure lithium, LiF and LiN3 (and to a lesser extent LiF-LiI2) have significant Li-7 TBR contributions
 due to the lack of a dedicated breeder element within the compound.
 
-Table~\ref{tab:solid_breeders} indicates that solid ceramics display remarkably consistent
-performance compared to liquids, displayed by the low standard deviation on the average TBR: TBR$=
-1.48 \pm 0.03$. This uniformity arises both from the relatively similar atomic compositions of the
-molecules (mostly lithium and oxygen) and the standardised multiplier configuration (\ce{Be12Ti} at
-a 1:3 ratio) defined in Section~\ref{sec:base_compositions}.
-
-Among the specific compounds, Cerium-based ceramics achieved the highest TBR due to the low
-parasitic capture cross-sections of Cerium. Conversely, Cobalt-based compounds act as outliers,
-yielding lower TBRs despite the high multiplier fraction; this is attributed to the higher
-absorption and scattering cross-sections of Cobalt, which degrade the neutron economy.
-
 \begin{table}[htbp]
     \centering
     \caption{A summary of solid breeder materials, their properties, and simulated TBR (error on
@@ -911,6 +921,17 @@ absorption and scattering cross-sections of Cobalt, which degrade the neutron ec
     \end{tabular}
 \end{table}
 
+Table~\ref{tab:solid_breeders} indicates that solid ceramics display remarkably consistent
+performance compared to liquids, displayed by the low standard deviation on the average TBR: TBR$=
+1.48 \pm 0.03$. This uniformity arises both from the relatively similar atomic compositions of the
+molecules (mostly lithium and oxygen) and the standardised multiplier configuration (\ce{Be12Ti} at
+a 1:3 ratio) defined in Section~\ref{sec:base_compositions}.
+
+Among the specific compounds, Cerium-based ceramics achieved the highest TBR due to the low
+parasitic capture cross-sections of Cerium. Conversely, Cobalt-based compounds act as outliers,
+yielding lower TBRs despite the high multiplier fraction; this is attributed to the higher
+absorption and scattering cross-sections of Cobalt, which degrade the neutron economy.
+
 \subsection{Isotopic and Compositional Optimisation}
 
 Figure~\ref{fig:enrichment} illustrates the sensitivity of TBR to \ce{^{6}Li} enrichment. The dip in
@@ -926,7 +947,7 @@ lower enrichment percentages.
 \begin{figure}[htbp]
     \centering
     % You can adjust the width as needed for your document layout
-    \includegraphics[width=0.7\textwidth]{figures/lithium_enrichment_sweep.png}
+    \includegraphics[width=0.5\textwidth]{figures/lithium_enrichment_sweep.png}
     \caption{Tritium Breeding Ratio (TBR) as a function of \ce{^6Li} enrichment percentage. The
     curve is characterised by a rapid initial increase which saturates early; the ``knee" of the curve
     appears at approximately 20\%, with the TBR effectively capping at 40\%. Beyond this saturation
@@ -944,7 +965,7 @@ stronger factor affecting liquid TBR improvements than simple multiplier - breed
 \begin{figure}[htbp]
     \centering
     % You can adjust the width as needed for your document layout
-    \includegraphics[width=0.7\textwidth]{figures/LL New Chi.png}
+    \includegraphics[width=0.5\textwidth]{figures/LL New Chi.png}
     \caption{TBR dependence on Lead fraction in a simplified non-eutectic / constant packing factor
     $\text{Li}_{(100-x)}\text{Pb}_x$ breeder, where the density is calculated as a simple weighted
     average of \ce{Li} and \ce{Pb}. Breeding performance peaks at approximately 50\% lead
@@ -1013,7 +1034,7 @@ superior neutronic performance, as they have the lowest parasitic neutron absorp
 \begin{figure}[htbp]
     \centering
     % You can adjust the width as needed for your document layout
-    \includegraphics[width=0.7\textwidth]{figures/triangularity_tbr_sweep.png}
+    \includegraphics[width=0.5\textwidth]{figures/triangularity_tbr_sweep.png}
     \caption{Sensitivity of TBR to reactor triangularity ($\delta$). The gradient of $0.015 \pm
     0.001$ indicates that triangularity has a negligible impact on global neutronics, consistent
     with the use of a uniform ring source model.}
@@ -1023,7 +1044,7 @@ superior neutronic performance, as they have the lowest parasitic neutron absorp
 \begin{figure}[htbp]
     \centering
     % You can adjust the width as needed for your document layout
-    \includegraphics[width=0.7\textwidth]{figures/FW Thickness New.png}
+    \includegraphics[width=0.5\textwidth]{figures/FW Thickness New.png}
     \caption{TBR degradation as a function of First Wall (FW) thickness for various candidate
     materials, including EUROFER97 \cite{stornelli_ultra-fine_2024} and Zr-4 as defined in
     Section~\ref{sec:base_compositions}. Zirconium-based alloys demonstrate the lowest parasitic
@@ -1063,11 +1084,121 @@ breeder depth beyond 600 mm yields negligible gains in tritium production.
 \end{figure}
 
 
+
 \section{Discussion}
+
+The results presented in Section 5 quantify the neutronic performance of various breeder blanket
+concepts. While the simulation data identifies specific maxima for Tritium Breeding Ratio (TBR), the
+selection of a viable blanket design for a fusion power plant requires a holistic evaluation that
+balances neutronic efficiency against thermal-hydraulic, structural, and economic constraints
+\cite{hernandez_first_2018, federici_european_2017}.
+
 \subsection{TBR Optimisation Strategies}
+
+\subsubsection{Isotopic and Compositional Efficiency}
+The study confirms that the eutectic Lithium-Lead alloy (\ce{Li17Pb83}) offers superior breeding
+performance compared to molten salts, primarily driven by the neutron multiplication capabilities of
+lead \cite{malang_self-cooled_1991}. However, the simulation highlights a critical physical
+distinction: the superior performance of the eutectic alloy over non-eutectic mixtures
+(Figure~\ref{fig:multiplier}) cannot be explained by stoichiometry alone. The eutectic formation
+allows for a packing efficiency that results in a density approximately 15\% higher than the
+weighted average of its constituents \cite{mas_de_les_valls_leadlithium_2008}. This increased
+macroscopic cross-section is the dominant factor in maximising the neutron economy.
+
+A significant finding for reactor optimisation is the behaviour of \ce{^6Li} enrichment
+(Figure~\ref{fig:enrichment}). While high enrichment is often assumed to be beneficial, our results
+indicate a saturation point at approximately 40\% enrichment. Beyond this point, the blanket becomes
+``neutron-limited'' rather than ``target-limited.'' Furthermore, enrichment levels approaching 100\%
+actually degrade performance. This is attributed to the total depletion of \ce{^7Li}, which removes
+the contribution of the $\ce{^7Li(n, n^\prime{} \alpha)t}$ reaction \cite{sawan_physics_2006}.
+Although this reaction is less frequent, it preserves the neutron population by emitting a secondary
+neutron, whereas the \ce{^6Li} reaction is purely absorptive. Economically, this suggests that
+costly high-enrichment processes are unnecessary; a moderate enrichment of 20--40\% represents the
+optimal trade-off between TBR and fuel cycle costs \cite{goel_optimisation_2023,
+segantin_optimisation_2020}.
+
+\subsubsection{Spatial and Geometric Optimisation}
+The saturation of TBR at a radial depth of roughly 500 mm (Figure~\ref{fig:blanket_thicknesses}) can
+be validated physically by considering the neutron mean free path ($\lambda$). Dominated by lead,
+the macroscopic total cross-section ($\Sigma_t$) of the breeder mixture yields a mean free path of
+$\lambda \approx 5.5$ cm for 14 MeV neutrons. A 500 mm blanket therefore represents approximately 9
+mean free paths, sufficient to attenuate over 99.9\% of the incident flux
+\cite{kuridan_neutron_2023}. Increasing the blanket thickness beyond this point provides no
+neutronic benefit and would act only as dead weight, complicating remote maintenance and increasing
+capital costs \cite{federici_overview_2019}.
+
 \subsection{Consequences to Other Critical Criteria}
+
+While this study maximised TBR, the ``optimal'' neutronic configurations often conflict with other
+critical reactor criteria.
+
+\subsubsection{Structural Integrity vs. Neutronics}
+The use of Zirconium-4 (Zr-4) as the First Wall (FW) material yielded the highest TBR due to its low
+parasitic absorption cross-section (Figure~\ref{fig:first_wall}) \cite{king_high_2022}. However,
+Zr-4 is generally unsuitable for the extreme neutron fluence and thermal stress of a DEMO-class
+reactor FW. Standard Reduced Activation Ferritic-Martensitic (RAFM) steels, such as EUROFER 97, are
+the engineering standard despite their higher neutron penalty \cite{stornelli_ultra-fine_2024}. Our
+results suggest that transitioning from an idealised Zr-4 wall to a realistic steel wall results in
+a TBR penalty of approximately 0.1 to 0.15. This parasitic loss must be compensated for by
+increasing the breeder volume or enrichment, highlighting the tight margins in fusion neutronics
+\cite{federici_european_2017}.
+
+\subsubsection{Safety and Coolant Selection}
+The choice of coolant represents a stark trade-off between performance and safety. Water (\ce{H2O})
+was shown to enhance TBR (Figure~\ref{fig:coolants}) significantly better than gaseous coolants due
+to its moderating power, which softens the neutron spectrum into the thermal region where the
+\ce{^6Li} cross-section is largest \cite{kurasawa_ceramic_1995}. However, the use of water in a
+lithium-based blanket introduces the risk of violent exothermic chemical reactions in the event of a
+leak \cite{kawamura_overview_2024, hirose_functional_2024}. While Helium avoids this chemical
+reactivity, our results show it acts effectively as a void, increasing neutron leakage and degrading
+TBR \cite{wang_current_2019}. A realistic design must therefore weigh the neutronic advantage of
+water moderation against the engineering complexity of double-walled piping and pressure suppression
+systems required to mitigate chemical hazards \cite{liu_design_2022}.
+
+\subsubsection{Energy Extraction (Heating)}
+A counter-intuitive trade-off exists regarding nuclear heating. While \ce{Li17Pb83} provided the
+highest TBR, it exhibited lower average heating per neutron compared to ceramic breeders (Table
+\ref{tab:liquid_breeders} vs Table \ref{tab:solid_breeders}). This is intrinsic to the physics of
+the multiplier: the \ce{(n, 2n)} reaction in lead is endothermic, consuming incident energy to
+liberate neutrons \cite{graham_dual_2022}. Conversely, the parasitic absorption in materials like
+Bromine salts yields high heating but low breeding \cite{bohm_initial_2023}. For a commercial power
+plant, where electricity generation is as vital as fuel self-sufficiency, the lower energy
+multiplication factor of lead-lithium systems is a distinct disadvantage that must be factored into
+the overall plant efficiency calculations \cite{meschini_modeling_2023}.
+
 \subsection{Model Limitations}
+
+The primary limitation of this study lies in the homogenisation of the blanket materials. By
+treating the breeder and coolant as a uniform mixture, the simulation neglects ``streaming
+effects,'' where neutrons escape through the void spaces of coolant channels without interaction
+\cite{fradera_pre-conceptual_2021}. This likely results in a slight overestimation of the TBR in our
+results compared to a heterogeneous model.
+
+Furthermore, the negligible impact of triangularity on TBR (Figure~\ref{fig:triangularity}) is
+likely an artifact of the simplified neutron source definition. The model utilised a uniform ring
+source which does not geometrically conform to the plasma shape variations associated with high
+triangularity \cite{shimwell_paramak_2021}. In a physical tokamak, increasing triangularity
+compresses the plasma volume and alters the view factor of the neutrons incident on the first wall,
+an effect not captured by the current source definition \cite{creely_overview_2020}.
+
 \subsection{Next Steps}
+
+Future work will focus on increasing the fidelity of the simulation model to address the limitations
+identified above.
+\begin{itemize}
+    \item \textbf{Heterogeneous Geometry:} Utilising the advanced features of Paramak to model
+    discrete cooling channels and pebble beds to quantify the effects of neutron streaming
+    \cite{shimwell_paramak_2021}.
+    \item \textbf{Plasma Source Definition:} Replacing the ring source with a parametric plasma
+    source that accurately maps the spatial distribution of fusion events, allowing for a true
+    investigation into the effects of plasma geometry \cite{fable_plasma_2018}.
+    \item \textbf{Structural Integration:} Moving beyond the idealised Zr-4 FW to simulate a full
+    CAD-based model of a DEMO-like blanket module, including internal stiffening plates and
+    manifolds, to provide a more conservative and realistic estimate of the global TBR
+    \cite{federici_overview_2019, lei_design_2020}.
+\end{itemize}
+
+
 
 \section{Conclusion}
 

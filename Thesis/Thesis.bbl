@@ -1035,8 +1035,8 @@
       \strng{authornamehash}{e836aa392e6de4613fa26c4ca4f3fc05}
       \strng{authorfullhash}{550ccdbc35af2e1fd7aa5675c6f58740}
       \strng{authorfullhashraw}{550ccdbc35af2e1fd7aa5675c6f58740}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A blanket design concept using Pb-17Li eutectic alloy as both breeder material and coolant is described. Such a self-cooled blanket for the boundary conditions of a {DEMO}-reactor is under development at the Kernforschungszentrum Karlsruhe ({KfK}) in the frame of the European blanket development program. Results of investigations in the areas of design, neutroncs, magneto-hydrodynamics, thermo-mechanics, ancillary loop systems, and safety are reported. Based on recent progress, it can be concluded that the boundary conditions of a {DEMO}-reactor can be met, tritium self-sufficiency can be obtained without using beryllium as an additional neutron multiplier, and tritium inventory and permeation are acceptably low. However, to completely judge the feasibility of the proposed concept, further studies are necessary to obtain a better understanding of the magneto-hydrodynamic phenomena and their effects on the thermal-hydraulic performance of a fusion reactor blanket.}
@@ -1487,8 +1487,8 @@
       \strng{authornamehash}{7a83cf0a82e8faa8d2f4c6949112bedf}
       \strng{authorfullhash}{1c0da675868112fb94d92e4a78be1e44}
       \strng{authorfullhashraw}{1c0da675868112fb94d92e4a78be1e44}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{A Chinese design for a proposed {HCCB} blanket for a future {DEMO} reactor. The design uses a Li2SiO4 pebble breeder with a beryllium pebble neutron multiplier cooled by helium gas. The paper details the proposed structural layout of the bed and the R\&D processes involved. Detailed example of a {HCCB} blanket design. May also be useful to emphasise the international collaboration involved in {ITER}.}
@@ -1603,8 +1603,8 @@
       \strng{authornamehash}{834d8dd26b8abe8438943700ba6f3008}
       \strng{authorfullhash}{d279f75dab62a92f71e079ecaa2e3d31}
       \strng{authorfullhashraw}{d279f75dab62a92f71e079ecaa2e3d31}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Another paper on the {WCPB} blanket for the {CFETR}. Detailed structural plans and properties.}
@@ -2214,8 +2214,8 @@
       \strng{authornamehash}{682a52c625b5a2371f2554dd1e141a81}
       \strng{authorfullhash}{cdf3d6bd094df5648f961ac93cea73f3}
       \strng{authorfullhashraw}{cdf3d6bd094df5648f961ac93cea73f3}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Abstract There is no doubt about the interest of achieving as fast as possible the capability to build and operate high performance reactors that finally allow fusion competing in the electricity market. An advanced breeding blanket based on the Dual Coolant Lithium Lead concept with single module segment architecture, designed for the European {DEMO}, is certainly aligned with such objective. This work describes some recent outcomes of the efforts carried out in the framework of the Prospective R\&D Work Package in {EUROfusion} to develop this line. The evolution of the design has been guided by strategies aimed to achieve an equilibrium between tritium breeding \& shielding requirements and mechanical integrity. To enhance the thermodynamic cycle efficiency and reduce the recirculation power by minimizing pressure losses in both the breeding zone and the first wall have been complementary guidelines. Specific models have been created to characterize phenomena like heat transfer and tritium permeation in the breeder channels. The experimental activities, which in general have produced promising results, have consisted in the characterization of different ceramic materials (carbides and oxides) in terms of functional properties at high temperature (as-received and irradiated/implanted samples) and compatibility with {PbLi}.}
@@ -3001,8 +3001,8 @@
       \strng{authornamehash}{6e0a73d3b09a2cacdf2642ced6c08803}
       \strng{authorfullhash}{6546e1b48236a7cd5458489cd16871ca}
       \strng{authorfullhashraw}{6546e1b48236a7cd5458489cd16871ca}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{annotation}{This paper detail how tritium and helium can get trapped in vacancies within lithium crystals. This is a particular issue for solid/ceramic based breeders. May be useful when discussing the disadvantages of solid breeders.}
@@ -3126,8 +3126,8 @@
       \strng{authornamehash}{e794a47201718d6ddc58230289bfc553}
       \strng{authorfullhash}{ec135e85a9d48e6f57efc05ad5a0ad8f}
       \strng{authorfullhashraw}{ec135e85a9d48e6f57efc05ad5a0ad8f}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Abstract In the pursuit of fusion power, achieving tritium self-sufficiency stands as a pivotal challenge. Tritium breeding within molten salts is a critical aspect of next-generation fusion reactors, yet experimental measurements of Tritium Breeding Ratio ({TBR}) have remained elusive. Here we present the results of the Build A Better Yield blanket experiment, which represents a pioneering effort in tritium research by utilizing high-energy (14 {MeV}) neutron irradiation of molten salts, a departure from conventional low-energy neutron approaches. Using a small-scale (100 ml) molten salt tritium breeding setup, we not only simulated, but also directly measured a {TBR} ( 3.57 × 10 − 4 ). This innovative approach provides crucial experimental validation, offering insights unattainable through simulation alone. Moreover, our findings reveal a surprising outcome: tritium was predominantly collected as {HT}, contrary to the expected {TF}. This underscores the complexity of tritium behavior in molten salts, highlighting the need for further investigation. This work lays the foundation for a more sophisticated experimental setup, including increasing the volume of the breeder, enhancing neutron detection, and refining tritium collection systems. Such improvements are crucial for advancing our understanding of fusion reactor feasibility and paving the way for future experiments.}
@@ -3229,8 +3229,8 @@
       \strng{authornamehash}{49ba0f1b13eeb6f9dd0f15cc9796e161}
       \strng{authorfullhash}{5b40557be8ba710d4fd852d762e6359b}
       \strng{authorfullhashraw}{5b40557be8ba710d4fd852d762e6359b}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{A paper discussing some practical mock-ups of a water cooled blanket model and the experimental results. Most experiments focussed on the material/thermodynamic properties however it still might be useful when mentioning practical blanket experiments.}
@@ -3751,8 +3751,8 @@
       \strng{authornamehash}{2dde413f18373c8d139ed8afd9b7bcda}
       \strng{authorfullhash}{2dde413f18373c8d139ed8afd9b7bcda}
       \strng{authorfullhashraw}{2dde413f18373c8d139ed8afd9b7bcda}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{In Europe, the {DEMO} test facility for Breeding Blankets ({BB}) will be the next step for fusion energy after {ITER}. The {BB} is a key component facing the plasma and ensuring tritium self-sufficiency, shielding against neutrons and heat extraction for electricity production. Within the {EU} research program, the two concepts candidates as driver {BB} in {DEMO} consider high-pressure coolants (water or helium) and Lithium-Lead or Beryllium pebble beds as breeder. In this article, an advanced {BB} concept is propounded as a candidate to be tested in {DEMO} taking into account Molten Salt ({MS}) as breeder and coolant and, consequently, named Breeder and Coolant Molten Salt ({BCMS}) {BB}. {BCMS} {BB} have several advantages, which lead to their investigations. As the {MS} is not pressurized during operation, high requirements associated to Nuclear Pressure Equipment ({ESPN} / {PED}) could be relaxed. Furthermore, the {MS} magnetohydrodynamic ({MHD}) flow is low due to its weak electrical conductivity. Besides, {MS} {BB} have identified drawbacks such as the structural material compatibility and the {MS} chemistry control needed during irradiation. A bibliographic review of {MS} and compatible materials is conducted. Promising {BCMS} {BB} are analysed regarding the Tritium Breeding Ratio ({TBR}) to test the capability of such {MS} breeders to reach the targeted {TBR}. The main nuclear quantities are evaluated with various {MS} on a dedicated model via the {TRIPOLI}-4® Monte-Carlo code: {TBR}, nuclear heating, neutron flux, displacement damage and helium production are reported and discussed. Moreover, the thermal and thermo-hydraulic responses of the {MS} {BB} are evaluated regarding the pressure drops (ΔP), the Pumping Power ({PP}) and the maximum temperatures in the structures. Nonetheless, preliminary design options are investigated. Finally, the major purpose is to evaluate the feasibility of a {BCMS} {BB} and identify their advantages and drawbacks.}
@@ -3872,8 +3872,8 @@
       \strng{authornamehash}{1ced3c024f52be64c1f8a80a26e2ab10}
       \strng{authorfullhash}{1ced3c024f52be64c1f8a80a26e2ab10}
       \strng{authorfullhashraw}{1ced3c024f52be64c1f8a80a26e2ab10}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{number}{{LA}-{UR}-74-613}
@@ -3910,8 +3910,8 @@
       \strng{editornamehash}{831edc02fd4db4eec74b418265be23cb}
       \strng{editorfullhash}{831edc02fd4db4eec74b418265be23cb}
       \strng{editorfullhashraw}{831edc02fd4db4eec74b418265be23cb}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{editor}
       \field{labeltitlesource}{shorttitle}
       \field{annotation}{Includes index}
@@ -4063,8 +4063,8 @@
       \strng{authornamehash}{712834eec8f94ec3c559f0b4cb72f4ed}
       \strng{authorfullhash}{04e38a5196b1de6dc0568b57e07e1dab}
       \strng{authorfullhashraw}{04e38a5196b1de6dc0568b57e07e1dab}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Description of {EUROFER}97 and its properties with regards to fusion reactors. Its combination of strong material properties and thermodynamic properties mean it’s the go to material for fusion reactor structures. It is also a Reduced Activation Ferritic-Martenistic ({RAFM}) steel, which makes it desirable for use in radioactive enviroments. Not a reference that is likely to be used a lot but, especially not in the lit review but useful to have.}
@@ -4096,6 +4096,394 @@
       \verb https://linkinghub.elsevier.com/retrieve/pii/S2238785424023391
       \endverb
       \keyw{Lit Review,Useful}
+    \endentry
+    \entry{graham_dual_2022}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=0285965f875de3d73f341d401f36833c}{%
+           family={Graham},
+           familyi={G\bibinitperiod},
+           given={Georgina},
+           giveni={G\bibinitperiod}}}%
+        {{hash=d5173f77f081031611d0f56d02a47c86}{%
+           family={Pearce},
+           familyi={P\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d1048bb10e84cdb115cdfe576b5e4cf7}{%
+           family={Morris},
+           familyi={M\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=22e6db07f8336563f466f3e6d719bf38}{%
+           family={Kembleton},
+           familyi={K\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{bd59d546d35d23fe74b1571c7ca43cc4}
+      \strng{fullhash}{b67d86c845b822648b73229ac1a75010}
+      \strng{fullhashraw}{b67d86c845b822648b73229ac1a75010}
+      \strng{bibnamehash}{b67d86c845b822648b73229ac1a75010}
+      \strng{authorbibnamehash}{b67d86c845b822648b73229ac1a75010}
+      \strng{authornamehash}{bd59d546d35d23fe74b1571c7ca43cc4}
+      \strng{authorfullhash}{b67d86c845b822648b73229ac1a75010}
+      \strng{authorfullhashraw}{b67d86c845b822648b73229ac1a75010}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{A {CCFE} paper on dual coolant blanket design. Includes some interesting principles of solid and liquid fuel properties and the strengths and weaknesses of each. Specifically explores the improved thermodynamic performance of a Dual Coolant Lithium Lead blanket in comparison with the {HCPB}.}
+      \field{journaltitle}{Journal of Nuclear Engineering.}
+      \field{title}{A Dual Coolant Lithium Lead Breeder Blanket for a Fusion Power Plant Systems Model}
+      \field{volume}{1}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+      \verb{file}
+      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\L3MVCEZP\\Graham et al. - 2022 - A Dual Coolant Lithium Lead Breeder Blanket for a Fusion Power Plant Systems Model.PDF:application/pdf
+      \endverb
+      \keyw{Liquid Breeder,Useful,{DCLL}}
+    \endentry
+    \entry{creely_overview_2020}{article}{}{}
+      \name{author}{46}{}{%
+        {{hash=7fce0590e61be931ef6b542a1aa64902}{%
+           family={Creely},
+           familyi={C\bibinitperiod},
+           given={A.\bibnamedelimi J.},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=39d974cb83ab1daa1ad726ec2fc1a2fe}{%
+           family={Greenwald},
+           familyi={G\bibinitperiod},
+           given={M.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=4a31a171055cf5bfc58079bc35e6423b}{%
+           family={Ballinger},
+           familyi={B\bibinitperiod},
+           given={S.\bibnamedelimi B.},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=56e962c2c78dc37f9fa771b3c702156b}{%
+           family={Brunner},
+           familyi={B\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=b9cab27f4550ad3aeef332a87c9d16b0}{%
+           family={Canik},
+           familyi={C\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d2ba37d86fbe25ef4015e0163a7ceec9}{%
+           family={Doody},
+           familyi={D\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=793321d08071397e1cd95076cff3f9be}{%
+           family={Fülöp},
+           familyi={F\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=aad45ea5acc19356fc8e8dccf849feda}{%
+           family={Garnier},
+           familyi={G\bibinitperiod},
+           given={D.\bibnamedelimi T.},
+           giveni={D\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=00728d7e9ccaf48e86dc5b2bc8d9bf95}{%
+           family={Granetz},
+           familyi={G\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=509f48824e1263628dc1410d3cc02250}{%
+           family={Gray},
+           familyi={G\bibinitperiod},
+           given={T.\bibnamedelimi K.},
+           giveni={T\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=70580d8e9021c7bda614d2b27fc3e65a}{%
+           family={Holland},
+           familyi={H\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=7a4ecc438ed7cdd67d1612ed31510485}{%
+           family={Howard},
+           familyi={H\bibinitperiod},
+           given={N.\bibnamedelimi T.},
+           giveni={N\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=1011029eb2cabfefb93613cee980d187}{%
+           family={Hughes},
+           familyi={H\bibinitperiod},
+           given={J.\bibnamedelimi W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=e6c4159060831b6e341652af61ffa01f}{%
+           family={Irby},
+           familyi={I\bibinitperiod},
+           given={J.\bibnamedelimi H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=9f01c39f1e003c8073f9cc5d9e5e55ef}{%
+           family={Izzo},
+           familyi={I\bibinitperiod},
+           given={V.\bibnamedelimi A.},
+           giveni={V\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=3b6d3981d4c7de35a264769feda93a26}{%
+           family={Kramer},
+           familyi={K\bibinitperiod},
+           given={G.\bibnamedelimi J.},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=a69b17c7506b1853c7a98bd4cad557ed}{%
+           family={Kuang},
+           familyi={K\bibinitperiod},
+           given={A.\bibnamedelimi Q.},
+           giveni={A\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
+        {{hash=81474f85ba2a166d34dd1081f3b4127d}{%
+           family={LaBombard},
+           familyi={L\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8b3d031e33fa8ec00b3b97374ef74c0a}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=d4017736f66f4135461283a77724a937}{%
+           family={Lipschultz},
+           familyi={L\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=bce6dc324ecc4201e89a81ffd14e4055}{%
+           family={Logan},
+           familyi={L\bibinitperiod},
+           given={N.\bibnamedelimi C.},
+           giveni={N\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=11e79f513a2032b68a17f85ab1010653}{%
+           family={Lore},
+           familyi={L\bibinitperiod},
+           given={J.\bibnamedelimi D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=213d413feaf1361c9fd1f93f94734944}{%
+           family={Marmar},
+           familyi={M\bibinitperiod},
+           given={E.\bibnamedelimi S.},
+           giveni={E\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=13374803caf2acf7d21cea08ea86ebaf}{%
+           family={Montes},
+           familyi={M\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=4e8b300b4ec5c9ec1f0afd96bb1dd3a6}{%
+           family={Mumgaard},
+           familyi={M\bibinitperiod},
+           given={R.\bibnamedelimi T.},
+           giveni={R\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=a10ccac17fa6dab07135d4d4819a9213}{%
+           family={Paz-Soldan},
+           familyi={P\bibinithyphendelim S\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=4f4abaa2149746fb41c1004b7cd2787e}{%
+           family={Rea},
+           familyi={R\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=09257372dbf70b2735ca3a72d93a4184}{%
+           family={Reinke},
+           familyi={R\bibinitperiod},
+           given={M.\bibnamedelimi L.},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=6421ef6da188da847b6386388fdd8b1a}{%
+           family={Rodriguez-Fernandez},
+           familyi={R\bibinithyphendelim F\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e2598904ddb9b341bebff2202d659155}{%
+           family={Särkimäki},
+           familyi={S\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=48949def9bbf5eac77cd15aa7b420f9f}{%
+           family={Sciortino},
+           familyi={S\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=cad28c9afcb5e921fdf468076ab949ab}{%
+           family={Scott},
+           familyi={S\bibinitperiod},
+           given={S.\bibnamedelimi D.},
+           giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=7ba8551cdda5cefcdc51483d36ac0483}{%
+           family={Snicker},
+           familyi={S\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=893b4e1c104429bd708a324be1fbe2b1}{%
+           family={Snyder},
+           familyi={S\bibinitperiod},
+           given={P.\bibnamedelimi B.},
+           giveni={P\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=7577aa5173737859a1ab6eb10728e03c}{%
+           family={Sorbom},
+           familyi={S\bibinitperiod},
+           given={B.\bibnamedelimi N.},
+           giveni={B\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=9586c07b1899cf87af8e1899793d7fdd}{%
+           family={Sweeney},
+           familyi={S\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1c5139a7ad1cf26b9ad5683abdeb2bfb}{%
+           family={Tinguely},
+           familyi={T\bibinitperiod},
+           given={R.\bibnamedelimi A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=0700d08df2d6cda17aa13f0a05d73dce}{%
+           family={Tolman},
+           familyi={T\bibinitperiod},
+           given={E.\bibnamedelimi A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=1df975a4c20eadb2cd1f91a67637d0f1}{%
+           family={Umansky},
+           familyi={U\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fdb0bb26873cf3bcb7e32c9dec286e52}{%
+           family={Vallhagen},
+           familyi={V\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod}}}%
+        {{hash=eeb9461ea1f68376328ee9187a31d610}{%
+           family={Varje},
+           familyi={V\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=771cd24e62c04ddcb57bdc566f2594f3}{%
+           family={Whyte},
+           familyi={W\bibinitperiod},
+           given={D.\bibnamedelimi G.},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=b23e6493ccd4fd6408c527ae26f0345e}{%
+           family={Wright},
+           familyi={W\bibinitperiod},
+           given={J.\bibnamedelimi C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=2c71d7bcb087a6363554adaf16f43a53}{%
+           family={Wukitch},
+           familyi={W\bibinitperiod},
+           given={S.\bibnamedelimi J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=6c72831a314bee50d394cb3af13fb87b}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5174ac326a413436c4b054a8f7a0855b}{%
+           family={{the SPARC Team}},
+           familyi={t\bibinitperiod}}}%
+      }
+      \strng{namehash}{5fac1a00df58bb8d558002d831b622e3}
+      \strng{fullhash}{214928cb853bd66d138915c8ed576c85}
+      \strng{fullhashraw}{214928cb853bd66d138915c8ed576c85}
+      \strng{bibnamehash}{6a825d1c0649cd965339d009ecbd9275}
+      \strng{authorbibnamehash}{6a825d1c0649cd965339d009ecbd9275}
+      \strng{authornamehash}{5fac1a00df58bb8d558002d831b622e3}
+      \strng{authorfullhash}{214928cb853bd66d138915c8ed576c85}
+      \strng{authorfullhashraw}{214928cb853bd66d138915c8ed576c85}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The {SPARC} tokamak is a critical next step towards commercial fusion energy. {SPARC} is designed as a high-field ( \$B\_0 = 12.2\$ T), compact ( \$R\_0 = 1.85\$ m, \$a = 0.57\$ m), superconducting, D-T tokamak with the goal of producing fusion gain \$Q{>}2\$ from a magnetically confined fusion plasma for the first time. Currently under design, {SPARC} will continue the high-field path of the Alcator series of tokamaks, utilizing new magnets based on rare earth barium copper oxide high-temperature superconductors to achieve high performance in a compact device. The goal of \$Q{>}2\$ is achievable with conservative physics assumptions ( \$H\_\{98,y2\} = 0.7\$ ) and, with the nominal assumption of \$H\_\{98,y2\} = 1\$ , {SPARC} is projected to attain \$Q {\textbackslash}approx 11\$ and \$P\_\{{\textbackslash}textrm \{fusion\}\} {\textbackslash}approx 140\$ {MW}. {SPARC} will therefore constitute a unique platform for burning plasma physics research with high density ( \${\textbackslash}langle n\_\{e\} {\textbackslash}rangle {\textbackslash}approx 3 {\textbackslash}times 10{\textasciicircum}\{20\}{\textbackslash} {\textbackslash}textrm \{m\}{\textasciicircum}\{-3\}\$ ), high temperature ( \${\textbackslash}langle T\_e {\textbackslash}rangle {\textbackslash}approx 7\$ {keV}) and high power density ( \$P\_\{{\textbackslash}textrm \{fusion\}\}/V\_\{{\textbackslash}textrm \{plasma\}\} {\textbackslash}approx 7{\textbackslash} {\textbackslash}textrm \{{MW}\}{\textbackslash},{\textbackslash}textrm \{m\}{\textasciicircum}\{-3\}\$ ) relevant to fusion power plants. {SPARC}'s place in the path to commercial fusion energy, its parameters and the current status of {SPARC} design work are presented. This work also describes the basis for global performance projections and summarizes some of the physics analysis that is presented in greater detail in the companion articles of this collection.}
+      \field{annotation}{Description of the {SPARC} reactors, the planned next generation of the {ARC} reactor.}
+      \field{issn}{0022-3778, 1469-7807}
+      \field{journaltitle}{Journal of Plasma Physics.}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{5}
+      \field{shortjournal}{J. Plasma Phys.}
+      \field{title}{Overview of the {SPARC} tokamak}
+      \field{urlday}{19}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{86}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 25}
+      \range{pages}{25}
+      \verb{doi}
+      \verb 10.1017/S0022377820001257
+      \endverb
+      \verb{file}
+      \verb Full Text:C\:\\Users\\vadan\\Zotero\\storage\\Y2WALGYZ\\Creely et al. - 2020 - Overview of the SPARC tokamak.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/product/identifier/S0022377820001257/type/journal_article
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/product/identifier/S0022377820001257/type/journal_article
+      \endverb
+    \endentry
+    \entry{fable_plasma_2018}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=784b188e418dc34e0b5c20fb3a5a933a}{%
+           family={Fable},
+           familyi={F\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=d4f1ee0e82cd05dc241647d506459a80}{%
+           family={Angioni},
+           familyi={A\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=7e283dc8e224705a5076097dfaacfe81}{%
+           family={Siccinio},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8d55179109a1d7f9e3fbaa776906c23b}{%
+           family={Zohm},
+           familyi={Z\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{308b63983a5bc75959dd8d6bc8e72d6c}
+      \strng{fullhash}{823737dd6db7680b4a04a11fe8e72f32}
+      \strng{fullhashraw}{823737dd6db7680b4a04a11fe8e72f32}
+      \strng{bibnamehash}{823737dd6db7680b4a04a11fe8e72f32}
+      \strng{authorbibnamehash}{823737dd6db7680b4a04a11fe8e72f32}
+      \strng{authornamehash}{308b63983a5bc75959dd8d6bc8e72d6c}
+      \strng{authorfullhash}{823737dd6db7680b4a04a11fe8e72f32}
+      \strng{authorfullhashraw}{823737dd6db7680b4a04a11fe8e72f32}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{annotation}{A paper on {PLASMOD}, a code used to model plasma and optimise {DEMO} reactor design.}
+      \field{issn}{09203796}
+      \field{journaltitle}{Fusion Engineering and Design.}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{shortjournal}{Fusion Engineering and Design}
+      \field{shorttitle}{Plasma physics for fusion reactor system codes}
+      \field{title}{Plasma physics for fusion reactor system codes: Framework and model code}
+      \field{urlday}{7}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{130}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{131\bibrangedash 136}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1016/j.fusengdes.2018.03.061
+      \endverb
+      \verb{file}
+      \verb Submitted Version:C\:\\Users\\vadan\\Zotero\\storage\\UNYC9366\\Fable et al. - 2018 - Plasma physics for fusion reactor system codes Framework and model code.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0920379618302801
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0920379618302801
+      \endverb
+      \keyw{Plasma}
     \endentry
   \enddatalist
 \endrefsection
