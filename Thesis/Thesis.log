@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.16)  29 NOV 2025 16:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.16)  29 NOV 2025 17:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -727,7 +727,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.42 ...timisation Strategies}{22}{subsection.6.1}
+l.40 ...ric Optimisation}{20}{subsubsection.6.1.2}
                                                   % [1])
 \tf@toc=\write5
 \openout5 = `Thesis.toc'.
@@ -744,7 +744,7 @@ Overfull \hbox (1.6108pt too wide) in paragraph at lines 219--225
 [3
 
 ]
-<figures/fusion_cs.png, id=273, 462.528pt x 346.896pt>
+<figures/fusion_cs.png, id=263, 462.528pt x 346.896pt>
 File: figures/fusion_cs.png Graphic file (type png)
 <use figures/fusion_cs.png>
 Package pdftex.def Info: figures/fusion_cs.png  used on input line 277.
@@ -752,12 +752,12 @@ Package pdftex.def Info: figures/fusion_cs.png  used on input line 277.
 
 
 [4 <./figures/fusion_cs.png>]
-<figures/lithium_cs.png, id=299, 462.528pt x 346.896pt>
+<figures/lithium_cs.png, id=289, 462.528pt x 346.896pt>
 File: figures/lithium_cs.png Graphic file (type png)
 <use figures/lithium_cs.png>
 Package pdftex.def Info: figures/lithium_cs.png  used on input line 314.
 (pdftex.def)             Requested size: 241.84843pt x 181.38736pt.
-<figures/multipliers_cs.png, id=307, 462.528pt x 346.896pt>
+<figures/multipliers_cs.png, id=297, 462.528pt x 346.896pt>
 File: figures/multipliers_cs.png Graphic file (type png)
 <use figures/multipliers_cs.png>
 Package pdftex.def Info: figures/multipliers_cs.png  used on input line 347.
@@ -772,16 +772,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [6 <./figures/multipliers_cs.png>]
 
-LaTeX Warning: Reference `eq:li6_reaction' on page 7 undefined on input line 443.
-
-
-LaTeX Warning: Reference `eq:li7_reaction' on page 7 undefined on input line 443.
-
-
-
 [7]
-
-LaTeX Warning: Reference `eq:li7_reaction' on page 8 undefined on input line 478.
+Overfull \hbox (13.6452pt too wide) in paragraph at lines 474--476
+\OT1/cmr/m/n/12 Blanket de-signs have his-tor-i-cally di-verged into two com-pet-ing path-ways|Liquid and Solid|driven
+ []
 
 
 
@@ -790,145 +784,135 @@ LaTeX Warning: Reference `eq:li7_reaction' on page 8 undefined on input line 478
 [9]
 
 [10]
-
-[11]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 694.
-
-
-[12]
-<figures/Labelled Tokamak Photo.png, id=485, 453.695pt x 238.8925pt>
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 592.
+<figures/Labelled Tokamak Photo.png, id=431, 453.695pt x 238.8925pt>
 File: figures/Labelled Tokamak Photo.png Graphic file (type png)
 <use figures/Labelled Tokamak Photo.png>
-Package pdftex.def Info: figures/Labelled Tokamak Photo.png  used on input line 723.
+Package pdftex.def Info: figures/Labelled Tokamak Photo.png  used on input line 621.
 (pdftex.def)             Requested size: 338.58632pt x 178.28314pt.
 
 
-[13 <./figures/Labelled Tokamak Photo.png>]
+[11]
 
-[14]
-Overfull \hbox (25.29486pt too wide) in paragraph at lines 819--845
+[12 <./figures/Labelled Tokamak Photo.png>]
+Overfull \hbox (25.29486pt too wide) in paragraph at lines 717--743
  [][] 
  []
 
 
 
+[13]
+
+[14]
+
 [15]
-
-[16]
-
-[17]
-<figures/lithium_enrichment_sweep.png, id=546, 507.3354pt x 381.5856pt>
+<figures/lithium_enrichment_sweep.png, id=499, 507.3354pt x 381.5856pt>
 File: figures/lithium_enrichment_sweep.png Graphic file (type png)
 <use figures/lithium_enrichment_sweep.png>
-Package pdftex.def Info: figures/lithium_enrichment_sweep.png  used on input line 927.
+Package pdftex.def Info: figures/lithium_enrichment_sweep.png  used on input line 825.
 (pdftex.def)             Requested size: 241.84843pt x 181.90134pt.
-<figures/LL New Chi.png, id=548, 462.528pt x 346.896pt>
+<figures/LL New Chi.png, id=501, 462.528pt x 346.896pt>
 File: figures/LL New Chi.png Graphic file (type png)
 <use figures/LL New Chi.png>
-Package pdftex.def Info: figures/LL New Chi.png  used on input line 945.
+Package pdftex.def Info: figures/LL New Chi.png  used on input line 843.
 (pdftex.def)             Requested size: 241.84843pt x 181.38736pt.
 
 
-[18 <./figures/lithium_enrichment_sweep.png>]
-<figures/Coolant Frac New.png, id=560, 462.528pt x 346.896pt>
+[16 <./figures/lithium_enrichment_sweep.png>]
+<figures/Coolant Frac New.png, id=512, 462.528pt x 346.896pt>
 File: figures/Coolant Frac New.png Graphic file (type png)
 <use figures/Coolant Frac New.png>
-Package pdftex.def Info: figures/Coolant Frac New.png  used on input line 978.
+Package pdftex.def Info: figures/Coolant Frac New.png  used on input line 876.
 (pdftex.def)             Requested size: 237.01411pt x 177.76152pt.
-<figures/Coolant Energy New.png, id=561, 462.528pt x 346.896pt>
+<figures/Coolant Energy New.png, id=513, 462.528pt x 346.896pt>
 File: figures/Coolant Energy New.png Graphic file (type png)
 <use figures/Coolant Energy New.png>
-Package pdftex.def Info: figures/Coolant Energy New.png  used on input line 985.
+Package pdftex.def Info: figures/Coolant Energy New.png  used on input line 883.
 (pdftex.def)             Requested size: 237.01411pt x 177.76152pt.
-<figures/triangularity_tbr_sweep.png, id=565, 513.8397pt x 380.8629pt>
+<figures/triangularity_tbr_sweep.png, id=517, 513.8397pt x 380.8629pt>
 File: figures/triangularity_tbr_sweep.png Graphic file (type png)
 <use figures/triangularity_tbr_sweep.png>
-Package pdftex.def Info: figures/triangularity_tbr_sweep.png  used on input line 1014.
+Package pdftex.def Info: figures/triangularity_tbr_sweep.png  used on input line 912.
 (pdftex.def)             Requested size: 241.84843pt x 179.26128pt.
-<figures/FW Thickness New.png, id=566, 462.528pt x 346.896pt>
+<figures/FW Thickness New.png, id=518, 462.528pt x 346.896pt>
 File: figures/FW Thickness New.png Graphic file (type png)
 <use figures/FW Thickness New.png>
-Package pdftex.def Info: figures/FW Thickness New.png  used on input line 1024.
+Package pdftex.def Info: figures/FW Thickness New.png  used on input line 922.
 (pdftex.def)             Requested size: 241.84843pt x 181.38736pt.
-
-
-[19 <./figures/LL New Chi.png>]
-
-[20 <./figures/Coolant Frac New.png> <./figures/Coolant Energy New.png> <./figures/triangularity_tbr_sweep.png>]
-<figures/Blanket Thickness New.png, id=589, 462.528pt x 346.896pt>
+<figures/Blanket Thickness New.png, id=525, 462.528pt x 346.896pt>
 File: figures/Blanket Thickness New.png Graphic file (type png)
 <use figures/Blanket Thickness New.png>
-Package pdftex.def Info: figures/Blanket Thickness New.png  used on input line 1045.
+Package pdftex.def Info: figures/Blanket Thickness New.png  used on input line 943.
 (pdftex.def)             Requested size: 237.01411pt x 177.76152pt.
-<figures/BreederBlanketHeatmapSlice.png, id=590, 578.16pt x 433.62pt>
+<figures/BreederBlanketHeatmapSlice.png, id=526, 578.16pt x 433.62pt>
 File: figures/BreederBlanketHeatmapSlice.png Graphic file (type png)
 <use figures/BreederBlanketHeatmapSlice.png>
-Package pdftex.def Info: figures/BreederBlanketHeatmapSlice.png  used on input line 1052.
+Package pdftex.def Info: figures/BreederBlanketHeatmapSlice.png  used on input line 950.
 (pdftex.def)             Requested size: 237.01411pt x 177.75888pt.
 
 
-[21 <./figures/FW Thickness New.png> <./figures/Blanket Thickness New.png> <./figures/BreederBlanketHeatmapSlice.png>]
+[17 <./figures/LL New Chi.png>]
+
+[18 <./figures/Coolant Frac New.png> <./figures/Coolant Energy New.png> <./figures/triangularity_tbr_sweep.png>]
+
+[19 <./figures/FW Thickness New.png> <./figures/Blanket Thickness New.png> <./figures/BreederBlanketHeatmapSlice.png>]
+
+[20]
+
+[21]
 
 [22]
 
 [23]
-
-[24]
-
-[25]
-Overfull \hbox (41.73859pt too wide) in paragraph at lines 1188--1188
+Overfull \hbox (41.73859pt too wide) in paragraph at lines 1086--1086
 \OT1/cmtt/m/n/10.95 2013 . 02 . 060$[]\OT1/cmr/m/n/10.95 . Avail-able from: []$\OT1/cmtt/m/n/10.95 https : / / linkinghub . elsevier . com / retrieve / pii / S0022311513004662$[]
  []
 
 
 
-[26]
-Overfull \hbox (2.68861pt too wide) in paragraph at lines 1188--1188
+[24]
+Overfull \hbox (2.68861pt too wide) in paragraph at lines 1086--1086
 \OT1/cmr/m/n/10.95 Para-mak: au-to-mated para-met-ric ge-om-e-try con-struc-tion for fu-sion re-ac-tor de-signs. F1000Research.
  []
 
 
 
-[27]
-Overfull \hbox (18.39015pt too wide) in paragraph at lines 1188--1188
+[25]
+Overfull \hbox (18.39015pt too wide) in paragraph at lines 1086--1086
 \OT1/cmr/m/n/10.95 SPARC toka-mak. Jour-nal of Plasma Physics.  2020  Oct; 86:1{25. \OT1/cmr/m/sc/10.95 doi\OT1/cmr/m/n/10.95 : []$\OT1/cmtt/m/n/10.95 10 . 1017 / S0022377820001257$[]\OT1/cmr/m/n/10.95 .
  []
 
 
-Overfull \hbox (7.51288pt too wide) in paragraph at lines 1188--1188
+Overfull \hbox (7.51288pt too wide) in paragraph at lines 1086--1086
 \OT1/cmr/m/n/10.95 Avail-able from: []$\OT1/cmtt/m/n/10.95 https : / / www . cambridge . org / core / product / identifier / S0022377820001257 /
  []
 
 
 
-[28] (Thesis.aux)
+[26] (Thesis.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 02C7264BF27C037A2A04F21C4E3A0E4B;10187.
+(rerunfilecheck)             Checksum: F12AD5563C11A9376D7C7FC4B6E337E6;9608.
 Package logreq Info: Writing requests to 'Thesis.run.xml'.
 \openout1 = `Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21205 strings out of 468081
- 383225 string characters out of 5425788
- 1244184 words of memory out of 5000000
- 49466 multiletter control sequences out of 15000+600000
- 644860 words of font info for 101 fonts, out of 8000000 for 9000
+ 21177 strings out of 468081
+ 382708 string characters out of 5425788
+ 1239100 words of memory out of 5000000
+ 49450 multiletter control sequences out of 15000+600000
+ 642670 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,20n,100p,2417b,1571s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\vadan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\vadan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb>
-Output written on Thesis.pdf (29 pages, 1993734 bytes).
+ <C:\Users\vadan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\vadan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb>
+Output written on Thesis.pdf (27 pages, 1953845 bytes).
 PDF statistics:
- 934 PDF objects out of 1000 (max. 8388607)
- 163 named destinations out of 1000 (max. 500000)
- 437 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 876 PDF objects out of 1000 (max. 8388607)
+ 158 named destinations out of 1000 (max. 500000)
+ 421 words of extra memory for PDF output out of 10000 (max. 10000000)
 

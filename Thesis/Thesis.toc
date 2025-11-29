@@ -9,43 +9,39 @@
 \contentsline {subsubsection}{\numberline {2.3.2}Interaction Probabilities and Mean Free Path}{6}{subsubsection.2.3.2}%
 \contentsline {subsubsection}{\numberline {2.3.3}Moderation and Kinematics of Elastic Scattering}{7}{subsubsection.2.3.3}%
 \contentsline {section}{\numberline {3}Literature Review}{7}{section.3}%
-\contentsline {subsection}{\numberline {3.1}The D-T Reaction and the Tritium Fuel Imperative}{7}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Breeder Blanket: Concept, Function, and Evolution}{7}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}The Role of Neutron Multipliers}{8}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Beryllium Neutron Multipliers}{8}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Lead Neutron Multipliers}{9}{subsubsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.4}Major Breeder Blanket Architectures}{9}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}Liquid Breeder Concepts}{9}{subsubsection.3.4.1}%
-\contentsline {paragraph}{\numberline {3.4.1.1}Lithium-Lead (\ce {Li-Pb}):}{9}{paragraph.3.4.1.1}%
+\contentsline {subsection}{\numberline {3.1}The Tritium Fuel Imperative}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Breeder Blanket Evolution and Functions}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Neutron Multiplication Strategies}{8}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Divergence in Blanket Architectures}{8}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Liquid Breeder Concepts}{8}{subsubsection.3.4.1}%
+\contentsline {paragraph}{\numberline {3.4.1.1}Lithium-Lead (\ce {Li-Pb}):}{8}{paragraph.3.4.1.1}%
 \contentsline {paragraph}{\numberline {3.4.1.2}Molten Salts:}{9}{paragraph.3.4.1.2}%
-\contentsline {subsubsection}{\numberline {3.4.2}Solid Breeder Concepts}{10}{subsubsection.3.4.2}%
-\contentsline {paragraph}{\numberline {3.4.2.1}Materials and Design:}{10}{paragraph.3.4.2.1}%
-\contentsline {paragraph}{\numberline {3.4.2.2}Implementations:}{10}{paragraph.3.4.2.2}%
-\contentsline {subsection}{\numberline {3.5}Neutronics Modelling and the Research Gap}{10}{subsection.3.5}%
-\contentsline {section}{\numberline {4}Methodology}{11}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Modelling Neutron Transport: From Boltzmann to Monte Carlo}{11}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Statistical Uncertainty and Error Analysis}{12}{subsubsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.2}Computational Workflow and Toolchain}{12}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Geometry Generation: Paramak}{13}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Neutron Transport: OpenMC}{13}{subsubsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.3}Definition of the Base Reactor Model}{13}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Neutron Source Specification}{14}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Breeder and Coolant Composition}{14}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Reactor Geometry and First Wall}{14}{subsubsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.4}Simulation Strategy and Parametric Sweeps}{14}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Results}{15}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Material Composition and Performance}{15}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Isotopic and Compositional Optimisation}{18}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Impact of Coolant Selection}{18}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Geometric Parameter Sweeps}{19}{subsection.5.4}%
-\contentsline {section}{\numberline {6}Discussion}{21}{section.6}%
-\contentsline {subsection}{\numberline {6.1}TBR Optimisation Strategies}{22}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Isotopic and Compositional Efficiency}{22}{subsubsection.6.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.2}Spatial and Geometric Optimisation}{22}{subsubsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.2}Consequences to Other Critical Criteria}{22}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}Structural Integrity vs. Neutronics}{22}{subsubsection.6.2.1}%
-\contentsline {subsubsection}{\numberline {6.2.2}Safety and Coolant Selection}{23}{subsubsection.6.2.2}%
-\contentsline {subsubsection}{\numberline {6.2.3}Energy Extraction (Heating)}{23}{subsubsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.3}Model Limitations}{23}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Next Steps}{23}{subsection.6.4}%
-\contentsline {section}{\numberline {7}Conclusion}{24}{section.7}%
+\contentsline {subsubsection}{\numberline {3.4.2}Solid Breeder Concepts}{9}{subsubsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.5}Neutronics Modelling and the Research Gap}{9}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Methodology}{10}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Modelling Neutron Transport: From Boltzmann to Monte Carlo}{10}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Statistical Uncertainty and Error Analysis}{10}{subsubsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.2}Computational Workflow and Toolchain}{11}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Geometry Generation: Paramak}{11}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Neutron Transport: OpenMC}{11}{subsubsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.3}Definition of the Base Reactor Model}{11}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Neutron Source Specification}{11}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Breeder and Coolant Composition}{12}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Reactor Geometry and First Wall}{12}{subsubsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.4}Simulation Strategy and Parametric Sweeps}{13}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Results}{13}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Material Composition and Performance}{13}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Isotopic and Compositional Optimisation}{16}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Impact of Coolant Selection}{16}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Geometric Parameter Sweeps}{17}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Discussion}{20}{section.6}%
+\contentsline {subsection}{\numberline {6.1}TBR Optimisation Strategies}{20}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Isotopic and Compositional Efficiency}{20}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Spatial and Geometric Optimisation}{20}{subsubsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.2}Consequences to Other Critical Criteria}{20}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Structural Integrity vs. Neutronics}{21}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Safety and Coolant Selection}{21}{subsubsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.3}Energy Extraction (Heating)}{21}{subsubsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.3}Model Limitations}{21}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Next Steps}{22}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Conclusion}{22}{section.7}%
