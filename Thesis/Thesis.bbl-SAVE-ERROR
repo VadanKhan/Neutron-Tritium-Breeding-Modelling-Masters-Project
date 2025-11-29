@@ -69,8 +69,8 @@
       \strng{authornamehash}{6a6d072b91a3e7c53ef7dff0b4897a01}
       \strng{authorfullhash}{6a6d072b91a3e7c53ef7dff0b4897a01}
       \strng{authorfullhashraw}{6a6d072b91a3e7c53ef7dff0b4897a01}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Short article on the history of tritium use in fusion and the first proposal for D-T fusion. First planned for nuclear weapons. Useful justification of why we use D-T reaction.}
@@ -180,103 +180,65 @@
       \strng{authornamehash}{ca56977a5fb6ee223b9392c8f9a68e35}
       \strng{authorfullhash}{ca56977a5fb6ee223b9392c8f9a68e35}
       \strng{authorfullhashraw}{ca56977a5fb6ee223b9392c8f9a68e35}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{4th}
       \field{title}{Tokamaks}
       \field{year}{2011}
     \endentry
-    \entry{shatalov_breeder_1991}{article}{}{}
-      \name{author}{9}{}{%
-        {{hash=244fec16c3becf60ded9cad992eaa8ec}{%
-           family={Shatalov},
-           familyi={S\bibinitperiod},
-           given={G.E.},
-           giveni={G\bibinitperiod}}}%
-        {{hash=ad363bbaa6e6467194df08e1a419adc9}{%
-           family={Abdou},
-           familyi={A\bibinitperiod},
-           given={M.A.},
-           giveni={M\bibinitperiod}}}%
-        {{hash=b5680b04330ba7cc94a64ceeb2a81d7e}{%
-           family={Antipenkov},
-           familyi={A\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-        {{hash=ca7fe4ed4326345199d0f920f88bb2c8}{%
-           family={Daenner},
-           familyi={D\bibinitperiod},
-           given={W.},
-           giveni={W\bibinitperiod}}}%
-        {{hash=e1ea93a62c170840b8c01237c1fee6b7}{%
-           family={Gohar},
-           familyi={G\bibinitperiod},
-           given={Y.},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=9b37a37f4f3f016c7d914ab4cb8f020a}{%
-           family={Kuroda},
+    \entry{kuridan_neutron_2023}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=762c3295442c1b2803ab6cad1175cdc8}{%
+           family={Kuridan},
            familyi={K\bibinitperiod},
-           given={T.},
-           giveni={T\bibinitperiod}}}%
-        {{hash=84af5a295b24ba766fcb0b4d6a5cc8f1}{%
-           family={Simbolotti},
-           familyi={S\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod}}}%
-        {{hash=f05624a4f7393c950eee92168e059aa4}{%
-           family={Smith},
-           familyi={S\bibinitperiod},
-           given={D.L.},
-           giveni={D\bibinitperiod}}}%
-        {{hash=ca9e4a1455916c8bed512397b5252682}{%
-           family={Yoshida},
-           familyi={Y\bibinitperiod},
-           given={N.},
-           giveni={N\bibinitperiod}}}%
+           given={Ramadan\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
       }
-      \strng{namehash}{8789919e70e9171b31a9554975017b94}
-      \strng{fullhash}{200d93fd1d2e1f2c3ae61692e87072d7}
-      \strng{fullhashraw}{200d93fd1d2e1f2c3ae61692e87072d7}
-      \strng{bibnamehash}{661a340e7a1bc542b5ea249feae65a20}
-      \strng{authorbibnamehash}{661a340e7a1bc542b5ea249feae65a20}
-      \strng{authornamehash}{8789919e70e9171b31a9554975017b94}
-      \strng{authorfullhash}{200d93fd1d2e1f2c3ae61692e87072d7}
-      \strng{authorfullhashraw}{200d93fd1d2e1f2c3ae61692e87072d7}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer Nature Switzerland}%
+      }
+      \strng{namehash}{762c3295442c1b2803ab6cad1175cdc8}
+      \strng{fullhash}{762c3295442c1b2803ab6cad1175cdc8}
+      \strng{fullhashraw}{762c3295442c1b2803ab6cad1175cdc8}
+      \strng{bibnamehash}{762c3295442c1b2803ab6cad1175cdc8}
+      \strng{authorbibnamehash}{762c3295442c1b2803ab6cad1175cdc8}
+      \strng{authornamehash}{762c3295442c1b2803ab6cad1175cdc8}
+      \strng{authorfullhash}{762c3295442c1b2803ab6cad1175cdc8}
+      \strng{authorfullhashraw}{762c3295442c1b2803ab6cad1175cdc8}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{annotation}{Very early stage document on {ITER} blanket proposals. Looks at ceramic blankets and liquid blankets in general, not advanced enough to explore specific designs. Could be useful as part of the history.}
-      \field{issn}{09203796}
-      \field{journaltitle}{Fusion Engineering and Design.}
+      \field{labeltitlesource}{shorttitle}
+      \field{annotation}{Book on neutron transport and modelling methods. Looks very comprehensive, likely to be a very reliable source for a good chunk of our theory. Depends on how deep into the transport physics we actually go.}
+      \field{isbn}{978-3-031-26931-8 978-3-031-26932-5}
       \field{langid}{english}
-      \field{month}{12}
-      \field{shortjournal}{Fusion Engineering and Design}
-      \field{title}{Breeder and test blankets in {ITER}}
+      \field{series}{Graduate Texts in Physics}
+      \field{shorttitle}{Neutron Transport}
+      \field{title}{Neutron Transport: Theory, Modeling, and Computations}
       \field{urlday}{7}
       \field{urlmonth}{10}
       \field{urlyear}{2025}
-      \field{volume}{16}
-      \field{year}{1991}
+      \field{year}{2023}
       \field{dateera}{ce}
       \field{urldateera}{ce}
-      \field{pages}{85\bibrangedash 93}
-      \range{pages}{9}
       \verb{doi}
-      \verb 10.1016/0920-3796(91)90185-S
+      \verb 10.1007/978-3-031-26932-5
       \endverb
       \verb{file}
-      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\NIKC7R76\\Shatalov et al. - 1991 - Breeder and test blankets in ITER.pdf:application/pdf
+      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\ASY8PW8A\\Kuridan - 2023 - Neutron Transport Theory, Modeling, and Computations.pdf:application/pdf
       \endverb
       \verb{urlraw}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/092037969190185S
+      \verb https://link.springer.com/10.1007/978-3-031-26932-5
       \endverb
       \verb{url}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/092037969190185S
+      \verb https://link.springer.com/10.1007/978-3-031-26932-5
       \endverb
-      \keyw{Liquid Breeder,Lit Review,Useful,Solid Breeder}
+      \keyw{Lit Review,Useful}
     \endentry
     \entry{brown_endfb-viii0_2018}{article}{}{}
       \name{author}{70}{}{%
@@ -639,8 +601,8 @@
       \strng{authornamehash}{d9b404f7ee4a4cc672dd3f05d9d13c8c}
       \strng{authorfullhash}{6eea3c6b6150994abf18eac82bc8d7c2}
       \strng{authorfullhashraw}{6eea3c6b6150994abf18eac82bc8d7c2}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{annotation}{Paper discusses the {ENDF} {VIII}.1 library and includes data and figures for a wide variety of reactions. Outlines the changes to previous iterations of the library. Has more than 475 references that could prove useful. Likely only to be cited in reference to the website, if at all.}
@@ -727,6 +689,82 @@
       \verb https://linkinghub.elsevier.com/retrieve/pii/S0920379618306392
       \endverb
       \keyw{Lit Review,{TBR},Useful}
+    \endentry
+    \entry{federici_overview_2019}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=c275eff5c8ed440e431b48f2d0cc3b30}{%
+           family={Federici},
+           familyi={F\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=1a8af20abab0e0d89f2b180a1fdd03c4}{%
+           family={Boccaccini},
+           familyi={B\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=41a96720f2cd91916ef758454ea50d81}{%
+           family={Cismondi},
+           familyi={C\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=c6c6df039fe61eccd6730911363b95b6}{%
+           family={Gasparotto},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=6b44ebbabe18d7cf03e7e129ff4935f5}{%
+           family={Poitevin},
+           familyi={P\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=b7ba3f8bcd47833d54776be2ca84f525}{%
+           family={Ricapito},
+           familyi={R\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{934d6fc2514de3d7506461c74d64c6a6}
+      \strng{fullhash}{94ca76fdff2fde7968f16377761b0791}
+      \strng{fullhashraw}{94ca76fdff2fde7968f16377761b0791}
+      \strng{bibnamehash}{94ca76fdff2fde7968f16377761b0791}
+      \strng{authorbibnamehash}{94ca76fdff2fde7968f16377761b0791}
+      \strng{authornamehash}{934d6fc2514de3d7506461c74d64c6a6}
+      \strng{authorfullhash}{94ca76fdff2fde7968f16377761b0791}
+      \strng{authorfullhashraw}{94ca76fdff2fde7968f16377761b0791}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{A summary of the planned design strategy for the {DEMO} reactor breeder blanket. Focus on two main blanket designs, {HCPB} and {WCLL}. Good summary of the state of the technology, more focussed on the blanket than the paper above and more up to date.}
+      \field{issn}{09203796}
+      \field{journaltitle}{Fusion Engineering and Design.}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{shortjournal}{Fusion Engineering and Design}
+      \field{title}{An overview of the {EU} breeding blanket design strategy as an integral part of the {DEMO} design effort}
+      \field{urlday}{7}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{141}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{30\bibrangedash 42}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1016/j.fusengdes.2019.01.141
+      \endverb
+      \verb{file}
+      \verb Full Text:C\:\\Users\\vadan\\Zotero\\storage\\JXUDYPK6\\Federici et al. - 2019 - An overview of the EU breeding blanket design strategy as an integral part of the DEMO design effort.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0920379619301590
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0920379619301590
+      \endverb
+      \keyw{Lit Review,Useful,{HCPB},{WCLL}}
     \endentry
     \entry{sawan_physics_2006}{article}{}{}
       \name{author}{2}{}{%
@@ -851,81 +889,95 @@
       \endverb
       \keyw{Liquid Breeder,Lit Review,{TBR},Useful,{FLiBe} Salt}
     \endentry
-    \entry{federici_overview_2019}{article}{}{}
-      \name{author}{6}{}{%
-        {{hash=c275eff5c8ed440e431b48f2d0cc3b30}{%
-           family={Federici},
-           familyi={F\bibinitperiod},
-           given={G.},
+    \entry{shatalov_breeder_1991}{article}{}{}
+      \name{author}{9}{}{%
+        {{hash=244fec16c3becf60ded9cad992eaa8ec}{%
+           family={Shatalov},
+           familyi={S\bibinitperiod},
+           given={G.E.},
            giveni={G\bibinitperiod}}}%
-        {{hash=1a8af20abab0e0d89f2b180a1fdd03c4}{%
-           family={Boccaccini},
-           familyi={B\bibinitperiod},
-           given={L.},
-           giveni={L\bibinitperiod}}}%
-        {{hash=41a96720f2cd91916ef758454ea50d81}{%
-           family={Cismondi},
-           familyi={C\bibinitperiod},
-           given={F.},
-           giveni={F\bibinitperiod}}}%
-        {{hash=c6c6df039fe61eccd6730911363b95b6}{%
-           family={Gasparotto},
-           familyi={G\bibinitperiod},
-           given={M.},
+        {{hash=ad363bbaa6e6467194df08e1a419adc9}{%
+           family={Abdou},
+           familyi={A\bibinitperiod},
+           given={M.A.},
            giveni={M\bibinitperiod}}}%
-        {{hash=6b44ebbabe18d7cf03e7e129ff4935f5}{%
-           family={Poitevin},
-           familyi={P\bibinitperiod},
+        {{hash=b5680b04330ba7cc94a64ceeb2a81d7e}{%
+           family={Antipenkov},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ca7fe4ed4326345199d0f920f88bb2c8}{%
+           family={Daenner},
+           familyi={D\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+        {{hash=e1ea93a62c170840b8c01237c1fee6b7}{%
+           family={Gohar},
+           familyi={G\bibinitperiod},
            given={Y.},
            giveni={Y\bibinitperiod}}}%
-        {{hash=b7ba3f8bcd47833d54776be2ca84f525}{%
-           family={Ricapito},
-           familyi={R\bibinitperiod},
-           given={I.},
-           giveni={I\bibinitperiod}}}%
+        {{hash=9b37a37f4f3f016c7d914ab4cb8f020a}{%
+           family={Kuroda},
+           familyi={K\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=84af5a295b24ba766fcb0b4d6a5cc8f1}{%
+           family={Simbolotti},
+           familyi={S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=f05624a4f7393c950eee92168e059aa4}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={D.L.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ca9e4a1455916c8bed512397b5252682}{%
+           family={Yoshida},
+           familyi={Y\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
       }
-      \strng{namehash}{934d6fc2514de3d7506461c74d64c6a6}
-      \strng{fullhash}{94ca76fdff2fde7968f16377761b0791}
-      \strng{fullhashraw}{94ca76fdff2fde7968f16377761b0791}
-      \strng{bibnamehash}{94ca76fdff2fde7968f16377761b0791}
-      \strng{authorbibnamehash}{94ca76fdff2fde7968f16377761b0791}
-      \strng{authornamehash}{934d6fc2514de3d7506461c74d64c6a6}
-      \strng{authorfullhash}{94ca76fdff2fde7968f16377761b0791}
-      \strng{authorfullhashraw}{94ca76fdff2fde7968f16377761b0791}
-      \field{extraname}{1}
+      \strng{namehash}{8789919e70e9171b31a9554975017b94}
+      \strng{fullhash}{200d93fd1d2e1f2c3ae61692e87072d7}
+      \strng{fullhashraw}{200d93fd1d2e1f2c3ae61692e87072d7}
+      \strng{bibnamehash}{661a340e7a1bc542b5ea249feae65a20}
+      \strng{authorbibnamehash}{661a340e7a1bc542b5ea249feae65a20}
+      \strng{authornamehash}{8789919e70e9171b31a9554975017b94}
+      \strng{authorfullhash}{200d93fd1d2e1f2c3ae61692e87072d7}
+      \strng{authorfullhashraw}{200d93fd1d2e1f2c3ae61692e87072d7}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{annotation}{A summary of the planned design strategy for the {DEMO} reactor breeder blanket. Focus on two main blanket designs, {HCPB} and {WCLL}. Good summary of the state of the technology, more focussed on the blanket than the paper above and more up to date.}
+      \field{annotation}{Very early stage document on {ITER} blanket proposals. Looks at ceramic blankets and liquid blankets in general, not advanced enough to explore specific designs. Could be useful as part of the history.}
       \field{issn}{09203796}
       \field{journaltitle}{Fusion Engineering and Design.}
       \field{langid}{english}
-      \field{month}{4}
+      \field{month}{12}
       \field{shortjournal}{Fusion Engineering and Design}
-      \field{title}{An overview of the {EU} breeding blanket design strategy as an integral part of the {DEMO} design effort}
+      \field{title}{Breeder and test blankets in {ITER}}
       \field{urlday}{7}
       \field{urlmonth}{10}
       \field{urlyear}{2025}
-      \field{volume}{141}
-      \field{year}{2019}
+      \field{volume}{16}
+      \field{year}{1991}
       \field{dateera}{ce}
       \field{urldateera}{ce}
-      \field{pages}{30\bibrangedash 42}
-      \range{pages}{13}
+      \field{pages}{85\bibrangedash 93}
+      \range{pages}{9}
       \verb{doi}
-      \verb 10.1016/j.fusengdes.2019.01.141
+      \verb 10.1016/0920-3796(91)90185-S
       \endverb
       \verb{file}
-      \verb Full Text:C\:\\Users\\vadan\\Zotero\\storage\\JXUDYPK6\\Federici et al. - 2019 - An overview of the EU breeding blanket design strategy as an integral part of the DEMO design effort.pdf:application/pdf
+      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\NIKC7R76\\Shatalov et al. - 1991 - Breeder and test blankets in ITER.pdf:application/pdf
       \endverb
       \verb{urlraw}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S0920379619301590
+      \verb https://linkinghub.elsevier.com/retrieve/pii/092037969190185S
       \endverb
       \verb{url}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S0920379619301590
+      \verb https://linkinghub.elsevier.com/retrieve/pii/092037969190185S
       \endverb
-      \keyw{Lit Review,Useful,{HCPB},{WCLL}}
+      \keyw{Liquid Breeder,Lit Review,Useful,Solid Breeder}
     \endentry
     \entry{malang_self-cooled_1991}{article}{}{}
       \name{author}{9}{}{%
@@ -983,8 +1035,8 @@
       \strng{authornamehash}{e836aa392e6de4613fa26c4ca4f3fc05}
       \strng{authorfullhash}{550ccdbc35af2e1fd7aa5675c6f58740}
       \strng{authorfullhashraw}{550ccdbc35af2e1fd7aa5675c6f58740}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A blanket design concept using Pb-17Li eutectic alloy as both breeder material and coolant is described. Such a self-cooled blanket for the boundary conditions of a {DEMO}-reactor is under development at the Kernforschungszentrum Karlsruhe ({KfK}) in the frame of the European blanket development program. Results of investigations in the areas of design, neutroncs, magneto-hydrodynamics, thermo-mechanics, ancillary loop systems, and safety are reported. Based on recent progress, it can be concluded that the boundary conditions of a {DEMO}-reactor can be met, tritium self-sufficiency can be obtained without using beryllium as an additional neutron multiplier, and tritium inventory and permeation are acceptably low. However, to completely judge the feasibility of the proposed concept, further studies are necessary to obtain a better understanding of the magneto-hydrodynamic phenomena and their effects on the thermal-hydraulic performance of a fusion reactor blanket.}
@@ -1018,123 +1070,6 @@
       \verb https://www.sciencedirect.com/science/article/pii/092037969190020Q
       \endverb
       \keyw{Liquid Breeder,Lit Review,Useful}
-    \endentry
-    \entry{kuridan_neutron_2023}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=762c3295442c1b2803ab6cad1175cdc8}{%
-           family={Kuridan},
-           familyi={K\bibinitperiod},
-           given={Ramadan\bibnamedelima M.},
-           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Cham}%
-      }
-      \list{publisher}{1}{%
-        {Springer Nature Switzerland}%
-      }
-      \strng{namehash}{762c3295442c1b2803ab6cad1175cdc8}
-      \strng{fullhash}{762c3295442c1b2803ab6cad1175cdc8}
-      \strng{fullhashraw}{762c3295442c1b2803ab6cad1175cdc8}
-      \strng{bibnamehash}{762c3295442c1b2803ab6cad1175cdc8}
-      \strng{authorbibnamehash}{762c3295442c1b2803ab6cad1175cdc8}
-      \strng{authornamehash}{762c3295442c1b2803ab6cad1175cdc8}
-      \strng{authorfullhash}{762c3295442c1b2803ab6cad1175cdc8}
-      \strng{authorfullhashraw}{762c3295442c1b2803ab6cad1175cdc8}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{annotation}{Book on neutron transport and modelling methods. Looks very comprehensive, likely to be a very reliable source for a good chunk of our theory. Depends on how deep into the transport physics we actually go.}
-      \field{isbn}{978-3-031-26931-8 978-3-031-26932-5}
-      \field{langid}{english}
-      \field{series}{Graduate Texts in Physics}
-      \field{shorttitle}{Neutron Transport}
-      \field{title}{Neutron Transport: Theory, Modeling, and Computations}
-      \field{urlday}{7}
-      \field{urlmonth}{10}
-      \field{urlyear}{2025}
-      \field{year}{2023}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.1007/978-3-031-26932-5
-      \endverb
-      \verb{file}
-      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\ASY8PW8A\\Kuridan - 2023 - Neutron Transport Theory, Modeling, and Computations.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://link.springer.com/10.1007/978-3-031-26932-5
-      \endverb
-      \verb{url}
-      \verb https://link.springer.com/10.1007/978-3-031-26932-5
-      \endverb
-      \keyw{Lit Review,Useful}
-    \endentry
-    \entry{tas_liquid_1988}{article}{}{}
-      \name{author}{4}{}{%
-        {{hash=61914dd63d639fc0004096afe5d017c0}{%
-           family={Tas},
-           familyi={T\bibinitperiod},
-           given={H.},
-           giveni={H\bibinitperiod}}}%
-        {{hash=fd6722b42f4ff6aaa186c990dece0eda}{%
-           family={Malang},
-           familyi={M\bibinitperiod},
-           given={S.},
-           giveni={S\bibinitperiod}}}%
-        {{hash=7fc20254009a4c7419d247399aabb9df}{%
-           family={Reiter},
-           familyi={R\bibinitperiod},
-           given={F.},
-           giveni={F\bibinitperiod}}}%
-        {{hash=35218c7fc0e022154be0d2720cd1626b}{%
-           family={Sannier},
-           familyi={S\bibinitperiod},
-           given={J.},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{74a516c2d55158b0b383f474d07ddea1}
-      \strng{fullhash}{9175a06c999e6ff649dc7e7a3bcf7545}
-      \strng{fullhashraw}{9175a06c999e6ff649dc7e7a3bcf7545}
-      \strng{bibnamehash}{9175a06c999e6ff649dc7e7a3bcf7545}
-      \strng{authorbibnamehash}{9175a06c999e6ff649dc7e7a3bcf7545}
-      \strng{authornamehash}{74a516c2d55158b0b383f474d07ddea1}
-      \strng{authorfullhash}{9175a06c999e6ff649dc7e7a3bcf7545}
-      \strng{authorfullhashraw}{9175a06c999e6ff649dc7e7a3bcf7545}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{annotation}{Explores a variety of liquid blanket materials, either being liquid metals (lithium or Pb-Li alloys) and molten salts ({FLIBE}, a combination of {LiF} breeder and {BeF}2 neutron multiplier). It discusses issues such as cooling and tritium recovery in different designs. Pretty good paper on the basics of liquid blankets.}
-      \field{issn}{00223115}
-      \field{journaltitle}{Journal of Nuclear Materials.}
-      \field{langid}{english}
-      \field{month}{7}
-      \field{shortjournal}{Journal of Nuclear Materials}
-      \field{title}{Liquid breeder materials}
-      \field{urlday}{8}
-      \field{urlmonth}{10}
-      \field{urlyear}{2025}
-      \field{volume}{155-157}
-      \field{year}{1988}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{178\bibrangedash 187}
-      \range{pages}{10}
-      \verb{doi}
-      \verb 10.1016/0022-3115(88)90239-5
-      \endverb
-      \verb{file}
-      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\7PG2QTL3\\Tas et al. - 1988 - Liquid breeder materials.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/0022311588902395
-      \endverb
-      \verb{url}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/0022311588902395
-      \endverb
-      \keyw{Liquid Breeder,Lit Review,Useful,{FLiBe} Salt}
     \endentry
     \entry{kovari_tritium_2018}{article}{}{}
       \name{author}{4}{}{%
@@ -1701,6 +1636,71 @@
       \verb https://linkinghub.elsevier.com/retrieve/pii/S092037962200059X
       \endverb
       \keyw{Lit Review,Solid Breeder,Useful,{WCPB}}
+    \endentry
+    \entry{tas_liquid_1988}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=61914dd63d639fc0004096afe5d017c0}{%
+           family={Tas},
+           familyi={T\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=fd6722b42f4ff6aaa186c990dece0eda}{%
+           family={Malang},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7fc20254009a4c7419d247399aabb9df}{%
+           family={Reiter},
+           familyi={R\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=35218c7fc0e022154be0d2720cd1626b}{%
+           family={Sannier},
+           familyi={S\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{74a516c2d55158b0b383f474d07ddea1}
+      \strng{fullhash}{9175a06c999e6ff649dc7e7a3bcf7545}
+      \strng{fullhashraw}{9175a06c999e6ff649dc7e7a3bcf7545}
+      \strng{bibnamehash}{9175a06c999e6ff649dc7e7a3bcf7545}
+      \strng{authorbibnamehash}{9175a06c999e6ff649dc7e7a3bcf7545}
+      \strng{authornamehash}{74a516c2d55158b0b383f474d07ddea1}
+      \strng{authorfullhash}{9175a06c999e6ff649dc7e7a3bcf7545}
+      \strng{authorfullhashraw}{9175a06c999e6ff649dc7e7a3bcf7545}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Explores a variety of liquid blanket materials, either being liquid metals (lithium or Pb-Li alloys) and molten salts ({FLIBE}, a combination of {LiF} breeder and {BeF}2 neutron multiplier). It discusses issues such as cooling and tritium recovery in different designs. Pretty good paper on the basics of liquid blankets.}
+      \field{issn}{00223115}
+      \field{journaltitle}{Journal of Nuclear Materials.}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{shortjournal}{Journal of Nuclear Materials}
+      \field{title}{Liquid breeder materials}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{155-157}
+      \field{year}{1988}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{178\bibrangedash 187}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/0022-3115(88)90239-5
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\7PG2QTL3\\Tas et al. - 1988 - Liquid breeder materials.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/0022311588902395
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/0022311588902395
+      \endverb
+      \keyw{Liquid Breeder,Lit Review,Useful,{FLiBe} Salt}
     \endentry
     \entry{sorbom_arc_2015}{article}{}{}
       \name{author}{13}{}{%

@@ -2380,30 +2380,29 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">nuclearphysics</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">nuclearphysics</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">paris_lost_2023</bcf:citekey>
-    <bcf:citekey order="3" intorder="2">heckrotte_factors_1971</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">paris_lost_2023</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">heckrotte_factors_1971</bcf:citekey>
     <bcf:citekey order="4" intorder="1">heckrotte_factors_1971</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">nuclearphysics</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">wesson</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">wesson</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">shatalov_breeder_1991</bcf:citekey>
     <bcf:citekey order="7" intorder="1">heckrotte_factors_1971</bcf:citekey>
     <bcf:citekey order="8" intorder="1">heckrotte_factors_1971</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">kuridan_neutron_2023</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">kuridan_neutron_2023</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">nuclearphysics</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">nuclearphysics</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">brown_endfb-viii0_2018</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">kuridan_neutron_2023</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">hernandez_first_2018</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">federici_overview_2019</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">sawan_physics_2006</bcf:citekey>
-    <bcf:citekey order="17" intorder="2">meschini_modeling_2023</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">shatalov_breeder_1991</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">shatalov_breeder_1991</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">malang_self-cooled_1991</bcf:citekey>
-    <bcf:citekey order="20" intorder="2">hernandez_first_2018</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">hernandez_first_2018</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">hernandez_first_2018</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">brown_endfb-viii0_2018</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">brown_endfb-viii0_2018</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">hernandez_first_2018</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">shatalov_breeder_1991</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">sawan_physics_2006</bcf:citekey>
+    <bcf:citekey order="13" intorder="2">meschini_modeling_2023</bcf:citekey>
+    <bcf:citekey order="13" intorder="3">federici_overview_2019</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">shatalov_breeder_1991</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">malang_self-cooled_1991</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">hernandez_first_2018</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">kuridan_neutron_2023</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">brown_endfb-viii0_2018</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">kuridan_neutron_2023</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">nuclearphysics</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">tas_liquid_1988</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">nuclearphysics</bcf:citekey>
     <bcf:citekey order="23" intorder="1">paris_lost_2023</bcf:citekey>
     <bcf:citekey order="24" intorder="1">heckrotte_factors_1971</bcf:citekey>
     <bcf:citekey order="25" intorder="1">kovari_tritium_2018</bcf:citekey>

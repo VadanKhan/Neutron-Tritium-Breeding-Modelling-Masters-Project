@@ -36,6 +36,7 @@
 \usepackage{titlesec}
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage{subcaption}
+\usepackage{upgreek}
 
 % --- Custom Title Formatting and Spacing ---
 
@@ -244,191 +245,167 @@ plants.
 \section{Theory}
 
 \subsection{Fundamentals of Nuclear Fusion}
+Nuclear fusion is the process by which two light atomic nuclei combine to form a heavier nucleus,
+releasing energy due to the increase in total nuclear binding energy \cite{nuclearphysics}. While
+various light nuclei interactions can release energy via this mass defect, the deuterium-tritium
+(D-T) reaction has emerged as the most viable for near-term applications, largely due to historical
+precedent and physical accessibility \cite{paris_lost_2023}.
 
-Nuclear fusion is the process by which two light atomic nuclei combine, or ``fuse,'' to form a
-single, heavier nucleus \cite{nuclearphysics}. This reaction is the primary process powering stars,
-and it is a candidate for future terrestrial energy generation.
+This reaction is favoured because it possesses a significantly higher fusion cross-section
+($\sigma_f$) at achievable plasma temperatures (10--20 keV) compared to alternatives such as D-D or
+D-\ce{^3He} (see Figure \ref{fig:cross_sections}) \cite{heckrotte_factors_1971}. The reaction
+proceeds as:
 
-The release of energy in fusion is a direct consequence of \textbf{nuclear binding energy}. The nucleons
-(protons and neutrons) in a nucleus are held together by the strong nuclear force. The binding
-energy is the energy required to disassemble the nucleus into its separate components. Conversely,
-when a nucleus is formed, this amount of energy is released.
-
-Crucially, the binding energy \textit{per nucleon} is not constant across all elements. Lighter nuclei,
-such as hydrogen isotopes, are relatively loosely bound. Nuclei in the ``medium-mass" range, like
-helium-4 or iron, are much more tightly bound.
-
-Therefore, when two light nuclei fuse to form a heavier, more tightly bound nucleus, the total
-binding energy of the system \textit{increases}. This surplus energy is released during the reaction. This
-gain in binding energy corresponds to a reduction in the total rest mass of the system. This
-difference, known as the \textbf{mass defect} ($\Delta m$), is not truly "lost" but is converted into
-energy ($E$) according to Einstein's principle of mass-energy equivalence \cite{nuclearphysics}.
-
-This relationship is famously expressed by the equation $E = mc^2$, or more specifically for a
-reaction, as a release of energy $Q$ (the ``Q-value"):
 \begin{equation}
-    Q = \left( \sum m_{\text{reactants}} - \sum m_{\text{products}} \right) c^2 = (\Delta m)c^2
-    \label{eq:q_value}
+    \ce{^2H + ^3H -> n + \upalpha} + \ce{17.6 MeV}
+    \label{eq:DT_reaction}
 \end{equation}
-Because the speed of light squared ($c^2$) is an enormous constant, even a minuscule decrease in
-mass releases a tremendous amount of energy, typically in the form of kinetic energy of the products
-(e.g., neutrons, alpha particles) and/or high-energy photons (gamma rays).
 
-For terrestrial power generation, the most promising reaction is that between the two heavy isotopes
-of hydrogen, deuterium (d) and tritium (t) \cite{paris_lost_2023, heckrotte_factors_1971}:
-$$
-\ce{d + t -> n + \alpha} + 17.6 \ce{MeV}
-$$
-This D-T reaction is the primary focus of mainstream fusion research, as it has a fusion
-cross-section significantly higher than other candidate reactions (such as D-D or \ce{D-${}^{3}$He})
-(Fig.~\ref{fig:fusion_cross_sections}) \cite{heckrotte_factors_1971}. This is mainly due to the
-stability of the final products linking to a higher Q value output \cite{nuclearphysics}.
+The release of 17.6 MeV is partitioned inversely to the mass of the products to conserve momentum.
+Consequently, the electrically neutral neutron carries the majority of the energy ($E_n = 14.1$
+MeV), while the charged alpha particle ($\upalpha$) retains 3.5 MeV \cite{heckrotte_factors_1971}.
 
-\begin{figure}[htbp]
+In Magnetic Confinement Fusion (MCF) devices, such as the tokamak \cite{wesson}, the charged
+$\upalpha$-particle is confined by the magnetic field, depositing its energy to sustain the plasma
+temperature (self-heating). The 14.1 MeV neutron, being electrically neutral, escapes the magnetic
+confinement immediately. The reactor breeder blanket is the subsystem designed to intercept this
+neutron flux to extract thermal energy, shield the superconducting magnets, and breed fuel
+\cite{shatalov_breeder_1991}.
+
+\begin{figure}[h!]
     \centering
-    % You can adjust the width as needed for your document layout
-    \includegraphics[width=0.5\textwidth]{figures/breeding_cs.png}
-    \caption{A comparison of fusion reaction reactivities total cross section $\sigma$ as a function
-    of ion temperature (keV) for the D-T, D-D, and \ce{D}-\ce{^3He} fuel cycles. The D-T reaction's
-    cross section peaks at a lower temperature and is significantly larger than the alternatives,
-    making it the most accessible reaction for current and near-term fusion devices.}
-    \label{fig:fusion_cross_sections}
+    \includegraphics[width=0.5\textwidth]{figures/fusion_cs.png}
+    \caption{A comparison of fusion reaction reactivities. The total cross-section is plotted as a
+    function of ion temperature (keV) for the D-T, D-D, and D-\ce{^3He} fuel cycles. The D-T
+    reaction peaks at a lower temperature and higher cross-section than alternatives
+    \cite{heckrotte_factors_1971}.}
+    \label{fig:cross_sections}
 \end{figure}
-
-Another important reason for D-T is the is the comparatively lower required input energy /
-temperature. To initiate fusion, the positively charged nuclei must be given enough kinetic energy
-to overcome their mutual electrostatic repulsion, known as the Coulomb barrier. This barrier will
-increase if the reactants have a more positive charge and so more electrostatic repulsion. This can
-exclude cycles like \ce{D}-\ce{^3He} as the required temperatures/energies are already high enough
-(hotter than the core of the sun). In Magnetic Confinement Fusion (MCF) devices, such as the
-\textbf{tokamak} \cite{wesson}, this is achieved by heating the D-T gas into a plasma state at
-temperatures exceeding 100 million Kelvin. The hot plasma is then confined by powerful magnetic
-fields, preventing it from touching the reactor walls. The 17.6 MeV of energy released is
-partitioned between the two products: the alpha particle ($\alpha$, a helium nucleus) carries 3.5
-MeV, while the neutron (n) carries 14.1 MeV \cite{heckrotte_factors_1971}.
-
-This energy split is fundamental to the reactor's operation. The charged alpha particle remains
-trapped by the magnetic fields, depositing its energy into the plasma and helping to sustain its
-high temperature (a process known as ``plasma burning''). The neutron, being electrically neutral, is
-un-bothered by the magnetic fields and escapes the plasma immediately, carrying 80\% of the fusion
-energy with it \cite{heckrotte_factors_1971}.
-
-\subsection{Neutron Transport and Interactions}
-
-The 14.1 MeV neutron is the primary vehicle for both energy extraction and fuel production. Once it
-leaves the plasma, it travels into the surrounding structures, chiefly the \textbf{breeder blanket}.
-The study of its journey and interactions with the blanket materials is the domain of
-\textbf{neutron transport} \cite{kuridan_neutron_2023}.
-
-As the neutron moves through matter, it interacts with atomic nuclei via two main processes:
-scattering and absorption. The probability of any specific interaction occurring is defined by the
-material's \textbf{microscopic cross-section ($\sigma$)}, a value that is highly dependent on the energy
-of the incident neutron \cite{kuridan_neutron_2023}.
-
-While $\sigma$ represents the effective target area of a single nucleus, reactor engineering
-requires understanding interactions within bulk matter. The probability of interaction per unit path
-length is defined as the \textbf{macroscopic cross-section ($\Sigma$)}:
-\begin{equation}
-\Sigma = N \sigma
-\end{equation}
-where $N$ is the atomic number density of the material \cite{nuclearphysics}. Consequently, the
-average distance a neutron travels through a medium before undergoing an interaction, known as the
-\textbf{mean free path ($\lambda$)}, is inversely proportional to the total macroscopic
-cross-section:
-\begin{equation}
-\lambda = \frac{1}{\Sigma_{total}}
-\end{equation}
-This parameter is fundamental to blanket design, as it dictates the physical thickness required to
-effectively attenuate the neutron flux and capture energy \cite{nuclearphysics}.
-
-These cross-sections are meticulously measured and compiled in comprehensive libraries such as the
-Evaluated Nuclear Data File (ENDF) \cite{brown_endfb-viii0_2018}.
-
-Key interactions within the blanket include:
-\subsubsection{Scattering Interactions}
-    The neutron collides with a nucleus and ``bounces'' off, transferring a portion of its kinetic
-    energy to the nucleus. In \textbf{elastic scattering $\ce{(n,n^{\prime})}$}, kinetic energy is
-    conserved. In \textbf{inelastic scattering $\ce{(n,n^{\prime})}$}, the neutron excites the
-    nucleus, which then de-excites by emitting a gamma ray, resulting in a larger energy loss for
-    the neutron. Both processes are crucial for \textbf{moderation}—slowing the fast 14.1 MeV
-    neutrons down. This thermal energy, deposited in the blanket material, is what is ultimately
-    extracted by a coolant to generate electricity.
-
-\subsubsection{Absorption Interactions}
-    The neutron is captured by a nucleus. This can be a \textbf{radiative capture \ce{(n, \gamma)}}
-    event, where the nucleus emits a gamma ray. This is often a parasitic reaction, as it removes a
-    neutron from the system that could have been used for breeding. Alternatively, the absorption
-    can induce \textbf{charged particle emission}, such as \ce{(n,p)} or \ce{(n, \alpha)} reactions.
-    This is the fundamental mechanism used for tritium breeding \cite{kuridan_neutron_2023}.
 
 \subsection{Tritium Breeding and Neutron Multiplication}
+A fundamental challenge for D-T fusion is the supply of tritium. Tritium is a radioactive isotope
+($\tau_{1/2} \approx 12.3$ years) with no significant natural abundance
+\cite{brown_endfb-viii0_2018}. To sustain the fuel cycle, the blanket must breed tritium via neutron
+interactions with lithium. Natural lithium consists of two isotopes: \ce{^6Li} (7.59\% abundance)
+and \ce{^7Li} (92.41\% abundance) \cite{brown_endfb-viii0_2018}.
 
-The primary nuclear function of the blanket is to use the fusion neutrons to ``breed'' new tritium
-fuel. This is accomplished by bombarding lithium isotopes with the neutrons. There are two reactions
-that produce tritium:
+\subsubsection{Breeding Reactions}
+Both isotopes undergo tritium-producing reactions, but their neutronic characteristics differ
+fundamentally:
+
 \begin{equation}
-    \ce{^{6}Li + n -> \alpha + t} + 4.8 \ce{MeV}
-    \label{eq:li6_reaction}
+    \ce{^6Li + n -> \upalpha} + \ce{t + 4.8 MeV}
+    \label{eq:Li6_reaction}
 \end{equation}
 
 \begin{equation}
-    \ce{^{7}Li + n -> \alpha + t + n^{\prime}} - 2.5 \ce{MeV}
-    \label{eq:li7_reaction}
+    \ce{^7Li + n -> \upalpha} + \ce{t + n^\prime{}} - \ce{2.5 MeV}
+    \label{eq:Li7_reaction}
 \end{equation}
-The \ce{^{6}Li} reaction is exothermic and has a very large cross-section for low-energy (thermal)
-neutrons, making it the primary breeding reaction of interest \cite{hernandez_first_2018}. The
-\ce{^{7}Li} reaction is endothermic, requiring high-energy neutrons (a ``threshold'' reaction), and is
-generally less effective.
 
-\begin{figure}[htbp]
+The \ce{^6Li} reaction (Eq. \ref{eq:Li6_reaction}) is exothermic and possesses a $1/v$ cross-section
+dependence, making it dominant at thermal neutron energies ($E < 0.5$ eV) (Figure
+\ref{fig:lithium_xs}) \cite{hernandez_first_2018}. Conversely, the \ce{^7Li} reaction (Eq.
+\ref{eq:Li7_reaction}) is endothermic with a threshold energy of approximately 2.5 MeV
+\cite{shatalov_breeder_1991}.
+
+\begin{figure}[h!]
     \centering
-    % Placeholder for the image as external files are not supported
     \includegraphics[width=0.5\textwidth]{figures/lithium_cs.png}
     \caption{Neutron cross-sections for the primary tritium breeding reactions,
-    \ce{^{6}Li(n, \alpha)t} and $\ce{^{7}Li(n, \alpha t)n^{\prime}}$, as a function of incident neutron energy.
-    The \ce{^{6}Li} cross-section is dominant at low (thermal) energies, while the \ce{^{7}Li}
-    reaction is a threshold reaction requiring high-energy neutrons.}
-    \label{fig:lithium_cross_sections}
+    \ce{^6Li}(n,$\upalpha$)t and \ce{^7Li}(n, n$^\prime{}\upalpha$)t, as a function of incident neutron
+    energy. Note the dominance of \ce{^6Li} at thermal energies.}
+    \label{fig:lithium_xs}
 \end{figure}
 
-The critical metric for the blanket's success is the \textbf{Tritium Breeding Ratio (TBR)}, defined as
-the ratio of tritium atoms produced in the blanket to the tritium atoms consumed in the plasma
-\cite{federici_overview_2019}. Due to inevitable fuel cycle losses (e.g., incomplete plasma burn-up,
-decay during extraction), the blanket must breed more tritium than is consumed. To achieve a
-self-sufficient fuel cycle, a TBR $>$ 1.0 is mandatory, with most reactor designs targeting a value of
-1.1 or higher \cite{sawan_physics_2006, meschini_modeling_2023}.
+\subsubsection{Neutron Multiplication and Economy}
+The reactor's fuel self-sufficiency is quantified by the \textbf{Tritium Breeding Ratio (TBR)},
+defined as the ratio of tritium bred to tritium consumed. To account for decay and processing
+inefficiencies, a TBR significantly $> 1.0$ (typically $\approx 1.1$) is mandatory for a viable
+power plant \cite{sawan_physics_2006, meschini_modeling_2023, federici_overview_2019}.
 
-This presents a ``neutron economy'' challenge. The D-T reaction produces one neutron, and the primary
-\ce{^{6}Li} breeding reaction consumes one neutron \cite{shatalov_breeder_1991}. This leaves no
-margin for neutrons that are inevitably lost, either by leaking out of the blanket or through
-parasitic absorption in structural materials (like steel) \cite{shatalov_breeder_1991}.
+However, the D-T reaction produces exactly one neutron, and the primary \ce{^6Li} breeding reaction
+consumes one neutron. This 1-to-1 economy leaves no margin for neutrons lost to parasitic absorption
+in structural materials (e.g., steel first walls) or leakage \cite{shatalov_breeder_1991}. To
+overcome this deficit, the blanket must utilise neutron multipliers---materials with significant
+$\ce{(n, 2n)}$ cross-sections at 14.1 MeV. The primary candidates are Beryllium and Lead, the latter
+often used in liquid lead-lithium eutectic blankets \cite{malang_self-cooled_1991}:
 
-To overcome this deficit, the blanket must include a \textbf{neutron multiplier}
-\cite{malang_self-cooled_1991, hernandez_first_2018}. These are materials that undergo an
-\textbf{\ce{(n, 2n)}} reaction, where one high-energy incident neutron strikes a nucleus and causes two
-neutrons to be emitted. The two most viable multiplier materials are Beryllium (Be) and Lead (Pb)
-\cite{hernandez_first_2018}.
-$$
-\ce{^{9}Be + n -> ^{8}Be + 2n -> 2\alpha + 2n}
-$$
-$$
-\ce{^{208}Pb + n -> ^{207m}Pb + 2n}
-$$
-By incorporating these materials, the single 14.1 MeV fusion neutron can be multiplied into two or
-more lower-energy neutrons. These neutrons are then moderated (slowed down) within the blanket until
-they are at the optimal thermal energy to be captured by \ce{^{6}Li}, thus enabling a TBR
-significantly greater than one \cite{hernandez_first_2018}.
+\begin{equation}
+    \ce{^9Be + n -> 2\upalpha} + \ce{2n^\prime{} - 1.57 MeV}
+\end{equation}
+\begin{equation}
+    \ce{^{208}Pb + n -> ^{207}Pb + 2n^\prime{}}
+\end{equation}
 
-\begin{figure}[htbp]
+These are threshold reactions (see Figure \ref{fig:multiplier_xs}) that increase the macroscopic
+neutron population, allowing a single incident fusion neutron to potentially breed more than one
+triton \cite{hernandez_first_2018}.
+
+\begin{figure}[h!]
     \centering
-    % Placeholder for the image as external files are not supported
     \includegraphics[width=0.5\textwidth]{figures/multipliers_cs.png}
-    \caption{Neutron cross-sections for the \ce{(n, 2n)} neutron multiplication reactions in
-    Beryllium (\ce{^{9}Be}) and Lead (\ce{^{208}Pb}). Both are threshold reactions that require
-    high-energy neutrons, such as those from the D-T fusion reaction (14.1 MeV), to effectively
-    multiply the neutron population.}
-    \label{fig:multiplier_cross_sections}
+    \caption{Neutron cross-sections for the (n, 2n) multiplication reactions in Beryllium and Lead.
+    These threshold reactions effectively double the neutron population available for breeding.}
+    \label{fig:multiplier_xs}
 \end{figure}
+
+\subsection{Neutron Transport and Interactions}
+To determine the TBR, one must model the full phase-space behaviour of neutrons within the complex
+reactor geometry. This behaviour is governed by the Boltzmann Transport Equation (BTE).
+
+\subsubsection{The Boltzmann Transport Equation}
+The BTE is a linear integro-differential equation describing the conservation of neutrons in phase
+space $(\vec{r}, \hat{\Omega}, E, t)$. It stipulates that the rate of change of neutron density is
+equal to the net production minus net loss and net leakage. For a steady-state system with a fixed
+source, the BTE is given by \cite{kuridan_neutron_2023}:
+
+\begin{equation}
+    \underbrace{\hat{\Omega} \cdot \nabla \psi}_{\text{Streaming}} + \underbrace{\Sigma_t \psi}_{\text{Collision Loss}} = \underbrace{\int_0^\infty \int_{4\pi} \Sigma_s(E^\prime \to E, \hat{\Omega}^\prime \to \hat{\Omega}) \psi^\prime d\hat{\Omega}^\prime dE^\prime}_{\text{Scattering Source}} + \underbrace{S(\vec{r}, \hat{\Omega}, E)}_{\text{Fixed Source}}
+    \label{eq:BTE}
+\end{equation}
+
+Where $\psi(\vec{r}, \hat{\Omega}, E)$ is the angular neutron flux, $\Sigma_t$ is the total
+macroscopic cross-section, and $\Sigma_s$ represents the probability of a neutron scattering from
+energy $E^\prime$ and direction $\hat{\Omega}^\prime$ into $E$ and $\hat{\Omega}$.
+
+Analytic solutions to Eq. \ref{eq:BTE} are generally impossible for heterogeneous 3D reactor
+geometries. Consequently, this project employs Monte Carlo (MC) methods. MC does not solve the
+equation for average flux directly; instead, it simulates the stochastic histories of individual
+particles, sampling interaction probabilities from nuclear data libraries such as ENDF/B-VIII.0
+\cite{brown_endfb-viii0_2018}. The statistical aggregation of these histories converges to the
+solution of the integral BTE \cite{kuridan_neutron_2023}.
+
+\subsubsection{Interaction Probabilities and Mean Free Path}
+The probability of a specific interaction type $x$ (e.g., capture, fission, scatter) occurring is
+defined by the macroscopic cross-section $\Sigma_x$, which relates to the microscopic cross-section
+$\sigma_x$ and atomic density $N$:
+\begin{equation}
+    \Sigma_x(E) = N \sigma_x(E)
+\end{equation}
+The mean free path ($\lambda$), representing the average distance a neutron travels through the
+blanket medium before interacting \cite{nuclearphysics}, is:
+\begin{equation}
+    \lambda(E) = \frac{1}{\Sigma_{total}(E)}
+\end{equation}
+In blanket design, $\lambda$ dictates the necessary radial build thickness required to attenuate the
+14.1 MeV flux and protect against neutron leakage \cite{tas_liquid_1988}.
+
+\subsubsection{Moderation and Kinematics of Elastic Scattering}
+To maximise the efficiency of the \ce{^6Li(n,\upalpha)t} reaction, the fast fusion neutrons must be
+moderated to thermal energies. This energy loss occurs primarily via elastic scattering.
+
+In an elastic collision with a nucleus of mass number $A$, the average logarithmic energy decrement
+per collision ($\xi$) is determined by the target mass \cite{nuclearphysics}:
+\begin{equation}
+    \xi = 1 + \frac{(A-1)^2}{2A} \ln \left( \frac{A-1}{A+1} \right)
+\end{equation}
+This parameter explains the choice of coolants and their impact on TBR. For light nuclei like
+Hydrogen (in \ce{H2O}), $A \approx 1$, resulting in $\xi=1$. This allows for rapid thermalisation in
+very few collisions, significantly softening the neutron spectrum. Conversely, for heavy nuclei such
+as Lead ($A \approx 208$), $\xi$ is small ($\approx 0.0096$), meaning energy loss per collision is
+minimal. This kinematic distinction is crucial when analysing spectral shifts caused by water versus
+gaseous coolants.
 
 
 
@@ -437,7 +414,7 @@ significantly greater than one \cite{hernandez_first_2018}.
 
 \subsection{The D-T Reaction and the Tritium Fuel Imperative}
 
-The deuterium-tritium (D-T) fusion reaction, \ce{d + t -> n + \alpha + 17.6 MeV}, has been the leading
+The deuterium-tritium (D-T) fusion reaction, \ce{d + t -> n + \upalpha + 17.6 MeV}, has been the leading
 candidate for first-generation fusion power plants since its potential was identified in the 1940s
 \cite{paris_lost_2023}. Its primary advantage lies in its high fusion cross-section ($\sigma_f$) at
 plasma temperatures achievable with current technology, significantly higher than other candidates
@@ -492,7 +469,7 @@ high-energy fusion neutrons, effectively turning one incident neutron into two
 \subsection{The Role of Neutron Multipliers}
 
 The D-T fusion reaction produces a single 14.1 MeV neutron, while the primary breeding reaction,
-\ce{^{6}Li(n, \alpha)t}, consumes one neutron. This 1-to-1 neutron economy leaves no margin for
+\ce{^{6}Li(n, \upalpha)t}, consumes one neutron. This 1-to-1 neutron economy leaves no margin for
 inevitable losses due to parasitic absorption in structural materials or neutrons escaping the
 blanket. To achieve the required Tritium Breeding Ratio (TBR) greater than unity, a blanket must
 therefore incorporate a \textbf{neutron multiplier} \cite{malang_self-cooled_1991}.
@@ -507,7 +484,7 @@ Beryllium (\ce{Be}) and Lead (\ce{Pb}).
 \subsubsection{Beryllium Neutron Multipliers}
     Beryllium, specifically the isotope \ce{^{9}Be}, is an extremely effective neutron multiplier
     with a low energy threshold for its \ce{(n, 2n)} reaction:
-    $$\ce{^{9}Be + n -> ^{8}Be + 2n -> 2\alpha} + \ce{2n}$$ It is widely used in conceptual solid breeder
+    $$\ce{^{9}Be + n -> ^{8}Be + 2n -> 2\upalpha} + \ce{2n}$$ It is widely used in conceptual solid breeder
     designs, such as the Helium-Cooled Pebble Bed (HCPB) and Water-Cooled Pebble Bed (WCPB), often
     in the form of beryllium pebbles or beryllide ceramics (\ce{Be12Ti}) \cite{wang_current_2019,
     liu_design_2022}. It is also a key component in the molten salt FLiBe \ce{(2LiF . BeF2)}
@@ -656,6 +633,7 @@ studies may have overlooked.
 
 
 \noindent\rule{\linewidth}{0.4pt}
+
 
 
 \section{Methodology}
@@ -826,7 +804,6 @@ how geometric and material changes influence the overall neutronic performance o
 
 
 
-
 \section{Results}
 
 \subsection{Material Composition and Performance}
@@ -936,7 +913,7 @@ absorption and scattering cross-sections of Cobalt, which degrade the neutron ec
 
 Figure~\ref{fig:enrichment} illustrates the sensitivity of TBR to \ce{^{6}Li} enrichment. The dip in
 TBR at high percentages is attributed to the complete depletion of \ce{^{7}Li}, eliminating the
-contribution of $\ce{^{7}Li(n,n^{\prime}\alpha)t}$ reactions which are valuable for preserving the
+contribution of $\ce{^{7}Li(n,n^{\prime}\upalpha)t}$ reactions which are valuable for preserving the
 neutron population in the high-energy spectrum.
 
 It is noted that the enrichment level of 60\% used in the base model was selected \textit{a priori}
@@ -1110,7 +1087,7 @@ A significant finding for reactor optimisation is the behaviour of \ce{^6Li} enr
 indicate a saturation point at approximately 40\% enrichment. Beyond this point, the blanket becomes
 ``neutron-limited'' rather than ``target-limited.'' Furthermore, enrichment levels approaching 100\%
 actually degrade performance. This is attributed to the total depletion of \ce{^7Li}, which removes
-the contribution of the $\ce{^7Li(n, n^\prime{} \alpha)t}$ reaction \cite{sawan_physics_2006}.
+the contribution of the $\ce{^7Li(n, n^\prime{} \upalpha)t}$ reaction \cite{sawan_physics_2006}.
 Although this reaction is less frequent, it preserves the neutron population by emitting a secondary
 neutron, whereas the \ce{^6Li} reaction is purely absorptive. Economically, this suggests that
 costly high-enrichment processes are unnecessary; a moderate enrichment of 20--40\% represents the
