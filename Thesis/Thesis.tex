@@ -18,23 +18,46 @@
 % base article class:
 % % Add the biblatex package
 \usepackage{hyperref}% add hypertext capabilities
-\hypersetup{colorlinks=true, urlcolor=black, linkcolor=black, citecolor=black} % Optional styling
+% \hypersetup{colorlinks=true, urlcolor=black, linkcolor=black, citecolor=black} % Optional styling
 \usepackage[
     backend=biber,
-    style=numeric-comp, % or vancouver, ieee, etc.
-    doi=false,          % 1. Don't print the explicit DOI text
-    url=false,          % 2. Don't print the URL
-    isbn=false
+    style=vancouver,
+    doi=true,           % <--- CHANGE 1: Set to true so the field is processed
+    url=false,          % Don't print the URL
+    isbn=false,
+    eprint=false,
+    maxbibnames=6,    % Truncate if > 6 authors
+    minbibnames=6
 ]{biblatex}
-% 3. Create a macro that checks for a DOI and links the title
-\newbibmacro{string+doi}[1]{%
-  \iffieldundef{doi}{#1}{\href{https://doi.org/\thefield{doi}}{#1}}}
-% 4. Apply this macro to Article, Book, and Thesis titles
-\DeclareFieldFormat{title}{\usebibmacro{string+doi}{\mkbibemph{#1}}}
-\DeclareFieldFormat[article]{title}{\usebibmacro{string+doi}{#1}} % Articles usually not italicized in Vancouver
-% % Tell biblatex where to find your references
-\addbibresource{thesis.bib} % <-- Make sure to include the .bib extension
+% --- FIX 1: Remove Quotation Marks from Titles ---
+% This tells latex to print the title (#1) exactly as is, without quotes or italics
+\DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,unpublished]{title}{#1}
+% --- FIX 2: Create the [DOI] link at the end ---
+\DeclareFieldFormat{doi}{%
+    \href{https://doi.org/#1}{\textsc{[doi]}}%
+}
+% --- FIX 3 (Optional): Remove "In:" before journal names ---
+% Vancouver style usually says "Nuclear Fusion" not "In: Nuclear Fusion"
+\renewbibmacro{in:}{}
+% --- FIX 4: Remove "and" between authors ---
+% This changes the delimiter between the last two authors from " and " to ", "
+\DeclareDelimFormat*{finalnamedelim}{\addcomma\addspace}
+% --- FIX 5: Add commas to the date format (Year, Month, Day) ---
+% The vancouver style uses a specific macro for dates. We must redefine it
+% to insert commas between the year, month, and day.
+\renewbibmacro*{date}{%
+  \printdate
+}
+% Redefine the date printing format to force commas
+\DefineBibliographyExtras{english}{%
+  \protected\def\mkbibdatelong#1#2#3{%
+    \thefield{#1}% YEAR
+    \iffieldundef{#2}{}{\addcomma\addspace\mkbibmonth{\thefield{#2}}}% MONTH
+    \iffieldundef{#3}{}{\addcomma\addspace\stripzeros{\thefield{#3}}}% DAY
+  }%
+}
 
+\addbibresource{thesis.bib} % <-- Make sure to include the .bib extension
 \renewcommand*{\bibfont}{\small\linespread{1.0}\selectfont}
 
 \usepackage{graphicx}% Include figure files
@@ -254,8 +277,8 @@ tritium produced to tritium consumed.
 Because the D-T reaction produces only one neutron per consumption event, this ``one-to-one" neutron
 economy would require breeding efficiency (no losses of neutrons / tritium). Real world breeding
 inefficiecies (see Section~\ref{sec:blanket_literature}) necessitate achieving a TBR greater than
-1.0. As the source of fuel for fusion, this is not merely a design objective but a threshold
-requirement for the viability and scalability of fusion energy \cite{sawan_physics_2006}.
+1.0. As the source of fuel for fusion, tritium breeding is not merely a design objective but a
+threshold requirement for the viability and scalability of fusion energy \cite{sawan_physics_2006}.
 
 This strict margin necessitates high-fidelity modelling. Experimental validation of full-scale
 reactor neutronics is currently unfeasible, placing the burden of design on computational
@@ -269,16 +292,16 @@ next-generation concepts relevant to future magnetic confinement devices, such a
 Energy Production) programme \cite{lord_fusing_2024}.
 
 
-\subsection{Structure of the Report}
-This thesis is organised as follows: Section~\ref{sec:theory} outlines the fundamental nuclear
-physics governing fusion and neutron interactions, including the kinematics of the D-T reaction and
-the Boltzmann Transport Equation. Section~\ref{sec:lit_review} reviews the existing
-literature on breeder blanket concepts, highlighting the trade-offs between solid and liquid breeder
-designs. Section~\ref{sec:methodology} details the methodology, including the Monte Carlo transport
-algorithms and the parametric geometry generation workflow. Section~\ref{sec:results} presents the
-results of the material and geometric optimisation sweeps. Finally, Section~\ref{sec:discussion}
-discusses the implications of these results for reactor design, followed by conclusions in
-Section~\ref{sec:conclusion}.
+% \subsection{Structure of the Report}
+% This thesis is organised as follows: Section~\ref{sec:theory} outlines the fundamental nuclear
+% physics governing fusion and neutron interactions, including the kinematics of the D-T reaction and
+% the Boltzmann Transport Equation. Section~\ref{sec:lit_review} reviews the existing
+% literature on breeder blanket concepts, highlighting the trade-offs between solid and liquid breeder
+% designs. Section~\ref{sec:methodology} details the methodology, including the Monte Carlo transport
+% algorithms and the parametric geometry generation workflow. Section~\ref{sec:results} presents the
+% results of the material and geometric optimisation sweeps. Finally, Section~\ref{sec:discussion}
+% discusses the implications of these results for reactor design, followed by conclusions in
+% Section~\ref{sec:conclusion}.
 
 
 
@@ -414,7 +437,7 @@ particles, sampling interaction probabilities from nuclear data libraries such a
 \cite{brown_endfb-viii0_2018}. The statistical aggregation of these histories converges to the
 solution of the integral BTE \cite{kuridan_neutron_2023}.
 
-\subsubsection{Interaction Probabilities and Mean Free Path}
+\subsubsection{Interaction Probabilities, Mean Free Path and Moderation}
 The probability of a specific interaction type $x$ (e.g., capture, fission, scatter) occurring is
 defined by the macroscopic cross-section $\Sigma_x$, which relates to the microscopic cross-section
 $\sigma_x$ and atomic density $N$:
@@ -425,25 +448,16 @@ The mean free path ($\lambda$), representing the average distance a neutron trav
 blanket medium before interacting \cite{nuclearphysics}, is:
 \begin{equation}
     \lambda(E) = \frac{1}{\Sigma_{total}(E)}
+    \label{eq:mean_free_path}
 \end{equation}
 In blanket design, $\lambda$ dictates the necessary radial build thickness required to attenuate the
 14.1 MeV flux and protect against neutron leakage \cite{tas_liquid_1988}.
 
-\subsubsection{Moderation and Kinematics of Elastic Scattering}
-To maximise the efficiency of the \ce{^6Li(n,\upalpha)t} reaction, the fast fusion neutrons must be
-moderated to thermal energies. This energy loss occurs primarily via elastic scattering.
-
-In an elastic collision with a nucleus of mass number $A$, the average logarithmic energy decrement
-per collision ($\xi$) is determined by the target mass \cite{nuclearphysics}:
-\begin{equation}
-    \xi = 1 + \frac{(A-1)^2}{2A} \ln \left( \frac{A-1}{A+1} \right)
-\end{equation}
-This parameter explains the choice of coolants and their impact on TBR. For light nuclei like
-Hydrogen (in \ce{H2O}), $A \approx 1$, resulting in $\xi=1$. This allows for rapid thermalisation in
-very few collisions, significantly softening the neutron spectrum. Conversely, for heavy nuclei such
-as Lead ($A \approx 208$), $\xi$ is small ($\approx 0.0096$), meaning energy loss per collision is
-minimal. This kinematic distinction is crucial when analysing spectral shifts caused by water versus
-gaseous coolants.
+Fast fusion neutrons can be moderated, often all the way to thermal energies, using appropriate low
+mass number materials (such as water). This is detailed further in Appendix
+\ref{app:neutronics_theory}. This maximises the cross section of the breeding reaction
+\ref{eq:Li6_reaction}, and can reduce neutron leakage by attenuating neutron flux to thermal
+energies.
 
 
 
@@ -856,7 +870,7 @@ absorption and scattering cross-sections of Cobalt, which degrade the neutron ec
 \begin{figure}[h]
     \centering
     % You can adjust the width as needed for your document layout
-    \includegraphics[width=0.5\textwidth]{figures/lithium_enrichment_sweep.png}
+    \includegraphics[width=0.50\textwidth]{figures/Enrichment New.png}
     \caption{Tritium Breeding Ratio (TBR) as a function of \ce{^6Li} enrichment percentage. The
     curve is characterised by a rapid initial increase which saturates early; the ``knee" of the curve
     appears at approximately 20\%, with the TBR effectively capping at 40\%. Beyond this saturation
@@ -883,8 +897,7 @@ lower enrichment percentages.
     $\text{Li}_{(100-x)}\text{Pb}_x$ breeder, where the density is calculated as a simple weighted
     average of \ce{Li} and \ce{Pb}. Breeding performance peaks at approximately 50\% lead
     concentration, with a rapid decline observed beyond 75\%. The eutectic point is marked for
-    reference, far exceeding any non-eutectic TBR. Error bars are included but are too small to be
-    visible at this scale.}
+    reference, far exceeding any non-eutectic TBR.}
     \label{fig:multiplier}
 \end{figure}
 
@@ -974,7 +987,7 @@ superior neutronic performance, as they have the lowest parasitic neutron absorp
 \begin{figure}[h]
     \centering
     % FIRST SUBFIGURE
-    \begin{subfigure}{0.48\textwidth}
+    \begin{subfigure}{0.49\textwidth}
         \centering
         % You can adjust the width as needed for your document layout
         \includegraphics[width=\textwidth]{figures/Blanket Thickness New.png}
@@ -982,7 +995,7 @@ superior neutronic performance, as they have the lowest parasitic neutron absorp
     \end{subfigure}
     \hfill % This pushes the figures to opposite sides
     % SECOND SUBFIGURE
-    \begin{subfigure}{0.51\textwidth}
+    \begin{subfigure}{0.5\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/BreederBlanketHeatmapSlice.png}
         \label{fig:heatmap_slice}
@@ -1039,10 +1052,10 @@ segantin_optimisation_2020}.
 
 \subsubsection{Spatial and Geometric Optimisation}
 The saturation of TBR at a radial depth of roughly 500 mm (Figure~\ref{fig:blanket_thicknesses}) can
-be validated physically by considering the neutron mean free path ($\lambda$). Dominated by lead,
-the macroscopic total cross-section ($\Sigma_t$) of the breeder mixture yields a mean free path of
-$\lambda \approx 5.5$ cm for 14 MeV neutrons. A 500 mm blanket therefore represents approximately 9
-mean free paths, sufficient to attenuate over 99.9\% of the incident flux
+be validated physically by considering the neutron mean free path \ref{eq:mean_free_path}. Dominated
+by lead, the macroscopic total cross-section ($\Sigma_t$) of the breeder mixture yields a mean free
+path of $\lambda \approx 5.5$ cm for 14 MeV neutrons. A 500 mm blanket therefore represents
+approximately 9 mean free paths, sufficient to attenuate over 99.9\% of the incident flux
 \cite{kuridan_neutron_2023}. Increasing the blanket thickness beyond this point provides no
 neutronic benefit and would act only as dead weight, complicating remote maintenance and increasing
 capital costs \cite{federici_overview_2019}.
@@ -1140,10 +1153,10 @@ greater than unity.
 
 The eutectic alloy \ce{Li17Pb83} emerged as the optimal breeder, achieving a maximum TBR of 1.61.
 This superior performance results from the high packing density of the eutectic phase and effective
-$(n,2n)$ multiplication in lead, significantly outperforming molten salt and ceramic concepts.
+$\ce{(n,2 n)}$ multiplication in lead, significantly outperforming molten salt and ceramic concepts.
 Crucially, this study overturns the assumption that maximal enrichment is required; results indicate
 TBR saturation at 40\% \ce{^6Li}. Enrichment beyond this threshold degrades performance by
-eliminating the neutron-preserving \ce{^7Li}(n,n$^\prime\alpha$)t reaction, suggesting that
+eliminating the neutron-preserving \ce{^7Li(n,n$^\prime\alpha$)t} reaction, suggesting that
 commercial reactors can operate efficiently with moderate enrichment.
 
 Geometric parameter sweeps determined a saturation blanket thickness of 500--600\,mm, governed by
@@ -1162,7 +1175,41 @@ the conservative predictions necessary for the engineering design of next-genera
 % \bibliography{thesis}
 
 % base article class:
-\printbibliography  % for biblatex.
+% \defbibnote{bibnote}{\textit{Note: DOI links are hyperlinked within Article Titles}}
+% \printbibliography[heading=bibintoc, title={References}, prenote=bibnote] % for biblatex.
+% ... end of main content ...
+
+
+
+
+
+
+\printbibliography
+
+
+
+
+
+
+
+
+\newpage
+\begin{appendices}
+
+\section{Supplementary Neutronics Theory} \label{app:neutronics_theory}
+
+\subsection{Elastic Scattering Kinematics}
+In an elastic collision with a nucleus of mass number $A$, the average logarithmic energy decrement
+per collision ($\xi$) is determined by the target mass \cite{nuclearphysics}:
+\begin{equation}
+    \xi = 1 + \frac{(A-1)^2}{2A} \ln \left( \frac{A-1}{A+1} \right)
+\end{equation}
+For Hydrogen ($A \approx 1$), $\xi = 1$, indicating that a neutron can lose all its energy in a
+single head-on collision. For Lead ($A \approx 208$), $\xi \approx 0.0096$, necessitating hundreds
+of collisions to achieve the same thermalisation.
+
+
+\end{appendices}
 
 
 % --- END OF SECTION ---
