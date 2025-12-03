@@ -197,7 +197,7 @@
     moderation, gaseous coolants (\ce{He}, \ce{N2}) act as voids that degrade the neutron economy.
     These findings suggest that optimal self-sufficiency is achieved through moderate isotopic
     enrichment and compact radial builds, directly informing design constraints for next-generation
-    devices such as DEMO and STEP.
+    devices.
     \end{abstract}
     \end{minipage}
 
@@ -242,11 +242,11 @@ blanket serves integral roles in heat extraction and shielding, its defining fun
 primary figure of merit for this study—is the \textbf{Tritium Breeding Ratio (TBR)}: the ratio of
 tritium produced to tritium consumed.
 
-Because the D-T reaction produces only one neutron per consumption event, there is a strict
-``one-to-one" neutron economy. Without careful design, neutrons lost to leakage or parasitic
-absorption in structural materials will result in a TBR below unity, causing the reactor to burn
-itself out of fuel. Therefore, achieving a TBR greater than 1.0 is not merely a design
-objective but a threshold requirement for the viability of fusion energy \cite{sawan_physics_2006}.
+Because the D-T reaction produces only one neutron per consumption event, this ``one-to-one" neutron
+economy would require breeding efficiency (no losses of neutrons / tritium). Real world breeding
+inefficiecies (see Section~\ref{sec:blanket_literature}) necessitate achieving a TBR greater than
+1.0. As the source of fuel for fusion, this is not merely a design objective but a threshold
+requirement for the viability and scalability of fusion energy \cite{sawan_physics_2006}.
 
 This strict margin necessitates high-fidelity modelling. Experimental validation of full-scale
 reactor neutronics is currently unfeasible, placing the burden of design on computational
@@ -254,10 +254,10 @@ simulation. This project applies advanced Monte Carlo transport methods to perfo
 optimisation of the breeder blanket. By utilising a parametric computational workflow, this study
 aims to identify the specific material compositions and geometric configurations required to
 maximise the TBR, ensuring fuel self-sufficiency while maintaining adequate performance for other
-aspects of fusion energy generation. The outcomes of this work are intended to
-inform the design of next-generation concepts relevant to future magnetic confinement devices, such
-as the EU-DEMO \cite{federici_european_2017} and the UK STEP (Spherical Tokamak for Energy
-Production) programme \cite{lord_fusing_2024}.
+aspects of fusion energy generation. The outcomes of this work are intended to inform the design of
+next-generation concepts relevant to future magnetic confinement devices, such as the EU-DEMO
+(DEMOnstration power plant) \cite{federici_european_2017} and the UK STEP (Spherical Tokamak for
+Energy Production) programme \cite{lord_fusing_2024}.
 
 
 \subsection{Structure of the Report}
@@ -300,11 +300,11 @@ MeV), while the charged alpha particle ($\upalpha$) retains 3.5 MeV \cite{heckro
 In Magnetic Confinement Fusion (MCF) devices, such as the tokamak \cite{wesson}, the charged
 $\upalpha$-particle is confined by the magnetic field, depositing its energy to sustain the plasma
 temperature (self-heating). The 14.1 MeV neutron, being electrically neutral, escapes the magnetic
-confinement immediately. The reactor breeder blanket is the subsystem designed to intercept this
-neutron flux to extract thermal energy, shield the superconducting magnets, and breed fuel
+confinement. The reactor breeder blanket is the subsystem designed to intercept this
+neutron flux to extract thermal energy, shield the external components, and breed fuel
 \cite{shatalov_breeder_1991}.
 
-\begin{figure}[h!]
+\begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{figures/fusion_cs.png}
     \caption{A comparison of fusion reaction reactivities. The total cross-section is plotted as a
@@ -339,7 +339,7 @@ dependence, making it dominant at thermal neutron energies ($E < 0.5$ eV) (Figur
 \ref{fig:lithium_xs}) \cite{hernandez_first_2018}. Conversely, the \ce{^7Li} reaction (Eq.
 \ref{eq:Li7_reaction}) is endothermic with a threshold energy of approximately 2.5 MeV
 \cite{shatalov_breeder_1991}.
-
++*69
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.5\textwidth]{figures/lithium_cs.png}
@@ -351,22 +351,20 @@ dependence, making it dominant at thermal neutron energies ($E < 0.5$ eV) (Figur
 
 \subsubsection{Neutron Multiplication and Economy}
 The reactor's fuel self-sufficiency is quantified by the \textbf{Tritium Breeding Ratio (TBR)},
-defined as the ratio of tritium bred to tritium consumed. To account for decay and processing
-inefficiencies, a TBR significantly $> 1.0$ (typically $\approx 1.1$) is mandatory for a viable
-power plant \cite{sawan_physics_2006, meschini_modeling_2023, federici_overview_2019}.
+defined as the ratio of tritium bred to tritium consumed. 
 
 However, the D-T reaction produces exactly one neutron, and the primary \ce{^6Li} breeding reaction
-consumes one neutron. This 1-to-1 economy leaves no margin for neutrons lost to parasitic absorption
-in structural materials (e.g., steel first walls) or leakage \cite{shatalov_breeder_1991}. To
-overcome this deficit, the blanket must utilise neutron multipliers---materials with significant
-$\ce{(n, 2n)}$ cross-sections at 14.1 MeV. The primary candidates are Beryllium and Lead, the latter
-often used in liquid lead-lithium eutectic blankets \cite{malang_self-cooled_1991}:
+consumes one neutron. This 1-to-1 economy leaves no margin for breeding ineffeciency (see
+Section~\ref{sec:blanket_literature}). To overcome this deficit, the blanket must utilise neutron
+multipliers---materials with significant $\ce{(n, 2n)}$ cross-sections at 14.1 MeV. The primary
+candidates are Beryllium and Lead, the latter often used in liquid lead-lithium eutectic blankets
+\cite{malang_self-cooled_1991} \cite{brown_endfb-viii0_2018}: 
 
 \begin{equation}
-    \ce{^9Be + n -> 2\upalpha} + \ce{2n^\prime{} - 1.57 MeV}
+    \ce{^9Be + n -> ^8Be} + \ce{2n^\prime{} - 1.57MeV}
 \end{equation}
 \begin{equation}
-    \ce{^{208}Pb + n -> ^{207}Pb + 2n^\prime{}}
+    \ce{^{208}Pb + n -> ^{207}Pb + 2n^\prime{} - 7.37MeV}
 \end{equation}
 
 These are threshold reactions (see Figure \ref{fig:multiplier_xs}) that increase the macroscopic
@@ -392,7 +390,7 @@ equal to the net production minus net loss and net leakage. For a steady-state s
 source, the BTE is given by \cite{kuridan_neutron_2023}:
 
 \begin{equation}
-    \underbrace{\hat{\Omega} \cdot \nabla \psi}_{\text{Streaming}} + \underbrace{\Sigma_t \psi}_{\text{Collision Loss}} = \underbrace{\int_0^\infty \int_{4\pi} \Sigma_s(E^\prime \to E, \hat{\Omega}^\prime \to \hat{\Omega}) \psi^\prime d\hat{\Omega}^\prime dE^\prime}_{\text{Scattering Source}} + \underbrace{S(\vec{r}, \hat{\Omega}, E)}_{\text{Fixed Source}}
+    \underbrace{\hat{\Omega} \cdot \nabla \psi}_{\text{Streaming}} + \underbrace{\Sigma_t \psi}_{\text{Collision Loss}} = \underbrace{\int_0^\infty \int_{4\pi} \Sigma_s(E^\prime \to E, \hat{\Omega}^\prime \to \hat{\Omega}) \psi^\prime d\hat{\Omega}^\prime dE^\prime}_{\text{Backscattering Source}} + \underbrace{S(\vec{r}, \hat{\Omega}, E)}_{\text{Fixed Source}}
     \label{eq:BTE}
 \end{equation}
 
@@ -454,12 +452,13 @@ abundance.
 
 Current global tritium stockpiles are derived almost exclusively as a by-product of heavy-water
 fission reactors (CANDU). Analyses of this supply chain indicate that stockpiles are insufficient to
-support the initial startup and operation of a future fusion fleet \cite{kovari_tritium_2018,
-pearson_tritium_2018}. Consequently, the external supply chain is considered a bottleneck that
-threatens the viability of the entire D-T fusion concept. To resolve this, commercial reactors are
-required to breed their own fuel in-situ via the \textbf{Tritium Breeder Blanket}.
+support the operation of a future fusion fleet \cite{kovari_tritium_2018,pearson_tritium_2018}. 
+Consequently, the external supply chain is considered a bottleneck that threatens the viability of 
+the entire D-T fusion concept. To resolve this, commercial reactors are required to breed their own fuel
+in-situ via the \textbf{Tritium Breeder Blanket}.
 
 \subsection{Breeder Blanket Evolution and Functions}
+\label{sec:blanket_literature}
 
 The concept of a ``breeder'' blanket predates magnetic confinement fusion; it was originally
 conceived to utilise high-energy neutrons to produce fissile materials (\ce{^{233}U}, \ce{^{239}Pu})
@@ -470,18 +469,22 @@ shielding superconducting magnets and external components from neutron damage / 
 extracting high-grade heat for power conversion, and maintaining a Tritium Breeding Ratio (TBR) $>$
 1.0 \cite{shatalov_breeder_1991}.
 
-To ensure self-sufficiency, the blanket must produce more tritium than is consumed in the plasma.
-Accounting for processing inefficiencies, radioactive decay, and losses to structural materials,
-literature typically suggests a target TBR of approximately 1.1 \cite{sawan_physics_2006,
+TBR must be $>1.0$ give margin for several different sources of ineffeciency. Neutrons can be lost
+to structural materials (e.g. first walls) via parasitic absorption and neutron can also leak out of
+the reactor vessel. Produced tritium can be lost from processing inefficiencies and tritium's short
+half life leads to decay losses. Accounting for these breeding inefficiencies literature typically
+suggests a target TBR $\approx 1.1$ \cite{shatalov_breeder_1991, sawan_physics_2006,
 meschini_modeling_2023}. Achieving this margin is non-trivial; the 1-to-1 neutron economy of the D-T
-reaction leaves no surplus for parasitic absorption, necessitating the use of neutron multipliers to
-enhance the neutron population \cite{hernandez_first_2018}.
+reaction leaves no surplus for , necessitating the use of neutron multipliers to enhance the neutron
+population \cite{hernandez_first_2018}. When additionally accounting for decay and processing
+inefficiencies, a TBR significantly $> 1.0$ (typically $\approx 1.1$) is mandatory for a viable
+power plant \cite{sawan_physics_2006, meschini_modeling_2023, federici_overview_2019}.
 
 \subsection{Neutron Multiplication Strategies}
 
 Since natural lithium cannot sustain a TBR $>$ 1 in a realistic reactor geometry solely via the
-endothermic $\ce{^{7}Li(n, n^\prime\upalpha)t}$ reaction, design studies have converged on two primary
-multiplier candidates: Beryllium and Lead \cite{malang_self-cooled_1991}.
+endothermic $\ce{^{7}Li(n, n^\prime\upalpha)t}$ reaction, design studies have converged on two
+primary multiplier candidates: Beryllium and Lead \cite{malang_self-cooled_1991}. 
 
 Beryllium (\ce{^{9}Be}) is neutronically superior due to its low threshold energy for the \ce{(n,
 2n)} reaction. It is the multiplier of choice for solid ceramic breeder concepts (e.g., HCPB, WCPB)
@@ -869,7 +872,7 @@ lower enrichment percentages.
 The simplified study of the lead multiplier fraction in \ce{LiPb} breeders is shown in
 Figure~\ref{fig:multiplier}, where an approximation was taken where the density is calculated as a
 simple weighted average of \ce{Li} and \ce{Pb}. Though there was a peak at 50\% lead composition,
-this TGR was still far lower than the TBR from \ce{Li17Pb83}. These results show that density is a
+this TBR was still far lower than the TBR from \ce{Li17Pb83}. These results show that density is a
 stronger factor affecting liquid TBR improvements than simple multiplier - breeder ratios.
 
 \begin{figure}[htbp]
@@ -986,9 +989,8 @@ breeder depth beyond 600 mm yields negligible gains in tritium production.
     \end{subfigure}
     \caption{Analysis of Breeder Blanket radial thickness. (a) TBR saturates at approximately 500
     mm, suggesting full neutron attenuation. (b) Cross-sectional heatmap of reaction density. The
-    reaction rate drops to negligible levels beyond the 600 mm mark, confirming the saturation
-    thickness observed in (a). Error bars are included but are too small to be visible at this
-    scale.}
+    reaction rate drops to negligible levels beyond the $640-580=60$cm depth into the blanket, confirming the saturation
+    thickness observed in (a).}
     \label{fig:blanket_thicknesses}
 \end{figure}
 

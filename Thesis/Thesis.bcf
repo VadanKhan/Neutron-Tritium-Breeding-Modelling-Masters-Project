@@ -2397,29 +2397,30 @@
     <bcf:citekey order="16" intorder="1">brown_endfb-viii0_2018</bcf:citekey>
     <bcf:citekey order="17" intorder="1">hernandez_first_2018</bcf:citekey>
     <bcf:citekey order="18" intorder="1">shatalov_breeder_1991</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">sawan_physics_2006</bcf:citekey>
-    <bcf:citekey order="19" intorder="2">meschini_modeling_2023</bcf:citekey>
-    <bcf:citekey order="19" intorder="3">federici_overview_2019</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">shatalov_breeder_1991</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">malang_self-cooled_1991</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">hernandez_first_2018</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">kuridan_neutron_2023</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">brown_endfb-viii0_2018</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">kuridan_neutron_2023</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">nuclearphysics</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">tas_liquid_1988</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">nuclearphysics</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">paris_lost_2023</bcf:citekey>
-    <bcf:citekey order="29" intorder="2">heckrotte_factors_1971</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">kovari_tritium_2018</bcf:citekey>
-    <bcf:citekey order="30" intorder="2">pearson_tritium_2018</bcf:citekey>
-    <bcf:citekey order="31" intorder="1">moir_fusion_1982</bcf:citekey>
-    <bcf:citekey order="31" intorder="2">lee_us-doe_1983</bcf:citekey>
-    <bcf:citekey order="31" intorder="3">maniscalco_fusion_1984</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">malang_self-cooled_1991</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">brown_endfb-viii0_2018</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">hernandez_first_2018</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">kuridan_neutron_2023</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">brown_endfb-viii0_2018</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">kuridan_neutron_2023</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">nuclearphysics</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">tas_liquid_1988</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">nuclearphysics</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">paris_lost_2023</bcf:citekey>
+    <bcf:citekey order="28" intorder="2">heckrotte_factors_1971</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">kovari_tritium_2018</bcf:citekey>
+    <bcf:citekey order="29" intorder="2">pearson_tritium_2018</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">moir_fusion_1982</bcf:citekey>
+    <bcf:citekey order="30" intorder="2">lee_us-doe_1983</bcf:citekey>
+    <bcf:citekey order="30" intorder="3">maniscalco_fusion_1984</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">shatalov_breeder_1991</bcf:citekey>
     <bcf:citekey order="32" intorder="1">shatalov_breeder_1991</bcf:citekey>
-    <bcf:citekey order="33" intorder="1">sawan_physics_2006</bcf:citekey>
-    <bcf:citekey order="33" intorder="2">meschini_modeling_2023</bcf:citekey>
-    <bcf:citekey order="34" intorder="1">hernandez_first_2018</bcf:citekey>
+    <bcf:citekey order="32" intorder="2">sawan_physics_2006</bcf:citekey>
+    <bcf:citekey order="32" intorder="3">meschini_modeling_2023</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">hernandez_first_2018</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">sawan_physics_2006</bcf:citekey>
+    <bcf:citekey order="34" intorder="2">meschini_modeling_2023</bcf:citekey>
+    <bcf:citekey order="34" intorder="3">federici_overview_2019</bcf:citekey>
     <bcf:citekey order="35" intorder="1">malang_self-cooled_1991</bcf:citekey>
     <bcf:citekey order="36" intorder="1">wang_current_2019</bcf:citekey>
     <bcf:citekey order="36" intorder="2">tas_liquid_1988</bcf:citekey>

@@ -1024,149 +1024,6 @@
       \endverb
       \keyw{Lit Review,{TBR},Useful}
     \endentry
-    \entry{meschini_modeling_2023}{article}{}{}
-      \name{author}{4}{}{%
-        {{hash=6519e5cd6edd68c8676a304ddbf67746}{%
-           family={Meschini},
-           familyi={M\bibinitperiod},
-           given={Samuele},
-           giveni={S\bibinitperiod}}}%
-        {{hash=f9d584d26cf2b70e926ad48428e368a0}{%
-           family={Ferry},
-           familyi={F\bibinitperiod},
-           given={Sara\bibnamedelima E.},
-           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-        {{hash=6559922319ccf5ba26ae3487e51ba6d5}{%
-           family={Delaporte-Mathurin},
-           familyi={D\bibinithyphendelim M\bibinitperiod},
-           given={Rémi},
-           giveni={R\bibinitperiod}}}%
-        {{hash=5ee053f738fb495a7810a1598050c63f}{%
-           family={Whyte},
-           familyi={W\bibinitperiod},
-           given={Dennis\bibnamedelima G.},
-           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
-      }
-      \strng{namehash}{bf9bc733acfbca3b0af0f9c64abc354a}
-      \strng{fullhash}{1b403b7f84d5137c52a1ddf1272c5d32}
-      \strng{fullhashraw}{1b403b7f84d5137c52a1ddf1272c5d32}
-      \strng{bibnamehash}{1b403b7f84d5137c52a1ddf1272c5d32}
-      \strng{authorbibnamehash}{1b403b7f84d5137c52a1ddf1272c5d32}
-      \strng{authornamehash}{bf9bc733acfbca3b0af0f9c64abc354a}
-      \strng{authorfullhash}{1b403b7f84d5137c52a1ddf1272c5d32}
-      \strng{authorfullhashraw}{1b403b7f84d5137c52a1ddf1272c5d32}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Abstract The limited tritium resources available for the first fusion power plants ({FPPs}) make fuel self-sufficiency and tritium inventory minimization leading issues in {FPP} design. This work builds on the model proposed by Abdou et al (2020 Nucl. Fusion 61 013001), which analyzed the fuel cycle ({FC}) of a {DEMOnstration} nuclear {FPP}-class {FPP} with a time-dependent system-level model. Here, we use a modified version of their model to analyze the {FC} of an Affordable, Robust, Compact ({ARC})-class tokamak and two versions of a Spherical Tokamak for Energy Production ({STEP})-class tokamak. The {ARC}-class tokamak breeds tritium in a 2LiF + {BeF} 2 liquid immersion blanket, while the {STEP}-class tokamak breeds tritium utilizing either a liquid-lithium blanket design or an encapsulated breeding blanket. A time-dependent system-level model is developed in Matlab Simulink ® to simulate the evolution of tritium flows and tritium inventories in the {FC}. The main goals of this work are to assess tritium self-sufficiency of the {ARC}- and {STEP}-class designs and to determine quantitative design requirements that can be used to analyze the adequacy of a proposed {FC} system. These design requirements are aimed at achieving a low tritium inventory doubling time ( t d ) and a low start-up inventory ( I s t a r t u p ) while keeping the required tritium breeding ratio ({TBR} r ) as low as possible. We also consider how improvements in {FC} technology and {POs} affect {TBR} r and I s t a r t u p . The model results show that {TBR} r for {ARC}- and {STEP}-class {FPPs} should be achievable if the tritium burn efficiency ({TBE}) reaches 0.5\%–1\% ({TBR} r {<} 1.2). This assumes significant, but attainable, improvements over current abilities. However, the model results indicate that an {FPP} must achieve ambitious performance targets, including {FPP} availability {>} 70\%, tritium processing time {<} 4 h, and the implementation of direct internal recycling ({DIR}). If future research yields major improvements to achievable {TBE}, it may be possible to achieve tritium self-sufficiency while operating at lower availability and without implementing {DIR}.}
-      \field{annotation}{Looks at tritium fuel cycle in a {STEP} reactor (either liquid lithium or encapsulated) and an {ARC} reactor (2LiF – {BeF}2). Very comprehensive paper on tritium self-sufficiency, breeding ratios and reactor design.}
-      \field{day}{1}
-      \field{issn}{0029-5515, 1741-4326}
-      \field{journaltitle}{Nuclear Fusion.}
-      \field{month}{12}
-      \field{number}{12}
-      \field{shortjournal}{Nucl. Fusion}
-      \field{title}{Modeling and analysis of the tritium fuel cycle for {ARC}- and {STEP}-class D-T fusion power plants}
-      \field{urlday}{8}
-      \field{urlmonth}{10}
-      \field{urlyear}{2025}
-      \field{volume}{63}
-      \field{year}{2023}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{1\bibrangedash 34}
-      \range{pages}{34}
-      \verb{doi}
-      \verb 10.1088/1741-4326/acf3fc
-      \endverb
-      \verb{file}
-      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\GJKCZ3TL\\Meschini et al. - 2023 - Modeling and analysis of the tritium fuel cycle for ARC- and STEP-class D-T fusion power plants.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://iopscience.iop.org/article/10.1088/1741-4326/acf3fc
-      \endverb
-      \verb{url}
-      \verb https://iopscience.iop.org/article/10.1088/1741-4326/acf3fc
-      \endverb
-      \keyw{Liquid Breeder,Lit Review,{TBR},Useful,{FLiBe} Salt}
-    \endentry
-    \entry{federici_overview_2019}{article}{}{}
-      \name{author}{6}{}{%
-        {{hash=c275eff5c8ed440e431b48f2d0cc3b30}{%
-           family={Federici},
-           familyi={F\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod}}}%
-        {{hash=1a8af20abab0e0d89f2b180a1fdd03c4}{%
-           family={Boccaccini},
-           familyi={B\bibinitperiod},
-           given={L.},
-           giveni={L\bibinitperiod}}}%
-        {{hash=41a96720f2cd91916ef758454ea50d81}{%
-           family={Cismondi},
-           familyi={C\bibinitperiod},
-           given={F.},
-           giveni={F\bibinitperiod}}}%
-        {{hash=c6c6df039fe61eccd6730911363b95b6}{%
-           family={Gasparotto},
-           familyi={G\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
-        {{hash=6b44ebbabe18d7cf03e7e129ff4935f5}{%
-           family={Poitevin},
-           familyi={P\bibinitperiod},
-           given={Y.},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=b7ba3f8bcd47833d54776be2ca84f525}{%
-           family={Ricapito},
-           familyi={R\bibinitperiod},
-           given={I.},
-           giveni={I\bibinitperiod}}}%
-      }
-      \strng{namehash}{934d6fc2514de3d7506461c74d64c6a6}
-      \strng{fullhash}{94ca76fdff2fde7968f16377761b0791}
-      \strng{fullhashraw}{94ca76fdff2fde7968f16377761b0791}
-      \strng{bibnamehash}{94ca76fdff2fde7968f16377761b0791}
-      \strng{authorbibnamehash}{94ca76fdff2fde7968f16377761b0791}
-      \strng{authornamehash}{934d6fc2514de3d7506461c74d64c6a6}
-      \strng{authorfullhash}{94ca76fdff2fde7968f16377761b0791}
-      \strng{authorfullhashraw}{94ca76fdff2fde7968f16377761b0791}
-      \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{annotation}{A summary of the planned design strategy for the {DEMO} reactor breeder blanket. Focus on two main blanket designs, {HCPB} and {WCLL}. Good summary of the state of the technology, more focussed on the blanket than the paper above and more up to date.}
-      \field{issn}{09203796}
-      \field{journaltitle}{Fusion Engineering and Design.}
-      \field{langid}{english}
-      \field{month}{4}
-      \field{shortjournal}{Fusion Engineering and Design}
-      \field{title}{An overview of the {EU} breeding blanket design strategy as an integral part of the {DEMO} design effort}
-      \field{urlday}{7}
-      \field{urlmonth}{10}
-      \field{urlyear}{2025}
-      \field{volume}{141}
-      \field{year}{2019}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{30\bibrangedash 42}
-      \range{pages}{13}
-      \verb{doi}
-      \verb 10.1016/j.fusengdes.2019.01.141
-      \endverb
-      \verb{file}
-      \verb Full Text:C\:\\Users\\vadan\\Zotero\\storage\\JXUDYPK6\\Federici et al. - 2019 - An overview of the EU breeding blanket design strategy as an integral part of the DEMO design effort.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S0920379619301590
-      \endverb
-      \verb{url}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S0920379619301590
-      \endverb
-      \keyw{Lit Review,Useful,{HCPB},{WCLL}}
-    \endentry
     \entry{malang_self-cooled_1991}{article}{}{}
       \name{author}{9}{}{%
         {{hash=fd6722b42f4ff6aaa186c990dece0eda}{%
@@ -1223,8 +1080,8 @@
       \strng{authornamehash}{e836aa392e6de4613fa26c4ca4f3fc05}
       \strng{authorfullhash}{550ccdbc35af2e1fd7aa5675c6f58740}
       \strng{authorfullhashraw}{550ccdbc35af2e1fd7aa5675c6f58740}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A blanket design concept using Pb-17Li eutectic alloy as both breeder material and coolant is described. Such a self-cooled blanket for the boundary conditions of a {DEMO}-reactor is under development at the Kernforschungszentrum Karlsruhe ({KfK}) in the frame of the European blanket development program. Results of investigations in the areas of design, neutroncs, magneto-hydrodynamics, thermo-mechanics, ancillary loop systems, and safety are reported. Based on recent progress, it can be concluded that the boundary conditions of a {DEMO}-reactor can be met, tritium self-sufficiency can be obtained without using beryllium as an additional neutron multiplier, and tritium inventory and permeation are acceptably low. However, to completely judge the feasibility of the proposed concept, further studies are necessary to obtain a better understanding of the magneto-hydrodynamic phenomena and their effects on the thermal-hydraulic performance of a fusion reactor blanket.}
@@ -1402,8 +1259,8 @@
       \strng{authornamehash}{600d94b5e3cd3d69dc0781ff2ad251d5}
       \strng{authorfullhash}{600d94b5e3cd3d69dc0781ff2ad251d5}
       \strng{authorfullhashraw}{600d94b5e3cd3d69dc0781ff2ad251d5}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{annotation}{A paper on the state of the global tritium supply chain, highlighting the potential for future shortages and the necessity of tritium breeding technology. Current tritium production occurs in fission reactors (most prominently {CANDU}-type reactors). Useful in lit review when outlining why we need breeder blankets.}
@@ -1596,6 +1453,149 @@
       \verb https://www.tandfonline.com/doi/full/10.13182/FST84-A23140
       \endverb
       \keyw{Lit Review,Useful,fission}
+    \endentry
+    \entry{meschini_modeling_2023}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=6519e5cd6edd68c8676a304ddbf67746}{%
+           family={Meschini},
+           familyi={M\bibinitperiod},
+           given={Samuele},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f9d584d26cf2b70e926ad48428e368a0}{%
+           family={Ferry},
+           familyi={F\bibinitperiod},
+           given={Sara\bibnamedelima E.},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=6559922319ccf5ba26ae3487e51ba6d5}{%
+           family={Delaporte-Mathurin},
+           familyi={D\bibinithyphendelim M\bibinitperiod},
+           given={Rémi},
+           giveni={R\bibinitperiod}}}%
+        {{hash=5ee053f738fb495a7810a1598050c63f}{%
+           family={Whyte},
+           familyi={W\bibinitperiod},
+           given={Dennis\bibnamedelima G.},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{bf9bc733acfbca3b0af0f9c64abc354a}
+      \strng{fullhash}{1b403b7f84d5137c52a1ddf1272c5d32}
+      \strng{fullhashraw}{1b403b7f84d5137c52a1ddf1272c5d32}
+      \strng{bibnamehash}{1b403b7f84d5137c52a1ddf1272c5d32}
+      \strng{authorbibnamehash}{1b403b7f84d5137c52a1ddf1272c5d32}
+      \strng{authornamehash}{bf9bc733acfbca3b0af0f9c64abc354a}
+      \strng{authorfullhash}{1b403b7f84d5137c52a1ddf1272c5d32}
+      \strng{authorfullhashraw}{1b403b7f84d5137c52a1ddf1272c5d32}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract The limited tritium resources available for the first fusion power plants ({FPPs}) make fuel self-sufficiency and tritium inventory minimization leading issues in {FPP} design. This work builds on the model proposed by Abdou et al (2020 Nucl. Fusion 61 013001), which analyzed the fuel cycle ({FC}) of a {DEMOnstration} nuclear {FPP}-class {FPP} with a time-dependent system-level model. Here, we use a modified version of their model to analyze the {FC} of an Affordable, Robust, Compact ({ARC})-class tokamak and two versions of a Spherical Tokamak for Energy Production ({STEP})-class tokamak. The {ARC}-class tokamak breeds tritium in a 2LiF + {BeF} 2 liquid immersion blanket, while the {STEP}-class tokamak breeds tritium utilizing either a liquid-lithium blanket design or an encapsulated breeding blanket. A time-dependent system-level model is developed in Matlab Simulink ® to simulate the evolution of tritium flows and tritium inventories in the {FC}. The main goals of this work are to assess tritium self-sufficiency of the {ARC}- and {STEP}-class designs and to determine quantitative design requirements that can be used to analyze the adequacy of a proposed {FC} system. These design requirements are aimed at achieving a low tritium inventory doubling time ( t d ) and a low start-up inventory ( I s t a r t u p ) while keeping the required tritium breeding ratio ({TBR} r ) as low as possible. We also consider how improvements in {FC} technology and {POs} affect {TBR} r and I s t a r t u p . The model results show that {TBR} r for {ARC}- and {STEP}-class {FPPs} should be achievable if the tritium burn efficiency ({TBE}) reaches 0.5\%–1\% ({TBR} r {<} 1.2). This assumes significant, but attainable, improvements over current abilities. However, the model results indicate that an {FPP} must achieve ambitious performance targets, including {FPP} availability {>} 70\%, tritium processing time {<} 4 h, and the implementation of direct internal recycling ({DIR}). If future research yields major improvements to achievable {TBE}, it may be possible to achieve tritium self-sufficiency while operating at lower availability and without implementing {DIR}.}
+      \field{annotation}{Looks at tritium fuel cycle in a {STEP} reactor (either liquid lithium or encapsulated) and an {ARC} reactor (2LiF – {BeF}2). Very comprehensive paper on tritium self-sufficiency, breeding ratios and reactor design.}
+      \field{day}{1}
+      \field{issn}{0029-5515, 1741-4326}
+      \field{journaltitle}{Nuclear Fusion.}
+      \field{month}{12}
+      \field{number}{12}
+      \field{shortjournal}{Nucl. Fusion}
+      \field{title}{Modeling and analysis of the tritium fuel cycle for {ARC}- and {STEP}-class D-T fusion power plants}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{63}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 34}
+      \range{pages}{34}
+      \verb{doi}
+      \verb 10.1088/1741-4326/acf3fc
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\GJKCZ3TL\\Meschini et al. - 2023 - Modeling and analysis of the tritium fuel cycle for ARC- and STEP-class D-T fusion power plants.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://iopscience.iop.org/article/10.1088/1741-4326/acf3fc
+      \endverb
+      \verb{url}
+      \verb https://iopscience.iop.org/article/10.1088/1741-4326/acf3fc
+      \endverb
+      \keyw{Liquid Breeder,Lit Review,{TBR},Useful,{FLiBe} Salt}
+    \endentry
+    \entry{federici_overview_2019}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=c275eff5c8ed440e431b48f2d0cc3b30}{%
+           family={Federici},
+           familyi={F\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=1a8af20abab0e0d89f2b180a1fdd03c4}{%
+           family={Boccaccini},
+           familyi={B\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=41a96720f2cd91916ef758454ea50d81}{%
+           family={Cismondi},
+           familyi={C\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=c6c6df039fe61eccd6730911363b95b6}{%
+           family={Gasparotto},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=6b44ebbabe18d7cf03e7e129ff4935f5}{%
+           family={Poitevin},
+           familyi={P\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=b7ba3f8bcd47833d54776be2ca84f525}{%
+           family={Ricapito},
+           familyi={R\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{934d6fc2514de3d7506461c74d64c6a6}
+      \strng{fullhash}{94ca76fdff2fde7968f16377761b0791}
+      \strng{fullhashraw}{94ca76fdff2fde7968f16377761b0791}
+      \strng{bibnamehash}{94ca76fdff2fde7968f16377761b0791}
+      \strng{authorbibnamehash}{94ca76fdff2fde7968f16377761b0791}
+      \strng{authornamehash}{934d6fc2514de3d7506461c74d64c6a6}
+      \strng{authorfullhash}{94ca76fdff2fde7968f16377761b0791}
+      \strng{authorfullhashraw}{94ca76fdff2fde7968f16377761b0791}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{A summary of the planned design strategy for the {DEMO} reactor breeder blanket. Focus on two main blanket designs, {HCPB} and {WCLL}. Good summary of the state of the technology, more focussed on the blanket than the paper above and more up to date.}
+      \field{issn}{09203796}
+      \field{journaltitle}{Fusion Engineering and Design.}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{shortjournal}{Fusion Engineering and Design}
+      \field{title}{An overview of the {EU} breeding blanket design strategy as an integral part of the {DEMO} design effort}
+      \field{urlday}{7}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{141}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{30\bibrangedash 42}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1016/j.fusengdes.2019.01.141
+      \endverb
+      \verb{file}
+      \verb Full Text:C\:\\Users\\vadan\\Zotero\\storage\\JXUDYPK6\\Federici et al. - 2019 - An overview of the EU breeding blanket design strategy as an integral part of the DEMO design effort.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0920379619301590
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0920379619301590
+      \endverb
+      \keyw{Lit Review,Useful,{HCPB},{WCLL}}
     \endentry
     \entry{wang_current_2019}{article}{}{}
       \name{author}{24}{}{%
