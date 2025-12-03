@@ -17,20 +17,29 @@
 
 % base article class:
 % % Add the biblatex package
+\usepackage{hyperref}% add hypertext capabilities
+\hypersetup{colorlinks=true, urlcolor=black, linkcolor=black, citecolor=black} % Optional styling
 \usepackage[
-  backend=biber,
-  style=vancouver,  % Use the Vancouver style
-  natbib=true,
-  maxbibnames=6,    % Truncate if > 6 authors
-  minbibnames=6     % <-- THE FIX: When truncating, print 6
+    backend=biber,
+    style=numeric-comp, % or vancouver, ieee, etc.
+    doi=false,          % 1. Don't print the explicit DOI text
+    url=false,          % 2. Don't print the URL
+    isbn=false
 ]{biblatex}
+% 3. Create a macro that checks for a DOI and links the title
+\newbibmacro{string+doi}[1]{%
+  \iffieldundef{doi}{#1}{\href{https://doi.org/\thefield{doi}}{#1}}}
+% 4. Apply this macro to Article, Book, and Thesis titles
+\DeclareFieldFormat{title}{\usebibmacro{string+doi}{\mkbibemph{#1}}}
+\DeclareFieldFormat[article]{title}{\usebibmacro{string+doi}{#1}} % Articles usually not italicized in Vancouver
 % % Tell biblatex where to find your references
 \addbibresource{thesis.bib} % <-- Make sure to include the .bib extension
+
 \renewcommand*{\bibfont}{\small\linespread{1.0}\selectfont}
+
 \usepackage{graphicx}% Include figure files
 \usepackage{dcolumn}% Align table columns on decimal point
 \usepackage{bm}% bold math
-\usepackage{hyperref}% add hypertext capabilities
 \usepackage[title]{appendix}
 \usepackage[a4paper, margin=2cm]{geometry}
 \usepackage{titlesec}
