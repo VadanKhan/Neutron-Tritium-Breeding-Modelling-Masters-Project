@@ -126,7 +126,7 @@
 %% Use this if you want times new roman which is slightly more compact.
 %\usepackage{times}
 \setlength{\parindent}{10pt}
-\linespread{1.2}
+\linespread{1}
 
 
 % \titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
@@ -164,7 +164,8 @@
     \vspace{3em} % Add space after the title
 
     % --- Manually formatted author ---
-    {\large Vadan Khan \par}
+    {\large Vadan Khan (10823198)\par}
+    {In collaboration with Rhodri Peters \par}
     \vspace{0.5em}
     {4th Year MPhys, Department of Physics and Astronomy, University of Manchester \par}
 
@@ -177,24 +178,26 @@
 
     % --- Abstract ---
     % Use a minipage to constrain the width of the abstract
-    \begin{minipage}{0.8\textwidth}
+    \begin{minipage}{1\textwidth}
     \begin{abstract}
-    The pursuit of practical nuclear fusion is focused on the deuterium-tritium (D-T) fuel cycle,
-    widely considered the most feasible pathway for near-term power generation.
-    A critical challenge, however, is the reliance on tritium, a radioactive
-    isotope with an extremely limited external supply, necessitating a self-sufficient fuel cycle.
-    The D-T fusion reaction produces most of its energy as 14.1~MeV neutrons, which can in turn be
-    used to regenerate tritium through neutron-lithium interactions. The reactor subsystem that
-    performs this function—the breeder blanket—is therefore essential for the viability of the
-    D-T fuel cycle. It must simultaneously extract heat, shield reactor components, and maintain
-    tritium self-sufficiency. This project applies Monte Carlo neutron transport simulations
-    using \texttt{OpenMC} to investigate the neutronic performance of advanced breeder
-    blanket designs, including heterogeneous and functionally graded geometries. The study
-    aims to quantify how variations in material composition and spatial structure influence
-    the tritium breeding ratio (TBR) and neutron flux profiles, and explores the potential
-    for automated optimisation of blanket parameters through computational frameworks.
-    The outcomes will inform the feasibility and efficiency of next-generation blanket
-    concepts relevant to future magnetic confinement fusion reactors such a DEMO and STEP.
+    The realisation of commercial nuclear fusion via the Deuterium-Tritium (D-T) fuel cycle is
+    contingent upon achieving tritium self-sufficiency. This project utilises a coupled
+    computational workflow, integrating Paramak for parametric CAD generation and OpenMC for
+    stochastic neutron transport, to optimise the neutronic performance of tokamak breeder blankets.
+    A systematic parameter sweep was conducted to evaluate the impact of material composition,
+    isotopic enrichment, and reactor geometry on the Tritium Breeding Ratio (TBR).
+
+    Results indicate that the liquid eutectic \ce{Li17Pb83} offers superior performance, achieving a
+    maximum TBR of 1.61, significantly outperforming molten salt and solid ceramic concepts.
+    Contrary to high-enrichment assumptions, this study identifies an enrichment saturation point at
+    approximately 40\% \ce{^6Li}, beyond which performance diminishes due to the loss of \ce{^7Li}
+    neutron multiplication. Geometric optimisation reveals that TBR saturates at a radial blanket
+    depth of 500--600\,mm, determined by the neutron mean free path. Under a homogenous
+    approximation of the breeder blanket structure,  water coolant was found to enhance breeding via
+    moderation, gaseous coolants (\ce{He}, \ce{N2}) act as voids that degrade the neutron economy.
+    These findings suggest that optimal self-sufficiency is achieved through moderate isotopic
+    enrichment and compact radial builds, directly informing design constraints for next-generation
+    devices such as DEMO and STEP.
     \end{abstract}
     \end{minipage}
 
@@ -203,61 +206,59 @@
 \end{titlepage}
 % --- title page ---
 
-\tableofcontents
+% --- Contents Page Setup ---
+% --- Contents Page Setup ---
 \clearpage
+\pagestyle{empty} % Globally switches off page numbers
+\tableofcontents
+\clearpage        % Forces a page break after the ToC ends
+\pagestyle{plain} % Globally switches page numbers back on
+\setcounter{page}{1} % Resets the counter so Introduction starts at Page 1
 
+
+% ------- Begin of Report Body ---------
 \section{Introduction}
 \label{sec:intro}
 
 The global demand for energy is rising inexorably, coinciding with an urgent necessity to
-decarbonise power generation and mitigate the environmental impacts of fossil fuels. In this
-context, nuclear fusion offers the prospect of a near-limitless, low-carbon energy source. By
-replicating the stellar nucleosynthesis processes that power the Sun, fusion energy aims to generate
-electricity without long-lived high-activity radioactive waste or the risk of runaway chain
-reactions \cite{nuclearphysics}.
+decarbonise power generation. In this context, nuclear fusion offers the prospect of a
+near-limitless, low-carbon energy source. By replicating the stellar nucleosynthesis processes that
+power the Sun, fusion energy aims to generate electricity without long-lived high-activity
+radioactive waste or the risk of runaway chain reactions \cite{nuclearphysics}.
 
-Among the various fusion reaction pathways, the Deuterium-Tritium (D-T) fuel cycle has been
-identified as the most viable candidate for near-term commercial power plants. This is due to its
-high reaction cross-section at achievable plasma temperatures and its significant energy yield
-\cite{heckrotte_factors_1971}. The reaction proceeds as follows:
-
-\begin{equation}
-    \ce{^2H + ^3H -> n + \upalpha} + \ce{17.6 MeV}
-    \label{eq:dt_reaction_intro}
-\end{equation}
-
-\noindent While deuterium is abundant in Earth's oceans, the practical realisation of a D-T fusion
-reactor faces a fundamental logistical challenge: the supply of tritium. Tritium is a radioactive
-isotope ($\tau_{1/2} \approx 12.3$ years) with no significant natural abundance
+Among the various reaction pathways, the Deuterium-Tritium (D-T) fuel cycle is the most viable for
+near-term applications due to its high reaction cross-section at achievable plasma temperatures
+\cite{heckrotte_factors_1971}. However, while deuterium is abundant in earth's oceans, the practical
+realisation of this cycle faces a fundamental logistical challenge: the supply of tritium. Tritium
+is a radioactive isotope ($\tau_{1/2} \approx 12.3$ years) with no significant natural abundance
 \cite{brown_endfb-viii0_2018}. Current global inventories are derived as by-products of CANDU
 fission reactors and are insufficient to support a future fleet of commercial fusion power plants
 \cite{kovari_tritium_2018}.
 
 Consequently, a D-T fusion reactor cannot rely on an external fuel supply; it must breed its own
-fuel. This requirement has led to the development of the \textit{Breeder Blanket} concept---a
-complex, multi-functional structure surrounding the plasma chamber. The blanket must intercept the
-14.1 MeV neutrons produced in the fusion reaction (Eq. \ref{eq:dt_reaction_intro}) to perform three
-critical functions simultaneously:
-\begin{enumerate}
-    \item \textbf{Tritium Breeding:} Transmuting lithium into tritium via neutron capture reactions.
-    \item \textbf{Energy Extraction:} Converting the kinetic energy of neutrons into high-grade heat
-    for electricity generation.
-    \item \textbf{Shielding:} Attenuating the neutron flux to protect external components from
-    radiation damage and neutron activation.
-\end{enumerate}
+fuel. This leads to the concept of the \textit{Breeder Blanket}—a component designed to intercept
+the 14.1 MeV neutrons produced in the fusion reaction and transmute lithium into tritium. While the
+blanket serves integral roles in heat extraction and shielding, its defining function—and the
+primary figure of merit for this study—is the \textbf{Tritium Breeding Ratio (TBR)}: the ratio of
+tritium produced to tritium consumed.
 
-The viability of the D-T fuel cycle, and by extension the entire tokamak fusion concept, hinges on
-the neutronic performance of this blanket. It must achieve a Tritium Breeding Ratio (TBR) greater
-than unity, meaning it produces more tritium than the plasma consumes.
+Because the D-T reaction produces only one neutron per consumption event, there is a strict
+``one-to-one" neutron economy. Without careful design, neutrons lost to leakage or parasitic
+absorption in structural materials will result in a TBR below unity, causing the reactor to burn
+itself out of fuel. Therefore, achieving a TBR greater than 1.0 is not merely a design
+objective but a threshold requirement for the viability of fusion energy \cite{sawan_physics_2006}.
 
-Optimising blanket designs requires high-fidelity modelling, as experimental validation of
-full-scale reactor neutronics is currently technically unfeasible. This project applies advanced
-Monte Carlo simulation techniques, using the OpenMC code, to investigate the neutronic performance
-of candidate breeder materials and geometries. By utilising a parametric computational workflow,
-this study aims to quantify how variations in material composition, coolant selection, and spatial
-structure influence the TBR and shielding efficiency. The outcomes of this work are intended to
+This strict margin necessitates high-fidelity modelling. Experimental validation of full-scale
+reactor neutronics is currently unfeasible, placing the burden of design on computational
+simulation. This project applies advanced Monte Carlo transport methods to perform a systematic
+optimisation of the breeder blanket. By utilising a parametric computational workflow, this study
+aims to identify the specific material compositions and geometric configurations required to
+maximise the TBR, ensuring fuel self-sufficiency while maintaining adequate performance for other
+aspects of fusion energy generation. The outcomes of this work are intended to
 inform the design of next-generation concepts relevant to future magnetic confinement devices, such
-as the EU-DEMO and the UK STEP (Spherical Tokamak for Energy Production) programme.
+as the EU-DEMO \cite{federici_european_2017} and the UK STEP (Spherical Tokamak for Energy
+Production) programme \cite{lord_fusing_2024}.
+
 
 \subsection{Structure of the Report}
 This thesis is organised as follows: Section~\ref{sec:theory} outlines the fundamental nuclear
@@ -436,6 +437,7 @@ very few collisions, significantly softening the neutron spectrum. Conversely, f
 as Lead ($A \approx 208$), $\xi$ is small ($\approx 0.0096$), meaning energy loss per collision is
 minimal. This kinematic distinction is crucial when analysing spectral shifts caused by water versus
 gaseous coolants.
+
 
 
 \section{Literature Review}
@@ -774,6 +776,7 @@ Table~\ref{tab:liquid_breeders} and Table~\ref{tab:solid_breeders}, respectively
     \end{tabular}
 \end{table}
 
+
 Among the liquid breeders, the eutectic Lithium-Lead (\ce{Li17Pb83}) alloy demonstrates the highest
 TBR of 1.61. The distinctive factors to this superior performance are attributed to higher density
 and high lead multiplier fraction. The density arises as it is an eutectic alloy that can utilise
@@ -792,6 +795,17 @@ moderating properties.
 
 Pure lithium, LiF and LiN3 (and to a lesser extent LiF-LiI2) have significant Li-7 TBR contributions
 due to the lack of a dedicated breeder element within the compound.
+
+Table~\ref{tab:solid_breeders} indicates that solid ceramics display remarkably consistent
+performance compared to liquids, displayed by the low standard deviation on the average TBR: TBR$=
+1.48 \pm 0.03$. This uniformity arises both from the relatively similar atomic compositions of the
+molecules (mostly lithium and oxygen) and the standardised multiplier configuration (\ce{Be12Ti} at
+a 1:3 ratio) defined in Section~\ref{sec:base_compositions}.
+
+Among the specific compounds, Cerium-based ceramics achieved the highest TBR due to the low
+parasitic capture cross-sections of Cerium. Conversely, Cobalt-based compounds act as outliers,
+yielding lower TBRs despite the high multiplier fraction; this is attributed to the higher
+absorption and scattering cross-sections of Cobalt, which degrade the neutron economy.
 
 \begin{table}[htbp]
     \centering
@@ -827,17 +841,6 @@ due to the lack of a dedicated breeder element within the compound.
         \bottomrule
     \end{tabular}
 \end{table}
-
-Table~\ref{tab:solid_breeders} indicates that solid ceramics display remarkably consistent
-performance compared to liquids, displayed by the low standard deviation on the average TBR: TBR$=
-1.48 \pm 0.03$. This uniformity arises both from the relatively similar atomic compositions of the
-molecules (mostly lithium and oxygen) and the standardised multiplier configuration (\ce{Be12Ti} at
-a 1:3 ratio) defined in Section~\ref{sec:base_compositions}.
-
-Among the specific compounds, Cerium-based ceramics achieved the highest TBR due to the low
-parasitic capture cross-sections of Cerium. Conversely, Cobalt-based compounds act as outliers,
-yielding lower TBRs despite the high multiplier fraction; this is attributed to the higher
-absorption and scattering cross-sections of Cobalt, which degrade the neutron economy.
 
 \subsection{Isotopic and Compositional Optimisation}
 
@@ -919,10 +922,9 @@ studies.
     Blanket Layer replaced with Coolant (by volume). Gaseous coolants (\ce{He}, \ce{N}) act as voids
     and cause steady reductions in TBR as fractions increase. \ce{H_2O}, however, has a relatively
     flat TBR curve up to a fraction of 0.5, even increasing TBR at low fractions. The TBR had
-    shallower decreases at high water fractions. Error bars are included but are too small to be
-    visible at this scale. (b) Incident Neutron Energy spectrum for Coolant Volume Fraction = 0.33.
-    The \ce{H_2O} spectrum shows significant moderation compared to the gaseous coolants, increasing
-    the interaction cross-section. }
+    shallower decreases at high water fractions. (b) Incident Neutron Energy spectrum for Coolant
+    Volume Fraction = 0.33. The \ce{H_2O} spectrum shows significant moderation compared to the
+    gaseous coolants, increasing the interaction cross-section. }
     \label{fig:coolants}
 \end{figure}
 
@@ -1094,22 +1096,56 @@ an effect not captured by the current source definition \cite{creely_overview_20
 Future work will focus on increasing the fidelity of the simulation model to address the limitations
 identified above.
 \begin{itemize}
-    \item \textbf{Heterogeneous Geometry:} Utilising the advanced features of Paramak to model
-    discrete cooling channels and pebble beds to quantify the effects of neutron streaming
-    \cite{shimwell_paramak_2021}.
+    \item \textbf{Heterogeneous Blanket Geometry:} Utilising the advanced features of Paramak to
+    model discrete cooling channels and pebble beds to quantify the effects of neutron streaming
+    \cite{shimwell_paramak_2021}. Additionally, factoring in packing factors for
+    \ce{Li_{x}Pb_{100-x}} alloys could provide a more informed sweep of neutron multiplier ratios.
     \item \textbf{Plasma Source Definition:} Replacing the ring source with a parametric plasma
     source that accurately maps the spatial distribution of fusion events, allowing for a true
     investigation into the effects of plasma geometry \cite{fable_plasma_2018}.
-    \item \textbf{Structural Integration:} Moving beyond the idealised Zr-4 FW to simulate a full
-    CAD-based model of a DEMO-like blanket module, including internal stiffening plates and
-    manifolds, to provide a more conservative and realistic estimate of the global TBR
-    \cite{federici_overview_2019, lei_design_2020}.
+    \item \textbf{Structural Integration:} Moving beyond the simplified structure of the few most
+    relevant neutronics layers, and instead including a more complex structure including key
+    components like the external toroidal field coils. This will provide a more conservative and
+    realistic estimate of the global TBR \cite{federici_overview_2019, lei_design_2020}.
+
 \end{itemize}
+
+Beyond increasing model fidelity, future studies should adopt a more holistic design approach that
+optimises other critical criteria alongside TBR, such as nuclear heating. Coupled parameter sweep
+studies offer a robust framework for this multi-objective optimisation. A particular focus should be
+placed on minimising neutron leakage fractions; ensuring leakage approaches zero is essential for
+maximising the neutron economy available for breeding and heating, while simultaneously mitigating
+safety risks associated with external neutron radiation. Tracking this parameter is therefore
+recommended to ensure global design optimality.
 
 
 
 \section{Conclusion}
 \label{sec:conclusion}
+
+This project utilised a parametric Paramak-OpenMC workflow to optimise tokamak breeder blankets for
+tritium self-sufficiency. By quantifying the impact of material composition and geometry, this study
+identified the critical design constraints required to achieve a Tritium Breeding Ratio (TBR)
+greater than unity.
+
+The eutectic alloy \ce{Li17Pb83} emerged as the optimal breeder, achieving a maximum TBR of 1.61.
+This superior performance results from the high packing density of the eutectic phase and effective
+$(n,2n)$ multiplication in lead, significantly outperforming molten salt and ceramic concepts.
+Crucially, this study overturns the assumption that maximal enrichment is required; results indicate
+TBR saturation at 40\% \ce{^6Li}. Enrichment beyond this threshold degrades performance by
+eliminating the neutron-preserving \ce{^7Li}(n,n$^\prime\alpha$)t reaction, suggesting that
+commercial reactors can operate efficiently with moderate enrichment.
+
+Geometric parameter sweeps determined a saturation blanket thickness of 500--600\,mm, governed by
+the neutron mean free path. Additionally, water coolant was found to enhance breeding via spectral
+moderation, whereas gaseous coolants increased leakage, presenting a clear trade-off between
+neutronic efficiency and chemical safety.
+
+Ultimately, while these results establish robust trends, the reliance on homogenised materials and
+simplified sources likely overestimates TBR. Future work must therefore transition to high-fidelity
+heterogeneous models—incorporating discrete cooling channels and realistic plasma sources—to provide
+the conservative predictions necessary for the engineering design of next-generation fusion devices.
+
 
 % revtex class:
 % \bibliographystyle{plainnat}
