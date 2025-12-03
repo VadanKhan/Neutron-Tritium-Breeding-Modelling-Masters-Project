@@ -207,42 +207,73 @@
 \clearpage
 
 \section{Introduction}
+\label{sec:intro}
 
-The pursuit of practical nuclear fusion represents one of the most ambitious and potentially
-transformative scientific endeavours of the twenty-first century. As global energy demand continues
-to rise and the environmental impacts of fossil fuel use become ever clearer, fusion offers the
-prospect of a near-limitless, low-carbon energy source. Fusion energy aims to replicate, on Earth,
-the processes that power the Sun — combining light nuclei to release energy through mass-energy
-conversion. Unlike conventional nuclear fission, fusion promises inherent safety, reduced long-lived
-radioactive waste, and abundant fuel sources.
+The global demand for energy is rising inexorably, coinciding with an urgent necessity to
+decarbonise power generation and mitigate the environmental impacts of fossil fuels. In this
+context, nuclear fusion offers the prospect of a near-limitless, low-carbon energy source. By
+replicating the stellar nucleosynthesis processes that power the Sun, fusion energy aims to generate
+electricity without long-lived high-activity radioactive waste or the risk of runaway chain
+reactions \cite{nuclearphysics}.
 
-Among the various fusion reactions studied, the deuterium-tritium (D-T) reaction has emerged as the
-most viable for near-term applications due to its relatively high cross-section at achievable plasma
-temperatures and its favourable energy yield. However, the practical realisation of a D-T reactor
-introduces challenges that extend far beyond plasma confinement and heating. Chief among these is
-the supply of tritium, a radioactive isotope that does not occur naturally in significant quantities
-and must be produced artificially.
+Among the various fusion reaction pathways, the Deuterium-Tritium (D-T) fuel cycle has been
+identified as the most viable candidate for near-term commercial power plants. This is due to its
+high reaction cross-section at achievable plasma temperatures and its significant energy yield
+\cite{heckrotte_factors_1971}. The reaction proceeds as follows:
 
-This challenge has led to the development of the breeder blanket concept — an integrated structure
-surrounding the plasma that captures energetic neutrons produced in fusion reactions and uses them
-to generate tritium through interactions with lithium. In addition to tritium production, breeder
-blankets also serve several critical roles: moderating neutron flux, capturing energy for conversion
-to electricity, and protecting reactor components from radiation damage.
+\begin{equation}
+    \ce{^2H + ^3H -> n + \upalpha} + \ce{17.6 MeV}
+    \label{eq:dt_reaction_intro}
+\end{equation}
 
-Understanding the behaviour of neutrons within the blanket region is therefore central to the
-success of any D-T fusion system. Computational modelling of neutron transport, energy deposition,
-and tritium breeding provides vital insights into how different blanket materials and geometries
-perform under fusion-like conditions. These neutronics studies inform the design and optimisation of
-test blanket modules and full-scale reactor concepts.
+\noindent While deuterium is abundant in Earth's oceans, the practical realisation of a D-T fusion
+reactor faces a fundamental logistical challenge: the supply of tritium. Tritium is a radioactive
+isotope ($\tau_{1/2} \approx 12.3$ years) with no significant natural abundance
+\cite{brown_endfb-viii0_2018}. Current global inventories are derived as by-products of CANDU
+fission reactors and are insufficient to support a future fleet of commercial fusion power plants
+\cite{kovari_tritium_2018}.
 
-This project contributes to that effort by using advanced Monte Carlo simulations to model neutron
-interactions within candidate breeder blanket materials. Through this, it aims to identify promising
-compositions and geometries capable of sustaining tritium self-sufficiency in future fusion power
-plants.
+Consequently, a D-T fusion reactor cannot rely on an external fuel supply; it must breed its own
+fuel. This requirement has led to the development of the \textit{Breeder Blanket} concept---a
+complex, multi-functional structure surrounding the plasma chamber. The blanket must intercept the
+14.1 MeV neutrons produced in the fusion reaction (Eq. \ref{eq:dt_reaction_intro}) to perform three
+critical functions simultaneously:
+\begin{enumerate}
+    \item \textbf{Tritium Breeding:} Transmuting lithium into tritium via neutron capture reactions.
+    \item \textbf{Energy Extraction:} Converting the kinetic energy of neutrons into high-grade heat
+    for electricity generation.
+    \item \textbf{Shielding:} Attenuating the neutron flux to protect external components from
+    radiation damage and neutron activation.
+\end{enumerate}
+
+The viability of the D-T fuel cycle, and by extension the entire tokamak fusion concept, hinges on
+the neutronic performance of this blanket. It must achieve a Tritium Breeding Ratio (TBR) greater
+than unity, meaning it produces more tritium than the plasma consumes.
+
+Optimising blanket designs requires high-fidelity modelling, as experimental validation of
+full-scale reactor neutronics is currently technically unfeasible. This project applies advanced
+Monte Carlo simulation techniques, using the OpenMC code, to investigate the neutronic performance
+of candidate breeder materials and geometries. By utilising a parametric computational workflow,
+this study aims to quantify how variations in material composition, coolant selection, and spatial
+structure influence the TBR and shielding efficiency. The outcomes of this work are intended to
+inform the design of next-generation concepts relevant to future magnetic confinement devices, such
+as the EU-DEMO and the UK STEP (Spherical Tokamak for Energy Production) programme.
+
+\subsection{Structure of the Report}
+This thesis is organised as follows: Section~\ref{sec:theory} outlines the fundamental nuclear
+physics governing fusion and neutron interactions, including the kinematics of the D-T reaction and
+the Boltzmann Transport Equation. Section~\ref{sec:lit_review} reviews the existing
+literature on breeder blanket concepts, highlighting the trade-offs between solid and liquid breeder
+designs. Section~\ref{sec:methodology} details the methodology, including the Monte Carlo transport
+algorithms and the parametric geometry generation workflow. Section~\ref{sec:results} presents the
+results of the material and geometric optimisation sweeps. Finally, Section~\ref{sec:discussion}
+discusses the implications of these results for reactor design, followed by conclusions in
+Section~\ref{sec:conclusion}.
 
 
 
 \section{Theory}
+\label{sec:theory}
 
 \subsection{Fundamentals of Nuclear Fusion}
 Nuclear fusion is the process by which two light atomic nuclei combine to form a heavier nucleus,
@@ -283,11 +314,10 @@ neutron flux to extract thermal energy, shield the superconducting magnets, and 
 \end{figure}
 
 \subsection{Tritium Breeding and Neutron Multiplication}
-A fundamental challenge for D-T fusion is the supply of tritium. Tritium is a radioactive isotope
-($\tau_{1/2} \approx 12.3$ years) with no significant natural abundance
-\cite{brown_endfb-viii0_2018}. To sustain the fuel cycle, the blanket must breed tritium via neutron
-interactions with lithium. Natural lithium consists of two isotopes: \ce{^6Li} (7.59\% abundance)
-and \ce{^7Li} (92.41\% abundance) \cite{brown_endfb-viii0_2018}.
+The necessity of tritium production was established in Section~\ref{sec:intro}. To achieve this, the
+blanket must breed tritium via neutron capture interactions with lithium. Natural lithium consists
+of two isotopes: \ce{^6Li} (7.59\% abundance) and \ce{^7Li} (92.41\% abundance)
+\cite{brown_endfb-viii0_2018}.
 
 \subsubsection{Breeding Reactions}
 Both isotopes undergo tritium-producing reactions, but their neutronic characteristics differ
@@ -535,6 +565,7 @@ of the design space that effectively remain unmapped in current literature.
 
 
 \section{Methodology}
+\label{sec:methodology}
 
 \subsection{Modelling Neutron Transport: From Boltzmann to Monte Carlo}
 
@@ -561,7 +592,7 @@ global flux directly, the simulation proceeds through a random walk process:
     distribution derived from the total macroscopic cross-section of the local material
     \cite{brown_endfb-viii0_2018}.
     \item \textbf{Interaction Physics:} At the collision site, the specific reaction type (elastic
-    scatter, absorption, \ce{(n,2n)} multiplication, etc.) is selected probabilistically based on
+    scatter, absorption, \ce{(n, 2n)} multiplication, etc.) is selected probabilistically based on
     the nuclide-specific cross-section data.
     \item \textbf{History Termination:} The particle's energy and direction are updated after
     scattering. The process repeats until the neutron is absorbed or leaks from the system geometry.
@@ -703,6 +734,7 @@ how geometric and material changes influence the overall neutronic performance o
 
 
 \section{Results}
+\label{sec:results}
 
 \subsection{Material Composition and Performance}
 
@@ -961,6 +993,7 @@ breeder depth beyond 600 mm yields negligible gains in tritium production.
 
 
 \section{Discussion}
+\label{sec:discussion}
 
 The results presented in Section 5 quantify the neutronic performance of various breeder blanket
 concepts. While the simulation data identifies specific maxima for Tritium Breeding Ratio (TBR), the
@@ -1076,6 +1109,7 @@ identified above.
 
 
 \section{Conclusion}
+\label{sec:conclusion}
 
 % revtex class:
 % \bibliographystyle{plainnat}

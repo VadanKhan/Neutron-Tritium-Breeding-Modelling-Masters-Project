@@ -48,62 +48,6 @@
       \field{title}{Nuclear Physics: Principles and Applications}
       \field{year}{2008}
     \endentry
-    \entry{paris_lost_2023}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=64b84a882d26db6362b4d45787323cfa}{%
-           family={Paris},
-           familyi={P\bibinitperiod},
-           given={Mark\bibnamedelima W.},
-           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
-        {{hash=e618843cf4801e6deec3a1de69bcf839}{%
-           family={Chadwick},
-           familyi={C\bibinitperiod},
-           given={Mark\bibnamedelima B.},
-           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
-      }
-      \strng{namehash}{6a6d072b91a3e7c53ef7dff0b4897a01}
-      \strng{fullhash}{6a6d072b91a3e7c53ef7dff0b4897a01}
-      \strng{fullhashraw}{6a6d072b91a3e7c53ef7dff0b4897a01}
-      \strng{bibnamehash}{6a6d072b91a3e7c53ef7dff0b4897a01}
-      \strng{authorbibnamehash}{6a6d072b91a3e7c53ef7dff0b4897a01}
-      \strng{authornamehash}{6a6d072b91a3e7c53ef7dff0b4897a01}
-      \strng{authorfullhash}{6a6d072b91a3e7c53ef7dff0b4897a01}
-      \strng{authorfullhashraw}{6a6d072b91a3e7c53ef7dff0b4897a01}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{annotation}{Short article on the history of tritium use in fusion and the first proposal for D-T fusion. First planned for nuclear weapons. Useful justification of why we use D-T reaction.}
-      \field{day}{1}
-      \field{issn}{0031-9228, 1945-0699}
-      \field{journaltitle}{Physics Today.}
-      \field{langid}{english}
-      \field{month}{10}
-      \field{number}{10}
-      \field{title}{A lost detail in D–T fusion history}
-      \field{urlday}{14}
-      \field{urlmonth}{10}
-      \field{urlyear}{2025}
-      \field{volume}{76}
-      \field{year}{2023}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{10\bibrangedash 11}
-      \range{pages}{2}
-      \verb{doi}
-      \verb 10.1063/PT.3.5317
-      \endverb
-      \verb{file}
-      \verb Full Text:C\:\\Users\\vadan\\Zotero\\storage\\XGGN8F83\\Paris and Chadwick - 2023 - A lost detail in D–T fusion history.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://pubs.aip.org/physicstoday/article/76/10/10/2912725/A-lost-detail-in-D-T-fusion-history
-      \endverb
-      \verb{url}
-      \verb https://pubs.aip.org/physicstoday/article/76/10/10/2912725/A-lost-detail-in-D-T-fusion-history
-      \endverb
-      \keyw{Lit Review,Useful}
-    \endentry
     \entry{heckrotte_factors_1971}{article}{}{}
       \name{author}{2}{}{%
         {{hash=1c1c5e28da5700e2af34f20175bd0027}{%
@@ -125,8 +69,8 @@
       \strng{authornamehash}{3bb4d2dd9fe126a39cf57b135285ddd3}
       \strng{authorfullhash}{3bb4d2dd9fe126a39cf57b135285ddd3}
       \strng{authorfullhashraw}{3bb4d2dd9fe126a39cf57b135285ddd3}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A discussion is given of the relative merits of the D-D, D-T,or D-3He mirror fusion power systems. As a basis for discussion we have used a simple approach for estimating the ratio of Q(D, He) to Q(D, T). When needed, the value of Q(D, T) is considered to be of the order of that calculated by Marx and by Kuo-Petravic, Petravic and Watson. The systems are compared at different assumed plasma temperatures in the range 200 to 1000 {keV} on the basis of several criteria: the investment costs in dollars per kilowatt, the ratio of waste power to power output, and the tritium and neutron production. We have concluded, based on the estimates of the ratio of Q-values, that subject to these criteria the D-T system appears the more favoured system. On the other hand, should a means be found to enhance the Q-values the D-3He system would be preferred on all but the first criteria. We consider the three-component D-T-3He system and its optimization. Finally, the possibility of further enhancing the D-T system by utilization of tritium breeding in the plasma is discussed.}
@@ -160,123 +104,6 @@
       \verb https://doi.org/10.1088/0029-5515/11/5/009
       \endverb
       \keyw{Lit Review,Useful}
-    \endentry
-    \entry{wesson}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=ca56977a5fb6ee223b9392c8f9a68e35}{%
-           family={Wesson},
-           familyi={W\bibinitperiod},
-           given={John},
-           giveni={J\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Oxford University Press}%
-      }
-      \strng{namehash}{ca56977a5fb6ee223b9392c8f9a68e35}
-      \strng{fullhash}{ca56977a5fb6ee223b9392c8f9a68e35}
-      \strng{fullhashraw}{ca56977a5fb6ee223b9392c8f9a68e35}
-      \strng{bibnamehash}{ca56977a5fb6ee223b9392c8f9a68e35}
-      \strng{authorbibnamehash}{ca56977a5fb6ee223b9392c8f9a68e35}
-      \strng{authornamehash}{ca56977a5fb6ee223b9392c8f9a68e35}
-      \strng{authorfullhash}{ca56977a5fb6ee223b9392c8f9a68e35}
-      \strng{authorfullhashraw}{ca56977a5fb6ee223b9392c8f9a68e35}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{4th}
-      \field{title}{Tokamaks}
-      \field{year}{2011}
-    \endentry
-    \entry{shatalov_breeder_1991}{article}{}{}
-      \name{author}{9}{}{%
-        {{hash=244fec16c3becf60ded9cad992eaa8ec}{%
-           family={Shatalov},
-           familyi={S\bibinitperiod},
-           given={G.E.},
-           giveni={G\bibinitperiod}}}%
-        {{hash=ad363bbaa6e6467194df08e1a419adc9}{%
-           family={Abdou},
-           familyi={A\bibinitperiod},
-           given={M.A.},
-           giveni={M\bibinitperiod}}}%
-        {{hash=b5680b04330ba7cc94a64ceeb2a81d7e}{%
-           family={Antipenkov},
-           familyi={A\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-        {{hash=ca7fe4ed4326345199d0f920f88bb2c8}{%
-           family={Daenner},
-           familyi={D\bibinitperiod},
-           given={W.},
-           giveni={W\bibinitperiod}}}%
-        {{hash=e1ea93a62c170840b8c01237c1fee6b7}{%
-           family={Gohar},
-           familyi={G\bibinitperiod},
-           given={Y.},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=9b37a37f4f3f016c7d914ab4cb8f020a}{%
-           family={Kuroda},
-           familyi={K\bibinitperiod},
-           given={T.},
-           giveni={T\bibinitperiod}}}%
-        {{hash=84af5a295b24ba766fcb0b4d6a5cc8f1}{%
-           family={Simbolotti},
-           familyi={S\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod}}}%
-        {{hash=f05624a4f7393c950eee92168e059aa4}{%
-           family={Smith},
-           familyi={S\bibinitperiod},
-           given={D.L.},
-           giveni={D\bibinitperiod}}}%
-        {{hash=ca9e4a1455916c8bed512397b5252682}{%
-           family={Yoshida},
-           familyi={Y\bibinitperiod},
-           given={N.},
-           giveni={N\bibinitperiod}}}%
-      }
-      \strng{namehash}{8789919e70e9171b31a9554975017b94}
-      \strng{fullhash}{200d93fd1d2e1f2c3ae61692e87072d7}
-      \strng{fullhashraw}{200d93fd1d2e1f2c3ae61692e87072d7}
-      \strng{bibnamehash}{661a340e7a1bc542b5ea249feae65a20}
-      \strng{authorbibnamehash}{661a340e7a1bc542b5ea249feae65a20}
-      \strng{authornamehash}{8789919e70e9171b31a9554975017b94}
-      \strng{authorfullhash}{200d93fd1d2e1f2c3ae61692e87072d7}
-      \strng{authorfullhashraw}{200d93fd1d2e1f2c3ae61692e87072d7}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{annotation}{Very early stage document on {ITER} blanket proposals. Looks at ceramic blankets and liquid blankets in general, not advanced enough to explore specific designs. Could be useful as part of the history.}
-      \field{issn}{09203796}
-      \field{journaltitle}{Fusion Engineering and Design.}
-      \field{langid}{english}
-      \field{month}{12}
-      \field{shortjournal}{Fusion Engineering and Design}
-      \field{title}{Breeder and test blankets in {ITER}}
-      \field{urlday}{7}
-      \field{urlmonth}{10}
-      \field{urlyear}{2025}
-      \field{volume}{16}
-      \field{year}{1991}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{85\bibrangedash 93}
-      \range{pages}{9}
-      \verb{doi}
-      \verb 10.1016/0920-3796(91)90185-S
-      \endverb
-      \verb{file}
-      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\NIKC7R76\\Shatalov et al. - 1991 - Breeder and test blankets in ITER.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/092037969190185S
-      \endverb
-      \verb{url}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/092037969190185S
-      \endverb
-      \keyw{Liquid Breeder,Lit Review,Useful,Solid Breeder}
     \endentry
     \entry{brown_endfb-viii0_2018}{article}{}{}
       \name{author}{70}{}{%
@@ -639,8 +466,8 @@
       \strng{authornamehash}{d9b404f7ee4a4cc672dd3f05d9d13c8c}
       \strng{authorfullhash}{6eea3c6b6150994abf18eac82bc8d7c2}
       \strng{authorfullhashraw}{6eea3c6b6150994abf18eac82bc8d7c2}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{annotation}{Paper discusses the {ENDF} {VIII}.1 library and includes data and figures for a wide variety of reactions. Outlines the changes to previous iterations of the library. Has more than 475 references that could prove useful. Likely only to be cited in reference to the website, if at all.}
@@ -672,6 +499,245 @@
       \verb{url}
       \verb https://linkinghub.elsevier.com/retrieve/pii/S0090375218300206
       \endverb
+    \endentry
+    \entry{kovari_tritium_2018}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=3e0862825e57cc6325aca69f73312d70}{%
+           family={Kovari},
+           familyi={K\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=539b4c1608d9b281ee03744c5df12ab5}{%
+           family={Coleman},
+           familyi={C\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0354afd151635445250c5b7e80d63f15}{%
+           family={Cristescu},
+           familyi={C\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{hash=d2951e7c5c746f711dc91173afea88b8}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{ca34f03fcf5a792f809788f1ca4d465e}
+      \strng{fullhash}{4a0d8381587e28703f6952fc658c858b}
+      \strng{fullhashraw}{4a0d8381587e28703f6952fc658c858b}
+      \strng{bibnamehash}{4a0d8381587e28703f6952fc658c858b}
+      \strng{authorbibnamehash}{4a0d8381587e28703f6952fc658c858b}
+      \strng{authornamehash}{ca34f03fcf5a792f809788f1ca4d465e}
+      \strng{authorfullhash}{4a0d8381587e28703f6952fc658c858b}
+      \strng{authorfullhashraw}{4a0d8381587e28703f6952fc658c858b}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Another paper on current the tritium production capacity of heavy water reactors with future fusion capability in mind. Likely to be shortages of fusion in the future especially if several test reactors are built. Underscores the need for breeder blankets.}
+      \field{day}{1}
+      \field{issn}{0029-5515, 1741-4326}
+      \field{journaltitle}{Nuclear Fusion.}
+      \field{month}{2}
+      \field{number}{2}
+      \field{shortjournal}{Nucl. Fusion}
+      \field{title}{Tritium resources available for fusion reactors}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{58}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 10}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1088/1741-4326/aa9d25
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\YN6YAJ4X\\Kovari et al. - 2018 - Tritium resources available for fusion reactors.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://iopscience.iop.org/article/10.1088/1741-4326/aa9d25
+      \endverb
+      \verb{url}
+      \verb https://iopscience.iop.org/article/10.1088/1741-4326/aa9d25
+      \endverb
+      \keyw{fission,Lit Review,Useful}
+    \endentry
+    \entry{paris_lost_2023}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=64b84a882d26db6362b4d45787323cfa}{%
+           family={Paris},
+           familyi={P\bibinitperiod},
+           given={Mark\bibnamedelima W.},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=e618843cf4801e6deec3a1de69bcf839}{%
+           family={Chadwick},
+           familyi={C\bibinitperiod},
+           given={Mark\bibnamedelima B.},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{6a6d072b91a3e7c53ef7dff0b4897a01}
+      \strng{fullhash}{6a6d072b91a3e7c53ef7dff0b4897a01}
+      \strng{fullhashraw}{6a6d072b91a3e7c53ef7dff0b4897a01}
+      \strng{bibnamehash}{6a6d072b91a3e7c53ef7dff0b4897a01}
+      \strng{authorbibnamehash}{6a6d072b91a3e7c53ef7dff0b4897a01}
+      \strng{authornamehash}{6a6d072b91a3e7c53ef7dff0b4897a01}
+      \strng{authorfullhash}{6a6d072b91a3e7c53ef7dff0b4897a01}
+      \strng{authorfullhashraw}{6a6d072b91a3e7c53ef7dff0b4897a01}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Short article on the history of tritium use in fusion and the first proposal for D-T fusion. First planned for nuclear weapons. Useful justification of why we use D-T reaction.}
+      \field{day}{1}
+      \field{issn}{0031-9228, 1945-0699}
+      \field{journaltitle}{Physics Today.}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{10}
+      \field{title}{A lost detail in D–T fusion history}
+      \field{urlday}{14}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{76}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{10\bibrangedash 11}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1063/PT.3.5317
+      \endverb
+      \verb{file}
+      \verb Full Text:C\:\\Users\\vadan\\Zotero\\storage\\XGGN8F83\\Paris and Chadwick - 2023 - A lost detail in D–T fusion history.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://pubs.aip.org/physicstoday/article/76/10/10/2912725/A-lost-detail-in-D-T-fusion-history
+      \endverb
+      \verb{url}
+      \verb https://pubs.aip.org/physicstoday/article/76/10/10/2912725/A-lost-detail-in-D-T-fusion-history
+      \endverb
+      \keyw{Lit Review,Useful}
+    \endentry
+    \entry{wesson}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=ca56977a5fb6ee223b9392c8f9a68e35}{%
+           family={Wesson},
+           familyi={W\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{ca56977a5fb6ee223b9392c8f9a68e35}
+      \strng{fullhash}{ca56977a5fb6ee223b9392c8f9a68e35}
+      \strng{fullhashraw}{ca56977a5fb6ee223b9392c8f9a68e35}
+      \strng{bibnamehash}{ca56977a5fb6ee223b9392c8f9a68e35}
+      \strng{authorbibnamehash}{ca56977a5fb6ee223b9392c8f9a68e35}
+      \strng{authornamehash}{ca56977a5fb6ee223b9392c8f9a68e35}
+      \strng{authorfullhash}{ca56977a5fb6ee223b9392c8f9a68e35}
+      \strng{authorfullhashraw}{ca56977a5fb6ee223b9392c8f9a68e35}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{4th}
+      \field{title}{Tokamaks}
+      \field{year}{2011}
+    \endentry
+    \entry{shatalov_breeder_1991}{article}{}{}
+      \name{author}{9}{}{%
+        {{hash=244fec16c3becf60ded9cad992eaa8ec}{%
+           family={Shatalov},
+           familyi={S\bibinitperiod},
+           given={G.E.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=ad363bbaa6e6467194df08e1a419adc9}{%
+           family={Abdou},
+           familyi={A\bibinitperiod},
+           given={M.A.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b5680b04330ba7cc94a64ceeb2a81d7e}{%
+           family={Antipenkov},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ca7fe4ed4326345199d0f920f88bb2c8}{%
+           family={Daenner},
+           familyi={D\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+        {{hash=e1ea93a62c170840b8c01237c1fee6b7}{%
+           family={Gohar},
+           familyi={G\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=9b37a37f4f3f016c7d914ab4cb8f020a}{%
+           family={Kuroda},
+           familyi={K\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=84af5a295b24ba766fcb0b4d6a5cc8f1}{%
+           family={Simbolotti},
+           familyi={S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=f05624a4f7393c950eee92168e059aa4}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={D.L.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ca9e4a1455916c8bed512397b5252682}{%
+           family={Yoshida},
+           familyi={Y\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{8789919e70e9171b31a9554975017b94}
+      \strng{fullhash}{200d93fd1d2e1f2c3ae61692e87072d7}
+      \strng{fullhashraw}{200d93fd1d2e1f2c3ae61692e87072d7}
+      \strng{bibnamehash}{661a340e7a1bc542b5ea249feae65a20}
+      \strng{authorbibnamehash}{661a340e7a1bc542b5ea249feae65a20}
+      \strng{authornamehash}{8789919e70e9171b31a9554975017b94}
+      \strng{authorfullhash}{200d93fd1d2e1f2c3ae61692e87072d7}
+      \strng{authorfullhashraw}{200d93fd1d2e1f2c3ae61692e87072d7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Very early stage document on {ITER} blanket proposals. Looks at ceramic blankets and liquid blankets in general, not advanced enough to explore specific designs. Could be useful as part of the history.}
+      \field{issn}{09203796}
+      \field{journaltitle}{Fusion Engineering and Design.}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{shortjournal}{Fusion Engineering and Design}
+      \field{title}{Breeder and test blankets in {ITER}}
+      \field{urlday}{7}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{16}
+      \field{year}{1991}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{85\bibrangedash 93}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1016/0920-3796(91)90185-S
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\NIKC7R76\\Shatalov et al. - 1991 - Breeder and test blankets in ITER.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/092037969190185S
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/092037969190185S
+      \endverb
+      \keyw{Liquid Breeder,Lit Review,Useful,Solid Breeder}
     \endentry
     \entry{hernandez_first_2018}{article}{}{}
       \name{author}{2}{}{%
@@ -1041,8 +1107,8 @@
       \strng{authornamehash}{762c3295442c1b2803ab6cad1175cdc8}
       \strng{authorfullhash}{762c3295442c1b2803ab6cad1175cdc8}
       \strng{authorfullhashraw}{762c3295442c1b2803ab6cad1175cdc8}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{annotation}{Book on neutron transport and modelling methods. Looks very comprehensive, likely to be a very reliable source for a good chunk of our theory. Depends on how deep into the transport physics we actually go.}
@@ -1135,72 +1201,6 @@
       \verb https://linkinghub.elsevier.com/retrieve/pii/0022311588902395
       \endverb
       \keyw{Liquid Breeder,Lit Review,Useful,{FLiBe} Salt}
-    \endentry
-    \entry{kovari_tritium_2018}{article}{}{}
-      \name{author}{4}{}{%
-        {{hash=3e0862825e57cc6325aca69f73312d70}{%
-           family={Kovari},
-           familyi={K\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
-        {{hash=539b4c1608d9b281ee03744c5df12ab5}{%
-           family={Coleman},
-           familyi={C\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
-        {{hash=0354afd151635445250c5b7e80d63f15}{%
-           family={Cristescu},
-           familyi={C\bibinitperiod},
-           given={I.},
-           giveni={I\bibinitperiod}}}%
-        {{hash=d2951e7c5c746f711dc91173afea88b8}{%
-           family={Smith},
-           familyi={S\bibinitperiod},
-           given={R.},
-           giveni={R\bibinitperiod}}}%
-      }
-      \strng{namehash}{ca34f03fcf5a792f809788f1ca4d465e}
-      \strng{fullhash}{4a0d8381587e28703f6952fc658c858b}
-      \strng{fullhashraw}{4a0d8381587e28703f6952fc658c858b}
-      \strng{bibnamehash}{4a0d8381587e28703f6952fc658c858b}
-      \strng{authorbibnamehash}{4a0d8381587e28703f6952fc658c858b}
-      \strng{authornamehash}{ca34f03fcf5a792f809788f1ca4d465e}
-      \strng{authorfullhash}{4a0d8381587e28703f6952fc658c858b}
-      \strng{authorfullhashraw}{4a0d8381587e28703f6952fc658c858b}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{annotation}{Another paper on current the tritium production capacity of heavy water reactors with future fusion capability in mind. Likely to be shortages of fusion in the future especially if several test reactors are built. Underscores the need for breeder blankets.}
-      \field{day}{1}
-      \field{issn}{0029-5515, 1741-4326}
-      \field{journaltitle}{Nuclear Fusion.}
-      \field{month}{2}
-      \field{number}{2}
-      \field{shortjournal}{Nucl. Fusion}
-      \field{title}{Tritium resources available for fusion reactors}
-      \field{urlday}{8}
-      \field{urlmonth}{10}
-      \field{urlyear}{2025}
-      \field{volume}{58}
-      \field{year}{2018}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{1\bibrangedash 10}
-      \range{pages}{10}
-      \verb{doi}
-      \verb 10.1088/1741-4326/aa9d25
-      \endverb
-      \verb{file}
-      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\YN6YAJ4X\\Kovari et al. - 2018 - Tritium resources available for fusion reactors.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://iopscience.iop.org/article/10.1088/1741-4326/aa9d25
-      \endverb
-      \verb{url}
-      \verb https://iopscience.iop.org/article/10.1088/1741-4326/aa9d25
-      \endverb
-      \keyw{fission,Lit Review,Useful}
     \endentry
     \entry{pearson_tritium_2018}{article}{}{}
       \name{author}{3}{}{%
@@ -2088,8 +2088,8 @@
       \strng{authornamehash}{3e665585c4c62752caa349c792117d54}
       \strng{authorfullhash}{f4819bbf7d47d500302713496c94af80}
       \strng{authorfullhashraw}{f4819bbf7d47d500302713496c94af80}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Modelling of {ARC} reactor {FLiBe} blanket using Monte Carlo simulation (not {OpenMC}). Plots {TBR} for different blanket variables, mainly focussed on wall thickness and enrichment. Somewhat limited since it only focusses on one blanket type. Still very useful as a comparison to our project.}
@@ -2143,8 +2143,8 @@
       \strng{authornamehash}{8f5f0ec1ba643758e82243a8320661ad}
       \strng{authorfullhash}{8f5f0ec1ba643758e82243a8320661ad}
       \strng{authorfullhashraw}{8f5f0ec1ba643758e82243a8320661ad}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Paper on Chlorine salt blankets comparing their neutronics to standard fluorine salt systems. Useful as another example of blanket materials.}
@@ -3026,8 +3026,8 @@
       \strng{authornamehash}{3268d1996a38beac112b8f31fe4f121d}
       \strng{authorfullhash}{81d8b97685ed1f2cc65e3134caad5810}
       \strng{authorfullhashraw}{81d8b97685ed1f2cc65e3134caad5810}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{This paper discusses a novel breeding blanket design for {STEP}. Essentially a gas cooled pebble bed variant, using nitrogen as a coolant. This would allow for a much simpler and cheaper design. It outlines some of the issues with previous blanket designs (primarily the material/structural ones). Also uses {OpenMC} for its neutronics simulations.}
@@ -3089,8 +3089,8 @@
       \strng{authornamehash}{c481c4bde8d5f682ff525039a3354430}
       \strng{authorfullhash}{c481c4bde8d5f682ff525039a3354430}
       \strng{authorfullhashraw}{c481c4bde8d5f682ff525039a3354430}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The mass of stars is enough to confine a plasma to fuse light atoms, but this is not possible to engineer on Earth. Fortunately, nuclear engineering can rely on the magnetic confinement of a plasma using superconducting coils so long as the Tritium Breeding Ratio ({TBR}) is optimized. This paper will investigate some of the materials which can increase the rate at which Tritium is produced within the breeding blanket layer of Submersion Tokamak reactors, a design that uses magnetic confinement of a plasma in the shape of a torus to execute nuclear fusion. Using the Paramak Python module to model several geometries and {OpenMC} to run a simulation, it can be observed how neutron multipliers, enrichment, and the neutron energy spectrum affect {TBR}. This experiment will mainly observe different material choices that have been considered and their {TBR} based on their cross sections, dose rate, thermal properties and safety. By altering the neutron energy spectrum to account for {DD} and {DT} plasma, the difference in these compounds' Tritium breeding efficacy is noted. Neutron energy spectra are an important factor in optimising the {TBR} levels as the neutrons generated by the fusion reactions in the plasma interact with the breeder material in the blanket and produce tritium through the reaction with Lithium. Since Tritium is a rare isotope of hydrogen that is used as fuel in fusion reactions and has a short half-life, it is essential to produce tritium within the fusion reactor itself. Without the tritium breeding capability, it would not be feasible to generate energy via fusion. A {TBR} greater than unity indicates that the reactor can generate more tritium than it consumes, ensuring self-sufficiency in the tritium inventory. Since Tritium is the most reliable and efficient fuel for these reactors, optimising the {TBR} is of paramount importance in the long road to commercialization of nuclear fusion.}
@@ -3322,8 +3322,8 @@
       \strng{editornamehash}{831edc02fd4db4eec74b418265be23cb}
       \strng{editorfullhash}{831edc02fd4db4eec74b418265be23cb}
       \strng{editorfullhashraw}{831edc02fd4db4eec74b418265be23cb}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{editor}
       \field{labeltitlesource}{shorttitle}
       \field{annotation}{Includes index}
@@ -3380,8 +3380,8 @@
       \strng{authornamehash}{74821f81ecd31f6335bf451b8ff50eae}
       \strng{authorfullhash}{6ec85369e30444320afe551f6b20e913}
       \strng{authorfullhashraw}{6ec85369e30444320afe551f6b20e913}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Fully validated material databases are needed for coherent technological developments in any R\&D field. For nuclear fusion technology ({NFT}), within a near-term perspective of qualification and licensing of nuclear components and systems, this goal is both compulsory and urgent. This mandatory requirement applies for the particular case of the Pb–Li eutectic database as fusion reactor material. Pb16Li is today a reference breeder material in diverse fusion R\&D programs worldwide. Technical consensus on most part of the material database inputs seems a major technological objective. In this work Pb16Li material database inputs for {NFT} have been systematically reviewed. Database inputs (bulk, thermal, physical-chemistry properties, and H-isotopes transport) are discussed and extended to base magnetohydrodynamic ({MHD}) properties, values for non-dimensional parameters and pipe/channel correlations in 2-phases dispersion models. Ongoing efforts to develop the Pb16Li material database as a computing expert system are reported.}
@@ -3443,8 +3443,8 @@
       \strng{authornamehash}{2dde413f18373c8d139ed8afd9b7bcda}
       \strng{authorfullhash}{2dde413f18373c8d139ed8afd9b7bcda}
       \strng{authorfullhashraw}{2dde413f18373c8d139ed8afd9b7bcda}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{In Europe, the {DEMO} test facility for Breeding Blankets ({BB}) will be the next step for fusion energy after {ITER}. The {BB} is a key component facing the plasma and ensuring tritium self-sufficiency, shielding against neutrons and heat extraction for electricity production. Within the {EU} research program, the two concepts candidates as driver {BB} in {DEMO} consider high-pressure coolants (water or helium) and Lithium-Lead or Beryllium pebble beds as breeder. In this article, an advanced {BB} concept is propounded as a candidate to be tested in {DEMO} taking into account Molten Salt ({MS}) as breeder and coolant and, consequently, named Breeder and Coolant Molten Salt ({BCMS}) {BB}. {BCMS} {BB} have several advantages, which lead to their investigations. As the {MS} is not pressurized during operation, high requirements associated to Nuclear Pressure Equipment ({ESPN} / {PED}) could be relaxed. Furthermore, the {MS} magnetohydrodynamic ({MHD}) flow is low due to its weak electrical conductivity. Besides, {MS} {BB} have identified drawbacks such as the structural material compatibility and the {MS} chemistry control needed during irradiation. A bibliographic review of {MS} and compatible materials is conducted. Promising {BCMS} {BB} are analysed regarding the Tritium Breeding Ratio ({TBR}) to test the capability of such {MS} breeders to reach the targeted {TBR}. The main nuclear quantities are evaluated with various {MS} on a dedicated model via the {TRIPOLI}-4® Monte-Carlo code: {TBR}, nuclear heating, neutron flux, displacement damage and helium production are reported and discussed. Moreover, the thermal and thermo-hydraulic responses of the {MS} {BB} are evaluated regarding the pressure drops (ΔP), the Pumping Power ({PP}) and the maximum temperatures in the structures. Nonetheless, preliminary design options are investigated. Finally, the major purpose is to evaluate the feasibility of a {BCMS} {BB} and identify their advantages and drawbacks.}
@@ -3545,8 +3545,8 @@
       \strng{authornamehash}{d2025f2c83796f4362da5b2ecfe86043}
       \strng{authorfullhash}{b531323a45519879fe3ddb5cd92c9eac}
       \strng{authorfullhashraw}{b531323a45519879fe3ddb5cd92c9eac}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Outline of water cooled ceramic blanket designed by the Japanese Atomic Energy Research Institute for {ITER}. Earliest example of {WCPB} concept. A bunch of research, mostly on thermal/mechanical properties. Probably useful when talking about blanket variants.}
@@ -3890,8 +3890,8 @@
       \strng{authornamehash}{712834eec8f94ec3c559f0b4cb72f4ed}
       \strng{authorfullhash}{04e38a5196b1de6dc0568b57e07e1dab}
       \strng{authorfullhashraw}{04e38a5196b1de6dc0568b57e07e1dab}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Description of {EUROFER}97 and its properties with regards to fusion reactors. Its combination of strong material properties and thermodynamic properties mean it’s the go to material for fusion reactor structures. It is also a Reduced Activation Ferritic-Martenistic ({RAFM}) steel, which makes it desirable for use in radioactive enviroments. Not a reference that is likely to be used a lot but, especially not in the lit review but useful to have.}
@@ -4287,8 +4287,8 @@
       \strng{authornamehash}{5fac1a00df58bb8d558002d831b622e3}
       \strng{authorfullhash}{214928cb853bd66d138915c8ed576c85}
       \strng{authorfullhashraw}{214928cb853bd66d138915c8ed576c85}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The {SPARC} tokamak is a critical next step towards commercial fusion energy. {SPARC} is designed as a high-field ( \$B\_0 = 12.2\$ T), compact ( \$R\_0 = 1.85\$ m, \$a = 0.57\$ m), superconducting, D-T tokamak with the goal of producing fusion gain \$Q{>}2\$ from a magnetically confined fusion plasma for the first time. Currently under design, {SPARC} will continue the high-field path of the Alcator series of tokamaks, utilizing new magnets based on rare earth barium copper oxide high-temperature superconductors to achieve high performance in a compact device. The goal of \$Q{>}2\$ is achievable with conservative physics assumptions ( \$H\_\{98,y2\} = 0.7\$ ) and, with the nominal assumption of \$H\_\{98,y2\} = 1\$ , {SPARC} is projected to attain \$Q {\textbackslash}approx 11\$ and \$P\_\{{\textbackslash}textrm \{fusion\}\} {\textbackslash}approx 140\$ {MW}. {SPARC} will therefore constitute a unique platform for burning plasma physics research with high density ( \${\textbackslash}langle n\_\{e\} {\textbackslash}rangle {\textbackslash}approx 3 {\textbackslash}times 10{\textasciicircum}\{20\}{\textbackslash} {\textbackslash}textrm \{m\}{\textasciicircum}\{-3\}\$ ), high temperature ( \${\textbackslash}langle T\_e {\textbackslash}rangle {\textbackslash}approx 7\$ {keV}) and high power density ( \$P\_\{{\textbackslash}textrm \{fusion\}\}/V\_\{{\textbackslash}textrm \{plasma\}\} {\textbackslash}approx 7{\textbackslash} {\textbackslash}textrm \{{MW}\}{\textbackslash},{\textbackslash}textrm \{m\}{\textasciicircum}\{-3\}\$ ) relevant to fusion power plants. {SPARC}'s place in the path to commercial fusion energy, its parameters and the current status of {SPARC} design work are presented. This work also describes the basis for global performance projections and summarizes some of the physics analysis that is presented in greater detail in the companion articles of this collection.}
