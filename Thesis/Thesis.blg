@@ -1,18 +1,18 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'Thesis.blg'
-[99] biber-MSWIN64:342> INFO - === 
-[147] Biber.pm:421> INFO - Reading 'Thesis.bcf'
-[252] Biber.pm:1002> INFO - Found 53 citekeys in bib section 0
-[262] Biber.pm:4487> INFO - Processing section 0
-[270] Biber.pm:4678> INFO - Looking for bibtex file 'thesis.bib' for section 0
-[364] bibtex.pm:1713> INFO - LaTeX decoding ...
-[542] bibtex.pm:1519> INFO - Found BibTeX data source 'thesis.bib'
-[922] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[922] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[923] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
-[923] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
-[953] bbl.pm:676> INFO - Writing 'Thesis.bbl' with encoding 'UTF-8'
-[1031] bbl.pm:779> INFO - Output to Thesis.bbl
-[1031] Biber.pm:132> WARN - ISBN '978-3-031-26931-8 978-3-031-26932-5' in entry 'kuridan_neutron_2023' is invalid - run biber with '--validate_datamodel' for details.
-[1031] Biber.pm:132> WARN - ISBN '978-3-527-40760-6 978-3-527-62621-2' in entry 'kalos_monte_2008' is invalid - run biber with '--validate_datamodel' for details.
-[1031] Biber.pm:134> INFO - WARNINGS: 2
+[82] biber-MSWIN64:342> INFO - === 
+[115] Biber.pm:421> INFO - Reading 'Thesis.bcf'
+[206] Biber.pm:1002> INFO - Found 53 citekeys in bib section 0
+[215] Biber.pm:4487> INFO - Processing section 0
+[223] Biber.pm:4678> INFO - Looking for bibtex file 'thesis.bib' for section 0
+[286] bibtex.pm:1713> INFO - LaTeX decoding ...
+[446] bibtex.pm:1519> INFO - Found BibTeX data source 'thesis.bib'
+[843] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[843] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[843] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[843] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[875] bbl.pm:676> INFO - Writing 'Thesis.bbl' with encoding 'UTF-8'
+[956] bbl.pm:779> INFO - Output to Thesis.bbl
+[957] Biber.pm:132> WARN - ISBN '978-3-031-26931-8 978-3-031-26932-5' in entry 'kuridan_neutron_2023' is invalid - run biber with '--validate_datamodel' for details.
+[957] Biber.pm:132> WARN - ISBN '978-3-527-40760-6 978-3-527-62621-2' in entry 'kalos_monte_2008' is invalid - run biber with '--validate_datamodel' for details.
+[957] Biber.pm:134> INFO - WARNINGS: 2
