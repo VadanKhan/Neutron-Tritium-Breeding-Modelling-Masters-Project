@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.16)  3 DEC 2025 23:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.16)  6 DEC 2025 17:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -841,23 +841,23 @@ Package pdftex.def Info: figures/triangularity_tbr_sweep.png  used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/FW Thickness New.png, id=515, 1423.3175pt x 1051.93pt>
-File: figures/FW Thickness New.png Graphic file (type png)
-<use figures/FW Thickness New.png>
-Package pdftex.def Info: figures/FW Thickness New.png  used on input line 972.
-(pdftex.def)             Requested size: 241.84843pt x 178.72942pt.
+<figures/FW Thickness Alt.png, id=515, 462.528pt x 346.896pt>
+File: figures/FW Thickness Alt.png Graphic file (type png)
+<use figures/FW Thickness Alt.png>
+Package pdftex.def Info: figures/FW Thickness Alt.png  used on input line 972.
+(pdftex.def)             Requested size: 241.84843pt x 181.38736pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 <figures/Blanket Thickness New.png, id=522, 1409.265pt x 1051.93pt>
 File: figures/Blanket Thickness New.png Graphic file (type png)
 <use figures/Blanket Thickness New.png>
-Package pdftex.def Info: figures/Blanket Thickness New.png  used on input line 993.
+Package pdftex.def Info: figures/Blanket Thickness New.png  used on input line 992.
 (pdftex.def)             Requested size: 237.01411pt x 176.91565pt.
 <figures/BreederBlanketHeatmapSliceSquashed.png, id=523, 847.165pt x 638.385pt>
 File: figures/BreederBlanketHeatmapSliceSquashed.png Graphic file (type png)
 <use figures/BreederBlanketHeatmapSliceSquashed.png>
-Package pdftex.def Info: figures/BreederBlanketHeatmapSliceSquashed.png  used on input line 1000.
+Package pdftex.def Info: figures/BreederBlanketHeatmapSliceSquashed.png  used on input line 999.
 (pdftex.def)             Requested size: 241.84843pt x 182.24358pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -870,14 +870,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [14 <./figures/Coolant Frac New.png> <./figures/Coolant Energy New.png>]
 
-[15 <./figures/triangularity_tbr_sweep.png> <./figures/FW Thickness New.png>]
+[15 <./figures/triangularity_tbr_sweep.png> <./figures/FW Thickness Alt.png>]
 
 [16 <./figures/Blanket Thickness New.png> <./figures/BreederBlanketHeatmapSliceSquashed.png>]
 
 [17]
 
 [18]
-Overfull \hbox (2.68861pt too wide) in paragraph at lines 1188--1188
+Overfull \hbox (2.68861pt too wide) in paragraph at lines 1187--1187
 \OT1/cmr/m/n/10.95 Para-mak: au-to-mated para-met-ric ge-om-e-try con-struc-tion for fu-sion re-ac-tor de-signs. F1000Research.
  []
 
@@ -901,13 +901,13 @@ Package logreq Info: Writing requests to 'Thesis.run.xml'.
 Here is how much of TeX's memory you used:
  21162 strings out of 468081
  382474 string characters out of 5425788
- 1246299 words of memory out of 5000000
+ 1246228 words of memory out of 5000000
  49437 multiletter control sequences out of 15000+600000
  644177 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,21n,100p,2651b,1571s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\vadan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\vadan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb>
-Output written on Thesis.pdf (24 pages, 2402462 bytes).
+Output written on Thesis.pdf (24 pages, 2314304 bytes).
 PDF statistics:
  779 PDF objects out of 1000 (max. 8388607)
  155 named destinations out of 1000 (max. 500000)
