@@ -276,7 +276,7 @@ tritium produced to tritium consumed.
 
 Because the D-T reaction produces only one neutron per consumption event, this ``one-to-one" neutron
 economy would require breeding efficiency (no losses of neutrons / tritium). Real world breeding
-inefficiecies (see Section~\ref{sec:blanket_literature}) necessitate achieving a TBR greater than
+inefficiencies (see Section~\ref{sec:blanket_literature}) necessitate achieving a TBR greater than
 1.0. As the source of fuel for fusion, tritium breeding is not merely a design objective but a
 threshold requirement for the viability and scalability of fusion energy \cite{sawan_physics_2006}.
 
@@ -386,7 +386,7 @@ The reactor's fuel self-sufficiency is quantified by the \textbf{Tritium Breedin
 defined as the ratio of tritium bred to tritium consumed.
 
 However, the D-T reaction produces exactly one neutron, and the primary \ce{^6Li} breeding reaction
-consumes one neutron. This 1-to-1 economy leaves no margin for breeding ineffeciency (see
+consumes one neutron. This 1-to-1 economy leaves no margin for breeding inefficiency (see
 Section~\ref{sec:blanket_literature}). To overcome this deficit, the blanket must utilise neutron
 multipliers---materials with significant $\ce{(n, 2n)}$ cross-sections at 14.1 MeV. The primary
 candidates are Beryllium and Lead, the latter often used in liquid lead-lithium eutectic blankets
@@ -803,12 +803,12 @@ Table~\ref{tab:liquid_breeders} and Table~\ref{tab:solid_breeders}, respectively
 \end{table}
 
 Among the liquid breeders, the eutectic Lithium-Lead (\ce{Li17Pb83}) alloy demonstrates the highest
-TBR of 1.61. The distinctive factors to this superior performance are attributed to higher density
-and high lead multiplier fraction. The density arises as it is an eutectic alloy that can utilise
-higher packing efficiency \cite{goel_optimisation_2023,segantin_optimisation_2020}. While high TBR
-typically correlates with increased nuclear heating due to the exothermic $^6$Li reaction,
-\ce{Li17Pb83} is a notable outlier. It exhibits lower-than-expected heating relative to its TBR
-because the neutron multiplication reactions in lead are endothermic.
+TBR of 1.61. The distinctive factors contributing to this superior performance are attributed to
+higher density and high lead multiplier fraction. The density arises as it is an eutectic alloy that
+can utilise higher packing efficiency \cite{goel_optimisation_2023,segantin_optimisation_2020}.
+While high TBR typically correlates with increased nuclear heating due to the exothermic $^6$Li
+reaction, \ce{Li17Pb83} is a notable outlier. It exhibits lower-than-expected heating relative to
+its TBR because the neutron multiplication reactions in lead are endothermic.
 
 Molten salts generally result in lower TBRs compared to liquid metals but are investigated due to
 their reduced Magnetohydrodynamic (MHD) effects. Of the halide salts, Fluorine-based compounds
@@ -956,9 +956,9 @@ studies.
     \centering
     % You can adjust the width as needed for your document layout
     \includegraphics[width=0.5\textwidth]{figures/triangularity_tbr_sweep.png}
-    \caption{Sensitivity of TBR to reactor triangularity ($\delta$). The gradient of $0.015 \pm
-    0.001$ indicates that triangularity has a negligible impact on global neutronics, consistent
-    with the use of a uniform ring source model.}
+    \caption{Sensitivity of TBR to reactor triangularity ($\delta$). Noting the y-scale, the
+    gradient of $0.015 \pm 0.001$ indicates that triangularity has a negligible impact on global
+    neutronics, consistent with the use of a uniform ring source model.}
     \label{fig:triangularity}
 \end{figure}
 
@@ -1028,7 +1028,7 @@ balances neutronic efficiency against thermal-hydraulic, structural, and economi
 \subsection{TBR Optimisation Strategies}
 
 \subsubsection{Isotopic and Compositional Efficiency}
-The study confirms that the eutectic Lithium-Lead alloy (\ce{Li17Pb83}) offers superior breeding
+The study confirms that the eutectic Lithium-Lead alloy (\ce{Li17Pb83}) offered superior breeding
 performance compared to molten salts, primarily driven by the neutron multiplication capabilities of
 lead \cite{malang_self-cooled_1991}. However, the simulation highlights a critical physical
 distinction: the superior performance of the eutectic alloy over non-eutectic mixtures
@@ -1083,9 +1083,9 @@ to its moderating power, which softens the neutron spectrum into the thermal reg
 lithium-based blanket introduces the risk of violent exothermic chemical reactions in the event of a
 leak \cite{kawamura_overview_2024, hirose_functional_2024}. While Helium avoids this chemical
 reactivity, our results show it acts effectively as a void, increasing neutron leakage and degrading
-TBR \cite{wang_current_2019}. A realistic design must therefore weigh the neutronic advantage of
-water moderation against the engineering complexity of double-walled piping and pressure suppression
-systems required to mitigate chemical hazards \cite{liu_design_2022}.
+TBR \cite{wang_current_2019}. A realistic design must therefore weigh the significant neutronic
+advantage of water moderation against the engineering complexity of double-walled piping and
+pressure suppression systems required to mitigate chemical hazards \cite{liu_design_2022}.
 
 \subsubsection{Energy Extraction (Heating)}
 A counter-intuitive trade-off exists regarding nuclear heating. While \ce{Li17Pb83} provided the
@@ -1174,22 +1174,12 @@ the conservative predictions necessary for the engineering design of next-genera
 % \bibliography{thesis}
 
 % base article class:
-% \defbibnote{bibnote}{\textit{Note: DOI links are hyperlinked within Article Titles}}
-% \printbibliography[heading=bibintoc, title={References}, prenote=bibnote] % for biblatex.
+\defbibnote{bibnote}{\textit{Note: DOI links are hyperlinked within ``[DOI]" placeholder}}
+\printbibliography[heading=bibintoc, title={References}, prenote=bibnote] % for biblatex.
 % ... end of main content ...
 
 
-
-
-
-
-\printbibliography
-
-
-
-
-
-
+% \printbibliography
 
 
 \newpage

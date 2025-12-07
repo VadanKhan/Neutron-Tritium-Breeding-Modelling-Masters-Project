@@ -44,5 +44,6 @@
 \contentsline {subsection}{\numberline {6.3}Model Limitations}{16}{subsection.6.3}%
 \contentsline {subsection}{\numberline {6.4}Next Steps}{16}{subsection.6.4}%
 \contentsline {section}{\numberline {7}Conclusion}{17}{section.7}%
+\contentsline {section}{References}{17}{section.7}%
 \contentsline {section}{\numberline {A}Supplementary Neutronics Theory}{21}{appendix.1.A}%
 \contentsline {subsection}{\numberline {A.1}Elastic Scattering Kinematics}{21}{subsection.1.A.1}%
