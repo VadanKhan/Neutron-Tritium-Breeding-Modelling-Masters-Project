@@ -2519,13 +2519,17 @@
     <bcf:citekey order="110" intorder="1">bohm_initial_2023</bcf:citekey>
     <bcf:citekey order="111" intorder="1">meschini_modeling_2023</bcf:citekey>
     <bcf:citekey order="112" intorder="1">fradera_pre-conceptual_2021</bcf:citekey>
-    <bcf:citekey order="113" intorder="1">shimwell_paramak_2021</bcf:citekey>
-    <bcf:citekey order="114" intorder="1">creely_overview_2020</bcf:citekey>
-    <bcf:citekey order="115" intorder="1">shimwell_paramak_2021</bcf:citekey>
-    <bcf:citekey order="116" intorder="1">fable_plasma_2018</bcf:citekey>
-    <bcf:citekey order="117" intorder="1">federici_overview_2019</bcf:citekey>
-    <bcf:citekey order="117" intorder="2">lei_design_2020</bcf:citekey>
-    <bcf:citekey order="118" intorder="1">nuclearphysics</bcf:citekey>
+    <bcf:citekey order="113" intorder="1">meschini_modeling_2023</bcf:citekey>
+    <bcf:citekey order="113" intorder="2">boullon_molten_2021</bcf:citekey>
+    <bcf:citekey order="113" intorder="3">segantin_neutronic_2020</bcf:citekey>
+    <bcf:citekey order="113" intorder="4">goel_optimisation_2023</bcf:citekey>
+    <bcf:citekey order="114" intorder="1">shimwell_paramak_2021</bcf:citekey>
+    <bcf:citekey order="115" intorder="1">creely_overview_2020</bcf:citekey>
+    <bcf:citekey order="116" intorder="1">shimwell_paramak_2021</bcf:citekey>
+    <bcf:citekey order="117" intorder="1">fable_plasma_2018</bcf:citekey>
+    <bcf:citekey order="118" intorder="1">federici_overview_2019</bcf:citekey>
+    <bcf:citekey order="118" intorder="2">lei_design_2020</bcf:citekey>
+    <bcf:citekey order="119" intorder="1">nuclearphysics</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
