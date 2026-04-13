@@ -1,2 +1,18 @@
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
-\contentsline {section}{References}{1}{section.1}%
+\contentsline {section}{\numberline {2}Theory}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Nuclear Physics}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}ML: Bayesian Optimisation}{1}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Literature Review}{1}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Breeder Blankets}{1}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Surrogate Modelling in Science}{1}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}ML Optimisation in Science }{1}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Methodology}{1}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Neutronic Analysis}{1}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}ML Optimisation}{1}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Results}{1}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Layered Blanket Model Neutronics}{1}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Manual Thickness Distribution Analysis}{2}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}ML Optimisation Findings}{2}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Discussion}{2}{section.6}%
+\contentsline {section}{\numberline {7}Conclusion}{2}{section.7}%
+\contentsline {section}{References}{2}{section.7}%

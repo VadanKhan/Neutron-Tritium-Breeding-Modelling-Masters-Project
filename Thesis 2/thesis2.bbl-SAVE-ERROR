@@ -1,0 +1,252 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{lee_us-doe_1983}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7fa45c91fd7cc3baa69acc2082af26c3}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Joseph\bibnamedelima D},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7fa45c91fd7cc3baa69acc2082af26c3}
+      \strng{fullhash}{7fa45c91fd7cc3baa69acc2082af26c3}
+      \strng{fullhashraw}{7fa45c91fd7cc3baa69acc2082af26c3}
+      \strng{bibnamehash}{7fa45c91fd7cc3baa69acc2082af26c3}
+      \strng{authorbibnamehash}{7fa45c91fd7cc3baa69acc2082af26c3}
+      \strng{authornamehash}{7fa45c91fd7cc3baa69acc2082af26c3}
+      \strng{authorfullhash}{7fa45c91fd7cc3baa69acc2082af26c3}
+      \strng{authorfullhashraw}{7fa45c91fd7cc3baa69acc2082af26c3}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{An old paper by the {US} Department of Energy on its fusion blanket program. Similarly to the ‘Fusion Breeders’ paper mentioned previously this focuses on using fusion neutrons to breed fission isotopes. This may be useful when talking about the roots of breeder blanket technology. Shows that some of the basic principles had already been worked out while also demonstrating the amount of research required to reach our modern day understanding.}
+      \field{journaltitle}{Proceedings of the Third International Conference on Emerging Nuclear Energy Systems}
+      \field{langid}{english}
+      \field{title}{U.S.-DOE Fusion-Breeder Program: Blanket Design and System Performance}
+      \field{year}{1983}
+      \field{dateera}{ce}
+      \field{pages}{1\bibrangedash 37}
+      \range{pages}{37}
+      \verb{file}
+      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\2QLLBPZE\\Lee - U.S.-DOE FUSION-BREEDER PROGRAM BLANKET DESIGN AND SYSTEM PERFORMANCE.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.osti.gov/servlets/purl/6012859
+      \endverb
+      \verb{url}
+      \verb https://www.osti.gov/servlets/purl/6012859
+      \endverb
+    \endentry
+    \entry{moir_fusion_1982}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=82a91d2aab73404efc69bcd3078f7bfa}{%
+           family={Moir},
+           familyi={M\bibinitperiod},
+           given={Ralph\bibnamedelima W.},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{82a91d2aab73404efc69bcd3078f7bfa}
+      \strng{fullhash}{82a91d2aab73404efc69bcd3078f7bfa}
+      \strng{fullhashraw}{82a91d2aab73404efc69bcd3078f7bfa}
+      \strng{bibnamehash}{82a91d2aab73404efc69bcd3078f7bfa}
+      \strng{authorbibnamehash}{82a91d2aab73404efc69bcd3078f7bfa}
+      \strng{authornamehash}{82a91d2aab73404efc69bcd3078f7bfa}
+      \strng{authorfullhash}{82a91d2aab73404efc69bcd3078f7bfa}
+      \strng{authorfullhashraw}{82a91d2aab73404efc69bcd3078f7bfa}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Description of early fusion breeder technology. The technology of neutron breeding was first seen as a way of using fusion reactors to produce fissile material. Somewhat interesting conceptually, introduces some ideas that are useful for out project. Might be something we can use when talking about the state of current technology in a “here’s how far we’ve come” way.}
+      \field{issn}{0164-0313, 1572-9591}
+      \field{journaltitle}{Journal of Fusion Energy}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{4}
+      \field{shortjournal}{J Fusion Energ}
+      \field{title}{The fusion breeder}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{2}
+      \field{year}{1982}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{351\bibrangedash 367}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1007/BF01063686
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\Z2QUVEGS\\Moir - 1982 - The fusion breeder.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/BF01063686
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/BF01063686
+      \endverb
+      \keyw{Lit Review,Useful}
+    \endentry
+    \entry{momoshima_tritium_2022}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b458856527f9d701d1d91b9da73a83c7}{%
+           family={Momoshima},
+           familyi={M\bibinitperiod},
+           given={Noriyuki},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b458856527f9d701d1d91b9da73a83c7}
+      \strng{fullhash}{b458856527f9d701d1d91b9da73a83c7}
+      \strng{fullhashraw}{b458856527f9d701d1d91b9da73a83c7}
+      \strng{bibnamehash}{b458856527f9d701d1d91b9da73a83c7}
+      \strng{authorbibnamehash}{b458856527f9d701d1d91b9da73a83c7}
+      \strng{authornamehash}{b458856527f9d701d1d91b9da73a83c7}
+      \strng{authorfullhash}{b458856527f9d701d1d91b9da73a83c7}
+      \strng{authorfullhashraw}{b458856527f9d701d1d91b9da73a83c7}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Environmental tritium are natural and anthropogenic origins, the distribution has spread in atmosphere, hydrosphere and biosphere as a variety of chemical forms. The natural tritium is produced by nuclear reactions of neutron with N and O in the upper atmosphere, the production rate changes with 11-year cycle of the solar activity. The production and radioactive decay of natural tritium is balanced on the whole earth, results in the inventory of about 1 {EBq}. Anthropogenic tritium by nuclear weapons testing had been released in 1950s–1960s, at highest intensity just before the Partial Test Ban Treaty in 1963, and the total release would be 186 {EBq}. In accordance with a peaceful use of nuclear energy, tritium has been releasing to the environment as airborne and liquid effluents from nuclear power plants and nuclear fuel reprocessing plants. The release from the nuclear power plants depends on the reactor type. Other sources are the tritium production facility of military purpose and the consumer products that use tritium as luminescent energy and disposed to landfill site. Internal dose is only concerned on tritium due to low decay energy, suggesting tritium concentrations in drinking water and food are critical for dose evaluation.}
+      \field{annotation}{More up to date paper on the environmental impact and regulation of tritium. Does mention fusion and the expected increase in tritium requirements. Emphasizes the requirement of adequate tritium storage and monitoring systems.}
+      \field{day}{1}
+      \field{issn}{0144-8420}
+      \field{journaltitle}{Radiation Protection Dosimetry}
+      \field{month}{9}
+      \field{number}{13}
+      \field{shortjournal}{Radiat Prot Dosimetry}
+      \field{title}{{TRITIUM} {IN} {THE} {ENVIRONMENT}}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{198}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{896\bibrangedash 903}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1093/rpd/ncac002
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\UCLS2UFU\\Momoshima - 2022 - TRITIUM IN THE ENVIRONMENT.pdf:application/pdf;Snapshot:C\:\\Users\\vadan\\Zotero\\storage\\NS4GVYVT\\ncac002.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/rpd/ncac002
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/rpd/ncac002
+      \endverb
+      \keyw{Environment}
+    \endentry
+    \entry{segantin_optimisation_2020}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=258ba466cb598d470b38e0f8e659725f}{%
+           family={Segantin},
+           familyi={S\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7efa5ce4db84b5d8cb9702b62e1da7c0}{%
+           family={Testoni},
+           familyi={T\bibinitperiod},
+           given={Raffaella},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f9fa4ae70347efbb650f0b8f0a80a99b}{%
+           family={Hartwig},
+           familyi={H\bibinitperiod},
+           given={Zachary},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=11d452fd3432998ea952ec408842d7d0}{%
+           family={Whyte},
+           familyi={W\bibinitperiod},
+           given={Dennis},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4f1fa13218f6a714f24dfbc037614a1b}{%
+           family={Zucchetti},
+           familyi={Z\bibinitperiod},
+           given={Massimo},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3e665585c4c62752caa349c792117d54}
+      \strng{fullhash}{f4819bbf7d47d500302713496c94af80}
+      \strng{fullhashraw}{f4819bbf7d47d500302713496c94af80}
+      \strng{bibnamehash}{3e665585c4c62752caa349c792117d54}
+      \strng{authorbibnamehash}{3e665585c4c62752caa349c792117d54}
+      \strng{authornamehash}{3e665585c4c62752caa349c792117d54}
+      \strng{authorfullhash}{f4819bbf7d47d500302713496c94af80}
+      \strng{authorfullhashraw}{f4819bbf7d47d500302713496c94af80}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Modelling of {ARC} reactor {FLiBe} blanket using Monte Carlo simulation (not {OpenMC}). Plots {TBR} for different blanket variables, mainly focussed on wall thickness and enrichment. Somewhat limited since it only focusses on one blanket type. Still very useful as a comparison to our project.}
+      \field{issn}{09203796}
+      \field{journaltitle}{Fusion Engineering and Design}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{shortjournal}{Fusion Engineering and Design}
+      \field{title}{Optimization of tritium breeding ratio in {ARC} reactor}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{154}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 5}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1016/j.fusengdes.2020.111531
+      \endverb
+      \verb{file}
+      \verb Full Text:C\:\\Users\\vadan\\Zotero\\storage\\DYJLISCW\\Segantin et al. - 2020 - Optimization of tritium breeding ratio in ARC reactor.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S092037962030079X
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S092037962030079X
+      \endverb
+      \keyw{{FLiBe} Salt,Liquid Breeder,Lit Review,{TBR},Useful}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

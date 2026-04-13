@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.16)  12 APR 2026 12:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.16)  13 APR 2026 10:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -615,7 +615,152 @@ Package biblatex Warning: Conflicting options.
 (biblatex)                '<namepart>inits' conflicts with 'uniquename=full'.
 (biblatex)                Setting 'uniquename=init' on input line 194.
 
-(thesis2.aux)
+(thesis2.aux
+
+LaTeX Warning: Label `fig:coolant_fraction' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:coolant_fraction' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolant_moderation' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:coolant_moderation' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolants' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolant_fraction' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:coolant_fraction' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolant_moderation' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:coolant_moderation' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolants' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolant_fraction' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:coolant_fraction' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolant_moderation' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:coolant_moderation' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolants' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolant_fraction' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:coolant_fraction' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolant_moderation' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:coolant_moderation' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolants' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolant_fraction' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:coolant_fraction' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolant_moderation' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:coolant_moderation' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolants' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolant_fraction' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:coolant_fraction' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolant_moderation' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:coolant_moderation' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolant_moderation' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:coolant_moderation' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolants' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolant_fraction' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:coolant_fraction' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolant_moderation' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:coolant_moderation' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolants' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolant_fraction' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:coolant_fraction' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolant_moderation' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:coolant_moderation' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolants' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolant_fraction' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:coolant_fraction' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolant_moderation' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:coolant_moderation' multiply defined.
+
+
+LaTeX Warning: Label `fig:coolants' multiply defined.
+
+
+LaTeX Warning: Label `fig:multiplier' multiply defined.
+
+)
 \openout1 = `thesis2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 194.
@@ -739,37 +884,206 @@ l.241 \clearpage
                         % Forces a page break after the ToC ends [1
 
 ]
+<figures/Aquisitionfunction_UCB_doublepeak_highbeta_prepped.png, id=108, 619.56468pt x 517.935pt>
+File: figures/Aquisitionfunction_UCB_doublepeak_highbeta_prepped.png Graphic file (type png)
+<use figures/Aquisitionfunction_UCB_doublepeak_highbeta_prepped.png>
+Package pdftex.def Info: figures/Aquisitionfunction_UCB_doublepeak_highbeta_prepped.png  used on input line 281.
+(pdftex.def)             Requested size: 237.01411pt x 198.12924pt.
+<figures/Aquisitionfunction_UCB_doublepeak_lowbeta_prepped.png, id=110, 626.34pt x 519.44063pt>
+File: figures/Aquisitionfunction_UCB_doublepeak_lowbeta_prepped.png Graphic file (type png)
+<use figures/Aquisitionfunction_UCB_doublepeak_lowbeta_prepped.png>
+Package pdftex.def Info: figures/Aquisitionfunction_UCB_doublepeak_lowbeta_prepped.png  used on input line 288.
+(pdftex.def)             Requested size: 237.01411pt x 196.56519pt.
+<figures/combined_MLtesting_2D_Hiddenpeak_comp.png, id=111, 752.8125pt x 907.13907pt>
+File: figures/combined_MLtesting_2D_Hiddenpeak_comp.png Graphic file (type png)
+<use figures/combined_MLtesting_2D_Hiddenpeak_comp.png>
+Package pdftex.def Info: figures/combined_MLtesting_2D_Hiddenpeak_comp.png  used on input line 302.
+(pdftex.def)             Requested size: 237.01411pt x 285.59805pt.
+<figures/combined_MLtesting_2D_schwefel_comp.png, id=112, 752.8125pt x 916.1728pt>
+File: figures/combined_MLtesting_2D_schwefel_comp.png Graphic file (type png)
+<use figures/combined_MLtesting_2D_schwefel_comp.png>
+Package pdftex.def Info: figures/combined_MLtesting_2D_schwefel_comp.png  used on input line 309.
+(pdftex.def)             Requested size: 237.01411pt x 288.44218pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/B1 Comparison Graph.png, id=113, 1606.0pt x 1204.5pt>
+File: figures/B1 Comparison Graph.png Graphic file (type png)
+<use figures/B1 Comparison Graph.png>
+Package pdftex.def Info: figures/B1 Comparison Graph.png  used on input line 329.
+(pdftex.def)             Requested size: 237.01411pt x 177.74492pt.
+<figures/B1_Thicknesss_TBR.png, id=114, 462.528pt x 346.896pt>
+File: figures/B1_Thicknesss_TBR.png Graphic file (type png)
+<use figures/B1_Thicknesss_TBR.png>
+Package pdftex.def Info: figures/B1_Thicknesss_TBR.png  used on input line 336.
+(pdftex.def)             Requested size: 237.01411pt x 177.76152pt.
+<figures/B1_Fluence_HM.png, id=115, 1505.625pt x 1254.6875pt>
+File: figures/B1_Fluence_HM.png Graphic file (type png)
+<use figures/B1_Fluence_HM.png>
+Package pdftex.def Info: figures/B1_Fluence_HM.png  used on input line 350.
+(pdftex.def)             Requested size: 237.01411pt x 197.49945pt.
+<figures/B1_Damage_HM.png, id=116, 1505.625pt x 1254.6875pt>
+File: figures/B1_Damage_HM.png Graphic file (type png)
+<use figures/B1_Damage_HM.png>
+Package pdftex.def Info: figures/B1_Damage_HM.png  used on input line 357.
+(pdftex.def)             Requested size: 237.01411pt x 197.49945pt.
+<figures/B1_TBR_HM.png, id=117, 1505.625pt x 1254.6875pt>
+File: figures/B1_TBR_HM.png Graphic file (type png)
+<use figures/B1_TBR_HM.png>
+Package pdftex.def Info: figures/B1_TBR_HM.png  used on input line 371.
+(pdftex.def)             Requested size: 237.01411pt x 197.49945pt.
+<figures/B1_Mult_HM.png, id=118, 1505.625pt x 1254.6875pt>
+File: figures/B1_Mult_HM.png Graphic file (type png)
+<use figures/B1_Mult_HM.png>
+Package pdftex.def Info: figures/B1_Mult_HM.png  used on input line 378.
+(pdftex.def)             Requested size: 237.01411pt x 197.49945pt.
+<figures/B1_Scatter_HM.png, id=119, 1505.625pt x 1254.6875pt>
+File: figures/B1_Scatter_HM.png Graphic file (type png)
+<use figures/B1_Scatter_HM.png>
+Package pdftex.def Info: figures/B1_Scatter_HM.png  used on input line 392.
+(pdftex.def)             Requested size: 237.01411pt x 197.49945pt.
+<figures/B1_Heat_HM.png, id=120, 1505.625pt x 1254.6875pt>
+File: figures/B1_Heat_HM.png Graphic file (type png)
+<use figures/B1_Heat_HM.png>
+Package pdftex.def Info: figures/B1_Heat_HM.png  used on input line 399.
+(pdftex.def)             Requested size: 237.01411pt x 197.49945pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/forward_layers_3.png, id=121, 380.17032pt x 752.8125pt>
+File: figures/forward_layers_3.png Graphic file (type png)
+<use figures/forward_layers_3.png>
+Package pdftex.def Info: figures/forward_layers_3.png  used on input line 415.
+(pdftex.def)             Requested size: 120.92421pt x 239.44608pt.
+<figures/base_layers.png, id=122, 386.19281pt x 752.8125pt>
+File: figures/base_layers.png Graphic file (type png)
+<use figures/base_layers.png>
+Package pdftex.def Info: figures/base_layers.png  used on input line 422.
+(pdftex.def)             Requested size: 120.92421pt x 235.7128pt.
+<figures/rear_layers_3.png, id=123, 380.17032pt x 752.8125pt>
+File: figures/rear_layers_3.png Graphic file (type png)
+<use figures/rear_layers_3.png>
+Package pdftex.def Info: figures/rear_layers_3.png  used on input line 428.
+(pdftex.def)             Requested size: 120.92421pt x 239.44608pt.
+<figures/B1_Zeta_TBR.png, id=124, 462.528pt x 346.896pt>
+File: figures/B1_Zeta_TBR.png Graphic file (type png)
+<use figures/B1_Zeta_TBR.png>
+Package pdftex.def Info: figures/B1_Zeta_TBR.png  used on input line 443.
+(pdftex.def)             Requested size: 237.01411pt x 177.76152pt.
+<figures/B1_Zeta_Mult.png, id=125, 462.528pt x 346.896pt>
+File: figures/B1_Zeta_Mult.png Graphic file (type png)
+<use figures/B1_Zeta_Mult.png>
+Package pdftex.def Info: figures/B1_Zeta_Mult.png  used on input line 450.
+(pdftex.def)             Requested size: 237.01411pt x 177.76152pt.
+<figures/B1_Zeta_DPA.png, id=126, 1606.0pt x 1204.5pt>
+File: figures/B1_Zeta_DPA.png Graphic file (type png)
+<use figures/B1_Zeta_DPA.png>
+Package pdftex.def Info: figures/B1_Zeta_DPA.png  used on input line 464.
+(pdftex.def)             Requested size: 237.01411pt x 177.74492pt.
+<figures/B1_Zeta_Damage.png, id=127, 462.528pt x 346.896pt>
+File: figures/B1_Zeta_Damage.png Graphic file (type png)
+<use figures/B1_Zeta_Damage.png>
+Package pdftex.def Info: figures/B1_Zeta_Damage.png  used on input line 471.
+(pdftex.def)             Requested size: 237.01411pt x 177.76152pt.
+<figures/B1_Zeta_Flux.png, id=128, 462.528pt x 346.896pt>
+File: figures/B1_Zeta_Flux.png Graphic file (type png)
+<use figures/B1_Zeta_Flux.png>
+Package pdftex.def Info: figures/B1_Zeta_Flux.png  used on input line 485.
+(pdftex.def)             Requested size: 237.01411pt x 177.76152pt.
+<figures/B1_Zeta_Scatter.png, id=129, 462.528pt x 346.896pt>
+File: figures/B1_Zeta_Scatter.png Graphic file (type png)
+<use figures/B1_Zeta_Scatter.png>
+Package pdftex.def Info: figures/B1_Zeta_Scatter.png  used on input line 492.
+(pdftex.def)             Requested size: 237.01411pt x 177.76152pt.
+
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.256 \end{document}
-                     [1
+l.500 
+       [1
 
-] (thesis2.aux)
+ <./figures/Aquisitionfunction_UCB_doublepeak_highbeta_prepped.png> <./figures/Aquisitionfunction_UCB_doublepeak_lowbeta_prepped.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/MLresult_8D_4panel_comp.png, id=140, 1505.625pt x 1081.03876pt>
+File: figures/MLresult_8D_4panel_comp.png Graphic file (type png)
+<use figures/MLresult_8D_4panel_comp.png>
+Package pdftex.def Info: figures/MLresult_8D_4panel_comp.png  used on input line 506.
+(pdftex.def)             Requested size: 483.69687pt x 347.29208pt.
+<figures/breeder_blanket_2d_themed.png, id=141, 4467.18938pt x 2065.7175pt>
+File: figures/breeder_blanket_2d_themed.png Graphic file (type png)
+<use figures/breeder_blanket_2d_themed.png>
+Package pdftex.def Info: figures/breeder_blanket_2d_themed.png  used on input line 516.
+(pdftex.def)             Requested size: 459.51054pt x 212.47813pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[2 <./figures/combined_MLtesting_2D_Hiddenpeak_comp.png> <./figures/combined_MLtesting_2D_schwefel_comp.png>]
+
+[3 <./figures/B1 Comparison Graph.png> <./figures/B1_Thicknesss_TBR.png> <./figures/B1_Fluence_HM.png> <./figures/B1_Damage_HM.png>]
+
+[4 <./figures/B1_TBR_HM.png> <./figures/B1_Mult_HM.png> <./figures/B1_Scatter_HM.png> <./figures/B1_Heat_HM.png>]
+
+[5 <./figures/forward_layers_3.png> <./figures/base_layers.png> <./figures/rear_layers_3.png>]
+
+[6 <./figures/B1_Zeta_TBR.png> <./figures/B1_Zeta_Mult.png> <./figures/B1_Zeta_DPA.png> <./figures/B1_Zeta_Damage.png>]
+
+[7 <./figures/B1_Zeta_Flux.png> <./figures/B1_Zeta_Scatter.png> <./figures/MLresult_8D_4panel_comp.png>]
+
+[8 <./figures/breeder_blanket_2d_themed.png>] (thesis2.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `thesis2.out' has not changed.
-(rerunfilecheck)             Checksum: 4E0CCFFE100467DF849AA3831ED96701;196.
+(rerunfilecheck)             Checksum: 4C45946DB75BD7BBE64FED6DB8541FEF;2604.
 Package logreq Info: Writing requests to 'thesis2.run.xml'.
 \openout1 = `thesis2.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21223 strings out of 468081
- 376105 string characters out of 5425788
- 1226958 words of memory out of 5000000
- 49650 multiletter control sequences out of 15000+600000
+ 21459 strings out of 468081
+ 383375 string characters out of 5425788
+ 1240932 words of memory out of 5000000
+ 49851 multiletter control sequences out of 15000+600000
  641109 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,5n,100p,1489b,1392s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,9n,100p,1489b,1392s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on thesis2.pdf (3 pages, 124848 bytes).
+Output written on thesis2.pdf (10 pages, 5988667 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 7 named destinations out of 1000 (max. 500000)
- 17 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 257 PDF objects out of 1000 (max. 8388607)
+ 42 named destinations out of 1000 (max. 500000)
+ 260 words of extra memory for PDF output out of 10000 (max. 10000000)
 
