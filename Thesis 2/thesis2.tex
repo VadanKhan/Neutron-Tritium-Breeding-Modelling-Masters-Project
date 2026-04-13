@@ -270,170 +270,384 @@ Start your new document here! \cite{moir_fusion_1982}, \citet{momoshima_tritium_
 \section{Methodology}
 
 \subsection{Neutronic Analysis}
+\label{sec:method_neutronics}
+
+To systematically investigate the effect of radial material distribution within the heterogeneous
+blanket, a constrained parametric approach was initially required. The full layered architecture
+contains eight independent geometric variables (comprising four discrete breeder layers and four
+coolant layers). Exhaustively exploring this 8-dimensional design space via traditional manual or
+grid-search methods is computationally intractable.
+
+To reduce the dimensionality of the problem while maintaining physical relevance, a linear gradient
+parameter, $\zeta$, was introduced as a heuristic constraint. This parameter governs the relative
+thickness of the layers across the blanket's depth, providing a human-intuitive method to observe
+spatial trends.
+
+\begin{figure}[h]
+    \centering
+    % FIRST SUBFIGURE
+    \begin{subfigure}[t]{0.275\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/forward_layers_3.png}
+        \caption{Forward-weighted ($\zeta < 0$)}
+        \label{fig:zeta_forward}
+    \end{subfigure}
+    \hfill
+    % SECOND SUBFIGURE
+    \begin{subfigure}[t]{0.28\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/base_layers.png}
+        \caption{Uniform/Baseline ($\zeta = 0$)}
+        \label{fig:zeta_base}
+    \end{subfigure}
+    \hfill
+    % THIRD SUBFIGURE
+    \begin{subfigure}[t]{0.275\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/rear_layers_3.png}
+        \caption{Rear-weighted ($\zeta > 0$)}
+        \label{fig:zeta_rear}
+    \end{subfigure}
+
+    \caption{Cross-sectional visualisations of the breeder blanket layers illustrating the effect of
+    the linear gradient parameter, $\zeta$. This parameter controls the radial distribution of layer
+    thicknesses: (a) a forward-weighted geometry shifting volume towards the first wall, (b) the
+    baseline uniform thickness distribution, and (c) a rear-weighted geometry shifting volume deeper
+    into the blanket.}
+    \label{fig:zeta_parameter}
+\end{figure}
+
+As illustrated in Figure \ref{fig:zeta_parameter}, a negative gradient ($\zeta < 0$) creates a
+forward-weighted geometry, effectively ``front-loading'' the material volume toward the
+plasma-facing first wall. Conversely, a positive gradient ($\zeta > 0$) results in a rear-weighted,
+``back-loaded'' distribution, whilst $\zeta = 0$ represents the baseline uniform distribution.
+
+While this constrained, single-variable approach yields valuable insights into the fundamental
+physics of the blanket, it inherently restricts the exploration of the broader design space. The
+limitations of manual parametrisation in identifying true global optima across an unconstrained
+8-dimensional parameter space necessitate the use of advanced computational techniques.
+Consequently, the study transitions to the application of Machine Learning algorithms (see Section
+\ref{sec:method_neutronics}) to navigate this complex parameter space efficiently.
+
 
 \subsection{ML Optimisation}
-Explaining what we explored for ML
+\label{sec:method_ml}
+To navigate the 8-dimensional design space effectively, Bayesian Optimisation was employed.
+
+A critical component of this framework is the selection and tuning of the acquisition function,
+which dictates how the algorithm samples new data points. For this study, the Upper Confidence Bound
+(UCB) acquisition function was selected over Expected Improvement (EI). Unlike EI, UCB provides
+explicit, scalar control over the exploration-exploitation trade-off via the hyperparameter $\beta$.
+
+Properly tuning this parameter is vital for a high-dimensional physical system where multiple local
+maxima may exist. Figure \ref{fig:ucb_tuning} illustrates a 2D projection of the acquisition utility
+landscape used to benchmark the model's behaviour.
+
 \begin{figure}[h]
     \centering
     % FIRST SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/Aquisitionfunction_UCB_doublepeak_highbeta_prepped.png}
-        \label{fig:coolant_fraction}
+        \caption{Explorative tuning ($\beta = 1,000,000$)}
+        \label{fig:ucb_high_beta}
     \end{subfigure}
-    \hfill % This pushes the figures to opposite sides
+    \hfill
     % SECOND SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/Aquisitionfunction_UCB_doublepeak_lowbeta_prepped.png}
-        \label{fig:coolant_moderation}
+        \caption{Greedy tuning ($\beta = 1$)}
+        \label{fig:ucb_low_beta}
     \end{subfigure}
-    \caption{Lets write a dummy caption here just to test and view how a caption would look and how
-    much impact a long caption would have. It is important when we are testing to account for the
-    impact that these could have as it would lead to bad planning when it comes to spacing. }
-    \label{fig:coolants}
+    \caption{Comparison of the Upper Confidence Bound (UCB) acquisition function behaviour under
+    different exploration parameters ($\beta$). (a) A high $\beta$ value successfully prioritises
+    exploration, identifying a secondary hidden peak. (b) A low $\beta$ value results in overly
+    greedy exploitation, causing the model to stagnate on a single local optimum and ignore
+    unexplored regions.}
+    \label{fig:ucb_tuning}
 \end{figure}
-Explaining how we scaled up and tested higher dimensions and functions.
+
+As demonstrated in Figure \ref{fig:ucb_low_beta}, setting a low exploration weight ($\beta = 1$)
+results in a overly greedy search. The algorithm heavily exploits a known local optimum, entirely
+missing a secondary, hidden peak within the design space. Conversely, Figure \ref{fig:ucb_high_beta}
+shows that a significantly higher parameter ($\beta = 1,000,000$) forces the model to prioritise
+high-uncertainty regions, successfully mapping the broader landscape and identifying the hidden
+peak.
+
+Given the complexity and scale of the layered blanket parameter space, premature convergence on a
+local optimum poses a significant risk. Consequently, the UCB acquisition function was configured
+with a highly explorative $\beta = 1,000,000$ value to ensure robust, global mapping of the design
+space before narrowing in on the optimal layer thicknesses
+
+Before applying the Bayesian optimiser to the high-dimensional neutronic blanket model, it was
+strictly benchmarked against difficult, highly multi-modal mathematical functions (such as the
+Schwefel function). Testing against landscapes where the global optimum is not immediately obvious
+is crucial to verify the algorithm's exploratory robustness.
+
+Figure \ref{fig:1d_benchmark} demonstrates a 1D test case. A critical distinction highlighted here
+is the difference between the ``Actual Best Observed" (the highest discrete point successfully
+sampled during the simulation) and the ``Best Model Prediction" (the theoretical peak calculated by
+the surrogate model).
+
+While finding the absolute optimal TBR is the primary engineering goal, the full continuous
+surrogate model is arguably the most valuable output for a physicist. Reconstructing the entire
+parameter space, rather than just isolating a single maximum, provides deep physical intuition
+regarding how variables interact across the entire domain.
+
+While 1D tests validate basic functionality, scaling the benchmark to 2D surfaces (Figure
+\ref{fig:2d_gramacy_lee}, \ref{fig:2d_hidden_peak}, \ref{fig:2d_schwefel}) is necessary to ensure
+the algorithm does not fail as dimensionality increases. During these tests, it became apparent that
+standard Upper Confidence Bound (UCB) acquisition, even with a high exploration parameter, could
+occasionally stagnate in deep local minima. To prevent this, three bespoke algorithmic enhancements
+were introduced:
+
+\begin{itemize}
+    \item \textbf{Interleaved random injection:} An $\epsilon$-greedy approach was implemented,
+    using a defined probability parameter to periodically force a completely random sample, ensuring
+    exploration in areas the UCB function might otherwise ignore. As the GPR-BO is able to optimise
+    local peaks quickly, we set found setting the probability to $\epsilon=0.5$ optimal;
+    particularly because we found that UCB acquisition naturally randomly explored in higher
+    dimensions as the space is much larger.
+    \item \textbf{Duplicate avoidance:} The optimiser was constrained to reject repeated
+    coordinates, forcing continuous spatial exploration and preventing wasted computational
+    resources on identical measurements.
+    \item \textbf{Multimodal surrogate exploitation:} Every $n_{hunt}$ trials, the algorithm
+    actively scans the surrogate model to identify the top five predicted peaks. It then forces a
+    sample at the highest peak that remains locally unexplored (highlighted by the pink markers in
+    Figure \ref{fig:2d_schwefel}). In our trials we found $n_{hunt}=10$ sufficient.
+\end{itemize}
+
 \begin{figure}[h]
     \centering
-    % FIRST SUBFIGURE
+    % TOP-LEFT SUBFIGURE (a)
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/combined_MLtesting_1D_schwefel.png}
+        \caption{1D multi-modal Schwefel function test}
+        \label{fig:1d_benchmark}
+    \end{subfigure}
+    \hfill
+    % TOP-RIGHT SUBFIGURE (b)
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/combined_MLtesting_2D_gramacylee_comp.png}
+        \caption{2D Gramacy \& Lee function test}
+        \label{fig:2d_gramacy_lee}
+    \end{subfigure}
+
+    \par\vspace{1em} % Line break with vertical spacing
+
+    % BOTTOM-LEFT SUBFIGURE (c)
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/combined_MLtesting_2D_Hiddenpeak_comp.png}
-        \label{fig:coolant_fraction}
+        \caption{2D Hidden Peak function test}
+        \label{fig:2d_hidden_peak}
     \end{subfigure}
-    \hfill % This pushes the figures to opposite sides
-    % SECOND SUBFIGURE
+    \hfill
+    % BOTTOM-RIGHT SUBFIGURE (d)
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/combined_MLtesting_2D_schwefel_comp.png}
-        \label{fig:coolant_moderation}
+        \caption{2D multi-modal Schwefel function test}
+        \label{fig:2d_schwefel}
     \end{subfigure}
-    \caption{Lets write a dummy caption here just to test and view how a caption would look and how
-    much impact a long caption would have. It is important when we are testing to account for the
-    impact that these could have as it would lead to bad planning when it comes to spacing. }
-    \label{fig:coolants}
+
+    \caption{Comprehensive benchmarking of the ML optimisation algorithm across multiple challenging
+    landscapes. (a) A 1D Schwefel test case illustrating full surrogate model reconstruction against
+    the true function. The uncertainty in the model is plotted but too small to be visible.  (b),
+    (c) and (d) demonstrate various 2D function tests of the optimiser, where the final mean
+    surrogate model of the space and its paired standard deviation is plotted underneath each. (a)
+    and (b) used $N=100$ trials whereas (c) and (d) used $N=150$, where this includes $N_{sobol}=50$
+    sobol trials for all. $\beta=1,000,000$ was consistent across all trials. Random injection and
+    multi-modal exploitation was implemented for (c) and (d) with $\epsilon = 0.75$ and
+    $n_{hunt}=10$. (d) includes pink markers to annotate where a secondary ``peak hunt'' is triggered.}
+    \label{fig:ml_benchmarks_4panel}
 \end{figure}
+
+Successfully navigating these notoriously difficult mathematical landscapes demonstrates the
+optimiser's robust resistance to local minima. This is evidenced by its successful discovery of the
+2D hidden peak (Figure \ref{fig:2d_hidden_peak}) and its highly accurate structural reconstruction
+of the complex, multi-modal 2D Schwefel function (Figure \ref{fig:2d_schwefel}).
+
+In fact, the algorithm is arguably over-prepared for the physical breeder blanket investigation,
+which is expected to feature broader, continuous global physical trends rather than sharp,
+discontinuous mathematical spikes. As illustrated by the Gramacy \& Lee benchmark (Figure
+\ref{fig:2d_gramacy_lee}), the model efficiently isolates and solves for broad overall trends,
+naturally exhibiting less sensitivity to high-frequency, small-length-scale variations. This testing
+ultimately confirms that while the algorithm maps wider global dynamics highly effectively,
+microscopic local peaks represent the primary hazard where the model risks entrapment.
+
+
 
 
 
 \section{Results}
 
 \subsection{Layered Blanket Model Neutronics}
-result intro
+Building upon the baseline parameter sweeps conducted in the first semester \citep{khan_mphys_sem1},
+this phase of the project transitions the neutronic
+model from a simplified homogeneous approximation to a discrete, heterogeneous layered architecture.
+
+Figure \ref{fig:tbr_comparison} presents the global Tritium Breeding Ratio (TBR) across these
+different modelling approaches. The data shows an initial reduction in the calculated TBR when the
+required structural separator material (Eurofer) is integrated into the homogeneous mixture. A
+further, more substantial decrease in the global TBR is observed when this exact same material
+volume is geometrically separated into distinct breeder, coolant, and structural layers.
+
 \begin{figure}[h]
     \centering
     % FIRST SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/B1 Comparison Graph.png}
-        \label{fig:coolant_fraction}
+        \caption{TBR comparison across modelling approximations}
+        \label{fig:tbr_comparison}
     \end{subfigure}
-    \hfill % This pushes the figures to opposite sides
+    \hfill
     % SECOND SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/B1_Thicknesss_TBR.png}
-        \label{fig:coolant_moderation}
+        \caption{Layer-wise TBR contribution vs. thickness}
+        \label{fig:tbr_thickness}
     \end{subfigure}
-    \caption{Lets write a dummy caption here just to test and view how a caption would look and how
-    much impact a long caption would have. It is important when we are testing to account for the
-    impact that these could have as it would lead to bad planning when it comes to spacing. }
-    \label{fig:coolants}
+    \caption{Evaluating TBR of the layered blanket architecture. (a) Highlights the degradation of global
+    TBR when transitioning from idealised homogeneous mixtures to realistic heterogeneous layers.
+    (b) Demonstrates the spatial distribution of tritium production, showing heavy concentration in
+    the plasma-facing layers as overall blanket depth increases.}
+    \label{fig:layered_model_neutronics}
 \end{figure}
-highlighting key results
-\begin{figure}[h]
-    \centering
-    % FIRST SUBFIGURE
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/B1_Fluence_HM.png}
-        \label{fig:coolant_fraction}
-    \end{subfigure}
-    \hfill % This pushes the figures to opposite sides
-    % SECOND SUBFIGURE
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/B1_Damage_HM.png}
-        \label{fig:coolant_moderation}
-    \end{subfigure}
-    \caption{Lets write a dummy caption here just to test and view how a caption would look and how
-    much impact a long caption would have. It is important when we are testing to account for the
-    impact that these could have as it would lead to bad planning when it comes to spacing. }
-    \label{fig:coolants}
-\end{figure}
-highlighting key results
+
+To isolate the spatial distribution of tritium production within this heterogeneous geometry, the
+TBR was tallied layer-by-layer as a function of the total radial blanket thickness (Figure
+\ref{fig:tbr_thickness}). For this parameter sweep, the thickness of the structural separators was
+held constant while the radial depths of the discrete breeder and coolant layers were uniformly
+scaled.
+
+The plot demonstrates that tritium breeding is predominantly concentrated in the region closest to
+the ``front'' (facing the plasma), the inner blanket layers. As the overall thickness of the
+blanket increases, the TBR contribution from innermost layers (Breeder Layers 1 and 2) rise and
+layer 2 starts to stabilise. Deeper layers (Breeder Layers 3 and 4) contribute progressively less to
+the total TBR. The total TBR value quickly saturates at $\approx450$mm, and remains constant despite
+the breeding continuing to shift between layers.
+
+
+To further characterise the layered blanket environment, cross-sectional heatmaps were generated to
+track neutron transport and its structural impacts. Note that the steel separators are included
+between each breeder-coolant interface. They are too thin to annotate, but note that gaps between
+the breeder and coolant indicate a separator.
+
+Figure \ref{fig:reaction_heatmaps} maps the spatial distribution of the primary neutronic reactions
+driving the blanket's performance.
+
 \begin{figure}[h]
     \centering
     % FIRST SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/B1_TBR_HM.png}
-        \label{fig:coolant_fraction}
+        \caption{Tritium production density}
+        \label{fig:tbr_hm}
     \end{subfigure}
-    \hfill % This pushes the figures to opposite sides
+    \hfill
     % SECOND SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/B1_Mult_HM.png}
-        \label{fig:coolant_moderation}
+        \caption{Neutron multiplication density}
+        \label{fig:mult_hm}
     \end{subfigure}
-    \caption{Lets write a dummy caption here just to test and view how a caption would look and how
-    much impact a long caption would have. It is important when we are testing to account for the
-    impact that these could have as it would lead to bad planning when it comes to spacing. }
-    \label{fig:coolants}
+    \caption{Cross-sectional heatmaps detailing the spatial distribution of key neutronic reactions. (a) Displays the density of tritium breeding reactions, strictly localised within the discrete breeder layers. (b) Illustrates the concentration of neutron multiplication events across the blanket depth.}
+    \label{fig:reaction_heatmaps}
 \end{figure}
-highlighting key results
+
+As seen in Figure \ref{fig:tbr_hm}, tritium production is strictly confined to the designated
+breeder layers. The reaction density is highly asymmetric, with the vast majority of breeding
+occurring in the innermost layer immediately behind the first wall, before decaying sharply in the
+deeper radial zones.
+
+Figure \ref{fig:mult_hm} demonstrates that neutron multiplication events follow a virtually
+identical spatial profile. The multiplication reactions are heavily concentrated at the front of the
+blanket, where the incident neutron flux first enters the system, and drop off rapidly in the
+subsequent outward layers.
+
+Figure \ref{fig:fluence_hms} displays the spatial distribution of both the total neutron flux and
+the resulting radiation damage.
+
+\begin{figure}[h]
+    \centering
+    % FIRST SUBFIGURE
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/B1_Fluence_HM.png}
+        \caption{Total neutron flux distribution}
+        \label{fig:fluence_hm}
+    \end{subfigure}
+    \hfill
+    % SECOND SUBFIGURE
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/B1_Damage_HM.png}
+        \caption{Radiation damage distribution}
+        \label{fig:damage_hm}
+    \end{subfigure}
+    \caption{Cross-sectional heatmaps of flux and radiation damage. (a) Illustrates the progressive
+    attenuation of the neutron flux across the material boundaries. (b) Shows the spatial
+    distribution of structural radiation damage.}
+    \label{fig:fluence_hms}
+\end{figure}
+
+As shown in Figure \ref{fig:fluence_hm}, the total neutron flux
+attenuates deeply as it propagates radially through the blanket, becoming almost entirely exhausted
+by the rear boundary. Notably, this attenuation exhibits a distinct, step-like profile,
+characterised by sharp decreases in flux immediately across each discrete coolant layer.
+
+Figure \ref{fig:damage_hm} maps the corresponding structural damage. As expected, the damage is
+heavily concentrated on the plasma-facing first wall. Beyond this initial boundary, the damage
+profile declines exponentially through the blanket depth, tracking the overall attenuation
+trend of the incident neutron flux.
+
+Finally, the spatial distributions of neutron scattering and nuclear heating within the layered
+architecture were evaluated (Figure \ref{fig:scatter_heat_heatmaps}).
+
 \begin{figure}[h]
     \centering
     % FIRST SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/B1_Scatter_HM.png}
-        \label{fig:coolant_fraction}
+        \caption{Neutron scattering density}
+        \label{fig:scatter_hm}
     \end{subfigure}
-    \hfill % This pushes the figures to opposite sides
+    \hfill
     % SECOND SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/B1_Heat_HM.png}
-        \label{fig:coolant_moderation}
+        \caption{Nuclear heating distribution}
+        \label{fig:heat_hm}
     \end{subfigure}
-    \caption{Lets write a dummy caption here just to test and view how a caption would look and how
-    much impact a long caption would have. It is important when we are testing to account for the
-    impact that these could have as it would lead to bad planning when it comes to spacing. }
-    \label{fig:coolants}
+    \caption{Cross-sectional heatmaps of scattering and energy deposition. (a) Highlights distinct
+    peaks in neutron scattering density localised around the discrete coolant layers. (b) Displays
+    the corresponding nuclear heating profile, noting a specific concentration around the second
+    coolant layer.}
+    \label{fig:scatter_heat_heatmaps}
 \end{figure}
+
+Figure \ref{fig:scatter_hm} maps the frequency of neutron scattering events. The scattering density
+exhibits distinct, localised peaks that align directly with the positions of the internal coolant
+layers.
+
+This spatial scattering pattern translates directly into the thermal energy deposition shown in
+Figure \ref{fig:heat_hm}. The nuclear heating profile follows a similar, albeit less pronounced,
+distribution peaking around the coolant layers. The highest overall concentration of heating is
+observed specifically within the second coolant layer.
+
 
 \subsection{Manual Thickness Distribution Analysis}
-highlighting key results
-\begin{figure}[h]
-    \centering
-    % FIRST SUBFIGURE
-    \begin{subfigure}[t]{0.25\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/forward_layers_3.png}
-        \label{fig:coolant_fraction}
-    \end{subfigure}
-    % \hfill % This pushes the figures to opposite sides
-    % SECOND SUBFIGURE
-    \begin{subfigure}[t]{0.25\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/base_layers.png}
-        \label{fig:coolant_moderation}
-    \end{subfigure}
 
-    \begin{subfigure}[t]{0.25\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/rear_layers_3.png}
-        \label{fig:coolant_moderation}
-    \end{subfigure}
-
-    \caption{Lets write a dummy caption here just to test and view how a caption would look and how
-    much impact a long caption would have. It is important when we are testing to account for the
-    impact that these could have as it would lead to bad planning when it comes to spacing. }
-    \label{fig:coolants}
-\end{figure}
 highlighting key results
 \begin{figure}[h]
     \centering
@@ -497,6 +711,7 @@ highlighting key results
     impact that these could have as it would lead to bad planning when it comes to spacing. }
     \label{fig:coolants}
 \end{figure}
+
 
 \subsection{ML Optimisation Findings}
 highlighting key results

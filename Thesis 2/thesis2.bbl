@@ -19,6 +19,39 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
+    \entry{khan_mphys_sem1}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6192821c6d34eb16f0f75f561d43cee9}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Vadan},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {University of Manchester}%
+      }
+      \strng{namehash}{6192821c6d34eb16f0f75f561d43cee9}
+      \strng{fullhash}{6192821c6d34eb16f0f75f561d43cee9}
+      \strng{fullhashraw}{6192821c6d34eb16f0f75f561d43cee9}
+      \strng{bibnamehash}{6192821c6d34eb16f0f75f561d43cee9}
+      \strng{authorbibnamehash}{6192821c6d34eb16f0f75f561d43cee9}
+      \strng{authornamehash}{6192821c6d34eb16f0f75f561d43cee9}
+      \strng{authorfullhash}{6192821c6d34eb16f0f75f561d43cee9}
+      \strng{authorfullhashraw}{6192821c6d34eb16f0f75f561d43cee9}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{11}
+      \field{month}{1}
+      \field{title}{Neutron Transport and Tritium Breeding Modelling in Nuclear Fusion Reactor Breeder Blankets}
+      \field{type}{MPhys Project Report}
+      \field{year}{2026}
+      \field{dateera}{ce}
+    \endentry
     \entry{lee_us-doe_1983}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=7fa45c91fd7cc3baa69acc2082af26c3}{%
