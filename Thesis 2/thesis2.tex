@@ -1,0 +1,256 @@
+% --- DOC SETUP ---
+\documentclass[12pt]{article}
+
+% --- Packages ---
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}% add hypertext capabilities
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage[title]{appendix}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{titlesec}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{subcaption}
+\usepackage{upgreek}
+\usepackage{mhchem}
+\usepackage{booktabs}
+
+% --- Bibliography Setup (Vancouver Style) ---
+% \usepackage[
+%     backend=biber,
+%     style=vancouver,
+%     doi=true,
+%     url=false,
+%     isbn=false,
+%     eprint=false,
+%     maxbibnames=6,
+%     minbibnames=6
+% ]{biblatex}
+
+% \DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,unpublished]{title}{#1}
+% \DeclareFieldFormat{doi}{\href{https://doi.org/#1}{\textsc{[doi]}}}
+% \renewbibmacro{in:}{}
+% \DeclareDelimFormat*{finalnamedelim}{\addcomma\addspace}
+% \renewbibmacro*{date}{\printdate}
+% \DefineBibliographyExtras{english}{%
+%   \protected\def\mkbibdatelong#1#2#3{%
+%     \thefield{#1}% YEAR
+%     \iffieldundef{#2}{}{\addcomma\addspace\mkbibmonth{\thefield{#2}}}% MONTH
+%     \iffieldundef{#3}{}{\addcomma\addspace\stripzeros{\thefield{#3}}}% DAY
+%   }%
+% }
+
+% ==========================================
+% BIBLIOGRAPHY SETUP (Manchester Harvard)
+% ==========================================
+
+% Load csquotes to enforce British single quotation marks for article titles
+\usepackage[style=british]{csquotes}
+
+\usepackage[
+    backend=biber,
+    style=authoryear,
+    natbib=true,
+    maxcitenames=3,     % In-text: Up to 3 authors. 4+ uses et al.
+    mincitenames=1,
+    maxbibnames=3,      % NEW: Reference List: Up to 3 authors.
+    minbibnames=1,      % NEW: Reference List: If 4+, cuts down to 1 author + et al.
+    giveninits=true,
+    uniquelist=false,
+    urldate=long,
+    date=year,
+    doi=true,
+    url=true,
+    isbn=false,
+    eprint=false
+]{biblatex}
+
+% --- Custom Formatting Hacks for Manchester Style ---
+
+% 1. Enforce the "DOI OR URL" rule
+% If a DOI is present, this clears the URL and Access Date so they don't print
+\AtEveryBibitem{%
+  \iffieldundef{doi}{}{%
+    \clearfield{url}%
+    \clearfield{urlyear}%
+    \clearfield{urlmonth}%
+    \clearfield{urlday}%
+  }%
+}
+
+% 2. Globally rename headings and strings
+\DefineBibliographyStrings{english}{
+  bibliography = {References},
+  urlseen = {Accessed\addcolon}
+}
+
+% 3. Format URLs to match "Available at: URL"
+\DeclareFieldFormat{url}{Available at\addcolon\space\url{#1}}
+
+% 4. Format Access Dates to match "(Accessed: Date)"
+\DeclareFieldFormat{urldate}{\mkbibparens{\bibstring{urlseen}\space#1}}
+
+% 5. Force DOIs into your custom placeholder button
+\DeclareFieldFormat{doi}{\href{https://doi.org/#1}{\textsc{[doi]}}}
+
+% % 6. Use an ampersand (&) before the final author in the reference list
+% \DeclareDelimFormat[bib,biblist]{finalnamedelim}{\space\&\space}
+% 6alt. Use an 'and' before the final author in the reference list
+\DeclareDelimFormat[bib,biblist]{finalnamedelim}{\addspace and\space}
+
+% --- NEW: Deep Macro Overrides for Precise Punctuation ---
+
+% 7. Replace the full stop after the article title with a comma, and remove "In:"
+\renewbibmacro{in:}{%
+  \ifentrytype{article}
+    {\setunit{\addcomma\space}} % Forces a comma after the title for articles
+    {} % Removes "In:" for other types
+}
+
+% 8. Insert a comma between the Journal Title and the Volume
+\renewbibmacro*{journal+issuetitle}{%
+  \usebibmacro{journal}%
+  \setunit*{\addcomma\space}% <--- This forces the comma before the volume
+  \iffieldundef{series}
+    {}
+    {\newunit
+     \printfield{series}%
+     \setunit{\addspace}}%
+  \usebibmacro{volume+number+eid}%
+  \setunit{\addspace}%
+  \usebibmacro{issue+date}%
+  \setunit{\addcolon\space}%
+  \usebibmacro{issue}%
+  \newunit}
+
+% 9. Volume(Issue) formatting (removes the space between them)
+\renewbibmacro*{volume+number+eid}{%
+  \printfield{volume}%
+  \setunit*{}%
+  \printfield{number}%
+  \setunit{\addcomma\space}%
+  \printfield{eid}}
+
+% 10. Put the issue number in parentheses
+\DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
+
+% 11. Force 'pp.' to appear before page numbers in articles
+\DeclareFieldFormat[article]{pages}{\mkpageprefix[pagination]{#1}}
+\renewcommand*{\bibpagespunct}{\addcomma\space} % Comma before pages
+
+% --- File Linking and Font Size ---
+
+% Define the custom pre-note
+\defbibnote{bibnote}{\textit{Note: DOI links are hyperlinked within ``[DOI]" placeholder}}
+
+% Shrink the bibliography text and make it single-spaced
+\renewcommand*{\bibfont}{\small\linespread{1.0}\selectfont}
+
+% Link your bibliography database file
+\addbibresource{thesis2.bib}
+
+
+% --- Custom Title Formatting and Spacing ---
+\setcounter{secnumdepth}{4}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\raggedright}
+  {\thesection.}
+  {1em}
+  {\MakeUppercase}
+\titlespacing*{\section}{0pt}{3ex plus 1ex minus .2ex}{2ex plus .2ex}
+
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries}
+  {\thesubsection.}
+  {1em}
+  {}
+\titlespacing*{\subsection}{0pt}{2.5ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\titleformat{\subsubsection}
+  {\small\bfseries\itshape}
+  {\thesubsubsection.}
+  {1em}
+  {}
+\titlespacing*{\subsubsection}{0pt}{2ex plus 0.5ex minus .2ex}{1ex plus .2ex}
+
+\titleformat{\paragraph}
+  {\small\itshape}
+  {\theparagraph.}
+  {1em}
+  {}
+\titlespacing*{\paragraph}{0pt}{1.5ex plus 0.2ex}{1ex}
+
+% --- General Paragraph Formatting ---
+\setlength{\parindent}{10pt}
+\linespread{1}
+
+
+% ==========================================
+%                 DOC BEGIN
+% ==========================================
+
+\begin{document}
+
+% --- title page ---
+\begin{titlepage}
+    \centering % Center all content on the title page
+
+    \vspace*{2cm} % Add some space from the top
+
+    % --- Manually formatted title ---
+    {\Large \bfseries Neutron Transport and Tritium Breeding Modelling in Nuclear Fusion Reactor
+    Breeder Blankets \par}
+    \vspace{0.5em}
+    {\normalsize MPhys Project Report \par}
+
+    \vspace{3em} % Add space after the title
+
+    % --- Manually formatted author ---
+    {\large Vadan Khan (10823198)\par}
+    {In collaboration with Rhodri Peters \par}
+    \vspace{0.5em}
+    {4th Year MPhys, Department of Physics and Astronomy, University of Manchester \par}
+
+    \vspace{2em} % Add space after the author
+
+    % --- Manually formatted date ---
+    {\large \today \par}
+
+    \vfill % Pushes the abstract to the lower half of the page
+
+    % --- Abstract ---
+    % Use a minipage to constrain the width of the abstract
+    \begin{minipage}{1\textwidth}
+    \begin{abstract}
+    meow
+    \end{abstract}
+    \end{minipage}
+
+    \vfill % Fills the remaining space at the bottom
+
+\end{titlepage}
+% --- title page ---
+
+% --- Contents Page Setup ---
+% --- Contents Page Setup ---
+\clearpage
+\pagestyle{empty} % Globally switches off page numbers
+\tableofcontents
+\clearpage        % Forces a page break after the ToC ends
+\pagestyle{plain} % Globally switches page numbers back on
+\setcounter{page}{1} % Resets the counter so Introduction starts at Page 1
+
+
+% --- Main Content Begins Here ---
+
+\section{Introduction}
+Start your new document here! \cite{moir_fusion_1982}, \citet{momoshima_tritium_2022},
+\citep{lee_us-doe_1983}, \citep{segantin_optimisation_2020}
+
+\defbibnote{bibnote}{\textit{Note: DOI links are hyperlinked within ``[DOI]" placeholder}}
+\printbibliography[heading=bibintoc, title={References}, prenote=bibnote]
+
+
+\end{document}
