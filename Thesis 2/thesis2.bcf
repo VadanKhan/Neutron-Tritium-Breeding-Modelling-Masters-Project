@@ -2378,11 +2378,24 @@
     <bcf:citekey order="2" intorder="1">momoshima_tritium_2022</bcf:citekey>
     <bcf:citekey order="3" intorder="1">lee_us-doe_1983</bcf:citekey>
     <bcf:citekey order="4" intorder="1">segantin_optimisation_2020</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">rastrigin1974systems</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">schwefel1981numerical</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">rosenbrock1960automatic</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">gramacy2012cases</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">khan_mphys_sem1</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">hernandez_first_2018</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">stornelli_ultra-fine_2024</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">brown_endfb-viii0_2018</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">romano_openmc_2015</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">kalos_monte_2008</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">kuridan_neutron_2023</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">kuridan_neutron_2023</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">norgett1975proposed</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">nordlund2018improving</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">saha2019application</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">kuridan_neutron_2023</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">kuridan_neutron_2023</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">romano_openmc_2015</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">rastrigin1974systems</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">schwefel1981numerical</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">rosenbrock1960automatic</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">gramacy2012cases</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">khan_mphys_sem1</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

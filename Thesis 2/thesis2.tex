@@ -253,12 +253,13 @@ Start your new document here! \cite{moir_fusion_1982}, \citet{momoshima_tritium_
 
 \section{Theory}
 \subsection{Nuclear Physics}
-\subsubsection{Relevant Nuclear Reactions:}
+\subsubsection{Relevant Nuclear Reactions}
 While lead and beryllium are deliberately selected as primary multipliers due to their high $(n,
-2n)$ cross-sections, structural materials within the blanket also exhibit minor spallation
-properties at fusion energy scales. For instance, the dominant isotope in structural steels like
-Eurofer is iron-56, which possesses a small but non-zero $(n, 2n)$ cross-section for 14.1 MeV
-neutrons. This threshold reaction proceeds as:
+2n)$ cross-sections \citep{hernandez_first_2018}, structural materials within the blanket also
+exhibit minor multiplication properties at fusion energy scales. For instance, the dominant isotope
+in structural steels like EUROFER97 \citep{stornelli_ultra-fine_2024} is \ce{^{56}Fe}, which
+possesses a small but non-zero $(n, 2n)$ cross-section for 14.1 MeV neutrons
+\citep{brown_endfb-viii0_2018}. This threshold reaction proceeds as:
 
 \begin{equation}
 \ce{^{56}Fe + n -> ^{55}Fe + 2n}
@@ -266,13 +267,15 @@ neutrons. This threshold reaction proceeds as:
 \end{equation}
 
 \subsubsection{Neutron Track Length}
-To quantify the neutron population within specific geometric regions of the blanket, Monte Carlo
-transport codes utilise a track-length estimator. Rather than counting individual neutrons crossing
-a boundary, the simulation integrates the total distance traversed by all particle histories within
-a defined cell volume.
+To quantify the neutron population within specific geometric regions of the blanket, stochastic
+Monte Carlo transport codes, such as OpenMC \citep{romano_openmc_2015}, utilise a track-length
+estimator. Rather than counting individual neutrons crossing a boundary, the simulation integrates
+the total distance traversed by all particle histories within a defined cell volume
+\citep{kalos_monte_2008}.
 
 This yields the volume-integrated scalar flux ($\Phi_{V}$), which is expressed in units of
-neutron-centimetres ($\text{n} \cdot \text{cm}$) and is defined as:
+neutron-centimetres ($\text{n} \cdot \text{cm}$) and is formally defined as
+\citep{kuridan_neutron_2023}:
 \begin{equation}
 \Phi_{V} = \int_{V} \int_{E} \int_{4\pi} \psi(\vec{r}, \hat{\Omega}, E) \, d\hat{\Omega} \, dE \, dV = \sum_{i} W_{i} \ell_{i}
 \label{eq:track_length_estimator}
@@ -283,30 +286,80 @@ trajectory through the volume $V$.
 A longer total neutron path length implies a longer residence time within the breeder material,
 which directly increases the probability of nuclear interactions. The macroscopic reaction rate for
 any process, such as elastic scattering, is simply the product of the region's macroscopic
-cross-section ($\Sigma_{x}$) and this volume-integrated flux.
+cross-section ($\Sigma_{x}$) and this volume-integrated flux \citep{kuridan_neutron_2023}.
 
-\subsubsection{Displacements Per Atom (DPA):} DPA is the standard metric used to quantify the extent
-of radiation damage in a crystalline lattice. It represents the average number of times an atom is
-knocked out of its equilibrium lattice site due to radiation bombardment. When a high-energy fusion
-neutron collides with a target nucleus, it transfers kinetic energy, creating a Primary Knock-on
-Atom (PKA). If the transferred energy exceeds the lattice displacement threshold ($E_d$), the PKA is
-ejected and can trigger a secondary collision cascade.
+\subsubsection{Radiation Damage and Displacements Per Atom}
 
-\subsubsection{Damage Energy:} Not all the kinetic energy transferred to the PKA contributes to
-atomic displacements; a significant fraction is lost to inelastic electronic excitation (ionisation)
-as the PKA travels through the lattice. The ``Damage Energy" ($E_a$) represents the specific
-fraction of the transferred energy that is available to cause further elastic nuclear collisions and
-subsequent atomic displacements. In standard models, such as the Norgett-Robinson-Torrens (NRT)
-displacement model, the number of displaced atoms ($N_d$) is directly proportional to the damage
-energy:
+To accurately assess the structural viability of the breeder blanket and first wall, the neutronic
+simulation tallies radiation-induced material degradation. The standard metric for quantifying this
+degradation in a crystalline lattice is Displacements Per Atom (DPA), which represents the average
+number of times an atom is knocked out of its equilibrium lattice site due to radiation bombardment.
+
+When a high-energy fusion neutron collides with a target nucleus, it transfers kinetic energy,
+creating a Primary Knock-on Atom (PKA). If the transferred energy exceeds the lattice displacement
+threshold ($E_d$), the PKA is ejected and can trigger a secondary collision cascade. However, not
+all the kinetic energy transferred to the PKA contributes to atomic displacements; a significant
+fraction is lost to inelastic electronic excitation (ionisation) as the PKA travels through the
+lattice. The specific fraction of the transferred energy available to cause further elastic nuclear
+collisions and subsequent atomic displacements is tallied as the ``Damage Energy'' ($T_d$).
+
+In the standard Norgett-Robinson-Torrens (NRT) displacement model \citep{norgett1975proposed}, the
+raw number of displaced atoms ($N_d$) is directly proportional to this damage energy:
 \begin{equation}
-    N_d = \frac{0.8 E_a}{2 E_d}
+    N_{d,\text{NRT}} = \frac{0.8 T_d}{2 E_d}
     \label{eq:nrt_model}
 \end{equation}
+While the NRT model provides a reliable baseline, it often overestimates the final number of stable
+defects because it does not account for the athermal recombination of atoms that quickly regain
+their original lattice positions. To correct for this phenomenon, the Athermic
+Recombination-Corrected (arc-dpa) model is employed \citep{nordlund2018improving}. This introduces a
+surviving defect fraction, $\xi(T_d)$:
+\begin{equation}
+    N_{d,\text{arc}} = \frac{0.8 T_d}{2 E_d} \cdot \xi(T_d) = \frac{0.8 T_d}{2 E_d} \left( (1-c) \left( \frac{0.8 T_d}{2 E_d} \right)^b + c \right)
+    \label{eq:arcdpa_model}
+\end{equation}
+where $b$ and $c$ are material-specific constants dependent on the displaced atom type. Values for
+the displacement energy ($E_d$) and these constants for critical structural materials, such as iron
+(dominating the structural separators) and zirconium (in the first wall), are established in the
+literature \citep{saha2019application}.
 
-By tracking both the raw damage energy deposited and the resulting DPA, the severity of the neutron
-flux on the structural separators and the first wall can be evaluated.
+Finally, to determine if a material exceeds its irradiation limits over its operational lifetime,
+the total number of displacements must be normalised into DPA per Full Power Year (FPY). The DPA
+received by a structural component over a full-power year is given by:
+\begin{equation}
+    \text{DPA/FPY} = \frac{N_{d,\text{arc}}}{\left(\frac{\rho V \cdot N_A}{\mu}\right)} \cdot \frac{P}{E_f \cdot e} \cdot (60^2 \cdot 24 \cdot 365)
+    \label{eq:dpa_fpy}
+\end{equation}
+Here, the denominator calculates the total number of target atoms within the specific component
+using the material density ($\rho$), volume ($V$), Avogadro's constant ($N_A$), and molar mass
+($\mu$). This is multiplied by the annual neutron emission rate—derived from the reactor thermal
+power ($P$) and the energy released per fusion event ($E_f$, converted to Joules via the elementary
+charge $e$)—scaled to the number of seconds in a calendar year. Tracking this rigorous DPA metric
+allows for an accurate evaluation of the severity of the neutron flux on the structural boundaries.
 
+\subsubsection{Nuclear Heating and Energy Deposition}
+
+In addition to radiation damage, the structural and thermal-hydraulic viability of a blanket design
+is dictated by the spatial distribution of nuclear heating. Energy is deposited into the blanket
+materials through two primary mechanisms: neutron kinetic energy transfer during elastic and
+inelastic scattering, and the absorption of secondary gamma rays ($\gamma$-photons) produced during
+nuclear reactions \citep{kuridan_neutron_2023}.
+
+In neutronic simulations, this localised energy deposition is calculated using Kerma (Kinetic Energy
+Released in Materials) factors. The total nuclear heating rate, $H(\vec{r})$, at a specific spatial
+location is the integral of the local scalar flux $\Phi(\vec{r}, E)$ folded with the macroscopic
+Kerma factor $K(E)$ over all energies \citep{kuridan_neutron_2023}:
+\begin{equation}
+    H(\vec{r}) = \int_{E} \Phi(\vec{r}, E) K(E) \, dE
+    \label{eq:nuclear_heating}
+\end{equation}
+where $K(E)$ accounts for the sum of all microscopic energy-releasing reaction cross-sections
+multiplied by the average energy released per reaction. Accurately mapping this heating distribution
+is critical, as it determines the required mass flow rates and spatial distribution of the coolant
+layers to prevent material melting and ensure efficient thermal energy extraction for the power
+cycle. Advanced Monte Carlo codes, such as OpenMC, directly implement these integrals via
+specialised \texttt{heating} tallies to provide high-fidelity energy deposition profiles
+\citep{romano_openmc_2015}.
 
 \subsection{ML: Bayesian Optimisation}
 
@@ -327,6 +380,43 @@ flux on the structural separators and the first wall can be evaluated.
 \subsection{Neutronic Analysis}
 \label{sec:method_neutronics}
 
+\subsubsection{Spatial Mesh Tallies for Damage and Heating}
+
+While cell-based tallies are sufficient for calculating global parameters like the Tritium Breeding
+Ratio (TBR), evaluating the spatial gradients of structural stress requires high-resolution
+localised data. To generate two-dimensional spatial distributions of nuclear heating and radiation
+damage, regular Cartesian mesh tallies were overlaid onto the Constructive Solid Geometry (CSG) of
+the blanket model.
+
+In OpenMC, a high-resolution 2D bounding box mesh was defined across the poloidal-radial plane of
+the blanket segment. Within this mesh grid, six specific reaction metrics were scored independently
+of the underlying material cells:
+\begin{itemize}
+    \item \textbf{Neutron Flux:} Scored using the \texttt{flux} tally, measuring the
+    volume-integrated track length of all neutrons across the mesh to map the spatial attenuation of
+    the neutron population.
+    \item \textbf{Scattering Density:} Scored using the \texttt{scatter} tally, mapping the density
+    of elastic and inelastic collision events primarily responsible for neutron moderation.
+    \item \textbf{Tritium Production:} Scored using the \texttt{H3-production} tally, identifying
+    the specific geometric regions within the breeder blanket that contribute most heavily to the
+    global Tritium Breeding Ratio (TBR).
+    \item \textbf{Neutron Multiplication:} Scored using the \texttt{multiply} tally, highlighting
+    the precise locations of high-energy threshold reactions (such as $(n, 2n)$ in the multipliers
+    and structural separators) that boost the neutron economy.
+    \item \textbf{Nuclear Heating:} Scored using the standard \texttt{heating} tally, which records
+    the total kinetic energy deposited by both neutrons and secondary photons per source particle.
+    \item \textbf{Damage Energy:} Scored using the \texttt{damage-energy} tally, capturing the
+    specific fraction of kinetic energy available to cause atomic displacements in the structural
+    lattice.
+\end{itemize}
+The raw outputs from these mesh tallies were subsequently processed and visualised as heat maps (see
+Section \ref{sec:layered_blanket_model_res}).
+This approach allows for the precise identification of thermal and structural bottleneck
+regions—such as extreme local heating gradients or rapid displacement damage
+accumulation—particularly within the plasma-facing first wall and the innermost breeder-multiplier
+boundaries.
+
+\subsubsection{Manual Thickness Distribution Analysis}
 To systematically investigate the effect of radial material distribution within the heterogeneous
 blanket, a constrained parametric approach was initially required. The full layered architecture
 contains eight independent geometric variables (comprising four discrete breeder layers and four
@@ -385,6 +475,7 @@ Consequently, the study transitions to the application of Machine Learning algor
 \ref{sec:method_neutronics}) to navigate this complex parameter space efficiently.
 
 \subsection{ML Optimisation}
+\subsubsection{ML Algorithm}
 \label{sec:method_ml}
 To navigate the 8-dimensional design space effectively, Bayesian Optimisation was employed.
 
@@ -434,6 +525,7 @@ local optimum poses a significant risk. Consequently, the UCB acquisition functi
 with a highly explorative $\beta = 1,000,000$ value to ensure robust, global mapping of the design
 space before narrowing in on the optimal layer thicknesses
 
+\subsubsection{Testing, Tuning \& Developing the Optimiser}
 Before applying the Bayesian optimiser to the high-dimensional neutronic blanket model it was
 evaluated against a suite of notoriously difficult mathematical landscapes, including the including
 the Rastrigin \citep{rastrigin1974systems}, Schwefel \citep{schwefel1981numerical}, Rosenbrock
@@ -541,7 +633,7 @@ naturally exhibiting less sensitivity to high-frequency, small-length-scale vari
 ultimately confirms that while the algorithm maps wider global dynamics highly effectively,
 microscopic local peaks represent the primary hazard where the model risks entrapment.
 
-\subsubsection{Final ML Optimisation Studies}
+\subsubsection{ML Optimisation Studies for TBR-Thickness}
 \label{sec:ml_runs}
 To formally bound the Bayesian optimiser against unrealistic values and meshing errors, dimensional
 limits were imposed on the blanket components based on engineering constraints. Discrete breeder
@@ -576,6 +668,7 @@ to meet the remaining thickness budget.
 \section{Results}
 
 \subsection{Layered Blanket Model Neutronics}
+\label{sec:layered_blanket_model_res}
 Building upon the baseline parameter sweeps conducted in the first semester \citep{khan_mphys_sem1},
 this phase of the project transitions the neutronic
 model from a simplified homogeneous approximation to a discrete, heterogeneous layered architecture.
@@ -620,7 +713,6 @@ As the overall thickness of the blanket increases, the TBR contribution from inn
 (Breeder Layers 1 and 2) rise and layer 2 starts to stabilise. Deeper layers (Breeder Layers 3 and
 4) contribute progressively less to the total TBR. The total TBR value quickly saturates at
 $\approx450$mm, and remains constant despite the breeding continuing to shift between layers.
-
 
 To further characterise the layered blanket environment, cross-sectional heatmaps were generated to
 track neutron transport and its structural impacts. Note that the steel separators are included
@@ -733,7 +825,7 @@ Figure \ref{fig:heat_hm}. The nuclear heating profile follows a similar, albeit 
 distribution peaking around the coolant layers. The highest overall concentration of heating is
 observed specifically within the second coolant layer.
 
-\subsection{Manual Thickness Distribution Analysis}
+\subsection{Thickness Distribution Neutronics}
 
 To isolate the neutronic impact of spatial material distribution, the linear gradient parameter
 ($\zeta$) was varied to shift the blanket from a forward-weighted to a rear-weighted geometry (see
@@ -930,9 +1022,9 @@ Ratio (TBR)—against other selected layers.
         \label{fig:proj_c4}
     \end{subfigure}
     \caption{
-        2D contour projections of the final 8D surrogate model from the unconstrained optimisation
-        run. Each panel plots the thickness of the innermost breeder layer (B1) against a secondary
-        layer (B2, B4, C1, or C4), with all non-plotted dimensions held constant at their optimal
+        2D contour projections of the 8D surrogate model from the unconstrained optimisation run.
+        Each panel plots the thickness of the innermost breeder layer (B1) against a secondary layer
+        (B2, B4, C1, or C4), with all non-plotted dimensions held constant at their optimal
         boundary limits.
     }
     \label{fig:surrogate_projections}
