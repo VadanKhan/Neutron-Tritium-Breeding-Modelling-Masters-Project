@@ -19,6 +19,46 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
+    \entry{gramacy2012cases}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=3936341bdeb555b02f870db34aeead95}{%
+           family={Gramacy},
+           familyi={G\bibinitperiod},
+           given={Robert\bibnamedelima B},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=948a4311f89f2f0a539756644f7dd2ba}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Herbert\bibnamedelima KH},
+           giveni={H\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=1}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{cf234d5e9aa83af15f892c3bf0ab4178}
+      \strng{fullhash}{cf234d5e9aa83af15f892c3bf0ab4178}
+      \strng{fullhashraw}{cf234d5e9aa83af15f892c3bf0ab4178}
+      \strng{bibnamehash}{cf234d5e9aa83af15f892c3bf0ab4178}
+      \strng{authorbibnamehash}{cf234d5e9aa83af15f892c3bf0ab4178}
+      \strng{authornamehash}{cf234d5e9aa83af15f892c3bf0ab4178}
+      \strng{authorfullhash}{cf234d5e9aa83af15f892c3bf0ab4178}
+      \strng{authorfullhashraw}{cf234d5e9aa83af15f892c3bf0ab4178}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistics and Computing}
+      \field{number}{3}
+      \field{title}{Cases for the nugget in modeling computer experiments}
+      \field{volume}{22}
+      \field{year}{2012}
+      \field{pages}{713\bibrangedash 722}
+      \range{pages}{10}
+    \endentry
     \entry{khan_mphys_sem1}{thesis}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=6192821c6d34eb16f0f75f561d43cee9}{%
@@ -54,12 +94,12 @@
     \endentry
     \entry{lee_us-doe_1983}{article}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=7fa45c91fd7cc3baa69acc2082af26c3}{%
+        {{un=1,uniquepart=given,hash=7fa45c91fd7cc3baa69acc2082af26c3}{%
            family={Lee},
            familyi={L\bibinitperiod},
            given={Joseph\bibnamedelima D},
            giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
       }
       \strng{namehash}{7fa45c91fd7cc3baa69acc2082af26c3}
       \strng{fullhash}{7fa45c91fd7cc3baa69acc2082af26c3}
@@ -201,6 +241,98 @@
       \verb https://doi.org/10.1093/rpd/ncac002
       \endverb
       \keyw{Environment}
+    \endentry
+    \entry{rastrigin1974systems}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ce70e788adea82bfc6a5a75a14fd82cc}{%
+           family={Rastrigin},
+           familyi={R\bibinitperiod},
+           given={Leonard\bibnamedelima Andreevich},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Mir, Moscow}%
+      }
+      \strng{namehash}{ce70e788adea82bfc6a5a75a14fd82cc}
+      \strng{fullhash}{ce70e788adea82bfc6a5a75a14fd82cc}
+      \strng{fullhashraw}{ce70e788adea82bfc6a5a75a14fd82cc}
+      \strng{bibnamehash}{ce70e788adea82bfc6a5a75a14fd82cc}
+      \strng{authorbibnamehash}{ce70e788adea82bfc6a5a75a14fd82cc}
+      \strng{authornamehash}{ce70e788adea82bfc6a5a75a14fd82cc}
+      \strng{authorfullhash}{ce70e788adea82bfc6a5a75a14fd82cc}
+      \strng{authorfullhashraw}{ce70e788adea82bfc6a5a75a14fd82cc}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Systems of extremal control}
+      \field{year}{1974}
+    \endentry
+    \entry{rosenbrock1960automatic}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3d3b4211b2669546966c2dfe85052619}{%
+           family={Rosenbrock},
+           familyi={R\bibinitperiod},
+           given={Howard\bibnamedelima H},
+           giveni={H\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{3d3b4211b2669546966c2dfe85052619}
+      \strng{fullhash}{3d3b4211b2669546966c2dfe85052619}
+      \strng{fullhashraw}{3d3b4211b2669546966c2dfe85052619}
+      \strng{bibnamehash}{3d3b4211b2669546966c2dfe85052619}
+      \strng{authorbibnamehash}{3d3b4211b2669546966c2dfe85052619}
+      \strng{authornamehash}{3d3b4211b2669546966c2dfe85052619}
+      \strng{authorfullhash}{3d3b4211b2669546966c2dfe85052619}
+      \strng{authorfullhashraw}{3d3b4211b2669546966c2dfe85052619}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Computer Journal}
+      \field{number}{3}
+      \field{title}{An automatic method for finding the greatest or least value of a function}
+      \field{volume}{3}
+      \field{year}{1960}
+      \field{pages}{175\bibrangedash 184}
+      \range{pages}{10}
+    \endentry
+    \entry{schwefel1981numerical}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=67288c65997bce06c3796cdeed061ea6}{%
+           family={Schwefel},
+           familyi={S\bibinitperiod},
+           given={Hans-Paul},
+           giveni={H\bibinithyphendelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons, Inc.}%
+      }
+      \strng{namehash}{67288c65997bce06c3796cdeed061ea6}
+      \strng{fullhash}{67288c65997bce06c3796cdeed061ea6}
+      \strng{fullhashraw}{67288c65997bce06c3796cdeed061ea6}
+      \strng{bibnamehash}{67288c65997bce06c3796cdeed061ea6}
+      \strng{authorbibnamehash}{67288c65997bce06c3796cdeed061ea6}
+      \strng{authornamehash}{67288c65997bce06c3796cdeed061ea6}
+      \strng{authorfullhash}{67288c65997bce06c3796cdeed061ea6}
+      \strng{authorfullhashraw}{67288c65997bce06c3796cdeed061ea6}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Numerical optimization of computer models}
+      \field{year}{1981}
     \endentry
     \entry{segantin_optimisation_2020}{article}{}{}
       \name{author}{5}{}{%

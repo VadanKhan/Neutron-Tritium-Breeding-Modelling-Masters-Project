@@ -253,6 +253,61 @@ Start your new document here! \cite{moir_fusion_1982}, \citet{momoshima_tritium_
 
 \section{Theory}
 \subsection{Nuclear Physics}
+\subsubsection{Relevant Nuclear Reactions:}
+While lead and beryllium are deliberately selected as primary multipliers due to their high $(n,
+2n)$ cross-sections, structural materials within the blanket also exhibit minor spallation
+properties at fusion energy scales. For instance, the dominant isotope in structural steels like
+Eurofer is iron-56, which possesses a small but non-zero $(n, 2n)$ cross-section for 14.1 MeV
+neutrons. This threshold reaction proceeds as:
+
+\begin{equation}
+\ce{^{56}Fe + n -> ^{55}Fe + 2n}
+\label{eq:fe_multiplication}
+\end{equation}
+
+\subsubsection{Neutron Track Length}
+To quantify the neutron population within specific geometric regions of the blanket, Monte Carlo
+transport codes utilise a track-length estimator. Rather than counting individual neutrons crossing
+a boundary, the simulation integrates the total distance traversed by all particle histories within
+a defined cell volume.
+
+This yields the volume-integrated scalar flux ($\Phi_{V}$), which is expressed in units of
+neutron-centimetres ($\text{n} \cdot \text{cm}$) and is defined as:
+\begin{equation}
+\Phi_{V} = \int_{V} \int_{E} \int_{4\pi} \psi(\vec{r}, \hat{\Omega}, E) \, d\hat{\Omega} \, dE \, dV = \sum_{i} W_{i} \ell_{i}
+\label{eq:track_length_estimator}
+\end{equation}
+where $W_{i}$ is the statistical weight of the neutron and $\ell_{i}$ is the path length of its
+trajectory through the volume $V$.
+
+A longer total neutron path length implies a longer residence time within the breeder material,
+which directly increases the probability of nuclear interactions. The macroscopic reaction rate for
+any process, such as elastic scattering, is simply the product of the region's macroscopic
+cross-section ($\Sigma_{x}$) and this volume-integrated flux.
+
+\subsubsection{Displacements Per Atom (DPA):} DPA is the standard metric used to quantify the extent
+of radiation damage in a crystalline lattice. It represents the average number of times an atom is
+knocked out of its equilibrium lattice site due to radiation bombardment. When a high-energy fusion
+neutron collides with a target nucleus, it transfers kinetic energy, creating a Primary Knock-on
+Atom (PKA). If the transferred energy exceeds the lattice displacement threshold ($E_d$), the PKA is
+ejected and can trigger a secondary collision cascade.
+
+\subsubsection{Damage Energy:} Not all the kinetic energy transferred to the PKA contributes to
+atomic displacements; a significant fraction is lost to inelastic electronic excitation (ionisation)
+as the PKA travels through the lattice. The ``Damage Energy" ($E_a$) represents the specific
+fraction of the transferred energy that is available to cause further elastic nuclear collisions and
+subsequent atomic displacements. In standard models, such as the Norgett-Robinson-Torrens (NRT)
+displacement model, the number of displaced atoms ($N_d$) is directly proportional to the damage
+energy:
+\begin{equation}
+    N_d = \frac{0.8 E_a}{2 E_d}
+    \label{eq:nrt_model}
+\end{equation}
+
+By tracking both the raw damage energy deposited and the resulting DPA, the severity of the neutron
+flux on the structural separators and the first wall can be evaluated.
+
+
 \subsection{ML: Bayesian Optimisation}
 
 
@@ -329,7 +384,6 @@ limitations of manual parametrisation in identifying true global optima across a
 Consequently, the study transitions to the application of Machine Learning algorithms (see Section
 \ref{sec:method_neutronics}) to navigate this complex parameter space efficiently.
 
-
 \subsection{ML Optimisation}
 \label{sec:method_ml}
 To navigate the 8-dimensional design space effectively, Bayesian Optimisation was employed.
@@ -380,10 +434,15 @@ local optimum poses a significant risk. Consequently, the UCB acquisition functi
 with a highly explorative $\beta = 1,000,000$ value to ensure robust, global mapping of the design
 space before narrowing in on the optimal layer thicknesses
 
-Before applying the Bayesian optimiser to the high-dimensional neutronic blanket model, it was
-strictly benchmarked against difficult, highly multi-modal mathematical functions (such as the
-Schwefel function). Testing against landscapes where the global optimum is not immediately obvious
-is crucial to verify the algorithm's exploratory robustness.
+Before applying the Bayesian optimiser to the high-dimensional neutronic blanket model it was
+evaluated against a suite of notoriously difficult mathematical landscapes, including the including
+the Rastrigin \citep{rastrigin1974systems}, Schwefel \citep{schwefel1981numerical}, Rosenbrock
+\citep{rosenbrock1960automatic}, and Gramacy \& Lee \citep{gramacy2012cases} functions, to
+rigorously benchmark the optimiser's robustness against stagnation. These functions were selected
+for their diverse pathological traits—such as high-frequency noise, deceptive local minima, and
+non-symmetric valleys. Furthermore, these functions were scaled incrementally from 1D up to 4D to
+ensure the $\epsilon$-greedy and peak-hunting mechanisms remained effective as the search space
+expanded exponentially.
 
 Figure \ref{fig:1d_benchmark} demonstrates a 1D test case. A critical distinction highlighted here
 is the difference between the ``Actual Best Observed" (the highest discrete point successfully
@@ -407,10 +466,11 @@ were introduced:
     using a defined probability parameter to periodically force a completely random sample, ensuring
     exploration in areas the UCB function might otherwise ignore. As the GPR-BO is able to optimise
     local peaks quickly, we set found setting the probability to $\epsilon=0.5$ optimal;
-    particularly because we found that UCB acquisition naturally randomly explored in higher
-    dimensions as the space is much larger.
-    \item \textbf{Duplicate avoidance:} The optimiser was constrained to reject repeated
-    coordinates, forcing continuous spatial exploration and preventing wasted computational
+    particularly because we found that UCB acquisition ``randomly explored" more in higher
+    dimensions as the space gets exponentially larger.
+    \item \textbf{Duplicate avoidance:} Once stuck in a local minimum, the raw BO algorithm would
+    commonly repeatedly test the peak of that minima. Our optimiser was constrained to reject
+    repeated coordinates, forcing continuous spatial exploration and preventing wasted computational
     resources on identical measurements.
     \item \textbf{Multimodal surrogate exploitation:} Every $n_{hunt}$ trials, the algorithm
     actively scans the surrogate model to identify the top five predicted peaks. It then forces a
@@ -460,9 +520,11 @@ were introduced:
     (c) and (d) demonstrate various 2D function tests of the optimiser, where the final mean
     surrogate model of the space and its paired standard deviation is plotted underneath each. (a)
     and (b) used $N=100$ trials whereas (c) and (d) used $N=150$, where this includes $N_{sobol}=50$
-    sobol trials for all. $\beta=1,000,000$ was consistent across all trials. Random injection and
-    multi-modal exploitation was implemented for (c) and (d) with $\epsilon = 0.75$ and
-    $n_{hunt}=10$. (d) includes pink markers to annotate where a secondary ``peak hunt'' is triggered.}
+    sobol trials for all. UCB with $\beta=1,000,000$ was consistent across all trials. Random
+    injection and multi-modal exploitation was implemented for (c) and (d) with $\epsilon = 0.75$
+    and $n_{hunt}=10$. (d) includes pink markers to annotate where a secondary ``peak hunt'' is
+    triggered.
+    }
     \label{fig:ml_benchmarks_4panel}
 \end{figure}
 
@@ -471,7 +533,7 @@ optimiser's robust resistance to local minima. This is evidenced by its successf
 2D hidden peak (Figure \ref{fig:2d_hidden_peak}) and its highly accurate structural reconstruction
 of the complex, multi-modal 2D Schwefel function (Figure \ref{fig:2d_schwefel}).
 
-In fact, the algorithm is arguably over-prepared for the physical breeder blanket investigation,
+In fact, the algorithm was arguably over-prepared for the physical breeder blanket investigation,
 which is expected to feature broader, continuous global physical trends rather than sharp,
 discontinuous mathematical spikes. As illustrated by the Gramacy \& Lee benchmark (Figure
 \ref{fig:2d_gramacy_lee}), the model efficiently isolates and solves for broad overall trends,
@@ -479,6 +541,34 @@ naturally exhibiting less sensitivity to high-frequency, small-length-scale vari
 ultimately confirms that while the algorithm maps wider global dynamics highly effectively,
 microscopic local peaks represent the primary hazard where the model risks entrapment.
 
+\subsubsection{Final ML Optimisation Studies}
+\label{sec:ml_runs}
+To formally bound the Bayesian optimiser against unrealistic values and meshing errors, dimensional
+limits were imposed on the blanket components based on engineering constraints. Discrete breeder
+layers were restricted to thicknesses between 3.0\,cm and 16.0\,cm, while coolant layers were
+bounded between 1.5\,cm and 6.0\,cm.
+
+The model was applied on a parameterised version simulation code, in which it had control over the 8
+breeder thicknesses (4 breeder layers, 4 coolant layers). It was given a single optimisation
+objective, to maximise TBR. Throughout testing, monotonic convergence was often observed (
+corner/boundary solutions experiencing binding constraints were common) when no additional
+constraints were applied. Therefore, in the final set of studies we present several optimisation
+runs in which we applied additional parameter constraints.
+\begin{itemize}
+    \item \textbf{8D:} The model is free to adjust all 8 layers, as long as they are bounded within
+    the provided domains.
+    \item \textbf{8D Constrained:} A strict total blanket thickness budget of 44.0\,cm.
+    \item \textbf{4D Breeder Constrained:} Breeder layers were limited to a collective 32.0\,cm
+    budget, with all coolant layers locked at their 1.5\,cm minimum limit.
+    \item \textbf{4D Coolant Constrained:} Coolant layers were required to meet a minimum collective
+    thickness of 12.0\,cm, with breeder layers locked at 8.0\,cm each.
+\end{itemize}
+
+To establish a useful comparison for the 44.0\,cm budget, a manual ``Binding" configuration was
+generated. Binding constraints / limits here were when we maximised the innermost plasma-facing
+breeder layers to their 16.0\,cm upper bound while minimising the interleaving coolants to 1.5\,cm.
+We would prioritise inner layers and continue radially outward until the minimum bounds were forced
+to meet the remaining thickness budget.
 
 
 
@@ -526,12 +616,10 @@ TBR was tallied layer-by-layer as a function of the total radial blanket thickne
 held constant while the radial depths of the discrete breeder and coolant layers were uniformly
 scaled.
 
-The plot demonstrates that tritium breeding is predominantly concentrated in the region closest to
-the ``front'' (facing the plasma), the inner blanket layers. As the overall thickness of the
-blanket increases, the TBR contribution from innermost layers (Breeder Layers 1 and 2) rise and
-layer 2 starts to stabilise. Deeper layers (Breeder Layers 3 and 4) contribute progressively less to
-the total TBR. The total TBR value quickly saturates at $\approx450$mm, and remains constant despite
-the breeding continuing to shift between layers.
+As the overall thickness of the blanket increases, the TBR contribution from innermost layers
+(Breeder Layers 1 and 2) rise and layer 2 starts to stabilise. Deeper layers (Breeder Layers 3 and
+4) contribute progressively less to the total TBR. The total TBR value quickly saturates at
+$\approx450$mm, and remains constant despite the breeding continuing to shift between layers.
 
 
 To further characterise the layered blanket environment, cross-sectional heatmaps were generated to
@@ -645,100 +733,228 @@ Figure \ref{fig:heat_hm}. The nuclear heating profile follows a similar, albeit 
 distribution peaking around the coolant layers. The highest overall concentration of heating is
 observed specifically within the second coolant layer.
 
-
 \subsection{Manual Thickness Distribution Analysis}
 
-highlighting key results
+To isolate the neutronic impact of spatial material distribution, the linear gradient parameter
+($\zeta$) was varied to shift the blanket from a forward-weighted to a rear-weighted geometry (see
+Figure \ref{fig:zeta_parameter}).
+
 \begin{figure}[h]
     \centering
     % FIRST SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/B1_Zeta_TBR.png}
-        \label{fig:coolant_fraction}
+        \caption{TBR layer contribution}
+        \label{fig:zeta_tbr}
     \end{subfigure}
-    \hfill % This pushes the figures to opposite sides
+    \hfill
     % SECOND SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/B1_Zeta_Mult.png}
-        \label{fig:coolant_moderation}
+        \caption{Neutron multiplication contribution}
+        \label{fig:zeta_mult}
     \end{subfigure}
-    \caption{Lets write a dummy caption here just to test and view how a caption would look and how
-    much impact a long caption would have. It is important when we are testing to account for the
-    impact that these could have as it would lead to bad planning when it comes to spacing. }
-    \label{fig:coolants}
+    \caption{ The impact of the linear gradient parameter ($\zeta$) on key neutronic performance
+        metrics. (a) Tracks the total Tritium Breeding Ratio (TBR) and the individual contributions
+        from discrete breeder layers. (b) Illustrates the total neutron multiplication alongside the
+        specific contributions from the first wall, breeder, coolant, and structural separator
+        layers. Statistical uncertainties are plotted, though error bars are generally smaller than
+        the data markers.
+    }
+    \label{fig:zeta_neutronics}
 \end{figure}
-highlighting key results
+
+As illustrated in Figure \ref{fig:zeta_tbr}, the global Tritium Breeding Ratio (TBR) remains
+relatively stable but exhibits a slight overall decrease as the blanket becomes rear-weighted
+($\zeta > 0$). However spatial distribution of tritium production significantly shifts; inner
+plasma-facing layers dominate breeding in forward-weighted configurations ($\zeta < 0$), whereas
+deeper layers contribute a progressively larger fraction as $\zeta$ increases.
+
+Figure \ref{fig:zeta_mult} shows the neutron multiplication rate across the same domain. The total
+multiplication rate within the blanket decreases monotonically as the geometry shifts rearward.
+Conversely, the minor multiplication contribution from the structural separators slightly increases
+in back-loaded configurations.
+
+In addition to tritium breeding, the structural impact of varying the linear gradient parameter
+($\zeta$) was assessed by tallying the neutron displacement damage (DPA) and the total damage energy
+across the blanket components.
+
 \begin{figure}[h]
     \centering
     % FIRST SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/B1_Zeta_DPA.png}
-        \label{fig:coolant_fraction}
+        \caption{DPA rates across components}
+        \label{fig:zeta_dpa}
     \end{subfigure}
-    \hfill % This pushes the figures to opposite sides
+    \hfill
     % SECOND SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/B1_Zeta_Damage.png}
-        \label{fig:coolant_moderation}
+        \caption{Damage energy deposition}
+        \label{fig:zeta_damage_energy}
     \end{subfigure}
-    \caption{Lets write a dummy caption here just to test and view how a caption would look and how
-    much impact a long caption would have. It is important when we are testing to account for the
-    impact that these could have as it would lead to bad planning when it comes to spacing. }
-    \label{fig:coolants}
+    \caption{ The impact of the linear gradient parameter ($\zeta$) on structural degradation
+        metrics. Figure \ref{fig:zeta_dpa} tracks the Displacements Per Atom (DPA), while Figure
+        \ref{fig:zeta_damage_energy} tracks the damage energy deposited into the first wall and
+        internal structural separators. Statistical uncertainties are plotted, though error bars are
+        generally smaller than the data markers. }
+    \label{fig:zeta_structural_damage}
 \end{figure}
-highlighting key results
+
+As shown in Figure \ref{fig:zeta_dpa}, the global DPA decreases as the design becomes more forward
+weighted ($\zeta < 0$). As the material distribution is shifted rearward ($\zeta > 0$), the
+displacement damage experienced by the structural components steadily increases.
+
+A similar trend is observed in the total damage energy (Figure \ref{fig:zeta_damage_energy}). The
+total damage energy deposited across the blanket is minimised in forward-weighted designs.
+Conversely, as the overall blanket damage energy decreases with negative $\zeta$ values, the
+specific energy deposited directly into the plasma-facing first wall increases.
+
+The volume-integrated flux and resulting scattering events across the blanket components were
+evaluated as a function of the linear gradient parameter ($\zeta$).
+
+Figure \ref{fig:zeta_flux} shows that the total volume-integrated flux within the blanket is
+maximised in forward-weighted configurations ($\zeta < 0$) and decreases as the geometry becomes
+rear-weighted ($\zeta > 0$).
+
+The total scattering density (Figure \ref{fig:zeta_scatter}) exhibits a strongly correlated trend,
+decreasing as $\zeta$ becomes positive. Conversely, both the flux and scattering events localised
+within the structural layers increase in back-loaded configurations.
+
 \begin{figure}[h]
     \centering
     % FIRST SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/B1_Zeta_Flux.png}
-        \label{fig:coolant_fraction}
+        \caption{Volume-integrated flux tally}
+        \label{fig:zeta_flux}
     \end{subfigure}
-    \hfill % This pushes the figures to opposite sides
+    \hfill
     % SECOND SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/B1_Zeta_Scatter.png}
-        \label{fig:coolant_moderation}
+        \caption{Neutron scattering events}
+        \label{fig:zeta_scatter}
     \end{subfigure}
-    \caption{Lets write a dummy caption here just to test and view how a caption would look and how
-    much impact a long caption would have. It is important when we are testing to account for the
-    impact that these could have as it would lead to bad planning when it comes to spacing. }
-    \label{fig:coolants}
+    \caption{ The effect of the linear gradient parameter ($\zeta$) on neutron transport and
+        interaction metrics. Figure \ref{fig:zeta_flux} plots the volume-integrated flux (total
+        neutron path length in $\text{n} \cdot \text{cm}$) across the blanket and its individual
+        components. Figure \ref{fig:zeta_scatter} plots the corresponding number of neutron
+        scattering events. Statistical uncertainties are plotted, though error bars are generally
+        smaller than the data markers.
+        }
+    \label{fig:zeta_flux_scatter}
 \end{figure}
-
 
 \subsection{ML Optimisation Findings}
-highlighting key results
+
+The optimal blanket configurations identified by the Bayesian optimiser under various dimensional
+constraints are presented in Figure \ref{fig:ml_optimisation}.
+
 \begin{figure}[h]
     \centering
-    % You can adjust the width as needed for your document layout
-    \includegraphics[width=1\textwidth]{figures/MLresult_8D_4panel_comp.png}
-    \caption{Lets write a dummy caption here just to test and view how a caption would look and how
-    much impact a long caption would have. It is important when we are testing to account for the
-    impact that these could have as it would lead to bad planning when it comes to spacing.}
-    \label{fig:multiplier}
+    \includegraphics[width=1.0\textwidth]{figures/breeder_blanket_2d_themed.png}
+    \caption{ Radial thickness profiles and resulting global TBR for the ML optimised TBR-thickness
+    studies detailed in section \ref{sec:ml_runs}. Associated TBR values are annotated alongside
+    their standard statistical uncertainty. $N=100$ was used for all except for unconstrained 8D
+    $N=150$, where these include $N_{sobol}=50$. Hyper-parameters $\epsilon=0.5$ and
+    $\beta=1,000,000$ were tuned for these studies. The total runtime for every optimisation was
+    between $1-1.5$hrs, limited by the neutronics code taking 1 minute per iteration, not the ML
+    optimiser.}
+    \label{fig:ml_optimisation}
 \end{figure}
-highlighting key results
+
+The fully unconstrained 8D configuration achieved the highest overall Tritium Breeding Ratio (TBR)
+of 1.4055 by pushing all parameters to their binding limits: maximising all breeder layers to
+16.0\,cm and minimising all coolant layers to 1.5\,cm. The partially constrained 4D configurations
+exhibited lower overall breeding performance. Restricting the optimiser strictly to the maximum
+breeder budget (TBR: 1.2805) or the minimum coolant budget (TBR: 1.2080) resulted in consecutive
+decreases in the maximum achievable breeding ratio. Both were similarly under binding conditions,
+where the 4D coolant study pushed all the coolant thickness as to the outermost layers as much as
+allowed.
+
+When restricted to the 44.0\,cm total thickness budget, the ML model contrastingly identified an
+``Exponentially decaying" configuration where the breeder layer thicknesses decayed radially outward
+(16.0\,cm, 10.5\,cm, 6.9\,cm, and 4.6\,cm), maintaining minimised coolants, yielding a TBR of
+1.3304. By comparison, the manually defined binding constraint configuration yielded an almost
+statistically identical TBR of 1.3303.
+
+
+For clarity in evaluating the high-dimensional space, the discrete blanket layers are denoted
+sequentially from the plasma-facing first wall outwards: breeder layers are labelled B1 through B4,
+and their adjacent coolant layers are labelled C1 through C4.
+
+To visualise the parameter landscape, 2D projections of the unconstrained 8D surrogate model were
+generated (Figure \ref{fig:surrogate_projections}). These slices plot the thickness of the innermost
+breeder layer (B1)—which exhibited the strongest single-variable influence on the Tritium Breeding
+Ratio (TBR)—against other selected layers.
+
 \begin{figure}[h]
     \centering
-    % You can adjust the width as needed for your document layout
-    \includegraphics[width=0.95\textwidth]{figures/breeder_blanket_2d_themed.png}
-    \caption{Lets write a dummy caption here just to test and view how a caption would look and how
-    much impact a long caption would have. It is important when we are testing to account for the
-    impact that these could have as it would lead to bad planning when it comes to spacing.}
-    \label{fig:multiplier}
+% --- TOP ROW ---
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/MLresult_8D_B1B2_prepped.png} % Update filename
+        \caption{B1 vs. B2 thickness}
+        \label{fig:proj_b2}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/MLresult_8D_B1B4_prepped.png} % Update filename
+        \caption{B1 vs. B4 thickness}
+        \label{fig:proj_b4}
+    \end{subfigure}
+
+    \vspace{0.5cm} % Adds a little breathing room between the rows
+
+    % --- BOTTOM ROW ---
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/MLresult_8D_B1C1_prepped.png} % Update filename
+        \caption{B1 vs. C1 thickness}
+        \label{fig:proj_c1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/MLresult_8D_B1C4_prepped.png} % Update filename
+        \caption{B1 vs. C4 thickness}
+        \label{fig:proj_c4}
+    \end{subfigure}
+    \caption{
+        2D contour projections of the final 8D surrogate model from the unconstrained optimisation
+        run. Each panel plots the thickness of the innermost breeder layer (B1) against a secondary
+        layer (B2, B4, C1, or C4), with all non-plotted dimensions held constant at their optimal
+        boundary limits.
+    }
+    \label{fig:surrogate_projections}
 \end{figure}
-highlighting key results
+
+
+The gradients within these projections directly illustrate parameter sensitivity. Highly
+slanted contour lines, such as those mapping B1 against the secondary breeder (B2, Figure
+\ref{fig:proj_b2}) or the inner coolant (C1, Figure \ref{fig:proj_c1}), indicate that the TBR is
+sensitive to variations in both plotted variables. Here the predicted maximum TBR consistently
+isolates at the boundary corners, favouring maximised breeder thicknesses and minimised coolant
+thicknesses.
+
+Conversely, projections mapping B1 against the outermost layers, such as B4 (Figure
+\ref{fig:proj_b4}) and C4 (Figure \ref{fig:proj_c4}), display nearly vertical contour lines. This
+indicates that the global TBR is highly insensitive to dimensional changes in the outermost blanket
+layers compared to the innermost layers.
 
 
 \section{Discussion}
-
+Figure \ref{fig:layered_model_neutronics} demonstrates that tritium breeding is predominantly
+concentrated in the region closest to the ``front'' (facing the plasma), the inner blanket layers.
 
 
 

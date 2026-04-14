@@ -1,18 +1,23 @@
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {section}{\numberline {2}Theory}{1}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Nuclear Physics}{1}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}ML: Bayesian Optimisation}{1}{subsection.2.2}%
-\contentsline {section}{\numberline {3}Literature Review}{1}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Breeder Blankets}{1}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Surrogate Modelling in Science}{1}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}ML Optimisation in Science }{1}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Methodology}{1}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Neutronic Analysis}{1}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}ML Optimisation}{1}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Results}{4}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Layered Blanket Model Neutronics}{4}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Manual Thickness Distribution Analysis}{5}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}ML Optimisation Findings}{5}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Discussion}{5}{section.6}%
-\contentsline {section}{\numberline {7}Conclusion}{5}{section.7}%
-\contentsline {section}{References}{5}{section.7}%
+\contentsline {subsubsection}{\numberline {2.1.1}Relevant Nuclear Reactions:}{1}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Neutron Track Length}{1}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Displacements Per Atom (DPA):}{1}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.4}Damage Energy:}{1}{subsubsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.2}ML: Bayesian Optimisation}{2}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Literature Review}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Breeder Blankets}{2}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Surrogate Modelling in Science}{2}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}ML Optimisation in Science }{2}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Methodology}{2}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Neutronic Analysis}{2}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}ML Optimisation}{2}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Final ML Optimisation Studies}{5}{subsubsection.4.2.1}%
+\contentsline {section}{\numberline {5}Results}{5}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Layered Blanket Model Neutronics}{5}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Manual Thickness Distribution Analysis}{6}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}ML Optimisation Findings}{7}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Discussion}{8}{section.6}%
+\contentsline {section}{\numberline {7}Conclusion}{8}{section.7}%
+\contentsline {section}{References}{8}{section.7}%
