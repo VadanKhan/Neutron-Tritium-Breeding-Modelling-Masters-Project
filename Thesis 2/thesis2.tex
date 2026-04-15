@@ -254,11 +254,11 @@ Start your new document here! \cite{moir_fusion_1982}, \citet{momoshima_tritium_
 \section{Theory}
 \subsection{Nuclear Physics}
 \subsubsection{Relevant Nuclear Reactions}
-While lead and beryllium are deliberately selected as primary multipliers due to their high $(n,
-2n)$ cross-sections \citep{hernandez_first_2018}, structural materials within the blanket also
+While lead and beryllium are deliberately selected as primary multipliers due to their high \ce{(n,
+2n)} cross-sections \citep{hernandez_first_2018}, structural materials within the blanket also
 exhibit minor multiplication properties at fusion energy scales. For instance, the dominant isotope
 in structural steels like EUROFER97 \citep{stornelli_ultra-fine_2024} is \ce{^{56}Fe}, which
-possesses a small but non-zero $(n, 2n)$ cross-section for 14.1 MeV neutrons
+possesses a small but non-zero \ce{(n, 2n)} cross-section for 14.1 MeV neutrons
 \citep{brown_endfb-viii0_2018}. This threshold reaction proceeds as:
 
 \begin{equation}
@@ -366,8 +366,10 @@ specialised \texttt{heating} tallies to provide high-fidelity energy deposition 
 
 
 \section{Literature Review}
+\subsection{Tritium Breeding in Fusion}
 
-\subsection{Breeder Blankets}
+\subsection{Breeder Blanket Studies}
+\label{sec:breeder_blanket_studies}
 
 \subsection{Surrogate Modelling in Science}
 
@@ -376,21 +378,84 @@ specialised \texttt{heating} tallies to provide high-fidelity energy deposition 
 
 
 \section{Methodology}
+\subsection{Simulation Pipeline Summary}
+The neutronic performance of the breeder blanket geometries is evaluated using a coupled
+computational workflow. The 3D parametric CAD models of the tokamak reactor are generated using the
+Python-based framework Paramak \citep{shimwell_paramak_2021}. To ensure computational efficiency
+while maintaining physical accuracy, the simulation domain comprises a $90^\circ$ toroidal sector
+with periodic boundary conditions applied to the bounding surfaces. These Constructive Solid
+Geometry (CSG) geometries are exported as Direct Accelerated Geometry Monte Carlo (DAGMC)
+unstructured meshes, which allow for efficient ray-tracing directly on the CAD surface
+representations without the need for voxelisation. Stochastic neutron transport simulations are
+subsequently executed upon these meshes using OpenMC \citep{romano_openmc_2015}. To ensure
+statistical robustness and minimise relative error below $1\%$, simulations utilised high particle
+counts ranging between $10^5$ and $10^7$ neutrons per run.
+
+Based on the optimal configurations identified in the previous semester, the material definitions
+for this architecture are explicitly fixed: the first wall utilises a zirconium alloy, the breeder
+is a lithium-lead eutectic (\ce{Li_{17}Pb_{83}}), and the coolant is pressurised water (modelled at
+$600\text{ K}$ and $15.5\text{ MPa}$). EUROFER97 was selected for the internal structural
+separators, rear wall, and central solenoid, reflecting industry standards for robust,
+reduced-activation ferritic-martensitic steels. Furthermore, to more accurately evaluate the spatial
+distribution of interactions within this refined geometry, the 14.1~MeV Muir-distributed ring source
+utilised in the previous study has been updated to a uniform volumetric body source.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1.0\textwidth]{figures/reactor_diagram.png}
+  \caption{
+    Representative geometry of the simplified Tokamak model generated via Paramak. The simulation
+    domain comprises a 90° revolution with periodic boundary conditions. Included is an example
+    breakdown of the layered blanket, only the coolant and breeder thicknesses are adjusted
+    in this study.
+  }
+  \label{fig:reactor_diagram}
+\end{figure}
+
+A comprehensive exposition of this foundational workflow was established in the first stage of this
+study \citep{khan_mphys_sem1}. Building upon those established homogeneous baseline models, this
+current study transitions to a discrete, heterogeneous layered blanket architecture. We use 4
+breeder layers and 4 coolant layers, with separators between each breeder-coolant interface (see
+Figure~\ref{fig:reactor_diagram}). This addresses the core unrealistic homogenous approximation of
+that study, establishing a key step towards more realistic breeder blanket module requirements and
+challenges. Note that other studies have simulated detailed models with specific coolant piping
+interlaced in the blanket (see Section \ref{sec:breeder_blanket_studies}). Paramak's parameterised
+framework limits the level of heterogeneity to systems with azimuthal symmetry (such as our layered
+model). The layered model is still an approximation compared to specific real implementations. We
+proceed as there are key advantages to this approach:
+\begin{itemize}
+    \item \textbf{Conservative heterogeneity:} Applying this model allows for the majority of
+    heterogeneous effects to be modelled. Importantly, in real implementations streaming effects
+    allow some neutrons to bypass the interactions between coolants and separators. The layered
+    model prevents this, forcing heterogenous material paths. Given heterogeneity negatively
+    affects performance (see Figure \ref{fig:tbr_comparison}), the layered model notably becomes a
+    conservative estimate of blanket performance. In an immature field where specific designs are
+    undecided, a conservative study can be informative.
+    \item \textbf{Parametrisation:} A layered model is easily parameterised into a set of thickness
+    variables for each layer. Comprehensively exploring and optimising even this 8-layer model
+    required complex techniques that became a majority component of this project (see Section
+    \ref{sec:ml_approach}). Using a more detailed model necessitates a greater number of parameters
+    and thus exploring higher dimensional spaces. This is non-trivial to optimise, it is
+    instructional to begin with a lower dimensional parameterised model before scaling.
+\end{itemize}
+
 
 \subsection{Neutronic Analysis}
 \label{sec:method_neutronics}
 
-\subsubsection{Spatial Mesh Tallies for Damage and Heating}
+\subsubsection{Mechanistic Analysis of the Layered Blanket}
+Initial parametric sweeps were conducted to establish a baseline for the heterogeneous architecture.
+We also built upon explorations in the first stage of this project \citep{khan_mphys_sem1} by
+including tallying of individual layers to understand which were contributing and impactful to
+global results (see Section \ref{sec:layered_blanket_model_res}).
 
-While cell-based tallies are sufficient for calculating global parameters like the Tritium Breeding
-Ratio (TBR), evaluating the spatial gradients of structural stress requires high-resolution
-localised data. To generate two-dimensional spatial distributions of nuclear heating and radiation
-damage, regular Cartesian mesh tallies were overlaid onto the Constructive Solid Geometry (CSG) of
-the blanket model.
+Building on this further, mechanistic understanding of performance necessitates localised analysis
+of several neutron transport parameters throughout the reactor.  To generate two-dimensional spatial
+distributions of nuclear heating and radiation damage, regular Cartesian mesh tallies were overlaid
+onto the geometry of the blanket model.
 
 In OpenMC, a high-resolution 2D bounding box mesh was defined across the poloidal-radial plane of
-the blanket segment. Within this mesh grid, six specific reaction metrics were scored independently
-of the underlying material cells:
+the blanket segment. Within this mesh grid, six specific reaction metrics were scored independently:
 \begin{itemize}
     \item \textbf{Neutron Flux:} Scored using the \texttt{flux} tally, measuring the
     volume-integrated track length of all neutrons across the mesh to map the spatial attenuation of
@@ -401,7 +466,7 @@ of the underlying material cells:
     the specific geometric regions within the breeder blanket that contribute most heavily to the
     global Tritium Breeding Ratio (TBR).
     \item \textbf{Neutron Multiplication:} Scored using the \texttt{multiply} tally, highlighting
-    the precise locations of high-energy threshold reactions (such as $(n, 2n)$ in the multipliers
+    the precise locations of high-energy threshold reactions (such as \ce{(n, 2n)} in the multipliers
     and structural separators) that boost the neutron economy.
     \item \textbf{Nuclear Heating:} Scored using the standard \texttt{heating} tally, which records
     the total kinetic energy deposited by both neutrons and secondary photons per source particle.
@@ -411,10 +476,6 @@ of the underlying material cells:
 \end{itemize}
 The raw outputs from these mesh tallies were subsequently processed and visualised as heat maps (see
 Section \ref{sec:layered_blanket_model_res}).
-This approach allows for the precise identification of thermal and structural bottleneck
-regions—such as extreme local heating gradients or rapid displacement damage
-accumulation—particularly within the plasma-facing first wall and the innermost breeder-multiplier
-boundaries.
 
 \subsubsection{Manual Thickness Distribution Analysis}
 To systematically investigate the effect of radial material distribution within the heterogeneous
@@ -431,7 +492,7 @@ spatial trends.
 \begin{figure}[h]
     \centering
     % FIRST SUBFIGURE
-    \begin{subfigure}[t]{0.275\textwidth}
+    \begin{subfigure}[t]{0.2\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/forward_layers_3.png}
         \caption{Forward-weighted ($\zeta < 0$)}
@@ -439,7 +500,7 @@ spatial trends.
     \end{subfigure}
     \hfill
     % SECOND SUBFIGURE
-    \begin{subfigure}[t]{0.28\textwidth}
+    \begin{subfigure}[t]{0.205\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/base_layers.png}
         \caption{Uniform/Baseline ($\zeta = 0$)}
@@ -447,7 +508,7 @@ spatial trends.
     \end{subfigure}
     \hfill
     % THIRD SUBFIGURE
-    \begin{subfigure}[t]{0.275\textwidth}
+    \begin{subfigure}[t]{0.2\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/rear_layers_3.png}
         \caption{Rear-weighted ($\zeta > 0$)}
@@ -462,11 +523,6 @@ spatial trends.
     \label{fig:zeta_parameter}
 \end{figure}
 
-As illustrated in Figure \ref{fig:zeta_parameter}, a negative gradient ($\zeta < 0$) creates a
-forward-weighted geometry, effectively ``front-loading'' the material volume toward the
-plasma-facing first wall. Conversely, a positive gradient ($\zeta > 0$) results in a rear-weighted,
-``back-loaded'' distribution, whilst $\zeta = 0$ represents the baseline uniform distribution.
-
 While this constrained, single-variable approach yields valuable insights into the fundamental
 physics of the blanket, it inherently restricts the exploration of the broader design space. The
 limitations of manual parametrisation in identifying true global optima across an unconstrained
@@ -475,6 +531,7 @@ Consequently, the study transitions to the application of Machine Learning algor
 \ref{sec:method_neutronics}) to navigate this complex parameter space efficiently.
 
 \subsection{ML Optimisation}
+\label{sec:ml_approach}
 \subsubsection{ML Algorithm}
 \label{sec:method_ml}
 To navigate the 8-dimensional design space effectively, Bayesian Optimisation was employed.
@@ -532,18 +589,15 @@ the Rastrigin \citep{rastrigin1974systems}, Schwefel \citep{schwefel1981numerica
 \citep{rosenbrock1960automatic}, and Gramacy \& Lee \citep{gramacy2012cases} functions, to
 rigorously benchmark the optimiser's robustness against stagnation. These functions were selected
 for their diverse pathological traits—such as high-frequency noise, deceptive local minima, and
-non-symmetric valleys. Furthermore, these functions were scaled incrementally from 1D up to 4D to
-ensure the $\epsilon$-greedy and peak-hunting mechanisms remained effective as the search space
-expanded exponentially.
+non-symmetric valleys. These functions were scaled incrementally from 1D up to 4D to ensure the
+$\epsilon$-greedy and peak-hunting mechanisms remained effective as the search space expanded
+exponentially.
 
 Figure \ref{fig:1d_benchmark} demonstrates a 1D test case. A critical distinction highlighted here
 is the difference between the ``Actual Best Observed" (the highest discrete point successfully
 sampled during the simulation) and the ``Best Model Prediction" (the theoretical peak calculated by
-the surrogate model).
-
-While finding the absolute optimal TBR is the primary engineering goal, the full continuous
-surrogate model is arguably the most valuable output for a physicist. Reconstructing the entire
-parameter space, rather than just isolating a single maximum, provides deep physical intuition
+the surrogate model). While finding the absolute optimal TBR is the primary engineering goal, the full continuous
+surrogate model is arguably the most valuable output for a physicist, providing  physical intuition
 regarding how variables interact across the entire domain.
 
 While 1D tests validate basic functionality, scaling the benchmark to 2D surfaces (Figure
@@ -625,7 +679,7 @@ optimiser's robust resistance to local minima. This is evidenced by its successf
 2D hidden peak (Figure \ref{fig:2d_hidden_peak}) and its highly accurate structural reconstruction
 of the complex, multi-modal 2D Schwefel function (Figure \ref{fig:2d_schwefel}).
 
-In fact, the algorithm was arguably over-prepared for the physical breeder blanket investigation,
+The algorithm was potentially over-prepared for the physical breeder blanket investigation,
 which is expected to feature broader, continuous global physical trends rather than sharp,
 discontinuous mathematical spikes. As illustrated by the Gramacy \& Lee benchmark (Figure
 \ref{fig:2d_gramacy_lee}), the model efficiently isolates and solves for broad overall trends,
@@ -954,7 +1008,7 @@ constraints are presented in Figure \ref{fig:ml_optimisation}.
     \centering
     \includegraphics[width=1.0\textwidth]{figures/breeder_blanket_2d_themed.png}
     \caption{ Radial thickness profiles and resulting global TBR for the ML optimised TBR-thickness
-    studies detailed in section \ref{sec:ml_runs}. Associated TBR values are annotated alongside
+    studies detailed in Section \ref{sec:ml_runs}. Associated TBR values are annotated alongside
     their standard statistical uncertainty. $N=100$ was used for all except for unconstrained 8D
     $N=150$, where these include $N_{sobol}=50$. Hyper-parameters $\epsilon=0.5$ and
     $\beta=1,000,000$ were tuned for these studies. The total runtime for every optimisation was
