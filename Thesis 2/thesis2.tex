@@ -16,28 +16,15 @@
 \usepackage{mhchem}
 \usepackage{booktabs}
 
-% --- Bibliography Setup (Vancouver Style) ---
-% \usepackage[
-%     backend=biber,
-%     style=vancouver,
-%     doi=true,
-%     url=false,
-%     isbn=false,
-%     eprint=false,
-%     maxbibnames=6,
-%     minbibnames=6
-% ]{biblatex}
+% --- Bibliography Setup (Vancouver Style) --- \usepackage[ backend=biber, style=vancouver,
+% doi=true, url=false, isbn=false, eprint=false, maxbibnames=6, minbibnames=6 ]{biblatex}
 
 % \DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,unpublished]{title}{#1}
-% \DeclareFieldFormat{doi}{\href{https://doi.org/#1}{\textsc{[doi]}}}
-% \renewbibmacro{in:}{}
-% \DeclareDelimFormat*{finalnamedelim}{\addcomma\addspace}
-% \renewbibmacro*{date}{\printdate}
-% \DefineBibliographyExtras{english}{%
-%   \protected\def\mkbibdatelong#1#2#3{%
-%     \thefield{#1}% YEAR
-%     \iffieldundef{#2}{}{\addcomma\addspace\mkbibmonth{\thefield{#2}}}% MONTH
-%     \iffieldundef{#3}{}{\addcomma\addspace\stripzeros{\thefield{#3}}}% DAY
+% \DeclareFieldFormat{doi}{\href{https://doi.org/#1}{\textsc{[doi]}}} \renewbibmacro{in:}{}
+% \DeclareDelimFormat*{finalnamedelim}{\addcomma\addspace} \renewbibmacro*{date}{\printdate}
+% \DefineBibliographyExtras{english}{% \protected\def\mkbibdatelong#1#2#3{% \thefield{#1}% YEAR
+% \iffieldundef{#2}{}{\addcomma\addspace\mkbibmonth{\thefield{#2}}}% MONTH
+% \iffieldundef{#3}{}{\addcomma\addspace\stripzeros{\thefield{#3}}}% DAY
 %   }%
 % }
 
@@ -48,28 +35,17 @@
 % Load csquotes to enforce British single quotation marks for article titles
 \usepackage[style=british]{csquotes}
 
-\usepackage[
-    backend=biber,
-    style=authoryear,
-    natbib=true,
-    maxcitenames=3,     % In-text: Up to 3 authors. 4+ uses et al.
-    mincitenames=1,
-    maxbibnames=3,      % NEW: Reference List: Up to 3 authors.
+\usepackage[ backend=biber, style=authoryear, natbib=true, maxcitenames=3,
+    % In-text: Up to 3 authors. 4+ uses et al.
+    mincitenames=1, maxbibnames=3,      % NEW: Reference List: Up to 3 authors.
     minbibnames=1,      % NEW: Reference List: If 4+, cuts down to 1 author + et al.
-    giveninits=true,
-    uniquelist=false,
-    urldate=long,
-    date=year,
-    doi=true,
-    url=true,
-    isbn=false,
-    eprint=false
-]{biblatex}
+    giveninits=true, uniquelist=false, urldate=long, date=year, doi=true, url=true, isbn=false,
+    eprint=false ]{biblatex}
 
 % --- Custom Formatting Hacks for Manchester Style ---
 
-% 1. Enforce the "DOI OR URL" rule
-% If a DOI is present, this clears the URL and Access Date so they don't print
+% 1. Enforce the "DOI OR URL" rule If a DOI is present, this clears the URL and Access Date so they
+%    don't print
 \AtEveryBibitem{%
   \iffieldundef{doi}{}{%
     \clearfield{url}%
@@ -80,10 +56,7 @@
 }
 
 % 2. Globally rename headings and strings
-\DefineBibliographyStrings{english}{
-  bibliography = {References},
-  urlseen = {Accessed\addcolon}
-}
+\DefineBibliographyStrings{english}{ bibliography = {References}, urlseen = {Accessed\addcolon} }
 
 % 3. Format URLs to match "Available at: URL"
 \DeclareFieldFormat{url}{Available at\addcolon\space\url{#1}}
@@ -95,8 +68,8 @@
 \DeclareFieldFormat{doi}{\href{https://doi.org/#1}{\textsc{[doi]}}}
 
 % % 6. Use an ampersand (&) before the final author in the reference list
-% \DeclareDelimFormat[bib,biblist]{finalnamedelim}{\space\&\space}
-% 6alt. Use an 'and' before the final author in the reference list
+% \DeclareDelimFormat[bib,biblist]{finalnamedelim}{\space\&\space} 6alt. Use an 'and' before the
+% final author in the reference list
 \DeclareDelimFormat[bib,biblist]{finalnamedelim}{\addspace and\space}
 
 % --- NEW: Deep Macro Overrides for Precise Punctuation ---
@@ -113,9 +86,7 @@
   \usebibmacro{journal}%
   \setunit*{\addcomma\space}% <--- This forces the comma before the volume
   \iffieldundef{series}
-    {}
-    {\newunit
-     \printfield{series}%
+    {} {\newunit \printfield{series}%
      \setunit{\addspace}}%
   \usebibmacro{volume+number+eid}%
   \setunit{\addspace}%
@@ -155,31 +126,19 @@
 \setcounter{secnumdepth}{4}
 
 \titleformat{\section}
-  {\normalfont\large\bfseries\raggedright}
-  {\thesection.}
-  {1em}
-  {\MakeUppercase}
+  {\normalfont\large\bfseries\raggedright} {\thesection.} {1em} {\MakeUppercase}
 \titlespacing*{\section}{0pt}{3ex plus 1ex minus .2ex}{2ex plus .2ex}
 
 \titleformat{\subsection}
-  {\normalfont\normalsize\bfseries}
-  {\thesubsection.}
-  {1em}
-  {}
+  {\normalfont\normalsize\bfseries} {\thesubsection.} {1em} {}
 \titlespacing*{\subsection}{0pt}{2.5ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 \titleformat{\subsubsection}
-  {\small\bfseries\itshape}
-  {\thesubsubsection.}
-  {1em}
-  {}
+  {\small\bfseries\itshape} {\thesubsubsection.} {1em} {}
 \titlespacing*{\subsubsection}{0pt}{2ex plus 0.5ex minus .2ex}{1ex plus .2ex}
 
 \titleformat{\paragraph}
-  {\small\itshape}
-  {\theparagraph.}
-  {1em}
-  {}
+  {\small\itshape} {\theparagraph.} {1em} {}
 \titlespacing*{\paragraph}{0pt}{1.5ex plus 0.2ex}{1ex}
 
 % --- General Paragraph Formatting ---
@@ -208,8 +167,7 @@
     \vspace{3em} % Add space after the title
 
     % --- Manually formatted author ---
-    {\large Vadan Khan (10823198)\par}
-    {In collaboration with Rhodri Peters \par}
+    {\large Vadan Khan (10823198)\par} {In collaboration with Rhodri Peters \par}
     \vspace{0.5em}
     {4th Year MPhys, Department of Physics and Astronomy, University of Manchester \par}
 
@@ -220,8 +178,7 @@
 
     \vfill % Pushes the abstract to the lower half of the page
 
-    % --- Abstract ---
-    % Use a minipage to constrain the width of the abstract
+    % --- Abstract --- Use a minipage to constrain the width of the abstract
     \begin{minipage}{1\textwidth}
     \begin{abstract}
     meow
@@ -233,8 +190,7 @@
 \end{titlepage}
 % --- title page ---
 
-% --- Contents Page Setup ---
-% --- Contents Page Setup ---
+% --- Contents Page Setup --- --- Contents Page Setup ---
 \clearpage
 \pagestyle{empty} % Globally switches off page numbers
 \tableofcontents
@@ -403,12 +359,10 @@ utilised in the previous study has been updated to a uniform volumetric body sou
 \begin{figure}[h]
   \centering
   \includegraphics[width=1.0\textwidth]{figures/reactor_diagram.png}
-  \caption{
-    Representative geometry of the simplified Tokamak model generated via Paramak. The simulation
-    domain comprises a 90° revolution with periodic boundary conditions. Included is an example
-    breakdown of the layered blanket, only the coolant and breeder thicknesses are adjusted
-    in this study.
-  }
+  \caption{ Representative geometry of the simplified Tokamak model generated via Paramak. The
+    simulation domain comprises a 90° revolution with periodic boundary conditions. Included is an
+    example breakdown of the layered blanket, only the coolant and breeder thicknesses are adjusted
+    in this study. }
   \label{fig:reactor_diagram}
 \end{figure}
 
@@ -427,8 +381,8 @@ proceed as there are key advantages to this approach:
     \item \textbf{Conservative heterogeneity:} Applying this model allows for the majority of
     heterogeneous effects to be modelled. Importantly, in real implementations streaming effects
     allow some neutrons to bypass the interactions between coolants and separators. The layered
-    model prevents this, forcing heterogenous material paths. Given heterogeneity negatively
-    affects performance (see Figure \ref{fig:tbr_comparison}), the layered model notably becomes a
+    model prevents this, forcing heterogenous material paths. Given heterogeneity negatively affects
+    performance (see Figure \ref{fig:tbr_comparison}), the layered model notably becomes a
     conservative estimate of blanket performance. In an immature field where specific designs are
     undecided, a conservative study can be informative.
     \item \textbf{Parametrisation:} A layered model is easily parameterised into a set of thickness
@@ -464,10 +418,10 @@ the blanket segment. Within this mesh grid, six specific reaction metrics were s
     of elastic and inelastic collision events primarily responsible for neutron moderation.
     \item \textbf{Tritium Production:} Scored using the \texttt{H3-production} tally, identifying
     the specific geometric regions within the breeder blanket that contribute most heavily to the
-    global Tritium Breeding Ratio (TBR).
+    global TBR.
     \item \textbf{Neutron Multiplication:} Scored using the \texttt{multiply} tally, highlighting
-    the precise locations of high-energy threshold reactions (such as \ce{(n, 2n)} in the multipliers
-    and structural separators) that boost the neutron economy.
+    the precise locations of high-energy threshold reactions (such as \ce{(n, 2n)} in the
+    multipliers and structural separators) that boost the neutron economy.
     \item \textbf{Nuclear Heating:} Scored using the standard \texttt{heating} tally, which records
     the total kinetic energy deposited by both neutrons and secondary photons per source particle.
     \item \textbf{Damage Energy:} Scored using the \texttt{damage-energy} tally, capturing the
@@ -532,15 +486,33 @@ Consequently, the study transitions to the application of Machine Learning algor
 
 \subsection{ML Optimisation}
 \label{sec:ml_approach}
+
 \subsubsection{ML Algorithm}
 \label{sec:method_ml}
-To navigate the 8-dimensional design space effectively, Bayesian Optimisation was employed.
+To navigate the computationally expensive 8-dimensional design space effectively, Single-Objective
+Bayesian Optimisation (BO) was employed. The optimisation pipeline was developed using the Ax
+framework, leveraging BoTorch and PyTorch as the underlying computational engines. A Gaussian
+Process Regressor (GPR) was utilised as the surrogate model. This scalable, $N$-dimensional
+architecture is highly sample-efficient, capable of converging upon optimal configurations within
+$N<150$ trials (tested in spaces up to 8 dimensions). This sample efficiency makes it ideal for
+optimising computationally intensive physical simulations. Furthermore, the objective function and
+hyperparameters are designed to be modularly configurable, with automated generation of surrogate
+parameter surfaces and optimisation progress diagnostics.
+
+The objective function was defined by wrapping the discrete parametric OpenMC neutronics simulation
+into an automated evaluation loop. This function takes the eight blanket layer thicknesses as
+continuous input parameters (bounded by defined physical engineering constraints) and returns the
+global TBR as the single scalar objective to be maximised. The computational overhead of the ML
+solver was negligible ($\approx20$\,s for $N=150$ trials); thus, the total runtime was bounded
+entirely by the neutronics simulation, which required $\approx60$\,s per trial on a standard desktop
+workstation. Because the optimiser was constrained to a maximum of $N=150$ trials, all ML
+optimisation studies were completed in under 3 hours. The complete source code developed for this
+pipeline and complete optimisation results is publicly available \citep{khan2026fusionmlcode}.
 
 A critical component of this framework is the selection and tuning of the acquisition function,
 which dictates how the algorithm samples new data points. For this study, the Upper Confidence Bound
 (UCB) acquisition function was selected over Expected Improvement (EI). Unlike EI, UCB provides
 explicit, scalar control over the exploration-exploitation trade-off via the hyperparameter $\beta$.
-
 Properly tuning this parameter is vital for a high-dimensional physical system where multiple local
 maxima may exist. Figure \ref{fig:ucb_tuning} illustrates a 2D projection of the acquisition utility
 landscape used to benchmark the model's behaviour.
@@ -596,9 +568,9 @@ exponentially.
 Figure \ref{fig:1d_benchmark} demonstrates a 1D test case. A critical distinction highlighted here
 is the difference between the ``Actual Best Observed" (the highest discrete point successfully
 sampled during the simulation) and the ``Best Model Prediction" (the theoretical peak calculated by
-the surrogate model). While finding the absolute optimal TBR is the primary engineering goal, the full continuous
-surrogate model is arguably the most valuable output for a physicist, providing  physical intuition
-regarding how variables interact across the entire domain.
+the surrogate model). While finding the absolute optimal TBR is the primary engineering goal, the
+full continuous surrogate model is arguably the most valuable output for a physicist, providing
+physical intuition regarding how variables interact across the entire domain.
 
 While 1D tests validate basic functionality, scaling the benchmark to 2D surfaces (Figure
 \ref{fig:2d_gramacy_lee}, \ref{fig:2d_hidden_peak}, \ref{fig:2d_schwefel}) is necessary to ensure
@@ -669,8 +641,7 @@ were introduced:
     sobol trials for all. UCB with $\beta=1,000,000$ was consistent across all trials. Random
     injection and multi-modal exploitation was implemented for (c) and (d) with $\epsilon = 0.75$
     and $n_{hunt}=10$. (d) includes pink markers to annotate where a secondary ``peak hunt'' is
-    triggered.
-    }
+    triggered. }
     \label{fig:ml_benchmarks_4panel}
 \end{figure}
 
@@ -679,9 +650,9 @@ optimiser's robust resistance to local minima. This is evidenced by its successf
 2D hidden peak (Figure \ref{fig:2d_hidden_peak}) and its highly accurate structural reconstruction
 of the complex, multi-modal 2D Schwefel function (Figure \ref{fig:2d_schwefel}).
 
-The algorithm was potentially over-prepared for the physical breeder blanket investigation,
-which is expected to feature broader, continuous global physical trends rather than sharp,
-discontinuous mathematical spikes. As illustrated by the Gramacy \& Lee benchmark (Figure
+The algorithm was potentially over-prepared for the physical breeder blanket investigation, which is
+expected to feature broader, continuous global physical trends rather than sharp, discontinuous
+mathematical spikes. As illustrated by the Gramacy \& Lee benchmark (Figure
 \ref{fig:2d_gramacy_lee}), the model efficiently isolates and solves for broad overall trends,
 naturally exhibiting less sensitivity to high-frequency, small-length-scale variations. This testing
 ultimately confirms that while the algorithm maps wider global dynamics highly effectively,
@@ -724,14 +695,14 @@ to meet the remaining thickness budget.
 \subsection{Layered Blanket Model Neutronics}
 \label{sec:layered_blanket_model_res}
 Building upon the baseline parameter sweeps conducted in the first semester \citep{khan_mphys_sem1},
-this phase of the project transitions the neutronic
-model from a simplified homogeneous approximation to a discrete, heterogeneous layered architecture.
+this phase of the project transitions the neutronic model from a simplified homogeneous
+approximation to a discrete, heterogeneous layered architecture.
 
-Figure \ref{fig:tbr_comparison} presents the global Tritium Breeding Ratio (TBR) across these
-different modelling approaches. The data shows an initial reduction in the calculated TBR when the
-required structural separator material (Eurofer) is integrated into the homogeneous mixture. A
-further, more substantial decrease in the global TBR is observed when this exact same material
-volume is geometrically separated into distinct breeder, coolant, and structural layers.
+Figure \ref{fig:tbr_comparison} presents the global TBR across these different modelling approaches.
+The data shows an initial reduction in the calculated TBR when the required structural separator
+material (Eurofer) is integrated into the homogeneous mixture. A further, more substantial decrease
+in the global TBR is observed when this exact same material volume is geometrically separated into
+distinct breeder, coolant, and structural layers.
 
 \begin{figure}[h]
     \centering
@@ -750,10 +721,10 @@ volume is geometrically separated into distinct breeder, coolant, and structural
         \caption{Layer-wise TBR contribution vs. thickness}
         \label{fig:tbr_thickness}
     \end{subfigure}
-    \caption{Evaluating TBR of the layered blanket architecture. (a) Highlights the degradation of global
-    TBR when transitioning from idealised homogeneous mixtures to realistic heterogeneous layers.
-    (b) Demonstrates the spatial distribution of tritium production, showing heavy concentration in
-    the plasma-facing layers as overall blanket depth increases.}
+    \caption{Evaluating TBR of the layered blanket architecture. (a) Highlights the degradation of
+    global TBR when transitioning from idealised homogeneous mixtures to realistic heterogeneous
+    layers. (b) Demonstrates the spatial distribution of tritium production, showing heavy
+    concentration in the plasma-facing layers as overall blanket depth increases.}
     \label{fig:layered_model_neutronics}
 \end{figure}
 
@@ -793,7 +764,11 @@ driving the blanket's performance.
         \caption{Neutron multiplication density}
         \label{fig:mult_hm}
     \end{subfigure}
-    \caption{Cross-sectional heatmaps detailing the spatial distribution of key neutronic reactions. (a) Displays the density of tritium breeding reactions, strictly localised within the discrete breeder layers. (b) Illustrates the concentration of neutron multiplication events across the blanket depth.}
+    \caption{Cross-sectional heatmaps detailing the spatial distribution of key neutronic reactions.
+    (a) Displays the density of tritium breeding reactions, strictly localised within the discrete
+    breeder layers. (b) Illustrates the concentration of neutron multiplication events across the
+    blanket depth.
+    }
     \label{fig:reaction_heatmaps}
 \end{figure}
 
@@ -833,15 +808,15 @@ the resulting radiation damage.
     \label{fig:fluence_hms}
 \end{figure}
 
-As shown in Figure \ref{fig:fluence_hm}, the total neutron flux
-attenuates deeply as it propagates radially through the blanket, becoming almost entirely exhausted
-by the rear boundary. Notably, this attenuation exhibits a distinct, step-like profile,
-characterised by sharp decreases in flux immediately across each discrete coolant layer.
+As shown in Figure \ref{fig:fluence_hm}, the total neutron flux attenuates deeply as it propagates
+radially through the blanket, becoming almost entirely exhausted by the rear boundary. Notably, this
+attenuation exhibits a distinct, step-like profile, characterised by sharp decreases in flux
+immediately across each discrete coolant layer.
 
 Figure \ref{fig:damage_hm} maps the corresponding structural damage. As expected, the damage is
 heavily concentrated on the plasma-facing first wall. Beyond this initial boundary, the damage
-profile declines exponentially through the blanket depth, tracking the overall attenuation
-trend of the incident neutron flux.
+profile declines exponentially through the blanket depth, tracking the overall attenuation trend of
+the incident neutron flux.
 
 Finally, the spatial distributions of neutron scattering and nuclear heating within the layered
 architecture were evaluated (Figure \ref{fig:scatter_heat_heatmaps}).
@@ -903,20 +878,19 @@ Figure \ref{fig:zeta_parameter}).
         \label{fig:zeta_mult}
     \end{subfigure}
     \caption{ The impact of the linear gradient parameter ($\zeta$) on key neutronic performance
-        metrics. (a) Tracks the total Tritium Breeding Ratio (TBR) and the individual contributions
-        from discrete breeder layers. (b) Illustrates the total neutron multiplication alongside the
-        specific contributions from the first wall, breeder, coolant, and structural separator
-        layers. Statistical uncertainties are plotted, though error bars are generally smaller than
-        the data markers.
-    }
+        metrics. (a) Tracks the total TBR and the individual contributions from discrete breeder
+        layers. (b) Illustrates the total neutron multiplication alongside the specific
+        contributions from the first wall, breeder, coolant, and structural separator layers.
+        Statistical uncertainties are plotted, though error bars are generally smaller than the data
+        markers. }
     \label{fig:zeta_neutronics}
 \end{figure}
 
-As illustrated in Figure \ref{fig:zeta_tbr}, the global Tritium Breeding Ratio (TBR) remains
-relatively stable but exhibits a slight overall decrease as the blanket becomes rear-weighted
-($\zeta > 0$). However spatial distribution of tritium production significantly shifts; inner
-plasma-facing layers dominate breeding in forward-weighted configurations ($\zeta < 0$), whereas
-deeper layers contribute a progressively larger fraction as $\zeta$ increases.
+As illustrated in Figure \ref{fig:zeta_tbr}, the global TBR remains relatively stable but exhibits a
+slight overall decrease as the blanket becomes rear-weighted ($\zeta > 0$). However spatial
+distribution of tritium production significantly shifts; inner plasma-facing layers dominate
+breeding in forward-weighted configurations ($\zeta < 0$), whereas deeper layers contribute a
+progressively larger fraction as $\zeta$ increases.
 
 Figure \ref{fig:zeta_mult} shows the neutron multiplication rate across the same domain. The total
 multiplication rate within the blanket decreases monotonically as the geometry shifts rearward.
@@ -994,8 +968,7 @@ within the structural layers increase in back-loaded configurations.
         neutron path length in $\text{n} \cdot \text{cm}$) across the blanket and its individual
         components. Figure \ref{fig:zeta_scatter} plots the corresponding number of neutron
         scattering events. Statistical uncertainties are plotted, though error bars are generally
-        smaller than the data markers.
-        }
+        smaller than the data markers. }
     \label{fig:zeta_flux_scatter}
 \end{figure}
 
@@ -1017,14 +990,13 @@ constraints are presented in Figure \ref{fig:ml_optimisation}.
     \label{fig:ml_optimisation}
 \end{figure}
 
-The fully unconstrained 8D configuration achieved the highest overall Tritium Breeding Ratio (TBR)
-of 1.4055 by pushing all parameters to their binding limits: maximising all breeder layers to
-16.0\,cm and minimising all coolant layers to 1.5\,cm. The partially constrained 4D configurations
-exhibited lower overall breeding performance. Restricting the optimiser strictly to the maximum
-breeder budget (TBR: 1.2805) or the minimum coolant budget (TBR: 1.2080) resulted in consecutive
-decreases in the maximum achievable breeding ratio. Both were similarly under binding conditions,
-where the 4D coolant study pushed all the coolant thickness as to the outermost layers as much as
-allowed.
+The fully unconstrained 8D configuration achieved the highest overall TBR of 1.4055 by pushing all
+parameters to their binding limits: maximising all breeder layers to 16.0\,cm and minimising all
+coolant layers to 1.5\,cm. The partially constrained 4D configurations exhibited lower overall
+breeding performance. Restricting the optimiser strictly to the maximum breeder budget (TBR: 1.2805)
+or the minimum coolant budget (TBR: 1.2080) resulted in consecutive decreases in the maximum
+achievable breeding ratio. Both were similarly under binding conditions, where the 4D coolant study
+pushed all the coolant thickness as to the outermost layers as much as allowed.
 
 When restricted to the 44.0\,cm total thickness budget, the ML model contrastingly identified an
 ``Exponentially decaying" configuration where the breeder layer thicknesses decayed radially outward
@@ -1075,22 +1047,19 @@ Ratio (TBR)—against other selected layers.
         \caption{B1 vs. C4 thickness}
         \label{fig:proj_c4}
     \end{subfigure}
-    \caption{
-        2D contour projections of the 8D surrogate model from the unconstrained optimisation run.
-        Each panel plots the thickness of the innermost breeder layer (B1) against a secondary layer
-        (B2, B4, C1, or C4), with all non-plotted dimensions held constant at their optimal
-        boundary limits.
-    }
+    \caption{ 2D contour projections of the 8D surrogate model from the unconstrained optimisation
+        run. Each panel plots the thickness of the innermost breeder layer (B1) against a secondary
+        layer (B2, B4, C1, or C4), with all non-plotted dimensions held constant at their optimal
+        boundary limits. }
     \label{fig:surrogate_projections}
 \end{figure}
 
 
-The gradients within these projections directly illustrate parameter sensitivity. Highly
-slanted contour lines, such as those mapping B1 against the secondary breeder (B2, Figure
-\ref{fig:proj_b2}) or the inner coolant (C1, Figure \ref{fig:proj_c1}), indicate that the TBR is
-sensitive to variations in both plotted variables. Here the predicted maximum TBR consistently
-isolates at the boundary corners, favouring maximised breeder thicknesses and minimised coolant
-thicknesses.
+The gradients within these projections directly illustrate parameter sensitivity. Highly slanted
+contour lines, such as those mapping B1 against the secondary breeder (B2, Figure \ref{fig:proj_b2})
+or the inner coolant (C1, Figure \ref{fig:proj_c1}), indicate that the TBR is sensitive to
+variations in both plotted variables. Here the predicted maximum TBR consistently isolates at the
+boundary corners, favouring maximised breeder thicknesses and minimised coolant thicknesses.
 
 Conversely, projections mapping B1 against the outermost layers, such as B4 (Figure
 \ref{fig:proj_b4}) and C4 (Figure \ref{fig:proj_c4}), display nearly vertical contour lines. This
