@@ -2393,16 +2393,21 @@
     <bcf:citekey order="16" intorder="1">kuridan_neutron_2023</bcf:citekey>
     <bcf:citekey order="17" intorder="1">kuridan_neutron_2023</bcf:citekey>
     <bcf:citekey order="18" intorder="1">romano_openmc_2015</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">shimwell_paramak_2021</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">romano_openmc_2015</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">khan_mphys_sem1</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">khan_mphys_sem1</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">khan2026fusionmlcode</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">rastrigin1974systems</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">schwefel1981numerical</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">rosenbrock1960automatic</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">gramacy2012cases</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">khan_mphys_sem1</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">shahriari2015taking</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">rasmussen2006gaussian</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">snoek2012practical</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">rastrigin1974systems</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">shimwell_paramak_2021</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">romano_openmc_2015</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">khan_mphys_sem1</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">khan_mphys_sem1</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">khan2026fusionmlcode</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">rastrigin1974systems</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">schwefel1981numerical</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">rosenbrock1960automatic</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">gramacy2012cases</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">khan_mphys_sem1</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">emmerich2005single</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

@@ -486,6 +486,55 @@
       \verb https://linkinghub.elsevier.com/retrieve/pii/S0090375218300206
       \endverb
     \endentry
+    \entry{emmerich2005single}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=617ee008bec77f813d11dbc7d61e478f}{%
+           family={Emmerich},
+           familyi={E\bibinitperiod},
+           given={Michael\bibnamedelima TM},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5b31ee1b2187993aa4c59859ad1f6a9a}{%
+           family={Giannakoglou},
+           familyi={G\bibinitperiod},
+           given={Kyriakos\bibnamedelima C},
+           giveni={K\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4a34e8e688ef6d2dfa90e07ee2139720}{%
+           family={Naujoks},
+           familyi={N\bibinitperiod},
+           given={Boris},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{1c0fd59fe0c69dfa891ff075dcc293f5}
+      \strng{fullhash}{1c0fd59fe0c69dfa891ff075dcc293f5}
+      \strng{fullhashraw}{1c0fd59fe0c69dfa891ff075dcc293f5}
+      \strng{bibnamehash}{1c0fd59fe0c69dfa891ff075dcc293f5}
+      \strng{authorbibnamehash}{1c0fd59fe0c69dfa891ff075dcc293f5}
+      \strng{authornamehash}{1c0fd59fe0c69dfa891ff075dcc293f5}
+      \strng{authorfullhash}{1c0fd59fe0c69dfa891ff075dcc293f5}
+      \strng{authorfullhashraw}{1c0fd59fe0c69dfa891ff075dcc293f5}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE Transactions on Evolutionary Computation}
+      \field{number}{4}
+      \field{title}{Single-and multi-objective evolutionary optimization assisted by Gaussian random field metamodels}
+      \field{volume}{10}
+      \field{year}{2006}
+      \field{pages}{421\bibrangedash 439}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1109/TEVC.2005.859463
+      \endverb
+    \endentry
     \entry{federici_overview_2019}{article}{}{}
       \name{author}{6}{}{%
         {{un=0,uniquepart=base,hash=c275eff5c8ed440e431b48f2d0cc3b30}{%
@@ -1130,6 +1179,47 @@
       \endverb
       \keyw{Lit Review,Useful,fission}
     \endentry
+    \entry{rasmussen2006gaussian}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=58d90ed7b7348c7a5a9b4a2a8f46df7b}{%
+           family={Rasmussen},
+           familyi={R\bibinitperiod},
+           given={Carl\bibnamedelima Edward},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d34fdfcbfcb5412397b946351370db22}{%
+           family={Williams},
+           familyi={W\bibinitperiod},
+           given={Christopher\bibnamedelima KI},
+           giveni={C\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, MA}%
+      }
+      \list{publisher}{1}{%
+        {The MIT Press}%
+      }
+      \strng{namehash}{f0ccf4a09a3a6a91719405724e3ae5da}
+      \strng{fullhash}{f0ccf4a09a3a6a91719405724e3ae5da}
+      \strng{fullhashraw}{f0ccf4a09a3a6a91719405724e3ae5da}
+      \strng{bibnamehash}{f0ccf4a09a3a6a91719405724e3ae5da}
+      \strng{authorbibnamehash}{f0ccf4a09a3a6a91719405724e3ae5da}
+      \strng{authornamehash}{f0ccf4a09a3a6a91719405724e3ae5da}
+      \strng{authorfullhash}{f0ccf4a09a3a6a91719405724e3ae5da}
+      \strng{authorfullhashraw}{f0ccf4a09a3a6a91719405724e3ae5da}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Gaussian processes for machine learning}
+      \field{year}{2006}
+      \verb{doi}
+      \verb 10.7551/mitpress/3206.001.0001
+      \endverb
+    \endentry
     \entry{rastrigin1974systems}{book}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=ce70e788adea82bfc6a5a75a14fd82cc}{%
@@ -1417,6 +1507,67 @@
       \field{title}{Numerical optimization of computer models}
       \field{year}{1981}
     \endentry
+    \entry{shahriari2015taking}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=4b01bc2ebef2b134ce8110e0431af923}{%
+           family={Shahriari},
+           familyi={S\bibinitperiod},
+           given={Bobak},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fe49ec9b6f902b79d166c1f25405c088}{%
+           family={Swersky},
+           familyi={S\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=05bc8d503a2c310ef0976ace7f9d2734}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Ziyu},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c1552be0c6aa9c6e0fd91a130a682853}{%
+           family={Adams},
+           familyi={A\bibinitperiod},
+           given={Ryan\bibnamedelima P},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d3e79ae65fa8bce23be8a1187bcae1bb}{%
+           family={De\bibnamedelima Freitas},
+           familyi={D\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={Nando},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{e93053cadf8e1ed30669480ff76591f7}
+      \strng{fullhash}{c76dd5968d18c1666389a3adc930b092}
+      \strng{fullhashraw}{c76dd5968d18c1666389a3adc930b092}
+      \strng{bibnamehash}{e93053cadf8e1ed30669480ff76591f7}
+      \strng{authorbibnamehash}{e93053cadf8e1ed30669480ff76591f7}
+      \strng{authornamehash}{e93053cadf8e1ed30669480ff76591f7}
+      \strng{authorfullhash}{c76dd5968d18c1666389a3adc930b092}
+      \strng{authorfullhashraw}{c76dd5968d18c1666389a3adc930b092}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the IEEE}
+      \field{number}{1}
+      \field{title}{Taking the human out of the loop: A review of Bayesian optimization}
+      \field{volume}{104}
+      \field{year}{2016}
+      \field{pages}{148\bibrangedash 175}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1109/JPROC.2015.2494218
+      \endverb
+    \endentry
     \entry{shimwell_paramak_2021}{article}{}{}
       \name{author}{7}{}{%
         {{un=0,uniquepart=base,hash=adc6aed3a154b0e67f1c857e5a3df670}{%
@@ -1508,6 +1659,55 @@
       \verb https://f1000research.com/articles/10-27/v1
       \endverb
       \keyw{Lit Review,Useful,Jon Shimwell,Paramak}
+    \endentry
+    \entry{snoek2012practical}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=b9d827c94405733235f3f953a0691fd5}{%
+           family={Snoek},
+           familyi={S\bibinitperiod},
+           given={Jasper},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=42a970b0a0f1ed24b23064370cc9392f}{%
+           family={Larochelle},
+           familyi={L\bibinitperiod},
+           given={Hugo},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c1552be0c6aa9c6e0fd91a130a682853}{%
+           family={Adams},
+           familyi={A\bibinitperiod},
+           given={Ryan\bibnamedelima P},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Curran Associates, Inc.}%
+      }
+      \strng{namehash}{8ec3cd03032d713954b0895ecd0d8292}
+      \strng{fullhash}{8ec3cd03032d713954b0895ecd0d8292}
+      \strng{fullhashraw}{8ec3cd03032d713954b0895ecd0d8292}
+      \strng{bibnamehash}{8ec3cd03032d713954b0895ecd0d8292}
+      \strng{authorbibnamehash}{8ec3cd03032d713954b0895ecd0d8292}
+      \strng{authornamehash}{8ec3cd03032d713954b0895ecd0d8292}
+      \strng{authorfullhash}{8ec3cd03032d713954b0895ecd0d8292}
+      \strng{authorfullhashraw}{8ec3cd03032d713954b0895ecd0d8292}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems}
+      \field{title}{Practical Bayesian optimization of machine learning algorithms}
+      \field{volume}{25}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb https://proceedings.neurips.cc/paper/2012/file/05311655a15b75fab86956663e1819cd-Paper.pdf
+      \endverb
+      \verb{url}
+      \verb https://proceedings.neurips.cc/paper/2012/file/05311655a15b75fab86956663e1819cd-Paper.pdf
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

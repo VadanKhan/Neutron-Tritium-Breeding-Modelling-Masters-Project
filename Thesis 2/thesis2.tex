@@ -212,6 +212,7 @@ extracting the immense kinetic energy deposited by these 14.1 MeV neutrons for e
 generation, and breeding the requisite tritium to sustain the reactor \citep{federici_overview_2019,
 sawan_physics_2006}.
 
+
 \section{Theory}
 
 \subsection{Breeder Blanket Physics}
@@ -365,6 +366,74 @@ specialised \texttt{heating} tallies to provide high-fidelity energy deposition 
 \citep{romano_openmc_2015}.
 
 \subsection{ML: Bayesian Optimisation}
+
+Given the significant computational expense of evaluating fusion simulations via stochastic Monte
+Carlo transport, standard grid-search or gradient-descent optimisation methods become
+computationally intractable across high-dimensional parameter spaces. To navigate this, the study
+employs Bayesian Optimisation (BO), a sample-efficient global optimisation strategy highly suited
+for evaluating expensive, ``black-box" objective functions \citep{shahriari2015taking}.
+
+BO is fundamentally driven by Bayes' Theorem, wherein a ``prior" belief about the
+objective function's landscape is iteratively updated with new simulation evidence to form a refined
+``posterior" distribution. This loop relies on two coupled mathematical components: a probabilistic
+surrogate model and an acquisition function.
+
+\subsubsection{Surrogate Modelling via Gaussian Process Regression}
+
+The surrogate model acts as a computationally inexpensive emulator for the OpenMC physics solver.
+This project utilises Gaussian Process Regression (GPR) \citep{rasmussen2006gaussian}. Unlike
+parametric regression models that fit a single discrete curve, a Gaussian Process (GP) defines a
+non-parametric probability distribution over all possible functions that could fit the observed
+data.
+
+For any given coordinate in the parameter space (e.g., a specific set of blanket layer thicknesses),
+the GPR outputs a probability distribution characterised by two key metrics:
+\begin{itemize}
+    \item \textbf{Mean Function, $\mu(x)$:} The expected value of the objective metric (e.g., TBR).
+    \item \textbf{Variance, $\sigma^2(x)$:} The uncertainty associated with that prediction.
+\end{itemize}
+
+At locations near previously simulated data points, $\sigma(x)$ collapses to the stochastic noise
+floor, representing high confidence. In unexplored regions of the parameter space, $\sigma(x)$
+expands. This behaviour is governed by the GP's covariance function (or kernel). The kernel
+mathematically dictates how information ``bleeds" between spatially adjacent points, assuming that
+configurations with similar geometric inputs will yield correlated neutronic outputs. GPR is
+particularly advantageous for Monte Carlo applications as its kernel can explicitly model the
+inherent statistical noise of stochastic particle tracking, preventing the optimiser from
+over-fitting to statistical anomalies \citep{snoek2012practical}.
+
+\subsubsection{Acquisition Functions and the Exploration-Exploitation Trade-off}
+
+While the GPR provides a probabilistic map of the design space, it does not dictate the search path.
+This is the role of the Acquisition Function, an analytically defined, cheap-to-evaluate equation
+that transforms the GP's mean and variance into a single scalar ``utility" score. The parameter space
+coordinate that maximises this utility is selected as the next candidate for OpenMC simulation.
+
+The acquisition function must carefully balance two conflicting objectives: \textit{exploitation}
+(sampling areas with a high predicted mean, $\mu(x)$, to refine known local maxima) and
+\textit{exploration} (sampling areas with high uncertainty, $\sigma(x)$, to discover untracked
+global maxima).
+
+A standard acquisition metric is Expected Improvement (EI), which calculates the probability and
+magnitude by which a new sample might exceed the current best observation, $f^*$:
+\begin{equation}
+    EI(x) = (\mu(x) - f^*)\Phi(Z) + \sigma(x)\phi(Z)
+\end{equation}
+where $\Phi$ and $\phi$ are the standard normal cumulative distribution and probability density
+functions, respectively. While highly efficient for convex problems, EI is prone to stagnation in
+highly multi-modal landscapes (such as the Rastrigin function \citep{rastrigin1974systems}). Because
+EI scales with the probability of beating $f^*$, it can act ``greedily" and refuse to explore deep,
+uncertain ``valleys" if the mean prediction is substantially lower than the current peak.
+
+An alternative is the Upper Confidence Bound (UCB) acquisition function:
+\begin{equation}
+    UCB(x) = \mu(x) + \sqrt{\beta} \cdot \sigma(x)
+\end{equation}
+Rather than relying on the probability of improvement against a known baseline, UCB evaluates the
+absolute best-case scenario for any given point. The hyperparameter $\beta$ acts as an explicit
+control over the optimiser's optimism. By setting $\beta$ to a sufficiently high value, the
+algorithm is forced to aggressively explore highly uncertain regions (Section
+\ref{sec:method_ml} includes demonstrations of this).
 
 
 
@@ -539,12 +608,12 @@ Consequently, the study transitions to the application of Machine Learning algor
 \subsubsection{ML Algorithm}
 \label{sec:method_ml}
 To navigate the computationally expensive 8-dimensional design space effectively, Single-Objective
-Bayesian Optimisation (BO) was employed. The optimisation pipeline was developed using the Ax
-framework, leveraging BoTorch and PyTorch as the underlying computational engines. A Gaussian
-Process Regressor (GPR) was utilised as the surrogate model. This scalable, $N$-dimensional
-architecture is highly sample-efficient, capable of converging upon optimal configurations within
-$N<150$ trials (tested in spaces up to 8 dimensions). This sample efficiency makes it ideal for
-optimising computationally intensive physical simulations. Furthermore, the objective function and
+Bayesian Optimisation was employed with a Gaussian Process Regressor was utilised as the surrogate
+model (SOBO-GPR). The optimisation pipeline was developed using the Ax framework, leveraging BoTorch and
+PyTorch as the underlying computational engines.  This scalable, $N$-dimensional architecture is
+highly sample-efficient, capable of converging upon optimal configurations within $N<150$ trials
+(tested in spaces up to 8 dimensions). This sample efficiency makes it ideal for optimising
+computationally intensive physical simulations. Furthermore, the objective function and
 hyperparameters are designed to be modularly configurable, with automated generation of surrogate
 parameter surfaces and optimisation progress diagnostics.
 
@@ -559,12 +628,12 @@ optimisation studies were completed in under 3 hours. The complete source code d
 pipeline and complete optimisation results is publicly available \citep{khan2026fusionmlcode}.
 
 A critical component of this framework is the selection and tuning of the acquisition function,
-which dictates how the algorithm samples new data points. For this study, the Upper Confidence Bound
-(UCB) acquisition function was selected over Expected Improvement (EI). Unlike EI, UCB provides
-explicit, scalar control over the exploration-exploitation trade-off via the hyperparameter $\beta$.
-Properly tuning this parameter is vital for a high-dimensional physical system where multiple local
-maxima may exist. Figure \ref{fig:ucb_tuning} illustrates a 2D projection of the acquisition utility
-landscape used to benchmark the model's behaviour.
+which dictates how the algorithm samples new data points. For this study, the UCB acquisition
+function was selected over EI. Unlike EI, UCB provides explicit, scalar
+control over the exploration-exploitation trade-off via the hyperparameter $\beta$. Properly tuning
+this parameter is vital for a high-dimensional physical system where multiple local maxima may
+exist. Figure \ref{fig:ucb_tuning} illustrates a 2D projection of the acquisition utility landscape
+used to benchmark the model's behaviour.
 
 \begin{figure}[htbp]
     \centering
@@ -1122,6 +1191,12 @@ layers compared to the innermost layers.
 Figure \ref{fig:layered_model_neutronics} demonstrates that tritium breeding is predominantly
 concentrated in the region closest to the ``front'' (facing the plasma), the inner blanket layers.
 
+A limitation of the current methodological framework is its reliance on single-objective Bayesian
+Optimisation, focusing exclusively on maximising the TBR. In reality, blanket design is a highly
+constrained, multi-physics problem. Future iterations of this pipeline should integrate
+Multi-Objective Bayesian Optimisation (MOBO) to map the Pareto front between competing objectives,
+such as simultaneously maximising TBR while minimising structural radiation damage (DPA) or tritium
+inventory limits \citep{emmerich2005single}.
 
 
 \section{Conclusion}
