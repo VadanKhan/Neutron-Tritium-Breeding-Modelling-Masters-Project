@@ -15,6 +15,7 @@
 \usepackage{upgreek}
 \usepackage{mhchem}
 \usepackage{booktabs}
+\usepackage{textcomp}
 
 % --- Bibliography Setup (Vancouver Style) --- \usepackage[ backend=biber, style=vancouver,
 % doi=true, url=false, isbn=false, eprint=false, maxbibnames=6, minbibnames=6 ]{biblatex}
@@ -202,25 +203,72 @@
 % --- Main Content Begins Here ---
 
 \section{Introduction}
-Start your new document here! \cite{moir_fusion_1982}, \citet{momoshima_tritium_2022},
-\citep{lee_us-doe_1983}, \citep{segantin_optimisation_2020}
-
-
+Commercial nuclear fusion is predominantly pursued via the deuterium-tritium (D-T) fuel cycle due to
+its relatively large cross-section at achievable plasma temperatures. This reaction fuses deuterium
+and tritium to yield an alpha particle and a highly energetic fast neutron ($\ce{^{2}H + ^{3}H ->
+^{4}He + n}$, $Q = +17.6 \text{ MeV}$) \citep{heckrotte_factors_1971}. A breeder blanket is a critical modular component wrapped
+around the fusion reactor core engineered to fulfil two primary physical functions: capturing and
+extracting the immense kinetic energy deposited by these 14.1 MeV neutrons for electricity
+generation, and breeding the requisite tritium to sustain the reactor \citep{federici_overview_2019,
+sawan_physics_2006}.
 
 \section{Theory}
-\subsection{Nuclear Physics}
-\subsubsection{Relevant Nuclear Reactions}
-While lead and beryllium are deliberately selected as primary multipliers due to their high \ce{(n,
-2n)} cross-sections \citep{hernandez_first_2018}, structural materials within the blanket also
-exhibit minor multiplication properties at fusion energy scales. For instance, the dominant isotope
-in structural steels like EUROFER97 \citep{stornelli_ultra-fine_2024} is \ce{^{56}Fe}, which
-possesses a small but non-zero \ce{(n, 2n)} cross-section for 14.1 MeV neutrons
-\citep{brown_endfb-viii0_2018}. This threshold reaction proceeds as:
 
-\begin{equation}
-\ce{^{56}Fe + n -> ^{55}Fe + 2n}
-\label{eq:fe_multiplication}
-\end{equation}
+\subsection{Breeder Blanket Physics}
+\subsubsection{Operating Principles}
+As established in previous foundational work \citep{khan_mphys_sem1} and Section \ref{sec:context},
+the viability of commercial deuterium-tritium (D-T) fusion is fundamentally contingent upon net
+tritium production. Because the D-T plasma yields exactly one neutron per consumption event, and
+realistic reactor geometries suffer from unavoidable neutron leakage and parasitic absorption, the
+breeder blanket must achieve a TBR strictly greater than unity to overcome global tritium supply
+shortages and maintain a continuous fuel cycle \citep{pearson_tritium_2018}. Furthermore, because
+conservation of momentum dictates that this single emitted neutron carries away four-fifths of the
+total fusion energy ($E_n \approx 14.1 \text{ MeV}$ compared to $\sim 1-2 \text{ MeV}$ neutrons in
+fission reactors \citep{heckrotte_factors_1971}), fusion breeder blankets must be specialised to
+utilise these ultra high energy neutrons.
+
+To breed this fuel, the blanket exploits neutron capture interactions with lithium. Natural lithium
+consists of two isotopes, both of which undergo tritium-producing reactions. The dominant
+$\ce{^{6}Li}$ reaction is exothermic and possesses a $1/v$ cross-section dependence, making it
+highly efficient at capturing thermalised neutrons ($\ce{^{6}Li + n -> \alpha{} + t + 4.8 MeV}$).
+Conversely, the $\ce{^{7}Li}$ reaction is an endothermic threshold reaction requiring fast neutrons
+($\ce{^{7}Li + n -> \alpha{} + t + n^{\prime{}} - 2.5 MeV}$).
+
+Because the dominant $\ce{^{6}Li}$ reaction is purely absorptive, the strict 1-to-1 neutron economy
+necessitates the inclusion of primary neutron multipliers to maintain a viable population. Heavy
+elements such as lead are utilised for their substantial spallation cross-sections at high incident
+energies, undergoing threshold \ce{(n, 2n)} reactions that effectively double the available neutrons
+per interaction ($\ce{^{208}Pb(n, 2n)^{207}Pb}$, $Q = -7.37 \text{ MeV}$). This compensates for macroscopic
+breeding inefficiencies \citep{hernandez_first_2018}.
+
+Finally, to increase the capture probability of the $\ce{^{6}Li}$ isotope, the $14.1 \text{ MeV}$
+fast neutrons emitted by the D-T plasma must be moderated down to thermal energies. This moderation
+is achieved through successive elastic and inelastic scattering collisions within the blanket medium
+and, if using water \citep{khan_mphys_sem1}, internal coolants. Crucially, these scattering events
+are the primary mechanism by which the neutron's kinetic energy is deposited into the blanket as
+extractable heat. The total thermal yield is further modified by the reaction network's kinematics:
+exothermic captures enhance local heat deposition, whereas endothermic threshold reactions
+inherently consume kinetic energy, reducing the net thermal yield. Ultimately, to maximise both
+tritium breeding and energy utilisation while minimising safety risks from neutron leakage, a
+totally attenuated neutron flux is ideal.
+
+\subsubsection{Trace Reactions}
+\label{sec:trace_reactions}
+The continuous-energy nuclear data libraries utilised by OpenMC resolve interactions across all
+constituent isotopes, sampled from \cite{brown_endfb-viii0_2018}. Consequently, structural and
+coolant components exhibit trace background reactions that become visible in high-resolution mesh
+tallies. Incident fast neutrons ($E_n \approx 14.1 \text{ MeV}$) trigger minor endothermic
+spallation events in the structural materials, notably within the zirconium first wall
+($\ce{^{90}Zr(n, 2n)^{89}Zr}$, $Q = -12.0 \text{ MeV}$, $\sigma \approx 0.6 \text{ barns}$) and the
+EUROFER97 steel separators ($\ce{^{56}Fe(n, 2n)^{55}Fe}$, $Q = -11.2 \text{ MeV}$, $\sigma \approx
+0.4 \text{ barns}$). In addition to multiplication, this unattenuated high-energy flux induces
+negligible trace tritium production within the first wall via an extreme threshold capture reaction
+( $\ce{^{90}Zr(n,t)^{88}Y}$, $Q = -11.3 \text{ MeV}$, $\sigma \sim 1 \text{ \textmu b}.$).
+Conversely, highly thermalised neutrons within the coolant layers can undergo radiative capture with
+the naturally occurring deuterium in water to breed trace amounts of tritium
+($\ce{^{2}H(n,\gamma)^{3}H}$, $Q = +6.26 \text{ MeV}$, thermal $\sigma \approx 0.5 \text{ mb}$).
+
+\subsection{Neutron Transport Metrics}
 
 \subsubsection{Neutron Track Length}
 To quantify the neutron population within specific geometric regions of the blanket, stochastic
@@ -230,8 +278,8 @@ the total distance traversed by all particle histories within a defined cell vol
 \citep{kalos_monte_2008}.
 
 This yields the volume-integrated scalar flux ($\Phi_{V}$), which is expressed in units of
-neutron-centimetres ($\text{n} \cdot \text{cm}$) and is formally defined as
-\citep{kuridan_neutron_2023}:
+neutron-centimetres ($\text{n} \cdot \text{cm}$) \citep{kuridan_neutron_2023} and is formally
+defined as:
 \begin{equation}
 \Phi_{V} = \int_{V} \int_{E} \int_{4\pi} \psi(\vec{r}, \hat{\Omega}, E) \, d\hat{\Omega} \, dE \, dV = \sum_{i} W_{i} \ell_{i}
 \label{eq:track_length_estimator}
@@ -290,8 +338,7 @@ Here, the denominator calculates the total number of target atoms within the spe
 using the material density ($\rho$), volume ($V$), Avogadro's constant ($N_A$), and molar mass
 ($\mu$). This is multiplied by the annual neutron emission rate—derived from the reactor thermal
 power ($P$) and the energy released per fusion event ($E_f$, converted to Joules via the elementary
-charge $e$)—scaled to the number of seconds in a calendar year. Tracking this rigorous DPA metric
-allows for an accurate evaluation of the severity of the neutron flux on the structural boundaries.
+charge $e$)—scaled to the number of seconds in a calendar year.
 
 \subsubsection{Nuclear Heating and Energy Deposition}
 
@@ -323,6 +370,7 @@ specialised \texttt{heating} tallies to provide high-fidelity energy deposition 
 
 \section{Literature Review}
 \subsection{Tritium Breeding in Fusion}
+\label{sec:context}
 
 \subsection{Breeder Blanket Studies}
 \label{sec:breeder_blanket_studies}
@@ -356,7 +404,7 @@ reduced-activation ferritic-martensitic steels. Furthermore, to more accurately 
 distribution of interactions within this refined geometry, the 14.1~MeV Muir-distributed ring source
 utilised in the previous study has been updated to a uniform volumetric body source.
 
-\begin{figure}[h]
+\begin{figure}[hbtp]
   \centering
   \includegraphics[width=1.0\textwidth]{figures/reactor_diagram.png}
   \caption{ Representative geometry of the simplified Tokamak model generated via Paramak. The
@@ -392,7 +440,6 @@ proceed as there are key advantages to this approach:
     and thus exploring higher dimensional spaces. This is non-trivial to optimise, it is
     instructional to begin with a lower dimensional parameterised model before scaling.
 \end{itemize}
-
 
 \subsection{Neutronic Analysis}
 \label{sec:method_neutronics}
@@ -439,11 +486,13 @@ coolant layers). Exhaustively exploring this 8-dimensional design space via trad
 grid-search methods is computationally intractable.
 
 To reduce the dimensionality of the problem while maintaining physical relevance, a linear gradient
-parameter, $\zeta$, was introduced as a heuristic constraint. This parameter governs the relative
-thickness of the layers across the blanket's depth, providing a human-intuitive method to observe
-spatial trends.
+parameter, $\zeta$, was introduced as a heuristic constraint (see Figure \ref{fig:zeta_parameter}).
+This parameter governs the relative thickness of the layers across the blanket's depth, providing a
+human-intuitive method to observe spatial trends. In Section \ref{sec:zeta_results} we aggregate how
+neutronic parameters vary under the sweep of $\zeta$, bound to $|\zeta|<0.35$ from meshing
+constraints in layers that are too thin.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     % FIRST SUBFIGURE
     \begin{subfigure}[t]{0.2\textwidth}
@@ -479,10 +528,10 @@ spatial trends.
 
 While this constrained, single-variable approach yields valuable insights into the fundamental
 physics of the blanket, it inherently restricts the exploration of the broader design space. The
-limitations of manual parametrisation in identifying true global optima across an unconstrained
+intractability of manual parametrisation in identifying true global optima across an unconstrained
 8-dimensional parameter space necessitate the use of advanced computational techniques.
 Consequently, the study transitions to the application of Machine Learning algorithms (see Section
-\ref{sec:method_neutronics}) to navigate this complex parameter space efficiently.
+\ref{sec:ml_approach}) to navigate this complex parameter space efficiently.
 
 \subsection{ML Optimisation}
 \label{sec:ml_approach}
@@ -517,7 +566,7 @@ Properly tuning this parameter is vital for a high-dimensional physical system w
 maxima may exist. Figure \ref{fig:ucb_tuning} illustrates a 2D projection of the acquisition utility
 landscape used to benchmark the model's behaviour.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     % FIRST SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
@@ -560,7 +609,7 @@ evaluated against a suite of notoriously difficult mathematical landscapes, incl
 the Rastrigin \citep{rastrigin1974systems}, Schwefel \citep{schwefel1981numerical}, Rosenbrock
 \citep{rosenbrock1960automatic}, and Gramacy \& Lee \citep{gramacy2012cases} functions, to
 rigorously benchmark the optimiser's robustness against stagnation. These functions were selected
-for their diverse pathological traits—such as high-frequency noise, deceptive local minima, and
+for their diverse pathological traits; such as high-frequency noise, deceptive local minima, and
 non-symmetric valleys. These functions were scaled incrementally from 1D up to 4D to ensure the
 $\epsilon$-greedy and peak-hunting mechanisms remained effective as the search space expanded
 exponentially.
@@ -596,7 +645,7 @@ were introduced:
     Figure \ref{fig:2d_schwefel}). In our trials we found $n_{hunt}=10$ sufficient.
 \end{itemize}
 
-\begin{figure}[h]
+\begin{figure}[hbtp]
     \centering
     % TOP-LEFT SUBFIGURE (a)
     \begin{subfigure}[t]{0.49\textwidth}
@@ -681,11 +730,11 @@ runs in which we applied additional parameter constraints.
     thickness of 12.0\,cm, with breeder layers locked at 8.0\,cm each.
 \end{itemize}
 
-To establish a useful comparison for the 44.0\,cm budget, a manual ``Binding" configuration was
-generated. Binding constraints / limits here were when we maximised the innermost plasma-facing
-breeder layers to their 16.0\,cm upper bound while minimising the interleaving coolants to 1.5\,cm.
-We would prioritise inner layers and continue radially outward until the minimum bounds were forced
-to meet the remaining thickness budget.
+On receipt of the final ML models and optimised configurations (see Section \ref{sec:ml_results}), a
+manual ``Binding" configuration was generated to establish a useful comparison for the 8D
+constrained study. Binding constraints / limits in our model is defined as when the breeder layers
+are maximised to their 16.0\,cm upper bound while minimising the interleaving coolants to 1.5\,cm.
+These prioritise inner layers and continue radially outward until the thickness budget is met.
 
 
 
@@ -704,7 +753,7 @@ material (Eurofer) is integrated into the homogeneous mixture. A further, more s
 in the global TBR is observed when this exact same material volume is geometrically separated into
 distinct breeder, coolant, and structural layers.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     % FIRST SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
@@ -747,7 +796,7 @@ the breeder and coolant indicate a separator.
 Figure \ref{fig:reaction_heatmaps} maps the spatial distribution of the primary neutronic reactions
 driving the blanket's performance.
 
-\begin{figure}[h]
+\begin{figure}[hbtp]
     \centering
     % FIRST SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
@@ -767,7 +816,8 @@ driving the blanket's performance.
     \caption{Cross-sectional heatmaps detailing the spatial distribution of key neutronic reactions.
     (a) Displays the density of tritium breeding reactions, strictly localised within the discrete
     breeder layers. (b) Illustrates the concentration of neutron multiplication events across the
-    blanket depth.
+    blanket depth. Trace reactions defined in Section \ref{sec:trace_reactions} are also highlighted
+    in the non-breeder layers, commonly shaded darker indicating rare events.
     }
     \label{fig:reaction_heatmaps}
 \end{figure}
@@ -785,7 +835,7 @@ subsequent outward layers.
 Figure \ref{fig:fluence_hms} displays the spatial distribution of both the total neutron flux and
 the resulting radiation damage.
 
-\begin{figure}[h]
+\begin{figure}[hbtp]
     \centering
     % FIRST SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
@@ -821,7 +871,7 @@ the incident neutron flux.
 Finally, the spatial distributions of neutron scattering and nuclear heating within the layered
 architecture were evaluated (Figure \ref{fig:scatter_heat_heatmaps}).
 
-\begin{figure}[h]
+\begin{figure}[hbtp]
     \centering
     % FIRST SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
@@ -855,12 +905,13 @@ distribution peaking around the coolant layers. The highest overall concentratio
 observed specifically within the second coolant layer.
 
 \subsection{Thickness Distribution Neutronics}
+\label{sec:zeta_results}
 
 To isolate the neutronic impact of spatial material distribution, the linear gradient parameter
 ($\zeta$) was varied to shift the blanket from a forward-weighted to a rear-weighted geometry (see
 Figure \ref{fig:zeta_parameter}).
 
-\begin{figure}[h]
+\begin{figure}[hbtp]
     \centering
     % FIRST SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
@@ -901,7 +952,7 @@ In addition to tritium breeding, the structural impact of varying the linear gra
 ($\zeta$) was assessed by tallying the neutron displacement damage (DPA) and the total damage energy
 across the blanket components.
 
-\begin{figure}[h]
+\begin{figure}[hbtp]
     \centering
     % FIRST SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
@@ -946,7 +997,7 @@ The total scattering density (Figure \ref{fig:zeta_scatter}) exhibits a strongly
 decreasing as $\zeta$ becomes positive. Conversely, both the flux and scattering events localised
 within the structural layers increase in back-loaded configurations.
 
-\begin{figure}[h]
+\begin{figure}[hbtp]
     \centering
     % FIRST SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
@@ -973,20 +1024,19 @@ within the structural layers increase in back-loaded configurations.
 \end{figure}
 
 \subsection{ML Optimisation Findings}
+\label{sec:ml_results}
 
 The optimal blanket configurations identified by the Bayesian optimiser under various dimensional
 constraints are presented in Figure \ref{fig:ml_optimisation}.
 
-\begin{figure}[h]
+\begin{figure}[hbtp]
     \centering
     \includegraphics[width=1.0\textwidth]{figures/breeder_blanket_2d_themed.png}
     \caption{ Radial thickness profiles and resulting global TBR for the ML optimised TBR-thickness
     studies detailed in Section \ref{sec:ml_runs}. Associated TBR values are annotated alongside
     their standard statistical uncertainty. $N=100$ was used for all except for unconstrained 8D
     $N=150$, where these include $N_{sobol}=50$. Hyper-parameters $\epsilon=0.5$ and
-    $\beta=1,000,000$ were tuned for these studies. The total runtime for every optimisation was
-    between $1-1.5$hrs, limited by the neutronics code taking 1 minute per iteration, not the ML
-    optimiser.}
+    $\beta=1,000,000$ were tuned for these studies.}
     \label{fig:ml_optimisation}
 \end{figure}
 
@@ -1014,7 +1064,7 @@ generated (Figure \ref{fig:surrogate_projections}). These slices plot the thickn
 breeder layer (B1)—which exhibited the strongest single-variable influence on the Tritium Breeding
 Ratio (TBR)—against other selected layers.
 
-\begin{figure}[h]
+\begin{figure}[hbtp]
     \centering
 % --- TOP ROW ---
     \begin{subfigure}[b]{0.49\textwidth}
@@ -1065,6 +1115,7 @@ Conversely, projections mapping B1 against the outermost layers, such as B4 (Fig
 \ref{fig:proj_b4}) and C4 (Figure \ref{fig:proj_c4}), display nearly vertical contour lines. This
 indicates that the global TBR is highly insensitive to dimensional changes in the outermost blanket
 layers compared to the innermost layers.
+
 
 
 \section{Discussion}

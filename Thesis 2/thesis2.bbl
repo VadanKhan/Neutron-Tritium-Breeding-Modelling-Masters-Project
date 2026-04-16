@@ -486,6 +486,89 @@
       \verb https://linkinghub.elsevier.com/retrieve/pii/S0090375218300206
       \endverb
     \endentry
+    \entry{federici_overview_2019}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=c275eff5c8ed440e431b48f2d0cc3b30}{%
+           family={Federici},
+           familyi={F\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1a8af20abab0e0d89f2b180a1fdd03c4}{%
+           family={Boccaccini},
+           familyi={B\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=41a96720f2cd91916ef758454ea50d81}{%
+           family={Cismondi},
+           familyi={C\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c6c6df039fe61eccd6730911363b95b6}{%
+           family={Gasparotto},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6b44ebbabe18d7cf03e7e129ff4935f5}{%
+           family={Poitevin},
+           familyi={P\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b7ba3f8bcd47833d54776be2ca84f525}{%
+           family={Ricapito},
+           familyi={R\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{934d6fc2514de3d7506461c74d64c6a6}
+      \strng{fullhash}{94ca76fdff2fde7968f16377761b0791}
+      \strng{fullhashraw}{94ca76fdff2fde7968f16377761b0791}
+      \strng{bibnamehash}{934d6fc2514de3d7506461c74d64c6a6}
+      \strng{authorbibnamehash}{934d6fc2514de3d7506461c74d64c6a6}
+      \strng{authornamehash}{934d6fc2514de3d7506461c74d64c6a6}
+      \strng{authorfullhash}{94ca76fdff2fde7968f16377761b0791}
+      \strng{authorfullhashraw}{94ca76fdff2fde7968f16377761b0791}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{A summary of the planned design strategy for the {DEMO} reactor breeder blanket. Focus on two main blanket designs, {HCPB} and {WCLL}. Good summary of the state of the technology, more focussed on the blanket than the paper above and more up to date.}
+      \field{issn}{09203796}
+      \field{journaltitle}{Fusion Engineering and Design}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{shortjournal}{Fusion Engineering and Design}
+      \field{title}{An overview of the {EU} breeding blanket design strategy as an integral part of the {DEMO} design effort}
+      \field{urlday}{7}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{141}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{30\bibrangedash 42}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1016/j.fusengdes.2019.01.141
+      \endverb
+      \verb{file}
+      \verb Full Text:C\:\\Users\\vadan\\Zotero\\storage\\JXUDYPK6\\Federici et al. - 2019 - An overview of the EU breeding blanket design strategy as an integral part of the DEMO design effort.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0920379619301590
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0920379619301590
+      \endverb
+      \keyw{Lit Review,Useful,{HCPB},{WCLL}}
+    \endentry
     \entry{gramacy2012cases}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=3936341bdeb555b02f870db34aeead95}{%
@@ -494,12 +577,12 @@
            given={Robert\bibnamedelima B},
            giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod},
            givenun=0}}%
-        {{un=1,uniquepart=given,hash=948a4311f89f2f0a539756644f7dd2ba}{%
+        {{un=0,uniquepart=base,hash=948a4311f89f2f0a539756644f7dd2ba}{%
            family={Lee},
            familyi={L\bibinitperiod},
            given={Herbert\bibnamedelima KH},
            giveni={H\bibinitperiod\bibinitdelim K\bibinitperiod},
-           givenun=1}}%
+           givenun=0}}%
       }
       \list{publisher}{1}{%
         {Springer}%
@@ -528,6 +611,67 @@
       \verb{doi}
       \verb 10.1007/s11222-011-9251-5
       \endverb
+    \endentry
+    \entry{heckrotte_factors_1971}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1c1c5e28da5700e2af34f20175bd0027}{%
+           family={Heckrotte},
+           familyi={H\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1e69ae444b26a1d97fed551768523bcc}{%
+           family={Hiskes},
+           familyi={H\bibinitperiod},
+           given={J.R.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3bb4d2dd9fe126a39cf57b135285ddd3}
+      \strng{fullhash}{3bb4d2dd9fe126a39cf57b135285ddd3}
+      \strng{fullhashraw}{3bb4d2dd9fe126a39cf57b135285ddd3}
+      \strng{bibnamehash}{3bb4d2dd9fe126a39cf57b135285ddd3}
+      \strng{authorbibnamehash}{3bb4d2dd9fe126a39cf57b135285ddd3}
+      \strng{authornamehash}{3bb4d2dd9fe126a39cf57b135285ddd3}
+      \strng{authorfullhash}{3bb4d2dd9fe126a39cf57b135285ddd3}
+      \strng{authorfullhashraw}{3bb4d2dd9fe126a39cf57b135285ddd3}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A discussion is given of the relative merits of the D-D, D-T,or D-3He mirror fusion power systems. As a basis for discussion we have used a simple approach for estimating the ratio of Q(D, He) to Q(D, T). When needed, the value of Q(D, T) is considered to be of the order of that calculated by Marx and by Kuo-Petravic, Petravic and Watson. The systems are compared at different assumed plasma temperatures in the range 200 to 1000 {keV} on the basis of several criteria: the investment costs in dollars per kilowatt, the ratio of waste power to power output, and the tritium and neutron production. We have concluded, based on the estimates of the ratio of Q-values, that subject to these criteria the D-T system appears the more favoured system. On the other hand, should a means be found to enhance the Q-values the D-3He system would be preferred on all but the first criteria. We consider the three-component D-T-3He system and its optimization. Finally, the possibility of further enhancing the D-T system by utilization of tritium breeding in the plasma is discussed.}
+      \field{annotation}{Explanation of why we use D-T fusion in particular. Worth citing in the explanation of why we use breeder blankets.}
+      \field{issn}{0029-5515}
+      \field{journaltitle}{Nuclear Fusion}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{5}
+      \field{shortjournal}{Nucl. Fusion}
+      \field{title}{Some factors in the choice of D-D, D-T or D-3He mirror fusion power systems}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{11}
+      \field{year}{1971}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{471\bibrangedash 484}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1088/0029-5515/11/5/009
+      \endverb
+      \verb{file}
+      \verb IOP Full Text PDF:C\:\\Users\\vadan\\Zotero\\storage\\7PJGWZHC\\Heckrotte and Hiskes - 1971 - Some factors in the choice of D-D, D-T or D-3He mirror fusion power systems.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1088/0029-5515/11/5/009
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1088/0029-5515/11/5/009
+      \endverb
+      \keyw{Lit Review,Useful}
     \endentry
     \entry{hernandez_first_2018}{article}{}{}
       \name{author}{2}{}{%
@@ -778,156 +922,6 @@
       \endverb
       \keyw{Lit Review,Useful}
     \endentry
-    \entry{lee_us-doe_1983}{article}{}{}
-      \name{author}{1}{}{%
-        {{un=1,uniquepart=given,hash=7fa45c91fd7cc3baa69acc2082af26c3}{%
-           family={Lee},
-           familyi={L\bibinitperiod},
-           given={Joseph\bibnamedelima D},
-           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
-           givenun=1}}%
-      }
-      \strng{namehash}{7fa45c91fd7cc3baa69acc2082af26c3}
-      \strng{fullhash}{7fa45c91fd7cc3baa69acc2082af26c3}
-      \strng{fullhashraw}{7fa45c91fd7cc3baa69acc2082af26c3}
-      \strng{bibnamehash}{7fa45c91fd7cc3baa69acc2082af26c3}
-      \strng{authorbibnamehash}{7fa45c91fd7cc3baa69acc2082af26c3}
-      \strng{authornamehash}{7fa45c91fd7cc3baa69acc2082af26c3}
-      \strng{authorfullhash}{7fa45c91fd7cc3baa69acc2082af26c3}
-      \strng{authorfullhashraw}{7fa45c91fd7cc3baa69acc2082af26c3}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{annotation}{An old paper by the {US} Department of Energy on its fusion blanket program. Similarly to the ‘Fusion Breeders’ paper mentioned previously this focuses on using fusion neutrons to breed fission isotopes. This may be useful when talking about the roots of breeder blanket technology. Shows that some of the basic principles had already been worked out while also demonstrating the amount of research required to reach our modern day understanding.}
-      \field{journaltitle}{Proceedings of the Third International Conference on Emerging Nuclear Energy Systems}
-      \field{langid}{english}
-      \field{title}{U.S.-DOE Fusion-Breeder Program: Blanket Design and System Performance}
-      \field{year}{1983}
-      \field{dateera}{ce}
-      \field{pages}{1\bibrangedash 37}
-      \range{pages}{37}
-      \verb{file}
-      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\2QLLBPZE\\Lee - U.S.-DOE FUSION-BREEDER PROGRAM BLANKET DESIGN AND SYSTEM PERFORMANCE.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://www.osti.gov/servlets/purl/6012859
-      \endverb
-      \verb{url}
-      \verb https://www.osti.gov/servlets/purl/6012859
-      \endverb
-    \endentry
-    \entry{moir_fusion_1982}{article}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=82a91d2aab73404efc69bcd3078f7bfa}{%
-           family={Moir},
-           familyi={M\bibinitperiod},
-           given={Ralph\bibnamedelima W.},
-           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{82a91d2aab73404efc69bcd3078f7bfa}
-      \strng{fullhash}{82a91d2aab73404efc69bcd3078f7bfa}
-      \strng{fullhashraw}{82a91d2aab73404efc69bcd3078f7bfa}
-      \strng{bibnamehash}{82a91d2aab73404efc69bcd3078f7bfa}
-      \strng{authorbibnamehash}{82a91d2aab73404efc69bcd3078f7bfa}
-      \strng{authornamehash}{82a91d2aab73404efc69bcd3078f7bfa}
-      \strng{authorfullhash}{82a91d2aab73404efc69bcd3078f7bfa}
-      \strng{authorfullhashraw}{82a91d2aab73404efc69bcd3078f7bfa}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{annotation}{Description of early fusion breeder technology. The technology of neutron breeding was first seen as a way of using fusion reactors to produce fissile material. Somewhat interesting conceptually, introduces some ideas that are useful for out project. Might be something we can use when talking about the state of current technology in a “here’s how far we’ve come” way.}
-      \field{issn}{0164-0313, 1572-9591}
-      \field{journaltitle}{Journal of Fusion Energy}
-      \field{langid}{english}
-      \field{month}{10}
-      \field{number}{4}
-      \field{shortjournal}{J Fusion Energ}
-      \field{title}{The fusion breeder}
-      \field{urlday}{8}
-      \field{urlmonth}{10}
-      \field{urlyear}{2025}
-      \field{volume}{2}
-      \field{year}{1982}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{351\bibrangedash 367}
-      \range{pages}{17}
-      \verb{doi}
-      \verb 10.1007/BF01063686
-      \endverb
-      \verb{file}
-      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\Z2QUVEGS\\Moir - 1982 - The fusion breeder.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://link.springer.com/10.1007/BF01063686
-      \endverb
-      \verb{url}
-      \verb http://link.springer.com/10.1007/BF01063686
-      \endverb
-      \keyw{Lit Review,Useful}
-    \endentry
-    \entry{momoshima_tritium_2022}{article}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=b458856527f9d701d1d91b9da73a83c7}{%
-           family={Momoshima},
-           familyi={M\bibinitperiod},
-           given={Noriyuki},
-           giveni={N\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{b458856527f9d701d1d91b9da73a83c7}
-      \strng{fullhash}{b458856527f9d701d1d91b9da73a83c7}
-      \strng{fullhashraw}{b458856527f9d701d1d91b9da73a83c7}
-      \strng{bibnamehash}{b458856527f9d701d1d91b9da73a83c7}
-      \strng{authorbibnamehash}{b458856527f9d701d1d91b9da73a83c7}
-      \strng{authornamehash}{b458856527f9d701d1d91b9da73a83c7}
-      \strng{authorfullhash}{b458856527f9d701d1d91b9da73a83c7}
-      \strng{authorfullhashraw}{b458856527f9d701d1d91b9da73a83c7}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Environmental tritium are natural and anthropogenic origins, the distribution has spread in atmosphere, hydrosphere and biosphere as a variety of chemical forms. The natural tritium is produced by nuclear reactions of neutron with N and O in the upper atmosphere, the production rate changes with 11-year cycle of the solar activity. The production and radioactive decay of natural tritium is balanced on the whole earth, results in the inventory of about 1 {EBq}. Anthropogenic tritium by nuclear weapons testing had been released in 1950s–1960s, at highest intensity just before the Partial Test Ban Treaty in 1963, and the total release would be 186 {EBq}. In accordance with a peaceful use of nuclear energy, tritium has been releasing to the environment as airborne and liquid effluents from nuclear power plants and nuclear fuel reprocessing plants. The release from the nuclear power plants depends on the reactor type. Other sources are the tritium production facility of military purpose and the consumer products that use tritium as luminescent energy and disposed to landfill site. Internal dose is only concerned on tritium due to low decay energy, suggesting tritium concentrations in drinking water and food are critical for dose evaluation.}
-      \field{annotation}{More up to date paper on the environmental impact and regulation of tritium. Does mention fusion and the expected increase in tritium requirements. Emphasizes the requirement of adequate tritium storage and monitoring systems.}
-      \field{day}{1}
-      \field{issn}{0144-8420}
-      \field{journaltitle}{Radiation Protection Dosimetry}
-      \field{month}{9}
-      \field{number}{13}
-      \field{shortjournal}{Radiat Prot Dosimetry}
-      \field{title}{Tritium in the Environment}
-      \field{urlday}{8}
-      \field{urlmonth}{10}
-      \field{urlyear}{2025}
-      \field{volume}{198}
-      \field{year}{2022}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{896\bibrangedash 903}
-      \range{pages}{8}
-      \verb{doi}
-      \verb 10.1093/rpd/ncac002
-      \endverb
-      \verb{file}
-      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\UCLS2UFU\\Momoshima - 2022 - TRITIUM IN THE ENVIRONMENT.pdf:application/pdf;Snapshot:C\:\\Users\\vadan\\Zotero\\storage\\NS4GVYVT\\ncac002.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1093/rpd/ncac002
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1093/rpd/ncac002
-      \endverb
-      \keyw{Environment}
-    \endentry
     \entry{nordlund2018improving}{article}{}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -1069,6 +1063,72 @@
       \verb{doi}
       \verb 10.1016/0029-5493(75)90035-7
       \endverb
+    \endentry
+    \entry{pearson_tritium_2018}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=0f6a681ed456be34e702ccc167098e2b}{%
+           family={Pearson},
+           familyi={P\bibinitperiod},
+           given={Richard\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8598682a23aa8130449b8cf5a5413918}{%
+           family={Antoniazzi},
+           familyi={A\bibinitperiod},
+           given={Armando\bibnamedelima B.},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e071c10cfb24d3bf3fe2f600483d6791}{%
+           family={Nuttall},
+           familyi={N\bibinitperiod},
+           given={William\bibnamedelima J.},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{600d94b5e3cd3d69dc0781ff2ad251d5}
+      \strng{fullhash}{600d94b5e3cd3d69dc0781ff2ad251d5}
+      \strng{fullhashraw}{600d94b5e3cd3d69dc0781ff2ad251d5}
+      \strng{bibnamehash}{600d94b5e3cd3d69dc0781ff2ad251d5}
+      \strng{authorbibnamehash}{600d94b5e3cd3d69dc0781ff2ad251d5}
+      \strng{authornamehash}{600d94b5e3cd3d69dc0781ff2ad251d5}
+      \strng{authorfullhash}{600d94b5e3cd3d69dc0781ff2ad251d5}
+      \strng{authorfullhashraw}{600d94b5e3cd3d69dc0781ff2ad251d5}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{annotation}{A paper on the state of the global tritium supply chain, highlighting the potential for future shortages and the necessity of tritium breeding technology. Current tritium production occurs in fission reactors (most prominently {CANDU}-type reactors). Useful in lit review when outlining why we need breeder blankets.}
+      \field{issn}{09203796}
+      \field{journaltitle}{Fusion Engineering and Design}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{shortjournal}{Fusion Engineering and Design}
+      \field{shorttitle}{Tritium supply and use}
+      \field{title}{Tritium supply and use: a key issue for the development of nuclear fusion energy}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{136}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1140\bibrangedash 1148}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1016/j.fusengdes.2018.04.090
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\VXKNGRTJ\\Pearson et al. - 2018 - Tritium supply and use a key issue for the development of nuclear fusion energy.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S092037961830379X
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S092037961830379X
+      \endverb
+      \keyw{Lit Review,Useful,fission}
     \endentry
     \entry{rastrigin1974systems}{book}{}{}
       \name{author}{1}{}{%
@@ -1268,6 +1328,66 @@
       \verb 10.1016/j.jnucmat.2019.01.026
       \endverb
     \endentry
+    \entry{sawan_physics_2006}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=0d82aef12060e5fe438d63706544f174}{%
+           family={Sawan},
+           familyi={S\bibinitperiod},
+           given={M.E.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ad363bbaa6e6467194df08e1a419adc9}{%
+           family={Abdou},
+           familyi={A\bibinitperiod},
+           given={M.A.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{aa626ed0ebc2de86f2e8cb42588274c3}
+      \strng{fullhash}{aa626ed0ebc2de86f2e8cb42588274c3}
+      \strng{fullhashraw}{aa626ed0ebc2de86f2e8cb42588274c3}
+      \strng{bibnamehash}{aa626ed0ebc2de86f2e8cb42588274c3}
+      \strng{authorbibnamehash}{aa626ed0ebc2de86f2e8cb42588274c3}
+      \strng{authornamehash}{aa626ed0ebc2de86f2e8cb42588274c3}
+      \strng{authorfullhash}{aa626ed0ebc2de86f2e8cb42588274c3}
+      \strng{authorfullhashraw}{aa626ed0ebc2de86f2e8cb42588274c3}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{An analysis and summary of current and future tritium breeding technology. Written in 2005 so may be slightly outdated. Useful to provide a contrast between current breeder blanket technology and that of 20 years ago.}
+      \field{issn}{09203796}
+      \field{journaltitle}{Fusion Engineering and Design}
+      \field{langid}{english}
+      \field{month}{2}
+      \field{number}{8}
+      \field{shortjournal}{Fusion Engineering and Design}
+      \field{title}{Physics and technology conditions for attaining tritium self-sufficiency for the {DT} fuel cycle}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{81}
+      \field{year}{2006}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1131\bibrangedash 1144}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1016/j.fusengdes.2005.07.035
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\4XEY854B\\Sawan and Abdou - 2006 - Physics and technology conditions for attaining tritium self-sufficiency for the DT fuel cycle.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0920379605006393
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0920379605006393
+      \endverb
+      \keyw{Lit Review}
+    \endentry
     \entry{schwefel1981numerical}{book}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=67288c65997bce06c3796cdeed061ea6}{%
@@ -1296,83 +1416,6 @@
       \field{labeltitlesource}{title}
       \field{title}{Numerical optimization of computer models}
       \field{year}{1981}
-    \endentry
-    \entry{segantin_optimisation_2020}{article}{}{}
-      \name{author}{5}{}{%
-        {{un=0,uniquepart=base,hash=258ba466cb598d470b38e0f8e659725f}{%
-           family={Segantin},
-           familyi={S\bibinitperiod},
-           given={Stefano},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7efa5ce4db84b5d8cb9702b62e1da7c0}{%
-           family={Testoni},
-           familyi={T\bibinitperiod},
-           given={Raffaella},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f9fa4ae70347efbb650f0b8f0a80a99b}{%
-           family={Hartwig},
-           familyi={H\bibinitperiod},
-           given={Zachary},
-           giveni={Z\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=11d452fd3432998ea952ec408842d7d0}{%
-           family={Whyte},
-           familyi={W\bibinitperiod},
-           given={Dennis},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=4f1fa13218f6a714f24dfbc037614a1b}{%
-           family={Zucchetti},
-           familyi={Z\bibinitperiod},
-           given={Massimo},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{3e665585c4c62752caa349c792117d54}
-      \strng{fullhash}{f4819bbf7d47d500302713496c94af80}
-      \strng{fullhashraw}{f4819bbf7d47d500302713496c94af80}
-      \strng{bibnamehash}{3e665585c4c62752caa349c792117d54}
-      \strng{authorbibnamehash}{3e665585c4c62752caa349c792117d54}
-      \strng{authornamehash}{3e665585c4c62752caa349c792117d54}
-      \strng{authorfullhash}{f4819bbf7d47d500302713496c94af80}
-      \strng{authorfullhashraw}{f4819bbf7d47d500302713496c94af80}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{annotation}{Modelling of {ARC} reactor {FLiBe} blanket using Monte Carlo simulation (not {OpenMC}). Plots {TBR} for different blanket variables, mainly focussed on wall thickness and enrichment. Somewhat limited since it only focusses on one blanket type. Still very useful as a comparison to our project.}
-      \field{issn}{09203796}
-      \field{journaltitle}{Fusion Engineering and Design}
-      \field{langid}{english}
-      \field{month}{5}
-      \field{shortjournal}{Fusion Engineering and Design}
-      \field{title}{Optimization of tritium breeding ratio in {ARC} reactor}
-      \field{urlday}{8}
-      \field{urlmonth}{10}
-      \field{urlyear}{2025}
-      \field{volume}{154}
-      \field{year}{2020}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{1\bibrangedash 5}
-      \range{pages}{5}
-      \verb{doi}
-      \verb 10.1016/j.fusengdes.2020.111531
-      \endverb
-      \verb{file}
-      \verb Full Text:C\:\\Users\\vadan\\Zotero\\storage\\DYJLISCW\\Segantin et al. - 2020 - Optimization of tritium breeding ratio in ARC reactor.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S092037962030079X
-      \endverb
-      \verb{url}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S092037962030079X
-      \endverb
-      \keyw{{FLiBe} Salt,Liquid Breeder,Lit Review,{TBR},Useful}
     \endentry
     \entry{shimwell_paramak_2021}{article}{}{}
       \name{author}{7}{}{%
@@ -1465,89 +1508,6 @@
       \verb https://f1000research.com/articles/10-27/v1
       \endverb
       \keyw{Lit Review,Useful,Jon Shimwell,Paramak}
-    \endentry
-    \entry{stornelli_ultra-fine_2024}{article}{}{}
-      \name{author}{6}{}{%
-        {{un=0,uniquepart=base,hash=37dcf790b4696c917baf25aec09c1e65}{%
-           family={Stornelli},
-           familyi={S\bibinitperiod},
-           given={Giulia},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=ebde6a86fc532be40452df0f05d761a4}{%
-           family={Di\bibnamedelima Schino},
-           familyi={D\bibinitperiod\bibinitdelim S\bibinitperiod},
-           given={Andrea},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=4cf753976c545ce077f56ec7f34538a0}{%
-           family={Montanari},
-           familyi={M\bibinitperiod},
-           given={Roberto},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=16291afd0a7d86032e11e31c0859156f}{%
-           family={Sgambetterra},
-           familyi={S\bibinitperiod},
-           given={Mirko},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=138cceb0c1c486318568750157e8896d}{%
-           family={Testani},
-           familyi={T\bibinitperiod},
-           given={Claudio},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=3dde12846fa8ddc3454a1d6d070f10f4}{%
-           family={Varone},
-           familyi={V\bibinitperiod},
-           given={Alessandra},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{712834eec8f94ec3c559f0b4cb72f4ed}
-      \strng{fullhash}{04e38a5196b1de6dc0568b57e07e1dab}
-      \strng{fullhashraw}{04e38a5196b1de6dc0568b57e07e1dab}
-      \strng{bibnamehash}{712834eec8f94ec3c559f0b4cb72f4ed}
-      \strng{authorbibnamehash}{712834eec8f94ec3c559f0b4cb72f4ed}
-      \strng{authornamehash}{712834eec8f94ec3c559f0b4cb72f4ed}
-      \strng{authorfullhash}{04e38a5196b1de6dc0568b57e07e1dab}
-      \strng{authorfullhashraw}{04e38a5196b1de6dc0568b57e07e1dab}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{annotation}{Description of {EUROFER}97 and its properties with regards to fusion reactors. Its combination of strong material properties and thermodynamic properties mean it’s the go to material for fusion reactor structures. It is also a Reduced Activation Ferritic-Martenistic ({RAFM}) steel, which makes it desirable for use in radioactive enviroments. Not a reference that is likely to be used a lot but, especially not in the lit review but useful to have.}
-      \field{issn}{22387854}
-      \field{journaltitle}{Journal of Materials Research and Technology}
-      \field{langid}{english}
-      \field{month}{11}
-      \field{shortjournal}{Journal of Materials Research and Technology}
-      \field{title}{Ultra-fine grained {EUROFER}97 steel for nuclear fusion applications}
-      \field{urlday}{7}
-      \field{urlmonth}{10}
-      \field{urlyear}{2025}
-      \field{volume}{33}
-      \field{year}{2024}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{5075\bibrangedash 5087}
-      \range{pages}{13}
-      \verb{doi}
-      \verb 10.1016/j.jmrt.2024.10.069
-      \endverb
-      \verb{file}
-      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\L9CXNQI7\\Stornelli et al. - 2024 - Ultra-fine grained EUROFER97 steel for nuclear fusion applications.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S2238785424023391
-      \endverb
-      \verb{url}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S2238785424023391
-      \endverb
-      \keyw{Lit Review,Useful}
     \endentry
   \enddatalist
 \endrefsection

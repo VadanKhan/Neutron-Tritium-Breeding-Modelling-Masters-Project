@@ -529,65 +529,6 @@
       \verb 10.1007/s11222-011-9251-5
       \endverb
     \endentry
-    \entry{hernandez_first_2018}{article}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=dc8e54a3b0fc3ca7e5da121d6f76b0cf}{%
-           family={Hernández},
-           familyi={H\bibinitperiod},
-           given={F.A.},
-           giveni={F\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f5eae0533cb9ce18236c3a81beb0b252}{%
-           family={Pereslavtsev},
-           familyi={P\bibinitperiod},
-           given={P.},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{c268037797a8dab89d86936027d6d2be}
-      \strng{fullhash}{c268037797a8dab89d86936027d6d2be}
-      \strng{fullhashraw}{c268037797a8dab89d86936027d6d2be}
-      \strng{bibnamehash}{c268037797a8dab89d86936027d6d2be}
-      \strng{authorbibnamehash}{c268037797a8dab89d86936027d6d2be}
-      \strng{authornamehash}{c268037797a8dab89d86936027d6d2be}
-      \strng{authorfullhash}{c268037797a8dab89d86936027d6d2be}
-      \strng{authorfullhashraw}{c268037797a8dab89d86936027d6d2be}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{annotation}{Review of breeder blanket materials. Comparison of tritium breeding ratios and neutron multiplication for a wide range of parameters. Very in depth and will be very useful for the literature review as an example of an ‘ideal’ version of our project.}
-      \field{issn}{09203796}
-      \field{journaltitle}{Fusion Engineering and Design}
-      \field{langid}{english}
-      \field{month}{12}
-      \field{shortjournal}{Fusion Engineering and Design}
-      \field{title}{First principles review of options for tritium breeder and neutron multiplier materials for breeding blankets in fusion reactors}
-      \field{urlday}{8}
-      \field{urlmonth}{10}
-      \field{urlyear}{2025}
-      \field{volume}{137}
-      \field{year}{2018}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{243\bibrangedash 256}
-      \range{pages}{14}
-      \verb{doi}
-      \verb 10.1016/j.fusengdes.2018.09.014
-      \endverb
-      \verb{file}
-      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\X7RN748Y\\Hernández and Pereslavtsev - 2018 - First principles review of options for tritium breeder and neutron multiplier materials for breeding.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S0920379618306392
-      \endverb
-      \verb{url}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S0920379618306392
-      \endverb
-      \keyw{Lit Review,{TBR},Useful}
-    \endentry
     \entry{kalos_monte_2008}{book}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=ef0c4912946ca6bdef4da80f2c3dba58}{%
@@ -667,8 +608,10 @@
       \strng{authornamehash}{6192821c6d34eb16f0f75f561d43cee9}
       \strng{authorfullhash}{6192821c6d34eb16f0f75f561d43cee9}
       \strng{authorfullhashraw}{6192821c6d34eb16f0f75f561d43cee9}
+      \field{extraname}{1}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{1}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -679,6 +622,47 @@
       \field{type}{MPhys Project Report}
       \field{year}{2026}
       \field{dateera}{ce}
+    \endentry
+    \entry{khan2026fusionmlcode}{software}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6192821c6d34eb16f0f75f561d43cee9}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Vadan},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Zenodo}%
+      }
+      \strng{namehash}{6192821c6d34eb16f0f75f561d43cee9}
+      \strng{fullhash}{6192821c6d34eb16f0f75f561d43cee9}
+      \strng{fullhashraw}{6192821c6d34eb16f0f75f561d43cee9}
+      \strng{bibnamehash}{6192821c6d34eb16f0f75f561d43cee9}
+      \strng{authorbibnamehash}{6192821c6d34eb16f0f75f561d43cee9}
+      \strng{authornamehash}{6192821c6d34eb16f0f75f561d43cee9}
+      \strng{authorfullhash}{6192821c6d34eb16f0f75f561d43cee9}
+      \strng{authorfullhashraw}{6192821c6d34eb16f0f75f561d43cee9}
+      \field{extraname}{2}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{VadanKhan/fusion-neutronics-modelling: MPhys Thesis Final Submission}}
+      \field{version}{v1.0.0}
+      \field{year}{2026}
+      \verb{doi}
+      \verb 10.5281/zenodo.14867425
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.5281/zenodo.14867425
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.5281/zenodo.14867425
+      \endverb
     \endentry
     \entry{kuridan_neutron_2023}{book}{}{}
       \name{author}{1}{}{%
@@ -861,7 +845,7 @@
       \field{month}{9}
       \field{number}{13}
       \field{shortjournal}{Radiat Prot Dosimetry}
-      \field{title}{{TRITIUM} {IN} {THE} {ENVIRONMENT}}
+      \field{title}{Tritium in the Environment}
       \field{urlday}{8}
       \field{urlmonth}{10}
       \field{urlyear}{2025}
@@ -1331,88 +1315,97 @@
       \endverb
       \keyw{{FLiBe} Salt,Liquid Breeder,Lit Review,{TBR},Useful}
     \endentry
-    \entry{stornelli_ultra-fine_2024}{article}{}{}
-      \name{author}{6}{}{%
-        {{un=0,uniquepart=base,hash=37dcf790b4696c917baf25aec09c1e65}{%
-           family={Stornelli},
+    \entry{shimwell_paramak_2021}{article}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=adc6aed3a154b0e67f1c857e5a3df670}{%
+           family={Shimwell},
            familyi={S\bibinitperiod},
-           given={Giulia},
-           giveni={G\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=ebde6a86fc532be40452df0f05d761a4}{%
-           family={Di\bibnamedelima Schino},
-           familyi={D\bibinitperiod\bibinitdelim S\bibinitperiod},
-           given={Andrea},
-           giveni={A\bibinitperiod},
+        {{un=0,uniquepart=base,hash=6e875752c74af9576f873423dff421a4}{%
+           family={Billingsley},
+           familyi={B\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=4cf753976c545ce077f56ec7f34538a0}{%
-           family={Montanari},
-           familyi={M\bibinitperiod},
-           given={Roberto},
+        {{un=0,uniquepart=base,hash=6559922319ccf5ba26ae3487e51ba6d5}{%
+           family={Delaporte-Mathurin},
+           familyi={D\bibinithyphendelim M\bibinitperiod},
+           given={Rémi},
            giveni={R\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=16291afd0a7d86032e11e31c0859156f}{%
-           family={Sgambetterra},
-           familyi={S\bibinitperiod},
-           given={Mirko},
+        {{un=0,uniquepart=base,hash=7942eb9e83f095a66963296bc0709dcf}{%
+           family={Morbey},
+           familyi={M\bibinitperiod},
+           given={Declan},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f98cc60c008a72578be8eb3baeef125e}{%
+           family={Bluteau},
+           familyi={B\bibinitperiod},
+           given={Matthew},
            giveni={M\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=138cceb0c1c486318568750157e8896d}{%
-           family={Testani},
-           familyi={T\bibinitperiod},
-           given={Claudio},
-           giveni={C\bibinitperiod},
+        {{un=0,uniquepart=base,hash=12537409b38acb240a21dd29c33f84f8}{%
+           family={Shriwise},
+           familyi={S\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=3dde12846fa8ddc3454a1d6d070f10f4}{%
-           family={Varone},
-           familyi={V\bibinitperiod},
-           given={Alessandra},
+        {{un=0,uniquepart=base,hash=c9f148c26a670b830c49368854f4b561}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={Andrew},
            giveni={A\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{712834eec8f94ec3c559f0b4cb72f4ed}
-      \strng{fullhash}{04e38a5196b1de6dc0568b57e07e1dab}
-      \strng{fullhashraw}{04e38a5196b1de6dc0568b57e07e1dab}
-      \strng{bibnamehash}{712834eec8f94ec3c559f0b4cb72f4ed}
-      \strng{authorbibnamehash}{712834eec8f94ec3c559f0b4cb72f4ed}
-      \strng{authornamehash}{712834eec8f94ec3c559f0b4cb72f4ed}
-      \strng{authorfullhash}{04e38a5196b1de6dc0568b57e07e1dab}
-      \strng{authorfullhashraw}{04e38a5196b1de6dc0568b57e07e1dab}
+      \strng{namehash}{894867990c9fa0062f92552878b83788}
+      \strng{fullhash}{e7be967d1da7e04f0e7711f37f30eeb2}
+      \strng{fullhashraw}{e7be967d1da7e04f0e7711f37f30eeb2}
+      \strng{bibnamehash}{894867990c9fa0062f92552878b83788}
+      \strng{authorbibnamehash}{894867990c9fa0062f92552878b83788}
+      \strng{authornamehash}{894867990c9fa0062f92552878b83788}
+      \strng{authorfullhash}{e7be967d1da7e04f0e7711f37f30eeb2}
+      \strng{authorfullhashraw}{e7be967d1da7e04f0e7711f37f30eeb2}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{annotation}{Description of {EUROFER}97 and its properties with regards to fusion reactors. Its combination of strong material properties and thermodynamic properties mean it’s the go to material for fusion reactor structures. It is also a Reduced Activation Ferritic-Martenistic ({RAFM}) steel, which makes it desirable for use in radioactive enviroments. Not a reference that is likely to be used a lot but, especially not in the lit review but useful to have.}
-      \field{issn}{22387854}
-      \field{journaltitle}{Journal of Materials Research and Technology}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{During the conceptual design process of fusion reactors it is useful to rapidly prototype different design concepts and assess their suitability against a range of high level requirements. Rapid prototyping allows the 'fail early' mantra of other fields to be applied to engineering design. Furthermore, the rapid generation of low fidelity analysis allows fast exploration of design space, which enables better decisions to be made during concept selection and the detailed design phase. The Paramak is an open-source tool that aims to provide automated parameter driven 3D {CAD} models for fusion reactor components and magnetic fusion reactors. The geometry produced is compatible with several analysis workflows and this allows iterative automated model building and analysis to help steer the design concept optimisation process. The Paramak uses {CadQuery} 2 to create the 3D {CAD} model. The Paramak framework is used to create a few example reactor configurations including: a spherical reactor, a regular large radius tokamak and a compact submersion tank reactor. Input parameters for the various reactors that the Paramak can generate generally fall into three categories: continuous ranges such as blanket thickness, integer ranges such as number of toroidal field coils and categorical parameters such as type of divertor. The Paramak facilitates parameter studies where users can investigate the impact of input design parameters on the reactor performance. The use of modern software practices allows the geometry to be continuously tested in analysis workflows to ensure it is fit for purpose. The generation of output metrics from input parameters lends itself to the use of data science and machine learning approaches in order to steer the design. The Paramak provides rapid construction of analysis ready {CAD} in a manner that allows the designer to save time when exploring the design space for design studies and facilitate automated generative design.}
+      \field{annotation}{A paper on Paramak, an automated geometry package for modelling fusion reactors. This is a part of the neutronics workshop created by John Shimwell.}
+      \field{day}{18}
+      \field{issn}{2046-1402}
+      \field{journaltitle}{F1000Research}
       \field{langid}{english}
-      \field{month}{11}
-      \field{shortjournal}{Journal of Materials Research and Technology}
-      \field{title}{Ultra-fine grained {EUROFER}97 steel for nuclear fusion applications}
+      \field{month}{1}
+      \field{shortjournal}{F1000Res}
+      \field{shorttitle}{The Paramak}
+      \field{title}{The Paramak: automated parametric geometry construction for fusion reactor designs.}
       \field{urlday}{7}
       \field{urlmonth}{10}
       \field{urlyear}{2025}
-      \field{volume}{33}
-      \field{year}{2024}
+      \field{volume}{10}
+      \field{year}{2021}
       \field{dateera}{ce}
       \field{urldateera}{ce}
-      \field{pages}{5075\bibrangedash 5087}
-      \range{pages}{13}
+      \field{pages}{27}
+      \range{pages}{1}
       \verb{doi}
-      \verb 10.1016/j.jmrt.2024.10.069
+      \verb 10.12688/f1000research.28224.1
       \endverb
       \verb{file}
-      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\L9CXNQI7\\Stornelli et al. - 2024 - Ultra-fine grained EUROFER97 steel for nuclear fusion applications.pdf:application/pdf
+      \verb Full Text:C\:\\Users\\vadan\\Zotero\\storage\\4R8UZ5KD\\Shimwell et al. - 2021 - The Paramak automated parametric geometry construction for fusion reactor designs..pdf:application/pdf
       \endverb
       \verb{urlraw}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S2238785424023391
+      \verb https://f1000research.com/articles/10-27/v1
       \endverb
       \verb{url}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S2238785424023391
+      \verb https://f1000research.com/articles/10-27/v1
       \endverb
-      \keyw{Lit Review,Useful}
+      \keyw{Lit Review,Useful,Jon Shimwell,Paramak}
     \endentry
   \enddatalist
 \endrefsection
