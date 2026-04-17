@@ -1,19 +1,19 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'thesis2.blg'
-[94] biber-MSWIN64:342> INFO - === 
-[135] Biber.pm:421> INFO - Reading 'thesis2.bcf'
-[224] Biber.pm:1002> INFO - Found 23 citekeys in bib section 0
-[234] Biber.pm:4487> INFO - Processing section 0
-[243] Biber.pm:4678> INFO - Looking for bibtex file 'thesis2.bib' for section 0
-[324] bibtex.pm:1713> INFO - LaTeX decoding ...
-[507] bibtex.pm:1519> INFO - Found BibTeX data source 'thesis2.bib'
-[694] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[694] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[695] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[695] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
-[718] bbl.pm:676> INFO - Writing 'thesis2.bbl' with encoding 'UTF-8'
-[769] bbl.pm:779> INFO - Output to thesis2.bbl
-[770] Biber.pm:132> WARN - ISBN '978-3-527-40760-6 978-3-527-62621-2' in entry 'kalos_monte_2008' is invalid - run biber with '--validate_datamodel' for details.
-[770] Biber.pm:132> WARN - ISBN '978-3-031-26931-8 978-3-031-26932-5' in entry 'kuridan_neutron_2023' is invalid - run biber with '--validate_datamodel' for details.
-[770] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\vadan\AppData\Local\Temp\biber_tmp_Nvuk\90d9400920b2fef7669cdc9be6cb124e_54476.utf8, line 2132, warning: undefined macro "april"
-[770] Biber.pm:134> INFO - WARNINGS: 3
+[86] biber-MSWIN64:342> INFO - === 
+[121] Biber.pm:421> INFO - Reading 'thesis2.bcf'
+[206] Biber.pm:1002> INFO - Found 36 citekeys in bib section 0
+[215] Biber.pm:4487> INFO - Processing section 0
+[223] Biber.pm:4678> INFO - Looking for bibtex file 'thesis2.bib' for section 0
+[289] bibtex.pm:1713> INFO - LaTeX decoding ...
+[467] bibtex.pm:1519> INFO - Found BibTeX data source 'thesis2.bib'
+[706] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[706] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[706] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[706] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[738] bbl.pm:676> INFO - Writing 'thesis2.bbl' with encoding 'UTF-8'
+[799] bbl.pm:779> INFO - Output to thesis2.bbl
+[799] Biber.pm:132> WARN - ISBN '978-3-527-40760-6 978-3-527-62621-2' in entry 'kalos_monte_2008' is invalid - run biber with '--validate_datamodel' for details.
+[799] Biber.pm:132> WARN - ISBN '978-3-031-26931-8 978-3-031-26932-5' in entry 'kuridan_neutron_2023' is invalid - run biber with '--validate_datamodel' for details.
+[799] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\vadan\AppData\Local\Temp\biber_tmp_LBfz\90d9400920b2fef7669cdc9be6cb124e_37748.utf8, line 2253, warning: undefined macro "april"
+[799] Biber.pm:134> INFO - WARNINGS: 3

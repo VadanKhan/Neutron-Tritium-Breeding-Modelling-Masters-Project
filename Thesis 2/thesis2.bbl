@@ -19,6 +19,63 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
+    \entry{boccaccini_demo_2014}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=3417b4616f421ca1d41a13d50ddadcac}{%
+           family={Boccaccini},
+           familyi={B\bibinitperiod},
+           given={L\bibnamedelima V},
+           giveni={L\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=afdc8990660ecdd9e16837395746fec0}{%
+           family={Aiello},
+           familyi={A\bibinitperiod},
+           given={G},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=85bc1325882c8d8adb49e72263530df4}{%
+           family={Aubella},
+           familyi={A\bibinitperiod},
+           given={F},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=76be944facf4401c39dd99c65f1e2d45}{%
+           family={Bachmann},
+           familyi={B\bibinitperiod},
+           given={C},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{0049f21bde53b271f54c41c02d3ca061}
+      \strng{fullhash}{7e2bbdff94399e8ab3b2ef9651289beb}
+      \strng{fullhashraw}{7e2bbdff94399e8ab3b2ef9651289beb}
+      \strng{bibnamehash}{0049f21bde53b271f54c41c02d3ca061}
+      \strng{authorbibnamehash}{0049f21bde53b271f54c41c02d3ca061}
+      \strng{authornamehash}{0049f21bde53b271f54c41c02d3ca061}
+      \strng{authorfullhash}{7e2bbdff94399e8ab3b2ef9651289beb}
+      \strng{authorfullhashraw}{7e2bbdff94399e8ab3b2ef9651289beb}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Nuclear Materials}
+      \field{number}{1-3}
+      \field{title}{Materials and design of the {European} {DEMO} blankets}
+      \field{volume}{455}
+      \field{year}{2014}
+      \field{pages}{136\bibrangedash 140}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1016/j.jnucmat.2014.05.048
+      \endverb
+    \endentry
     \entry{brown_endfb-viii0_2018}{article}{}{}
       \name{author}{70}{}{%
         {{un=0,uniquepart=base,hash=16fd8b75f1688a0dac58ddb9ba8ba6db}{%
@@ -486,6 +543,68 @@
       \verb https://linkinghub.elsevier.com/retrieve/pii/S0090375218300206
       \endverb
     \endentry
+    \entry{del_nevo_wcll_2019}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=3cc7d1c0f00290c9501cf59290d7fc77}{%
+           family={Del\bibnamedelima Nevo},
+           familyi={D\bibinitperiod\bibinitdelim N\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1d86e38de7201c84a57cbbd8b3e5658b}{%
+           family={Arena},
+           familyi={A\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0b63e6a37a7cfe5d09988fc8f5fb19c8}{%
+           family={Caruso},
+           familyi={C\bibinitperiod},
+           given={G},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=df106404a5f47fde78acb143378801f1}{%
+           family={Di\bibnamedelima Maio},
+           familyi={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={P\bibnamedelima A},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=70b90cc19ff101093a3f334b8cd3ea36}{%
+           family={Eboli},
+           familyi={E\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{123a70f947110a5a1d0ef0910076063c}
+      \strng{fullhash}{ddc54511c054672613c6bb2a88f50bd9}
+      \strng{fullhashraw}{ddc54511c054672613c6bb2a88f50bd9}
+      \strng{bibnamehash}{123a70f947110a5a1d0ef0910076063c}
+      \strng{authorbibnamehash}{123a70f947110a5a1d0ef0910076063c}
+      \strng{authornamehash}{123a70f947110a5a1d0ef0910076063c}
+      \strng{authorfullhash}{ddc54511c054672613c6bb2a88f50bd9}
+      \strng{authorfullhashraw}{ddc54511c054672613c6bb2a88f50bd9}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Fusion Engineering and Design}
+      \field{title}{Recent progress in developing a feasible and integrated conceptual design of the {WCLL} breeding blanket in {Europe}}
+      \field{volume}{146}
+      \field{year}{2019}
+      \field{pages}{1805\bibrangedash 1809}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1016/j.fusengdes.2019.03.040
+      \endverb
+    \endentry
     \entry{emmerich2005single}{inproceedings}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=617ee008bec77f813d11dbc7d61e478f}{%
@@ -535,6 +654,90 @@
       \verb 10.1109/TEVC.2005.859463
       \endverb
     \endentry
+    \entry{federici_european_2017}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=c275eff5c8ed440e431b48f2d0cc3b30}{%
+           family={Federici},
+           familyi={F\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a3ac03db45a70dd9c8cedb634da31529}{%
+           family={Biel},
+           familyi={B\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=df5a27f1c2f3645b3e161fb332b17e30}{%
+           family={Gilbert},
+           familyi={G\bibinitperiod},
+           given={M.R.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=597b56450213d3715378068e4277aa9f}{%
+           family={Kemp},
+           familyi={K\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a293c9a43bca7f340779a31a0690af95}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=77b14870003df20100217e10f6b2a3f2}{%
+           family={Wenninger},
+           familyi={W\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{934d6fc2514de3d7506461c74d64c6a6}
+      \strng{fullhash}{b0eb010c52f66affd38ad85e42384f3e}
+      \strng{fullhashraw}{b0eb010c52f66affd38ad85e42384f3e}
+      \strng{bibnamehash}{934d6fc2514de3d7506461c74d64c6a6}
+      \strng{authorbibnamehash}{934d6fc2514de3d7506461c74d64c6a6}
+      \strng{authornamehash}{934d6fc2514de3d7506461c74d64c6a6}
+      \strng{authorfullhash}{b0eb010c52f66affd38ad85e42384f3e}
+      \strng{authorfullhashraw}{b0eb010c52f66affd38ad85e42384f3e}
+      \field{extraname}{1}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Exploration of design strategy for the {DEMO} reactor from a materials point of view. Lays out the requirements of the {DEMO} reactor, how they differ from current {ITER} design and the necessary steps to ensure the project is delivered effectively. Pages 18-20 focus on breeder blankets, going into detail on design requirements and the differences between solid and liquid breeders. A pretty good review but it would be worth finding something more recent, especially since it talks about narrowing down blanket designs by 2020.}
+      \field{day}{1}
+      \field{issn}{0029-5515, 1741-4326}
+      \field{journaltitle}{Nuclear Fusion}
+      \field{month}{9}
+      \field{number}{9}
+      \field{shortjournal}{Nucl. Fusion}
+      \field{title}{European {DEMO} design strategy and consequences for materials}
+      \field{urlday}{7}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{57}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 26}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1088/1741-4326/57/9/092002
+      \endverb
+      \verb{file}
+      \verb Full Text:C\:\\Users\\vadan\\Zotero\\storage\\EHNFZFD9\\Federici et al. - 2017 - European DEMO design strategy and consequences for materials.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://iopscience.iop.org/article/10.1088/1741-4326/57/9/092002
+      \endverb
+      \verb{url}
+      \verb https://iopscience.iop.org/article/10.1088/1741-4326/57/9/092002
+      \endverb
+    \endentry
     \entry{federici_overview_2019}{article}{}{}
       \name{author}{6}{}{%
         {{un=0,uniquepart=base,hash=c275eff5c8ed440e431b48f2d0cc3b30}{%
@@ -582,6 +785,7 @@
       \strng{authornamehash}{934d6fc2514de3d7506461c74d64c6a6}
       \strng{authorfullhash}{94ca76fdff2fde7968f16377761b0791}
       \strng{authorfullhashraw}{94ca76fdff2fde7968f16377761b0791}
+      \field{extraname}{2}
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{extradatescope}{labelyear}
@@ -781,6 +985,89 @@
       \endverb
       \keyw{Lit Review,{TBR},Useful}
     \endentry
+    \entry{humphrey_machine_2023}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=def0e2caed7e6b1581120a2d2142e835}{%
+           family={Humphrey},
+           familyi={H\bibinitperiod},
+           given={Luke},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{bfe349a424dbac527229ad31c91dae5d}
+      \strng{fullhash}{bfe349a424dbac527229ad31c91dae5d}
+      \strng{fullhashraw}{bfe349a424dbac527229ad31c91dae5d}
+      \strng{bibnamehash}{bfe349a424dbac527229ad31c91dae5d}
+      \strng{authorbibnamehash}{bfe349a424dbac527229ad31c91dae5d}
+      \strng{authornamehash}{bfe349a424dbac527229ad31c91dae5d}
+      \strng{authorfullhash}{bfe349a424dbac527229ad31c91dae5d}
+      \strng{authorfullhashraw}{bfe349a424dbac527229ad31c91dae5d}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Plasma Physics and Controlled Fusion}
+      \field{title}{Machine learning techniques for sequential learning engineering design optimisation}
+      \field{volume}{66}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.1088/1361-6587/ad0b05
+      \endverb
+    \endentry
+    \entry{humphrey_accelerating_2026}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=def0e2caed7e6b1581120a2d2142e835}{%
+           family={Humphrey},
+           familyi={H\bibinitperiod},
+           given={Luke},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ef4cee95106ff43c352ebf1138a27051}{%
+           family={Brooks},
+           familyi={B\bibinitperiod},
+           given={Helen},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b956909e9dc04cce92c37587c35cc734}{%
+           family={Mungale},
+           familyi={M\bibinitperiod},
+           given={Siddharth},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Frontiers Media SA}%
+      }
+      \strng{namehash}{d6b3ff148e6634c839bd481408f005fd}
+      \strng{fullhash}{d6b3ff148e6634c839bd481408f005fd}
+      \strng{fullhashraw}{d6b3ff148e6634c839bd481408f005fd}
+      \strng{bibnamehash}{d6b3ff148e6634c839bd481408f005fd}
+      \strng{authorbibnamehash}{d6b3ff148e6634c839bd481408f005fd}
+      \strng{authornamehash}{d6b3ff148e6634c839bd481408f005fd}
+      \strng{authorfullhash}{d6b3ff148e6634c839bd481408f005fd}
+      \strng{authorfullhashraw}{d6b3ff148e6634c839bd481408f005fd}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in Nuclear Engineering}
+      \field{title}{Accelerating the engineering design of breeder blankets with parametric optimisation and sequential learning}
+      \field{year}{2026}
+      \verb{doi}
+      \verb 10.3389/fnuen.2025.1694684
+      \endverb
+    \endentry
     \entry{kalos_monte_2008}{book}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=ef0c4912946ca6bdef4da80f2c3dba58}{%
@@ -970,6 +1257,155 @@
       \verb https://link.springer.com/10.1007/978-3-031-26932-5
       \endverb
       \keyw{Lit Review,Useful}
+    \endentry
+    \entry{lord_fusing_2024}{article}{}{}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=475f6187e051884ebdc706dcae7f0f2b}{%
+           family={Lord},
+           familyi={L\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1a90f66e040930b84ce3ce50ff8513ac}{%
+           family={Bennett},
+           familyi={B\bibinitperiod},
+           given={Iryna},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1f660958316b1a2b3933edf6eb516fde}{%
+           family={Harrington},
+           familyi={H\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=53d68c0293c46b2df27d7681d26c4c81}{%
+           family={Cooper},
+           familyi={C\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=610c3c07ed95806da825cfcdfe16857c}{%
+           family={Lee-Lane},
+           familyi={L\bibinithyphendelim L\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1b6b82b876483947834e1d096c00bdec}{%
+           family={Cureton},
+           familyi={C\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aa824fe8362fb0c98e2195dfc3e59ea8}{%
+           family={Olde},
+           familyi={O\bibinitperiod},
+           given={Cameron},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ce57b8af343352c40b9c45a4eec83f32}{%
+           family={Thompson},
+           familyi={T\bibinitperiod},
+           given={Megan},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1ee8351996b4a93af03c32826999d2af}{%
+           family={Jayasundara},
+           familyi={J\bibinitperiod},
+           given={Dinusha},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=53c6c256821827b569c7fb4f4b5535b8}{%
+           family={Meatyard},
+           familyi={M\bibinitperiod},
+           given={Toby},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8efb4f686cc6d2888cfbec9969d05fb3}
+      \strng{fullhash}{3d7dd019a79f558acf7653c660b14187}
+      \strng{fullhashraw}{3d7dd019a79f558acf7653c660b14187}
+      \strng{bibnamehash}{8efb4f686cc6d2888cfbec9969d05fb3}
+      \strng{authorbibnamehash}{8efb4f686cc6d2888cfbec9969d05fb3}
+      \strng{authornamehash}{8efb4f686cc6d2888cfbec9969d05fb3}
+      \strng{authorfullhash}{3d7dd019a79f558acf7653c660b14187}
+      \strng{authorfullhashraw}{3d7dd019a79f558acf7653c660b14187}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Ensuring tritium fuel self-sufficiency while maintaining continuous and high-specification fuel flow to the tokamak via a low tritium inventory and controllable fuel cycle is a significant challenge to the {STEP} plant design. Effective and high-quality fuelling and exhaust design is required to sustain and control a stable plasma, whereas fuel sufficiency is required to prevent depletion of available tritium supply. Concerns regarding the lack of tritium availability preventing continuous tritium import are countered by breeding, where highly energetic neutrons from the core fusion reactions interact with lithium atoms suspended in the surrounding breeder blanket to produce tritium. The compact nature of {STEP} prohibits the integration of inboard breeder blankets posing a significant challenge for the design team looking to ensure more tritium is bred and made available than consumed within the core plasma. This paper outlines how purposeful technology selection and system architecting has converged on the outline of a conceivable and tritium-capable fuel cycle and breeder blanket design. Before introducing the {STEP} fuel cycle design outline and summarizing the approach undertaken to address the challenges facing plasma fuelling, key aspects of fuel self-sufficiency are discussed. This includes discussing a proposed helium-cooled liquid lithium breeder blanket and possible technology options for tritium extraction from lithium. Lastly, there is a brief process modelling overview, which emphasizes the central contribution of various employed modelling methods. Reflections on the presented fuel cycle design outline conclude that substantial development work is still required to realize a continuous tritium fuel cycle design and overcome the major challenges posed by tritium and lithium handling. Reflections on the presented breeder blanket design proposal conclude that while many substantial risks and blockers remain to achieve fuel self-sufficiency, high breeding ratios are expected to be achievable with a compact spherical tokamak configuration. Nonetheless, it is recognized that further consideration is required to ensure that the selection of liquid lithium as a breeder medium provides the overall simplest route to a self-sufficient and realizable design. This article is part of the theme issue ‘Delivering Fusion Energy – The Spherical Tokamak for Energy Production ({STEP})’ .}
+      \field{annotation}{Comprehensive paper on the steps to achieving tritium self-sufficiency in the {STEP} reactor. Outline of the different technologies required. Might be useful in lit review but likely just a repetition of other strategy documents.}
+      \field{day}{9}
+      \field{issn}{1364-503X, 1471-2962}
+      \field{journaltitle}{Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{2280}
+      \field{shortjournal}{Phil. Trans. R. Soc. A.}
+      \field{title}{Fusing together an outline design for sustained fuelling and tritium self-sufficiency}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{382}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 15}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1098/rsta.2023.0410
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:C\:\\Users\\vadan\\Zotero\\storage\\CFIXI3E4\\Lord et al. - 2024 - Fusing together an outline design for sustained fuelling and tritium self-sufficiency.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://royalsocietypublishing.org/doi/10.1098/rsta.2023.0410
+      \endverb
+      \verb{url}
+      \verb https://royalsocietypublishing.org/doi/10.1098/rsta.2023.0410
+      \endverb
+      \keyw{Lit Review,Useful}
+    \endentry
+    \entry{manek_fast_2023}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=adc2815bb0bb1f23073712321b5479b0}{%
+           family={Mánek},
+           familyi={M\bibinitperiod},
+           given={Petr},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{122d72aabbbcb1d9c868343f7f112389}
+      \strng{fullhash}{122d72aabbbcb1d9c868343f7f112389}
+      \strng{fullhashraw}{122d72aabbbcb1d9c868343f7f112389}
+      \strng{bibnamehash}{122d72aabbbcb1d9c868343f7f112389}
+      \strng{authorbibnamehash}{122d72aabbbcb1d9c868343f7f112389}
+      \strng{authornamehash}{122d72aabbbcb1d9c868343f7f112389}
+      \strng{authorfullhash}{122d72aabbbcb1d9c868343f7f112389}
+      \strng{authorfullhashraw}{122d72aabbbcb1d9c868343f7f112389}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Machine Learning: Science and Technology}
+      \field{number}{1}
+      \field{title}{Fast regression of the tritium breeding ratio in fusion reactors}
+      \field{volume}{4}
+      \field{year}{2023}
+      \field{pages}{015008}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/2632-2153/acb6fb
+      \endverb
     \endentry
     \entry{nordlund2018improving}{article}{}{}
       \true{moreauthor}
@@ -1179,6 +1615,56 @@
       \endverb
       \keyw{Lit Review,Useful,fission}
     \endentry
+    \entry{qiu_neutronic_2018}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=aa083d03c02d59d39b2afb509692d4f8}{%
+           family={Qiu},
+           familyi={Q\bibinitperiod},
+           given={Y},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=299b9a25f5bd97c358ecf21f51232bb7}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={L},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3417b4616f421ca1d41a13d50ddadcac}{%
+           family={Boccaccini},
+           familyi={B\bibinitperiod},
+           given={L\bibnamedelima V},
+           giveni={L\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{bb638058bb8a9017c2c0d29915baa9b3}
+      \strng{fullhash}{bb638058bb8a9017c2c0d29915baa9b3}
+      \strng{fullhashraw}{bb638058bb8a9017c2c0d29915baa9b3}
+      \strng{bibnamehash}{bb638058bb8a9017c2c0d29915baa9b3}
+      \strng{authorbibnamehash}{bb638058bb8a9017c2c0d29915baa9b3}
+      \strng{authornamehash}{bb638058bb8a9017c2c0d29915baa9b3}
+      \strng{authorfullhash}{bb638058bb8a9017c2c0d29915baa9b3}
+      \strng{authorfullhashraw}{bb638058bb8a9017c2c0d29915baa9b3}
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Fusion Engineering and Design}
+      \field{title}{Neutronic optimization and multi-physics analyses of the {HCPB} breeder blanket for {EU} {DEMO}}
+      \field{volume}{136}
+      \field{year}{2018}
+      \field{pages}{920\bibrangedash 925}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1016/j.fusengdes.2018.04.041
+      \endverb
+    \endentry
     \entry{rasmussen2006gaussian}{book}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=58d90ed7b7348c7a5a9b4a2a8f46df7b}{%
@@ -1370,7 +1856,7 @@
       \verb 10.1093/comjnl/3.3.175
       \endverb
     \endentry
-    \entry{saha2019application}{article}{}{}
+    \entry{saha_application_2019}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=e98e6d8bd98c9b3619e0d1f5e6c89aff}{%
            family={Saha},
@@ -1707,6 +2193,390 @@
       \endverb
       \verb{url}
       \verb https://proceedings.neurips.cc/paper/2012/file/05311655a15b75fab86956663e1819cd-Paper.pdf
+      \endverb
+    \endentry
+    \entry{sorbom_arc_2015}{article}{}{}
+      \name{author}{13}{}{%
+        {{un=0,uniquepart=base,hash=7577aa5173737859a1ab6eb10728e03c}{%
+           family={Sorbom},
+           familyi={S\bibinitperiod},
+           given={B.N.},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e0c9664a5fc11d6cccd46a96da9d9207}{%
+           family={Ball},
+           familyi={B\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d46777221075130fdff7d502275c469b}{%
+           family={Palmer},
+           familyi={P\bibinitperiod},
+           given={T.R.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=74bd25fa1dfb79c1d8408a76be5533b9}{%
+           family={Mangiarotti},
+           familyi={M\bibinitperiod},
+           given={F.J.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e186eaea43c6164d5568f9b2ce2cf392}{%
+           family={Sierchio},
+           familyi={S\bibinitperiod},
+           given={J.M.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8401881b4d9a07f7a48a5946120c0982}{%
+           family={Bonoli},
+           familyi={B\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8aa2a4085c1d50228632b8436526f970}{%
+           family={Kasten},
+           familyi={K\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d7c4bed875383e47d897bfe6fd3adff7}{%
+           family={Sutherland},
+           familyi={S\bibinitperiod},
+           given={D.A.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=66a17c67327d2d76e177be9360dbdfa1}{%
+           family={Barnard},
+           familyi={B\bibinitperiod},
+           given={H.S.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=745dd6dbd9c1500c5903202ce004c82b}{%
+           family={Haakonsen},
+           familyi={H\bibinitperiod},
+           given={C.B.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=65095501457fbfd1d1f7816acbc2bd76}{%
+           family={Goh},
+           familyi={G\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3498e760425a27f52991c80636c7f632}{%
+           family={Sung},
+           familyi={S\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=771cd24e62c04ddcb57bdc566f2594f3}{%
+           family={Whyte},
+           familyi={W\bibinitperiod},
+           given={D.G.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{99a3b69e3dc33810b0301b57e85cdb5d}
+      \strng{fullhash}{1b7759933ce4f94ac1f2f809d8deab14}
+      \strng{fullhashraw}{1b7759933ce4f94ac1f2f809d8deab14}
+      \strng{bibnamehash}{99a3b69e3dc33810b0301b57e85cdb5d}
+      \strng{authorbibnamehash}{99a3b69e3dc33810b0301b57e85cdb5d}
+      \strng{authornamehash}{99a3b69e3dc33810b0301b57e85cdb5d}
+      \strng{authorfullhash}{1b7759933ce4f94ac1f2f809d8deab14}
+      \strng{authorfullhashraw}{1b7759933ce4f94ac1f2f809d8deab14}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{annotation}{Compact reactor designed to be cheaper and more efficient than larger tokomaks. Designed by {MIT}. This paper lays out the basic design elements. Uses an all liquid molten salt blanket ({FLiBe}). Very detailed, good reference for talking about {US} projects. Also provides an interesting ‘alternative’ to the very standard reactor designs explored elsewhere.}
+      \field{issn}{09203796}
+      \field{journaltitle}{Fusion Engineering and Design}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{shortjournal}{Fusion Engineering and Design}
+      \field{shorttitle}{{ARC}}
+      \field{title}{{ARC}: A compact, high-field, fusion nuclear science facility and demonstration power plant with demountable magnets}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{100}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{378\bibrangedash 405}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1016/j.fusengdes.2015.07.008
+      \endverb
+      \verb{file}
+      \verb Full Text:C\:\\Users\\vadan\\Zotero\\storage\\GQ82J2QC\\Sorbom et al. - 2015 - ARC A compact, high-field, fusion nuclear science facility and demonstration power plant with demou.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0920379615302337
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0920379615302337
+      \endverb
+      \keyw{Liquid Breeder,Lit Review,Useful,{FLiBe} Salt}
+    \endentry
+    \entry{stornelli_ultra-fine_2024}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=37dcf790b4696c917baf25aec09c1e65}{%
+           family={Stornelli},
+           familyi={S\bibinitperiod},
+           given={Giulia},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ebde6a86fc532be40452df0f05d761a4}{%
+           family={Di\bibnamedelima Schino},
+           familyi={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4cf753976c545ce077f56ec7f34538a0}{%
+           family={Montanari},
+           familyi={M\bibinitperiod},
+           given={Roberto},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=16291afd0a7d86032e11e31c0859156f}{%
+           family={Sgambetterra},
+           familyi={S\bibinitperiod},
+           given={Mirko},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=138cceb0c1c486318568750157e8896d}{%
+           family={Testani},
+           familyi={T\bibinitperiod},
+           given={Claudio},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3dde12846fa8ddc3454a1d6d070f10f4}{%
+           family={Varone},
+           familyi={V\bibinitperiod},
+           given={Alessandra},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{712834eec8f94ec3c559f0b4cb72f4ed}
+      \strng{fullhash}{04e38a5196b1de6dc0568b57e07e1dab}
+      \strng{fullhashraw}{04e38a5196b1de6dc0568b57e07e1dab}
+      \strng{bibnamehash}{712834eec8f94ec3c559f0b4cb72f4ed}
+      \strng{authorbibnamehash}{712834eec8f94ec3c559f0b4cb72f4ed}
+      \strng{authornamehash}{712834eec8f94ec3c559f0b4cb72f4ed}
+      \strng{authorfullhash}{04e38a5196b1de6dc0568b57e07e1dab}
+      \strng{authorfullhashraw}{04e38a5196b1de6dc0568b57e07e1dab}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Description of {EUROFER}97 and its properties with regards to fusion reactors. Its combination of strong material properties and thermodynamic properties mean it’s the go to material for fusion reactor structures. It is also a Reduced Activation Ferritic-Martenistic ({RAFM}) steel, which makes it desirable for use in radioactive enviroments. Not a reference that is likely to be used a lot but, especially not in the lit review but useful to have.}
+      \field{issn}{22387854}
+      \field{journaltitle}{Journal of Materials Research and Technology}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{shortjournal}{Journal of Materials Research and Technology}
+      \field{title}{Ultra-fine grained {EUROFER}97 steel for nuclear fusion applications}
+      \field{urlday}{7}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{33}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{5075\bibrangedash 5087}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1016/j.jmrt.2024.10.069
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\L9CXNQI7\\Stornelli et al. - 2024 - Ultra-fine grained EUROFER97 steel for nuclear fusion applications.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S2238785424023391
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S2238785424023391
+      \endverb
+      \keyw{Lit Review,Useful}
+    \endentry
+    \entry{warmer_overview_2024}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=c202a605c4dd99cd0775a4be5756b9a1}{%
+           family={Warmer},
+           familyi={W\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c4768297b7c4066414d88bde620c5ef1}{%
+           family={Alguacil},
+           familyi={A\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7e3c8ed16fb59974659b6d6a89470c32}{%
+           family={Biek},
+           familyi={B\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7e8a19b2683a3ae714d6a4ae56d54a25}{%
+           family={Bogaarts},
+           familyi={B\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ca03c97a636e95e4a7d945d6652e2095}{%
+           family={Bongiovı̀},
+           familyi={B\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{496bb1759aaf789a6986760971af9606}
+      \strng{fullhash}{63d65c4d80e159a4aae233cc62c0143c}
+      \strng{fullhashraw}{63d65c4d80e159a4aae233cc62c0143c}
+      \strng{bibnamehash}{496bb1759aaf789a6986760971af9606}
+      \strng{authorbibnamehash}{496bb1759aaf789a6986760971af9606}
+      \strng{authornamehash}{496bb1759aaf789a6986760971af9606}
+      \strng{authorfullhash}{63d65c4d80e159a4aae233cc62c0143c}
+      \strng{authorfullhashraw}{63d65c4d80e159a4aae233cc62c0143c}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Fusion Engineering and Design}
+      \field{title}{Overview of {European} efforts and advances in {Stellarator} power plant studies}
+      \field{volume}{202}
+      \field{year}{2024}
+      \field{pages}{114386}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.fusengdes.2024.114386
+      \endverb
+    \endentry
+    \entry{you_european_2016}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=69d9a0c41770ad9f7d0c367e9e44095f}{%
+           family={You},
+           familyi={Y\bibinitperiod},
+           given={J-H},
+           giveni={J\bibinithyphendelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c27f6ccc671d44d340362501a9301538}{%
+           family={Mazzone},
+           familyi={M\bibinitperiod},
+           given={G},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b6b735f5ff918bf95160bd6912b0735e}{%
+           family={Visca},
+           familyi={V\bibinitperiod},
+           given={E},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=76be944facf4401c39dd99c65f1e2d45}{%
+           family={Bachmann},
+           familyi={B\bibinitperiod},
+           given={C},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3417b4616f421ca1d41a13d50ddadcac}{%
+           family={Boccaccini},
+           familyi={B\bibinitperiod},
+           given={L\bibnamedelima V},
+           giveni={L\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{ed0eb1308d6d965a6b317aa7c4e8ffb8}
+      \strng{fullhash}{29d83392fb26ff7ed0c42ee678926847}
+      \strng{fullhashraw}{29d83392fb26ff7ed0c42ee678926847}
+      \strng{bibnamehash}{ed0eb1308d6d965a6b317aa7c4e8ffb8}
+      \strng{authorbibnamehash}{ed0eb1308d6d965a6b317aa7c4e8ffb8}
+      \strng{authornamehash}{ed0eb1308d6d965a6b317aa7c4e8ffb8}
+      \strng{authorfullhash}{29d83392fb26ff7ed0c42ee678926847}
+      \strng{authorfullhashraw}{29d83392fb26ff7ed0c42ee678926847}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Fusion Engineering and Design}
+      \field{title}{European baseline concept of the {DEMO} first wall: Design and manufacturing technologies}
+      \field{volume}{109}
+      \field{year}{2016}
+      \field{pages}{1598\bibrangedash 1603}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1016/j.fusengdes.2015.11.013
+      \endverb
+    \endentry
+    \entry{zhuang_progress_2019}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=3dbde1d086823a44c5feceee7ca9ca58}{%
+           family={Zhuang},
+           familyi={Z\bibinitperiod},
+           given={Ge},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=01be48a019c433815e71e4b346453a5b}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={GQ},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c3bbc5ad900d84166e27f687d000154f}{%
+           family={Jian},
+           familyi={J\bibinitperiod},
+           given={Xiang},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{070f7200445c428ab92093dd4f117fe2}
+      \strng{fullhash}{070f7200445c428ab92093dd4f117fe2}
+      \strng{fullhashraw}{070f7200445c428ab92093dd4f117fe2}
+      \strng{bibnamehash}{070f7200445c428ab92093dd4f117fe2}
+      \strng{authorbibnamehash}{070f7200445c428ab92093dd4f117fe2}
+      \strng{authornamehash}{070f7200445c428ab92093dd4f117fe2}
+      \strng{authorfullhash}{070f7200445c428ab92093dd4f117fe2}
+      \strng{authorfullhashraw}{070f7200445c428ab92093dd4f117fe2}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nuclear Fusion}
+      \field{number}{11}
+      \field{title}{Progress of the {CFETR} design}
+      \field{volume}{59}
+      \field{year}{2019}
+      \field{pages}{112010}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1741-4326/ab0e27
       \endverb
     \endentry
   \enddatalist

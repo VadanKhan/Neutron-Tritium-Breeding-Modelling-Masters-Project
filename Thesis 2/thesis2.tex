@@ -203,6 +203,7 @@
 % --- Main Content Begins Here ---
 
 \section{Introduction}
+\label{sec:introduction}
 Commercial nuclear fusion is predominantly pursued via the deuterium-tritium (D-T) fuel cycle due to
 its relatively large cross-section at achievable plasma temperatures. This reaction fuses deuterium
 and tritium to yield an alpha particle and a highly energetic fast neutron ($\ce{^{2}H + ^{3}H ->
@@ -326,7 +327,7 @@ surviving defect fraction, $\xi(T_d)$:
 where $b$ and $c$ are material-specific constants dependent on the displaced atom type. Values for
 the displacement energy ($E_d$) and these constants for critical structural materials, such as iron
 (dominating the structural separators) and zirconium (in the first wall), are established in the
-literature \citep{saha2019application}.
+literature \citep{saha_application_2019}.
 
 Finally, to determine if a material exceeds its irradiation limits over its operational lifetime,
 the total number of displacements must be normalised into DPA per Full Power Year (FPY). The DPA
@@ -438,15 +439,84 @@ algorithm is forced to aggressively explore highly uncertain regions (Section
 
 
 \section{Literature Review}
-\subsection{Tritium Breeding in Fusion}
-\label{sec:context}
 
-\subsection{Breeder Blanket Studies}
+
+\subsection{Breeder Blanket Architectures}
 \label{sec:breeder_blanket_studies}
 
-\subsection{Surrogate Modelling in Science}
+Contemporary fusion reactor designs must achieve a Tritium Breeding Ratio (TBR) strictly greater
+than 1.0 (as defined in Section \ref{sec:introduction}). While the literature explores diverse
+material paradigms---ranging from solid ceramics in ITER \citep{federici_overview_2019} and liquid
+metal concepts in CFETR \citep{zhuang_progress_2019}, to highly compact liquid immersion variants in
+STEP and ARC \citep{lord_fusing_2024, sorbom_arc_2015}---evaluating these conceptual breeders
+reveals significant engineering challenges. Practical blanket modules cannot operate as idealised,
+homogeneous mixtures; they require complex, layered internal cooling channels and structural
+separators to ensure thermo-mechanical stability.
 
-\subsection{ML Optimisation in Science }
+A critical review of current mature conceptual designs, such as the Water-Cooled Lithium-Lead (WCLL)
+and Helium-Cooled Pebble Bed (HCPB), demonstrates that coolants and their associated structural
+containment typically occupy $30\%$--$40\%$ of the total blanket volume \citep{del_nevo_wcll_2019}.
+Furthermore, the distribution of this necessary non-breeding volume is heavily skewed towards the
+plasma-facing First Wall (FW). The FW endures the most severe environmental stressors in the
+reactor; demonstration power plant (DEMO) concepts must mitigate surface heat fluxes often exceeding
+$1.0\text{ MW/m}^2$ alongside peak neutron wall loadings of $\sim 2.0\text{ MW/m}^2$
+\citep{you_european_2016}. To prevent structural failure under these extreme loads, current
+literature heavily relies on integrating dense networks of cooling micro-channels within
+Reduced-Activation Ferritic-Martensitic (RAFM) steels, notably EUROFER97
+\citep{stornelli_ultra-fine_2024}, frequently augmented by sacrificial tungsten armour
+\citep{you_european_2016}.
+
+These extreme thermal and neutronic loads strictly dictate component lifetime propositions. While
+ITER Test Blanket Modules are designed to survive experimental campaigns with cumulative radiation
+damage below $3\text{ dpa}$, commercial power plants will subject blanket structures to
+$20$--$50\text{ dpa}$ per full-power year \citep{federici_european_2017}. This necessitates a
+modular design approach, with structural replacement anticipated every $2$--$5$ years to prevent
+catastrophic embrittlement \citep{boccaccini_demo_2014}.
+
+Consequently, the integration of these extensive structural and cooling networks inherently degrades
+the global neutron economy. Blanket design ceases to be a purely neutronic exercise and becomes a
+highly constrained multi-physics trade-off. As demonstrated in recent optimisation studies,
+researchers must continually refine spatial layer configurations to maximise the primary
+objectives---TBR and high-grade heat extraction---without exceeding the strict material degradation
+and operational limits imposed by the heterogeneous environment \citep{qiu_neutronic_2018}.
+
+\subsection{Computational Load in Nuclear Neutronics}
+\label{sec:computational_load}
+
+High-fidelity neutronic evaluation strictly necessitates stochastic Monte Carlo transport methods
+\citep{kalos_monte_2008}, using industry standard codes such as OpenMC \citep{romano_openmc_2015}.
+Achieving statistically significant tallies in deeply shielded or structurally intricate regions
+imposes a severe computational burden. As explicitly quantified in recent fusion power plant studies
+by \cite{warmer_overview_2024}, sufficiently accurate Monte Carlo neutronics simulations routinely
+require $10^8$--$10^9$ particle histories, directly leading to several thousand CPU-hours on
+dedicated supercomputing clusters per run. Consequently, executing traditional exhaustive
+grid-search optimisations across highly dimensional design spaces results in exponential scaling
+that is functionally intractable. \cite{humphrey_machine_2023} highlights, in their recent
+evaluation of fusion component design, the immense computational cost of Monte Carlo transport
+precludes rapid iterative optimisation, strictly limiting traditional parametric sweeps to
+low-dimensional or heavily homogenised approximations.
+
+\subsection{Machine Learning and Surrogate Modelling in Physics}
+\label{sec:ml_surrogate_modelling}
+
+To circumvent the severe computational limitations of high-fidelity transport codes, the broader
+computational physics community has increasingly adopted surrogate modelling and sequential learning
+techniques. Methods such as BO and GPR are distinctly suited to resolving this specific bottleneck
+\citep{rasmussen2006gaussian}. Rather than exhaustively evaluating an entire
+design space, these algorithms intelligently sample a small fraction of the data points required by
+a traditional grid search. This targeted approach yields a robust understanding of the optimal
+parameter landscape while drastically reducing the required number of computationally expensive
+simulations \citep{emmerich2005single, shahriari2015taking}.
+
+The translation of this machine learning paradigm into nuclear fusion neutronics is a rapidly
+emerging, cutting-edge frontier. For instance, \cite{manek_fast_2023} recently established the
+efficacy of using ML surrogates to efficiently regress the TBR from heavy Monte Carlo datasets.
+Crucially, the explicit application of BO to optimise complex breeder blanket architectures is just
+now being proven as a legitimate, highly competitive route. Concurrent, state-of-the-art work by
+\cite{humphrey_accelerating_2026} at the UK atomic energy authority (UKAEA) demonstrates the
+viability of deploying Bayesian sequential learning to navigate the parameter space of an OpenMC
+neutronic model. The recent emergence of such literature underlines a paradigm shift and validates
+the timeliness, originality, and necessity of the methodology developed in this study.
 
 
 
