@@ -1252,6 +1252,43 @@
       \verb https://doi.org/10.5281/zenodo.14867425
       \endverb
     \endentry
+    \entry{knowles_parego_2006}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0c9676aa4aea3a726ac0eb21f39f1c43}{%
+           family={Knowles},
+           familyi={K\bibinitperiod},
+           given={Joshua},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{0c9676aa4aea3a726ac0eb21f39f1c43}
+      \strng{fullhash}{0c9676aa4aea3a726ac0eb21f39f1c43}
+      \strng{fullhashraw}{0c9676aa4aea3a726ac0eb21f39f1c43}
+      \strng{bibnamehash}{0c9676aa4aea3a726ac0eb21f39f1c43}
+      \strng{authorbibnamehash}{0c9676aa4aea3a726ac0eb21f39f1c43}
+      \strng{authornamehash}{0c9676aa4aea3a726ac0eb21f39f1c43}
+      \strng{authorfullhash}{0c9676aa4aea3a726ac0eb21f39f1c43}
+      \strng{authorfullhashraw}{0c9676aa4aea3a726ac0eb21f39f1c43}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Evolutionary Computation}
+      \field{number}{1}
+      \field{title}{{ParEGO}: A hybrid algorithm with on-line landscape approximation for expensive multiobjective optimization problems}
+      \field{volume}{10}
+      \field{year}{2006}
+      \field{pages}{50\bibrangedash 66}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1109/TEVC.2005.851274
+      \endverb
+    \endentry
     \entry{kuridan_neutron_2023}{book}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=762c3295442c1b2803ab6cad1175cdc8}{%
