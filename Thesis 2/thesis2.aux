@@ -153,6 +153,8 @@
 \abx@aux@segm{0}{0}{shimwell_paramak_2021}
 \abx@aux@cite{0}{romano_openmc_2015}
 \abx@aux@segm{0}{0}{romano_openmc_2015}
+\abx@aux@cite{0}{romano_openmc_2015}
+\abx@aux@segm{0}{0}{romano_openmc_2015}
 \abx@aux@page{37}{6}
 \abx@aux@page{38}{6}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Machine Learning and Surrogate Modelling in Physics}{6}{subsection.3.3}\protected@file@percent }
@@ -168,16 +170,17 @@
 \abx@aux@page{45}{6}
 \abx@aux@cite{0}{khan_mphys_sem1}
 \abx@aux@segm{0}{0}{khan_mphys_sem1}
+\abx@aux@page{46}{7}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces  Representative geometry of the simplified Tokamak model generated via Paramak. The simulation domain comprises a 90° revolution with periodic boundary conditions. Included is an example breakdown of the layered blanket, only the coolant and breeder thicknesses are adjusted in this study. }}{7}{figure.caption.1}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:reactor_diagram}{{1}{7}{Representative geometry of the simplified Tokamak model generated via Paramak. The simulation domain comprises a 90° revolution with periodic boundary conditions. Included is an example breakdown of the layered blanket, only the coolant and breeder thicknesses are adjusted in this study}{figure.caption.1}{}}
-\abx@aux@page{46}{7}
+\abx@aux@page{47}{7}
 \abx@aux@cite{0}{khan_mphys_sem1}
 \abx@aux@segm{0}{0}{khan_mphys_sem1}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Neutronic Analysis}{8}{subsection.4.2}\protected@file@percent }
 \newlabel{sec:method_neutronics}{{4.2}{8}{Neutronic Analysis}{subsection.4.2}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Mechanistic Analysis of the Layered Blanket}{8}{subsubsection.4.2.1}\protected@file@percent }
-\abx@aux@page{47}{8}
+\abx@aux@page{48}{8}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}Manual Thickness Distribution Analysis}{8}{subsubsection.4.2.2}\protected@file@percent }
 \abx@aux@cite{0}{khan2026fusionmlcode}
 \abx@aux@segm{0}{0}{khan2026fusionmlcode}
@@ -193,7 +196,6 @@
 \newlabel{sec:ml_approach}{{4.3}{9}{ML Optimisation}{subsection.4.3}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}ML Algorithm}{9}{subsubsection.4.3.1}\protected@file@percent }
 \newlabel{sec:method_ml}{{4.3.1}{9}{ML Algorithm}{subsubsection.4.3.1}{}}
-\abx@aux@page{48}{9}
 \abx@aux@cite{0}{rastrigin1974systems}
 \abx@aux@segm{0}{0}{rastrigin1974systems}
 \abx@aux@cite{0}{schwefel1981numerical}
@@ -202,6 +204,7 @@
 \abx@aux@segm{0}{0}{rosenbrock1960automatic}
 \abx@aux@cite{0}{gramacy2012cases}
 \abx@aux@segm{0}{0}{gramacy2012cases}
+\abx@aux@page{49}{10}
 \newlabel{fig:ucb_high_beta}{{3a}{10}{Explorative tuning ($\beta = 1,000,000$)}{figure.caption.3}{}}
 \newlabel{sub@fig:ucb_high_beta}{{a}{10}{Explorative tuning ($\beta = 1,000,000$)}{figure.caption.3}{}}
 \newlabel{fig:ucb_low_beta}{{3b}{10}{Greedy tuning ($\beta = 1$)}{figure.caption.3}{}}
@@ -209,10 +212,10 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Comparison of the Upper Confidence Bound (UCB) acquisition function behaviour under different exploration parameters ($\beta $). (a) A high $\beta $ value successfully prioritises exploration, identifying a secondary hidden peak. (b) A low $\beta $ value results in overly greedy exploitation, causing the model to stagnate on a single local optimum and ignore unexplored regions.}}{10}{figure.caption.3}\protected@file@percent }
 \newlabel{fig:ucb_tuning}{{3}{10}{Comparison of the Upper Confidence Bound (UCB) acquisition function behaviour under different exploration parameters ($\beta $). (a) A high $\beta $ value successfully prioritises exploration, identifying a secondary hidden peak. (b) A low $\beta $ value results in overly greedy exploitation, causing the model to stagnate on a single local optimum and ignore unexplored regions}{figure.caption.3}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}Testing, Tuning \& Developing the Optimiser}{10}{subsubsection.4.3.2}\protected@file@percent }
-\abx@aux@page{49}{10}
 \abx@aux@page{50}{10}
 \abx@aux@page{51}{10}
 \abx@aux@page{52}{10}
+\abx@aux@page{53}{10}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.3}ML Optimisation Studies for TBR-Thickness}{11}{subsubsection.4.3.3}\protected@file@percent }
 \newlabel{sec:ml_runs}{{4.3.3}{11}{ML Optimisation Studies for TBR-Thickness}{subsubsection.4.3.3}{}}
 \newlabel{fig:1d_benchmark}{{4a}{12}{1D multi-modal Schwefel function test}{figure.caption.4}{}}
@@ -225,112 +228,146 @@
 \newlabel{sub@fig:2d_schwefel}{{d}{12}{2D multi-modal Schwefel function test}{figure.caption.4}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Comprehensive benchmarking of the ML optimisation algorithm across multiple challenging landscapes. (a) A 1D Schwefel test case illustrating full surrogate model reconstruction against the true function. The uncertainty in the model is plotted but too small to be visible. (b), (c) and (d) demonstrate various 2D function tests of the optimiser, where the final mean surrogate model of the space and its paired standard deviation is plotted underneath each. (a) and (b) used $N=100$ trials whereas (c) and (d) used $N=150$, where this includes $N_{sobol}=50$ sobol trials for all. UCB with $\beta =1,000,000$ was consistent across all trials. Random injection and multi-modal exploitation was implemented for (c) and (d) with $\epsilon = 0.75$ and $n_{hunt}=10$. (d) includes pink markers to annotate where a secondary ``peak hunt'' is triggered. }}{12}{figure.caption.4}\protected@file@percent }
 \newlabel{fig:ml_benchmarks_4panel}{{4}{12}{Comprehensive benchmarking of the ML optimisation algorithm across multiple challenging landscapes. (a) A 1D Schwefel test case illustrating full surrogate model reconstruction against the true function. The uncertainty in the model is plotted but too small to be visible. (b), (c) and (d) demonstrate various 2D function tests of the optimiser, where the final mean surrogate model of the space and its paired standard deviation is plotted underneath each. (a) and (b) used $N=100$ trials whereas (c) and (d) used $N=150$, where this includes $N_{sobol}=50$ sobol trials for all. UCB with $\beta =1,000,000$ was consistent across all trials. Random injection and multi-modal exploitation was implemented for (c) and (d) with $\epsilon = 0.75$ and $n_{hunt}=10$. (d) includes pink markers to annotate where a secondary ``peak hunt'' is triggered}{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Results}{13}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Neutronic Behaviour of Heterogeneous Architectures}{13}{subsection.5.1}\protected@file@percent }
+\newlabel{sec:results_neutronics}{{5.1}{13}{Neutronic Behaviour of Heterogeneous Architectures}{subsection.5.1}{}}
+\newlabel{fig:res_tbr_a}{{5a}{13}{TBR vs $\zeta $}{figure.caption.5}{}}
+\newlabel{sub@fig:res_tbr_a}{{a}{13}{TBR vs $\zeta $}{figure.caption.5}{}}
+\newlabel{fig:res_tbr_b}{{5b}{13}{TBR Reaction Density ($\zeta = 0$)}{figure.caption.5}{}}
+\newlabel{sub@fig:res_tbr_b}{{b}{13}{TBR Reaction Density ($\zeta = 0$)}{figure.caption.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Global and layer-specific TBR performance across the geometric gradient, paired with the spatial distribution of breeding reactions.}}{13}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:res_tbr}{{5}{13}{Global and layer-specific TBR performance across the geometric gradient, paired with the spatial distribution of breeding reactions}{figure.caption.5}{}}
+\newlabel{fig:res_flux_a}{{6a}{14}{Total Flux vs $\zeta $}{figure.caption.6}{}}
+\newlabel{sub@fig:res_flux_a}{{a}{14}{Total Flux vs $\zeta $}{figure.caption.6}{}}
+\newlabel{fig:res_flux_b}{{6b}{14}{Fluence Map ($\zeta = 0$)}{figure.caption.6}{}}
+\newlabel{sub@fig:res_flux_b}{{b}{14}{Fluence Map ($\zeta = 0$)}{figure.caption.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Neutron survival and track length, demonstrating exponential attenuation with blanket depth.}}{14}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:res_flux}{{6}{14}{Neutron survival and track length, demonstrating exponential attenuation with blanket depth}{figure.caption.6}{}}
+\newlabel{fig:res_mult_a}{{7a}{14}{Multiplication vs $\zeta $}{figure.caption.7}{}}
+\newlabel{sub@fig:res_mult_a}{{a}{14}{Multiplication vs $\zeta $}{figure.caption.7}{}}
+\newlabel{fig:res_mult_b}{{7b}{14}{Multiplication Density ($\zeta = 0$)}{figure.caption.7}{}}
+\newlabel{sub@fig:res_mult_b}{{b}{14}{Multiplication Density ($\zeta = 0$)}{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Neutron multiplication rates, highlighting the dependency on high-energy, unmoderated flux in the plasma-facing layers.}}{14}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:res_mult}{{7}{14}{Neutron multiplication rates, highlighting the dependency on high-energy, unmoderated flux in the plasma-facing layers}{figure.caption.7}{}}
 \abx@aux@cite{0}{khan_mphys_sem1}
 \abx@aux@segm{0}{0}{khan_mphys_sem1}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Results}{13}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Layered Blanket Model Neutronics}{13}{subsection.5.1}\protected@file@percent }
-\newlabel{sec:layered_blanket_model_res}{{5.1}{13}{Layered Blanket Model Neutronics}{subsection.5.1}{}}
-\abx@aux@page{53}{13}
-\newlabel{fig:tbr_comparison}{{5a}{13}{TBR comparison across modelling approximations}{figure.caption.5}{}}
-\newlabel{sub@fig:tbr_comparison}{{a}{13}{TBR comparison across modelling approximations}{figure.caption.5}{}}
-\newlabel{fig:tbr_thickness}{{5b}{13}{Layer-wise TBR contribution vs. thickness}{figure.caption.5}{}}
-\newlabel{sub@fig:tbr_thickness}{{b}{13}{Layer-wise TBR contribution vs. thickness}{figure.caption.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Evaluating TBR of the layered blanket architecture. (a) Highlights the degradation of global TBR when transitioning from idealised homogeneous mixtures to realistic heterogeneous layers. (b) Demonstrates the spatial distribution of tritium production, showing heavy concentration in the plasma-facing layers as overall blanket depth increases.}}{13}{figure.caption.5}\protected@file@percent }
-\newlabel{fig:layered_model_neutronics}{{5}{13}{Evaluating TBR of the layered blanket architecture. (a) Highlights the degradation of global TBR when transitioning from idealised homogeneous mixtures to realistic heterogeneous layers. (b) Demonstrates the spatial distribution of tritium production, showing heavy concentration in the plasma-facing layers as overall blanket depth increases}{figure.caption.5}{}}
-\newlabel{fig:tbr_hm}{{6a}{14}{Tritium production density}{figure.caption.6}{}}
-\newlabel{sub@fig:tbr_hm}{{a}{14}{Tritium production density}{figure.caption.6}{}}
-\newlabel{fig:mult_hm}{{6b}{14}{Neutron multiplication density}{figure.caption.6}{}}
-\newlabel{sub@fig:mult_hm}{{b}{14}{Neutron multiplication density}{figure.caption.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Cross-sectional heatmaps detailing the spatial distribution of key neutronic reactions. (a) Displays the density of tritium breeding reactions, strictly localised within the discrete breeder layers. (b) Illustrates the concentration of neutron multiplication events across the blanket depth. Trace reactions defined in Section \ref {sec:trace_reactions} are also highlighted in the non-breeder layers, commonly shaded darker indicating rare events. }}{14}{figure.caption.6}\protected@file@percent }
-\newlabel{fig:reaction_heatmaps}{{6}{14}{Cross-sectional heatmaps detailing the spatial distribution of key neutronic reactions. (a) Displays the density of tritium breeding reactions, strictly localised within the discrete breeder layers. (b) Illustrates the concentration of neutron multiplication events across the blanket depth. Trace reactions defined in Section \ref {sec:trace_reactions} are also highlighted in the non-breeder layers, commonly shaded darker indicating rare events}{figure.caption.6}{}}
-\newlabel{fig:fluence_hm}{{7a}{15}{Total neutron flux distribution}{figure.caption.7}{}}
-\newlabel{sub@fig:fluence_hm}{{a}{15}{Total neutron flux distribution}{figure.caption.7}{}}
-\newlabel{fig:damage_hm}{{7b}{15}{Radiation damage distribution}{figure.caption.7}{}}
-\newlabel{sub@fig:damage_hm}{{b}{15}{Radiation damage distribution}{figure.caption.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Cross-sectional heatmaps of flux and radiation damage. (a) Illustrates the progressive attenuation of the neutron flux across the material boundaries. (b) Shows the spatial distribution of structural radiation damage.}}{15}{figure.caption.7}\protected@file@percent }
-\newlabel{fig:fluence_hms}{{7}{15}{Cross-sectional heatmaps of flux and radiation damage. (a) Illustrates the progressive attenuation of the neutron flux across the material boundaries. (b) Shows the spatial distribution of structural radiation damage}{figure.caption.7}{}}
-\newlabel{fig:scatter_hm}{{8a}{15}{Neutron scattering density}{figure.caption.8}{}}
-\newlabel{sub@fig:scatter_hm}{{a}{15}{Neutron scattering density}{figure.caption.8}{}}
-\newlabel{fig:heat_hm}{{8b}{15}{Nuclear heating distribution}{figure.caption.8}{}}
-\newlabel{sub@fig:heat_hm}{{b}{15}{Nuclear heating distribution}{figure.caption.8}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Cross-sectional heatmaps of scattering and energy deposition. (a) Highlights distinct peaks in neutron scattering density localised around the discrete coolant layers. (b) Displays the corresponding nuclear heating profile, noting a specific concentration around the second coolant layer.}}{15}{figure.caption.8}\protected@file@percent }
-\newlabel{fig:scatter_heat_heatmaps}{{8}{15}{Cross-sectional heatmaps of scattering and energy deposition. (a) Highlights distinct peaks in neutron scattering density localised around the discrete coolant layers. (b) Displays the corresponding nuclear heating profile, noting a specific concentration around the second coolant layer}{figure.caption.8}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Thickness Distribution Neutronics}{16}{subsection.5.2}\protected@file@percent }
-\newlabel{sec:zeta_results}{{5.2}{16}{Thickness Distribution Neutronics}{subsection.5.2}{}}
-\newlabel{fig:zeta_tbr}{{9a}{16}{TBR layer contribution}{figure.caption.9}{}}
-\newlabel{sub@fig:zeta_tbr}{{a}{16}{TBR layer contribution}{figure.caption.9}{}}
-\newlabel{fig:zeta_mult}{{9b}{16}{Neutron multiplication contribution}{figure.caption.9}{}}
-\newlabel{sub@fig:zeta_mult}{{b}{16}{Neutron multiplication contribution}{figure.caption.9}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces  The impact of the linear gradient parameter ($\zeta $) on key neutronic performance metrics. (a) Tracks the total TBR and the individual contributions from discrete breeder layers. (b) Illustrates the total neutron multiplication alongside the specific contributions from the first wall, breeder, coolant, and structural separator layers. Statistical uncertainties are plotted, though error bars are generally smaller than the data markers. }}{16}{figure.caption.9}\protected@file@percent }
-\newlabel{fig:zeta_neutronics}{{9}{16}{The impact of the linear gradient parameter ($\zeta $) on key neutronic performance metrics. (a) Tracks the total TBR and the individual contributions from discrete breeder layers. (b) Illustrates the total neutron multiplication alongside the specific contributions from the first wall, breeder, coolant, and structural separator layers. Statistical uncertainties are plotted, though error bars are generally smaller than the data markers}{figure.caption.9}{}}
-\newlabel{fig:zeta_dpa}{{10a}{17}{DPA rates across components}{figure.caption.10}{}}
-\newlabel{sub@fig:zeta_dpa}{{a}{17}{DPA rates across components}{figure.caption.10}{}}
-\newlabel{fig:zeta_damage_energy}{{10b}{17}{Damage energy deposition}{figure.caption.10}{}}
-\newlabel{sub@fig:zeta_damage_energy}{{b}{17}{Damage energy deposition}{figure.caption.10}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces  The impact of the linear gradient parameter ($\zeta $) on structural degradation metrics. Figure \ref {fig:zeta_dpa} tracks the Displacements Per Atom (DPA), while Figure \ref {fig:zeta_damage_energy} tracks the damage energy deposited into the first wall and internal structural separators. Statistical uncertainties are plotted, though error bars are generally smaller than the data markers. }}{17}{figure.caption.10}\protected@file@percent }
-\newlabel{fig:zeta_structural_damage}{{10}{17}{The impact of the linear gradient parameter ($\zeta $) on structural degradation metrics. Figure \ref {fig:zeta_dpa} tracks the Displacements Per Atom (DPA), while Figure \ref {fig:zeta_damage_energy} tracks the damage energy deposited into the first wall and internal structural separators. Statistical uncertainties are plotted, though error bars are generally smaller than the data markers}{figure.caption.10}{}}
-\newlabel{fig:zeta_flux}{{11a}{17}{Volume-integrated flux tally}{figure.caption.11}{}}
-\newlabel{sub@fig:zeta_flux}{{a}{17}{Volume-integrated flux tally}{figure.caption.11}{}}
-\newlabel{fig:zeta_scatter}{{11b}{17}{Neutron scattering events}{figure.caption.11}{}}
-\newlabel{sub@fig:zeta_scatter}{{b}{17}{Neutron scattering events}{figure.caption.11}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces  The effect of the linear gradient parameter ($\zeta $) on neutron transport and interaction metrics. Figure \ref {fig:zeta_flux} plots the volume-integrated flux (total neutron path length in $\text  {n} \cdot \text  {cm}$) across the blanket and its individual components. Figure \ref {fig:zeta_scatter} plots the corresponding number of neutron scattering events. Statistical uncertainties are plotted, though error bars are generally smaller than the data markers. }}{17}{figure.caption.11}\protected@file@percent }
-\newlabel{fig:zeta_flux_scatter}{{11}{17}{The effect of the linear gradient parameter ($\zeta $) on neutron transport and interaction metrics. Figure \ref {fig:zeta_flux} plots the volume-integrated flux (total neutron path length in $\text {n} \cdot \text {cm}$) across the blanket and its individual components. Figure \ref {fig:zeta_scatter} plots the corresponding number of neutron scattering events. Statistical uncertainties are plotted, though error bars are generally smaller than the data markers}{figure.caption.11}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}ML Optimisation Findings}{18}{subsection.5.3}\protected@file@percent }
-\newlabel{sec:ml_results}{{5.3}{18}{ML Optimisation Findings}{subsection.5.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces  Radial thickness profiles and resulting global TBR for the ML optimised TBR-thickness studies detailed in Section \ref {sec:ml_runs}. Associated TBR values are annotated alongside their standard statistical uncertainty. $N=100$ was used for all except for unconstrained 8D $N=150$, where these include $N_{sobol}=50$. Hyper-parameters $\epsilon =0.5$ and $\beta =1,000,000$ were tuned for these studies.}}{18}{figure.caption.12}\protected@file@percent }
-\newlabel{fig:ml_optimisation}{{12}{18}{Radial thickness profiles and resulting global TBR for the ML optimised TBR-thickness studies detailed in Section \ref {sec:ml_runs}. Associated TBR values are annotated alongside their standard statistical uncertainty. $N=100$ was used for all except for unconstrained 8D $N=150$, where these include $N_{sobol}=50$. Hyper-parameters $\epsilon =0.5$ and $\beta =1,000,000$ were tuned for these studies}{figure.caption.12}{}}
-\newlabel{fig:proj_b2}{{13a}{19}{B1 vs. B2 thickness}{figure.caption.13}{}}
-\newlabel{sub@fig:proj_b2}{{a}{19}{B1 vs. B2 thickness}{figure.caption.13}{}}
-\newlabel{fig:proj_b4}{{13b}{19}{B1 vs. B4 thickness}{figure.caption.13}{}}
-\newlabel{sub@fig:proj_b4}{{b}{19}{B1 vs. B4 thickness}{figure.caption.13}{}}
-\newlabel{fig:proj_c1}{{13c}{19}{B1 vs. C1 thickness}{figure.caption.13}{}}
-\newlabel{sub@fig:proj_c1}{{c}{19}{B1 vs. C1 thickness}{figure.caption.13}{}}
-\newlabel{fig:proj_c4}{{13d}{19}{B1 vs. C4 thickness}{figure.caption.13}{}}
-\newlabel{sub@fig:proj_c4}{{d}{19}{B1 vs. C4 thickness}{figure.caption.13}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces  2D contour projections of the 8D surrogate model from the unconstrained optimisation run. Each panel plots the thickness of the innermost breeder layer (B1) against a secondary layer (B2, B4, C1, or C4), with all non-plotted dimensions held constant at their optimal boundary limits. }}{19}{figure.caption.13}\protected@file@percent }
-\newlabel{fig:surrogate_projections}{{13}{19}{2D contour projections of the 8D surrogate model from the unconstrained optimisation run. Each panel plots the thickness of the innermost breeder layer (B1) against a secondary layer (B2, B4, C1, or C4), with all non-plotted dimensions held constant at their optimal boundary limits}{figure.caption.13}{}}
+\newlabel{fig:res_mod_abs_a}{{8a}{15}{Scattering Density}{figure.caption.8}{}}
+\newlabel{sub@fig:res_mod_abs_a}{{a}{15}{Scattering Density}{figure.caption.8}{}}
+\newlabel{fig:res_mod_abs_b}{{8b}{15}{Absorption Density}{figure.caption.8}{}}
+\newlabel{sub@fig:res_mod_abs_b}{{b}{15}{Absorption Density}{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Spatial mapping at $\zeta =0$ contrasting thermalising scattering in the water coolant against parasitic absorption in the structural separators.}}{15}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:res_mod_abs}{{8}{15}{Spatial mapping at $\zeta =0$ contrasting thermalising scattering in the water coolant against parasitic absorption in the structural separators}{figure.caption.8}{}}
+\newlabel{fig:res_dpa_a}{{9a}{15}{DPA Rate vs $\zeta $}{figure.caption.9}{}}
+\newlabel{sub@fig:res_dpa_a}{{a}{15}{DPA Rate vs $\zeta $}{figure.caption.9}{}}
+\newlabel{fig:res_dpa_b}{{9b}{15}{Damage Energy Density ($\zeta = 0$)}{figure.caption.9}{}}
+\newlabel{sub@fig:res_dpa_b}{{b}{15}{Damage Energy Density ($\zeta = 0$)}{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Radiation damage metrics, establishing the strict structural constraints governing first wall and separator lifetimes.}}{15}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:res_dpa}{{9}{15}{Radiation damage metrics, establishing the strict structural constraints governing first wall and separator lifetimes}{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Layered Blanket Model Neutronics}{15}{subsection.5.2}\protected@file@percent }
+\newlabel{sec:layered_blanket_model_res}{{5.2}{15}{Layered Blanket Model Neutronics}{subsection.5.2}{}}
+\abx@aux@page{54}{15}
+\newlabel{fig:tbr_comparison}{{10a}{16}{TBR comparison across modelling approximations}{figure.caption.10}{}}
+\newlabel{sub@fig:tbr_comparison}{{a}{16}{TBR comparison across modelling approximations}{figure.caption.10}{}}
+\newlabel{fig:tbr_thickness}{{10b}{16}{Layer-wise TBR contribution vs. thickness}{figure.caption.10}{}}
+\newlabel{sub@fig:tbr_thickness}{{b}{16}{Layer-wise TBR contribution vs. thickness}{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Evaluating TBR of the layered blanket architecture. (a) Highlights the degradation of global TBR when transitioning from idealised homogeneous mixtures to realistic heterogeneous layers. (b) Demonstrates the spatial distribution of tritium production, showing heavy concentration in the plasma-facing layers as overall blanket depth increases.}}{16}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:layered_model_neutronics}{{10}{16}{Evaluating TBR of the layered blanket architecture. (a) Highlights the degradation of global TBR when transitioning from idealised homogeneous mixtures to realistic heterogeneous layers. (b) Demonstrates the spatial distribution of tritium production, showing heavy concentration in the plasma-facing layers as overall blanket depth increases}{figure.caption.10}{}}
+\newlabel{fig:tbr_hm}{{11a}{17}{Tritium production density}{figure.caption.11}{}}
+\newlabel{sub@fig:tbr_hm}{{a}{17}{Tritium production density}{figure.caption.11}{}}
+\newlabel{fig:mult_hm}{{11b}{17}{Neutron multiplication density}{figure.caption.11}{}}
+\newlabel{sub@fig:mult_hm}{{b}{17}{Neutron multiplication density}{figure.caption.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Cross-sectional heatmaps detailing the spatial distribution of key neutronic reactions. (a) Displays the density of tritium breeding reactions, strictly localised within the discrete breeder layers. (b) Illustrates the concentration of neutron multiplication events across the blanket depth. Trace reactions defined in Section \ref {sec:trace_reactions} are also highlighted in the non-breeder layers, commonly shaded darker indicating rare events. }}{17}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:reaction_heatmaps}{{11}{17}{Cross-sectional heatmaps detailing the spatial distribution of key neutronic reactions. (a) Displays the density of tritium breeding reactions, strictly localised within the discrete breeder layers. (b) Illustrates the concentration of neutron multiplication events across the blanket depth. Trace reactions defined in Section \ref {sec:trace_reactions} are also highlighted in the non-breeder layers, commonly shaded darker indicating rare events}{figure.caption.11}{}}
+\newlabel{fig:fluence_hm}{{12a}{17}{Total neutron flux distribution}{figure.caption.12}{}}
+\newlabel{sub@fig:fluence_hm}{{a}{17}{Total neutron flux distribution}{figure.caption.12}{}}
+\newlabel{fig:damage_hm}{{12b}{17}{Radiation damage distribution}{figure.caption.12}{}}
+\newlabel{sub@fig:damage_hm}{{b}{17}{Radiation damage distribution}{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Cross-sectional heatmaps of flux and radiation damage. (a) Illustrates the progressive attenuation of the neutron flux across the material boundaries. (b) Shows the spatial distribution of structural radiation damage.}}{17}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:fluence_hms}{{12}{17}{Cross-sectional heatmaps of flux and radiation damage. (a) Illustrates the progressive attenuation of the neutron flux across the material boundaries. (b) Shows the spatial distribution of structural radiation damage}{figure.caption.12}{}}
+\newlabel{fig:scatter_hm}{{13a}{18}{Neutron scattering density}{figure.caption.13}{}}
+\newlabel{sub@fig:scatter_hm}{{a}{18}{Neutron scattering density}{figure.caption.13}{}}
+\newlabel{fig:heat_hm}{{13b}{18}{Nuclear heating distribution}{figure.caption.13}{}}
+\newlabel{sub@fig:heat_hm}{{b}{18}{Nuclear heating distribution}{figure.caption.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Cross-sectional heatmaps of scattering and energy deposition. (a) Highlights distinct peaks in neutron scattering density localised around the discrete coolant layers. (b) Displays the corresponding nuclear heating profile, noting a specific concentration around the second coolant layer.}}{18}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:scatter_heat_heatmaps}{{13}{18}{Cross-sectional heatmaps of scattering and energy deposition. (a) Highlights distinct peaks in neutron scattering density localised around the discrete coolant layers. (b) Displays the corresponding nuclear heating profile, noting a specific concentration around the second coolant layer}{figure.caption.13}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Thickness Distribution Neutronics}{18}{subsection.5.3}\protected@file@percent }
+\newlabel{sec:zeta_results}{{5.3}{18}{Thickness Distribution Neutronics}{subsection.5.3}{}}
+\newlabel{fig:zeta_tbr}{{14a}{19}{TBR layer contribution}{figure.caption.14}{}}
+\newlabel{sub@fig:zeta_tbr}{{a}{19}{TBR layer contribution}{figure.caption.14}{}}
+\newlabel{fig:zeta_mult}{{14b}{19}{Neutron multiplication contribution}{figure.caption.14}{}}
+\newlabel{sub@fig:zeta_mult}{{b}{19}{Neutron multiplication contribution}{figure.caption.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces  The impact of the linear gradient parameter ($\zeta $) on key neutronic performance metrics. (a) Tracks the total TBR and the individual contributions from discrete breeder layers. (b) Illustrates the total neutron multiplication alongside the specific contributions from the first wall, breeder, coolant, and structural separator layers. Statistical uncertainties are plotted, though error bars are generally smaller than the data markers. }}{19}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:zeta_neutronics}{{14}{19}{The impact of the linear gradient parameter ($\zeta $) on key neutronic performance metrics. (a) Tracks the total TBR and the individual contributions from discrete breeder layers. (b) Illustrates the total neutron multiplication alongside the specific contributions from the first wall, breeder, coolant, and structural separator layers. Statistical uncertainties are plotted, though error bars are generally smaller than the data markers}{figure.caption.14}{}}
+\newlabel{fig:zeta_dpa}{{15a}{19}{DPA rates across components}{figure.caption.15}{}}
+\newlabel{sub@fig:zeta_dpa}{{a}{19}{DPA rates across components}{figure.caption.15}{}}
+\newlabel{fig:zeta_damage_energy}{{15b}{19}{Damage energy deposition}{figure.caption.15}{}}
+\newlabel{sub@fig:zeta_damage_energy}{{b}{19}{Damage energy deposition}{figure.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces  The impact of the linear gradient parameter ($\zeta $) on structural degradation metrics. Figure \ref {fig:zeta_dpa} tracks the Displacements Per Atom (DPA), while Figure \ref {fig:zeta_damage_energy} tracks the damage energy deposited into the first wall and internal structural separators. Statistical uncertainties are plotted, though error bars are generally smaller than the data markers. }}{19}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:zeta_structural_damage}{{15}{19}{The impact of the linear gradient parameter ($\zeta $) on structural degradation metrics. Figure \ref {fig:zeta_dpa} tracks the Displacements Per Atom (DPA), while Figure \ref {fig:zeta_damage_energy} tracks the damage energy deposited into the first wall and internal structural separators. Statistical uncertainties are plotted, though error bars are generally smaller than the data markers}{figure.caption.15}{}}
+\newlabel{fig:zeta_flux}{{16a}{20}{Volume-integrated flux tally}{figure.caption.16}{}}
+\newlabel{sub@fig:zeta_flux}{{a}{20}{Volume-integrated flux tally}{figure.caption.16}{}}
+\newlabel{fig:zeta_scatter}{{16b}{20}{Neutron scattering events}{figure.caption.16}{}}
+\newlabel{sub@fig:zeta_scatter}{{b}{20}{Neutron scattering events}{figure.caption.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces  The effect of the linear gradient parameter ($\zeta $) on neutron transport and interaction metrics. Figure \ref {fig:zeta_flux} plots the volume-integrated flux (total neutron path length in $\text  {n} \cdot \text  {cm}$) across the blanket and its individual components. Figure \ref {fig:zeta_scatter} plots the corresponding number of neutron scattering events. Statistical uncertainties are plotted, though error bars are generally smaller than the data markers. }}{20}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:zeta_flux_scatter}{{16}{20}{The effect of the linear gradient parameter ($\zeta $) on neutron transport and interaction metrics. Figure \ref {fig:zeta_flux} plots the volume-integrated flux (total neutron path length in $\text {n} \cdot \text {cm}$) across the blanket and its individual components. Figure \ref {fig:zeta_scatter} plots the corresponding number of neutron scattering events. Statistical uncertainties are plotted, though error bars are generally smaller than the data markers}{figure.caption.16}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}ML Optimisation Findings}{20}{subsection.5.4}\protected@file@percent }
+\newlabel{sec:ml_results}{{5.4}{20}{ML Optimisation Findings}{subsection.5.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces  Radial thickness profiles and resulting global TBR for the ML optimised TBR-thickness studies detailed in Section \ref {sec:ml_runs}. Associated TBR values are annotated alongside their standard statistical uncertainty. $N=100$ was used for all except for unconstrained 8D $N=150$, where these include $N_{sobol}=50$. Hyper-parameters $\epsilon =0.5$ and $\beta =1,000,000$ were tuned for these studies.}}{21}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:ml_optimisation}{{17}{21}{Radial thickness profiles and resulting global TBR for the ML optimised TBR-thickness studies detailed in Section \ref {sec:ml_runs}. Associated TBR values are annotated alongside their standard statistical uncertainty. $N=100$ was used for all except for unconstrained 8D $N=150$, where these include $N_{sobol}=50$. Hyper-parameters $\epsilon =0.5$ and $\beta =1,000,000$ were tuned for these studies}{figure.caption.17}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{21}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Physical Implications of Heterogeneous Architectures}{21}{subsection.6.1}\protected@file@percent }
+\newlabel{sec:discussion_heterogeneous}{{6.1}{21}{Physical Implications of Heterogeneous Architectures}{subsection.6.1}{}}
+\newlabel{fig:proj_b2}{{18a}{22}{B1 vs. B2 thickness}{figure.caption.18}{}}
+\newlabel{sub@fig:proj_b2}{{a}{22}{B1 vs. B2 thickness}{figure.caption.18}{}}
+\newlabel{fig:proj_b4}{{18b}{22}{B1 vs. B4 thickness}{figure.caption.18}{}}
+\newlabel{sub@fig:proj_b4}{{b}{22}{B1 vs. B4 thickness}{figure.caption.18}{}}
+\newlabel{fig:proj_c1}{{18c}{22}{B1 vs. C1 thickness}{figure.caption.18}{}}
+\newlabel{sub@fig:proj_c1}{{c}{22}{B1 vs. C1 thickness}{figure.caption.18}{}}
+\newlabel{fig:proj_c4}{{18d}{22}{B1 vs. C4 thickness}{figure.caption.18}{}}
+\newlabel{sub@fig:proj_c4}{{d}{22}{B1 vs. C4 thickness}{figure.caption.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces  2D contour projections of the 8D surrogate model from the unconstrained optimisation run. Each panel plots the thickness of the innermost breeder layer (B1) against a secondary layer (B2, B4, C1, or C4), with all non-plotted dimensions held constant at their optimal boundary limits. }}{22}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:surrogate_projections}{{18}{22}{2D contour projections of the 8D surrogate model from the unconstrained optimisation run. Each panel plots the thickness of the innermost breeder layer (B1) against a secondary layer (B2, B4, C1, or C4), with all non-plotted dimensions held constant at their optimal boundary limits}{figure.caption.18}{}}
 \abx@aux@cite{0}{emmerich2005single}
 \abx@aux@segm{0}{0}{emmerich2005single}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{20}{section.6}\protected@file@percent }
-\abx@aux@page{54}{20}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{20}{section.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{References}{20}{section.7}\protected@file@percent }
-\abx@aux@page{55}{20}
-\abx@aux@page{56}{20}
-\abx@aux@page{57}{20}
-\abx@aux@page{58}{20}
-\abx@aux@page{59}{20}
-\abx@aux@page{60}{20}
-\abx@aux@page{61}{20}
-\abx@aux@page{62}{20}
-\abx@aux@page{63}{20}
-\abx@aux@page{64}{20}
-\abx@aux@page{65}{20}
-\abx@aux@page{66}{20}
-\abx@aux@page{67}{21}
-\abx@aux@page{68}{21}
-\abx@aux@page{69}{21}
-\abx@aux@page{70}{21}
-\abx@aux@page{71}{21}
-\abx@aux@page{72}{21}
-\abx@aux@page{73}{21}
-\abx@aux@page{74}{21}
-\abx@aux@page{75}{21}
-\abx@aux@page{76}{21}
-\abx@aux@page{77}{21}
-\abx@aux@page{78}{21}
-\abx@aux@page{79}{21}
-\abx@aux@page{80}{21}
-\abx@aux@page{81}{21}
-\abx@aux@page{82}{21}
-\abx@aux@page{83}{21}
-\abx@aux@page{84}{21}
-\abx@aux@page{85}{21}
-\abx@aux@page{86}{21}
-\abx@aux@page{87}{21}
-\abx@aux@page{88}{21}
-\abx@aux@page{89}{21}
-\abx@aux@page{90}{21}
+\abx@aux@page{55}{23}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{23}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{23}{section.7}\protected@file@percent }
+\abx@aux@page{56}{23}
+\abx@aux@page{57}{23}
+\abx@aux@page{58}{23}
+\abx@aux@page{59}{23}
+\abx@aux@page{60}{23}
+\abx@aux@page{61}{23}
+\abx@aux@page{62}{23}
+\abx@aux@page{63}{23}
+\abx@aux@page{64}{24}
+\abx@aux@page{65}{24}
+\abx@aux@page{66}{24}
+\abx@aux@page{67}{24}
+\abx@aux@page{68}{24}
+\abx@aux@page{69}{24}
+\abx@aux@page{70}{24}
+\abx@aux@page{71}{24}
+\abx@aux@page{72}{24}
+\abx@aux@page{73}{24}
+\abx@aux@page{74}{24}
+\abx@aux@page{75}{24}
+\abx@aux@page{76}{24}
+\abx@aux@page{77}{24}
+\abx@aux@page{78}{24}
+\abx@aux@page{79}{24}
+\abx@aux@page{80}{24}
+\abx@aux@page{81}{24}
+\abx@aux@page{82}{24}
+\abx@aux@page{83}{24}
+\abx@aux@page{84}{24}
+\abx@aux@page{85}{24}
+\abx@aux@page{86}{24}
+\abx@aux@page{87}{24}
+\abx@aux@page{88}{25}
+\abx@aux@page{89}{25}
+\abx@aux@page{90}{25}
+\abx@aux@page{91}{25}
 \abx@aux@read@bbl@mdfivesum{01685AB9586DC8F9E06BB495344EFC66}
 \abx@aux@defaultrefcontext{0}{boccaccini_demo_2014}{nyt/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{brown_endfb-viii0_2018}{nyt/global//global/global/global}
@@ -368,4 +405,4 @@
 \abx@aux@defaultrefcontext{0}{warmer_overview_2024}{nyt/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{you_european_2016}{nyt/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{zhuang_progress_2019}{nyt/global//global/global/global}
-\gdef \@abspage@last{23}
+\gdef \@abspage@last{27}

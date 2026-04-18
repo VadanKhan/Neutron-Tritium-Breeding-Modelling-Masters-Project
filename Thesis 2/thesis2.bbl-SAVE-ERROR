@@ -1021,6 +1021,53 @@
       \verb 10.1088/1361-6587/ad0b05
       \endverb
     \endentry
+    \entry{humphrey_accelerating_2026}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=def0e2caed7e6b1581120a2d2142e835}{%
+           family={Humphrey},
+           familyi={H\bibinitperiod},
+           given={Luke},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ef4cee95106ff43c352ebf1138a27051}{%
+           family={Brooks},
+           familyi={B\bibinitperiod},
+           given={Helen},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b956909e9dc04cce92c37587c35cc734}{%
+           family={Mungale},
+           familyi={M\bibinitperiod},
+           given={Siddharth},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Frontiers Media SA}%
+      }
+      \strng{namehash}{d6b3ff148e6634c839bd481408f005fd}
+      \strng{fullhash}{d6b3ff148e6634c839bd481408f005fd}
+      \strng{fullhashraw}{d6b3ff148e6634c839bd481408f005fd}
+      \strng{bibnamehash}{d6b3ff148e6634c839bd481408f005fd}
+      \strng{authorbibnamehash}{d6b3ff148e6634c839bd481408f005fd}
+      \strng{authornamehash}{d6b3ff148e6634c839bd481408f005fd}
+      \strng{authorfullhash}{d6b3ff148e6634c839bd481408f005fd}
+      \strng{authorfullhashraw}{d6b3ff148e6634c839bd481408f005fd}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in Nuclear Engineering}
+      \field{title}{Accelerating the engineering design of breeder blankets with parametric optimisation and sequential learning}
+      \field{year}{2026}
+      \verb{doi}
+      \verb 10.3389/fnuen.2025.1694684
+      \endverb
+    \endentry
     \entry{kalos_monte_2008}{book}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=ef0c4912946ca6bdef4da80f2c3dba58}{%
@@ -1320,6 +1367,45 @@
       \verb https://royalsocietypublishing.org/doi/10.1098/rsta.2023.0410
       \endverb
       \keyw{Lit Review,Useful}
+    \endentry
+    \entry{manek_fast_2023}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=adc2815bb0bb1f23073712321b5479b0}{%
+           family={Mánek},
+           familyi={M\bibinitperiod},
+           given={Petr},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{122d72aabbbcb1d9c868343f7f112389}
+      \strng{fullhash}{122d72aabbbcb1d9c868343f7f112389}
+      \strng{fullhashraw}{122d72aabbbcb1d9c868343f7f112389}
+      \strng{bibnamehash}{122d72aabbbcb1d9c868343f7f112389}
+      \strng{authorbibnamehash}{122d72aabbbcb1d9c868343f7f112389}
+      \strng{authornamehash}{122d72aabbbcb1d9c868343f7f112389}
+      \strng{authorfullhash}{122d72aabbbcb1d9c868343f7f112389}
+      \strng{authorfullhashraw}{122d72aabbbcb1d9c868343f7f112389}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Machine Learning: Science and Technology}
+      \field{number}{1}
+      \field{title}{Fast regression of the tritium breeding ratio in fusion reactors}
+      \field{volume}{4}
+      \field{year}{2023}
+      \field{pages}{015008}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/2632-2153/acb6fb
+      \endverb
     \endentry
     \entry{nordlund2018improving}{article}{}{}
       \true{moreauthor}
