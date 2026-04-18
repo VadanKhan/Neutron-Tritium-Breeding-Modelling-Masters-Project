@@ -19,6 +19,55 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
+    \entry{aymar_iter_2002}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=92dd4e8268abf0a75ab98e7c5d75fac7}{%
+           family={Aymar},
+           familyi={A\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ea49b1c6c1e16adc5443584ac33f61ac}{%
+           family={Barabaschi},
+           familyi={B\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1cccb86d01b23b7e88756198f1c17050}{%
+           family={Shimomura},
+           familyi={S\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{d900b6e118bb009c1c0736c242d6398f}
+      \strng{fullhash}{d900b6e118bb009c1c0736c242d6398f}
+      \strng{fullhashraw}{d900b6e118bb009c1c0736c242d6398f}
+      \strng{bibnamehash}{d900b6e118bb009c1c0736c242d6398f}
+      \strng{authorbibnamehash}{d900b6e118bb009c1c0736c242d6398f}
+      \strng{authornamehash}{d900b6e118bb009c1c0736c242d6398f}
+      \strng{authorfullhash}{d900b6e118bb009c1c0736c242d6398f}
+      \strng{authorfullhashraw}{d900b6e118bb009c1c0736c242d6398f}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Plasma Physics and Controlled Fusion}
+      \field{number}{5}
+      \field{title}{The {ITER} design}
+      \field{volume}{44}
+      \field{year}{2002}
+      \field{pages}{519\bibrangedash 565}
+      \range{pages}{47}
+      \verb{doi}
+      \verb 10.1088/0741-3335/44/5/304
+      \endverb
+    \endentry
     \entry{boccaccini_demo_2014}{article}{}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -2404,6 +2453,34 @@
       \endverb
       \keyw{Lit Review,Useful}
     \endentry
+    \entry{doe_tritium_2015}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7f6cd5b5b184ad5dcf66198edda1fe77}{%
+           family={{US Department of Energy}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Washington, DC}%
+      }
+      \strng{namehash}{7f6cd5b5b184ad5dcf66198edda1fe77}
+      \strng{fullhash}{7f6cd5b5b184ad5dcf66198edda1fe77}
+      \strng{fullhashraw}{7f6cd5b5b184ad5dcf66198edda1fe77}
+      \strng{bibnamehash}{7f6cd5b5b184ad5dcf66198edda1fe77}
+      \strng{authorbibnamehash}{7f6cd5b5b184ad5dcf66198edda1fe77}
+      \strng{authornamehash}{7f6cd5b5b184ad5dcf66198edda1fe77}
+      \strng{authorfullhash}{7f6cd5b5b184ad5dcf66198edda1fe77}
+      \strng{authorfullhashraw}{7f6cd5b5b184ad5dcf66198edda1fe77}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{DOE-STD-1129-2015}
+      \field{title}{Tritium Handling and Safe Storage}
+      \field{type}{techreport}
+      \field{year}{2015}
+    \endentry
     \entry{warmer_overview_2024}{article}{}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -2465,6 +2542,37 @@
       \verb{doi}
       \verb 10.1016/j.fusengdes.2024.114386
       \endverb
+    \endentry
+    \entry{woods_properties_1966}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=26ecf83c2f6c80cbe3b25fb253bb576a}{%
+           family={Woods},
+           familyi={W\bibinitperiod},
+           given={C.\bibnamedelimi R.},
+           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Bettis Atomic Power Lab., Pittsburgh, PA (USA)}%
+      }
+      \strng{namehash}{26ecf83c2f6c80cbe3b25fb253bb576a}
+      \strng{fullhash}{26ecf83c2f6c80cbe3b25fb253bb576a}
+      \strng{fullhashraw}{26ecf83c2f6c80cbe3b25fb253bb576a}
+      \strng{bibnamehash}{26ecf83c2f6c80cbe3b25fb253bb576a}
+      \strng{authorbibnamehash}{26ecf83c2f6c80cbe3b25fb253bb576a}
+      \strng{authornamehash}{26ecf83c2f6c80cbe3b25fb253bb576a}
+      \strng{authorfullhash}{26ecf83c2f6c80cbe3b25fb253bb576a}
+      \strng{authorfullhashraw}{26ecf83c2f6c80cbe3b25fb253bb576a}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{WAPD-TM-585}
+      \field{title}{Properties of {Zircaloy-4} tubing ({LWBR} {Development} {Program})}
+      \field{type}{techreport}
+      \field{year}{1966}
     \endentry
     \entry{you_european_2016}{article}{}{}
       \true{moreauthor}

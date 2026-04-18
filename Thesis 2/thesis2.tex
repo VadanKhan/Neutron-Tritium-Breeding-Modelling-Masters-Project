@@ -218,16 +218,17 @@ sawan_physics_2006}.
 
 \subsection{Breeder Blanket Physics}
 \subsubsection{Operating Principles}
-As established in previous foundational work \citep{khan_mphys_sem1} and Section \ref{sec:context},
-the viability of commercial deuterium-tritium (D-T) fusion is fundamentally contingent upon net
-tritium production. Because the D-T plasma yields exactly one neutron per consumption event, and
-realistic reactor geometries suffer from unavoidable neutron leakage and parasitic absorption, the
-breeder blanket must achieve a TBR strictly greater than unity to overcome global tritium supply
-shortages and maintain a continuous fuel cycle \citep{pearson_tritium_2018}. Furthermore, because
-conservation of momentum dictates that this single emitted neutron carries away four-fifths of the
-total fusion energy ($E_n \approx 14.1 \text{ MeV}$ compared to $\sim 1-2 \text{ MeV}$ neutrons in
-fission reactors \citep{heckrotte_factors_1971}), fusion breeder blankets must be specialised to
-utilise these ultra high energy neutrons.
+\label{sec:theory_main}
+As established in previous foundational work \citep{khan_mphys_sem1} and Section
+\ref{sec:introduction}, the viability of commercial deuterium-tritium (D-T) fusion is fundamentally
+contingent upon net tritium production. Because the D-T plasma yields exactly one neutron per
+consumption event, and realistic reactor geometries suffer from unavoidable neutron leakage and
+parasitic absorption, the breeder blanket must achieve a TBR strictly greater than unity to overcome
+global tritium supply shortages and maintain a continuous fuel cycle \citep{pearson_tritium_2018}.
+Furthermore, because conservation of momentum dictates that this single emitted neutron carries away
+four-fifths of the total fusion energy ($E_n \approx 14.1 \text{ MeV}$ compared to $\sim 1-2 \text{
+MeV}$ neutrons in fission reactors \citep{heckrotte_factors_1971}), fusion breeder blankets must be
+specialised to utilise these ultra high energy neutrons.
 
 To breed this fuel, the blanket exploits neutron capture interactions with lithium. Natural lithium
 consists of two isotopes, both of which undergo tritium-producing reactions. The dominant
@@ -331,7 +332,7 @@ literature \citep{saha_application_2019}.
 
 Finally, to determine if a material exceeds its irradiation limits over its operational lifetime,
 the total number of displacements must be normalised into DPA per Full Power Year (FPY). The DPA
-received by a structural component over a full-power year is given by:
+received by a structural component over a FPY is given by:
 \begin{equation}
     \text{DPA/FPY} = \frac{N_{d,\text{arc}}}{\left(\frac{\rho V \cdot N_A}{\mu}\right)} \cdot \frac{P}{E_f \cdot e} \cdot (60^2 \cdot 24 \cdot 365)
     \label{eq:dpa_fpy}
@@ -469,7 +470,7 @@ Reduced-Activation Ferritic-Martensitic (RAFM) steels, notably EUROFER97
 These extreme thermal and neutronic loads strictly dictate component lifetime propositions. While
 ITER Test Blanket Modules are designed to survive experimental campaigns with cumulative radiation
 damage below $3\text{ dpa}$, commercial power plants will subject blanket structures to
-$20$--$50\text{ dpa}$ per full-power year \citep{federici_european_2017}. This necessitates a
+$20$--$50\text{ dpa}$ per FPY \citep{federici_european_2017}. This necessitates a
 modular design approach, with structural replacement anticipated every $2$--$5$ years to prevent
 catastrophic embrittlement \citep{boccaccini_demo_2014}.
 
@@ -522,6 +523,7 @@ the timeliness, originality, and necessity of the methodology developed in this 
 
 \section{Methodology}
 \subsection{Simulation Pipeline Summary}
+\label{sec:methodology_summary}
 The neutronic performance of the breeder blanket geometries is evaluated using a coupled
 computational workflow. The 3D parametric CAD models of the tokamak reactor are generated using the
 Python-based framework Paramak \citep{shimwell_paramak_2021}. To ensure computational efficiency
@@ -585,10 +587,10 @@ proceed as there are key advantages to this approach:
 \label{sec:method_neutronics}
 
 \subsubsection{Mechanistic Analysis of the Layered Blanket}
-Initial parametric sweeps were conducted to establish a baseline for the heterogeneous architecture.
-We also built upon explorations in the first stage of this project \citep{khan_mphys_sem1} by
-including tallying of individual layers to understand which were contributing and impactful to
-global results (see Section \ref{sec:layered_blanket_model_res}).
+Initial parametric thickness sweeps were conducted to establish a baseline for the heterogeneous
+architecture. We also built upon explorations in the first stage of this project
+\citep{khan_mphys_sem1} by including tallying of individual layers to understand which were
+contributing and impactful to global results (see Section \ref{sec:results_neutronics}).
 
 Building on this further, mechanistic understanding of performance necessitates localised analysis
 of several neutron transport parameters throughout the reactor.  To generate two-dimensional spatial
@@ -616,7 +618,7 @@ the blanket segment. Within this mesh grid, six specific reaction metrics were s
     lattice.
 \end{itemize}
 The raw outputs from these mesh tallies were subsequently processed and visualised as heat maps (see
-Section \ref{sec:layered_blanket_model_res}).
+Section \ref{sec:results_neutronics}).
 
 \subsubsection{Manual Thickness Distribution Analysis}
 To systematically investigate the effect of radial material distribution within the heterogeneous
@@ -628,7 +630,7 @@ grid-search methods is computationally intractable.
 To reduce the dimensionality of the problem while maintaining physical relevance, a linear gradient
 parameter, $\zeta$, was introduced as a heuristic constraint (see Figure \ref{fig:zeta_parameter}).
 This parameter governs the relative thickness of the layers across the blanket's depth, providing a
-human-intuitive method to observe spatial trends. In Section \ref{sec:zeta_results} we aggregate how
+human-intuitive method to observe spatial trends. In Section \ref{sec:results_neutronics} we aggregate how
 neutronic parameters vary under the sweep of $\zeta$, bound to $|\zeta|<0.35$ from meshing
 constraints in layers that are too thin.
 
@@ -882,114 +884,10 @@ These prioritise inner layers and continue radially outward until the thickness 
 \section{Results}
 \subsection{Neutronic Behaviour of Heterogeneous Architectures}
 \label{sec:results_neutronics}
-
-To systematically characterise the impact of geometry on tritium production, a linear gradient parameter, $\zeta$, was introduced to skew the blanket volume. Negative values ($\zeta < 0$) represent forward-weighted architectures with thicker plasma-facing layers, while positive values ($\zeta > 0$) denote rear-weighted configurations.
-
-The primary objective, the Tritium Breeding Ratio (TBR), demonstrates a heavy reliance on the forward layers (Figure \ref{fig:res_tbr_a}). As $\zeta$ increases, the tritium bred in the first layer declines sharply, while the rear layers see only marginal gains. The 2D reaction density map (Figure \ref{fig:res_tbr_b}) visually confirms this front-loaded behaviour, with breeding largely confined to the inner radial zones.
-
-\begin{figure}[htbp]
-    \centering
-    \begin{subfigure}[b]{0.48\textwidth}
-        \includegraphics[width=\textwidth]{figures/B1_Zeta_TBR.png}
-        \caption{TBR vs $\zeta$}
-        \label{fig:res_tbr_a}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.48\textwidth}
-        \includegraphics[width=\textwidth]{figures/B1_TBR_HM.png}
-        \caption{TBR Reaction Density ($\zeta = 0$)}
-        \label{fig:res_tbr_b}
-    \end{subfigure}
-    \caption{Global and layer-specific TBR performance across the geometric gradient, paired with the spatial distribution of breeding reactions.}
-    \label{fig:res_tbr}
-\end{figure}
-
-This spatial constraint is primarily dictated by severe flux attenuation. As neutrons penetrate deeper into the blanket, the population decays exponentially, visually represented by the fluence mapping in Figure \ref{fig:res_flux_b}. Total neutron track length decreases as the forward layers thin (Figure \ref{fig:res_flux_a}), reflecting an overall reduction in the surviving neutron population.
-
-\begin{figure}[htbp]
-    \centering
-    \begin{subfigure}[b]{0.48\textwidth}
-        \includegraphics[width=\textwidth]{figures/B1_Zeta_Flux.png}
-        \caption{Total Flux vs $\zeta$}
-        \label{fig:res_flux_a}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.48\textwidth}
-        \includegraphics[width=\textwidth]{figures/B1_Fluence_HM.png}
-        \caption{Fluence Map ($\zeta = 0$)}
-        \label{fig:res_flux_b}
-    \end{subfigure}
-    \caption{Neutron survival and track length, demonstrating exponential attenuation with blanket depth.}
-    \label{fig:res_flux}
-\end{figure}
-
-To counteract this decay and exceed the equilibrium threshold, the blanket relies heavily on \ce{(n, 2n)} multiplication reactions. However, Figure \ref{fig:res_mult_a} illustrates that these spallation events are exclusively concentrated at the front of the blanket (Figure \ref{fig:res_mult_b}). Because these reactions possess high incident energy thresholds ($\sim$7.5~MeV for Pb, $\sim$12~MeV for Zr in the first wall), the raw 14.1~MeV source neutrons must interact with the multiplier before they lose substantial kinetic energy.
-
-\begin{figure}[htbp]
-    \centering
-    \begin{subfigure}[b]{0.48\textwidth}
-        \includegraphics[width=\textwidth]{figures/B1_Zeta_Mult.png}
-        \caption{Multiplication vs $\zeta$}
-        \label{fig:res_mult_a}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.48\textwidth}
-        \includegraphics[width=\textwidth]{figures/B1_Mult_HM.png}
-        \caption{Multiplication Density ($\zeta = 0$)}
-        \label{fig:res_mult_b}
-    \end{subfigure}
-    \caption{Neutron multiplication rates, highlighting the dependency on high-energy, unmoderated flux in the plasma-facing layers.}
-    \label{fig:res_mult}
-\end{figure}
-
-The rapid loss of this requisite kinetic energy is driven by intense moderation within the coolant layers, alongside parasitic losses in the structural separators. Figures \ref{fig:res_mod_abs_a} and \ref{fig:res_mod_abs_b} contrast these mechanisms: the pressurised water layers provide superior moderation, evidenced by the bright scattering peaks, while the EUROFER97 separators act as rigid absorption barriers. (Quantitative trends over $\zeta$ for both absorption and scattering, alongside nuclear heating profiles, are detailed in Appendix \ref{app:supplementary_neutronics}).
-
-\begin{figure}[htbp]
-    \centering
-    \begin{subfigure}[b]{0.48\textwidth}
-        \includegraphics[width=\textwidth]{figures/B1_Scatter_HM.png}
-        \caption{Scattering Density}
-        \label{fig:res_mod_abs_a}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.48\textwidth}
-        \includegraphics[width=\textwidth]{figures/B1_Absorb_HM.png}
-        \caption{Absorption Density}
-        \label{fig:res_mod_abs_b}
-    \end{subfigure}
-    \caption{Spatial mapping at $\zeta=0$ contrasting thermalising scattering in the water coolant against parasitic absorption in the structural separators.}
-    \label{fig:res_mod_abs}
-\end{figure}
-
-Finally, adjusting the internal geometry directly alters the radiation damage profile of the structural components. The zirconium first wall sustains the highest DPA, though this rate decreases as $\zeta$ increases (Figure \ref{fig:res_dpa_a}). This variance is driven by a reduction in backscattered neutrons from the thinning first breeder layer. Conversely, rear-weighted configurations allow a harder neutron spectrum to penetrate deeper, systematically increasing the damage energy deposited into the internal structural separators (Figure \ref{fig:res_dpa_b}).
-
-\begin{figure}[htbp]
-    \centering
-    \begin{subfigure}[b]{0.48\textwidth}
-        \includegraphics[width=\textwidth]{figures/B1_Zeta_DPA.png}
-        \caption{DPA Rate vs $\zeta$}
-        \label{fig:res_dpa_a}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.48\textwidth}
-        \includegraphics[width=\textwidth]{figures/B1_Damage_HM.png}
-        \caption{Damage Energy Density ($\zeta = 0$)}
-        \label{fig:res_dpa_b}
-    \end{subfigure}
-    \caption{Radiation damage metrics, establishing the strict structural constraints governing first wall and separator lifetimes.}
-    \label{fig:res_dpa}
-\end{figure}
-
-\subsection{Layered Blanket Model Neutronics}
-\label{sec:layered_blanket_model_res}
-Building upon the baseline parameter sweeps conducted in the first semester \citep{khan_mphys_sem1},
-this phase of the project transitions the neutronic model from a simplified homogeneous
-approximation to a discrete, heterogeneous layered architecture.
-
 Figure \ref{fig:tbr_comparison} presents the global TBR across these different modelling approaches.
 The data shows an initial reduction in the calculated TBR when the required structural separator
 material (Eurofer) is integrated into the homogeneous mixture. A further, more substantial decrease
-in the global TBR is observed when this exact same material volume is geometrically separated into
+in the global TBR is observed when this exact same material volume is heterogeneously separated into
 distinct breeder, coolant, and structural layers.
 
 \begin{figure}[htbp]
@@ -1009,257 +907,146 @@ distinct breeder, coolant, and structural layers.
         \caption{Layer-wise TBR contribution vs. thickness}
         \label{fig:tbr_thickness}
     \end{subfigure}
-    \caption{Evaluating TBR of the layered blanket architecture. (a) Highlights the degradation of
-    global TBR when transitioning from idealised homogeneous mixtures to realistic heterogeneous
-    layers. (b) Demonstrates the spatial distribution of tritium production, showing heavy
-    concentration in the plasma-facing layers as overall blanket depth increases.}
+    \caption{ (a) Comparison of TBR against thickness for different blanket models. (b) Demonstrates
+    the layer-wise TBR contributions against thickness}
     \label{fig:layered_model_neutronics}
 \end{figure}
 
-To isolate the spatial distribution of tritium production within this heterogeneous geometry, the
-TBR was tallied layer-by-layer as a function of the total radial blanket thickness (Figure
-\ref{fig:tbr_thickness}). For this parameter sweep, the thickness of the structural separators was
-held constant while the radial depths of the discrete breeder and coolant layers were uniformly
-scaled.
+To evaluate layer-wise performance (Figure \ref{fig:tbr_thickness}), breeder and coolant depths were
+uniformly scaled against constant structural separator thicknesses. Global TBR rapidly saturates at
+$\approx450$~mm. Beyond this threshold, total production remains constant, yet internal breeding
+shifts: the contribution from Layer 1 rises, Layer 2 stabilises, and deeper layers (3 and 4)
+contribute progressively less.
 
-As the overall thickness of the blanket increases, the TBR contribution from innermost layers
-(Breeder Layers 1 and 2) rise and layer 2 starts to stabilise. Deeper layers (Breeder Layers 3 and
-4) contribute progressively less to the total TBR. The total TBR value quickly saturates at
-$\approx450$mm, and remains constant despite the breeding continuing to shift between layers.
+The global Tritium Breeding Ratio (TBR) remains relatively constant across the linear gradient
+parameter ($\zeta$), but the spatial distribution of tritium production shifts significantly between
+the discrete layers (Figure \ref{fig:res_tbr_a}). The 2D reaction density map (Figure
+\ref{fig:res_tbr_b}) demonstrates that breeding is asymmetrically focused near the plasma-facing
+boundary. Notably, at a uniform thickness distribution ($\zeta = 0$), the tritium bred in the second
+breeder layer actually exceeds that of the first.
 
-To further characterise the layered blanket environment, cross-sectional heatmaps were generated to
-track neutron transport and its structural impacts. Note that the steel separators are included
-between each breeder-coolant interface. They are too thin to annotate, but note that gaps between
-the breeder and coolant indicate a separator.
-
-Figure \ref{fig:reaction_heatmaps} maps the spatial distribution of the primary neutronic reactions
-driving the blanket's performance.
-
-\begin{figure}[hbtp]
+\begin{figure}[htbp]
     \centering
-    % FIRST SUBFIGURE
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/B1_TBR_HM.png}
-        \caption{Tritium production density}
-        \label{fig:tbr_hm}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{figures/B1_Zeta_TBR.png}
+        \caption{TBR vs $\zeta$}
+        \label{fig:res_tbr_a}
     \end{subfigure}
     \hfill
-    % SECOND SUBFIGURE
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/B1_Mult_HM.png}
-        \caption{Neutron multiplication density}
-        \label{fig:mult_hm}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{figures/B1_TBR_HM.png}
+        \caption{TBR Reaction Density ($\zeta = 0$)}
+        \label{fig:res_tbr_b}
     \end{subfigure}
-    \caption{Cross-sectional heatmaps detailing the spatial distribution of key neutronic reactions.
-    (a) Displays the density of tritium breeding reactions, strictly localised within the discrete
-    breeder layers. (b) Illustrates the concentration of neutron multiplication events across the
-    blanket depth. Trace reactions defined in Section \ref{sec:trace_reactions} are also highlighted
-    in the non-breeder layers, commonly shaded darker indicating rare events.
-    }
-    \label{fig:reaction_heatmaps}
+    \caption{ (a) Global and layer-specific TBR performance against $\zeta$, paired with a heatmap
+         of breeding reactions (b).}
+    \label{fig:res_tbr}
 \end{figure}
 
-As seen in Figure \ref{fig:tbr_hm}, tritium production is strictly confined to the designated
-breeder layers. The reaction density is highly asymmetric, with the vast majority of breeding
-occurring in the innermost layer immediately behind the first wall, before decaying sharply in the
-deeper radial zones.
+The volume-integrated flux tally (Figure \ref{fig:res_flux_a}) indicates that a greater proportion
+of neutrons survive longer and penetrate further into the blanket in forward-weighted ($\zeta < 0$)
+configurations. The fluence map (Figure \ref{fig:res_flux_b}) reveals that the incident neutron flux
+is completely attenuated by the rear boundary, saturating the blanket. Additionally, a minor
+step-like attenuation pattern is visible immediately following the discrete coolant layers.
 
-Figure \ref{fig:mult_hm} demonstrates that neutron multiplication events follow a virtually
-identical spatial profile. The multiplication reactions are heavily concentrated at the front of the
-blanket, where the incident neutron flux first enters the system, and drop off rapidly in the
-subsequent outward layers.
-
-Figure \ref{fig:fluence_hms} displays the spatial distribution of both the total neutron flux and
-the resulting radiation damage.
-
-\begin{figure}[hbtp]
+\begin{figure}[htbp]
     \centering
-    % FIRST SUBFIGURE
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/B1_Fluence_HM.png}
-        \caption{Total neutron flux distribution}
-        \label{fig:fluence_hm}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{figures/B1_Zeta_Flux.png}
+        \caption{Total Flux vs $\zeta$}
+        \label{fig:res_flux_a}
     \end{subfigure}
     \hfill
-    % SECOND SUBFIGURE
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/B1_Damage_HM.png}
-        \caption{Radiation damage distribution}
-        \label{fig:damage_hm}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{figures/B1_Fluence_HM.png}
+        \caption{Fluence Map ($\zeta = 0$)}
+        \label{fig:res_flux_b}
     \end{subfigure}
-    \caption{Cross-sectional heatmaps of flux and radiation damage. (a) Illustrates the progressive
-    attenuation of the neutron flux across the material boundaries. (b) Shows the spatial
-    distribution of structural radiation damage.}
-    \label{fig:fluence_hms}
+    \caption{ (a) Neutron track length tally within reactor components, paired with a heatmap of
+        neutron fluence depletion through the reactor wall (b).}
+    \label{fig:res_flux}
 \end{figure}
 
-As shown in Figure \ref{fig:fluence_hm}, the total neutron flux attenuates deeply as it propagates
-radially through the blanket, becoming almost entirely exhausted by the rear boundary. Notably, this
-attenuation exhibits a distinct, step-like profile, characterised by sharp decreases in flux
-immediately across each discrete coolant layer.
+Figure \ref{fig:res_mult_a} shows that total neutron multiplication decreases as $\zeta$ increases,
+yielding the highest multiplication rates in forward-weighted configurations. The spatial density
+map (Figure \ref{fig:res_mult_b}) highlights that these spallation events are heavily localised
+within the first two breeder layers.
 
-Figure \ref{fig:damage_hm} maps the corresponding structural damage. As expected, the damage is
-heavily concentrated on the plasma-facing first wall. Beyond this initial boundary, the damage
-profile declines exponentially through the blanket depth, tracking the overall attenuation trend of
-the incident neutron flux.
-
-Finally, the spatial distributions of neutron scattering and nuclear heating within the layered
-architecture were evaluated (Figure \ref{fig:scatter_heat_heatmaps}).
-
-\begin{figure}[hbtp]
+\begin{figure}[htbp]
     \centering
-    % FIRST SUBFIGURE
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/B1_Scatter_HM.png}
-        \caption{Neutron scattering density}
-        \label{fig:scatter_hm}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{figures/B1_Zeta_Mult.png}
+        \caption{Multiplication vs $\zeta$}
+        \label{fig:res_mult_a}
     \end{subfigure}
     \hfill
-    % SECOND SUBFIGURE
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/B1_Heat_HM.png}
-        \caption{Nuclear heating distribution}
-        \label{fig:heat_hm}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{figures/B1_Mult_HM.png}
+        \caption{Multiplication Density ($\zeta = 0$)}
+        \label{fig:res_mult_b}
     \end{subfigure}
-    \caption{Cross-sectional heatmaps of scattering and energy deposition. (a) Highlights distinct
-    peaks in neutron scattering density localised around the discrete coolant layers. (b) Displays
-    the corresponding nuclear heating profile, noting a specific concentration around the second
-    coolant layer.}
-    \label{fig:scatter_heat_heatmaps}
+    \caption{ (a) Total neutron multiplication rate per source neutron split between reactor
+        component, alongside the spatial concentration in the plasma-facing layers (b).}
+    \label{fig:res_mult}
 \end{figure}
 
-Figure \ref{fig:scatter_hm} maps the frequency of neutron scattering events. The scattering density
-exhibits distinct, localised peaks that align directly with the positions of the internal coolant
-layers.
+Neutron scattering events exhibit distinct, localised peaks within the water coolant layers (Figure
+\ref{fig:res_mod_abs_a}). Correspondingly, Figure \ref{fig:res_mod_abs_b} shows strong absorption
+within the breeder material, weak absorption in the first wall, slightly stronger interactions in
+the coolant, and pronounced, bright absorption peaks within the structural separators. Total
+absorption remains relatively constant across all $\zeta$ configurations, averaging approximately
+70\% within the breeder, 20\% in the separators, and 6\% in the coolant (Complete trends over
+$\zeta$ for both scattering and absorption are provided in Appendix
+\ref{app:supplementary_neutronics}).
 
-This spatial scattering pattern translates directly into the thermal energy deposition shown in
-Figure \ref{fig:heat_hm}. The nuclear heating profile follows a similar, albeit less pronounced,
-distribution peaking around the coolant layers. The highest overall concentration of heating is
-observed specifically within the second coolant layer.
-
-\subsection{Thickness Distribution Neutronics}
-\label{sec:zeta_results}
-
-To isolate the neutronic impact of spatial material distribution, the linear gradient parameter
-($\zeta$) was varied to shift the blanket from a forward-weighted to a rear-weighted geometry (see
-Figure \ref{fig:zeta_parameter}).
-
-\begin{figure}[hbtp]
+\begin{figure}[htbp]
     \centering
-    % FIRST SUBFIGURE
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/B1_Zeta_TBR.png}
-        \caption{TBR layer contribution}
-        \label{fig:zeta_tbr}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{figures/B1_Scatter_HM.png}
+        \caption{Scattering Density ($\zeta = 0$)}
+        \label{fig:res_mod_abs_a}
     \end{subfigure}
     \hfill
-    % SECOND SUBFIGURE
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/B1_Zeta_Mult.png}
-        \caption{Neutron multiplication contribution}
-        \label{fig:zeta_mult}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{figures/B1_Absorb_HM.png}
+        \caption{Absorption Density ($\zeta = 0$)}
+        \label{fig:res_mod_abs_b}
     \end{subfigure}
-    \caption{ The impact of the linear gradient parameter ($\zeta$) on key neutronic performance
-        metrics. (a) Tracks the total TBR and the individual contributions from discrete breeder
-        layers. (b) Illustrates the total neutron multiplication alongside the specific
-        contributions from the first wall, breeder, coolant, and structural separator layers.
-        Statistical uncertainties are plotted, though error bars are generally smaller than the data
-        markers. }
-    \label{fig:zeta_neutronics}
+    \caption{ Heat maps of scattering (a) and total absorption interactions (b) in the reactor wall.
+        Absorption tally records all absorptions, including breeding, spallation and parasitic
+        reactions.}
+    \label{fig:res_mod_abs}
 \end{figure}
 
-As illustrated in Figure \ref{fig:zeta_tbr}, the global TBR remains relatively stable but exhibits a
-slight overall decrease as the blanket becomes rear-weighted ($\zeta > 0$). However spatial
-distribution of tritium production significantly shifts; inner plasma-facing layers dominate
-breeding in forward-weighted configurations ($\zeta < 0$), whereas deeper layers contribute a
-progressively larger fraction as $\zeta$ increases.
+Total nuclear heating remains relatively constant at roughly 8~MeV per source neutron across all
+evaluated geometries (detailed in Appendix \ref{app:supplementary_neutronics}). Of this total energy
+deposition, approximately 75.0\% is deposited in the breeder layers and 19\% in the coolant layers.
+There is greater heating and energy deposition per unit volume in the coolant (heatmap provided in
+Appendix \ref{app:supplementary_neutronics}).
 
-Figure \ref{fig:zeta_mult} shows the neutron multiplication rate across the same domain. The total
-multiplication rate within the blanket decreases monotonically as the geometry shifts rearward.
-Conversely, the minor multiplication contribution from the structural separators slightly increases
-in back-loaded configurations.
+Finally, Figure \ref{fig:res_dpa_a} tracks structural degradation, showing that the DPA experienced
+by the first wall increases in forward-weighted configurations ($\zeta < 0$). This coincides with a
+corresponding increase in total damage energy deposited into the first wall (detailed in Appendix
+\ref{app:supplementary_neutronics}). The spatial distribution of damage energy (Figure
+\ref{fig:res_dpa_b}) is heavily concentrated on the extreme plasma-facing layers. Conversely, the
+DPA sustained by the internal structural separators rises in rear-weighted ($\zeta >
+0$) configurations.
 
-In addition to tritium breeding, the structural impact of varying the linear gradient parameter
-($\zeta$) was assessed by tallying the neutron displacement damage (DPA) and the total damage energy
-across the blanket components.
-
-\begin{figure}[hbtp]
+\begin{figure}[htbp]
     \centering
-    % FIRST SUBFIGURE
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/B1_Zeta_DPA.png}
-        \caption{DPA rates across components}
-        \label{fig:zeta_dpa}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{figures/B1_Zeta_DPA.png}
+        \caption{DPA Rate vs $\zeta$}
+        \label{fig:res_dpa_a}
     \end{subfigure}
     \hfill
-    % SECOND SUBFIGURE
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/B1_Zeta_Damage.png}
-        \caption{Damage energy deposition}
-        \label{fig:zeta_damage_energy}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{figures/B1_Damage_HM.png}
+        \caption{Damage Energy Density ($\zeta = 0$)}
+        \label{fig:res_dpa_b}
     \end{subfigure}
-    \caption{ The impact of the linear gradient parameter ($\zeta$) on structural degradation
-        metrics. Figure \ref{fig:zeta_dpa} tracks the Displacements Per Atom (DPA), while Figure
-        \ref{fig:zeta_damage_energy} tracks the damage energy deposited into the first wall and
-        internal structural separators. Statistical uncertainties are plotted, though error bars are
-        generally smaller than the data markers. }
-    \label{fig:zeta_structural_damage}
-\end{figure}
-
-As shown in Figure \ref{fig:zeta_dpa}, the global DPA decreases as the design becomes more forward
-weighted ($\zeta < 0$). As the material distribution is shifted rearward ($\zeta > 0$), the
-displacement damage experienced by the structural components steadily increases.
-
-A similar trend is observed in the total damage energy (Figure \ref{fig:zeta_damage_energy}). The
-total damage energy deposited across the blanket is minimised in forward-weighted designs.
-Conversely, as the overall blanket damage energy decreases with negative $\zeta$ values, the
-specific energy deposited directly into the plasma-facing first wall increases.
-
-The volume-integrated flux and resulting scattering events across the blanket components were
-evaluated as a function of the linear gradient parameter ($\zeta$).
-
-Figure \ref{fig:zeta_flux} shows that the total volume-integrated flux within the blanket is
-maximised in forward-weighted configurations ($\zeta < 0$) and decreases as the geometry becomes
-rear-weighted ($\zeta > 0$).
-
-The total scattering density (Figure \ref{fig:zeta_scatter}) exhibits a strongly correlated trend,
-decreasing as $\zeta$ becomes positive. Conversely, both the flux and scattering events localised
-within the structural layers increase in back-loaded configurations.
-
-\begin{figure}[hbtp]
-    \centering
-    % FIRST SUBFIGURE
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/B1_Zeta_Flux.png}
-        \caption{Volume-integrated flux tally}
-        \label{fig:zeta_flux}
-    \end{subfigure}
-    \hfill
-    % SECOND SUBFIGURE
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/B1_Zeta_Scatter.png}
-        \caption{Neutron scattering events}
-        \label{fig:zeta_scatter}
-    \end{subfigure}
-    \caption{ The effect of the linear gradient parameter ($\zeta$) on neutron transport and
-        interaction metrics. Figure \ref{fig:zeta_flux} plots the volume-integrated flux (total
-        neutron path length in $\text{n} \cdot \text{cm}$) across the blanket and its individual
-        components. Figure \ref{fig:zeta_scatter} plots the corresponding number of neutron
-        scattering events. Statistical uncertainties are plotted, though error bars are generally
-        smaller than the data markers. }
-    \label{fig:zeta_flux_scatter}
+    \caption{Radiation damage metrics across the linear gradient alongside the spatial profile of damage energy deposition.}
+    \label{fig:res_dpa}
 \end{figure}
 
 \subsection{ML Optimisation Findings}
@@ -1303,7 +1090,7 @@ generated (Figure \ref{fig:surrogate_projections}). These slices plot the thickn
 breeder layer (B1)—which exhibited the strongest single-variable influence on the Tritium Breeding
 Ratio (TBR)—against other selected layers.
 
-\begin{figure}[hbtp]
+\begin{figure}[hbt]
     \centering
 % --- TOP ROW ---
     \begin{subfigure}[b]{0.49\textwidth}
@@ -1339,7 +1126,7 @@ Ratio (TBR)—against other selected layers.
     \caption{ 2D contour projections of the 8D surrogate model from the unconstrained optimisation
         run. Each panel plots the thickness of the innermost breeder layer (B1) against a secondary
         layer (B2, B4, C1, or C4), with all non-plotted dimensions held constant at their optimal
-        boundary limits. }
+        boundary limits.}
     \label{fig:surrogate_projections}
 \end{figure}
 
@@ -1361,45 +1148,87 @@ layers compared to the innermost layers.
 \subsection{Physical Implications of Heterogeneous Architectures}
 \label{sec:discussion_heterogeneous}
 
-The transition from a homogenised approximation to a discrete, layered architecture incurs a severe
-TBR penalty (Figure \ref{fig:tbr_comparison}). While introducing EUROFER97 inherently degrades the
-neutron economy via parasitic absorption, the geometric separation of these materials exacerbates
-this effect. In a discrete model, structural separators act as shielding barriers, absorbing
-thermalised neutrons before they can interact with the $\ce{^{6}Li}$ in adjacent breeder layers.
-Consequently, tritium production and \ce{(n, 2n)} multiplication events are heavily front-loaded
-(Figures \ref{fig:tbr_thickness} and \ref{fig:reaction_heatmaps}), as the incident 14.1~MeV fast
-neutrons are rapidly consumed or attenuated near the plasma-facing boundary.
+Figure \ref{fig:tbr_comparison} demonstrates transitioning from a homogeneous mixture to a discrete
+layered architecture introduces a distinct neutronic penalty. Geometric separation inherently traps
+neutrons within isolated water channels and structural separators. Consequently, the plasma-facing
+breeder region experiences the highest total flux (Figure \ref{fig:res_flux_a}) but lacks immediate,
+in-situ moderation. While noted in section \ref{sec:methodology_summary} that this decrease is
+likely an overestimate, the absorption heatmap (Figure \ref{fig:res_mod_abs_b}) and Appendix
+\ref{app:supplementary_neutronics} confirm that these discrete separator ($\sim$20\% of absorption)
+and coolant boundaries ($\sim$6\% of absorption) act as pronounced parasitic sinks, driving overall
+neutron population loss. Furthermore, parasitic absorption within the water coolant is particularly problematic from a safety
+perspective; neutron capture and cross-contamination can produce tritiated water (HTO), which is
+approximately $10,000$ times more radiotoxic than elemental tritium gas \citep{doe_tritium_2015}.
 
-This rapid attenuation is characterised by a distinct step-like profile across the coolant layers
-(Figure \ref{fig:fluence_hm}). Pressurised water acts as a highly effective moderator, evident from
-the intense, localised peaks in scattering density (Figure \ref{fig:scatter_hm}). This rapid
-thermalisation deposits substantial kinetic energy, creating corresponding peaks in the nuclear
-heating profile (Figure \ref{fig:heat_hm}), particularly around the second coolant layer. %
-While beneficial for thermal extraction, this concentrated moderation restricts deep flux
-penetration, confining the majority of useful breeding to the innermost radial zones.
+Despite these parasitic losses, the concentrated moderating effect of the water layers (Figure
+\ref{fig:res_mod_abs_a}) can increase the \ce{Li-6} breeding reaction cross-sections in adjacent
+regions (see Section \ref{sec:theory_main}). As demonstrated in Figures \ref{fig:tbr_thickness},
+\ref{fig:res_tbr_a}, and \ref{fig:res_tbr_b}, this thermalisation is so effective that the second
+breeder layer can actually yield a higher tritium production rate than the first, even though the
+total available flux has significantly decreased at that depth (Figure \ref{fig:res_flux_b}).
 
-The structural and neutronic consequences of this front-loaded behaviour are confirmed by the linear
-gradient sweep. Shifting blanket volume rearward ($\zeta > 0$) monotonically decreases both global
-TBR and total multiplication (Figure \ref{fig:zeta_neutronics}). By starving the plasma-facing
-layers of lead multiplier, the unattenuated fast neutrons lack sufficient target volume to trigger
-threshold \ce{(n, 2n)} reactions, wasting their high incident energy. Furthermore, rear-weighted
-configurations allow a harder neutron spectrum to penetrate deeper, systematically increasing the
-DPA and damage energy deposited into internal structural separators (Figure
-\ref{fig:zeta_structural_damage}). Therefore, neutronic performance is definitively optimised by
-forward-weighted geometries ($\zeta < 0$), which maximise early multiplication and safely attenuate
-flux to minimise deep structural degradation (Figure \ref{fig:zeta_flux_scatter}).
+Across the linear geometric gradient ($\zeta$), the global TBR remains roughly constant, though it
+begins to marginally decline at higher, rear-weighted $\zeta$ values (Figure \ref{fig:res_tbr_a}).
+This relative stability indicates the blanket is operating in a ``saturating condition"; as visually
+confirmed by the fluence heatmap (Figure \ref{fig:res_flux_b}), the total radial depth is sufficient
+to completely consume and attenuate the incident neutron flux regardless of internal distribution.
 
+However, the spatial origin of this breeding is dictated by \ce{(n, 2n)} multiplication. As detailed
+in Section \ref{sec:theory_main}, these spallation events require high-energy incident neutrons,
+causing multiplication to almost entirely deplete after the first two layers (Figure
+\ref{fig:res_mult_b}). In rear-weighted configurations ($\zeta > 0$), incident neutrons must pass
+through structural separators and coolant channels earlier in their transport path. As shown by the
+scattering density (Figure \ref{fig:res_mod_abs_a}), this early moderation rapidly degrades neutron
+kinetic energy, explaining why total multiplication steadily decreases as $\zeta$ increases (Figure
+\ref{fig:res_mult_b}).
 
-Figure \ref{fig:layered_model_neutronics} demonstrates that tritium breeding is predominantly
-concentrated in the region closest to the ``front'' (facing the plasma), the inner blanket layers.
+This reduction in high-energy spallation directly links to the varying total flux tallies.
+Forward-weighted configurations ($\zeta < 0$) sustain a significantly higher total flux (Figure
+\ref{fig:res_flux_a}) by generating a larger initial neutron population. However, the modest
+relative increase in multiplication (roughly $\sim$16.7\%) is insufficient to fully account for the
+massive $\sim$54.5\% increase in total flux track length (rising from $\sim$110 to
+$\sim$170~n$\cdot$cm). Instead, this increased track length occurs because forward-weighted designs
+lack thick early water and separator layers to moderate the flux (see Figure \ref{fig:res_mod_abs_b}
+and Appendix \ref{app:supplementary_neutronics} for $\zeta$ scattering trends). Without early
+thermalisation, high-energy neutrons simply travel further before being absorbed.
 
-A limitation of the current methodological framework is its reliance on single-objective Bayesian
-Optimisation, focusing exclusively on maximising the TBR. In reality, blanket design is a highly
-constrained, multi-physics problem. Future iterations of this pipeline should integrate
-Multi-Objective Bayesian Optimisation (MOBO) to map the Pareto front between competing objectives,
-such as simultaneously maximising TBR while minimising structural radiation damage (DPA) or tritium
-inventory limits \citep{emmerich2005single}.
+Furthermore, rear-weighted configurations inherently position less water near the high-flux plasma
+boundary, mitigating early parasitic losses. High-energy neutrons exhibit higher scattering but
+lower absorption cross-sections in EUROFER97 \citep{stornelli_ultra-fine_2024,
+brown_endfb-viii0_2018}. Therefore, rear-weighted designs safely scatter fast neutrons with fewer
+immediate parasitic losses (see Appendix \ref{app:supplementary_neutronics}). This complex
+cross-sectional balance explains why forward-weighted designs, despite their vastly superior neutron
+populations, fail to achieve strictly dominant global TBR.
 
+These geometric shifts also dictate structural viability. In rear-weighted configurations, the
+internal structural separators are exposed to high-energy source neutrons much earlier, driving a
+stark increase in internal DPA. Conversely, the first wall experiences peak DPA in forward-weighted
+configurations, as intense multiplication within the thick first breeder layer causes highly
+energetic neutrons to backscatter. Given the required DPA-per-year thresholds (yielding a critical
+embrittlement lifetime of roughly 8.2 to 10.0 FPYs for Zircaloy-4), this concentrated
+damage highlights the severe material inadequacy of zirconium under intense front-loaded
+multiplication.
+
+These geometric shifts also dictate structural viability. In rear-weighted configurations, the
+internal structural separators are exposed to high-energy source neutrons much earlier, driving a
+stark increase in internal DPA. Conversely, the first wall experiences peak DPA in forward-weighted
+configurations, as intense multiplication within the thick first breeder layer causes highly
+energetic neutrons to backscatter. While the absorption heatmap (Figure \ref{fig:res_mod_abs_b})
+demonstrates that zirconium is neutronically superior due to its exceptionally low parasitic
+absorption, there is a trade-off in its structural threshold. At our calculated damage rates
+($\sim6.2$--$7.5$ DPA/year, critical helium embrittlement at $61.99$ DPA
+\citep{woods_properties_1966}) Zircaloy-4 restricts the first wall lifetime to roughly $8$--$10$
+FPYs—far below ITER's 30-year operational target \citep{aymar_iter_2002}. By contrast,
+an ultra-fine grained EUROFER97 first wall ($2.2$--$2.5$ DPA/year, $57.47$ threshold DPA
+\citep{woods_properties_1966}) demonstrates vastly superior structural longevity of $23$--$26$
+FPYs, but we found would cause a $\approx9\%$ TBR decrease.
+
+Ultimately, navigating this intractable web of physical variations is practically impossible via
+manual parameter sweeps. Because proportional scaling of the coolant and breeder layers resulted in
+largely stagnant global TBR and heating, simple geometric gradients failed to unlock significant
+performance gains. To break this stagnation and automatically explore the highly-dimensional,
+non-linear design space, the implementation of a Machine Learning optimisation pipeline became a
+critical necessity.
 
 \section{Conclusion}
 
@@ -1413,6 +1242,63 @@ inventory limits \citep{emmerich2005single}.
 
 \defbibnote{bibnote}{\textit{Note: DOI links are hyperlinked within ``[DOI]" placeholder}}
 \printbibliography[heading=bibintoc, title={References}, prenote=bibnote]
+
+\newpage
+\begin{appendices}
+\pagenumbering{roman} % Restarts count and switches to i, ii, iii...
+
+% --- If you are keeping your Theory appendix, it goes here ---
+% \section{Supplementary Neutronics Theory} \label{app:neutronics_theory}
+% ...
+
+\section{Supplementary Neutronics Data}
+\label{app:supplementary_neutronics}
+
+This section provides the quantitative neutronic trends over the linear gradient parameter ($\zeta$)
+and supplementary spatial heatmaps referenced in Section \ref{sec:results_neutronics}.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{figures/B1_Zeta_Scatter.png}
+        \caption{Scattering vs $\zeta$}
+        \label{fig:app_scatter_zeta}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{figures/B1_Zeta_Absorb.png}
+        \caption{Absorption vs $\zeta$}
+        \label{fig:app_absorb_zeta}
+    \end{subfigure}
+    \caption{Total volume-integrated neutron scattering and absorption events tracked across the geometric gradient.}
+    \label{fig:app_scatter_absorb}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{figures/B1_Zeta_Heating.png}
+        \caption{Heating Energy vs $\zeta$}
+        \label{fig:app_heat_zeta}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{figures/B1_Heat_HM.png}
+        \caption{Heating Energy Density ($\zeta = 0$)}
+        \label{fig:app_heat_hm}
+    \end{subfigure}
+    \caption{Total nuclear heating deposition rates and the corresponding spatial concentration within the discrete blanket layers.}
+    \label{fig:app_heating}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.48\textwidth]{figures/B1_Zeta_Damage.png}
+    \caption{Total damage energy deposited into the plasma-facing first wall and internal structural separators across the geometric gradient.}
+    \label{fig:app_damage_zeta}
+\end{figure}
+
+\end{appendices}
 
 
 \end{document}
