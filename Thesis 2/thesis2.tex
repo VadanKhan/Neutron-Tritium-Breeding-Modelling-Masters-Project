@@ -205,13 +205,43 @@
 \section{Introduction}
 \label{sec:introduction}
 Commercial nuclear fusion is predominantly pursued via the deuterium-tritium (D-T) fuel cycle due to
-its relatively large cross-section at achievable plasma temperatures. This reaction fuses deuterium
-and tritium to yield an alpha particle and a highly energetic fast neutron ($\ce{^{2}H + ^{3}H ->
-^{4}He + n}$, $Q = +17.6 \text{ MeV}$) \citep{heckrotte_factors_1971}. A breeder blanket is a critical modular component wrapped
-around the fusion reactor core engineered to fulfil two primary physical functions: capturing and
-extracting the immense kinetic energy deposited by these 14.1 MeV neutrons for electricity
-generation, and breeding the requisite tritium to sustain the reactor \citep{federici_overview_2019,
-sawan_physics_2006}.
+its relatively large fusion cross-section at achievable plasma temperatures compared to alternatives
+like D-D or D-\ce{^{3}He} \citep{heckrotte_factors_1971, paris_lost_2023}. This reaction fuses
+deuterium and tritium to yield an alpha particle and a highly energetic fast neutron ($\ce{^{2}H +
+^{3}H -> ^{4}He + n}$, $Q = +17.6 \text{ MeV}$). However, the viability of this cycle is
+fundamentally bottlenecked by the supply of tritium, which in turn acts as a limiting factor for
+fusion energy as a whole \citep{pearson_tritium_2018}.
+
+Tritium is a radioactive isotope with a short half-life ($\sim$12.3 years) and effectively no
+natural abundance. Current global inventories are derived primarily as by-products from heavy-water
+moderated fission reactors and are severely limited \citep{kovari_tritium_2018}. To contextualise
+this scarcity, the testing and startup of a large-scale fusion device requires a substantial initial
+tritium inventory of upwards of 10--12~kg, while the continuous operation of a commercial reactor is
+projected to consume between 10 and 100~kg of tritium annually \citep{lord_fusing_2024}. In stark
+contrast, current global production is optimistically capped at approximately 8~kg per year
+\citep{pearson_tritium_2018}.
+
+The only sustainable solution to this supply crisis is the \textit{in situ} breeding of tritium
+within the fusion reactor itself. This is achieved using a `breeder blanket': a critical reactor
+module wrapped around the nuclear core. While breeder blankets have historical roots in fission
+reactors for producing fissile isotopes \citep{moir_fusion_1982, maniscalco_fusion_1984}, modern
+fusion research utilises them to transmute lithium into tritium (see Section \ref{sec:theory_main})
+and these modules have become a key focus global fusion efforts (see Section
+\ref{sec:breeder_blanket_studies}). Because each D-T fusion reaction yields exactly one neutron,
+this neutron must be captured by the blanket to breed a new tritium atom. The critical figure of
+merit for this process is the Tritium Breeding Ratio (TBR), defined as the ratio of tritium produced
+to tritium consumed. To ensure fuel self-sufficiency and to start building excess inventory for
+starting future reactors, the TBR must be maximised as much as reasonably possible
+\citep{sawan_physics_2006}.
+
+While maximising the TBR is the primary goal, the breeder blanket is a highly constrained
+multi-physics environment. It must simultaneously act as the primary component for extracting
+high-grade thermal energy for electricity generation, whilst remaining structurally durable and safe
+under extreme neutron irradiation and thermal stress \citep{federici_overview_2019}. Building upon
+previous neutron transport studies using homogeneous approximations \citep{khan_mphys_sem1}, this
+study aims to optimise the TBR of a discrete, heterogeneous layered blanket architecture and
+explores employing Machine Learning (ML) to navigate increasingly intractable physical and geometric
+constraints.
 
 
 \section{Theory}
@@ -220,15 +250,15 @@ sawan_physics_2006}.
 \subsubsection{Operating Principles}
 \label{sec:theory_main}
 As established in previous foundational work \citep{khan_mphys_sem1} and Section
-\ref{sec:introduction}, the viability of commercial deuterium-tritium (D-T) fusion is fundamentally
+\ref{sec:introduction}, the viability of commercial D-T fusion is fundamentally
 contingent upon net tritium production. Because the D-T plasma yields exactly one neutron per
 consumption event, and realistic reactor geometries suffer from unavoidable neutron leakage and
-parasitic absorption, the breeder blanket must achieve a TBR strictly greater than unity to overcome
-global tritium supply shortages and maintain a continuous fuel cycle \citep{pearson_tritium_2018}.
-Furthermore, because conservation of momentum dictates that this single emitted neutron carries away
-four-fifths of the total fusion energy ($E_n \approx 14.1 \text{ MeV}$ compared to $\sim 1-2 \text{
-MeV}$ neutrons in fission reactors \citep{heckrotte_factors_1971}), fusion breeder blankets must be
-specialised to utilise these ultra high energy neutrons.
+parasitic absorption, the breeder blanket must achieve a TBR strictly greater than unity just to
+maintain a continuous fuel cycle \citep{pearson_tritium_2018}. Furthermore, because conservation of
+momentum dictates that this single emitted neutron carries away four-fifths of the total fusion
+energy ($E_n \approx 14.1 \text{ MeV}$ compared to $\sim 1-2 \text{ MeV}$ neutrons in fission
+reactors \citep{heckrotte_factors_1971}), fusion breeder blankets must be specialised to utilise
+these ultra high energy neutrons.
 
 To breed this fuel, the blanket exploits neutron capture interactions with lithium. Natural lithium
 consists of two isotopes, both of which undergo tritium-producing reactions. The dominant
@@ -443,7 +473,7 @@ algorithm is forced to aggressively explore highly uncertain regions (Section
 \subsection{Breeder Blanket Architectures}
 \label{sec:breeder_blanket_studies}
 
-Contemporary fusion reactor designs must achieve a Tritium Breeding Ratio (TBR) strictly greater
+Contemporary fusion reactor designs must achieve a TBR strictly greater
 than 1.0 (as defined in Section \ref{sec:introduction}). While the literature explores diverse
 material paradigms---ranging from solid ceramics in ITER \citep{federici_overview_2019} and liquid
 metal concepts in CFETR \citep{zhuang_progress_2019}, to highly compact liquid immersion variants in
@@ -887,7 +917,7 @@ material (Eurofer) is integrated into the homogeneous mixture. A further, more s
 in the global TBR is observed when this exact same material volume is heterogeneously separated into
 distinct breeder, coolant, and structural layers.
 
-\begin{figure}[htbp]
+\begin{figure}[htb]
     \centering
     % FIRST SUBFIGURE
     \begin{subfigure}[t]{0.49\textwidth}
@@ -915,7 +945,7 @@ $\approx450$~mm. Beyond this threshold, total production remains constant, yet i
 shifts: the contribution from Layer 1 rises, Layer 2 stabilises, and deeper layers (3 and 4)
 contribute progressively less.
 
-The global Tritium Breeding Ratio (TBR) remains relatively constant across the linear gradient
+The global TBR remains relatively constant across the linear gradient
 parameter ($\zeta$), but the spatial distribution of tritium production shifts significantly between
 the discrete layers (Figure \ref{fig:res_tbr_a}). The 2D reaction density map (Figure
 \ref{fig:res_tbr_b}) demonstrates that breeding is asymmetrically focused near the plasma-facing
@@ -946,7 +976,7 @@ configurations. The fluence map (Figure \ref{fig:res_flux_b}) reveals that the i
 is completely attenuated by the rear boundary, saturating the blanket. Additionally, a minor
 step-like attenuation pattern is visible immediately following the discrete coolant layers.
 
-\begin{figure}[htbp]
+\begin{figure}[htb]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{figures/B1_Zeta_Flux.png}
@@ -969,7 +999,7 @@ yielding the highest multiplication rates in forward-weighted configurations. Th
 map (Figure \ref{fig:res_mult_b}) highlights that these spallation events are heavily localised
 within the first two breeder layers.
 
-\begin{figure}[htbp]
+\begin{figure}[htb]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{figures/B1_Zeta_Mult.png}
@@ -996,7 +1026,7 @@ absorption remains relatively constant across all $\zeta$ configurations, averag
 $\zeta$ for both scattering and absorption are provided in Appendix
 \ref{app:supplementary_neutronics}).
 
-\begin{figure}[htbp]
+\begin{figure}[htb]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{figures/B1_Scatter_HM.png}
@@ -1029,7 +1059,7 @@ corresponding increase in total damage energy deposited into the first wall (det
 DPA sustained by the internal structural separators rises in rear-weighted ($\zeta >
 0$) configurations.
 
-\begin{figure}[htbp]
+\begin{figure}[htb]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{figures/B1_Zeta_DPA.png}
@@ -1052,7 +1082,7 @@ DPA sustained by the internal structural separators rises in rear-weighted ($\ze
 The optimal blanket configurations identified by the Bayesian optimiser under various dimensional
 constraints are presented in Figure \ref{fig:ml_optimisation}.
 
-\begin{figure}[hbtp]
+\begin{figure}[hbt]
     \centering
     \includegraphics[width=1.0\textwidth]{figures/breeder_blanket_2d_themed.png}
     \caption{ Radial thickness profiles and resulting global TBR for the ML optimised TBR-thickness
@@ -1292,6 +1322,25 @@ performance), facilitating a holistic, plant-wide fusion reactor optimisation mo
 
 
 \section{Conclusion}
+\label{sec:conclusion}
+
+This study demonstrated that a heterogeneous layered breeder blanket degrades TBR due to the
+introduction of parasitic structural and coolant sinks. Notably this layered approximation acts as a
+conservative underestimate; realistic, complex geometries could mitigate these losses via effects
+such as neutron streaming. To navigate this design space, the SOBO-GPR pipeline proved highly
+effective, identifying that optimal TBR demands a front-loaded (lower $\zeta$), ``binding
+configuration'' of maximum breeder and minimum coolant thicknesses. However, this purely neutronic
+optimum does incur physical trade-offs and clearly reveals the negligible impact of the outermost
+blanket layers on overall production. Ultimately, while this study serves as a foundational
+introduction, these findings underscore that TBR cannot be isolated from structural and
+thermal-hydraulic realities, creating clear scope for future work to integrate these necessary
+design features. Because this successful implementation was built upon a modular codebase, there is
+substantial scope to broaden this approach to rapidly evaluate alternative materials and blanket
+architectures. As geometric approximations are subsequently relaxed, integrating this machine
+learning pipeline with larger parameter scaling and MOO will provide a vital tool for solving
+increasingly intractable design problems. This could assist in expediting the systematic and
+comprehensive research required for holistically optimised components in next-generation fusion
+reactors.
 
 
 

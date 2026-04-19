@@ -5,31 +5,31 @@
 \contentsline {subsubsection}{\numberline {2.1.2}Trace Reactions}{2}{subsubsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.2}Neutron Transport Metrics}{2}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}Neutron Track Length}{2}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}Radiation Damage and Displacements Per Atom}{2}{subsubsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.3}Nuclear Heating and Energy Deposition}{3}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.2}Radiation Damage and Displacements Per Atom}{3}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Nuclear Heating and Energy Deposition}{4}{subsubsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.3}ML: Bayesian Optimisation}{4}{subsection.2.3}%
 \contentsline {subsubsection}{\numberline {2.3.1}Surrogate Modelling via Gaussian Process Regression}{4}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Acquisition Functions and the Exploration-Exploitation Trade-off}{4}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.2}Acquisition Functions and the Exploration-Exploitation Trade-off}{5}{subsubsection.2.3.2}%
 \contentsline {section}{\numberline {3}Literature Review}{5}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Breeder Blanket Architectures}{5}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Computational Load in Nuclear Neutronics}{5}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.2}Computational Load in Nuclear Neutronics}{6}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Machine Learning and Surrogate Modelling in Physics}{6}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Methodology}{6}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Simulation Pipeline Summary}{6}{subsection.4.1}%
+\contentsline {section}{\numberline {4}Methodology}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Simulation Pipeline Summary}{7}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Neutronic Analysis}{8}{subsection.4.2}%
 \contentsline {subsubsection}{\numberline {4.2.1}Mechanistic Analysis of the Layered Blanket}{8}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Manual Thickness Distribution Analysis}{8}{subsubsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.3}ML Optimisation}{9}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}ML Algorithm}{9}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Testing, Tuning \& Developing the Optimiser}{10}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}ML Optimisation Studies for TBR-Thickness}{11}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.2.2}Manual Thickness Distribution Analysis}{9}{subsubsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.3}ML Optimisation}{10}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}ML Algorithm}{10}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Testing, Tuning \& Developing the Optimiser}{11}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}ML Optimisation Studies for TBR-Thickness}{13}{subsubsection.4.3.3}%
 \contentsline {section}{\numberline {5}Results}{13}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Neutronic Behaviour of Heterogeneous Architectures}{13}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}ML Optimisation Findings}{16}{subsection.5.2}%
-\contentsline {section}{\numberline {6}Discussion}{17}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Physical Implications of Heterogeneous Architectures}{17}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Efficacy of the Machine Learning Optimisation}{19}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Limitations and Future Work}{20}{subsection.6.3}%
+\contentsline {subsection}{\numberline {5.2}ML Optimisation Findings}{15}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Discussion}{16}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Physical Implications of Heterogeneous Architectures}{16}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Efficacy of the Machine Learning Optimisation}{18}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Limitations and Future Work}{19}{subsection.6.3}%
 \contentsline {section}{\numberline {7}Conclusion}{21}{section.7}%
 \contentsline {section}{References}{21}{section.7}%
 \contentsline {section}{\numberline {A}Supplementary Neutronics Data}{i}{appendix.1.A}%

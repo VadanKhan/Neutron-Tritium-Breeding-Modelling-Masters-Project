@@ -19,6 +19,55 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
+    \entry{aymar_iter_2002}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=92dd4e8268abf0a75ab98e7c5d75fac7}{%
+           family={Aymar},
+           familyi={A\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ea49b1c6c1e16adc5443584ac33f61ac}{%
+           family={Barabaschi},
+           familyi={B\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1cccb86d01b23b7e88756198f1c17050}{%
+           family={Shimomura},
+           familyi={S\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{d900b6e118bb009c1c0736c242d6398f}
+      \strng{fullhash}{d900b6e118bb009c1c0736c242d6398f}
+      \strng{fullhashraw}{d900b6e118bb009c1c0736c242d6398f}
+      \strng{bibnamehash}{d900b6e118bb009c1c0736c242d6398f}
+      \strng{authorbibnamehash}{d900b6e118bb009c1c0736c242d6398f}
+      \strng{authornamehash}{d900b6e118bb009c1c0736c242d6398f}
+      \strng{authorfullhash}{d900b6e118bb009c1c0736c242d6398f}
+      \strng{authorfullhashraw}{d900b6e118bb009c1c0736c242d6398f}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Plasma Physics and Controlled Fusion}
+      \field{number}{5}
+      \field{title}{The {ITER} design}
+      \field{volume}{44}
+      \field{year}{2002}
+      \field{pages}{519\bibrangedash 565}
+      \range{pages}{47}
+      \verb{doi}
+      \verb 10.1088/0741-3335/44/5/304
+      \endverb
+    \endentry
     \entry{boccaccini_demo_2014}{article}{}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -1203,6 +1252,115 @@
       \verb https://doi.org/10.5281/zenodo.14867425
       \endverb
     \endentry
+    \entry{knowles_parego_2006}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0c9676aa4aea3a726ac0eb21f39f1c43}{%
+           family={Knowles},
+           familyi={K\bibinitperiod},
+           given={Joshua},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{0c9676aa4aea3a726ac0eb21f39f1c43}
+      \strng{fullhash}{0c9676aa4aea3a726ac0eb21f39f1c43}
+      \strng{fullhashraw}{0c9676aa4aea3a726ac0eb21f39f1c43}
+      \strng{bibnamehash}{0c9676aa4aea3a726ac0eb21f39f1c43}
+      \strng{authorbibnamehash}{0c9676aa4aea3a726ac0eb21f39f1c43}
+      \strng{authornamehash}{0c9676aa4aea3a726ac0eb21f39f1c43}
+      \strng{authorfullhash}{0c9676aa4aea3a726ac0eb21f39f1c43}
+      \strng{authorfullhashraw}{0c9676aa4aea3a726ac0eb21f39f1c43}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Evolutionary Computation}
+      \field{number}{1}
+      \field{title}{{ParEGO}: A hybrid algorithm with on-line landscape approximation for expensive multiobjective optimization problems}
+      \field{volume}{10}
+      \field{year}{2006}
+      \field{pages}{50\bibrangedash 66}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1109/TEVC.2005.851274
+      \endverb
+    \endentry
+    \entry{kovari_tritium_2018}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=3e0862825e57cc6325aca69f73312d70}{%
+           family={Kovari},
+           familyi={K\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=539b4c1608d9b281ee03744c5df12ab5}{%
+           family={Coleman},
+           familyi={C\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0354afd151635445250c5b7e80d63f15}{%
+           family={Cristescu},
+           familyi={C\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d2951e7c5c746f711dc91173afea88b8}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ca34f03fcf5a792f809788f1ca4d465e}
+      \strng{fullhash}{4a0d8381587e28703f6952fc658c858b}
+      \strng{fullhashraw}{4a0d8381587e28703f6952fc658c858b}
+      \strng{bibnamehash}{ca34f03fcf5a792f809788f1ca4d465e}
+      \strng{authorbibnamehash}{ca34f03fcf5a792f809788f1ca4d465e}
+      \strng{authornamehash}{ca34f03fcf5a792f809788f1ca4d465e}
+      \strng{authorfullhash}{4a0d8381587e28703f6952fc658c858b}
+      \strng{authorfullhashraw}{4a0d8381587e28703f6952fc658c858b}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Another paper on current the tritium production capacity of heavy water reactors with future fusion capability in mind. Likely to be shortages of fusion in the future especially if several test reactors are built. Underscores the need for breeder blankets.}
+      \field{day}{1}
+      \field{issn}{0029-5515, 1741-4326}
+      \field{journaltitle}{Nuclear Fusion}
+      \field{month}{2}
+      \field{number}{2}
+      \field{shortjournal}{Nucl. Fusion}
+      \field{title}{Tritium resources available for fusion reactors}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{58}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 10}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1088/1741-4326/aa9d25
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\YN6YAJ4X\\Kovari et al. - 2018 - Tritium resources available for fusion reactors.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://iopscience.iop.org/article/10.1088/1741-4326/aa9d25
+      \endverb
+      \verb{url}
+      \verb https://iopscience.iop.org/article/10.1088/1741-4326/aa9d25
+      \endverb
+      \keyw{fission,Lit Review,Useful}
+    \endentry
     \entry{kuridan_neutron_2023}{book}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=762c3295442c1b2803ab6cad1175cdc8}{%
@@ -1407,6 +1565,138 @@
       \verb 10.1088/2632-2153/acb6fb
       \endverb
     \endentry
+    \entry{maniscalco_fusion_1984}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=de294c7aabd90d9b45f3fe04837ba396}{%
+           family={Maniscalco},
+           familyi={M\bibinitperiod},
+           given={James\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=185e79f10fe5244ef89e129346f1ead0}{%
+           family={Berwald},
+           familyi={B\bibinitperiod},
+           given={David\bibnamedelima H.},
+           giveni={D\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=82a91d2aab73404efc69bcd3078f7bfa}{%
+           family={Moir},
+           familyi={M\bibinitperiod},
+           given={Ralph\bibnamedelima W.},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7fa45c91fd7cc3baa69acc2082af26c3}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Joseph\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e22e18e792a0fca9678ed7c3a29c1fed}{%
+           family={Teller},
+           familyi={T\bibinitperiod},
+           given={Edward},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ed9bdcddf0c574d84b9693809587c4d9}
+      \strng{fullhash}{9072e5c10ab9b208d1d612201b69ac3e}
+      \strng{fullhashraw}{9072e5c10ab9b208d1d612201b69ac3e}
+      \strng{bibnamehash}{ed9bdcddf0c574d84b9693809587c4d9}
+      \strng{authorbibnamehash}{ed9bdcddf0c574d84b9693809587c4d9}
+      \strng{authornamehash}{ed9bdcddf0c574d84b9693809587c4d9}
+      \strng{authorfullhash}{9072e5c10ab9b208d1d612201b69ac3e}
+      \strng{authorfullhashraw}{9072e5c10ab9b208d1d612201b69ac3e}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Another paper on breeder blankets used for production of fission isotopes. Similar to the others but Edward Teller was a contributor.}
+      \field{issn}{0748-1896}
+      \field{journaltitle}{Fusion Technology}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{number}{3}
+      \field{shortjournal}{Fusion Technology}
+      \field{title}{The Fusion Breeder — an Early Application of Nuclear Fusion}
+      \field{urlday}{14}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{6}
+      \field{year}{1984}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{584\bibrangedash 596}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.13182/FST84-A23140
+      \endverb
+      \verb{file}
+      \verb Early Fusion Applications:C\:\\Users\\vadan\\Zotero\\storage\\3FFVL7RH\\Early Fusion Applications.sh:text/plain
+      \endverb
+      \verb{urlraw}
+      \verb https://www.tandfonline.com/doi/full/10.13182/FST84-A23140
+      \endverb
+      \verb{url}
+      \verb https://www.tandfonline.com/doi/full/10.13182/FST84-A23140
+      \endverb
+      \keyw{Lit Review,Useful,fission}
+    \endentry
+    \entry{moir_fusion_1982}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=82a91d2aab73404efc69bcd3078f7bfa}{%
+           family={Moir},
+           familyi={M\bibinitperiod},
+           given={Ralph\bibnamedelima W.},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{82a91d2aab73404efc69bcd3078f7bfa}
+      \strng{fullhash}{82a91d2aab73404efc69bcd3078f7bfa}
+      \strng{fullhashraw}{82a91d2aab73404efc69bcd3078f7bfa}
+      \strng{bibnamehash}{82a91d2aab73404efc69bcd3078f7bfa}
+      \strng{authorbibnamehash}{82a91d2aab73404efc69bcd3078f7bfa}
+      \strng{authornamehash}{82a91d2aab73404efc69bcd3078f7bfa}
+      \strng{authorfullhash}{82a91d2aab73404efc69bcd3078f7bfa}
+      \strng{authorfullhashraw}{82a91d2aab73404efc69bcd3078f7bfa}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Description of early fusion breeder technology. The technology of neutron breeding was first seen as a way of using fusion reactors to produce fissile material. Somewhat interesting conceptually, introduces some ideas that are useful for out project. Might be something we can use when talking about the state of current technology in a “here’s how far we’ve come” way.}
+      \field{issn}{0164-0313, 1572-9591}
+      \field{journaltitle}{Journal of Fusion Energy}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{4}
+      \field{shortjournal}{J Fusion Energ}
+      \field{title}{The fusion breeder}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{2}
+      \field{year}{1982}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{351\bibrangedash 367}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1007/BF01063686
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\Z2QUVEGS\\Moir - 1982 - The fusion breeder.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/BF01063686
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/BF01063686
+      \endverb
+      \keyw{Lit Review,Useful}
+    \endentry
     \entry{nordlund2018improving}{article}{}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -1548,6 +1838,66 @@
       \verb{doi}
       \verb 10.1016/0029-5493(75)90035-7
       \endverb
+    \endentry
+    \entry{paris_lost_2023}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=64b84a882d26db6362b4d45787323cfa}{%
+           family={Paris},
+           familyi={P\bibinitperiod},
+           given={Mark\bibnamedelima W.},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e618843cf4801e6deec3a1de69bcf839}{%
+           family={Chadwick},
+           familyi={C\bibinitperiod},
+           given={Mark\bibnamedelima B.},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6a6d072b91a3e7c53ef7dff0b4897a01}
+      \strng{fullhash}{6a6d072b91a3e7c53ef7dff0b4897a01}
+      \strng{fullhashraw}{6a6d072b91a3e7c53ef7dff0b4897a01}
+      \strng{bibnamehash}{6a6d072b91a3e7c53ef7dff0b4897a01}
+      \strng{authorbibnamehash}{6a6d072b91a3e7c53ef7dff0b4897a01}
+      \strng{authornamehash}{6a6d072b91a3e7c53ef7dff0b4897a01}
+      \strng{authorfullhash}{6a6d072b91a3e7c53ef7dff0b4897a01}
+      \strng{authorfullhashraw}{6a6d072b91a3e7c53ef7dff0b4897a01}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Short article on the history of tritium use in fusion and the first proposal for D-T fusion. First planned for nuclear weapons. Useful justification of why we use D-T reaction.}
+      \field{day}{1}
+      \field{issn}{0031-9228, 1945-0699}
+      \field{journaltitle}{Physics Today}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{10}
+      \field{title}{A lost detail in D–T fusion history}
+      \field{urlday}{14}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{76}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{10\bibrangedash 11}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1063/PT.3.5317
+      \endverb
+      \verb{file}
+      \verb Full Text:C\:\\Users\\vadan\\Zotero\\storage\\XGGN8F83\\Paris and Chadwick - 2023 - A lost detail in D–T fusion history.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://pubs.aip.org/physicstoday/article/76/10/10/2912725/A-lost-detail-in-D-T-fusion-history
+      \endverb
+      \verb{url}
+      \verb https://pubs.aip.org/physicstoday/article/76/10/10/2912725/A-lost-detail-in-D-T-fusion-history
+      \endverb
+      \keyw{Lit Review,Useful}
     \endentry
     \entry{pearson_tritium_2018}{article}{}{}
       \name{author}{3}{}{%
@@ -2404,6 +2754,34 @@
       \endverb
       \keyw{Lit Review,Useful}
     \endentry
+    \entry{doe_tritium_2015}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7f6cd5b5b184ad5dcf66198edda1fe77}{%
+           family={{US Department of Energy}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Washington, DC}%
+      }
+      \strng{namehash}{7f6cd5b5b184ad5dcf66198edda1fe77}
+      \strng{fullhash}{7f6cd5b5b184ad5dcf66198edda1fe77}
+      \strng{fullhashraw}{7f6cd5b5b184ad5dcf66198edda1fe77}
+      \strng{bibnamehash}{7f6cd5b5b184ad5dcf66198edda1fe77}
+      \strng{authorbibnamehash}{7f6cd5b5b184ad5dcf66198edda1fe77}
+      \strng{authornamehash}{7f6cd5b5b184ad5dcf66198edda1fe77}
+      \strng{authorfullhash}{7f6cd5b5b184ad5dcf66198edda1fe77}
+      \strng{authorfullhashraw}{7f6cd5b5b184ad5dcf66198edda1fe77}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{DOE-STD-1129-2015}
+      \field{title}{Tritium Handling and Safe Storage}
+      \field{type}{techreport}
+      \field{year}{2015}
+    \endentry
     \entry{warmer_overview_2024}{article}{}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -2465,6 +2843,37 @@
       \verb{doi}
       \verb 10.1016/j.fusengdes.2024.114386
       \endverb
+    \endentry
+    \entry{woods_properties_1966}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=26ecf83c2f6c80cbe3b25fb253bb576a}{%
+           family={Woods},
+           familyi={W\bibinitperiod},
+           given={C.\bibnamedelimi R.},
+           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Bettis Atomic Power Lab., Pittsburgh, PA (USA)}%
+      }
+      \strng{namehash}{26ecf83c2f6c80cbe3b25fb253bb576a}
+      \strng{fullhash}{26ecf83c2f6c80cbe3b25fb253bb576a}
+      \strng{fullhashraw}{26ecf83c2f6c80cbe3b25fb253bb576a}
+      \strng{bibnamehash}{26ecf83c2f6c80cbe3b25fb253bb576a}
+      \strng{authorbibnamehash}{26ecf83c2f6c80cbe3b25fb253bb576a}
+      \strng{authornamehash}{26ecf83c2f6c80cbe3b25fb253bb576a}
+      \strng{authorfullhash}{26ecf83c2f6c80cbe3b25fb253bb576a}
+      \strng{authorfullhashraw}{26ecf83c2f6c80cbe3b25fb253bb576a}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{WAPD-TM-585}
+      \field{title}{Properties of {Zircaloy-4} tubing ({LWBR} {Development} {Program})}
+      \field{type}{techreport}
+      \field{year}{1966}
     \endentry
     \entry{you_european_2016}{article}{}{}
       \true{moreauthor}
