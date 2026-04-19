@@ -160,10 +160,11 @@
     \vspace*{2cm} % Add some space from the top
 
     % --- Manually formatted title ---
-    {\Large \bfseries Neutron Transport and Tritium Breeding Modelling in Nuclear Fusion Reactor
-    Breeder Blankets \par}
+    {\Large \bfseries Fusion Reactor Neutronic Transport and Tritium Breeding in Layered Blanket
+    Architectures: A Machine Learning-Assisted Approach \par}
     \vspace{0.5em}
-    {\normalsize MPhys Project Report \par}
+    {\normalsize MPhys Research Project \par}
+    {\small \textit{A continuation of Semester 1 research on Fusion Breeder Blankets} \par} % <-- Clean, formal acknowledgement without breaking biblatex
 
     \vspace{3em} % Add space after the title
 
@@ -182,7 +183,33 @@
     % --- Abstract --- Use a minipage to constrain the width of the abstract
     \begin{minipage}{1\textwidth}
     \begin{abstract}
-    meow
+    The realisation of commercial nuclear fusion via the deuterium-tritium (D-T) fuel cycle is
+    contingent upon achieving tritium production in breeder modules. Building upon our first
+    homogeneous approximated studies, this study evaluates the neutronic performance of a
+    heterogeneous layered breeder blanket architecture to provide a more physically realistic
+    assessment, using \ce{Li_{17}Pb_{83}} breeder paired with pressurised water coolant. To navigate
+    the computationally intractable 8-dimensional design space of layer thicknesses, a bespoke
+    Single-Objective Bayesian Optimisation pipeline employing Gaussian Process Regression (SOBO-GPR)
+    was developed, integrating parametric CAD generation (Paramak) with stochastic neutron transport
+    (OpenMC).
+
+    Results indicate that the transition to a layered architecture degrades the Tritium Breeding
+    Ratio (TBR) due to the introduction of parasitic structural and coolant sinks, where the layered
+    design serves as a conservative underestimate compared to real implementations. Our peak ML
+    optimised TBR was $1.61$. The SOBO-GPR pipeline proved highly effective in navigating this
+    complex space, identifying that optimal TBR demands a front-loaded, ``binding configuration'' of
+    maximum breeder and minimum coolant thicknesses. Additionally, surrogate models and spatial
+    reaction maps clearly reveal lateral considerations, such as the negligible impact of the
+    outermost blanket layers on overall tritium production.
+
+    While this study establishes a robust breeding optimum, deeper neutronic analysis highlights the
+    scope for more holistic study. The successful implementation of this modular machine learning
+    pipeline provides a vital foundation for further research following this approach, where
+    different materials could be easily configured. Integrating Multi-Objective Optimisation (MOO)
+    and scaling up parameter spaces alongside the relaxation of geometric approximations could
+    assist in holistic balancing of TBR, dynamic heat extraction, and material longevity required
+    for next-generation fusion reactors.
+
     \end{abstract}
     \end{minipage}
 
