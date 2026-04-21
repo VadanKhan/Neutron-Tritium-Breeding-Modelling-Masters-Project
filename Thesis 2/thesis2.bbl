@@ -1643,6 +1643,80 @@
       \endverb
       \keyw{Lit Review,Useful,fission}
     \endentry
+    \entry{mia_choosing_2025}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=0533aa92770fd064fa7531581c9832b7}{%
+           family={Mia},
+           familyi={M\bibinitperiod},
+           given={Imon},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c394cc476184cbce7a417f95a77300bf}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=48e19d9aa20d24937409efbdd15276e1}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Weijie},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=092403e87ba204a5a6a6891dcfdcbaf0}{%
+           family={Vandenberghe},
+           familyi={V\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b9fec65cf7e49a2ad8174840326723aa}{%
+           family={Hsu},
+           familyi={H\bibinitperiod},
+           given={Julia\bibnamedelimb W.\bibnamedelimi P.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f7c3235fccfc166bd05b3a852cc30dbe}
+      \strng{fullhash}{59cfe9645adc7c58ca60b804a5f27e6a}
+      \strng{fullhashraw}{59cfe9645adc7c58ca60b804a5f27e6a}
+      \strng{bibnamehash}{f7c3235fccfc166bd05b3a852cc30dbe}
+      \strng{authorbibnamehash}{f7c3235fccfc166bd05b3a852cc30dbe}
+      \strng{authornamehash}{f7c3235fccfc166bd05b3a852cc30dbe}
+      \strng{authorfullhash}{59cfe9645adc7c58ca60b804a5f27e6a}
+      \strng{authorfullhashraw}{59cfe9645adc7c58ca60b804a5f27e6a}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Batch Bayesian optimization is widely used for optimizing expensive experimental processes when several samples can be tested together to save time or cost. , Batch Bayesian optimization is widely used for optimizing expensive experimental processes when several samples can be tested together to save time or cost. A central decision in designing a Bayesian optimization campaign to guide experiments is the choice of a batch acquisition function when little or nothing is known about the landscape of the “black box” function to be optimized. To inform this decision, we first compare the performance of serial and Monte Carlo batch acquisition functions on two mathematical functions that serve as proxies for typical materials synthesis and processing experiments. The two functions, both in six dimensions, are the Ackley function, which epitomizes a “needle-in-haystack” search, and the Hartmann function, which exemplifies a “false optimum” problem. Our study evaluates the serial upper confidence bound with local penalization ({UCB}/{LP}) batch acquisition policy against Monte Carlo-based parallel approaches: q -log expected improvement ( q {logEI}) and q -upper confidence bound ( q {UCB}), where q is the batch size. Tests on Ackley and Hartmann show that {UCB}/{LP} and q {UCB} perform well in noiseless conditions, both outperforming q {logEI}. For the Hartmann function with noise, all Monte Carlo functions achieve faster convergence with less sensitivity to initial conditions compared to {UCB}/{LP}. We then confirm the findings on an empirical regression model built from experimental data in maximizing power conversion efficiency of flexible perovskite solar cells. Our results suggest that when empirically optimizing a “black-box” function in ≤six dimensions with no prior knowledge of the landscape or noise characteristics, q {UCB} is best suited as the default to maximize confidence in the modeled optimum while minimizing the number of expensive samples needed.}
+      \field{issn}{2635-098X}
+      \field{journaltitle}{Digital Discovery}
+      \field{langid}{english}
+      \field{number}{7}
+      \field{shortjournal}{Digital Discovery}
+      \field{shorttitle}{Choosing a suitable acquisition function for batch Bayesian optimization}
+      \field{title}{Choosing a suitable acquisition function for batch Bayesian optimization: comparison of serial and Monte Carlo approaches}
+      \field{urlday}{13}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{4}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1751\bibrangedash 1762}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1039/D5DD00066A
+      \endverb
+      \verb{urlraw}
+      \verb https://xlink.rsc.org/?DOI=D5DD00066A
+      \endverb
+      \verb{url}
+      \verb https://xlink.rsc.org/?DOI=D5DD00066A
+      \endverb
+    \endentry
     \entry{moir_fusion_1982}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=82a91d2aab73404efc69bcd3078f7bfa}{%
@@ -2753,6 +2827,57 @@
       \verb https://linkinghub.elsevier.com/retrieve/pii/S2238785424023391
       \endverb
       \keyw{Lit Review,Useful}
+    \endentry
+    \entry{tanabe_tritium_2017}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7d5eb08c4515732dc4c98509722a238d}{%
+           family={Tanabe},
+           familyi={T\bibinitperiod},
+           given={T},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Tokyo}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{7d5eb08c4515732dc4c98509722a238d}
+      \strng{fullhash}{7d5eb08c4515732dc4c98509722a238d}
+      \strng{fullhashraw}{7d5eb08c4515732dc4c98509722a238d}
+      \strng{bibnamehash}{7d5eb08c4515732dc4c98509722a238d}
+      \strng{authorbibnamehash}{7d5eb08c4515732dc4c98509722a238d}
+      \strng{authornamehash}{7d5eb08c4515732dc4c98509722a238d}
+      \strng{authorfullhash}{7d5eb08c4515732dc4c98509722a238d}
+      \strng{authorfullhashraw}{7d5eb08c4515732dc4c98509722a238d}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{This book focuses on tritium as a fuel for fusion reactors and a next-generation energy source. Following an introduction of tritium as a hydrogen radioisotope, important issues involved in establishing safe and economical tritium fuel cycles including breeding for a fusion reactor are summarized; these include the handling of large amounts of tritium: confinement, leakage, contamination, permeation, regulation and tritium accountancy, and impacts on surrounding areas. Targeting and encouraging the students and technicians who will design and operate fusion reactors in the near future, this book offers a valuable resource on tritium science and technology.}
+      \field{annotation}{A book on tritium and its uses as a fuel in fusion reactors. Very detailed and comprehensive. Another useful source for tritium especially if we’re talking about it’s practical use.}
+      \field{langid}{english}
+      \field{shorttitle}{Tritium}
+      \field{title}{Tritium: Fuel of Fusion Reactors}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb PDF:C\:\\Users\\vadan\\Zotero\\storage\\9YWI3K4S\\Tanabe - 2017 - Tritium Fuel of Fusion Reactors.pdf:application/pdf;Snapshot:C\:\\Users\\vadan\\Zotero\\storage\\8Q344XA6\\978-4-431-56460-7.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/book/10.1007/978-4-431-56460-7
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/book/10.1007/978-4-431-56460-7
+      \endverb
+      \keyw{Lit Review,{TBR},Useful}
     \endentry
     \entry{doe_tritium_2015}{report}{}{}
       \name{author}{1}{}{%
