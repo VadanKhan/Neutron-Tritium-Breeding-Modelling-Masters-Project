@@ -65,8 +65,9 @@
 % 4. Format Access Dates to match "(Accessed: Date)"
 \DeclareFieldFormat{urldate}{\mkbibparens{\bibstring{urlseen}\space#1}}
 
-% 5. Force DOIs into your custom placeholder button
-\DeclareFieldFormat{doi}{\href{https://doi.org/#1}{\textsc{[doi]}}}
+% % 5. Force DOIs into your custom placeholder button
+% \DeclareFieldFormat{doi}{\href{https://doi.org/#1}{\textsc{[doi]}}}
+% this removes 12 lines
 
 % % 6. Use an ampersand (&) before the final author in the reference list
 % \DeclareDelimFormat[bib,biblist]{finalnamedelim}{\space\&\space} 6alt. Use an 'and' before the
@@ -280,15 +281,15 @@ constraints.
 \subsubsection{Operating Principles}
 \label{sec:theory_main}
 As established in previous foundational work \citep{khan_mphys_sem1} and Section
-\ref{sec:introduction}, the viability of commercial D-T fusion is fundamentally contingent upon net
-tritium production. Because the D-T plasma yields exactly one neutron per consumption event (see
-Section \ref{sec:introduction}), and realistic reactor geometries suffer from unavoidable neutron
-leakage and parasitic absorption, the breeder blanket must achieve a TBR strictly greater than unity
-just to maintain a continuous fuel cycle \citep{pearson_tritium_2018}. Furthermore, because
-conservation of momentum dictates that this single emitted neutron carries away four-fifths of the
-total fusion energy ($E_n \approx 14.1 \text{ MeV}$ compared to $\sim 1-2 \text{ MeV}$ neutrons in
-fission reactors \citep{heckrotte_factors_1971}), fusion breeder blankets must be specialised to
-utilise these ultra high energy neutrons.
+\ref{sec:introduction}, the viability of commercial D-T fusion is fundamentally contingent upon
+tritium self-sufficiency and net production. Because the D-T plasma yields exactly one neutron per
+consumption event (Equation \ref{eq:DT_reaction}), and realistic reactor geometries suffer from
+unavoidable neutron leakage and parasitic absorption, the breeder blanket must achieve a TBR
+strictly greater than unity just to maintain a continuous fuel cycle \citep{pearson_tritium_2018}.
+Furthermore, because conservation of momentum dictates that this single emitted neutron carries away
+four-fifths of the total fusion energy ($E_n \approx 14.1 \text{ MeV}$ compared to $\sim 1-2 \text{
+MeV}$ neutrons in fission reactors \citep{heckrotte_factors_1971}), fusion breeder blankets must be
+specialised to utilise these ultra high energy neutrons.
 
 To breed this fuel, the blanket exploits neutron capture interactions with lithium. Natural lithium
 consists of two isotopes, both of which undergo tritium-producing reactions. The dominant
@@ -307,10 +308,14 @@ Conversely, the $\ce{^{7}Li}$ reaction is an endothermic threshold reaction requ
 
 Because the dominant $\ce{^{6}Li}$ reaction is purely absorptive, the strict 1-to-1 neutron economy
 necessitates the inclusion of primary neutron multipliers to maintain a viable population. Elements
-such as lead are utilised for their substantial spallation cross-sections at high incident energies,
-undergoing threshold \ce{(n, 2n)} reactions that effectively double the available neutrons per
-interaction (eg. $\ce{^{208}Pb(n, 2n)^{207}Pb}$, $Q = -7.37 \text{ MeV}$). This compensates for
-macroscopic breeding inefficiencies \citep{hernandez_first_2018}.
+such as lead are utilised for their substantial spallation \ce{(n, 2n)} cross-sections at high
+incident energies:
+ \begin{equation}
+    \ce{^{208}Pb + n -> ^{207}Pb + 2n^\prime{} - 7.37MeV}
+    \label{eq:Pb_spallation}
+\end{equation}.
+These reactions increase the neutron population, compensating for macroscopic breeding
+inefficiencies (see Section \ref{sec:breeder_blanket_studies}).
 
 Finally, to increase the capture probability of the $\ce{^{6}Li}$ isotope, the $14.1 \text{ MeV}$
 fast neutrons emitted by the D-T plasma must be moderated down to thermal energies. This moderation
@@ -318,10 +323,10 @@ is achieved through successive elastic and inelastic scattering collisions withi
 and, if using water \citep{khan_mphys_sem1}, internal coolants. Crucially, these scattering events
 are the primary mechanism by which the neutron's kinetic energy is deposited into the blanket as
 extractable heat. The total thermal yield is further modified by the reaction network's kinematics:
-exothermic captures enhance local heat deposition, whereas endothermic threshold reactions
-inherently consume kinetic energy, reducing the net thermal yield. Ultimately, to maximise both
-tritium breeding and energy utilisation while minimising safety risks from neutron leakage, a
-totally attenuated neutron flux is ideal.
+exothermic captures (Equation \ref{eq:Li6_reaction}) enhance local heat deposition, whereas
+endothermic reactions (Equation \ref{eq:Li7_reaction}) inherently consume kinetic energy, reducing
+the net thermal yield. Ultimately, to maximise both tritium breeding and energy utilisation while
+minimising safety risks from neutron leakage, a totally attenuated neutron flux is ideal.
 
 \subsubsection{Trace Reactions}
 \label{sec:trace_reactions}
@@ -331,30 +336,31 @@ coolant components exhibit trace background reactions that become visible in hig
 tallies. Incident fast neutrons ($E_n \approx 14.1 \text{ MeV}$) trigger minor endothermic
 spallation events in the structural materials, notably within the zirconium first wall
 ($\ce{^{90}Zr(n, 2n)^{89}Zr}$, $Q = -12.0 \text{ MeV}$, $\sigma \approx 0.6 \text{ b}$) and the
-EUROFER97 steel separators ($\ce{^{56}Fe(n, 2n)^{55}Fe}$, $Q = -11.2 \text{ MeV}$, $\sigma \approx
-0.4 \text{ b}$). In addition to multiplication, this unattenuated high-energy flux induces
-negligible trace tritium production within the first wall via an extreme threshold capture reaction
-( $\ce{^{90}Zr(n,t)^{88}Y}$, $Q = -11.3 \text{ MeV}$, $\sigma \sim 1 \text{ \textmu b}$).
-Conversely, highly thermalised neutrons within the coolant layers can undergo radiative capture with
-the naturally occurring deuterium in water to breed trace amounts of tritium
-($\ce{^{2}H(n,\gamma)^{3}H}$, $Q = +6.26 \text{ MeV}$, thermal $\sigma \approx 0.5 \text{ mb}$).
+EUROFER97 (see Section \ref{sec:breeder_blanket_studies}) steel separators ($\ce{^{56}Fe(n,
+2n)^{55}Fe}$, $Q = -11.2 \text{ MeV}$, $\sigma \approx 0.4 \text{ b}$). In addition to
+multiplication, this unattenuated high-energy flux induces negligible trace tritium production
+within the first wall via an extreme threshold capture reaction ( $\ce{^{90}Zr(n,t)^{88}Y}$, $Q =
+-11.3 \text{ MeV}$, $\sigma \sim 1 \text{ \textmu b}$). Conversely, highly thermalised neutrons
+within the coolant layers can undergo radiative capture with the naturally occurring deuterium in
+water to breed trace amounts of tritium ($\ce{^{2}H(n,\gamma)^{3}H}$, $Q = +6.26 \text{ MeV}$,
+thermal $\sigma \approx 0.5 \text{ mb}$).
 
 \subsection{Neutron Transport Metrics}
 \subsubsection{Neutron Track Length}
 To quantify the neutron population within specific geometric regions of the blanket, stochastic
 Monte Carlo transport codes, such as OpenMC \citep{romano_openmc_2015}, utilise a track-length
 estimator. Rather than counting individual neutrons crossing a boundary, the simulation integrates
-the total distance traversed by all particle histories within a defined cell volume
-\citep{kalos_monte_2008}. This accounts for neutrons that only briefly enters a cell compared to
-those that have a long path in the cell, to give a more physically representative tally. For
-supplementary theory on volume-integrated scalar flux, see Appendix \ref{app:theory_track_length}.
+the total distance traversed by all particle histories within a defined cell volume (Appendix
+\ref{app:theory_track_length}). This accounts for neutrons that only briefly enters a cell compared
+to those that have a long path in the cell, to give a more physically representative tally.
 
-\subsubsection{Radiation Damage and Displacements Per Atom COULD REDUCE + HELIUM}
-
+\subsubsection{Radiation Damage and Displacements Per Atom COULD REDUCE}
+\label{sec:theory_DPA}
 To accurately assess the structural viability of the breeder blanket and first wall, the neutronic
-simulation tallies radiation-induced material degradation. The standard metric for quantifying this
-degradation in a crystalline lattice is Displacements Per Atom (DPA), which represents the average
-number of times an atom is knocked out of its equilibrium lattice site due to radiation bombardment.
+simulation tallies radiation-induced material degradation, where the primary concern for fusion is
+damage by atomic displacement. The standard metric for quantifying this degradation in a crystalline
+lattice is Displacements Per Atom (DPA), which represents the average number of times an atom is
+knocked out of its equilibrium lattice site due to radiation bombardment.
 
 When a high-energy fusion neutron collides with a target nucleus, it transfers kinetic energy,
 creating a Primary Knock-on Atom (PKA). If the transferred energy exceeds the lattice displacement
@@ -362,49 +368,30 @@ threshold ($E_d$), the PKA is ejected and can trigger a secondary collision casc
 all the kinetic energy transferred to the PKA contributes to atomic displacements; a significant
 fraction is lost to inelastic electronic excitation (ionisation) as the PKA travels through the
 lattice. The specific fraction of the transferred energy available to cause further elastic nuclear
-collisions and subsequent atomic displacements is tallied as the ``Damage Energy'' ($T_d$).
+collisions and subsequent atomic displacements is tallied as the ``Damage Energy'' ($T_d$). Using
+models like the Athermic Recombination-Corrected (ARC-DPA) model applied here, we can convert this
+into a number of displacements ($N_d$). To determine if a material exceeds its irradiation limits
+over its operational lifetime, the total number of displacements must be normalised into DPA per
+Full Power Year (FPY). For a given material, reactor power and neutron spectrum we can calculate
+DPA/FPY (Appendix \ref{app:theory_displacements}) and determine a structural lifetime given
+prescribed DPA limits.
 
-In the standard Norgett-Robinson-Torrens (NRT) displacement model \citep{norgett1975proposed}, the
-raw number of displaced atoms ($N_d$) is directly proportional to this damage energy:
-\begin{equation}
-    N_{d,\text{NRT}} = \frac{0.8 T_d}{2 E_d}
-    \label{eq:nrt_model}
-\end{equation}
-While the NRT model provides a reliable baseline, it often overestimates the final number of stable
-defects because it does not account for the athermal recombination of atoms that quickly regain
-their original lattice positions. To correct for this phenomenon, the Athermic
-Recombination-Corrected (ARC-DPA) model is employed \citep{nordlund2018improving}. This introduces a
-surviving defect fraction, $\xi(T_d)$:
-\begin{equation}
-    N_{d,\text{arc}} = \frac{0.8 T_d}{2 E_d} \cdot \xi(T_d) = \frac{0.8 T_d}{2 E_d} \left( (1-c) \left( \frac{0.8 T_d}{2 E_d} \right)^b + c \right)
-    \label{eq:arcdpa_model}
-\end{equation}
-where $b$ and $c$ are material-specific constants dependent on the displaced atom type. Values for
-the displacement energy ($E_d$) and these constants for critical structural materials, such as iron
-(dominating the structural separators) and zirconium (in the first wall), are established in the
-literature \citep{saha_application_2019}.
-
-Finally, to determine if a material exceeds its irradiation limits over its operational lifetime,
-the total number of displacements must be normalised into DPA per Full Power Year (FPY). The DPA
-received by a structural component over a FPY is given by:
-\begin{equation}
-    \text{DPA/FPY} = \frac{N_{d,\text{arc}}}{\left(\frac{\rho V \cdot N_A}{\mu}\right)} \cdot \frac{P}{E_f} \cdot (60^2 \cdot 24 \cdot 365)
-    \label{eq:dpa_fpy}
-\end{equation}
-Here, the denominator calculates the total number of target atoms within the specific component
-using the material density ($\rho$), volume ($V$), Avogadro's constant ($N_A$), and molar mass
-($\mu$). This is multiplied by the annual neutron emission rate—derived from the reactor thermal
-power ($P$) and the energy released per fusion event ($E_f$)—scaled to the number of seconds in a
-calendar year.
-HELIUM EMBRITTLEMENT
+Alongside atomic displacements, the unattenuated high-energy fusion neutron flux induces nuclear
+transmutation reactions, predominantly \ce{(n, $\upalpha$)} processes, which generate insoluble
+gases within the structural lattice. The accumulation of these transmutation gases is particularly
+critical in fusion environments; helium atoms rapidly migrate to grain boundaries and coalesce into
+bubbles, leading to severe volume swelling and helium embrittlement. This synergistic degradation
+mechanism fundamentally constrains component lifetimes. Operational embrittlement threshold limits
+have been drafted for fusion materials in terms of DPA, limits by \cite{gilbert_integrated_2012} are
+applied in this study.
 
 \subsubsection{Nuclear Heating and Energy Deposition}
 In addition to radiation damage, the structural and thermal-hydraulic viability of a blanket design
 is dictated by the spatial distribution of nuclear heating. Energy is deposited into the blanket
 materials through two primary mechanisms: neutron kinetic energy transfer during elastic and
 inelastic scattering, and the absorption of secondary gamma rays ($\gamma$-photons) produced during
-nuclear reactions \citep{kuridan_neutron_2023}. For supplementary theory on KERMA factors see
-Appendix \ref{app:theory_nuclear_heating}.
+nuclear reactions \citep{kuridan_neutron_2023}. In a simulation we calculate and tally the
+localised deposited kinetic energy (Appendix \ref{app:theory_nuclear_heating}).
 
 \subsection{ML: Bayesian Optimisation}
 
@@ -443,7 +430,7 @@ particularly advantageous for Monte Carlo applications as its kernel can explici
 inherent statistical noise of stochastic particle tracking, preventing the optimiser from
 over-fitting to statistical anomalies \citep{snoek2012practical}.
 
-\subsubsection{Acquisition Functions and the Exploration-Exploitation Trade-off COULD REDUCE + CITATIONS}
+\subsubsection{Acquisition Functions and the Exploration-Exploitation Trade-off}
 
 While the GPR provides a probabilistic map of the design space, it does not dictate the search path.
 This is the role of the Acquisition Function, an analytically defined, cheap-to-evaluate equation
@@ -456,22 +443,18 @@ The acquisition function must carefully balance two conflicting objectives: `exp
 `exploration' (sampling areas with high uncertainty, $\sigma(x)$, to discover untracked
 global maxima).
 
-A standard acquisition metric is Expected Improvement (EI) \citep{mia_choosing_2025}, which
-calculates the probability and magnitude by which a new sample might exceed the current best
-observation, $f^*$:
-\begin{equation}
-    EI(x) = (\mu(x) - f^*)\Phi(Z) + \sigma(x)\phi(Z)
-\end{equation}
-where $\Phi$ and $\phi$ are the standard normal cumulative distribution and probability density
-functions, respectively. An alternative is the Upper Confidence Bound (UCB) acquisition function \citep{mia_choosing_2025}:
+While several commonly employed acquisition functions exist (Appendix
+\ref{app:theory_acquisition_functions}), the Upper Confidence Bound (UCB) acquisition function
+\citep{srinivas2012information} has a simple implementation that is tunable:
 \begin{equation}
     UCB(x) = \mu(x) + \sqrt{\beta} \cdot \sigma(x)
+    \label{eq:UCB}
 \end{equation}
-Rather than relying on the probability of improvement against a known baseline, UCB evaluates the
-absolute best-case scenario for any given point. The hyperparameter $\beta$ acts as an explicit
-control over the algorithm's optimism. By setting $\beta$ to a sufficiently high value, the
-algorithm is forced to aggressively explore highly uncertain regions (Section \ref{sec:method_ml}
-includes demonstrations of this).
+UCB evaluates the absolute best-case score for any given point given the sum of its predicted
+performance and uncertainty. The hyperparameter $\beta$ acts as an explicit control over the
+algorithm's optimism. By setting $\beta$ to a sufficiently high value, the algorithm is forced to
+aggressively explore highly uncertain regions (Section \ref{sec:method_ml} includes demonstrations
+of this).
 
 
 
@@ -480,8 +463,9 @@ includes demonstrations of this).
 \label{sec:breeder_blanket_studies}
 
 Though Section \ref{sec:theory_main} defined the theoretical $\text{TBR}>1$ requirement, literature
-commonly cites a minimum of $1.05$ for practical breeding \citep{tanabe_tritium_2017}. While the
-literature explores diverse material paradigms---ranging from solid ceramics in ITER
+commonly cites a minimum of $1.05$ for practical breeding to account for parasitic neutron losses
+and extraction inefficiency \citep{tanabe_tritium_2017, hernandez_first_2018, khan_mphys_sem1}.
+While the literature explores diverse material paradigms---ranging from solid ceramics in ITER
 \citep{federici_overview_2019} and liquid metal concepts in CFETR \citep{zhuang_progress_2019}, to
 highly compact liquid immersion variants in STEP and ARC \citep{lord_fusing_2024,
 sorbom_arc_2015}---evaluating these conceptual breeders reveals significant engineering challenges.
@@ -518,7 +502,7 @@ and operational limits imposed by the heterogeneous environment \citep{qiu_neutr
 \subsection{Computational Load in Nuclear Neutronics}
 \label{sec:computational_load}
 
-High-fidelity neutronic evaluation strictly necessitates stochastic Monte Carlo transport methods
+High-fidelity neutronic evaluation necessitates stochastic Monte Carlo transport methods
 \citep{kalos_monte_2008}, using industry standard codes such as OpenMC \citep{romano_openmc_2015}.
 Achieving statistically significant tallies in deeply shielded or structurally intricate regions
 imposes a severe computational burden. As explicitly quantified in recent fusion power plant studies
@@ -556,20 +540,8 @@ the timeliness, originality, and necessity of the methodology developed in this 
 
 
 \section{Methodology}
-\subsection{Simulation Pipeline Summary STUFF TO ADD}
+\subsection{Simulation Pipeline Summary}
 \label{sec:methodology_summary}
-
-!!! Many heterogeneous breeder blankets are designed with several ring-like layers, with al-
-ternating breeder material and coolant separated by structural material. There is significant
-variability in design, ranging from only two layers (Gohar et al., 1998; Segantin et al., 2020) to
-five (Lee et al., 2012; Qu et al., 2020). !!!
-
-!!! The parameters used to define
-the plasma body are specified in Fausser et al., 2012!!!
-
-!!!An assumption of a reactor power of
-500MW was made based on the planned output of ITER (Aymar, Barabaschi and Shimomura,
-2002).!!!!
 
 The neutronic performance of the breeder blanket geometries is evaluated using a coupled
 computational workflow. The 3D parametric Computer Aided Design (CAD) models of the tokamak reactor
@@ -585,17 +557,18 @@ counts ranging between $10^5$ and $10^7$ neutrons per run.
 
 Based on the optimal configurations identified in the previous semester, the material definitions
 for this architecture are explicitly fixed: the first wall utilises a zirconium alloy, the breeder
-is a lithium-lead eutectic (\ce{Li_{17}Pb_{83}}) with 40\% enriched \ce{^{6}Li}, and the coolant is pressurised water (modelled at
-$600\text{ K}$ and $15.5\text{ MPa}$). EUROFER97 was selected for the internal structural
-separators, rear wall, and central solenoid, reflecting industry standards for robust,
-reduced-activation ferritic-martensitic steels. Furthermore, to more accurately evaluate the spatial
-distribution of interactions within this refined geometry, the 14.1~MeV Muir-distributed ring source
-utilised in the previous study has been updated to a default volumetric body source with density
-decreasing from the major radius centre \cite{romano_openmc_2015}.
+is a lithium-lead eutectic (\ce{Li_{17}Pb_{83}}) with 40\% enriched \ce{^{6}Li}, and the coolant is
+pressurised water (modelled at $600\text{ K}$ and $15.5\text{ MPa}$). EUROFER97 was selected for the
+internal structural separators, rear wall, and central solenoid, reflecting industry standards for
+robust, reduced-activation ferritic-martensitic steels. The 14.1~MeV Muir-distributed ring source
+utilised in the previous study has been updated to a volumetric body source with a denser core,
+default OpenMC are parameters specified in \cite{fausser2012}. A baseline reactor thermal power of
+$500\text{ MW}$ was assumed to scale DPA/FPY (Section \ref{app:theory_displacements}), reflecting the planned operational
+output of ITER \citep{aymar_iter_2002}.
 
 \begin{figure}[hbtp]
   \centering
-  \includegraphics[width=0.7\textwidth]{figures/reactor_diagram.png}
+  \includegraphics[width=0.8\textwidth]{figures/reactor_diagram.png}
   \caption{ Representative geometry of the simplified Tokamak model generated via Paramak. The
     simulation domain comprises a 90° revolution with periodic boundary conditions. Included is an
     example breakdown of the layered blanket, only the coolant and breeder thicknesses are adjusted
@@ -609,11 +582,12 @@ current study transitions to a discrete, heterogeneous layered blanket architect
 breeder layers and 4 coolant layers, with separators between each breeder-coolant interface (see
 Figure~\ref{fig:reactor_diagram}). This addresses the core unrealistic homogenous approximation of
 that study, establishing a key step towards more realistic breeder blanket module requirements and
-challenges. Note that other studies have simulated detailed models with specific coolant piping
-interlaced in the blanket (see Section \ref{sec:breeder_blanket_studies}). Paramak's parameterised
-framework limits the level of heterogeneity to systems with azimuthal symmetry (such as our layered
-model). The layered model is still an approximation compared to specific real implementations. We
-proceed as there are key advantages to this approach:
+challenges. Paramak's parameterised framework limits the level of heterogeneity to systems with
+azimuthal symmetry (such as our layered model).  Note that while other studies have simulated
+detailed asymmetric models (Section \ref{sec:breeder_blanket_studies}), similar layered blanket
+designs are not uncommon \citep{gohar1998, segantin_optimisation_2020, lee2012, qu2020}. Despite
+approximations and deviations compared to specific real implementations, we proceed as there are key
+advantages to this approach:
 \begin{itemize}
     \item \textbf{Conservative heterogeneity:} Applying this model allows for the majority of
     heterogeneous effects to be modelled. Importantly, in real implementations streaming effects
@@ -725,17 +699,19 @@ Consequently, the study transitions to the application of Machine Learning algor
 \subsection{ML Optimisation}
 \label{sec:ml_approach}
 
-\subsubsection{ML Algorithm PACKAGE CITATIONS}
+\subsubsection{ML Algorithm}
 \label{sec:method_ml}
 To navigate the computationally expensive 8-dimensional design space effectively, Single-Objective
 Bayesian Optimisation was employed with a Gaussian Process Regressor was utilised as the surrogate
-model (SOBO-GPR). The optimisation pipeline was developed using the Ax framework, leveraging BoTorch and
-PyTorch as the underlying computational engines.  This scalable, $N$-dimensional architecture is
-highly sample-efficient, capable of converging upon optimal configurations within $N<150$ trials
-(tested in spaces up to 8 dimensions). This sample efficiency makes it ideal for optimising
-computationally intensive physical simulations. Furthermore, the objective function and
-hyperparameters are designed to be modularly configurable, with automated generation of surrogate
-parameter surfaces and optimisation progress diagnostics.
+model (SOBO-GPR). The optimisation pipeline was developed using the Ax framework
+\citep{olson2025ax}, leveraging BoTorch \citep{Balandatetal2019} and PyTorch \citep{Paszkeetal2019}
+as the underlying computational engines.  This scalable, $N$-dimensional architecture is highly
+sample-efficient, capable of converging upon optimal configurations within $N<150$ trials (tested in
+spaces up to 8 dimensions). The efficiency makes it ideal for optimising computationally intensive
+physical simulations. Furthermore, the objective function and hyper-parameters are designed to be
+modularly configurable, with automated generation of surrogate parameter surfaces and optimisation
+progress diagnostics. The code and complete optimisation results is publicly available
+\citep{khan2026fusionmlcode}.
 
 The objective function was defined by wrapping the discrete parametric OpenMC neutronics simulation
 into an automated evaluation loop. This function takes the eight blanket layer thicknesses as
@@ -744,53 +720,19 @@ global TBR as the single scalar objective to be maximised. The computational ove
 solver was negligible ($\approx20$\,s for $N=150$ trials); thus, the total runtime was bounded
 entirely by the neutronics simulation, which required $\approx60$\,s per trial on a standard desktop
 workstation. Because the optimiser was constrained to a maximum of $N=150$ trials, all ML
-optimisation studies were completed in under 3 hours. The complete source code developed for this
-pipeline and complete optimisation results is publicly available \citep{khan2026fusionmlcode}.
+optimisation studies were completed in under 3 hours.
 
 A critical component of this framework is the selection and tuning of the acquisition function,
 which dictates how the algorithm samples new data points. For this study, the UCB acquisition
-function was selected over EI. Unlike EI, UCB provides explicit, scalar
-control over the exploration-exploitation trade-off via the hyperparameter $\beta$. Properly tuning
-this parameter is vital for a high-dimensional physical system where multiple local maxima may
-exist. Figure \ref{fig:ucb_tuning} illustrates a 2D projection of the acquisition utility landscape
-used to benchmark the model's behaviour.
-
-\begin{figure}[htbp]
-    \centering
-    % FIRST SUBFIGURE
-    \begin{subfigure}[t]{0.4\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/Aquisitionfunction_UCB_doublepeak_highbeta_prepped.png}
-        \caption{Explorative tuning ($\beta = 1,000,000$)}
-        \label{fig:ucb_high_beta}
-    \end{subfigure}
-    \hfill
-    % SECOND SUBFIGURE
-    \begin{subfigure}[t]{0.4\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/Aquisitionfunction_UCB_doublepeak_lowbeta_prepped.png}
-        \caption{Greedy tuning ($\beta = 1$)}
-        \label{fig:ucb_low_beta}
-    \end{subfigure}
-    \caption{Comparison of the Upper Confidence Bound (UCB) acquisition function behaviour under
-    different exploration parameters ($\beta$). (a) A high $\beta$ value successfully prioritises
-    exploration, identifying a secondary hidden peak. (b) A low $\beta$ value results in overly
-    greedy exploitation, causing the model to stagnate on a single local optimum and ignore
-    unexplored regions.}
-    \label{fig:ucb_tuning}
-\end{figure}
-
-As demonstrated in Figure \ref{fig:ucb_low_beta}, setting a low exploration weight ($\beta = 1$)
-results in a overly greedy search. The algorithm heavily exploits a known local optimum, entirely
-missing a secondary, hidden peak within the design space. Conversely, Figure \ref{fig:ucb_high_beta}
-shows that a significantly higher parameter ($\beta = 1,000,000$) forces the model to prioritise
-high-uncertainty regions, successfully mapping the broader landscape and identifying the hidden
-peak.
+function (Equation \ref{eq:UCB}) was selected for its explicit, scalar control over the
+exploration-exploitation trade-off via the hyperparameter $\beta$. Properly tuning this parameter
+is vital for a high-dimensional physical system where multiple local maxima may exist.
 
 Given the complexity and scale of the layered blanket parameter space, premature convergence on a
 local optimum poses a significant risk. Consequently, the UCB acquisition function was configured
 with a highly explorative $\beta = 1,000,000$ value to ensure robust, global mapping of the design
-space before narrowing in on the optimal layer thicknesses
+space before narrowing in on the optimal layer thicknesses (Appendix
+\ref{app:acquisition_function}).
 
 \subsubsection{Testing, Tuning \& Developing the Optimiser COULD REDUCE}
 Before applying the Bayesian optimiser to the high-dimensional neutronic blanket model it was
@@ -803,19 +745,18 @@ non-symmetric valleys. These functions were scaled incrementally from 1D up to 4
 $\epsilon$-greedy and peak-hunting mechanisms remained effective as the search space expanded
 exponentially.
 
-Figure \ref{fig:1d_benchmark} demonstrates a 1D test case. A critical distinction highlighted here
-is the difference between the `Actual Best Observed' (the highest discrete point successfully
-sampled during the simulation) and the `Best Model Prediction' (the theoretical peak calculated by
-the surrogate model). While finding the absolute optimal TBR is the primary engineering goal, the
-full continuous surrogate model is arguably the most valuable output for a physicist, providing
-physical intuition regarding how variables interact across the entire domain.
+A notable distinction highlighted here is the difference between the `Actual Best Observed' (the
+highest discrete point successfully sampled during the simulation) and the `Best Model Prediction'
+(the theoretical peak calculated by the surrogate model). While finding the absolute optimal TBR is
+the primary engineering goal, the full continuous surrogate model is arguably the most valuable
+output for a physicist, providing physical intuition regarding how variables interact across the
+entire domain.
 
-While 1D tests validate basic functionality, scaling the benchmark to 2D surfaces (Figure
-\ref{fig:2d_gramacy_lee}, \ref{fig:2d_hidden_peak}, \ref{fig:2d_schwefel}) is necessary to ensure
-the algorithm does not fail as dimensionality increases. During these tests, it became apparent that
-standard Upper Confidence Bound (UCB) acquisition, even with a high exploration parameter, could
-occasionally stagnate in deep local minima. To prevent this, three bespoke algorithmic enhancements
-were introduced:
+While 1D tests validate basic functionality, scaling the benchmark to 2D surfaces is necessary to
+ensure the algorithm does not fail as dimensionality increases. During these tests, it became
+apparent that standard Upper Confidence Bound (UCB) acquisition, even with a high exploration
+parameter, could occasionally stagnate in deep local minima. To prevent this, three bespoke
+algorithmic enhancements were introduced:
 
 \begin{itemize}
     \item \textbf{Interleaved random injection:} An $\epsilon$-greedy approach was implemented,
@@ -834,35 +775,21 @@ were introduced:
     Figure \ref{fig:2d_schwefel}). In our trials we found $n_{hunt}=10$ sufficient.
 \end{itemize}
 
-\begin{figure}[hbtp]
+In successfully navigating notoriously difficult mathematical landscapes, demonstrated in Figure
+\ref{fig:2d_gramacy_lee}, \ref{fig:2d_schwefel} and further in Appendix
+\ref{app:optimisation_trails}, the optimiser's robust resistance to local minima was demonstrated.
+
+\begin{figure}[hbt]
     \centering
-    % TOP-LEFT SUBFIGURE (a)
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/combined_MLtesting_1D_schwefel.png}
-        \caption{1D multi-modal Schwefel function test}
-        \label{fig:1d_benchmark}
-    \end{subfigure}
-    \hfill
-    % TOP-RIGHT SUBFIGURE (b)
+    % LEFT SUBFIGURE (a)
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/combined_MLtesting_2D_gramacylee_comp.png}
         \caption{2D Gramacy \& Lee function test}
         \label{fig:2d_gramacy_lee}
     \end{subfigure}
-
-    \par\vspace{1em} % Line break with vertical spacing
-
-    % BOTTOM-LEFT SUBFIGURE (c)
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/combined_MLtesting_2D_Hiddenpeak_comp.png}
-        \caption{2D Hidden Peak function test}
-        \label{fig:2d_hidden_peak}
-    \end{subfigure}
     \hfill
-    % BOTTOM-RIGHT SUBFIGURE (d)
+    % RIGHT SUBFIGURE (b)
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/combined_MLtesting_2D_schwefel_comp.png}
@@ -870,23 +797,12 @@ were introduced:
         \label{fig:2d_schwefel}
     \end{subfigure}
 
-    \caption{Comprehensive benchmarking of the ML optimisation algorithm across multiple challenging
-    landscapes. (a) A 1D Schwefel test case illustrating full surrogate model reconstruction against
-    the true function. The uncertainty in the model is plotted but too small to be visible.  (b),
-    (c) and (d) demonstrate various 2D function tests of the optimiser, where the final mean
-    surrogate model of the space and its paired standard deviation is plotted underneath each. (a)
-    and (b) used $N=100$ trials whereas (c) and (d) used $N=150$, where this includes $N_{sobol}=50$
-    sobol trials for all. UCB with $\beta=1,000,000$ was consistent across all trials. Random
-    injection and multi-modal exploitation was implemented for (c) and (d) with $\epsilon = 0.75$
-    and $n_{hunt}=10$. (d) includes pink markers to annotate where a secondary ``peak hunt'' is
-    triggered. }
-    \label{fig:ml_benchmarks_4panel}
+    \caption{Benchmarking of the ML optimisation algorithm across challenging mathematical
+    landscapes. (a) 2D Gramacy \& Lee function test. (b) 2D multi-modal Schwefel function test. Pink
+    markers annotate where a secondary ``peak hunt'' is triggered. Both used $N=150$ trials
+    (including $N_{sobol}=50$), with UCB $\beta=1,000,000$, $\epsilon = 0.75$, and $n_{hunt}=10$.}
+    \label{fig:ml_benchmarks_main}
 \end{figure}
-
-Successfully navigating these notoriously difficult mathematical landscapes demonstrates the
-optimiser's robust resistance to local minima. This is evidenced by its successful discovery of the
-2D hidden peak (Figure \ref{fig:2d_hidden_peak}) and its highly accurate structural reconstruction
-of the complex, multi-modal 2D Schwefel function (Figure \ref{fig:2d_schwefel}).
 
 The algorithm was potentially over-prepared for the physical breeder blanket investigation, which is
 expected to feature broader, continuous global physical trends rather than sharp, discontinuous
@@ -905,10 +821,9 @@ bounded between 1.5\,cm and 6.0\,cm.
 
 The model was applied on a parameterised version simulation code, in which it had control over the 8
 breeder thicknesses (4 breeder layers, 4 coolant layers). It was given a single optimisation
-objective, to maximise TBR. Throughout testing, monotonic convergence was often observed (
-corner/boundary solutions experiencing binding constraints were common) when no additional
-constraints were applied. Therefore, in the final set of studies we present several optimisation
-runs in which we applied additional parameter constraints.
+objective, to maximise TBR. Throughout testing, corner/boundary solutions experiencing binding
+constraints were common when no additional constraints were applied. Therefore, in the final set of
+studies we present several optimisation runs in which we applied additional parameter constraints.
 \begin{itemize}
     \item \textbf{8D:} The model is free to adjust all 8 layers, as long as they are bounded within
     the provided domains.
@@ -919,7 +834,7 @@ runs in which we applied additional parameter constraints.
     thickness of 12.0\,cm, with breeder layers locked at 8.0\,cm each.
 \end{itemize}
 
-On receipt of the final ML models and optimised configurations (see Section \ref{sec:ml_results}), a
+On receipt of the final ML models and optimised configurations (Section \ref{sec:ml_results}), a
 manual `Binding' configuration was generated to establish a useful comparison for the 8D
 constrained study. Binding constraints / limits in our model is defined as when the breeder layers
 are maximised to their 16.0\,cm upper bound while minimising the interleaving coolants to 1.5\,cm.
@@ -1211,11 +1126,12 @@ capture and cross-contamination can produce tritiated water (HTO), which is appr
 times more radiotoxic than elemental tritium gas \citep{doe_tritium_2015}.
 
 Despite these parasitic losses, the concentrated moderating effect of the water layers (Figure
-\ref{fig:res_mod_abs_a}) can increase the \ce{Li-6} breeding reaction cross-sections in adjacent
-regions (see Section \ref{sec:theory_main}). As demonstrated in Figures \ref{fig:tbr_thickness},
-\ref{fig:res_tbr_a}, and \ref{fig:res_tbr_b}, this thermalisation is so effective that the second
-breeder layer can actually yield a higher tritium production rate than the first, even though the
-total available flux has significantly decreased at that depth (Figure \ref{fig:res_flux_b}).
+\ref{fig:res_mod_abs_a}) can increase the $\ce{^{6}Li}$ breeding reaction (Equation
+\ref{eq:Li6_reaction}) cross-sections in adjacent regions (see Section \ref{sec:theory_main}). As
+demonstrated in Figures \ref{fig:tbr_thickness}, \ref{fig:res_tbr_a}, and \ref{fig:res_tbr_b}, this
+thermalisation is so effective that the second breeder layer can actually yield a higher tritium
+production rate than the first, even though the total available flux has significantly decreased at
+that depth (Figure \ref{fig:res_flux_b}).
 
 Across the linear geometric gradient ($\zeta$), the global TBR remains roughly constant, though it
 begins to marginally decline at higher, rear-weighted $\zeta$ values (Figure \ref{fig:res_tbr_a}).
@@ -1223,13 +1139,13 @@ This relative stability indicates the blanket is operating in a `saturating cond
 confirmed by the fluence heatmap (Figure \ref{fig:res_flux_b}), the total radial depth is sufficient
 to completely consume and attenuate the incident neutron flux regardless of internal distribution.
 
-However, the spatial origin of this breeding is dictated by \ce{(n, 2n)} multiplication. As detailed
-in Section \ref{sec:theory_main}, these spallation events require high-energy incident neutrons,
-causing multiplication to almost entirely deplete after the first two layers (Figure
-\ref{fig:res_mult_b}). In rear-weighted configurations ($\zeta > 0$), incident neutrons must pass
-through structural separators and coolant channels earlier in their transport path. As shown by the
-scattering density (Figure \ref{fig:res_mod_abs_a}), this early moderation rapidly degrades neutron
-kinetic energy, explaining why total multiplication steadily decreases as $\zeta$ increases (Figure
+However, the spatial origin of this breeding is dictated by \ce{(n, 2n)} multiplication. These
+spallation events require high-energy incident neutrons (Equation \ref{eq:Pb_spallation}), causing
+multiplication to almost entirely deplete after the first two layers (Figure \ref{fig:res_mult_b}).
+In rear-weighted configurations ($\zeta > 0$), incident neutrons must pass through structural
+separators and coolant channels earlier in their transport path. As shown by the scattering density
+(Figure \ref{fig:res_mod_abs_a}), this early moderation rapidly degrades neutron kinetic energy,
+explaining why total multiplication steadily decreases as $\zeta$ increases (Figure
 \ref{fig:res_mult_b}).
 
 This reduction in high-energy spallation directly links to the varying total flux tallies.
@@ -1372,7 +1288,7 @@ reactors.
 
 
 \defbibnote{bibnote}{\textit{Note: DOI links are hyperlinked within `[DOI]' placeholder}}
-\printbibliography[heading=bibintoc, title={References CAN REDUCE SNOEK}, prenote=bibnote]
+\printbibliography[heading=bibintoc, title={References}, prenote=bibnote]
 
 
 
@@ -1389,14 +1305,19 @@ reactors.
 \begin{appendices}
 \pagenumbering{roman} % Restarts count and switches to i, ii, iii...
 
+
+
+
 \section{Supplementary Theory}
 \label{app:supplementary_theory}
+\renewcommand{\thefigure}{A\arabic{figure}}
+\setcounter{figure}{0}
 
 \subsection{Volume-Integrated Scalar Flux}
 \label{app:theory_track_length}
-The track-length estimator yields the volume-integrated scalar flux ($\Phi_{V}$), which is expressed in units of
-neutron-centimetres ($\text{n} \cdot \text{cm}$) \citep{kuridan_neutron_2023} and is formally
-defined as:
+The track-length estimator yields the volume-integrated scalar flux ($\Phi_{V}$), which is expressed
+in units of neutron-centimetres ($\text{n} \cdot \text{cm}$) \citep{kuridan_neutron_2023,
+kalos_monte_2008} and is formally defined as:
 \begin{equation}
 \Phi_{V} = \int_{V} \int_{E} \int_{4\pi} \psi(\vec{r}, \hat{\Omega}, E) \, d\hat{\Omega} \, dE \, dV = \sum_{i} W_{i} \ell_{i}
 \label{eq:track_length_estimator}
@@ -1407,9 +1328,45 @@ trajectory through the volume $V$.
 A longer total neutron path length implies a longer residence time within the breeder material,
 which directly increases the probability of nuclear interactions. The macroscopic reaction rate for
 any process, such as elastic scattering, is simply the product of the region's macroscopic
-cross-section ($\Sigma_{x}$) and this volume-integrated flux \citep{kuridan_neutron_2023}.
+cross-section ($\Sigma_{x}$) and this volume-integrated flux \citep{kuridan_neutron_2023,
+kalos_monte_2008}.
 
-\subsection{Nuclear Heating and Kerma Factors}
+\subsection{Nuclear Displacements and Damage Energy}
+\label{app:theory_displacements}
+In the standard Norgett-Robinson-Torrens (NRT) displacement model \citep{norgett1975proposed}, the
+raw number of displaced atoms ($N_d$) is directly proportional to this damage energy:
+\begin{equation}
+    N_{d,\text{NRT}} = \frac{0.8 T_d}{2 E_d}
+    \label{eq:nrt_model}
+\end{equation}
+While the NRT model provides a reliable baseline, it often overestimates the final number of stable
+defects because it does not account for the athermal recombination of atoms that quickly regain
+their original lattice positions. To correct for this phenomenon, the Athermic
+Recombination-Corrected (ARC-DPA) model is employed \citep{nordlund2018improving}. This introduces a
+surviving defect fraction, $\xi(T_d)$:
+\begin{equation}
+    N_{d,\text{arc}} = \frac{0.8 T_d}{2 E_d} \cdot \xi(T_d) = \frac{0.8 T_d}{2 E_d} \left( (1-c) \left( \frac{0.8 T_d}{2 E_d} \right)^b + c \right)
+    \label{eq:arcdpa_model}
+\end{equation}
+where $b$ and $c$ are material-specific constants dependent on the displaced atom type. Values for
+the displacement energy ($E_d$) and these constants for critical structural materials, such as iron
+(dominating the structural separators) and zirconium (in the first wall), are established in
+literature \citep{woods_properties_1966}.
+
+Finally, to determine if a material exceeds its irradiation limits over its operational lifetime,
+the total number of displacements must be normalised into DPA per Full Power Year (FPY). The DPA
+received by a structural component over a FPY is given by:
+\begin{equation}
+    \text{DPA/FPY} = \frac{N_{d,\text{arc}}}{\left(\frac{\rho V \cdot N_A}{\mu}\right)} \cdot \frac{P}{E_f} \cdot (60^2 \cdot 24 \cdot 365)
+    \label{eq:dpa_fpy}
+\end{equation}
+Here, the denominator calculates the total number of target atoms within the specific component
+using the material density ($\rho$), volume ($V$), Avogadro's constant ($N_A$), and molar mass
+($\mu$). This is multiplied by the annual neutron emission rate, derived from the reactor thermal
+power ($P$) and the energy released per fusion event ($E_f$), scaled to the number of seconds in a
+calendar year.
+
+\subsection{Nuclear Heating and KERMA Factors}
 \label{app:theory_nuclear_heating}
 In neutronic simulations, localised energy deposition is calculated using KERMA (Kinetic Energy
 Released in MAterials) factors. The total nuclear heating rate, $H(\vec{r})$, at a specific spatial
@@ -1427,10 +1384,98 @@ cycle. Advanced Monte Carlo codes, such as OpenMC, directly implement these inte
 specialised heating tallies to provide high-fidelity energy deposition profiles
 \citep{romano_openmc_2015}.
 
+\subsection{Standard Acquisition Function: EI}
+\label{app:theory_acquisition_functions}
+The most common standard acquisition metric is Expected Improvement (EI), which calculates the
+probability and magnitude by which a new sample might exceed the current best observation, $f^*$:
+\begin{equation}
+    EI(x) = (\mu(x) - f^*)\Phi(Z) + \sigma(x)\phi(Z)
+\end{equation}
+where $\Phi$ and $\phi$ are the standard normal cumulative distribution and probability density
+functions, respectively.
+
+\section{Supplementary Algorithm Data}
+\label{app:supplementary_methodology}
+\renewcommand{\thefigure}{B\arabic{figure}}
+\setcounter{figure}{0}
+
+\subsection{Acquisition Function Tuning}
+\label{app:acquisition_function}
+Figure \ref{fig:ucb_tuning} illustrates a 2D projection of the acquisition utility landscape
+used to benchmark the model's behaviour.
+
+\begin{figure}[htbp]
+    \centering
+    % FIRST SUBFIGURE
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/Aquisitionfunction_UCB_doublepeak_highbeta_prepped.png}
+        \caption{Explorative tuning ($\beta = 1,000,000$)}
+        \label{fig:ucb_high_beta}
+    \end{subfigure}
+    \hfill
+    % SECOND SUBFIGURE
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/Aquisitionfunction_UCB_doublepeak_lowbeta_prepped.png}
+        \caption{Greedy tuning ($\beta = 1$)}
+        \label{fig:ucb_low_beta}
+    \end{subfigure}
+    \caption{Comparison of the Upper Confidence Bound (UCB) acquisition function behaviour under
+    different exploration parameters ($\beta$). (a) A high $\beta$ value successfully prioritises
+    exploration, identifying a secondary hidden peak. (b) A low $\beta$ value results in overly
+    greedy exploitation, causing the model to stagnate on a single local optimum and ignore
+    unexplored regions.}
+    \label{fig:ucb_tuning}
+\end{figure}
+
+As demonstrated in Figure \ref{fig:ucb_low_beta}, setting a low exploration weight ($\beta = 1$)
+results in a overly greedy search. The algorithm heavily exploits a known local optimum, entirely
+missing a secondary, hidden peak within the design space. Conversely, Figure \ref{fig:ucb_high_beta}
+shows that a significantly higher parameter ($\beta = 1,000,000$) forces the model to prioritise
+high-uncertainty regions, successfully mapping the broader landscape and identifying the hidden
+peak.
+
+\subsection{Additional Optimisation Trials}
+\label{app:optimisation_trails}
+Figure \ref{fig:app_ml_benchmarks} presents additional optimisation trials that the SOBO-GPR
+pipeline was tested on.
+
+\begin{figure}[hbtp]
+    \centering
+    % LEFT SUBFIGURE (a)
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/combined_MLtesting_1D_schwefel.png}
+        \caption{1D multi-modal Schwefel function test}
+        \label{fig:app_1d_benchmark}
+    \end{subfigure}
+    \hfill
+    % RIGHT SUBFIGURE (b)
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/combined_MLtesting_2D_Hiddenpeak_comp.png}
+        \caption{2D Hidden Peak function test}
+        \label{fig:app_2d_hidden_peak}
+    \end{subfigure}
+
+    \caption{Supplementary benchmarking of the ML optimisation algorithm. (a) A 1D Schwefel test
+    case illustrating full surrogate model reconstruction against the true function. The uncertainty
+    in the model is plotted but too small to be visible. (b) 2D Hidden Peak function test, evidencing
+    successful discovery of obscured global maxima. (a) used $N=100$ trials, while (b) used $N=150$.
+    Both tests utilised $N_{sobol}=50$ and UCB $\beta=1,000,000$.}
+    \label{fig:app_ml_benchmarks}
+\end{figure}
+
+Figure \ref{fig:app_1d_benchmark} indicates a complete exploration and comprehensive mapping of the
+test function when in 1D, despite schwefel multi-modal peaks. Figure \ref{fig:app_2d_hidden_peak}
+demonstrates the algorithm's ability to handle the classic hidden peak problem (where a narrower
+slightly taller peak is hidden among a wide clear peak) with confidence, utilising the duplicate
+avoidance and multi-modal exploitation algorithms to avoid getting trapped.
 
 \section{Supplementary Neutronics Data}
 \label{app:supplementary_neutronics}
-\renewcommand{\thefigure}{A\arabic{figure}}
+\renewcommand{\thefigure}{C\arabic{figure}}
 \setcounter{figure}{0}
 
 This section provides the quantitative neutronic trends over the linear gradient parameter ($\zeta$)
