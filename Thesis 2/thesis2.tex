@@ -349,7 +349,7 @@ the total distance traversed by all particle histories within a defined cell vol
 those that have a long path in the cell, to give a more physically representative tally. For
 supplementary theory on volume-integrated scalar flux, see Appendix \ref{app:theory_track_length}.
 
-\subsubsection{Radiation Damage and Displacements Per Atom COULD REDUCE}
+\subsubsection{Radiation Damage and Displacements Per Atom COULD REDUCE + HELIUM}
 
 To accurately assess the structural viability of the breeder blanket and first wall, the neutronic
 simulation tallies radiation-induced material degradation. The standard metric for quantifying this
@@ -556,8 +556,21 @@ the timeliness, originality, and necessity of the methodology developed in this 
 
 
 \section{Methodology}
-\subsection{Simulation Pipeline Summary}
+\subsection{Simulation Pipeline Summary STUFF TO ADD}
 \label{sec:methodology_summary}
+
+!!! Many heterogeneous breeder blankets are designed with several ring-like layers, with al-
+ternating breeder material and coolant separated by structural material. There is significant
+variability in design, ranging from only two layers (Gohar et al., 1998; Segantin et al., 2020) to
+five (Lee et al., 2012; Qu et al., 2020). !!!
+
+!!! The parameters used to define
+the plasma body are specified in Fausser et al., 2012!!!
+
+!!!An assumption of a reactor power of
+500MW was made based on the planned output of ITER (Aymar, Barabaschi and Shimomura,
+2002).!!!!
+
 The neutronic performance of the breeder blanket geometries is evaluated using a coupled
 computational workflow. The 3D parametric Computer Aided Design (CAD) models of the tokamak reactor
 are generated using the Python-based framework Paramak \citep{shimwell_paramak_2021}. To ensure
@@ -572,7 +585,7 @@ counts ranging between $10^5$ and $10^7$ neutrons per run.
 
 Based on the optimal configurations identified in the previous semester, the material definitions
 for this architecture are explicitly fixed: the first wall utilises a zirconium alloy, the breeder
-is a lithium-lead eutectic (\ce{Li_{17}Pb_{83}}), and the coolant is pressurised water (modelled at
+is a lithium-lead eutectic (\ce{Li_{17}Pb_{83}}) with 40\% enriched \ce{^{6}Li}, and the coolant is pressurised water (modelled at
 $600\text{ K}$ and $15.5\text{ MPa}$). EUROFER97 was selected for the internal structural
 separators, rear wall, and central solenoid, reflecting industry standards for robust,
 reduced-activation ferritic-martensitic steels. Furthermore, to more accurately evaluate the spatial
@@ -645,11 +658,11 @@ the blanket segment. Within this mesh grid, six specific reaction metrics were s
     \item \textbf{Neutron Multiplication:} Scored using the multiply tally, highlighting
     the precise locations of high-energy threshold reactions (such as \ce{(n, 2n)} in the
     multipliers and structural separators) that boost the neutron economy.
-    \item \textbf{Nuclear Heating:} Scored using the standard heating tally, which records
-    the total kinetic energy deposited by both neutrons and secondary photons per source particle.
-    \item \textbf{Damage Energy:} Scored using the damage-energy tally, capturing the
-    specific fraction of kinetic energy available to cause atomic displacements in the structural
-    lattice.
+    \item \textbf{Nuclear Heating:} Scored using the standard heating tally, which records the total
+    kinetic energy (in $\text{eV}$) deposited by both neutrons and secondary photons per source
+    neutron.
+    \item \textbf{Damage Energy:} Scored using the damage-energy tally, capturing the specific
+    fraction of kinetic energy available to cause atomic displacements in the structural lattice.
 \end{itemize}
 The raw outputs from these mesh tallies were subsequently processed and visualised as heat maps (see
 Section \ref{sec:results_neutronics}).
@@ -712,7 +725,7 @@ Consequently, the study transitions to the application of Machine Learning algor
 \subsection{ML Optimisation}
 \label{sec:ml_approach}
 
-\subsubsection{ML Algorithm}
+\subsubsection{ML Algorithm PACKAGE CITATIONS}
 \label{sec:method_ml}
 To navigate the computationally expensive 8-dimensional design space effectively, Single-Objective
 Bayesian Optimisation was employed with a Gaussian Process Regressor was utilised as the surrogate
@@ -920,9 +933,10 @@ These prioritise inner layers and continue radially outward until the thickness 
 \label{sec:results_neutronics}
 Figure \ref{fig:tbr_comparison} presents the global TBR across these different modelling approaches.
 The data shows an initial reduction in the calculated TBR when the required structural separator
-material (EUROFER97) is integrated into the homogeneous mixture. A further, more substantial decrease
-in the global TBR is observed when this exact same material volume is heterogeneously separated into
-distinct breeder, coolant, and structural layers.
+material (EUROFER97) is integrated into the homogeneous mixture. A further, more substantial
+decrease in the global TBR is observed when this exact same material volume is heterogeneously
+separated into distinct breeder, coolant, and structural layers. Note all tallies in this report are
+given in units per source neutron
 
 \begin{figure}[htb]
     \centering
@@ -946,10 +960,10 @@ distinct breeder, coolant, and structural layers.
     \label{fig:layered_model_neutronics}
 \end{figure}
 
-To evaluate layer-wise performance (Figure \ref{fig:tbr_thickness}), breeder and coolant depths were
-uniformly scaled. Global TBR rapidly saturates at $\approx500$~mm. Beyond this threshold, total
-production remains constant, yet internal breeding shifts: the contribution from layer 1 rises,
-layer 2 stabilises, and deeper layers (3 and 4) contribute progressively less.
+To evaluate layer-wise performance (Figure \ref{fig:tbr_thickness}), breeder and coolant depths (not
+separators) were uniformly scaled. Global TBR rapidly saturates at $\approx500$~mm. Beyond this
+threshold, total production remains constant, yet internal breeding shifts: the contribution from
+layer 1 rises, layer 2 stabilises, and deeper layers (3 and 4) contribute progressively less.
 
 The global TBR remains relatively constant across the linear gradient
 parameter ($\zeta$), but the spatial distribution of tritium production shifts significantly between
@@ -1236,13 +1250,14 @@ Figure \ref{fig:app_scatter_absorb}). This complex cross-sectional balance expla
 forward-weighted designs, despite their vastly superior neutron populations, fail to achieve
 strictly dominant global TBR.
 
-These geometric shifts also dictate structural viability. In rear-weighted configurations, the
-internal structural separators are exposed to high-energy source neutrons much earlier, driving a
-stark increase in internal DPA. Conversely, the first wall experiences peak DPA in forward-weighted
-configurations, as intense multiplication within the thick first breeder layer causes highly
-energetic neutrons to backscatter. Given the DPA per FPY (yielding a critical embrittlement lifetime
-of roughly 8.2 to 10.0 FPYs for Zircaloy-4), this concentrated damage highlights the severe material
-inadequacy of zirconium under intense front-loaded multiplication.
+These geometric shifts also dictate structural viability. Note that as water and the breeder
+eutectic alloy would be liquid, we focus on solid separators and the first wall. In rear-weighted
+configurations, the internal structural separators are exposed to high-energy source neutrons much
+earlier, driving a stark increase in internal DPA. Conversely, the first wall experiences peak DPA
+in forward-weighted configurations, as intense multiplication within the thick first breeder layer
+causes highly energetic neutrons to backscatter. Given the DPA per FPY (yielding a critical
+embrittlement lifetime of roughly 8.2 to 10.0 FPYs for Zircaloy-4), this concentrated damage
+highlights the severe material inadequacy of zirconium under intense front-loaded multiplication.
 
 These geometric shifts also dictate structural viability. In rear-weighted configurations, the
 internal structural separators are exposed to high-energy source neutrons much earlier, driving a
@@ -1269,12 +1284,13 @@ critical necessity.
 \label{sec:discussion_ml}
 
 Despite the highly non-linear physical interactions governing the blanket, the SOBO-GPR pipeline
-effectively trivialised the design space into a literal `corner solution'. Across multiple
-dimensional tests and constraint boundaries, the algorithm consistently identified that optimal
-performance dictates maximising breeder layer thicknesses while strictly minimising coolant
-channels. The uniformity of this conclusion across various tests, summarised in Figure
-\ref{fig:ml_optimisation}, strongly validates the robustness of both the surrogate model and the
-result.
+effectively trivialised the design space into a true `corner solution'.  Across multiple dimensional
+tests and constraint boundaries, the algorithm consistently identified that optimal performance
+dictates maximising breeder layer thicknesses while strictly minimising coolant channels. The
+uniformity of this conclusion across various tests, summarised in Figure \ref{fig:ml_optimisation},
+strongly validates the robustness of both the surrogate model and the result. The specific converged
+thickness were entirely bound and dictated by our applied constraints the overall 'binding solution'
+trend is the useful induction.
 
 Crucially, the 2D contour maps (Figure \ref{fig:surrogate_projections}) translate these mathematical
 optima into interpretable physics. Rather than identifying an isolated point within a `black box',
@@ -1287,13 +1303,14 @@ attenuated, subsequent material distributions inherently cease to influence the 
 
 However, the 8D constrained optimisation underscores a critical limitation of blind ML application.
 The algorithm converged on a seemingly complex, `degenerate' result: an exponentially decaying
-thickness profile. While mathematically optimal for the surrogate model—which merely maps an
+thickness profile. While a working optimum for the surrogate model—which merely maps an
 8-dimensional thickness input to a scalar TBR output, nuclear analysis reveals this configuration is
 functionally identical to the standard binding constraints. Because the total flux is fully
 exhausted within the initial radial depth, the precise distribution of the remaining rear volume is
-physically irrelevant to tritium production. This highlights that while Machine Learning is a
-tremendously powerful tool for navigating intractable parameter spaces, deriving accurate,
-actionable conclusions still absolutely requires fundamental neutronic domain knowledge.
+physically irrelevant to tritium production (affirmed by Figures \ref{fig:proj_b4},
+\ref{fig:proj_c4}). This highlights that while Machine Learning is a powerful tool for navigating
+intractable parameter spaces, deriving accurate, actionable conclusions definitively requires
+fundamental neutronic domain knowledge.
 
 \subsection{Limitations and Future Work}
 \label{sec:discussion_limitations}
@@ -1310,11 +1327,13 @@ the developed ML codebase \citep{khan2026fusionmlcode} is inherently modular. Al
 efficient method for future large-scale material studies.
 
 The most prominent limitation of the current framework is its reliance on Single Objective BO.
-Real-world blanket design is fundamentally a multi-physics compromise. As echoed by concurrent
-optimiser studies in the literature \citep{humphrey_accelerating_2026}, the critical next step is
-transitioning the pipeline to Multi-Objective Optimisation (MOO) \citep{emmerich2005single,
-knowles_parego_2006}. By simultaneously mapping competing metrics, such as optimising  TBR while
-also maximising heat extraction and minimising first-wall DPA, the algorithm could generate
+Real-world blanket design is fundamentally a multi-physics compromise. The configurations in Figure
+\ref{fig:ml_optimisation} are indicative of singular TBR focus. Such breeder thicknesses could be
+impractical to implement and backloaded coolants contradict its heat extraction goal. As echoed by
+concurrent optimiser studies in the literature \citep{humphrey_accelerating_2026}, the critical next
+step is transitioning the pipeline to Multi-Objective Optimisation (MOO) \citep{emmerich2005single,
+knowles_parego_2006}. By simultaneously mapping competing metrics, such as optimising TBR while also
+maximising heat extraction and minimising thickness / cost, the algorithm could generate
 comprehensive Pareto fronts. This evolution would upgrade the pipeline from a theoretical
 investigative tool into a highly practical utility for fusion design engineers.
 
