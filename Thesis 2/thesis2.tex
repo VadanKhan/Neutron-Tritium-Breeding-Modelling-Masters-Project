@@ -17,6 +17,7 @@
 \usepackage{booktabs}
 \usepackage{textcomp}
 \usepackage{enumitem}
+\usepackage{float}
 
 
 % --- Bibliography Setup (Vancouver Style) --- \usepackage[ backend=biber, style=vancouver,
@@ -387,18 +388,18 @@ Alongside atomic displacements, the unattenuated high-energy fusion neutron flux
 transmutation reactions, predominantly \ce{(n, $\upalpha$)} processes, which generate insoluble
 gases within the structural lattice. The accumulation of these transmutation gases is particularly
 critical in fusion environments; helium atoms rapidly migrate to grain boundaries and coalesce into
-bubbles, leading to severe volume swelling and helium embrittlement. This synergistic degradation
-mechanism fundamentally constrains component lifetimes. Operational embrittlement threshold limits
-have been drafted for fusion materials in terms of DPA, limits by \cite{gilbert_integrated_2012} are
-applied in this study.
+bubbles, leading to severe volume swelling and helium embrittlement \cite{trinkaus1985modeling}.
+This synergistic degradation mechanism fundamentally constrains component lifetimes. Operational
+embrittlement threshold limits have been drafted for fusion materials in terms of DPA, limits by
+\cite{gilbert_integrated_2012} are applied in this study.
 
 \subsubsection{Nuclear Heating and Energy Deposition}
 In addition to radiation damage, the structural and thermal-hydraulic viability of a blanket design
 is dictated by the spatial distribution of nuclear heating. Energy is deposited into the blanket
 materials through two primary mechanisms: neutron kinetic energy transfer during elastic and
 inelastic scattering, and the absorption of secondary gamma rays ($\gamma$-photons) produced during
-nuclear reactions \citep{kuridan_neutron_2023}. In a simulation we calculate and tally the
-localised deposited kinetic energy (Appendix \ref{app:theory_nuclear_heating}).
+nuclear reactions \citep{kuridan_neutron_2023}. In a simulation we calculate (Appendix
+\ref{app:theory_nuclear_heating}) and tally the localised deposited kinetic energy.
 
 \subsection{ML: Bayesian Optimisation}
 \label{sec:theory_ml}
@@ -457,7 +458,7 @@ While several commonly employed acquisition functions exist (Appendix
 UCB evaluates the absolute best-case score for any given point given the sum of its predicted
 $\mu(x)$ and $\sigma(x)$. The hyperparameter $\beta$ acts as an explicit control over the
 algorithm's optimism. By setting $\beta$ to a sufficiently high value, the algorithm is forced to
-aggressively explore highly uncertain regions (Appendix \ref{app:acquisition_function}).
+aggressively explore highly uncertain regions (demonstrated in Section \ref{sec:method_ml}).
 
 
 
@@ -751,8 +752,6 @@ local optimum poses a significant risk. Consequently, the UCB acquisition functi
 with this highly explorative $\beta = 1,000,000$ value to ensure robust, global mapping of the
 design space before narrowing in on the optimal layer thicknesses.
 
-
-
 \subsubsection{Testing, Tuning \& Developing the Optimiser}
 Before applying the Bayesian optimiser to the high-dimensional neutronic blanket model it was
 evaluated against a suite of notoriously difficult mathematical landscapes, including the including
@@ -891,16 +890,21 @@ These prioritise inner layers and continue radially outward until the thickness 
 
 
 
-
 \section{Results}
 \subsection{Neutronic Behaviour of Heterogeneous Architectures}
 \label{sec:results_neutronics}
-Figure \ref{fig:tbr_comparison} presents the global TBR across these different modelling approaches.
+
+Figure \ref{fig:tbr_comparison} presents the global TBR across different modelling approaches.
 The data shows an initial reduction in the calculated TBR when the required structural separator
 material (EUROFER97) is integrated into the homogeneous mixture. A further, more substantial
 decrease in the global TBR is observed when this exact same material volume is heterogeneously
 separated into distinct breeder, coolant, and structural layers. Note all tallies in this report are
 given in units per source neutron
+
+To evaluate layer-wise performance (Figure \ref{fig:tbr_thickness}), breeder and coolant depths (not
+separators) were uniformly scaled. Global TBR rapidly saturates at $\approx500$~mm. Beyond this
+threshold, total production remains constant, yet internal breeding shifts: the contribution from
+layer 1 rises, layer 2 stabilises, and deeper layers (3 and 4) contribute progressively less.
 
 \begin{figure}[htb]
     \centering
@@ -924,19 +928,7 @@ given in units per source neutron
     \label{fig:layered_model_neutronics}
 \end{figure}
 
-To evaluate layer-wise performance (Figure \ref{fig:tbr_thickness}), breeder and coolant depths (not
-separators) were uniformly scaled. Global TBR rapidly saturates at $\approx500$~mm. Beyond this
-threshold, total production remains constant, yet internal breeding shifts: the contribution from
-layer 1 rises, layer 2 stabilises, and deeper layers (3 and 4) contribute progressively less.
-
-The global TBR remains relatively constant across the linear gradient
-parameter ($\zeta$), but the spatial distribution of tritium production shifts significantly between
-the discrete layers (Figure \ref{fig:res_tbr_a}). The 2D reaction density map (Figure
-\ref{fig:res_tbr_b}) demonstrates that breeding is asymmetrically focused near the plasma-facing
-boundary. Notably, at a uniform thickness distribution ($\zeta = 0$), the tritium bred in the second
-breeder layer actually exceeds that of the first.
-
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \hfill
     \begin{subfigure}[b]{0.49\textwidth}
@@ -956,6 +948,15 @@ breeder layer actually exceeds that of the first.
     \label{fig:res_tbr}
 \end{figure}
 
+The global TBR remains relatively constant across the linear gradient
+parameter ($\zeta$), but the spatial distribution of tritium production shifts significantly between
+the discrete layers (Figure \ref{fig:res_tbr_a}). The 2D reaction density map (Figure
+\ref{fig:res_tbr_b}) demonstrates that breeding is asymmetrically focused near the plasma-facing
+boundary. Notably, at a uniform thickness distribution ($\zeta = 0$), the tritium bred in the second
+breeder layer actually exceeds that of the first.
+
+
+
 The volume-integrated flux tally (Figure \ref{fig:res_flux_a}) indicates there is a greater
 proportion of neutrons that survive longer and penetrate further into the blanket in
 forward-weighted ($\zeta < 0$) configurations. The fluence map (Figure \ref{fig:res_flux_b}) reveals
@@ -963,7 +964,7 @@ that the incident neutron flux is completely attenuated by the rear boundary, sa
 blanket. Additionally, a minor step-like attenuation pattern is visible immediately following the
 discrete coolant layers.
 
-\begin{figure}[htb]
+\begin{figure}[hbt]
     \centering
     \hfill
     \begin{subfigure}[b]{0.49\textwidth}
@@ -1051,7 +1052,7 @@ rear-weighted ($\zeta > 0$) configurations.
 For supplementary data on proportions, $\zeta$ trends and other results stated, see Appendix
 Figures \ref{fig:app_scatter_absorb}, \ref{fig:app_heating} and \ref{fig:app_damage_zeta}.
 
-\begin{figure}[htb]
+\begin{figure}[hbt]
     \centering
     \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{figures/B1_Zeta_DPA.png}
@@ -1076,7 +1077,7 @@ Figures \ref{fig:app_scatter_absorb}, \ref{fig:app_heating} and \ref{fig:app_dam
 The optimal blanket configurations identified by the Bayesian optimiser under various dimensional
 constraints are presented in Figure \ref{fig:ml_optimisation}.
 
-\begin{figure}[hbt]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=1\textwidth]{figures/breeder_blanket_2d_themed.png}
     \caption{ Radial thickness profiles and resulting global TBR for the ML optimised TBR-thickness
@@ -1459,7 +1460,7 @@ functions, respectively.
 This section provides the quantitative neutronic trends over the linear gradient parameter ($\zeta$)
 and supplementary spatial heatmaps referenced in Section \ref{sec:results_neutronics}.
 
-\begin{figure}[htbp]
+\begin{figure}[p]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{figures/B1_Zeta_Scatter.png}
@@ -1477,7 +1478,7 @@ and supplementary spatial heatmaps referenced in Section \ref{sec:results_neutro
     \label{fig:app_scatter_absorb}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[phtb]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{figures/B1_Zeta_Heating.png}
@@ -1495,7 +1496,7 @@ and supplementary spatial heatmaps referenced in Section \ref{sec:results_neutro
     \label{fig:app_heating}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[phtb]
     \centering
     \includegraphics[width=0.48\textwidth]{figures/B1_Zeta_Damage.png}
     \caption{ Total damage energy deposited into the plasma-facing FW and internal

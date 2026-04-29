@@ -3507,6 +3507,39 @@
       \endverb
       \keyw{Lit Review,{TBR},Useful}
     \endentry
+    \entry{trinkaus1985modeling}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0f356f499b81b520f0649758753bd6ee}{%
+           family={Trinkaus},
+           familyi={T\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0f356f499b81b520f0649758753bd6ee}
+      \strng{fullhash}{0f356f499b81b520f0649758753bd6ee}
+      \strng{fullhashraw}{0f356f499b81b520f0649758753bd6ee}
+      \strng{bibnamehash}{0f356f499b81b520f0649758753bd6ee}
+      \strng{authorbibnamehash}{0f356f499b81b520f0649758753bd6ee}
+      \strng{authornamehash}{0f356f499b81b520f0649758753bd6ee}
+      \strng{authorfullhash}{0f356f499b81b520f0649758753bd6ee}
+      \strng{authorfullhashraw}{0f356f499b81b520f0649758753bd6ee}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Nuclear Materials}
+      \field{title}{Modeling of helium effects in metals: High temperature embrittlement}
+      \field{volume}{133-134}
+      \field{year}{1985}
+      \field{pages}{105\bibrangedash 112}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/0022-3115(85)90119-9
+      \endverb
+    \endentry
     \entry{doe_tritium_2015}{report}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=7f6cd5b5b184ad5dcf66198edda1fe77}{%
