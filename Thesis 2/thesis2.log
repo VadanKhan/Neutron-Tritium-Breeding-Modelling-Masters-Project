@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.16)  29 APR 2026 13:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.16)  29 APR 2026 22:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -732,11 +732,11 @@ Package biblatex Info: ... file 'thesis2.bbl' found.
  (thesis2.bbl)
 Package biblatex Info: Reference section=0 on input line 161.
 Package biblatex Info: Reference segment=0 on input line 161.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 197.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 198.
  (C:\Users\vadan\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 197.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 198.
  (C:\Users\vadan\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -762,7 +762,7 @@ l.232 \clearpage
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.319  \begin{equation}
+l.316  \begin{equation}
                         [1
 
 ]
@@ -772,172 +772,180 @@ l.319  \begin{equation}
 [3]
 
 [4]
-<figures/reactor_diagram.png, id=345, 2090.56032pt x 1126.2075pt>
+
+[5]
+<figures/reactor_diagram.png, id=380, 2090.56032pt x 1126.2075pt>
 File: figures/reactor_diagram.png Graphic file (type png)
 <use figures/reactor_diagram.png>
-Package pdftex.def Info: figures/reactor_diagram.png  used on input line 575.
+Package pdftex.def Info: figures/reactor_diagram.png  used on input line 611.
 (pdftex.def)             Requested size: 435.32422pt x 234.49997pt.
 
 
-[5]
-
 [6 <./figures/reactor_diagram.png>]
-<figures/forward_layers_3.png, id=384, 380.17032pt x 752.8125pt>
+<figures/forward_layers_3.png, id=402, 380.17032pt x 752.8125pt>
 File: figures/forward_layers_3.png Graphic file (type png)
 <use figures/forward_layers_3.png>
-Package pdftex.def Info: figures/forward_layers_3.png  used on input line 647.
+Package pdftex.def Info: figures/forward_layers_3.png  used on input line 681.
 (pdftex.def)             Requested size: 72.55157pt x 143.66763pt.
-<figures/base_layers.png, id=385, 386.19281pt x 752.8125pt>
+<figures/base_layers.png, id=403, 386.19281pt x 752.8125pt>
 File: figures/base_layers.png Graphic file (type png)
 <use figures/base_layers.png>
-Package pdftex.def Info: figures/base_layers.png  used on input line 655.
+Package pdftex.def Info: figures/base_layers.png  used on input line 689.
 (pdftex.def)             Requested size: 74.97241pt x 146.13734pt.
-<figures/rear_layers_3.png, id=386, 380.17032pt x 752.8125pt>
+<figures/rear_layers_3.png, id=404, 380.17032pt x 752.8125pt>
 File: figures/rear_layers_3.png Graphic file (type png)
 <use figures/rear_layers_3.png>
-Package pdftex.def Info: figures/rear_layers_3.png  used on input line 663.
+Package pdftex.def Info: figures/rear_layers_3.png  used on input line 697.
 (pdftex.def)             Requested size: 72.55157pt x 143.66763pt.
-<figures/Aquisitionfunction_UCB_doublepeak_highbeta_prepped.png, id=394, 619.56468pt x 517.935pt>
-File: figures/Aquisitionfunction_UCB_doublepeak_highbeta_prepped.png Graphic file (type png)
-<use figures/Aquisitionfunction_UCB_doublepeak_highbeta_prepped.png>
-Package pdftex.def Info: figures/Aquisitionfunction_UCB_doublepeak_highbeta_prepped.png  used on input line 723.
-(pdftex.def)             Requested size: 232.17242pt x 194.08289pt.
-<figures/Aquisitionfunction_UCB_doublepeak_lowbeta_prepped.png, id=395, 626.34pt x 519.44063pt>
-File: figures/Aquisitionfunction_UCB_doublepeak_lowbeta_prepped.png Graphic file (type png)
-<use figures/Aquisitionfunction_UCB_doublepeak_lowbeta_prepped.png>
-Package pdftex.def Info: figures/Aquisitionfunction_UCB_doublepeak_lowbeta_prepped.png  used on input line 731.
-(pdftex.def)             Requested size: 232.17242pt x 192.54669pt.
 
 
 [7 <./figures/forward_layers_3.png> <./figures/base_layers.png> <./figures/rear_layers_3.png>]
+<figures/Aquisitionfunction_UCB_doublepeak_highbeta_prepped.png, id=425, 619.56468pt x 517.935pt>
+File: figures/Aquisitionfunction_UCB_doublepeak_highbeta_prepped.png Graphic file (type png)
+<use figures/Aquisitionfunction_UCB_doublepeak_highbeta_prepped.png>
+Package pdftex.def Info: figures/Aquisitionfunction_UCB_doublepeak_highbeta_prepped.png  used on input line 755.
+(pdftex.def)             Requested size: 232.17242pt x 194.08289pt.
+<figures/Aquisitionfunction_UCB_doublepeak_lowbeta_prepped.png, id=426, 626.34pt x 519.44063pt>
+File: figures/Aquisitionfunction_UCB_doublepeak_lowbeta_prepped.png Graphic file (type png)
+<use figures/Aquisitionfunction_UCB_doublepeak_lowbeta_prepped.png>
+Package pdftex.def Info: figures/Aquisitionfunction_UCB_doublepeak_lowbeta_prepped.png  used on input line 763.
+(pdftex.def)             Requested size: 232.17242pt x 192.54669pt.
+
 
 [8 <./figures/Aquisitionfunction_UCB_doublepeak_highbeta_prepped.png> <./figures/Aquisitionfunction_UCB_doublepeak_lowbeta_prepped.png>]
-<figures/combined_MLtesting_1D_schwefel.png, id=428, 1915.155pt x 1698.345pt>
+<figures/combined_MLtesting_1D_schwefel.png, id=446, 1915.155pt x 1698.345pt>
 File: figures/combined_MLtesting_1D_schwefel.png Graphic file (type png)
 <use figures/combined_MLtesting_1D_schwefel.png>
-Package pdftex.def Info: figures/combined_MLtesting_1D_schwefel.png  used on input line 805.
+Package pdftex.def Info: figures/combined_MLtesting_1D_schwefel.png  used on input line 833.
 (pdftex.def)             Requested size: 237.01411pt x 210.1676pt.
-<figures/combined_MLtesting_2D_gramacylee_comp.png, id=429, 752.8125pt x 917.67844pt>
+<figures/combined_MLtesting_2D_gramacylee_comp.png, id=447, 752.8125pt x 917.67844pt>
 File: figures/combined_MLtesting_2D_gramacylee_comp.png Graphic file (type png)
 <use figures/combined_MLtesting_2D_gramacylee_comp.png>
-Package pdftex.def Info: figures/combined_MLtesting_2D_gramacylee_comp.png  used on input line 812.
+Package pdftex.def Info: figures/combined_MLtesting_2D_gramacylee_comp.png  used on input line 840.
 (pdftex.def)             Requested size: 237.01411pt x 288.9162pt.
-<figures/combined_MLtesting_2D_Hiddenpeak_comp.png, id=430, 752.8125pt x 907.13907pt>
+<figures/combined_MLtesting_2D_Hiddenpeak_comp.png, id=448, 752.8125pt x 907.13907pt>
 File: figures/combined_MLtesting_2D_Hiddenpeak_comp.png Graphic file (type png)
 <use figures/combined_MLtesting_2D_Hiddenpeak_comp.png>
-Package pdftex.def Info: figures/combined_MLtesting_2D_Hiddenpeak_comp.png  used on input line 822.
+Package pdftex.def Info: figures/combined_MLtesting_2D_Hiddenpeak_comp.png  used on input line 850.
 (pdftex.def)             Requested size: 237.01411pt x 285.59805pt.
-<figures/combined_MLtesting_2D_schwefel_comp.png, id=431, 752.8125pt x 916.1728pt>
+<figures/combined_MLtesting_2D_schwefel_comp.png, id=449, 752.8125pt x 916.1728pt>
 File: figures/combined_MLtesting_2D_schwefel_comp.png Graphic file (type png)
 <use figures/combined_MLtesting_2D_schwefel_comp.png>
-Package pdftex.def Info: figures/combined_MLtesting_2D_schwefel_comp.png  used on input line 829.
+Package pdftex.def Info: figures/combined_MLtesting_2D_schwefel_comp.png  used on input line 857.
 (pdftex.def)             Requested size: 237.01411pt x 288.44218pt.
-
-
-LaTeX Warning: Float too large for page by 19.58292pt on input line 845.
-
 
 
 [9]
 
 [10 <./figures/combined_MLtesting_1D_schwefel.png> <./figures/combined_MLtesting_2D_gramacylee_comp.png> <./figures/combined_MLtesting_2D_Hiddenpeak_comp.png> <./figures/combined_MLtesting_2D_schwefel_comp.png>]
-<figures/B1 Comparison Graph.png, id=451, 1606.0pt x 1204.5pt>
+<figures/B1 Comparison Graph.png, id=469, 1606.0pt x 1204.5pt>
 File: figures/B1 Comparison Graph.png Graphic file (type png)
 <use figures/B1 Comparison Graph.png>
-Package pdftex.def Info: figures/B1 Comparison Graph.png  used on input line 914.
+Package pdftex.def Info: figures/B1 Comparison Graph.png  used on input line 930.
 (pdftex.def)             Requested size: 237.01411pt x 177.74492pt.
-<figures/B1_Thicknesss_TBR.png, id=452, 462.528pt x 346.896pt>
+<figures/B1_Thicknesss_TBR.png, id=470, 462.528pt x 346.896pt>
 File: figures/B1_Thicknesss_TBR.png Graphic file (type png)
 <use figures/B1_Thicknesss_TBR.png>
-Package pdftex.def Info: figures/B1_Thicknesss_TBR.png  used on input line 922.
+Package pdftex.def Info: figures/B1_Thicknesss_TBR.png  used on input line 938.
 (pdftex.def)             Requested size: 237.01411pt x 177.76152pt.
-<figures/B1_Zeta_TBR.png, id=453, 462.528pt x 346.896pt>
+<figures/B1_Zeta_TBR.png, id=475, 462.528pt x 346.896pt>
 File: figures/B1_Zeta_TBR.png Graphic file (type png)
 <use figures/B1_Zeta_TBR.png>
-Package pdftex.def Info: figures/B1_Zeta_TBR.png  used on input line 935.
+Package pdftex.def Info: figures/B1_Zeta_TBR.png  used on input line 953.
 (pdftex.def)             Requested size: 237.01411pt x 177.76152pt.
-<figures/B1_TBR_HM.png, id=454, 1505.625pt x 1254.6875pt>
+<figures/B1_TBR_HM.png, id=476, 1505.625pt x 1254.6875pt>
 File: figures/B1_TBR_HM.png Graphic file (type png)
 <use figures/B1_TBR_HM.png>
-Package pdftex.def Info: figures/B1_TBR_HM.png  used on input line 941.
+Package pdftex.def Info: figures/B1_TBR_HM.png  used on input line 959.
 (pdftex.def)             Requested size: 237.01411pt x 197.49945pt.
 
 
 [11 <./figures/B1 Comparison Graph.png> <./figures/B1_Thicknesss_TBR.png> <./figures/B1_Zeta_TBR.png> <./figures/B1_TBR_HM.png>]
-<figures/B1_Zeta_Flux.png, id=469, 462.528pt x 346.896pt>
+<figures/B1_Zeta_Flux.png, id=493, 462.528pt x 346.896pt>
 File: figures/B1_Zeta_Flux.png Graphic file (type png)
 <use figures/B1_Zeta_Flux.png>
-Package pdftex.def Info: figures/B1_Zeta_Flux.png  used on input line 971.
+Package pdftex.def Info: figures/B1_Zeta_Flux.png  used on input line 991.
 (pdftex.def)             Requested size: 237.01411pt x 177.76152pt.
-<figures/B1_Fluence_HM.png, id=470, 1505.625pt x 1254.6875pt>
+<figures/B1_Fluence_HM.png, id=494, 1505.625pt x 1254.6875pt>
 File: figures/B1_Fluence_HM.png Graphic file (type png)
 <use figures/B1_Fluence_HM.png>
-Package pdftex.def Info: figures/B1_Fluence_HM.png  used on input line 977.
+Package pdftex.def Info: figures/B1_Fluence_HM.png  used on input line 997.
 (pdftex.def)             Requested size: 237.01411pt x 197.49945pt.
-<figures/B1_Zeta_Mult.png, id=473, 462.528pt x 346.896pt>
+<figures/B1_Zeta_Mult.png, id=495, 462.528pt x 346.896pt>
 File: figures/B1_Zeta_Mult.png Graphic file (type png)
 <use figures/B1_Zeta_Mult.png>
-Package pdftex.def Info: figures/B1_Zeta_Mult.png  used on input line 996.
+Package pdftex.def Info: figures/B1_Zeta_Mult.png  used on input line 1011.
 (pdftex.def)             Requested size: 237.01411pt x 177.76152pt.
-<figures/B1_Mult_HM.png, id=474, 1505.625pt x 1254.6875pt>
+<figures/B1_Mult_HM.png, id=496, 1505.625pt x 1254.6875pt>
 File: figures/B1_Mult_HM.png Graphic file (type png)
 <use figures/B1_Mult_HM.png>
-Package pdftex.def Info: figures/B1_Mult_HM.png  used on input line 1002.
+Package pdftex.def Info: figures/B1_Mult_HM.png  used on input line 1017.
 (pdftex.def)             Requested size: 237.01411pt x 197.49945pt.
 
 
 [12 <./figures/B1_Zeta_Flux.png> <./figures/B1_Fluence_HM.png> <./figures/B1_Zeta_Mult.png> <./figures/B1_Mult_HM.png>]
-<figures/B1_Scatter_HM.png, id=488, 1505.625pt x 1254.6875pt>
+<figures/B1_Scatter_HM.png, id=513, 1505.625pt x 1254.6875pt>
 File: figures/B1_Scatter_HM.png Graphic file (type png)
 <use figures/B1_Scatter_HM.png>
-Package pdftex.def Info: figures/B1_Scatter_HM.png  used on input line 1023.
+Package pdftex.def Info: figures/B1_Scatter_HM.png  used on input line 1048.
 (pdftex.def)             Requested size: 237.01411pt x 197.49945pt.
-<figures/B1_Absorb_HM.png, id=489, 1505.625pt x 1254.6875pt>
+<figures/B1_Absorb_HM.png, id=514, 1505.625pt x 1254.6875pt>
 File: figures/B1_Absorb_HM.png Graphic file (type png)
 <use figures/B1_Absorb_HM.png>
-Package pdftex.def Info: figures/B1_Absorb_HM.png  used on input line 1029.
+Package pdftex.def Info: figures/B1_Absorb_HM.png  used on input line 1054.
 (pdftex.def)             Requested size: 237.01411pt x 197.49945pt.
-<figures/B1_Zeta_DPA.png, id=495, 1606.0pt x 1204.5pt>
+<figures/B1_Zeta_Scatter.png, id=515, 462.528pt x 346.896pt>
+File: figures/B1_Zeta_Scatter.png Graphic file (type png)
+<use figures/B1_Zeta_Scatter.png>
+Package pdftex.def Info: figures/B1_Zeta_Scatter.png  used on input line 1068.
+(pdftex.def)             Requested size: 237.01411pt x 177.76152pt.
+<figures/B1_Zeta_Absorb.png, id=516, 462.528pt x 346.896pt>
+File: figures/B1_Zeta_Absorb.png Graphic file (type png)
+<use figures/B1_Zeta_Absorb.png>
+Package pdftex.def Info: figures/B1_Zeta_Absorb.png  used on input line 1074.
+(pdftex.def)             Requested size: 237.01411pt x 177.76152pt.
+
+
+[13 <./figures/B1_Scatter_HM.png> <./figures/B1_Absorb_HM.png> <./figures/B1_Zeta_Scatter.png> <./figures/B1_Zeta_Absorb.png>]
+<figures/B1_Zeta_DPA.png, id=532, 1606.0pt x 1204.5pt>
 File: figures/B1_Zeta_DPA.png Graphic file (type png)
 <use figures/B1_Zeta_DPA.png>
-Package pdftex.def Info: figures/B1_Zeta_DPA.png  used on input line 1058.
+Package pdftex.def Info: figures/B1_Zeta_DPA.png  used on input line 1101.
 (pdftex.def)             Requested size: 237.01411pt x 177.74492pt.
-<figures/B1_Damage_HM.png, id=496, 1505.625pt x 1254.6875pt>
+<figures/B1_Damage_HM.png, id=533, 1505.625pt x 1254.6875pt>
 File: figures/B1_Damage_HM.png Graphic file (type png)
 <use figures/B1_Damage_HM.png>
-Package pdftex.def Info: figures/B1_Damage_HM.png  used on input line 1064.
+Package pdftex.def Info: figures/B1_Damage_HM.png  used on input line 1107.
 (pdftex.def)             Requested size: 237.01411pt x 197.49945pt.
-<figures/breeder_blanket_2d_themed.png, id=498, 857.8449pt x 424.65852pt>
+<figures/breeder_blanket_2d_themed.png, id=535, 857.8449pt x 424.65852pt>
 File: figures/breeder_blanket_2d_themed.png Graphic file (type png)
 <use figures/breeder_blanket_2d_themed.png>
-Package pdftex.def Info: figures/breeder_blanket_2d_themed.png  used on input line 1082.
+Package pdftex.def Info: figures/breeder_blanket_2d_themed.png  used on input line 1124.
 (pdftex.def)             Requested size: 483.69687pt x 239.44652pt.
 
 
-[13 <./figures/B1_Scatter_HM.png> <./figures/B1_Absorb_HM.png> <./figures/B1_Zeta_DPA.png> <./figures/B1_Damage_HM.png>]
-<figures/MLresult_8D_B1B2_prepped.png, id=514, 901.11656pt x 620.3175pt>
+[14 <./figures/B1_Zeta_DPA.png> <./figures/B1_Damage_HM.png> <./figures/breeder_blanket_2d_themed.png>]
+<figures/MLresult_8D_B1B2_prepped.png, id=549, 901.11656pt x 620.3175pt>
 File: figures/MLresult_8D_B1B2_prepped.png Graphic file (type png)
 <use figures/MLresult_8D_B1B2_prepped.png>
-Package pdftex.def Info: figures/MLresult_8D_B1B2_prepped.png  used on input line 1120.
+Package pdftex.def Info: figures/MLresult_8D_B1B2_prepped.png  used on input line 1163.
 (pdftex.def)             Requested size: 237.01411pt x 163.15286pt.
-<figures/MLresult_8D_B1B4_prepped.png, id=515, 911.65594pt x 609.77812pt>
+<figures/MLresult_8D_B1B4_prepped.png, id=550, 911.65594pt x 609.77812pt>
 File: figures/MLresult_8D_B1B4_prepped.png Graphic file (type png)
 <use figures/MLresult_8D_B1B4_prepped.png>
-Package pdftex.def Info: figures/MLresult_8D_B1B4_prepped.png  used on input line 1127.
+Package pdftex.def Info: figures/MLresult_8D_B1B4_prepped.png  used on input line 1170.
 (pdftex.def)             Requested size: 237.01411pt x 158.52927pt.
-<figures/MLresult_8D_B1C1_prepped.png, id=516, 898.85812pt x 608.2725pt>
+<figures/MLresult_8D_B1C1_prepped.png, id=551, 898.85812pt x 608.2725pt>
 File: figures/MLresult_8D_B1C1_prepped.png Graphic file (type png)
 <use figures/MLresult_8D_B1C1_prepped.png>
-Package pdftex.def Info: figures/MLresult_8D_B1C1_prepped.png  used on input line 1137.
+Package pdftex.def Info: figures/MLresult_8D_B1C1_prepped.png  used on input line 1180.
 (pdftex.def)             Requested size: 237.01411pt x 160.39323pt.
-<figures/MLresult_8D_B1C4_prepped.png, id=517, 878.53218pt x 602.25pt>
+<figures/MLresult_8D_B1C4_prepped.png, id=552, 878.53218pt x 602.25pt>
 File: figures/MLresult_8D_B1C4_prepped.png Graphic file (type png)
 <use figures/MLresult_8D_B1C4_prepped.png>
-Package pdftex.def Info: figures/MLresult_8D_B1C4_prepped.png  used on input line 1144.
+Package pdftex.def Info: figures/MLresult_8D_B1C4_prepped.png  used on input line 1187.
 (pdftex.def)             Requested size: 237.01411pt x 162.47182pt.
 
-
-[14 <./figures/breeder_blanket_2d_themed.png>]
 
 [15 <./figures/MLresult_8D_B1B2_prepped.png> <./figures/MLresult_8D_B1B4_prepped.png> <./figures/MLresult_8D_B1C1_prepped.png> <./figures/MLresult_8D_B1C4_prepped.png>]
 
@@ -952,58 +960,46 @@ Package pdftex.def Info: figures/MLresult_8D_B1C4_prepped.png  used on input lin
 [20]
 
 [1]
-<figures/B1_Zeta_Scatter.png, id=679, 462.528pt x 346.896pt>
-File: figures/B1_Zeta_Scatter.png Graphic file (type png)
-<use figures/B1_Zeta_Scatter.png>
-Package pdftex.def Info: figures/B1_Zeta_Scatter.png  used on input line 1466.
-(pdftex.def)             Requested size: 232.17242pt x 174.13039pt.
-<figures/B1_Zeta_Absorb.png, id=680, 462.528pt x 346.896pt>
-File: figures/B1_Zeta_Absorb.png Graphic file (type png)
-<use figures/B1_Zeta_Absorb.png>
-Package pdftex.def Info: figures/B1_Zeta_Absorb.png  used on input line 1472.
-(pdftex.def)             Requested size: 232.17242pt x 174.13039pt.
-<figures/B1_Zeta_Heating.png, id=681, 462.528pt x 346.896pt>
+<figures/B1_Zeta_Heating.png, id=708, 462.528pt x 346.896pt>
 File: figures/B1_Zeta_Heating.png Graphic file (type png)
 <use figures/B1_Zeta_Heating.png>
-Package pdftex.def Info: figures/B1_Zeta_Heating.png  used on input line 1484.
+Package pdftex.def Info: figures/B1_Zeta_Heating.png  used on input line 1500.
 (pdftex.def)             Requested size: 232.17242pt x 174.13039pt.
-<figures/B1_Heat_HM.png, id=682, 1505.625pt x 1254.6875pt>
+<figures/B1_Heat_HM.png, id=709, 1505.625pt x 1254.6875pt>
 File: figures/B1_Heat_HM.png Graphic file (type png)
 <use figures/B1_Heat_HM.png>
-Package pdftex.def Info: figures/B1_Heat_HM.png  used on input line 1490.
+Package pdftex.def Info: figures/B1_Heat_HM.png  used on input line 1506.
 (pdftex.def)             Requested size: 232.17242pt x 193.45987pt.
-<figures/B1_Zeta_Damage.png, id=683, 462.528pt x 346.896pt>
+<figures/B1_Zeta_Damage.png, id=710, 462.528pt x 346.896pt>
 File: figures/B1_Zeta_Damage.png Graphic file (type png)
 <use figures/B1_Zeta_Damage.png>
-Package pdftex.def Info: figures/B1_Zeta_Damage.png  used on input line 1501.
+Package pdftex.def Info: figures/B1_Zeta_Damage.png  used on input line 1517.
 (pdftex.def)             Requested size: 232.17242pt x 174.13039pt.
 
 
-[2]
-
-[3 <./figures/B1_Zeta_Scatter.png> <./figures/B1_Zeta_Absorb.png> <./figures/B1_Zeta_Heating.png> <./figures/B1_Heat_HM.png> <./figures/B1_Zeta_Damage.png>] (thesis2.aux)
+[2 <./figures/B1_Zeta_Heating.png> <./figures/B1_Heat_HM.png> <./figures/B1_Zeta_Damage.png>] (thesis2.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
  ***********
 Package rerunfilecheck Info: File `thesis2.out' has not changed.
-(rerunfilecheck)             Checksum: 6271B2921934AD9B8CC7A8DB80992BC4;8400.
+(rerunfilecheck)             Checksum: 427926161B7B7510EBF8BB764965C3D4;8329.
 Package logreq Info: Writing requests to 'thesis2.run.xml'.
 \openout1 = `thesis2.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22507 strings out of 468081
- 408167 string characters out of 5425788
- 1270274 words of memory out of 5000000
- 50776 multiletter control sequences out of 15000+600000
- 645041 words of font info for 102 fonts, out of 8000000 for 9000
+ 22523 strings out of 468081
+ 408367 string characters out of 5425788
+ 1267983 words of memory out of 5000000
+ 50789 multiletter control sequences out of 15000+600000
+ 644695 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,16n,100p,2655b,1580s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\vadan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb>
-Output written on thesis2.pdf (25 pages, 8662091 bytes).
+ 75i,16n,100p,2655b,1588s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\vadan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/vadan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb>
+Output written on thesis2.pdf (24 pages, 8655569 bytes).
 PDF statistics:
- 805 PDF objects out of 1000 (max. 8388607)
- 144 named destinations out of 1000 (max. 500000)
+ 825 PDF objects out of 1000 (max. 8388607)
+ 147 named destinations out of 1000 (max. 500000)
  481 words of extra memory for PDF output out of 10000 (max. 10000000)
 
