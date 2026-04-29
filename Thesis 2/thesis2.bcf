@@ -2429,34 +2429,33 @@
     <bcf:citekey order="46" intorder="2">segantin_optimisation_2020</bcf:citekey>
     <bcf:citekey order="46" intorder="3">lee2012</bcf:citekey>
     <bcf:citekey order="46" intorder="4">qu2020</bcf:citekey>
-    <bcf:citekey order="47" intorder="1">khan_mphys_sem1</bcf:citekey>
-    <bcf:citekey order="48" intorder="1">olson2025ax</bcf:citekey>
-    <bcf:citekey order="49" intorder="1">Balandatetal2019</bcf:citekey>
-    <bcf:citekey order="50" intorder="1">Paszkeetal2019</bcf:citekey>
-    <bcf:citekey order="51" intorder="1">khan2026fusionmlcode</bcf:citekey>
-    <bcf:citekey order="52" intorder="1">rastrigin1974systems</bcf:citekey>
-    <bcf:citekey order="53" intorder="1">schwefel1981numerical</bcf:citekey>
-    <bcf:citekey order="54" intorder="1">rosenbrock1960automatic</bcf:citekey>
-    <bcf:citekey order="55" intorder="1">gramacy2012cases</bcf:citekey>
-    <bcf:citekey order="56" intorder="1">doe_tritium_2015</bcf:citekey>
-    <bcf:citekey order="57" intorder="1">stornelli_ultra-fine_2024</bcf:citekey>
-    <bcf:citekey order="57" intorder="2">brown_endfb-viii0_2018</bcf:citekey>
-    <bcf:citekey order="58" intorder="1">woods_properties_1966</bcf:citekey>
-    <bcf:citekey order="59" intorder="1">aymar_iter_2002</bcf:citekey>
-    <bcf:citekey order="60" intorder="1">woods_properties_1966</bcf:citekey>
-    <bcf:citekey order="61" intorder="1">khan2026fusionmlcode</bcf:citekey>
-    <bcf:citekey order="62" intorder="1">humphrey_accelerating_2026</bcf:citekey>
-    <bcf:citekey order="63" intorder="1">emmerich2005single</bcf:citekey>
-    <bcf:citekey order="63" intorder="2">knowles_parego_2006</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">olson2025ax</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">Balandatetal2019</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">Paszkeetal2019</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">khan2026fusionmlcode</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">rastrigin1974systems</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">schwefel1981numerical</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">rosenbrock1960automatic</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">gramacy2012cases</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">doe_tritium_2015</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">stornelli_ultra-fine_2024</bcf:citekey>
+    <bcf:citekey order="56" intorder="2">brown_endfb-viii0_2018</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">woods_properties_1966</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">aymar_iter_2002</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">woods_properties_1966</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">khan2026fusionmlcode</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">humphrey_accelerating_2026</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">emmerich2005single</bcf:citekey>
+    <bcf:citekey order="62" intorder="2">knowles_parego_2006</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">kuridan_neutron_2023</bcf:citekey>
+    <bcf:citekey order="63" intorder="2">kalos_monte_2008</bcf:citekey>
     <bcf:citekey order="64" intorder="1">kuridan_neutron_2023</bcf:citekey>
     <bcf:citekey order="64" intorder="2">kalos_monte_2008</bcf:citekey>
-    <bcf:citekey order="65" intorder="1">kuridan_neutron_2023</bcf:citekey>
-    <bcf:citekey order="65" intorder="2">kalos_monte_2008</bcf:citekey>
-    <bcf:citekey order="66" intorder="1">norgett1975proposed</bcf:citekey>
-    <bcf:citekey order="67" intorder="1">nordlund2018improving</bcf:citekey>
-    <bcf:citekey order="68" intorder="1">woods_properties_1966</bcf:citekey>
-    <bcf:citekey order="69" intorder="1">kuridan_neutron_2023</bcf:citekey>
-    <bcf:citekey order="70" intorder="1">romano_openmc_2015</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">norgett1975proposed</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">nordlund2018improving</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">woods_properties_1966</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">kuridan_neutron_2023</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">romano_openmc_2015</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

@@ -1,5 +1,5 @@
 % --- DOC SETUP ---
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 
 % --- Packages ---
 \usepackage{amsmath,amssymb}
@@ -10,12 +10,14 @@
 \usepackage[title]{appendix}
 \usepackage[a4paper, margin=2cm]{geometry}
 \usepackage{titlesec}
-\usepackage[font=small,labelfont=bf]{caption}
+\usepackage[labelfont=bf]{caption} %Caption Sizes!
 \usepackage{subcaption}
 \usepackage{upgreek}
 \usepackage{mhchem}
 \usepackage{booktabs}
 \usepackage{textcomp}
+\usepackage{enumitem}
+
 
 % --- Bibliography Setup (Vancouver Style) --- \usepackage[ backend=biber, style=vancouver,
 % doi=true, url=false, isbn=false, eprint=false, maxbibnames=6, minbibnames=6 ]{biblatex}
@@ -118,7 +120,7 @@
 \defbibnote{bibnote}{\textit{Note: DOI links are hyperlinked within `[DOI]' placeholder}}
 
 % Shrink the bibliography text and make it single-spaced
-\renewcommand*{\bibfont}{\small\linespread{1.0}\selectfont}
+\renewcommand*{\bibfont}{\linespread{0.95}\selectfont}
 
 % Link your bibliography database file
 \addbibresource{thesis2.bib}
@@ -143,9 +145,12 @@
   {\small\itshape} {\theparagraph.} {1em} {}
 \titlespacing*{\paragraph}{0pt}{1.5ex plus 0.2ex}{1ex}
 
-% --- General Paragraph Formatting ---
+% --- Bullet Point Spacing ---
+\setlist[itemize]{itemsep=0pt, parsep=0pt, topsep=4pt, leftmargin=15pt}
+
+% --- General Paragraph Formatting
 \setlength{\parindent}{10pt}
-\linespread{1}
+\linespread{0.95}
 
 
 % ==========================================
@@ -197,7 +202,7 @@
     Results indicate that the transition to a layered architecture degrades the Tritium Breeding
     Ratio (TBR) due to the introduction of parasitic structural and coolant sinks, where the layered
     design serves as a conservative underestimate compared to real implementations. Our peak ML
-    optimised TBR was $1.41$. The SOBO-GPR pipeline proved highly effective in navigating this
+    optimised TBR was $1.41\pm0.003$. The bespoke SOBO-GPR pipeline proved highly effective in navigating this
     complex space, identifying that optimal TBR demands a front-loaded, ``binding configuration'' of
     maximum breeder and minimum coolant thicknesses. Additionally, surrogate models and spatial
     reaction maps clearly reveal lateral considerations, such as the negligible impact of the
@@ -288,7 +293,7 @@ unavoidable neutron leakage and parasitic absorption, the breeder blanket must a
 strictly greater than unity just to maintain a continuous fuel cycle \citep{pearson_tritium_2018}.
 Furthermore, because conservation of momentum dictates that this single emitted neutron carries away
 four-fifths of the total fusion energy ($E_n \approx 14.1 \text{ MeV}$ compared to $\sim 1-2 \text{
-MeV}$ neutrons in fission reactors \citep{heckrotte_factors_1971}), fusion breeder blankets must be
+MeV}$ neutrons in fission reactors \citep{heckrotte_factors_1971}, fusion breeder blankets must be
 specialised to utilise these ultra high energy neutrons.
 
 To breed this fuel, the blanket exploits neutron capture interactions with lithium. Natural lithium
@@ -334,29 +339,31 @@ The continuous-energy nuclear data libraries utilised by OpenMC resolve interact
 constituent isotopes, sampled from \cite{brown_endfb-viii0_2018}. Consequently, structural and
 coolant components exhibit trace background reactions that become visible in high-resolution mesh
 tallies. Incident fast neutrons ($E_n \approx 14.1 \text{ MeV}$) trigger minor endothermic
-spallation events in the structural materials, notably within the zirconium first wall
-($\ce{^{90}Zr(n, 2n)^{89}Zr}$, $Q = -12.0 \text{ MeV}$, $\sigma \approx 0.6 \text{ b}$) and the
-EUROFER97 (see Section \ref{sec:breeder_blanket_studies}) steel separators ($\ce{^{56}Fe(n,
+spallation events in the structural materials (Section \ref{sec:methodology_summary}), notably
+within the zirconium plamsa-facing First Wall (FW) ($\ce{^{90}Zr(n, 2n)^{89}Zr}$, $Q = -12.0
+\text{ MeV}$, $\sigma \approx 0.6 \text{ b}$) and the EUROFER97  steel separators ($\ce{^{56}Fe(n,
 2n)^{55}Fe}$, $Q = -11.2 \text{ MeV}$, $\sigma \approx 0.4 \text{ b}$). In addition to
 multiplication, this unattenuated high-energy flux induces negligible trace tritium production
-within the first wall via an extreme threshold capture reaction ( $\ce{^{90}Zr(n,t)^{88}Y}$, $Q =
--11.3 \text{ MeV}$, $\sigma \sim 1 \text{ \textmu b}$). Conversely, highly thermalised neutrons
-within the coolant layers can undergo radiative capture with the naturally occurring deuterium in
-water to breed trace amounts of tritium ($\ce{^{2}H(n,\gamma)^{3}H}$, $Q = +6.26 \text{ MeV}$,
-thermal $\sigma \approx 0.5 \text{ mb}$).
+within the FW via an extreme threshold capture reaction ( $\ce{^{90}Zr(n,t)^{88}Y}$, $Q = -11.3
+\text{ MeV}$, $\sigma \sim 1 \text{ \textmu b}$). Conversely, highly thermalised neutrons within the
+coolant layers can undergo radiative capture with the naturally occurring deuterium in water to
+breed trace amounts of tritium ($\ce{^{2}H(n,\gamma)^{3}H}$, $Q = +6.26 \text{ MeV}$, thermal
+$\sigma \approx 0.5 \text{ mb}$).
 
 \subsection{Neutron Transport Metrics}
+\label{sec:theory_neutron_metrics}
 \subsubsection{Neutron Track Length}
 To quantify the neutron population within specific geometric regions of the blanket, stochastic
 Monte Carlo transport codes, such as OpenMC \citep{romano_openmc_2015}, utilise a track-length
 estimator. Rather than counting individual neutrons crossing a boundary, the simulation integrates
 the total distance traversed by all particle histories within a defined cell volume (Appendix
 \ref{app:theory_track_length}). This accounts for neutrons that only briefly enters a cell compared
-to those that have a long path in the cell, to give a more physically representative tally.
+to those that have a long path in the cell, to give a more physically representative tally to be
+tracked in neutron simulations.
 
 \subsubsection{Radiation Damage and Displacements Per Atom COULD REDUCE}
 \label{sec:theory_DPA}
-To accurately assess the structural viability of the breeder blanket and first wall, the neutronic
+To accurately assess the structural viability of the breeder blanket and FW, the neutronic
 simulation tallies radiation-induced material degradation, where the primary concern for fusion is
 damage by atomic displacement. The standard metric for quantifying this degradation in a crystalline
 lattice is Displacements Per Atom (DPA), which represents the average number of times an atom is
@@ -394,25 +401,23 @@ nuclear reactions \citep{kuridan_neutron_2023}. In a simulation we calculate and
 localised deposited kinetic energy (Appendix \ref{app:theory_nuclear_heating}).
 
 \subsection{ML: Bayesian Optimisation}
+\label{sec:theory_ml}
 
-Given the significant computational expense of evaluating fusion simulations via stochastic Monte
-Carlo transport, standard grid-search or gradient-descent optimisation methods become
-computationally intractable across high-dimensional parameter spaces. To navigate this, the study
-employs Bayesian Optimisation (BO), a sample-efficient global optimisation strategy highly suited
-for evaluating expensive, `black-box' objective functions \citep{shahriari2015taking}.
-
-BO is fundamentally driven by Bayes' Theorem, wherein a `prior' belief about the
-objective function's landscape is iteratively updated with new simulation evidence to form a refined
-`posterior' distribution. This loop relies on two coupled mathematical components: a probabilistic
-surrogate model and an acquisition function.
+To mitigate severe computational expense (Section \ref{sec:computational_load}), this study employs
+Bayesian Optimisation (BO), a sample-efficient global optimisation strategy highly suited for
+evaluating expensive, `black-box' objective functions \citep{shahriari2015taking}. BO is
+fundamentally driven by Bayes' Theorem, wherein a `prior' belief about the objective function's
+landscape is iteratively updated with new simulation evidence to form a refined `posterior'
+distribution. This loop relies on two coupled mathematical components: a probabilistic surrogate
+model and an acquisition function.
 
 \subsubsection{Surrogate Modelling via Gaussian Process Regression}
 
-The surrogate model acts as a computationally inexpensive emulator for the OpenMC physics solver.
-This project utilises Gaussian Process Regression (GPR) \citep{rasmussen2006gaussian}. Unlike
-parametric regression models that fit a single discrete curve, a Gaussian Process (GP) defines a
-non-parametric probability distribution over all possible functions that could fit the observed
-data.
+The surrogate model acts as a computationally inexpensive interpolator and extrapolator for the
+OpenMC physics solver. This project utilises Gaussian Process Regression (GPR)
+\citep{rasmussen2006gaussian}. Unlike parametric regression models that fit a single discrete curve,
+a Gaussian Process (GP) defines a non-parametric probability distribution over all possible
+functions that could fit the observed data.
 
 For any given coordinate in the parameter space (e.g., a specific set of blanket layer thicknesses),
 the GPR outputs a probability distribution characterised by two key metrics:
@@ -434,14 +439,13 @@ over-fitting to statistical anomalies \citep{snoek2012practical}.
 
 While the GPR provides a probabilistic map of the design space, it does not dictate the search path.
 This is the role of the Acquisition Function, an analytically defined, cheap-to-evaluate equation
-that transforms the GP's mean and variance into a single scalar `utility' score. The parameter
+that transforms the GP's $\mu(x)$ and variance into a single scalar `utility' score. The parameter
 space coordinate that maximises this utility is selected as the next candidate for OpenMC
 simulation.
 
-The acquisition function must carefully balance two conflicting objectives: `exploitation'
-(sampling areas with a high predicted mean, $\mu(x)$, to refine known local maxima) and
-`exploration' (sampling areas with high uncertainty, $\sigma(x)$, to discover untracked
-global maxima).
+The acquisition function must carefully balance two conflicting objectives: `exploitation' (sampling
+areas with a high predicted $\mu(x)$ to refine known local maxima) and `exploration' (sampling areas
+with high $\sigma(x)$ to discover untracked global maxima).
 
 While several commonly employed acquisition functions exist (Appendix
 \ref{app:theory_acquisition_functions}), the Upper Confidence Bound (UCB) acquisition function
@@ -451,10 +455,9 @@ While several commonly employed acquisition functions exist (Appendix
     \label{eq:UCB}
 \end{equation}
 UCB evaluates the absolute best-case score for any given point given the sum of its predicted
-performance and uncertainty. The hyperparameter $\beta$ acts as an explicit control over the
+$\mu(x)$ and $\sigma(x)$. The hyperparameter $\beta$ acts as an explicit control over the
 algorithm's optimism. By setting $\beta$ to a sufficiently high value, the algorithm is forced to
-aggressively explore highly uncertain regions (Section \ref{sec:method_ml} includes demonstrations
-of this).
+aggressively explore highly uncertain regions (Appendix \ref{app:acquisition_function}).
 
 
 
@@ -475,9 +478,9 @@ layered internal cooling channels and structural separators to ensure thermo-mec
 A critical review of current mature conceptual designs, such as the Water-Cooled Lithium-Lead (WCLL)
 and Helium-Cooled Pebble Bed (HCPB), demonstrates that coolants and their associated structural
 containment typically occupy $30\%$--$40\%$ of the total blanket volume \citep{del_nevo_wcll_2019}.
-Furthermore, the distribution of this necessary non-breeding volume is heavily skewed towards the
-plasma-facing First Wall (FW). The FW endures the most severe environmental stressors in the
-reactor; demonstration power plant (DEMO) concepts must mitigate surface heat fluxes often exceeding
+The coolant distribution is heavily skewed towards the front of the blanket for optimum heat
+extraction. extraction. The FW endures the most severe environmental stressors in the reactor;
+demonstration power plant (DEMO) concepts must mitigate surface heat fluxes often exceeding
 $1.0\text{ MW/m}^2$ alongside peak neutron wall loadings of $\sim 2.0\text{ MW/m}^2$
 \citep{you_european_2016}. To prevent structural failure under these extreme loads, current
 literature heavily relies on integrating dense networks of cooling micro-channels within
@@ -520,12 +523,12 @@ low-dimensional or heavily homogenised approximations.
 
 To circumvent the severe computational limitations of high-fidelity transport codes, the broader
 computational physics community has increasingly adopted surrogate modelling and sequential learning
-techniques. Methods such as BO and GPR are distinctly suited to resolving this specific bottleneck
-\citep{rasmussen2006gaussian}. Rather than exhaustively evaluating an entire
-design space, these algorithms intelligently sample a small fraction of the data points required by
-a traditional grid search. This targeted approach yields a robust understanding of the optimal
-parameter landscape while drastically reducing the required number of computationally expensive
-simulations \citep{emmerich2005single, shahriari2015taking}.
+techniques. Methods such as BO and GPR (Section \ref{sec:theory_ml}) are distinctly suited to
+resolving this specific bottleneck \citep{rasmussen2006gaussian}. Rather than exhaustively
+evaluating an entire design space, these algorithms intelligently sample a small fraction of the
+data points required by a traditional grid search. This targeted approach yields a robust
+understanding of the optimal parameter landscape while drastically reducing the required number of
+computationally expensive simulations \citep{emmerich2005single, shahriari2015taking}.
 
 The translation of this machine learning paradigm into nuclear fusion neutronics is a rapidly
 emerging, cutting-edge frontier. For instance, \cite{manek_fast_2023} recently established the
@@ -556,23 +559,22 @@ statistical robustness and minimise relative error below $0.5\%$, simulations ut
 counts ranging between $10^5$ and $10^7$ neutrons per run.
 
 Based on the optimal configurations identified in the previous semester, the material definitions
-for this architecture are explicitly fixed: the first wall utilises a zirconium alloy, the breeder
+for this architecture are explicitly fixed: the FW utilises a zirconium alloy, the breeder
 is a lithium-lead eutectic (\ce{Li_{17}Pb_{83}}) with 40\% enriched \ce{^{6}Li}, and the coolant is
 pressurised water (modelled at $600\text{ K}$ and $15.5\text{ MPa}$). EUROFER97 was selected for the
 internal structural separators, rear wall, and central solenoid, reflecting industry standards for
 robust, reduced-activation ferritic-martensitic steels. The 14.1~MeV Muir-distributed ring source
 utilised in the previous study has been updated to a volumetric body source with a denser core,
 default OpenMC are parameters specified in \cite{fausser2012}. A baseline reactor thermal power of
-$500\text{ MW}$ was assumed to scale DPA/FPY (Section \ref{app:theory_displacements}), reflecting the planned operational
-output of ITER \citep{aymar_iter_2002}.
+$500\text{ MW}$ was assumed to scale DPA/FPY (Section \ref{sec:theory_DPA}), reflecting
+the planned operational output of ITER \citep{aymar_iter_2002}.
 
 \begin{figure}[hbtp]
   \centering
-  \includegraphics[width=0.8\textwidth]{figures/reactor_diagram.png}
-  \caption{ Representative geometry of the simplified Tokamak model generated via Paramak. The
-    simulation domain comprises a 90° revolution with periodic boundary conditions. Included is an
-    example breakdown of the layered blanket, only the coolant and breeder thicknesses are adjusted
-    in this study. }
+  \includegraphics[width=0.9\textwidth]{figures/reactor_diagram.png}
+  \caption{ Representative geometry of the simplified Tokamak model generated via Paramak.  Included
+    is an example breakdown of the layered blanket, only the coolant and breeder thicknesses are
+    adjusted in this study. }
   \label{fig:reactor_diagram}
 \end{figure}
 
@@ -608,38 +610,18 @@ advantages to this approach:
 \subsection{Neutronic Analysis}
 \label{sec:method_neutronics}
 \subsubsection{Mechanistic Analysis of the Layered Blanket}
-Initial parametric thickness sweeps were conducted to establish a baseline for the heterogeneous
-architecture. We also built upon explorations in the first stage of this project
-\citep{khan_mphys_sem1} by including tallying of individual layers to understand which were
-contributing and impactful to global results (see Section \ref{sec:results_neutronics}).
+Initial parametric thickness sweeps were conducted, keeping all other material proportions constant,
+to isolate the effect of heterogeneity. We included tallying of individual layers to understand
+which were contributing and impactful to global results (Section \ref{sec:results_neutronics}).
 
-Building on this further, mechanistic understanding of performance necessitates localised analysis
-of several neutron transport parameters throughout the reactor.  To generate two-dimensional spatial
-distributions of nuclear heating and radiation damage, regular Cartesian mesh tallies were overlaid
-onto the geometry of the blanket model.
-
-In OpenMC, a high-resolution 2D bounding box mesh was defined across the poloidal-radial plane of
-the blanket segment. Within this mesh grid, six specific reaction metrics were scored independently:
-\begin{itemize}
-    \item \textbf{Neutron Flux:} Scored using the flux tally, measuring the
-    volume-integrated track length of all neutrons across the mesh to map the spatial attenuation of
-    the neutron population.
-    \item \textbf{Scattering Density:} Scored using the scatter tally, mapping the density
-    of elastic and inelastic collision events primarily responsible for neutron moderation.
-    \item \textbf{Tritium Production:} Scored using the H3-production tally, identifying
-    the specific geometric regions within the breeder blanket that contribute most heavily to the
-    global TBR.
-    \item \textbf{Neutron Multiplication:} Scored using the multiply tally, highlighting
-    the precise locations of high-energy threshold reactions (such as \ce{(n, 2n)} in the
-    multipliers and structural separators) that boost the neutron economy.
-    \item \textbf{Nuclear Heating:} Scored using the standard heating tally, which records the total
-    kinetic energy (in $\text{eV}$) deposited by both neutrons and secondary photons per source
-    neutron.
-    \item \textbf{Damage Energy:} Scored using the damage-energy tally, capturing the specific
-    fraction of kinetic energy available to cause atomic displacements in the structural lattice.
-\end{itemize}
-The raw outputs from these mesh tallies were subsequently processed and visualised as heat maps (see
-Section \ref{sec:results_neutronics}).
+Mechanistic understanding of performance necessitates localised tracking of several neutron
+transport parameters (Section \ref{sec:theory_neutron_metrics}). To generate 3D spatial
+distributions, regular Cartesian mesh tallies were overlaid onto a high-resolution 3D bounding box
+mesh defined across the reactor. Within this grid, six specific reaction metrics were scored
+independently using OpenMC's standard tallies: neutron flux, scattering density, tritium production,
+neutron multiplication, nuclear heating, and damage energy. The raw outputs from these mesh tallies
+were subsequently processed into a 2D poloidal slice of the reactor and visualised as heat maps
+(Section \ref{sec:results_neutronics}).
 
 \subsubsection{Manual Thickness Distribution Analysis}
 To systematically investigate the effect of radial material distribution within the heterogeneous
@@ -653,37 +635,39 @@ parameter, $\zeta$, was introduced as a heuristic constraint (see Figure \ref{fi
 This parameter governs the relative thickness of the layers across the blanket's depth (while
 holding seperator thickness constant), providing a human-intuitive method to observe spatial trends.
 In Section \ref{sec:results_neutronics} we aggregate how neutronic parameters vary under the sweep
-of $\zeta$, bound to $|\zeta|<0.35$ from meshing constraints in layers that are too thin.
+of $\zeta$, bound to $|\zeta|<0.35$ from meshing constraints in thin layers.
 
 \begin{figure}[htbp]
     \centering
+    \hfill
     % FIRST SUBFIGURE
-    \begin{subfigure}[t]{0.2\textwidth}
+    \begin{subfigure}[t]{0.15\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/forward_layers_3.png}
-        \caption{Forward-weighted ($\zeta < 0$)}
+        \caption{$\zeta < 0$}
         \label{fig:zeta_forward}
     \end{subfigure}
     \hfill
     % SECOND SUBFIGURE
-    \begin{subfigure}[t]{0.205\textwidth}
+    \begin{subfigure}[t]{0.155\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/base_layers.png}
-        \caption{Uniform/Baseline ($\zeta = 0$)}
+        \caption{$\zeta = 0$}
         \label{fig:zeta_base}
     \end{subfigure}
     \hfill
     % THIRD SUBFIGURE
-    \begin{subfigure}[t]{0.2\textwidth}
+    \begin{subfigure}[t]{0.15\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/rear_layers_3.png}
-        \caption{Rear-weighted ($\zeta > 0$)}
+        \caption{$\zeta > 0$}
         \label{fig:zeta_rear}
     \end{subfigure}
+    \hfill\null
 
     \caption{Cross-sectional visualisations of the breeder blanket layers illustrating the effect of
     the linear gradient parameter, $\zeta$. This parameter controls the radial distribution of layer
-    thicknesses: (a) a forward-weighted geometry shifting volume towards the first wall, (b) the
+    thicknesses: (a) a forward-weighted geometry shifting volume towards the FW, (b) the
     baseline uniform thickness distribution, and (c) a rear-weighted geometry shifting volume deeper
     into the blanket.}
     \label{fig:zeta_parameter}
@@ -725,16 +709,51 @@ optimisation studies were completed in under 3 hours.
 A critical component of this framework is the selection and tuning of the acquisition function,
 which dictates how the algorithm samples new data points. For this study, the UCB acquisition
 function (Equation \ref{eq:UCB}) was selected for its explicit, scalar control over the
-exploration-exploitation trade-off via the hyperparameter $\beta$. Properly tuning this parameter
-is vital for a high-dimensional physical system where multiple local maxima may exist.
+exploration-exploitation trade-off via the hyperparameter $\beta$. Properly tuning this parameter is
+vital for a high-dimensional physical system where multiple local maxima may exist. Figure
+\ref{fig:ucb_tuning} illustrates a 2D projection of the acquisition utility landscape used to
+benchmark the model's behaviour.
+
+\begin{figure}[htbp]
+    \centering
+    % FIRST SUBFIGURE
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/Aquisitionfunction_UCB_doublepeak_highbeta_prepped.png}
+        \caption{Explorative tuning ($\beta = 1,000,000$)}
+        \label{fig:ucb_high_beta}
+    \end{subfigure}
+    \hfill
+    % SECOND SUBFIGURE
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/Aquisitionfunction_UCB_doublepeak_lowbeta_prepped.png}
+        \caption{Greedy tuning ($\beta = 1$)}
+        \label{fig:ucb_low_beta}
+    \end{subfigure}
+    \caption{Comparison of the Upper Confidence Bound (UCB) acquisition function behaviour under
+    different exploration parameters ($\beta$). (a) A high $\beta$ value successfully prioritises
+    exploration, identifying a secondary hidden peak. (b) A low $\beta$ value results in overly
+    greedy exploitation, causing the model to stagnate on a single local optimum and ignore
+    unexplored regions.}
+    \label{fig:ucb_tuning}
+\end{figure}
+
+As demonstrated in Figure \ref{fig:ucb_low_beta}, setting a low exploration weight ($\beta = 1$)
+results in a overly greedy search. The algorithm heavily exploits a known local optimum, entirely
+missing a secondary, hidden peak within the design space. Conversely, Figure \ref{fig:ucb_high_beta}
+illustrates that a significantly higher parameter ($\beta = 1,000,000$) forces the model to prioritise
+high-uncertainty regions, successfully mapping the broader landscape and identifying the hidden
+peak.
 
 Given the complexity and scale of the layered blanket parameter space, premature convergence on a
 local optimum poses a significant risk. Consequently, the UCB acquisition function was configured
-with a highly explorative $\beta = 1,000,000$ value to ensure robust, global mapping of the design
-space before narrowing in on the optimal layer thicknesses (Appendix
-\ref{app:acquisition_function}).
+with this highly explorative $\beta = 1,000,000$ value to ensure robust, global mapping of the
+design space before narrowing in on the optimal layer thicknesses.
 
-\subsubsection{Testing, Tuning \& Developing the Optimiser COULD REDUCE}
+
+
+\subsubsection{Testing, Tuning \& Developing the Optimiser}
 Before applying the Bayesian optimiser to the high-dimensional neutronic blanket model it was
 evaluated against a suite of notoriously difficult mathematical landscapes, including the including
 the Rastrigin \citep{rastrigin1974systems}, Schwefel \citep{schwefel1981numerical}, Rosenbrock
@@ -755,8 +774,8 @@ entire domain.
 While 1D tests validate basic functionality, scaling the benchmark to 2D surfaces is necessary to
 ensure the algorithm does not fail as dimensionality increases. During these tests, it became
 apparent that standard Upper Confidence Bound (UCB) acquisition, even with a high exploration
-parameter, could occasionally stagnate in deep local minima. To prevent this, three bespoke
-algorithmic enhancements were introduced:
+parameter, could occasionally stagnate in discovered maxima (Figure \ref{fig:2d_gramacy_lee}). To
+prevent this, three bespoke algorithmic enhancements were introduced:
 
 \begin{itemize}
     \item \textbf{Interleaved random injection:} An $\epsilon$-greedy approach was implemented,
@@ -771,25 +790,41 @@ algorithmic enhancements were introduced:
     resources on identical measurements.
     \item \textbf{Multimodal surrogate exploitation:} Every $n_{hunt}$ trials, the algorithm
     actively scans the surrogate model to identify the top five predicted peaks. It then forces a
-    sample at the highest peak that remains locally unexplored (highlighted by the pink markers in
-    Figure \ref{fig:2d_schwefel}). In our trials we found $n_{hunt}=10$ sufficient.
+    sample at the highest peak that remains locally unexplored. In our trials we found $n_{hunt}=10$
+    sufficient.
 \end{itemize}
 
-In successfully navigating notoriously difficult mathematical landscapes, demonstrated in Figure
-\ref{fig:2d_gramacy_lee}, \ref{fig:2d_schwefel} and further in Appendix
-\ref{app:optimisation_trails}, the optimiser's robust resistance to local minima was demonstrated.
+In successfully navigating notoriously difficult mathematical landscapes and recreating them
+effectively in the surrogate, as demonstrated throughout Figure \ref{fig:ml_benchmarks_main}, the
+optimiser's robust resistance to local minima was established.
 
-\begin{figure}[hbt]
+\begin{figure}[htbp]
     \centering
-    % LEFT SUBFIGURE (a)
+    % --- TOP ROW ---
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/combined_MLtesting_1D_schwefel.png}
+        \caption{1D multi-modal Schwefel function test}
+        \label{fig:1d_benchmark}
+    \end{subfigure}
+    \hfill
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/combined_MLtesting_2D_gramacylee_comp.png}
         \caption{2D Gramacy \& Lee function test}
         \label{fig:2d_gramacy_lee}
     \end{subfigure}
+
+    \vspace{0.4cm} % Adds breathing room between rows
+
+    % --- BOTTOM ROW ---
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/combined_MLtesting_2D_Hiddenpeak_comp.png}
+        \caption{2D Hidden Peak function test}
+        \label{fig:2d_hidden_peak}
+    \end{subfigure}
     \hfill
-    % RIGHT SUBFIGURE (b)
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/combined_MLtesting_2D_schwefel_comp.png}
@@ -798,19 +833,33 @@ In successfully navigating notoriously difficult mathematical landscapes, demons
     \end{subfigure}
 
     \caption{Benchmarking of the ML optimisation algorithm across challenging mathematical
-    landscapes. (a) 2D Gramacy \& Lee function test. (b) 2D multi-modal Schwefel function test. Pink
-    markers annotate where a secondary ``peak hunt'' is triggered. Both used $N=150$ trials
-    (including $N_{sobol}=50$), with UCB $\beta=1,000,000$, $\epsilon = 0.75$, and $n_{hunt}=10$.}
+    landscapes. (a) A 1D Schwefel test case illustrating full surrogate model reconstruction (model
+    uncertainty is plotted but too small to be visible). (b) 2D Gramacy \& Lee function test
+    illustrating global trend reconstruction but localised peak ignorance. (c) 2D Hidden Peak
+    function test successfully escaping and finding the true peak. (d) 2D multi-modal
+    Schwefel function test demonstrating complete reconstruction of the detailed space. Pink markers
+    annotate where a secondary ``peak hunt'' is triggered. Trials ($N$): (a, b, d) used $N=150$,
+    while (c) used $N=100$. All tests utilised $N_{sobol}=50$ and UCB $\beta=1,000,000$. Bespoke
+    algorithm enhancements were not enabled for (a) and (b). Enhancements in (c) and (d) used
+    $\epsilon = 0.75$, and $n_{hunt}=10$.}
     \label{fig:ml_benchmarks_main}
 \end{figure}
 
-The algorithm was potentially over-prepared for the physical breeder blanket investigation, which is
-expected to feature broader, continuous global physical trends rather than sharp, discontinuous
-mathematical spikes. As illustrated by the Gramacy \& Lee benchmark (Figure
-\ref{fig:2d_gramacy_lee}), the model efficiently isolates and solves for broad overall trends,
-naturally exhibiting less sensitivity to high-frequency, small-length-scale variations. This testing
-ultimately confirms that while the algorithm maps wider global dynamics highly effectively,
-microscopic local peaks represent the primary hazard where the model risks entrapment.
+Figure \ref{fig:1d_benchmark} exemplifies that comprehensive mapping and understanding of 1D test
+functions was easy with a tuned base SOBO-GPR algorithm. However, Figure \ref{fig:2d_hidden_peak}
+and \ref{fig:2d_schwefel} demonstrate the utility of the bespoke enhancements. The algorithm was
+able to handle the known deceptively difficult hidden peak problem (where a narrower, slightly
+taller peak is hidden among a wide, clear peak) with confidence, utilising the duplicate avoidance
+and multi-modal exploitation algorithms to avoid getting trapped. Trialling it further with more
+smaller peaks in the 2D schwefel indicates that the increased exploration allows for not just a
+successful optimisation, but a well explored and accurate final surrogate.
+
+Macroscopic physics optimisation, like breeder blanket structure, is expected to feature broader,
+continuous global physical trends rather than sharp, discontinuous mathematical spikes. As
+illustrated in Figure \ref{fig:2d_gramacy_lee}, the model efficiently isolates and solves for broad
+overall trends, but exhibited less sensitivity to small-length-scale variations. Note that while the
+algorithm was designed to be `over-prepared' to handle small localised peaks, there remains a risk
+of optimiser local peak entrapment, yielding a marginally suboptimal result.
 
 \subsubsection{ML Optimisation Studies for TBR-Thickness}
 \label{sec:ml_runs}
@@ -889,17 +938,19 @@ breeder layer actually exceeds that of the first.
 
 \begin{figure}[htbp]
     \centering
-    \begin{subfigure}[b]{0.48\textwidth}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{figures/B1_Zeta_TBR.png}
         \caption{TBR vs $\zeta$}
         \label{fig:res_tbr_a}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{figures/B1_TBR_HM.png}
         \caption{TBR Reaction Density ($\zeta = 0$)}
         \label{fig:res_tbr_b}
     \end{subfigure}
+    \hfill\null
     \caption{ (a) Global and layer-specific TBR performance against $\zeta$, paired with a heatmap
          of breeding reactions (b).}
     \label{fig:res_tbr}
@@ -914,17 +965,19 @@ discrete coolant layers.
 
 \begin{figure}[htb]
     \centering
-    \begin{subfigure}[b]{0.48\textwidth}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{figures/B1_Zeta_Flux.png}
         \caption{Total Flux vs $\zeta$}
         \label{fig:res_flux_a}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{figures/B1_Fluence_HM.png}
         \caption{Fluence Map ($\zeta = 0$)}
         \label{fig:res_flux_b}
     \end{subfigure}
+    \hfill\null
     \caption{ (a) Neutron track length tally within reactor components, paired with a heatmap of
         neutron fluence depletion through the reactor wall (b).}
     \label{fig:res_flux}
@@ -937,17 +990,19 @@ within the first two breeder layers.
 
 \begin{figure}[htb]
     \centering
-    \begin{subfigure}[b]{0.48\textwidth}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{figures/B1_Zeta_Mult.png}
         \caption{Multiplication vs $\zeta$}
         \label{fig:res_mult_a}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{figures/B1_Mult_HM.png}
         \caption{Multiplication Density ($\zeta = 0$)}
         \label{fig:res_mult_b}
     \end{subfigure}
+    \hfill\null
     \caption{ (a) Total neutron multiplication rate per source neutron split between reactor
         component, alongside the spatial concentration in the plasma-facing layers (b).}
     \label{fig:res_mult}
@@ -955,24 +1010,26 @@ within the first two breeder layers.
 
 Neutron scattering events exhibit distinct, localised peaks within the water coolant layers (Figure
 \ref{fig:res_mod_abs_a}). Correspondingly, Figure \ref{fig:res_mod_abs_b} shows strong absorption
-within the breeder material, weak absorption in the first wall, slightly stronger interactions in
+within the breeder material, weak absorption in the FW, slightly stronger interactions in
 the coolant, and pronounced, bright absorption peaks within the structural separators. Total
 absorption remains relatively constant across all $\zeta$ configurations, averaging approximately
 70\% within the breeder, 20\% in the separators, and 6\% in the coolant.
 
 \begin{figure}[htb]
     \centering
-    \begin{subfigure}[b]{0.48\textwidth}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{figures/B1_Scatter_HM.png}
         \caption{Scattering Density ($\zeta = 0$)}
         \label{fig:res_mod_abs_a}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{figures/B1_Absorb_HM.png}
         \caption{Absorption Density ($\zeta = 0$)}
         \label{fig:res_mod_abs_b}
     \end{subfigure}
+    \hfill\null
     \caption{ Heat maps of scattering (a) and total absorption interactions (b) in the reactor wall.
         Absorption tally records all absorptions, including breeding, spallation and parasitic
         reactions.}
@@ -985,30 +1042,29 @@ breeder layers and 19\% in the coolant layers. There is greater heating and ener
 unit volume in the coolant.
 
 Finally, Figure \ref{fig:res_dpa_a} tracks structural degradation, showing that the DPA experienced
-by the first wall increases in forward-weighted configurations ($\zeta < 0$). This coincides with a
-corresponding increase in total damage energy deposited into the first wall. The spatial
+by the FW increases in forward-weighted configurations ($\zeta < 0$). This coincides with a
+corresponding increase in total damage energy deposited into the FW. The spatial
 distribution of damage energy (Figure \ref{fig:res_dpa_b}) is heavily concentrated on the extreme
 plasma-facing layers. Conversely, the DPA sustained by the internal structural separators rises in
 rear-weighted ($\zeta > 0$) configurations.
 
-For supplementary data of proportions, $\zeta$ trends and results described, see Appendix
+For supplementary data on proportions, $\zeta$ trends and other results stated, see Appendix
 Figures \ref{fig:app_scatter_absorb}, \ref{fig:app_heating} and \ref{fig:app_damage_zeta}.
-
-
 
 \begin{figure}[htb]
     \centering
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{figures/B1_Zeta_DPA.png}
         \caption{DPA Rate vs $\zeta$}
         \label{fig:res_dpa_a}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{figures/B1_Damage_HM.png}
         \caption{Damage Energy Density ($\zeta = 0$)}
         \label{fig:res_dpa_b}
     \end{subfigure}
+    \hfill\null
     \caption{ Radiation damage metrics across the linear gradient alongside the spatial profile of
         damage energy deposition.}
     \label{fig:res_dpa}
@@ -1022,7 +1078,7 @@ constraints are presented in Figure \ref{fig:ml_optimisation}.
 
 \begin{figure}[hbt]
     \centering
-    \includegraphics[width=1.0\textwidth]{figures/breeder_blanket_2d_themed.png}
+    \includegraphics[width=1\textwidth]{figures/breeder_blanket_2d_themed.png}
     \caption{ Radial thickness profiles and resulting global TBR for the ML optimised TBR-thickness
     studies detailed in Section \ref{sec:ml_runs}. Associated TBR values are annotated alongside
     their standard statistical uncertainty. $N=100$ was used for all except for unconstrained 8D
@@ -1047,7 +1103,7 @@ statistically identical TBR of 1.3303.
 
 
 For clarity in evaluating the high-dimensional space, the discrete blanket layers are denoted
-sequentially from the plasma-facing first wall outwards: breeder layers are labelled B1 through B4,
+sequentially from the plasma-facing FW outwards: breeder layers are labelled B1 through B4,
 and their adjacent coolant layers are labelled C1 through C4.
 
 To visualise the parameter landscape, 2D projections of the unconstrained 8D surrogate model were
@@ -1072,7 +1128,7 @@ selected layers.
         \label{fig:proj_b4}
     \end{subfigure}
 
-    \vspace{0.5cm} % Adds a little breathing room between the rows
+    \vspace{0.3cm} % Adds a little breathing room between the rows
 
     % --- BOTTOM ROW ---
     \begin{subfigure}[b]{0.49\textwidth}
@@ -1167,9 +1223,9 @@ forward-weighted designs, despite their vastly superior neutron populations, fai
 strictly dominant global TBR.
 
 These geometric shifts also dictate structural viability. Note that as water and the breeder
-eutectic alloy would be liquid, we focus on solid separators and the first wall. In rear-weighted
+eutectic alloy would be liquid, we focus on solid separators and the FW. In rear-weighted
 configurations, the internal structural separators are exposed to high-energy source neutrons much
-earlier, driving a stark increase in internal DPA. Conversely, the first wall experiences peak DPA
+earlier, driving a stark increase in internal DPA. Conversely, the FW experiences peak DPA
 in forward-weighted configurations, as intense multiplication within the thick first breeder layer
 causes highly energetic neutrons to backscatter. Given the DPA per FPY (yielding a critical
 embrittlement lifetime of roughly 8.2 to 10.0 FPYs for Zircaloy-4), this concentrated damage
@@ -1177,15 +1233,15 @@ highlights the severe material inadequacy of zirconium under intense front-loade
 
 These geometric shifts also dictate structural viability. In rear-weighted configurations, the
 internal structural separators are exposed to high-energy source neutrons much earlier, driving a
-stark increase in internal DPA. Conversely, the first wall experiences peak DPA in forward-weighted
+stark increase in internal DPA. Conversely, the FW experiences peak DPA in forward-weighted
 configurations, as intense multiplication within the thick first breeder layer causes highly
 energetic neutrons to backscatter. While the absorption heatmap (Figure \ref{fig:res_mod_abs_b})
 demonstrates that zirconium is neutronically superior due to its exceptionally low parasitic
 absorption, there is a trade-off in its structural threshold. At our calculated damage rates
 ($\sim6.2$--$7.5$ DPA/year, critical helium embrittlement at $61.99$ DPA
-\citep{woods_properties_1966}) Zircaloy-4 restricts the first wall lifetime to roughly $8$--$10$
+\citep{woods_properties_1966}) Zircaloy-4 restricts the FW lifetime to roughly $8$--$10$
 FPYs—far below ITER's 30-year operational target \citep{aymar_iter_2002}. By contrast,
-an ultra-fine grained EUROFER97 first wall ($2.2$--$2.5$ DPA/year, $57.47$ threshold DPA
+an ultra-fine grained EUROFER97 FW ($2.2$--$2.5$ DPA/year, $57.47$ threshold DPA
 \citep{woods_properties_1966}) demonstrates vastly superior structural longevity of $23$--$26$
 FPYs, but we found would cause a $\approx9\%$ TBR decrease.
 
@@ -1255,7 +1311,7 @@ investigative tool into a highly practical utility for fusion design engineers.
 
 Additionally, the successful convergence of the 8-dimensional constrained study demonstrates
 potential scalability of the algorithm to larger parameter spaces. Because the current simulations
-were executed on standard desktop computing hardware (discussed in Section \ref{sec:method_ml}),
+had manageable runtimes on standard desktop computing hardware (Section \ref{sec:method_ml}),
 transitioning the pipeline to High-Performance Computing (HPC) clusters could support significantly
 larger parameter spaces if more trials are needed. With enhanced computational bandwidth, the
 dimensionality of the model could be expanded to parameterise the highly complex, fully asymmetric
@@ -1270,8 +1326,8 @@ performance), facilitating a holistic, plant-wide fusion reactor optimisation mo
 This study demonstrated that a heterogeneous layered breeder blanket degrades TBR due to the
 introduction of parasitic structural and coolant sinks. Notably this layered approximation acts as a
 conservative underestimate; realistic, complex geometries could mitigate these losses via effects
-such as neutron streaming. To navigate this design space, the SOBO-GPR pipeline proved highly
-effective, identifying that optimal TBR demands a front-loaded (lower $\zeta$), `binding
+such as neutron streaming. To navigate this design space, the bespoke SOBO-GPR pipeline proved
+highly effective, identifying that optimal TBR demands a front-loaded (lower $\zeta$), `binding
 configuration' of maximum breeder and minimum coolant thicknesses. However, this purely neutronic
 optimum does incur physical trade-offs and clearly reveals the negligible impact of the outermost
 blanket layers on overall production. Ultimately, while this study serves as a foundational
@@ -1288,7 +1344,7 @@ reactors.
 
 
 \defbibnote{bibnote}{\textit{Note: DOI links are hyperlinked within `[DOI]' placeholder}}
-\printbibliography[heading=bibintoc, title={References}, prenote=bibnote]
+\printbibliography[heading=bibintoc, title={References}]
 
 
 
@@ -1350,7 +1406,7 @@ surviving defect fraction, $\xi(T_d)$:
 \end{equation}
 where $b$ and $c$ are material-specific constants dependent on the displaced atom type. Values for
 the displacement energy ($E_d$) and these constants for critical structural materials, such as iron
-(dominating the structural separators) and zirconium (in the first wall), are established in
+(dominating the structural separators) and zirconium (in the FW), are established in
 literature \citep{woods_properties_1966}.
 
 Finally, to determine if a material exceeds its irradiation limits over its operational lifetime,
@@ -1394,88 +1450,10 @@ probability and magnitude by which a new sample might exceed the current best ob
 where $\Phi$ and $\phi$ are the standard normal cumulative distribution and probability density
 functions, respectively.
 
-\section{Supplementary Algorithm Data}
-\label{app:supplementary_methodology}
-\renewcommand{\thefigure}{B\arabic{figure}}
-\setcounter{figure}{0}
-
-\subsection{Acquisition Function Tuning}
-\label{app:acquisition_function}
-Figure \ref{fig:ucb_tuning} illustrates a 2D projection of the acquisition utility landscape
-used to benchmark the model's behaviour.
-
-\begin{figure}[htbp]
-    \centering
-    % FIRST SUBFIGURE
-    \begin{subfigure}[t]{0.48\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/Aquisitionfunction_UCB_doublepeak_highbeta_prepped.png}
-        \caption{Explorative tuning ($\beta = 1,000,000$)}
-        \label{fig:ucb_high_beta}
-    \end{subfigure}
-    \hfill
-    % SECOND SUBFIGURE
-    \begin{subfigure}[t]{0.48\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/Aquisitionfunction_UCB_doublepeak_lowbeta_prepped.png}
-        \caption{Greedy tuning ($\beta = 1$)}
-        \label{fig:ucb_low_beta}
-    \end{subfigure}
-    \caption{Comparison of the Upper Confidence Bound (UCB) acquisition function behaviour under
-    different exploration parameters ($\beta$). (a) A high $\beta$ value successfully prioritises
-    exploration, identifying a secondary hidden peak. (b) A low $\beta$ value results in overly
-    greedy exploitation, causing the model to stagnate on a single local optimum and ignore
-    unexplored regions.}
-    \label{fig:ucb_tuning}
-\end{figure}
-
-As demonstrated in Figure \ref{fig:ucb_low_beta}, setting a low exploration weight ($\beta = 1$)
-results in a overly greedy search. The algorithm heavily exploits a known local optimum, entirely
-missing a secondary, hidden peak within the design space. Conversely, Figure \ref{fig:ucb_high_beta}
-shows that a significantly higher parameter ($\beta = 1,000,000$) forces the model to prioritise
-high-uncertainty regions, successfully mapping the broader landscape and identifying the hidden
-peak.
-
-\subsection{Additional Optimisation Trials}
-\label{app:optimisation_trails}
-Figure \ref{fig:app_ml_benchmarks} presents additional optimisation trials that the SOBO-GPR
-pipeline was tested on.
-
-\begin{figure}[hbtp]
-    \centering
-    % LEFT SUBFIGURE (a)
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/combined_MLtesting_1D_schwefel.png}
-        \caption{1D multi-modal Schwefel function test}
-        \label{fig:app_1d_benchmark}
-    \end{subfigure}
-    \hfill
-    % RIGHT SUBFIGURE (b)
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/combined_MLtesting_2D_Hiddenpeak_comp.png}
-        \caption{2D Hidden Peak function test}
-        \label{fig:app_2d_hidden_peak}
-    \end{subfigure}
-
-    \caption{Supplementary benchmarking of the ML optimisation algorithm. (a) A 1D Schwefel test
-    case illustrating full surrogate model reconstruction against the true function. The uncertainty
-    in the model is plotted but too small to be visible. (b) 2D Hidden Peak function test, evidencing
-    successful discovery of obscured global maxima. (a) used $N=100$ trials, while (b) used $N=150$.
-    Both tests utilised $N_{sobol}=50$ and UCB $\beta=1,000,000$.}
-    \label{fig:app_ml_benchmarks}
-\end{figure}
-
-Figure \ref{fig:app_1d_benchmark} indicates a complete exploration and comprehensive mapping of the
-test function when in 1D, despite schwefel multi-modal peaks. Figure \ref{fig:app_2d_hidden_peak}
-demonstrates the algorithm's ability to handle the classic hidden peak problem (where a narrower
-slightly taller peak is hidden among a wide clear peak) with confidence, utilising the duplicate
-avoidance and multi-modal exploitation algorithms to avoid getting trapped.
 
 \section{Supplementary Neutronics Data}
 \label{app:supplementary_neutronics}
-\renewcommand{\thefigure}{C\arabic{figure}}
+\renewcommand{\thefigure}{B\arabic{figure}}
 \setcounter{figure}{0}
 
 This section provides the quantitative neutronic trends over the linear gradient parameter ($\zeta$)
@@ -1520,7 +1498,7 @@ and supplementary spatial heatmaps referenced in Section \ref{sec:results_neutro
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.48\textwidth]{figures/B1_Zeta_Damage.png}
-    \caption{ Total damage energy deposited into the plasma-facing first wall and internal
+    \caption{ Total damage energy deposited into the plasma-facing FW and internal
         structural separators across the geometric gradient.}
     \label{fig:app_damage_zeta}
 \end{figure}
