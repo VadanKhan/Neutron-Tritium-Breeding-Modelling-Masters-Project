@@ -37,4 +37,5 @@
 \contentsline {subsection}{\numberline {A.2}Nuclear Heating and KERMA Factors}{i}{subsection.1.A.2}%
 \contentsline {subsection}{\numberline {A.3}Volume-Integrated Scalar Flux}{i}{subsection.1.A.3}%
 \contentsline {subsection}{\numberline {A.4}Standard Acquisition Function: EI}{ii}{subsection.1.A.4}%
-\contentsline {section}{\numberline {B}Supplementary Neutronics Data}{ii}{appendix.1.B}%
+\contentsline {section}{\numberline {B}Supplementary Methodology}{ii}{appendix.1.B}%
+\contentsline {section}{\numberline {C}Supplementary Neutronics Results}{ii}{appendix.1.C}%
